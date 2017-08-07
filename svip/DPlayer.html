@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="DPlayer.min.css">
+	<script src="hls.min.js"></script>
+	<script src="DPlayer.min.js"></script>
+	<style>
+		html,body,#dplayer{width:100%; height:100%; margin: 0 auto; overflow: hidden; background: black;}
+		div{margin:0 auto;}
+	</style>
+	<title>DPlayer</title>
+	</head>
+	<body>
+		<div id="dplayer"></div>
+		<script type="text/javascript">
+			var turl = window.location.hash.slice(1);
+			if(turl.slice(0,4) != "http")
+			{
+				turl = window.location.search.slice(1);
+			}
+			if(turl.slice(0,4) != "http")
+			{
+				turl = "";
+			}
+			var url = decodeURIComponent(turl);
+			while(url && url != turl)
+			{
+				turl = url;
+				url = decodeURIComponent(turl);
+			}
+			const dp = new DPlayer({
+			    container: document.getElementById('dplayer'),
+			    autoplay: true,
+			    video: {
+			        url: url,
+			    }
+			});
+		</script>
+	</body>
+</html>

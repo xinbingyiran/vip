@@ -1,0 +1,51 @@
+﻿{
+	"name":"svip",
+	"manifest_version":2,
+	"version":"2.2",
+	"description":"各大网站VIP会员视频免费看，集成百度云下载助手，集成资源嗅探",
+	"homepage_url": "https://gitee.com/hlkitty/vip",
+	"permissions":[
+		"activeTab",
+		"tabs",
+		"contextMenus",
+		"storage",
+		"webRequest",
+		"http://*/*",
+		"https://*/*"
+	],
+	"browser_action":{
+		"default_icon":"default-big.png",
+		"default_title":"各大网站视频免费看"
+	},
+	"icons":{
+		"16":"default-big.png",
+		"48":"default-big.png",
+		"128":"default-big.png"
+	},
+	"background":{
+		"scripts":["background.js"]
+	},
+	"web_accessible_resources" : ["baiduyun.user.js"],
+	"content_scripts":[
+		{
+			"matches":["<all_urls>"],
+			"js":[
+				"content.js"
+			],
+			"run_at":"document_start"
+		},
+		{
+			"matches":[
+				"http://pan.baidu.com/*",
+				"https://pan.baidu.com/*",
+				"http://yun.baidu.com/*",
+				"https://yun.baidu.com/*",
+				"https://eyun.baidu.com/*"
+			],
+			"js":[
+				"baiduyun.js"
+			],
+			"run_at":"document_end"
+		}
+	]
+}
