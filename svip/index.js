@@ -18,21 +18,25 @@
 		return "";  
 	} 
 	var vipUrls = [
-		{name:"思古",url:"https://api.bbbbbb.me/sg/?url="},
-		{name:"石头1",url:"https://jx.liehui5.com/jx.php?url="},
-		{name:"石头2",url:"https://jiexi.071811.cc/jx.php?url="},
+		{name:"思古",url:"https://api.bbbbbb.me/jx/?url="},
+		//{name:"思古2",url:"https://api.bbbbbb.me/svip/v.php?url="},
+		//{name:"思古3",url:"https://api.bbbbbb.me/jiexi/?url="},
+		//{name:"思古4",url:"https://api.bbbbbb.me/playm3u8/?url="},
+		//{name:"思古5",url:"https://api.bbbbbb.me/yunjx/?url="},
+		//{name:"思古6",url:"https://api.bbbbbb.me/vip/?url="},
+		//{name:"思古7",url:"https://api.bbbbbb.me/yun/?url="},
+		//{name:"思古8",url:"https://api.bbbbbb.me/ipsign/player.php?v="},
+		//{name:"思古9",url:"https://api.bbbbbb.me/jx/2mm.php?url="},
+		{name:"石头",url:"https://jx.liehui5.com/jx.php?url="},
+		//{name:"石头2",url:"https://jiexi.071811.cc/jx.php?url="},
 		{name:"花园影视",url:"https://j.zz22x.com/jx/?url="},
 		{name:"47Player",url:"https://api.47ks.com/webcloud/?v="},
 		{name:"强强解析",url:"https://000o.cc/jx/ty.php?url="},
-		{name:"dengtian",url:"https://player.dengtian.org/ipsign/player.php?v="},
 		{name:"金桥解析",url:"https://jqaaa.com/jx.php?url="},
 		{name:"206云解析",url:"https://206dy.com/vip.php?url="},
-		{name:"百域阁",url:"http://yun.baiyug.cn/vip/?url="},
 		{name:"ODFLV",url:"http://aikan-tv.com/?url="},
 		{name:"无名小站",url:"http://www.wmxz.wang/video.php?url="},
-		{name:"52全能",url:"http://y.j1118.com/?url="},
-		{name:"速度牛",url:"http://api.wlzhan.com/sudu/?url="},
-		{name:"AEIDU",url:"http://jx.aeidu.cn/index.php?url="},
+		//{name:"速度牛",url:"http://api.wlzhan.com/sudu/?url="},
 	];
 	var turl = window.location.hash.slice(1);
 	if(turl.slice(0,4) != "http")
