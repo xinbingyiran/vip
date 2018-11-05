@@ -1,6 +1,6 @@
 ﻿(function(){
 	var vipUrls = [
-		{name:"SVIP",url:"https://hlkitty.gitee.io/vip/?"}
+		{name:"SVIP",url:"http://xinbingyiran.coding.me/vip/?"}
 	];
 	//设置cookie  
 	function setCookie(cname, cvalue, exdays) {  
