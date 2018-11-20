@@ -18,11 +18,11 @@
 		return "";  
 	} 
 	var vipUrls = [
-		{name:"金桥解析",url:"https://jqaaa.com/jx.php?url="},
+		{name:"206云解析",url:"https://206dy.com/vip.php?url="},
 		{name:"花园影视",url:"https://j.zz22x.com/jx/?url="},
 		{name:"47Player",url:"https://api.47ks.com/webcloud/?v="},
 		{name:"强强解析",url:"https://000o.cc/jx/ty.php?url="},
-		{name:"206云解析",url:"https://206dy.com/vip.php?url="},
+		{name:"金桥解析",url:"http://jqaaa.com/jx.php?url="},
 		{name:"ODFLV",url:"http://aikan-tv.com/?url="},
 		{name:"无名小站",url:"http://www.wmxz.wang/video.php?url="},
 		{name:"思古",url:"http://api.bbbbbb.me/jx/?url="},
