@@ -18,7 +18,8 @@
 		return "";  
 	} 
 	var vipUrls = [
-		{name:"206云解析",url:"https://206dy.com/vip.php?url="},
+		//{name:"206云解析",url:"https://206dy.com/vip.php?url="},
+		{name:"爱悟空云解析",url:"https://2wk.com/vip.php?url="},
 		{name:"花园影视",url:"https://j.zz22x.com/jx/?url="},
 		{name:"47Player",url:"https://api.47ks.com/webcloud/?v="},
 		{name:"强强解析",url:"https://000o.cc/jx/ty.php?url="},
