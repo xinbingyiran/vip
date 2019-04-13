@@ -113,7 +113,7 @@
 	{		
 		document.querySelector('#url').onkeydown=checkEnter;
 		document.querySelector('#gourl').onclick=goVip;
-		document.querySelector('#gourl').onclick=goVip2;
+		document.querySelector('#gourl2').onclick=goVip2;
 		floatdiv = document.getElementById("_idxfloatdiv");
 		contentdiv = document.getElementById("_idxcontentdiv");
 		floatdiv.onmousedown= startmove;
