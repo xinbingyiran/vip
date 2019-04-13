@@ -19,6 +19,7 @@
 	} 
 	var vipUrls = [
 		{name:"音萌",url:"https://api.v6.chat/?url="},
+		{name:"heimijx",url:"https://www.heimijx.com/jx/api/?url="},
 		{name:"思古",url:"https://api.bbbbbb.me/jx/?url="},
 		{name:"花园影视",url:"https://j.zz22x.com/jx/?url="},
 		{name:"ODFLV",url:"https://yun.odflv.com/?url="},
