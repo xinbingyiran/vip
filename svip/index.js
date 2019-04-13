@@ -18,23 +18,17 @@
 		return "";  
 	} 
 	var vipUrls = [
+		{name:"音萌",url:"https://api.v6.chat/?url="},
 		{name:"思古",url:"https://api.bbbbbb.me/jx/?url="},
 		{name:"花园影视",url:"https://j.zz22x.com/jx/?url="},
+		{name:"ODFLV",url:"https://yun.odflv.com/?url="},
 		{name:"47Player",url:"https://api.47ks.com/webcloud/?v="},
 		{name:"618阁",url:"http://jx.618ge.com/?url="},
+		{name:"Un1",url:"http://vip.jlsprh.com/?url="},
+		{name:"Un2",url:"http://jx.598110.com/?url="},
 		{name:"金桥解析",url:"http://jqaaa.com/jx.php?url="},
-		{name:"ODFLV",url:"http://aikan-tv.com/?url="},
 		{name:"无名小站",url:"http://www.wmxz.wang/video.php?url="},
-		//{name:"思古",url:"http://api.bbbbbb.me/jx/?url="},
-		//{name:"思古2",url:"http://api.bbbbbb.me/svip/v.php?url="},
-		//{name:"思古3",url:"http://api.bbbbbb.me/jiexi/?url="},
-		//{name:"思古4",url:"http://api.bbbbbb.me/playm3u8/?url="},
-		//{name:"思古5",url:"http://api.bbbbbb.me/yunjx/?url="},
-		//{name:"思古6",url:"http://api.bbbbbb.me/vip/?url="},
-		//{name:"思古7",url:"http://api.bbbbbb.me/yun/?url="},
-		//{name:"思古8",url:"http://api.bbbbbb.me/ipsign/player.php?v="},
-		//{name:"思古9",url:"http://api.bbbbbb.me/jx/2mm.php?url="},
-		//{name:"速度牛",url:"http://api.wlzhan.com/sudu/?url="},
+		{name:"DuPlay",url:"http://jx.du2.cc/?url="}
 	];
 	var turl = window.location.hash.slice(1);
 	if(turl.slice(0,4) != "http")
@@ -103,6 +97,12 @@
 		window.top.location.href = "DPlayer.html?" + url;
 		return false;
 	};
+	
+	function goVip2() {
+		var url = document.querySelector('#url').value;
+		window.top.location.href = "https://www.douban888.com/m3u8.php?url=" + url;
+		return false;
+	};
 
 	function checkEnter(){
 		if(event.keyCode==13){
@@ -113,6 +113,7 @@
 	{		
 		document.querySelector('#url').onkeydown=checkEnter;
 		document.querySelector('#gourl').onclick=goVip;
+		document.querySelector('#gourl').onclick=goVip2;
 		floatdiv = document.getElementById("_idxfloatdiv");
 		contentdiv = document.getElementById("_idxcontentdiv");
 		floatdiv.onmousedown= startmove;
