@@ -2,7 +2,7 @@
 	"name":"svip",
 	"manifest_version":2,
 	"version":"2.3",
-	"description":"各大网站VIP会员视频免费看，集成百度云下载助手，集成资源嗅探",
+	"description":"各大网站VIP会员视频免费看，集成资源嗅探",
 	"homepage_url": "https://dev.tencent.com/u/xinbingyiran/p/vip/git",
 	"permissions":[
 		"activeTab",
@@ -33,19 +33,6 @@
 				"content.js"
 			],
 			"run_at":"document_start"
-		},
-		{
-			"matches":[
-				"http://pan.baidu.com/*",
-				"https://pan.baidu.com/*",
-				"http://yun.baidu.com/*",
-				"https://yun.baidu.com/*",
-				"https://eyun.baidu.com/*"
-			],
-			"js":[
-				"baiduyun.js"
-			],
-			"run_at":"document_end"
 		}
 	]
 }
