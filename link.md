@@ -1,6 +1,10 @@
 # win10
 - [HWIDGEN](https://dl.lancdn.com/landian/software/HWIDGEN/)
 
+# ssr
+- [appmews](https://www.appmews.com/ssr.html)
+- [nogfw](https://github.com/gfw-breaker/nogfw)
+
 # yyhd
 - [幸运金豆] yy://yxdt-[key=yg0vi209-XYDIVTYPE3IVJINDOU&from=from_link_zadan]
 - [YY积分特权] yy://yxdt-[key=yg0vi209-SBJFIVTYPE3IVDOUBLE&from=from_link_zadan]
