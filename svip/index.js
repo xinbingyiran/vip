@@ -21,8 +21,8 @@
 		{name:"音萌",url:"https://api.v6.chat/?url="},
 		{name:"heimijx",url:"https://www.heimijx.com/jx/api/?url="},
 		{name:"思古",url:"https://api.bbbbbb.me/jx/?url="},
-		{name:"花园影视",url:"https://j.zz22x.com/jx/?url="},
-		{name:"ODFLV",url:"https://yun.odflv.com/?url="},
+		{name:"思古2",url:"https://api.sigujx.com/?url="},
+		{name:"流氓凡",url:"https://jx.wslmf.com/?url="},
 		{name:"47Player",url:"https://api.47ks.com/webcloud/?v="},
 		{name:"618阁",url:"http://jx.618ge.com/?url="},
 		{name:"Un1",url:"http://vip.jlsprh.com/?url="},
@@ -98,12 +98,6 @@
 		window.top.location.href = "DPlayer.html?" + url;
 		return false;
 	};
-	
-	function goVip2() {
-		var url = document.querySelector('#url').value;
-		window.top.location.href = "https://www.douban888.com/m3u8.php?url=" + url;
-		return false;
-	};
 
 	function checkEnter(){
 		if(event.keyCode==13){
@@ -114,7 +108,6 @@
 	{		
 		document.querySelector('#url').onkeydown=checkEnter;
 		document.querySelector('#gourl').onclick=goVip;
-		document.querySelector('#gourl2').onclick=goVip2;
 		floatdiv = document.getElementById("_idxfloatdiv");
 		contentdiv = document.getElementById("_idxcontentdiv");
 		floatdiv.onmousedown= startmove;
