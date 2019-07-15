@@ -1,15 +1,15 @@
-# vip
-- [nemo](https://www.icinephile.com/)
-
-# win10
+# lancdn
+- [HWIDGEN](https://dl.lancdn.com/landian/)
 - [HWIDGEN](https://dl.lancdn.com/landian/software/HWIDGEN/)
 
 # ssr
 - [appmews](https://www.appmews.com/ssr.html)
 - [nogfw](https://github.com/gfw-breaker/nogfw)
+- [9raxRss](https://www.9rax.com/project/ssr)
+- [9raxRssOss](https://www.9rax.com/project/ssr/oss)
 
 # proxy
-- [jsproxy](https://jsproxy.ga/)
+- [jsproxy](https://jsproxy.gq/)
 - [turkazzi](https://www.turkazzi.com/)
 - [dkudriavtsev](https://proxy.dkudriavtsev.xyz/)
 
