@@ -1,7 +1,7 @@
 ﻿{
 	"name":"svip",
 	"manifest_version":2,
-	"version":"2.3",
+	"version":"2.4",
 	"description":"各大网站VIP会员视频免费看，集成资源嗅探",
 	"homepage_url": "https://dev.tencent.com/u/xinbingyiran/p/vip/git",
 	"permissions":[

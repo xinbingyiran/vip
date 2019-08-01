@@ -50,37 +50,27 @@
 		floatdiv.onmousemove = null;
 	}
 
-	function findfilename(url)
-	{
-		var furl = new URL(url);
-		var pname = furl.pathname;
-		if(pname == "/")
-		{
-			return "download";
-		}
-		var name = pname.slice(pname.lastIndexOf("/") + 1) || pname.slice(pname.lastIndexOf("/",pname.length-2) + 1,-1);
-		return name?decodeURIComponent(name):"download";
-	}
-
-	function addLog(vt,url) {
+	function addLog(msg) {
+		var type = msg.type;
+		var name = msg.name;
+		var url = msg.url;
 		if(list.includes(url)){return;}
-		var fname = findfilename(url);
 		list.push(url);
 		var l = document.createElement("span");
-		l.innerHTML = vt + ": ";
+		l.innerHTML = type + ": ";
 		contentdiv.appendChild(l);
 		var a = document.createElement("a");
 		a.target = "_blank";
 		a.style = "color:red;margin-right:20px;";
 		a.href = url;
-		a.text = fname;
+		a.text = name;
 		contentdiv.appendChild(a);
 		var br = document.createElement("br");
 		contentdiv.appendChild(br);
 		floatdiv.style.display = "block";
 	}
 	chrome.extension.onMessage.addListener(function(msg, sender, callback) {
-		addLog(msg.type, msg.url);
+		addLog(msg);
 	});
 
 	document.addEventListener('DOMContentLoaded', function(){
