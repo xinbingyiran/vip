@@ -57,6 +57,19 @@
 			}
 		});
 	}
+
+	function findfilename(url)
+	{
+		var furl = new URL(url);
+		var pname = furl.pathname;
+		if(pname == "/")
+		{
+			return "download";
+		}
+		var name = pname.slice(pname.lastIndexOf("/") + 1) || pname.slice(pname.lastIndexOf("/",pname.length-2) + 1,-1);
+		return name?decodeURIComponent(name):"download";
+	}
+	
 	initMenu();
 
 	//接收消息
@@ -88,14 +101,25 @@
 	
 	chrome.webRequest.onHeadersReceived.addListener(function(details){
 		var id = details.tabId;
-		if(id >= 0)
-		{
+		if(id >= 0)		{
 			var ct = details.responseHeaders.find(function(e){return e.name.toLowerCase() == "content-type";})
 			if(!ct){return;}
-			var vt = types[ct.value.toLowerCase()];
-			if(vt)
-			{
-				chrome.tabs.sendMessage(details.tabId,{"type":vt,"url":details.url}); 
+			var v = ct.value.toLowerCase().split(/;/)[0].trim();
+			var vt = types[v];
+			var fn = details.responseHeaders.find(function(e){return e.name.toLowerCase() == "content-disposition";})
+			var filename = "";
+			if(fn){
+				var m = fn.value.toLowerCase().match(/filename=(.*)/);
+				if(m){
+					filename = m[1].trim();
+				}
+			}
+			if(!filename){
+				filename = findfilename(details.url);
+			}
+			
+			if(vt){
+				chrome.tabs.sendMessage(details.tabId,{"type":vt,"name":filename,"url":details.url}); 
 			}
 		}
 	}, {urls: ["<all_urls>"]}, ["responseHeaders"]);
