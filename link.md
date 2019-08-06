@@ -1,5 +1,5 @@
 # lancdn
-- [HWIDGEN](https://dl.lancdn.com/landian/)
+- [landian](https://dl.lancdn.com/landian/)
 - [HWIDGEN](https://dl.lancdn.com/landian/software/HWIDGEN/)
 
 # ssr
@@ -28,11 +28,14 @@
 - [夏日会员缤纷送](yy://yxdt-[key=yg0vi347-MBZDIVHY&from=from_link_zadan])
 - [6位靓号期期领](yy://yxdt-[key=yg0vi350-MBZDIVLH&from=from_link_zadan])
 - [新春红包](yy://yxdt-[key=yg0vi361-TQHZIVLOL&from=from_JCHZ])
-- [每天游戏5分钟](yy://yxdt-[key=yg0vi361-MBZDIVHB&from=from_zadan])
 - [吃鸡加速器](yy://yxdt-[key=yg0vi371-MBZDIVHB&from=from_link_zadan])
 - [视频VIP天天领](yy://yxdt-[key=yg0vi372-MBZDIVTENCENT&from=from_link_zadan])
-- [超级玩家VIP俱乐部](yy://yxdt-[key=yg0viCWJLB-from=from_link_zadan])
-- [海克斯科技战利品库](yy://yxdt-[key=yg0viHKSKJ-from=from_link_zadan])
-- [生日祝福](yy://yxdt-[key=yg0viSRZF-from=from_link_zadan])
-- [玩游戏赚红包](yy://yxdt-[key=yg0viVNLSXGER-TQHZIVHY&from=from_TQHZ])
 - [新游推广活动](yy://yxdt-[key=yg0viZSFYXYTG-MBZDIVQB&from=from_link_zadan])
+- [云顶之弈 今晚吃鸡](yy://yxdt-[key=yg0viMBZDLOL&from=from_link_zadan)
+- [会员魔术帽活动](yy://yxdt-[key=yg0viXHYHD-MBZDIVHY&from=from_link_zadan)
+- [玩游戏，赚红包](yy://yxdt-[key=yg0viVNLSXGER-TQHZIVHY&from=from_TQHZ)
+- [超级玩家VIP俱乐部，每日送出1000个游戏会员！](yy://yxdt-[key=yg0viCWJLB-from=from_link_zadan)
+- [每天游戏5分钟，当天提现入账！](yy://yxdt-[key=yg0vi361-MBZDIVHB&from=from_zadan)
+- [图标点亮领豪礼！](yy://yxdt-[key=yg0vi343-JCHZIVZADAN&from=from_link_zadan)
+- [生日祝福 专属于你的限定皮肤与折扣](yy://yxdt-[key=yg0viSRZF-from=from_link_zadan)
+- [海克斯科技战利品库，全新任务奖励系统上线](yy://yxdt-[key=yg0viHKSKJ-from=from_link_zadan)
