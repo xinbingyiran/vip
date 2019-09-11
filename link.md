@@ -39,3 +39,4 @@
 - [图标点亮领豪礼！](yy://yxdt-[key=yg0vi343-JCHZIVZADAN&from=from_link_zadan])
 - [生日祝福 专属于你的限定皮肤与折扣](yy://yxdt-[key=yg0viSRZF-from=from_link_zadan])
 - [海克斯科技战利品库，全新任务奖励系统上线](yy://yxdt-[key=yg0viHKSKJ-from=from_link_zadan])
+- [幸运大转盘](yy://yxdt-[key=yg0viyyxxqbcj2019&from=from_link_zadan])
