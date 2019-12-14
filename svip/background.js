@@ -73,39 +73,21 @@
 	initMenu();
 
 	//接收消息
-	var types =
-	{
-		"audio/basic":"snd",
-		"audio/midi":"midi",
-		"audio/mpeg":"mp3",
-		"audio/mp4":"m4a",
-		"audio/x-aiff":"aif",
-		"audio/x-flac":"flac",
-		"audio/x-mpegurl":"m3u8",
-		"audio/x-pn-realaudio":"rm",
-		"audio/x-realaudio":"ra",
-		"audio/x-wav":"wav",		
-		"video/3gpp":"3gp",
-		"video/mp4":"mp4",
-		"video/mpeg4":"mp4",
-		"video/quicktime":"mov",
-		"video/vnd.mpegurl":"mxu",
-		"video/x-flv":"flv",
-		"video/x-msvideo":"avi",
-		"video/x-sgi-movie":"movie",
-		"application/vnd.rn-realmedia":"rm",
-		"application/vnd.apple.mpegurl":"m3u8",
-		"application/x-mpegurl":"m3u8",
-		"application/octet-stream":"bin"
-	};
+	var types =["audio","video","application"];
 	
 	chrome.webRequest.onHeadersReceived.addListener(function(details){
 		var id = details.tabId;
 		if(id >= 0)		{
 			var ct = details.responseHeaders.find(function(e){return e.name.toLowerCase() == "content-type";})
 			if(!ct){return;}
-			var v = ct.value.toLowerCase().split(/;/)[0].trim();
-			var vt = types[v];
+			var v = ct.value.toLowerCase().split(/;/)[0];
+			var vt = v.split(/\//);
+			if(vt[0] != "audio" && vt[0] != "video" && vt[0] != "application"){return;}		
+			if(vt[0] == "application"){
+				if(vt[1].indexOf("text") >= 0 || vt[1].indexOf("script") >= 0){
+					return;
+				}
+			}
 			var fn = details.responseHeaders.find(function(e){return e.name.toLowerCase() == "content-disposition";})
 			var filename = "";
 			if(fn){
@@ -118,8 +100,8 @@
 				filename = findfilename(details.url);
 			}
 			
-			if(vt){
-				chrome.tabs.sendMessage(details.tabId,{"type":vt,"name":filename,"url":details.url}); 
+			if(v){
+				chrome.tabs.sendMessage(details.tabId,{"type":v,"name":filename,"url":details.url}); 
 			}
 		}
 	}, {urls: ["<all_urls>"]}, ["responseHeaders"]);
