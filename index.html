@@ -3,9 +3,13 @@
 
 <head>
 	<script type="text/javascript">
-		window.location.href = "svip/index.html" + window.location.search + window.location.hash;
+		if (window.location.host.startsWith("qnyh.")) {
+			window.location.href = "qnyh/index.html";
+		} else {
+			window.location.href = "svip/index.html" + window.location.search + window.location.hash;
+		}
 	</script>
-	<title>视频解析</title>
+	<title>home</title>
 </head>
 
 <body>
