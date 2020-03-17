@@ -18,9 +18,10 @@ body{font-family: "微软雅黑";background: #e6ce73 repeat 0 0;font:normal 12px
 .text{width: 132px;border-right: 1px dashed rgba(21,179,204,.19);}
 .text h3{font-size: 16px;line-height: 80px;color: #f0f0f0;text-align: center;}
 .text span{font-size: 14px;line-height: 20px;font-weight: bold;text-align: center;display: block;color: #36bed9;padding-bottom: 15px;}
-.syxy .link{width: 415px;overflow: hidden;position: relative;height: 40px;right:0;bottom:0;}
-.syxy .link .input1{position: absolute;top:0;left:0;width: 314px;height: 100%;background: #fff;padding:0 ;border:none;padding-left: 21px;box-sizing:border-box;-moz-box-sizing:border-box;font-size: 12px;color: #000;background: #ffffff;}
-.syxy .link .input2{position: absolute;top:0;right:0;width: 91px;height: 100%;background: #fff;padding:0 ;border:none;font-size: 12px;color: #fff;text-align: center;background: #e8851d;line-height: 40px;}
+.hehe{margin:0 auto;overflow: hidden;margin: 25px auto;}
+.syxy .link{overflow: hidden;position: relative;height: 40px;right:0;bottom:0;}
+.syxy .link .input1{width: 200px;height: 100%;background: #fff;padding:0 ;border:none;padding-left: 21px;margin-right: 20px; box-sizing:border-box;-moz-box-sizing:border-box;font-size: 12px;color: #000;background: #ffffff;}
+.syxy .link .input2{position: relative; width: 91px;height: 100%;background: #fff;padding:0 ;border:none;font-size: 12px;color: #fff;text-align: center;background: #e8851d;line-height: 40px;}
 .xy-nav{position:relative;}
 input{border:0;padding:0;background: none;}
 .moble{display: none;}
@@ -30,7 +31,7 @@ input{border:0;padding:0;background: none;}
 .ans1>a{width: 225px;margin:0 auto;height: 130px;display: block;}
 .ans2{overflow: hidden;margin-bottom: 20px;background-size: 100% 100%;}
 .soso{width: 40%;height: 48px;position: relative;border-right: 0;}
-.input1{width: 75%;height: 100%;border:1px solid #d87c19;font-size: 14px;color: black;padding-left: 30px;box-sizing:border-box;-moz-box-sizing:border-box;outline: none;font-family: "微软雅黑";}
+.input1{width: 200px;height: 100%;border:1px solid #d87c19;font-size: 14px;color: black;padding-left: 30px;box-sizing:border-box;-moz-box-sizing:border-box;outline: none;font-family: "微软雅黑";}
 .input2{position: absolute;top:0px;right:0px;width: 80px;height: 50px;text-align: center;font-size: 16px;font-weight: bold;background: #e7841c;border-left: 1px solid #e7841c;cursor: pointer;outline: none;font-family: "微软雅黑";color: #fff;font-weight: normal;}
 .ans3 table td{text-align:left;font-family: "Microsoft YaHei";font-size: 14px;line-height: 50px;padding:0 10px;color: #454545;vertical-align: middle;clear: both;background: #ebe0ce;}
 .ans3 table td.title1{line-height: 50px;font-size: 20px;text-align: center;color: #fff;background: #e7841c;border:none;}
