@@ -61,6 +61,9 @@ var pullt = function (next) {
 			if (data.next) {
 				pullt(data.next);
 			}
+			else{
+				$("#tresult").text("完成新记录获取");
+			}
 		}
 	});
 }
