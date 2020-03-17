@@ -18,11 +18,11 @@ var updatet = function () {
 		beforeSend: function (xhr) {
 			xhr.setRequestHeader ("Authorization", "Basic " + auth);
 		},
-		data: {
+		data: JSON.stringify({
 			"类型": xltype,
 			"问题": $("#tkey").val(),
 			"答案": $("#tvalue").val(),
-		  },
+		  }),
 		error: function (jqXHR, textStatus, errorThrown) {
 			$("#tresult").text(textStatus);
 		},
