@@ -1,15 +1,61 @@
 var xlinfo = null;
+var xltype = null;
+var APIKey = "3d_vDQTCImnVorV7N0Z--Q";
+var APISecret = "-t_kEH1yJNJYuBRhIEFeJA";
+var auth = btoa(APIKey + ":" + APISecret);
+var bdid = "mwP8fN";
+var url = "https://jinshuju.net/f/" + bdid;
+var apiurl = "https://jinshuju.net/api/v1/forms/" + bdid;
+
+var updatet = function () {
+	$.ajax({
+		url: apiurl,
+		type: "POST",
+		beforeSend: function (xhr) {
+			xhr.setRequestHeader ("Accept", "application/json");
+			xhr.setRequestHeader ("Content-Type", "application/json");
+			xhr.setRequestHeader ("Authorization", "Basic " + auth);
+		},
+		data: {
+			"类型": xltype,
+			"问题": $("#tkey").val(),
+			"答案": $("#value").val(),
+		  },
+		error: function (jqXHR, textStatus, errorThrown) {
+			$("#tresult").text(textStatus);
+		},
+		success: function (data, textStatus, jqXHR) {
+			$("#tresult").text(JSON.stringify(data));
+		}
+	});
+}
+
+
 $(document.body).ready(function () {
-    $(".syb>a").click(function () {
-        $(this).addClass('cur').siblings().removeClass('cur');
-        switch ($(this).index()) {
-            case 0: xlinfo = xjl.xlinfo; clean(); break;
-            case 1: xlinfo = kj.xlinfo; clean(); break;
-            case 2: xlinfo = bld.xlinfo; clean(); break;
-            default: break;
-        }
-    });
+	$(".syb>a").click(function () {
+		$(this).addClass('cur').siblings().removeClass('cur');
+		switch ($(this).index()) {
+			case 0:
+				xlinfo = xjl.xlinfo;
+				xltype = "行酒令";
+				clean();
+				break;
+			case 1:
+				xlinfo = kj.xlinfo;
+				xltype = "科举";
+				clean();
+				break;
+			case 2:
+				xlinfo = bld.xlinfo;
+				xltype = "保灵丹";
+				clean();
+				break;
+			default:
+				break;
+		}
+	});
 	xlinfo = xjl.xlinfo;
+	xltype = "行酒令";
 	loadData($("#keywords").val());
 });
 
@@ -62,17 +108,15 @@ var clean = function () {
 	loadData("");
 }
 
-var fd = function (arr)
-{
+var fd = function (arr) {
 	var mid = [];
 	arr.forEach(i => {
 		var m = i.question;
-		if(m && !mid[m])
-		{
+		if (m && !mid[m]) {
 			mid[m] = i;
 		}
 	});
-	var result=[];
+	var result = [];
 	var keys = Object.keys(mid).sort();
 	var text = "";
 	for (const key in keys) {
