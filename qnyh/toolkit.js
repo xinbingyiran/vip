@@ -6,8 +6,16 @@ var auth = btoa(APIKey + ":" + APISecret);
 var bdid = "mwP8fN";
 var url = "https://jinshuju.net/f/" + bdid;
 var apiurl = "https://jinshuju.net/api/v1/forms/" + bdid;
+var geturl = "https://jinshuju.net/api/v1/forms/" + bdid + "/entries";
+
+var fields = { "类型": "field_3", "问题": "field_1", "答案": "field_2" };
+var choices = { "行酒令": "yd7l", "科举": "xTH0", "保灵丹": "De26" };
 
 var updatet = function () {
+	var datas = {};
+	datas[fields["类型"]] = choices[xltype];
+	datas[fields["问题"]] = $("#tkey").val();
+	datas[fields["答案"]] = $("#tvalue").val();
 	$.ajax({
 		url: apiurl,
 		type: "POST",
@@ -16,49 +24,117 @@ var updatet = function () {
 			"Content-Type": "application/json",
 		},
 		beforeSend: function (xhr) {
-			xhr.setRequestHeader ("Authorization", "Basic " + auth);
+			xhr.setRequestHeader("Authorization", "Basic " + auth);
 		},
-		data: JSON.stringify({
-			"类型": xltype,
-			"问题": $("#tkey").val(),
-			"答案": $("#tvalue").val(),
-		  }),
+		data: JSON.stringify(datas),
 		error: function (jqXHR, textStatus, errorThrown) {
-			$("#tresult").text(textStatus);
+			$("#tresult").text($.parseJSON(jqXHR.responseText).error_description);
 		},
 		success: function (data, textStatus, jqXHR) {
-			$("#tresult").text(JSON.stringify(data));
+			if (data.error_description) {
+				$("#tresult").text(data.error_description);
+			}
+			else {
+				$("#tresult").text("成功！");
+			}
 		}
 	});
 }
 
+var pullt = function (next) {
+	var url = next ? (geturl + "?next=" + next) : geturl;
+	$.ajax({
+		url: url,
+		type: "GET",
+		headers: {
+			"Accept": "application/json",
+			"Content-Type": "application/json",
+		},
+		beforeSend: function (xhr) {
+			xhr.setRequestHeader("Authorization", "Basic " + auth);
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			$("#tresult").text($.parseJSON(jqXHR.responseText).error_description);
+		},
+		success: function (data, textStatus, jqXHR) {
+			mergeData(data.data);
+			if (data.next) {
+				pullt(data.next);
+			}
+		}
+	});
+}
+
+var mergeData = function (data) {
+	data.forEach(item => {
+		var result = 0;
+		var type = item[fields["类型"]];
+		var key = item[fields["问题"]];
+		var value = item[fields["答案"]];
+		switch (type) {
+			case "行酒令":
+				result = mergeToInfo(xjl.xlinfo, key, value)
+				break;
+			case "科举":
+				result = mergeToInfo(kj.xlinfo, key, value)
+				break;
+			case "保灵丹":
+				result = mergeToInfo(bld.xlinfo, key, value)
+				break;
+		}
+		if (result) {
+			console.log(type + " + " + key + " : " + value);
+		}
+	});
+}
+
+var mergeToInfo = function (infos, key, value) {
+	for (var i in infos) {
+		if (infos[i].question == key)
+			return 0;
+	}
+	infos.push({ "question": key, "opt1": value });
+	return 1;
+}
+
+var reInit = function () {
+	clean();
+}
+
+var loadxjl = function () {
+	xlinfo = xjl.xlinfo;
+	xltype = "行酒令";
+	reInit();
+}
+var loadkj = function () {
+	xlinfo = kj.xlinfo;
+	xltype = "科举";
+	reInit();
+}
+var loadbld = function () {
+	xlinfo = bld.xlinfo;
+	xltype = "保灵丹";
+	reInit();
+}
 
 $(document.body).ready(function () {
+	loadxjl();
 	$(".syb>a").click(function () {
 		$(this).addClass('cur').siblings().removeClass('cur');
 		switch ($(this).index()) {
 			case 0:
-				xlinfo = xjl.xlinfo;
-				xltype = "行酒令";
-				clean();
+				loadxjl();
 				break;
 			case 1:
-				xlinfo = kj.xlinfo;
-				xltype = "科举";
-				clean();
+				loadkj();
 				break;
 			case 2:
-				xlinfo = bld.xlinfo;
-				xltype = "保灵丹";
-				clean();
+				loadbld();
 				break;
 			default:
 				break;
 		}
 	});
-	xlinfo = xjl.xlinfo;
-	xltype = "行酒令";
-	loadData($("#keywords").val());
 });
 
 //载入数据
