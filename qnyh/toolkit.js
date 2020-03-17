@@ -21,7 +21,7 @@ var updatet = function () {
 		data: {
 			"类型": xltype,
 			"问题": $("#tkey").val(),
-			"答案": $("#value").val(),
+			"答案": $("#tvalue").val(),
 		  },
 		error: function (jqXHR, textStatus, errorThrown) {
 			$("#tresult").text(textStatus);
