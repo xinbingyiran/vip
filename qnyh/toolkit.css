@@ -31,7 +31,7 @@ input{border:0;padding:0;background: none;}
 .ans1>a{width: 225px;margin:0 auto;height: 130px;display: block;}
 .ans2{overflow: hidden;margin-bottom: 20px;background-size: 100% 100%;}
 .soso{width: 55%;height: 40px;position: relative;border-right: 0;}
-.soso .input1{position: absolute;top:0px;right:82px;height: 100%;border:1px solid #d87c19;font-size: 14px;color: black;padding-left: 10px;box-sizing:border-box;-moz-box-sizing:border-box;outline: none;font-family: "微软雅黑";}
+.soso .input1{position: absolute;top:0px;right:82px;width: 160px; height: 100%;border:1px solid #d87c19;font-size: 14px;color: black;padding-left: 10px;box-sizing:border-box;-moz-box-sizing:border-box;outline: none;font-family: "微软雅黑";}
 .soso .input2{position: absolute;top:0px;right:0px;width: 80px;height: 40px;text-align: center;font-size: 16px;font-weight: bold;background: #e7841c;border-left: 1px solid #e7841c;cursor: pointer;outline: none;font-family: "微软雅黑";color: #fff;font-weight: normal;}
 .ans3 table td{text-align:left;font-family: "微软雅黑";font-size: 14px;line-height: 40px;padding:0 10px;color: #454545;vertical-align: middle;clear: both;background: #ebe0ce;}
 .ans3 table td.title1{line-height: 40px;font-size: 20px;text-align: center;color: #fff;background: #e7841c;border:none;}
