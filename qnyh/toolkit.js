@@ -61,7 +61,7 @@ var pullt = function (next) {
 			if (data.next) {
 				pullt(data.next);
 			}
-			else{
+			else {
 				$("#tresult").text("完成新记录获取");
 			}
 		}
@@ -138,6 +138,11 @@ $(document.body).ready(function () {
 				break;
 		}
 	});
+	new ClipboardJS('.btn', {
+		text: function (trigger) {
+			return trigger.innerText;
+		}
+	});
 });
 
 //载入数据
@@ -150,7 +155,7 @@ var loadData = function (str) {
 				if (index == 12)
 					break;
 				var item = items[index];
-				result += '<tr><td width="66%">' + item['question'] + '</td><td align="center">' + item['opt1'] + '</td></tr>';
+				result += '<tr><td width="66%">' + item['question'] + '</td><td align="center" class="btn">' + item['opt1'] + '</td></tr>';
 			}
 		}
 		$("#result").html(result);
