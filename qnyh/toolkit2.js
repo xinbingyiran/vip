@@ -1,82 +1,69 @@
 var xlinfo = null;
 var xltype = null;
-var url = "https://jsonbox.io/qian_nv_you_hun__da_ti_qi";
+var APIKey = "3d_vDQTCImnVorV7N0Z--Q";
+var APISecret = "-t_kEH1yJNJYuBRhIEFeJA";
+var auth = btoa(APIKey + ":" + APISecret);
+var bdid = "mwP8fN";
+var url = "https://jinshuju.net/f/" + bdid;
+var apiurl = "https://jinshuju.net/api/v1/forms/" + bdid;
+var geturl = "https://jinshuju.net/api/v1/forms/" + bdid + "/entries";
 
+var fields = { "类型": "field_3", "问题": "field_1", "答案": "field_2" };
+var choices = { "行酒令": "yd7l", "科举": "xTH0", "保灵丹": "De26" };
 
 var updatet = function () {
-	updatetqo(xltype, $("#tkey").val(), $("#tvalue").val());
-}
-
-var updatetqo = function (type, question, opt1, direct) {
-	if (direct) {
-		$.ajax({
-			url: url,
-			type: "POST",
-			headers: {
-				"Accept": "application/json",
-				"Content-Type": "application/json",
-			},
-			data: JSON.stringify({ type: type, question: question, opt1: opt1 }),
-			error: function (jqXHR, textStatus, errorThrown) {
-				$("#tresult").text(jqXHR.responseText || textStatus);
-			},
-			success: function (data, textStatus, jqXHR) {
-				if (data.message) {
-					$("#tresult").text(data.message);
-				}
-				else {
-					$("#tresult").text(question + " 添加成功！");
-				}
+	var datas = {};
+	datas[fields["类型"]] = choices[xltype];
+	datas[fields["问题"]] = $("#tkey").val();
+	datas[fields["答案"]] = $("#tvalue").val();
+	$.ajax({
+		url: apiurl,
+		type: "POST",
+		headers: {
+			"Accept": "application/json",
+			"Content-Type": "application/json",
+		},
+		beforeSend: function (xhr) {
+			xhr.setRequestHeader("Authorization", "Basic " + auth);
+		},
+		data: JSON.stringify(datas),
+		error: function (jqXHR, textStatus, errorThrown) {
+			$("#tresult").text($.parseJSON(jqXHR.responseText).error_description);
+		},
+		success: function (data, textStatus, jqXHR) {
+			if (data.error_description) {
+				$("#tresult").text(data.error_description);
 			}
-		});
-	}
-	else {
-		$.ajax({
-			url: url + "?q=type:" + type + ",question:" + encodeURIComponent(question),
-			type: "GET",
-			headers: {
-				"Accept": "application/json",
-				"Content-Type": "application/json",
-			},
-			error: function (jqXHR, textStatus, errorThrown) {
-				$("#tresult").text(jqXHR.responseText || textStatus);
-			},
-			success: function (data, textStatus, jqXHR) {
-				if (data.length) {
-					$("#tresult").text("已有数据");
-				}
-				else {
-					updatetqo(type, question, opt1, true)
-				}
+			else {
+				$("#tresult").text("成功！");
 			}
-		});
-	}
+		}
+	});
 }
 
 var pullt = function (next) {
-	var pullurl = url + "?limit=20";
-	if (next) {
-		pullurl += "&skip=" + next;
-	}
+	var url = next ? (geturl + "?next=" + next) : geturl;
 	$.ajax({
-		url: pullurl,
+		url: url,
 		type: "GET",
 		headers: {
 			"Accept": "application/json",
 			"Content-Type": "application/json",
 		},
+		beforeSend: function (xhr) {
+			xhr.setRequestHeader("Authorization", "Basic " + auth);
+		},
 		error: function (jqXHR, textStatus, errorThrown) {
-			$("#tresult").text(jqXHR.responseText || textStatus);
+			$("#tresult").text($.parseJSON(jqXHR.responseText).error_description);
 		},
 		success: function (data, textStatus, jqXHR) {
-			if (data.length) {
-				mergeData(data);
-				if (data.length == 20) {
-					pullt((next || 0) + 20);
-					return;
-				}
+			mergeData(data.data);
+			if (data.next) {
+				pullt(data.next);
 			}
-			$("#tresult").text("完成新记录获取:" + ((next || 0) + data.length));
+			else {
+				$("#tresult").text("完成新记录获取");
+			}
 		}
 	});
 }
@@ -84,17 +71,17 @@ var pullt = function (next) {
 var mergeData = function (data) {
 	data.forEach(item => {
 		var result = 0;
-		var type = item["type"];
-		var key = item["question"];
-		var value = item["opt1"];
+		var type = item[fields["类型"]];
+		var key = item[fields["问题"]];
+		var value = item[fields["答案"]];
 		switch (type) {
-			case "xjl":
+			case "行酒令":
 				result = mergeToInfo(xjl.xlinfo, key, value)
 				break;
-			case "kj":
+			case "科举":
 				result = mergeToInfo(kj.xlinfo, key, value)
 				break;
-			case "bld":
+			case "保灵丹":
 				result = mergeToInfo(bld.xlinfo, key, value)
 				break;
 		}
@@ -119,17 +106,17 @@ var reInit = function () {
 
 var loadxjl = function () {
 	xlinfo = xjl.xlinfo;
-	xltype = "xjl";
+	xltype = "行酒令";
 	reInit();
 }
 var loadkj = function () {
 	xlinfo = kj.xlinfo;
-	xltype = "kj";
+	xltype = "科举";
 	reInit();
 }
 var loadbld = function () {
 	xlinfo = bld.xlinfo;
-	xltype = "bld";
+	xltype = "保灵丹";
 	reInit();
 }
 
