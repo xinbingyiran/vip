@@ -4,11 +4,39 @@ var url = "https://jsonbox.io/qian_nv_you_hun__da_ti_qi";
 
 
 var updatet = function () {
-	updatetqo(xltype, $("#tkey").val(), $("#tvalue").val());
+	var items = {
+		type: xltype,
+		question: new $("#tkey").val(),
+		opt1: $("#tvalue").val()
+	};
+	updatet2(items);
 }
-
-var updatetqo = function (type, question, opt1, direct) {
-	if (direct) {
+var isArray = function (i) {
+	return i && typeof i === 'object' && Array == i.constructor;
+}
+var updatelocal = function (type, items, perpack, timeout) {
+	var array = [];
+	items.forEach(item => array.push({
+		type: type,
+		question: item.question,
+		opt1: item.opt1
+	}));
+	perpack = perpack || 100;
+	timeout = timeout || 1000;
+	for (var i = 0; i < array.length; i += perpack) {
+		delayupdatelocal(array.slice(i, i + perpack), i * timeout / perpack);
+	}
+}
+var delayupdatelocal = function (items, timeout) {
+	setTimeout(() => {
+		updatet2(items)
+	}, timeout);
+}
+var updatet2 = function (items, direct) {
+	if (!items) {
+		$("#tresult").text("empty items");
+	}
+	if (direct || isArray(items)) {
 		$.ajax({
 			url: url,
 			type: "POST",
@@ -16,7 +44,7 @@ var updatetqo = function (type, question, opt1, direct) {
 				"Accept": "application/json",
 				"Content-Type": "application/json",
 			},
-			data: JSON.stringify({ type: type, question: question, opt1: opt1 }),
+			data: JSON.stringify(items),
 			error: function (jqXHR, textStatus, errorThrown) {
 				$("#tresult").text(jqXHR.responseText || textStatus);
 			},
@@ -25,36 +53,36 @@ var updatetqo = function (type, question, opt1, direct) {
 					$("#tresult").text(data.message);
 				}
 				else {
-					$("#tresult").text(question + " 添加成功！");
+					$("#tresult").text((isArray(items) ? items.length : items.question) + " 添加成功！");
 				}
 			}
 		});
+		return;
 	}
-	else {
-		$.ajax({
-			url: url + "?q=type:" + type + ",question:" + encodeURIComponent(question),
-			type: "GET",
-			headers: {
-				"Accept": "application/json",
-				"Content-Type": "application/json",
-			},
-			error: function (jqXHR, textStatus, errorThrown) {
-				$("#tresult").text(jqXHR.responseText || textStatus);
-			},
-			success: function (data, textStatus, jqXHR) {
-				if (data.length) {
-					$("#tresult").text("已有数据");
-				}
-				else {
-					updatetqo(type, question, opt1, true)
-				}
+	$.ajax({
+		url: url + "?q=type:" + items.type + ",question:" + encodeURIComponent(items.question),
+		type: "GET",
+		headers: {
+			"Accept": "application/json",
+			"Content-Type": "application/json",
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			$("#tresult").text(jqXHR.responseText || textStatus);
+		},
+		success: function (data, textStatus, jqXHR) {
+			if (data.length) {
+				$("#tresult").text("已有数据");
 			}
-		});
-	}
+			else {
+				updatet2(items, true)
+			}
+		}
+	});
 }
 
-var pullt = function (next) {
-	var pullurl = url + "?limit=20";
+var pullt = function (next, limit) {
+	limit = limit || 100;
+	var pullurl = url + "?limit=" + limit;
 	if (next) {
 		pullurl += "&skip=" + next;
 	}
@@ -71,8 +99,8 @@ var pullt = function (next) {
 		success: function (data, textStatus, jqXHR) {
 			if (data.length) {
 				mergeData(data);
-				if (data.length == 20) {
-					pullt((next || 0) + 20);
+				if (data.length == limit) {
+					pullt((next || 0) + limit);
 					return;
 				}
 			}
