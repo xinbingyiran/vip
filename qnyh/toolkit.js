@@ -236,7 +236,7 @@ var clean = function () {
 }
 
 var fd = function (p) {
-	if (typeof (str) !== 'string')
+	if (typeof (p) !== 'string')
 		return;
 	var arr = eval(p);
 	var mid = [];
