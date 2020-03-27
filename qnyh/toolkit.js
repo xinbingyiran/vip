@@ -1,15 +1,15 @@
-var xlinfo = null;
+var curItems = null;
 var xltype = null;
 var url = "https://jsonbox.io/qian_nv_you_hun__da_ti_qi";
 
 
 var updatet = function () {
-	var items = {
+	var newitem = {
 		type: xltype,
 		question: new $("#tkey").val(),
 		opt1: $("#tvalue").val()
 	};
-	updatet2(items);
+	updatet2(newitem);
 }
 var isArray = function (i) {
 	return i && typeof i === 'object' && Array == i.constructor;
@@ -117,13 +117,13 @@ var mergeData = function (data) {
 		var value = item["opt1"];
 		switch (type) {
 			case "xjl":
-				result = mergeToInfo(xjl.xlinfo, key, value)
+				result = mergeToInfo(xjl, key, value)
 				break;
 			case "kj":
-				result = mergeToInfo(kj.xlinfo, key, value)
+				result = mergeToInfo(kj, key, value)
 				break;
 			case "bld":
-				result = mergeToInfo(bld.xlinfo, key, value)
+				result = mergeToInfo(bld, key, value)
 				break;
 		}
 		if (result) {
@@ -146,17 +146,17 @@ var reInit = function () {
 }
 
 var loadxjl = function () {
-	xlinfo = xjl.xlinfo;
+	curItems = xjl;
 	xltype = "xjl";
 	reInit();
 }
 var loadkj = function () {
-	xlinfo = kj.xlinfo;
+	curItems = kj;
 	xltype = "kj";
 	reInit();
 }
 var loadbld = function () {
-	xlinfo = bld.xlinfo;
+	curItems = bld;
 	xltype = "bld";
 	reInit();
 }
@@ -219,13 +219,13 @@ var searchData = function (obj, e) {
 //填充数据
 var filterData = function (str) {
 	if (typeof (str) == "undefined" || str.length == 0) {
-		return xlinfo;
+		return curItems;
 	}
 	var result = [];
-	for (var i in xlinfo) {
-		if (xlinfo[i].question.indexOf(str) < 0)
+	for (var i in curItems) {
+		if (curItems[i].question.indexOf(str) < 0)
 			continue;
-		result.push(xlinfo[i]);
+		result.push(curItems[i]);
 	}
 	return result;
 }
@@ -235,7 +235,10 @@ var clean = function () {
 	loadData("");
 }
 
-var fd = function (arr) {
+var fd = function (p) {
+	if (typeof (str) !== 'string')
+		return;
+	var arr = eval(p);
 	var mid = [];
 	arr.forEach(i => {
 		var m = i.question;
@@ -245,11 +248,32 @@ var fd = function (arr) {
 	});
 	var result = [];
 	var keys = Object.keys(mid).sort();
-	var text = "";
+	var text = "var " + p + "= [<br/>";
 	for (const key in keys) {
-		text += JSON.stringify(mid[keys[key]]) + ",<br/>";
+		text += "&nbsp;&nbsp;&nbsp;&nbsp;" + JSON.stringify(mid[keys[key]], null, 1) + ",<br/>";
 		result.push(mid[keys[key]]);
 	}
+	text += "];";
 	document.body.innerHTML = text;
 	return;
+}
+
+var cl = function (p) {
+	if (typeof (p) !== 'string')
+		return;
+	var clurl = url + "?q=" + p;
+	$.ajax({
+		url: clurl,
+		type: "DELETE",
+		headers: {
+			"Accept": "application/json",
+			"Content-Type": "application/json",
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			console.log(jqXHR.responseText || textStatus);
+		},
+		success: function (data, textStatus, jqXHR) {
+			console.log(JSON.stringify(data));
+		}
+	});
 }
