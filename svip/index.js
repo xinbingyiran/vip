@@ -38,7 +38,7 @@
 		"927": "https://api.927jx.com/vip/?url=",
 		"920": "https://api.tv920.com/vip/?url=",
 		"lhh": "https://api.lhh.la/vip/?url=",
-		"8b": "https://api.8bjx.cn/?url",
+		"8b": "https://api.8bjx.cn/?url=",
 		"41": "https://jx.f41.cc/?url=",
 		"ckmov": "https://www.ckmov.vip/api.php?url=",
 		"517": "https://cn.bjbanshan.cn/jx.php?url=",
