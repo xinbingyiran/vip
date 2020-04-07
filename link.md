@@ -42,9 +42,7 @@
 # yyhd
 - [领红包](yy://logingiftbag-[tabkey=task&subkey=0&from=from_tab_zadan&ep=])
 - [玩游戏，赚红包](yy://yxdt-[key=yg0vi302-MBZDIVHB&from=from_link_zadan])
-- [玩游戏，赚红包](yy://yxdt-[key=yg0viVNLSXGER-TQHZIVHY&from=from_TQHZ])
-- [新版推广大使](yy://yxdt-[key=yg0vi341-JCHZIVZADAN&from=from_link_zadan])
 - [新版推广大使](yy://yxdt-[key=yg0vi341-YLHZIVFX&from=from_link_zadan])
 - [超级玩家VIP俱乐部](yy://yxdt-[key=yg0viCWJLB-MBZDIVHB&from=from_link_zadan])
 - [幸运大转盘](yy://yxdt-[key=yg0viyyxxqbcj2019&from=from_link_zadan])
-- [砍怪爆红包](yy://yxdt-[key=yg0viKGBHB-MBZDIVHB&from=from_link_zadan])
+- [最强开箱王](yy://yxdt-[key=yg0viKXW-MBZDIVHY&from=from_link_tanchuang])
