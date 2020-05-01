@@ -1,6 +1,6 @@
 ﻿(function(){
 	var vipUrls = [
-		{name:"SVIP",url:"http://xinbingyiran.coding.me/vip/?"}
+		{name:"SVIP",url:"http://nh0p4k.coding-pages.com/vip/?"}
 	];
 	//设置cookie  
 	function setCookie(cname, cvalue, exdays) {  
