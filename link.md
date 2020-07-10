@@ -3,7 +3,7 @@
 - [HWIDGEN](https://dl.lancdn.com/landian/software/HWIDGEN/)
 
 # android
-- [冰封娱乐网](https://www.zzlzl.com/)
+- [冰封娱乐网](https://www.bingfengyl.com/)
 - [423down](https://www.423down.com/)
 
 # ssr
