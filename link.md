@@ -2,6 +2,13 @@
 - [landian](https://dl.lancdn.com/landian/)
 - [HWIDGEN](https://dl.lancdn.com/landian/software/HWIDGEN/)
 
+# github
+- [fastgit](download.fastgit.org/)
+- [cnpmjs](https://github.com.cnpmjs.org/)
+- [bajins](https://github.bajins.com/)
+- [wuyanzheshui](https://github.wuyanzheshui.workers.dev/)
+- [rc1844](https://github.rc1844.workers.dev/)
+
 # android
 - [冰封娱乐网](https://www.bingfengyl.com/)
 - [423down](https://www.423down.com/)
@@ -42,11 +49,3 @@
 - [Textfree](https://www.pinger.com/text-free/)
 - [SELLAITE](http://sms.sellaite.com/)
 - [Twilio](https://www.twilio.com/)
-
-# yyhd
-- [领红包](yy://logingiftbag-[tabkey=task&subkey=0&from=from_tab_zadan&ep=])
-- [玩游戏，赚红包](yy://yxdt-[key=yg0vi302-MBZDIVHB&from=from_link_zadan])
-- [新版推广大使](yy://yxdt-[key=yg0vi341-YLHZIVFX&from=from_link_zadan])
-- [超级玩家VIP俱乐部](yy://yxdt-[key=yg0viCWJLB-MBZDIVHB&from=from_link_zadan])
-- [幸运大转盘](yy://yxdt-[key=yg0viyyxxqbcj2019&from=from_link_zadan])
-- [最强开箱王](yy://yxdt-[key=yg0viKXW-MBZDIVHY&from=from_link_tanchuang])
