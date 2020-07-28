@@ -3,7 +3,7 @@
 - [HWIDGEN](https://dl.lancdn.com/landian/software/HWIDGEN/)
 
 # github
-- [fastgit](download.fastgit.org/)
+- [fastgit](https://download.fastgit.org/)
 - [cnpmjs](https://github.com.cnpmjs.org/)
 - [bajins](https://github.bajins.com/)
 - [wuyanzheshui](https://github.wuyanzheshui.workers.dev/)
