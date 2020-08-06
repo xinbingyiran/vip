@@ -189,19 +189,21 @@
 		["大亨2", "http://api.oopw.top/jiexi/?url="],
 		["百域阁", "http://api.baiyug.vip/?url="],
 		["1717云", "http://www.1717yun.com/jx/vip?url="],
-		["花园解析", "http://j.zz22x.com/jx/?url="],
+		["花园解析", "http://j.zz22x.com/jx/?url="]
 	];
 	var spUrls = [
-		["M1907", "https://z1.m1907.cn/"],
-        ["难看影院", "https://www.nksee.com/"],
-        ["电影盒子", "https://www.dyhz8.com/"],
-        ["高乐播", "http://www.gaolebo.com/"],
-        ["迅雷影院", "https://www.xunleiyy.com/"],
-        ["云播TV", "https://www.yunbtv.com/"],
-        ["高清云影视", "https://www.gqytv.com/"],
-        ["最大", "http://zuidazy.net/"],
-        ["片库", "http://pianku.tv/"],
-        ["K8经典", "https://www.k8jd.com/"],
-        ["1090", "http://1090ys.com/"],
+		["M1907", "https://z1.m1907.cn"],
+        ["YY4480", "http://www.yy4480v.com"],
+        ["草民电影网", "https://www.cmdyhd.com"],
+        ["红豆影视", "http://www.redbean.top"],
+        ["难看影院", "https://www.nksee.com"],
+        ["电影盒子", "https://www.dyhz8.com"],
+        ["迅雷影院", "https://www.xunleiyy.com"],
+        ["云播TV", "https://www.yunbtv.com"],
+        ["高清云影视", "https://www.gqytv.com"],
+        ["最大", "http://www.zuidazy3.net"],
+        ["片库", "https://www.pianku.tv"],
+        ["K8经典", "https://www.k8jd.com"],
+        ["1090", "http://1090ys1.com"]
 	];
 })();
