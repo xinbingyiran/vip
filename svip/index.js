@@ -193,6 +193,7 @@
 	];
 	var spUrls = [
 		["M1907", "https://z1.m1907.cn"],
+		["线报坊", "http://tv.iqxbf.com"],
         ["YY4480", "http://www.yy4480v.com"],
         ["草民电影网", "https://www.cmdyhd.com"],
         ["红豆影视", "http://www.redbean.top"],
