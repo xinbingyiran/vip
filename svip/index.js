@@ -36,18 +36,18 @@
 		stopmove();
 	}
 
-	function domove(ev) {
-		var mx = event.clientX - posX;
-		var my = event.clientY - posY;
-		posX = event.clientX;
-		posY = event.clientY;
+	function domove(e) {
+		var mx = e.clientX - posX;
+		var my = e.clientY - posY;
+		posX = e.clientX;
+		posY = e.clientY;
 		floatdiv.style.left = +floatdiv.style.left.slice(0, -2) + mx + "px";
 		floatdiv.style.top = +floatdiv.style.top.slice(0, -2) + my + "px";
 	}
 
 	function startmove(e) {
-		posX = event.clientX;
-		posY = event.clientY;
+		posX = e.clientX;
+		posY = e.clientY;
 		floatdiv.onmousemove = domove;
 	}
 
@@ -61,8 +61,8 @@
 		return false;
 	};
 
-	function checkEnter() {
-		if (event.keyCode == 13) {
+	function checkEnter(e) {
+		if (e.keyCode == 13) {
 			goVip();
 		}
 	}
@@ -159,28 +159,17 @@
 	var vipUrls = [
 		["1907", "https://z1.m1907.cn/?jx="],
 		["音萌", "https://api.v6.chat/?url="],
-		["heimijx", "https://www.heimijx.com/jx/api/?url="],
 		["石头解析", "https://jiexi.071811.cc/jx.php?url="],
 		["BL解析", "https://vip.bljiex.com/?v="],
-		["人人解析", "https://vip.mpos.ren/v/?url="],
-		["yangju", "https://cdn.yangju.vip/k/?url="],
 		["思古", "https://api.sigujx.com/?url="],
 		["简傲云", "https://vip.jaoyun.com/index.php?url="],
-		["myxin", "https://www.myxin.top/jx/api/?url="],
-		["60jx", "https://60jx.com/?url="],
 		["ivito", "https://jx.ivito.cn/?url="],
-		["927", "https://api.927jx.com/vip/?url="],
 		["lhh", "https://api.lhh.la/vip/?url="],
-		["8b", "https://api.8bjx.cn/?url="],
 		["41", "https://jx.f41.cc/?url="],
 		["ckmov", "https://www.ckmov.vip/api.php?url="],
 		["mw0", "https://jx.mw0.cc/?url="],
-		["1ff1", "https://jx.1ff1.cn/?url="],
-		["180", "https://jx.000180.top/jx/?url="],
 		["okjs", "https://okjx.cc/?url="],
-		["百度穷二代", "http://jx.ejiafarm.com/dy.php?url="],
 		["金桥解析", "http://jqaaa.com/jx.php?url="],
-		["598110", "http://jx.598110.com/?url="],
 		["jlsprh", "http://vip.jlsprh.com/?url="],
 		["618阁", "http://jx.618ge.com/?url="],
 		["DuPlay", "http://jx.du2.cc/?url="],
@@ -199,12 +188,10 @@
         ["红豆影视", "http://www.redbean.top"],
         ["难看影院", "https://www.nksee.com"],
         ["电影盒子", "https://www.dyhz8.com"],
-        ["迅雷影院", "https://www.xunleiyy.com"],
         ["云播TV", "https://www.yunbtv.com"],
         ["高清云影视", "https://www.gqytv.com"],
         ["最大", "http://www.zuidazy3.net"],
         ["片库", "https://www.pianku.tv"],
-        ["K8经典", "https://www.k8jd.com"],
         ["1090", "http://1090ys1.com"]
 	];
 })();

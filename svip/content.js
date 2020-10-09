@@ -28,20 +28,20 @@
 		stopmove();
 	}
 
-	function domove(ev)
+	function domove(e)
 	{
-		var mx = event.clientX - posX;
-		var my = event.clientY - posY;
-		posX = event.clientX;
-		posY = event.clientY;
+		var mx = e.clientX - posX;
+		var my = e.clientY - posY;
+		posX = e.clientX;
+		posY = e.clientY;
 		floatdiv.style.right = +floatdiv.style.right.slice(0,-2) - mx +  "px";
 		floatdiv.style.top = +floatdiv.style.top.slice(0,-2) + my +  "px";
 	}
 
 	function startmove(e)
 	{
-		posX = event.clientX;
-		posY = event.clientY;
+		posX = e.clientX;
+		posY = e.clientY;
 		floatdiv.onmousemove = domove;
 	}
 

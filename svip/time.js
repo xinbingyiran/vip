@@ -13,8 +13,8 @@ function goVip() {
 	return false;
 };
 
-function checkEnter(){
-	if(event.keyCode==13){
+function checkEnter(e){
+	if(e.keyCode==13){
 		goVip();
 	}
 }
