@@ -185,13 +185,15 @@
 		["线报坊", "http://tv.iqxbf.com"],
         ["YY4480", "http://www.yy4480v.com"],
         ["草民电影网", "https://www.cmdyhd.com"],
-        ["红豆影视", "http://www.redbean.top"],
+        ["三米影视", "https://www.smmy365.com"],
         ["难看影院", "https://www.nksee.com"],
         ["电影盒子", "https://www.dyhz8.com"],
         ["云播TV", "https://www.yunbtv.com"],
         ["高清云影视", "https://www.gqytv.com"],
-        ["最大", "http://www.zuidazy3.net"],
         ["片库", "https://www.pianku.tv"],
-        ["1090", "http://1090ys1.com"]
+        ["神马影院", "https://www.3s8m.com"],
+        ["淘影网", "http://www.tyw8188.com"],
+        ["1090", "http://1090ys1.com"],
+        ["88电影网", "http://www.28ddy.com/"]
 	];
 })();
