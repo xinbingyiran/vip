@@ -3,11 +3,20 @@
 - [HWIDGEN](https://dl.lancdn.com/landian/software/HWIDGEN)
 
 # github
+- [hlkt](https://gh.hlkt.workers.dev)
 - [fastgit](https://hub.fastgit.org)
+- [download](https://download.fastgit.org)
 - [cnpmjs](https://github.com.cnpmjs.org)
 - [bajins](https://github.bajins.com)
 - [wuyanzheshui](https://github.wuyanzheshui.workers.dev)
 - [rc1844](https://github.rc1844.workers.dev)
+- [gh-proxy项目](https://github.com/hunshcn/gh-proxy)
+- [gh-proxy1](https://gh.api.99988866.xyz)
+- [gh-proxy2](https://g.ioiox.com)
+
+# js-proxy
+- [hlkt](https://g.hlkt.workers.dev)
+- [mk-proxy](https://github2.mk-proxy.ml)
 
 # 线报坊
 - [线报坊活动网](http://www.52xbf.com)
