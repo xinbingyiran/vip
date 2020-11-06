@@ -160,3 +160,6 @@
 - [9raxRssOss](https://9rax.wsxhr.com/project/ssr/oss)
 - [qiaomenzhuanfx](https://qiaomenzhuanfx.netlify.app)
 - [Alvin9999](https://github.com/Alvin9999/new-pac/wiki)
+- [github](https://github.com/freefq/free)
+- [ssr](https://raw.githubusercontent.com/freefq/free/master/ssr)
+- [v2ray](https://raw.githubusercontent.com/freefq/free/master/v2)
