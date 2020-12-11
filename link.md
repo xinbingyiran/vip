@@ -2,6 +2,14 @@
 - [landian](https://dl.lancdn.com/landian)
 - [HWIDGEN](https://dl.lancdn.com/landian/software/HWIDGEN)
 
+# windows&office
+- [github](https://github.com/FHWWC/KeyCheck)
+- [密钥检测工具网页版](http://pkeytools.azurewebsites.net)
+- [密钥检测工具备用](https://pkeytool.tk)
+- [获取确认ID](http://getcid.cn)
+- [网页激活](https://webact.185.hk)
+
+
 # github
 - [hlkt](https://gh.hlkt.workers.dev)
 - [fastgit](https://hub.fastgit.org)
@@ -13,10 +21,6 @@
 - [gh-proxy项目](https://github.com/hunshcn/gh-proxy)
 - [gh-proxy1](https://gh.api.99988866.xyz)
 - [gh-proxy2](https://g.ioiox.com)
-
-# js-proxy
-- [hlkt](https://g.hlkt.workers.dev)
-- [mk-proxy](https://github2.mk-proxy.ml)
 
 # 线报坊
 - [线报坊活动网](http://www.52xbf.com)
