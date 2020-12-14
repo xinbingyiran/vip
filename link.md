@@ -9,7 +9,6 @@
 - [获取确认ID](http://getcid.cn)
 - [网页激活](https://webact.185.hk)
 
-
 # github
 - [hlkt](https://gh.hlkt.workers.dev)
 - [fastgit](https://hub.fastgit.org)
@@ -21,6 +20,15 @@
 - [gh-proxy项目](https://github.com/hunshcn/gh-proxy)
 - [gh-proxy1](https://gh.api.99988866.xyz)
 - [gh-proxy2](https://g.ioiox.com)
+
+# gfw&fq
+- [nogfw](https://github.com/gfw-breaker/nogfw)
+- [9raxRss](https://9rax.wsxhr.com/project/ssr)
+- [9raxRssOss](https://9rax.wsxhr.com/project/ssr/oss)
+- [qiaomenzhuanfx](https://qiaomenzhuanfx.netlify.app)
+- [FreeAir](http://tr1.freeair888.club)
+- [Alvin9999](https://github.com/Alvin9999/new-pac/wiki)
+- [github](https://github.com/freefq/free)
 
 # 线报坊
 - [线报坊活动网](http://www.52xbf.com)
@@ -157,13 +165,3 @@
 - [TV/盒子软件合集](https://www.lanzous.com/b699768/#987456)
 - [清秋暖冬合集](https://www.lanzous.com/b474214#qingqiu)
 - [阿哲团队](https://pan.lanzou.com/b100313)
-
-# ssr
-- [nogfw](https://github.com/gfw-breaker/nogfw)
-- [9raxRss](https://9rax.wsxhr.com/project/ssr)
-- [9raxRssOss](https://9rax.wsxhr.com/project/ssr/oss)
-- [qiaomenzhuanfx](https://qiaomenzhuanfx.netlify.app)
-- [Alvin9999](https://github.com/Alvin9999/new-pac/wiki)
-- [github](https://github.com/freefq/free)
-- [ssr](https://raw.githubusercontent.com/freefq/free/master/ssr)
-- [v2ray](https://raw.githubusercontent.com/freefq/free/master/v2)
