@@ -159,10 +159,8 @@
 	var vipUrls = [
 		["1907", "https://z1.m1907.cn/?jx="],
 		["音萌", "https://api.v6.chat/?url="],
-		["石头解析", "https://jiexi.071811.cc/jx.php?url="],
 		["BL解析", "https://vip.bljiex.com/?v="],
 		["思古", "https://api.sigujx.com/?url="],
-		["简傲云", "https://vip.jaoyun.com/index.php?url="],
 		["ivito", "https://jx.ivito.cn/?url="],
 		["lhh", "https://api.lhh.la/vip/?url="],
 		["41", "https://jx.f41.cc/?url="],
@@ -170,12 +168,8 @@
 		["mw0", "https://jx.mw0.cc/?url="],
 		["okjs", "https://okjx.cc/?url="],
 		["金桥解析", "http://jqaaa.com/jx.php?url="],
-		["jlsprh", "http://vip.jlsprh.com/?url="],
-		["618阁", "http://jx.618ge.com/?url="],
 		["DuPlay", "http://jx.du2.cc/?url="],
 		["618G", "http://jx.618g.com/?url="],
-		["大亨", "http://jx.oopw.top/?url="],
-		["大亨2", "http://api.oopw.top/jiexi/?url="],
 		["百域阁", "http://api.baiyug.vip/?url="],
 		["1717云", "http://www.1717yun.com/jx/vip?url="],
 		["花园解析", "http://j.zz22x.com/jx/?url="]
@@ -189,10 +183,9 @@
         ["电影盒子", "https://www.dyhz8.com"],
         ["云播TV", "https://www.yunbtv.com"],
         ["高清云影视", "https://www.gqytv.com"],
-        ["片库", "https://www.pianku.tv"],
         ["神马影院", "https://www.3s8m.com"],
         ["淘影网", "http://www.tyw8188.com"],
-        ["1090", "http://1090ys1.com"],
+        ["1090", "http://1090ys.com"],
         ["88电影网", "http://www.28ddy.com/"]
 	];
 })();
