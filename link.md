@@ -19,6 +19,10 @@
 - [gh-proxy1](https://gh.api.99988866.xyz)
 - [gh-proxy2](https://ghproxy.com/)
 
+# sgk
+- [kfcx361](http://www.kfcx361.com/)
+- [sjk](http://site3.sjk.space/) `gfw`
+
 # gfw&fq
 - [nogfw](https://github.com/gfw-breaker/nogfw)
 - [Alvin9999](https://github.com/Alvin9999/new-pac/wiki)
