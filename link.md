@@ -3,8 +3,9 @@
 - [HWIDGEN](https://dl.lancdn.com/landian/software/HWIDGEN)
 
 # windows&office
-- [github](https://github.com/FHWWC/KeyCheck)
+- [github](https://hub.fastgit.org/FHWWC/KeyCheck)
 - [密钥检测网页](http://pkeytools.azurewebsites.net)
+- [密钥检测网页1](https://pkeytool.live)
 - [密钥检测网页2](https://webact.185.hk/mskey.php)
 - [密钥分享网页](https://webact.185.hk/sharedkey.php)
 
@@ -12,10 +13,7 @@
 - [fastgit](https://hub.fastgit.org)
 - [download](https://download.fastgit.org)
 - [cnpmjs](https://github.com.cnpmjs.org/)
-- [bajins](https://github.bajins.com)
-- [wuyanzheshui](https://github.wuyanzheshui.workers.dev)
-- [rc1844](https://github.rc1844.workers.dev)
-- [gh-proxy项目](https://github.com/hunshcn/gh-proxy)
+- [gh-proxy项目](https://hub.fastgit.org/hunshcn/gh-proxy)
 - [gh-proxy1](https://gh.api.99988866.xyz)
 - [gh-proxy2](https://ghproxy.com/)
 
@@ -24,29 +22,40 @@
 - [sjk](http://site3.sjk.space/) `gfw`
 
 # gfw&fq
-- [nogfw](https://github.com/gfw-breaker/nogfw)
-- [Alvin9999](https://github.com/Alvin9999/new-pac/wiki)
+- [nogfw](https://hub.fastgit.org/gfw-breaker/nogfw)
+- [Alvin9999](https://hub.fastgit.org/Alvin9999/new-pac/wiki)
 
 ```
 备用网址：http://tr1.freeair888.club
 ```
 
-- [freefq](https://github.com/freefq/free)
+- [freefq](https://hub.fastgit.org/freefq/free)
 
 ```
-SSR节点订阅
-https://raw.githubusercontent.com/freefq/free/master/ssr
-v2ray(ss/trojan)节点订阅
-https://raw.githubusercontent.com/freefq/free/master/v2
-自定义节点订阅
-为解决githubusercontent被屏蔽订阅无法更新问题，用开源模板搭了个订阅网站，有需要自取：永久免费订阅
+节点更新订阅
+https://raw.fastgit.org/freefq/free/master/v2
+自建节点订阅
+bulink.xyz注册（要翻墙）除可订阅本页免费节点，还有每月5G自建节点免费流量，不用打卡签到长期有效，欢迎体验
 
-除了免费节点，还可试试在线代理：https://j.bulink.xyz/
-```
-
-- [订阅地址](https://github.com/du5/free/blob/master/sub.list)
+https://j.bulink.xyz
+https:js.bulink.xyz
 
 ```
+
+- [订阅地址](https://hub.fastgit.org/du5/free/blob/master/sub.list)
+
+```
+# 0615 bilibili https://www.bilibili.com/video/BV1pV41147L1 订阅
+https://git.ddns.tokyo/du5/free/master/file/0615/v2ray.json
+# 0503 pdd 订阅
+https://git.ddns.tokyo/du5/free/master/file/0503/clash.yaml
+## 0407 更新
+https://raw.githubusercontent.com/du5/free/master/file/0407/clash.yaml
+https://raw.githubusercontent.com/du5/free/master/file/0407/clash2.yaml
+## 0404 更新
+https://raw.githubusercontent.com/du5/free/master/file/0404/clash.yaml
+## 0312 更新
+https://raw.githubusercontent.com/du5/free/master/file/0312/clash.yaml
 ## 0307 更新
 https://raw.githubusercontent.com/du5/free/master/file/0307/clash.yaml
 ## 0909 更新
@@ -125,23 +134,17 @@ https://raw.githubusercontent.com/cdp2020/v2ray/master/README.md
 
 ```
 线报坊软件合集（主用）
-https://xbfrj.lanzous.com/b0099x3e
+https://xbfrj.lanzoui.com/b0099x3e
 软件合集备用1（主用无法访问的时候进备用1）
-https://www.lanzous.com/b60364/
+https://d.lanzou.com/b60364/
 软件合集备用2（主用无法访问的时候进备用2）
-http://lanzous.com/b60364/
+https://xbf.lanzoui.com/b0099x3e
 
-如果3个连接都无法访问，建议切换网络试试
+如果3个连接都无法访问的，建议换个时间段在访问试试
+线报坊软件盒子
+https://xbf.lanzoui.com/b0bkkpij
 影视合集（安卓版）
-https://xbfrj.lanzous.com/b765263m
-影视网站（苹果+安卓+电脑 都可用）
-http://tv.iqxbf.com
-下歌合集（安卓版）
-https://www.lanzous.com/b934901
-下歌网（安卓+电脑 都可用）
-http://music.iqxbf.com
-线报坊软件盒
-https://xbfrj.lanzoui.com/rjhz
+https://xbf.lanzoui.com/b0bxh5md
 线报坊活动网（52线报坊）
 http://www.52xbf.com/
 ```
@@ -153,6 +156,7 @@ http://www.52xbf.com/
 - [南风娱乐网](https://www.nanfengyl.com)
 - [无二辅助网](https://www.52fzg.com)
 - [423down](https://www.423down.com)
+- [tv920](https://www.tv920.com/)
 
 # software
 - [全网软件分享合集](https://lanzoui.com/b117359)
@@ -175,7 +179,7 @@ http://www.52xbf.com/
 - [b321190](https://www.lanzous.com/b321190)
 - [b507525](https://www.lanzous.com/b507525)
 - [b00n4d5kb](https://www.lanzous.com/b00n4d5kb)
-- [好软分享](https://github.com/yoyodadada/haoruanfenxiang)
+- [好软分享](https://hub.fastgit.org/yoyodadada/haoruanfenxiang)
 - [优质APP集散地](https://www.lanzous.com/u/yoyodadada)
 - [未归类的比较好用的软件](https://www.lanzous.com/b01b01h9a)
 - [二狗娱乐网合集](https://www.lanzous.com/b896145)
