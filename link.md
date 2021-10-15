@@ -1,12 +1,28 @@
-﻿# lancdn
+﻿# web
+- [dotnetfiddle](https://dotnetfiddle.net/)
+- [懒得勤快](https://hub.fastgit.org/ldqk)
+```
+测试站点1：https://ldqk.org，测试站点2：https://masuit.com，测试站点3：https://masuit.tk，测试站点4：https://ldqk.tk
+```
+- [龙轩导航](http://ilxdh.com)
+- [果核剥壳](https://www.ghpym.com)
+- [冰封娱乐网](https://www.bingfengyl.com)
+- [南风娱乐网](https://www.nanfengyl.com)
+- [无二辅助网](https://www.52fzg.com)
+- [423down](https://www.423down.com)
+- [tv920](https://www.tv920.com/)
+
+# lancdn
 - [landian](https://dl.lancdn.com/landian)
 - [HWIDGEN](https://dl.lancdn.com/landian/software/HWIDGEN)
 
 # windows&office
-- [github](https://hub.fastgit.org/FHWWC/KeyCheck)
-- [密钥检测网页](http://pkeytools.azurewebsites.net)
-- [密钥检测网页1](https://pkeytool.live)
-- [密钥检测网页2](https://webact.185.hk/mskey.php)
+- [密钥检测](https://hub.fastgit.org/FHWWC/KeyCheck)
+```
+密钥检测工具网页版：https://pkeytools.azurewebsites.net （永久域名）
+另一个域名：https://pkeytool.live
+```
+- [密钥检测网页](https://webact.185.hk/mskey.php)
 - [密钥分享网页](https://webact.185.hk/sharedkey.php)
 
 # github
@@ -148,15 +164,6 @@ https://xbf.lanzoui.com/b0bxh5md
 线报坊活动网（52线报坊）
 http://www.52xbf.com/
 ```
-
-# web
-- [龙轩导航]](http://ilxdh.com)
-- [果核剥壳](https://www.ghpym.com)
-- [冰封娱乐网](https://www.bingfengyl.com)
-- [南风娱乐网](https://www.nanfengyl.com)
-- [无二辅助网](https://www.52fzg.com)
-- [423down](https://www.423down.com)
-- [tv920](https://www.tv920.com/)
 
 # software
 - [全网软件分享合集](https://lanzoui.com/b117359)
