@@ -11,6 +11,7 @@
 - [无二辅助网](https://www.52fzg.com)
 - [423down](https://www.423down.com)
 - [tv920](https://www.tv920.com/)
+- [优客api](http://api.iyk0.com/)
 
 # lancdn
 - [landian](https://dl.lancdn.com/landian)
@@ -24,6 +25,8 @@
 ```
 - [密钥检测网页](https://webact.185.hk/mskey.php)
 - [密钥分享网页](https://webact.185.hk/sharedkey.php)
+- [激活网址/fq](https://microsoft.gointeract.io/interact/index?interaction=1461173234028-3884f8602eccbe259104553afa8415434b4581-05d1&accountId=microsoft&loadFrom=CDN&appkey=196de13c-e946-4531-98f6-2719ec8405ce&Language=English&name=pana&CountryCode=en-US&Click%20To%20Call%20Caller%20Id=+17142064889&startedFromSmsToken=3jUenpr&dnis=26&token=0Yr8Nd)
+- [激活网址2/fq](https://microsoft.gointeract.io/interact/index?interaction=1461173234028-3884f8602eccbe259104553afa8415434b4581-05d1&accountId=microsoft&appkey=196de13c-e946-4531-98f6-2719ec8405ce&Language=CN&CountryCode=cn&CountryLanguage=CN&Click%20To%20Call%20Caller%20Id=+31620950938&startedFromSmsToken=voZAx6D&token=DWON8k)
 
 # github
 - [fastgit](https://hub.fastgit.org)
@@ -35,7 +38,7 @@
 
 # sgk
 - [kfcx361](http://www.kfcx361.com/)
-- [sjk](http://site3.sjk.space/) `gfw`
+- [sjk/fq](http://site3.sjk.space/)
 
 # gfw&fq
 - [nogfw](https://hub.fastgit.org/gfw-breaker/nogfw)
