@@ -13,10 +13,6 @@
 - [tv920](https://www.tv920.com/)
 - [优客api](http://api.iyk0.com/)
 
-# lancdn
-- [landian](https://dl.lancdn.com/landian)
-- [HWIDGEN](https://dl.lancdn.com/landian/software/HWIDGEN)
-
 # windows&office
 - [密钥检测](https://hub.fastgit.org/FHWWC/KeyCheck)
 ```
@@ -27,8 +23,11 @@
 - [密钥分享网页](https://webact.185.hk/sharedkey.php)
 - [激活网址/fq](https://microsoft.gointeract.io/interact/index?interaction=1461173234028-3884f8602eccbe259104553afa8415434b4581-05d1&accountId=microsoft&loadFrom=CDN&appkey=196de13c-e946-4531-98f6-2719ec8405ce&Language=English&name=pana&CountryCode=en-US&Click%20To%20Call%20Caller%20Id=+17142064889&startedFromSmsToken=3jUenpr&dnis=26&token=0Yr8Nd)
 - [激活网址2/fq](https://microsoft.gointeract.io/interact/index?interaction=1461173234028-3884f8602eccbe259104553afa8415434b4581-05d1&accountId=microsoft&appkey=196de13c-e946-4531-98f6-2719ec8405ce&Language=CN&CountryCode=cn&CountryLanguage=CN&Click%20To%20Call%20Caller%20Id=+31620950938&startedFromSmsToken=voZAx6D&token=DWON8k)
+- [激活网址3]http://khoatoantin.com/cidms (用户名: trogiup24h 密码 : PHO）
+- [激活网址4]https://getcid.cn (用户名: trogiup24h 密码 : PHO）
 
 # github
+- [FastGithub](https://github.com/dotnetcore/FastGithub/)
 - [fastgit](https://hub.fastgit.org)
 - [download](https://download.fastgit.org)
 - [cnpmjs](https://github.com.cnpmjs.org/)
@@ -169,6 +168,8 @@ http://www.52xbf.com/
 ```
 
 # software
+- [landian](https://dl.lancdn.com/landian)
+- [52pojie](https://down.52pojie.cn/)
 - [全网软件分享合集](https://lanzoui.com/b117359)
 - [AndroidtvApk](https://www.lanzoux.com/b0f1944aj)
 - [音乐下载apk](https://www.lanzoux.com/b0f1kkdlg)
