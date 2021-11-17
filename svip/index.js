@@ -167,7 +167,7 @@
 		["1717云", "http://www.1717yun.com/jx/vip?url="],
 	];
 	var spUrls = [
-		["茶杯狐","https://www.cupfox.com"]
+		["茶杯狐","https://www.cupfox.com"],
 		["M1907", "https://z1.m1907.cn"],
 		["线报坊", "http://tv.iqxbf.com"],
         ["草民电影网", "https://www.cmdyhd.com"],
