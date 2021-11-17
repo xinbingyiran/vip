@@ -161,25 +161,20 @@
 		["音萌", "https://api.v6.chat/?url="],
 		["BL解析", "https://vip.bljiex.com/?v="],
 		["ivito", "https://jx.ivito.cn/?url="],
-		["lhh", "https://api.lhh.la/vip/?url="],
 		["ckmov", "https://www.ckmov.vip/api.php?url="],
-		["mw0", "https://jx.mw0.cc/?url="],
+		["123mingren", "https://parse.123mingren.com/?url="],
 		["okjs", "https://okjx.cc/?url="],
-		["80tvs", "https://api.80tvs.cn/?url="],
 		["1717云", "http://www.1717yun.com/jx/vip?url="],
 	];
 	var spUrls = [
+		["茶杯狐","https://www.cupfox.com"]
 		["M1907", "https://z1.m1907.cn"],
 		["线报坊", "http://tv.iqxbf.com"],
         ["草民电影网", "https://www.cmdyhd.com"],
         ["三米影视", "https://www.smmy365.com"],
-        ["难看影院", "https://www.nksee.com"],
-        ["云播TV", "https://www.yunbtv.com"],
-        ["高清云影视", "https://www.gqytv.com"],
+        ["云播TV", "https://www.yunbtv.net"],
         ["神马影院", "https://www.3s8m.com"],
         ["淘影网", "http://www.tyw8188.com"],
         ["1090", "http://1090ys.com"],
-        ["tv920", "https://www.tv920.com/"],
-        ["88电影网", "http://www.28ddy.com/"]
 	];
 })();

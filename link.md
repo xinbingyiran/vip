@@ -4,6 +4,7 @@
 ```
 测试站点1：https://ldqk.org，测试站点2：https://masuit.com，测试站点3：https://masuit.tk，测试站点4：https://ldqk.tk
 ```
+- [恰鹿导航](https://hao.qialu999.com)
 - [龙轩导航](http://ilxdh.com)
 - [果核剥壳](https://www.ghpym.com)
 - [冰封娱乐网](https://www.bingfengyl.com)
@@ -23,7 +24,7 @@
 - [密钥分享网页](https://webact.185.hk/sharedkey.php)
 - [激活网址/fq](https://microsoft.gointeract.io/interact/index?interaction=1461173234028-3884f8602eccbe259104553afa8415434b4581-05d1&accountId=microsoft&loadFrom=CDN&appkey=196de13c-e946-4531-98f6-2719ec8405ce&Language=English&name=pana&CountryCode=en-US&Click%20To%20Call%20Caller%20Id=+17142064889&startedFromSmsToken=3jUenpr&dnis=26&token=0Yr8Nd)
 - [激活网址2/fq](https://microsoft.gointeract.io/interact/index?interaction=1461173234028-3884f8602eccbe259104553afa8415434b4581-05d1&accountId=microsoft&appkey=196de13c-e946-4531-98f6-2719ec8405ce&Language=CN&CountryCode=cn&CountryLanguage=CN&Click%20To%20Call%20Caller%20Id=+31620950938&startedFromSmsToken=voZAx6D&token=DWON8k)
-- [激活网址3]http://khoatoantin.com/cidms (用户名: trogiup24h 密码 : PHO）
+- [激活网址3](http://khoatoantin.com/cidms) `用户名: trogiup24h 密码 : PHO`
 ```
 - CIDMS API
 https://khoatoantin.com/ajax/cidms_api?iids=[IID]&username=[YourUsername]&password=[Password]
@@ -40,7 +41,8 @@ https://khoatoantin.com/ajax/office365_api?accounts=[AccountsList]&username=[You
 Example: https://khoatoantin.com/ajax/office365_api?username=trogiup24h&password=PHO&accounts=
 
 ```
-- [激活网址4]https://getcid.cn
+- [激活网址4](https://getcid.cn)
+- [激活网址5](http://tool.zhihupe.com/getcid.html)
 
 # github
 - [FastGithub](https://github.com/dotnetcore/FastGithub/)
@@ -72,7 +74,7 @@ https://raw.fastgit.org/freefq/free/master/v2
 bulink.xyz注册（要翻墙）除可订阅本页免费节点，还有每月5G自建节点免费流量，不用打卡签到长期有效，欢迎体验
 
 https://j.bulink.xyz
-https:js.bulink.xyz
+https://js.bulink.xyz
 
 ```
 
