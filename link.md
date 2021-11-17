@@ -15,6 +15,8 @@
 - [优客api](http://api.iyk0.com/)
 
 # windows&office
+- [Microsoft Store - Generation Project](https://store.rg-adguard.net)
+- [uupdump](https://uupdump.net/?lang=zh-cn)
 - [密钥检测](https://hub.fastgit.org/FHWWC/KeyCheck)
 ```
 密钥检测工具网页版：https://pkeytools.azurewebsites.net （永久域名）
