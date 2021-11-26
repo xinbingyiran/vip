@@ -1,4 +1,6 @@
 ﻿# web
+- [svip](./svip)
+- [qnyh](./qnyh)
 - [dotnetfiddle](https://dotnetfiddle.net/)
 - [懒得勤快](https://hub.fastgit.org/ldqk)
 ```
@@ -13,6 +15,7 @@
 - [423down](https://www.423down.com)
 - [tv920](https://www.tv920.com/)
 - [优客api](http://api.iyk0.com/)
+- [Telegram Analytics](https://tgstat.ru/en/channel) `https://tgstat.ru/en/channel/@windows_office_key https://tgstat.ru/en/channel/@getkeys`
 
 # windows&office
 - [Microsoft Store - Generation Project](https://store.rg-adguard.net)
@@ -24,8 +27,8 @@
 ```
 - [密钥检测网页](https://webact.185.hk/mskey.php)
 - [密钥分享网页](https://webact.185.hk/sharedkey.php)
-- [激活网址/fq](https://microsoft.gointeract.io/interact/index?interaction=1461173234028-3884f8602eccbe259104553afa8415434b4581-05d1&accountId=microsoft&loadFrom=CDN&appkey=196de13c-e946-4531-98f6-2719ec8405ce&Language=English&name=pana&CountryCode=en-US&Click%20To%20Call%20Caller%20Id=+17142064889&startedFromSmsToken=3jUenpr&dnis=26&token=0Yr8Nd)
-- [激活网址2/fq](https://microsoft.gointeract.io/interact/index?interaction=1461173234028-3884f8602eccbe259104553afa8415434b4581-05d1&accountId=microsoft&appkey=196de13c-e946-4531-98f6-2719ec8405ce&Language=CN&CountryCode=cn&CountryLanguage=CN&Click%20To%20Call%20Caller%20Id=+31620950938&startedFromSmsToken=voZAx6D&token=DWON8k)
+- [激活网址1](https://getcid.cn)
+- [激活网址2](http://tool.zhihupe.com/getcid.html)
 - [激活网址3](http://khoatoantin.com/cidms) `用户名: trogiup24h 密码 : PHO`
 ```
 - CIDMS API
@@ -43,8 +46,8 @@ https://khoatoantin.com/ajax/office365_api?accounts=[AccountsList]&username=[You
 Example: https://khoatoantin.com/ajax/office365_api?username=trogiup24h&password=PHO&accounts=
 
 ```
-- [激活网址4](https://getcid.cn)
-- [激活网址5](http://tool.zhihupe.com/getcid.html)
+- [激活网址/fq](https://microsoft.gointeract.io/interact/index?interaction=1461173234028-3884f8602eccbe259104553afa8415434b4581-05d1&accountId=microsoft&loadFrom=CDN&appkey=196de13c-e946-4531-98f6-2719ec8405ce&Language=English&name=pana&CountryCode=en-US&Click%20To%20Call%20Caller%20Id=+17142064889&startedFromSmsToken=3jUenpr&dnis=26&token=0Yr8Nd)
+- [激活网址2/fq](https://microsoft.gointeract.io/interact/index?interaction=1461173234028-3884f8602eccbe259104553afa8415434b4581-05d1&accountId=microsoft&appkey=196de13c-e946-4531-98f6-2719ec8405ce&Language=CN&CountryCode=cn&CountryLanguage=CN&Click%20To%20Call%20Caller%20Id=+31620950938&startedFromSmsToken=voZAx6D&token=DWON8k)
 
 # github
 - [FastGithub](https://github.com/dotnetcore/FastGithub/)
