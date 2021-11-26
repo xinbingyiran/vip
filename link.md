@@ -1,6 +1,6 @@
 ﻿# web
-- [svip](./svip)
-- [qnyh](./qnyh)
+- [svip](./svip/index.html)
+- [qnyh](./qnyh/index.html)
 - [dotnetfiddle](https://dotnetfiddle.net/)
 - [懒得勤快](https://hub.fastgit.org/ldqk)
 ```
