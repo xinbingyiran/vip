@@ -1,6 +1,13 @@
 ﻿# web
 - [svip](./svip/index.html)
 - [qnyh](./qnyh/index.html)
+- [必应](https://www.bing.com/)
+- [搜狗](https://www.sogou.com/)
+- [百度](https://www.baidu.com/)
+- [无追](https://www.wuzhuiso.com)
+- [F搜](https://fsou.cc/)
+- [Magi](https://magi.com/)
+- [yandex](https://yandex.com/)
 - [dotnetfiddle](https://dotnetfiddle.net/)
 - [懒得勤快](https://hub.fastgit.org/ldqk)
 ```
@@ -8,10 +15,11 @@
 ```
 - [恰鹿导航](https://hao.qialu999.com)
 - [龙轩导航](http://ilxdh.com)
+- [七猫导航](https://www.qimaow.com/)
 - [果核剥壳](https://www.ghpym.com)
-- [冰封娱乐网](https://www.bingfengyl.com)
 - [南风娱乐网](https://www.nanfengyl.com)
 - [无二辅助网](https://www.52fzg.com)
+- [阿里小站](https://alixiaozhan.net)
 - [423down](https://www.423down.com)
 - [tv920](https://www.tv920.com/)
 - [优客api](http://api.iyk0.com/)
