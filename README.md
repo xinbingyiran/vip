@@ -1,7 +1,7 @@
 ﻿# 常用链接
 1. [svip](./svip/index.html)
 [qnyh](./qnyh/index.html)`不再维护`
-[gzsj.js](./gzsj/tempermonkey.js)
+[gzsj.js](./gzsj/tempermonkey.js)`不再维护`
 [分享工具](?md/share.md)
 1. [必应](https://www.bing.com/)
 [搜狗](https://www.sogou.com/)
@@ -12,6 +12,14 @@
 [yandex](https://yandex.com/)
 [蓝点CDN](https://dl.lancdn.com/landian)
 [52破解下载](https://down.52pojie.cn/)
+1. [一块剪切板](https://ykjtb.com/) `15分钟后自动销毁`
+[文本派](https://txtpad.cn/) `永久，多文本`
+[verybin](https://www.verybin.com/) `支持永久，评论`
+1. [文叔叔](https://www.wenshushu.cn) `最大5G`
+[tmplink](https://app.tmp.link/) `50G,24小时`
+[小麦云链](https://ftpod.cn/) `最长30天`
+1. [空投](https://airportal.cn/) `24小时，最大1G文件`
+[网络剪切板](https://netcut.cn/) `最长三年，支持10*50M文件`
 1. [懒得勤快](https://github.com/ldqk)
 [地址1](https://ldqk.org)
 [地址2](https://masuit.com)
@@ -20,10 +28,11 @@
 1. [恰鹿导航](https://hao.qialu999.com)
 [龙轩导航](http://ilxdh.com)
 [七猫导航](https://www.qimaow.com/)
-[果核剥壳](https://www.ghpym.com/) [地址2](https://www.ghxi.com/)
+[果核剥壳](https://www.ghxi.com/)
 [南风娱乐网](https://www.nanfengyl.com)
 [无二辅助网](https://www.52fzg.com)
-1. [阿里小站](https://alixiaozhan.net)`改名我的小站，维护中`
+1. [线报坊活动网](http://www.52xbf.com)
+1. [我的小站](https://pan.wuenci.com/)`间断性失联`
 1. [423down](https://www.423down.com)
 [tv920](https://www.tv920.com/)
 [优客api](http://api.iyk0.com/)
@@ -31,8 +40,14 @@
 [sjk/fq](http://site3.sjk.space/)
 
 # 系统办公
+1. [Windows 11 下载](https://www.microsoft.com/zh-cn/software-download/windows11)
+[Office 官网](https://www.microsoft.com/zh-cn/microsoft-365)
+[Office 在线](https://www.office.com/)
+1. [Office Tool Plus](https://otp.landian.vip/zh-cn/)
+[HWIDGEN](https://dl.lancdn.com/landian/software/HWIDGEN/)
+[HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator/releases)
 1. [Microsoft Store - Generation Project](https://store.rg-adguard.net)
-1. [uupdump](https://uupdump.net/?lang=zh-cn) [地址2](https://proxied.uupdump.net/)
+1. [uupdump](https://proxied.uupdump.net/)
 1. [密钥检测](https://github.com/FHWWC/KeyCheck)
 [地址1](https://pkeytools.azurewebsites.net)`永久域名`
 [地址2](https://pkeytool.live)
@@ -48,7 +63,16 @@
 [getkeys](https://tgstat.ru/en/channel/@getkeys)
 
 # 编程开发
+1. [ZDAN导航](https://www.zdzn.net/)
+[cxy521导航](https://cxy521.com/)
+[ZDAN导航](https://www.zdzn.net/)
+[ZDAN导航](https://www.zdzn.net/)
 1. [dotnetfiddle](https://dotnetfiddle.net/)
+[在线工具](https://tool.lu/)
+1. [github](https://github.com/)
+[gitlab](https://gitlab.com/explore/projects/trending)
+[gitee](https://gitee.com/)
+[coding](https://coding.net/)
 1. [FastGithub](https://github.com/dotnetcore/FastGithub/)
 [fastgit](https://hub.fastgit.org/)`无法访问`
 [cnpmjs](https://github.com.cnpmjs.org/)
@@ -63,10 +87,6 @@
 [自建](https://j.bulink.xyz)
 [自建2](https://js.bulink.xyz)
 1. [订阅列表](https://github.com/du5/free/blob/master/sub.list)
-
-# 线报坊
-1. [线报坊活动网](http://www.52xbf.com)
-1. [线报坊地址发布页](http://fby.iqxbf.com)
 
 # 一些资源 
 1. [AndroidtvApk](https://www.lanzoux.com/b0f1944aj)
@@ -97,7 +117,7 @@
 1. [星辰软件合集](https://www.lanzoux.com/u/azsoft)
 1. [爱分享团队软件合集](https://www.lanzoux.com/u/zqf000)
 1. [软件大全](https://www.lanzoux.com/u/296742969)
-1. [安卓软件合集](https://www.lanzoux.com/u/langman666)\
+1. [安卓软件合集](https://www.lanzoux.com/u/langman666)
 1. [牛牛软件合集](http://www.lanzoux.com/u/36277009)
 1. [分享汇](https://www.lanzoux.com/u/jiek)
 1. [江上](https://www.lanzoux.com/u/%E6%B1%9F%E4%B8%8A)
