@@ -6,11 +6,14 @@
 1. [必应](https://www.bing.com/)
 [搜狗](https://www.sogou.com/)
 [百度](https://www.baidu.com/)
+[Searx](https://searx.space/)
+[`1`](https://serx.cf/)
+[`2`](https://paulgo.io/)
 [无追](https://www.wuzhuiso.com)
-[F搜](https://fsou.cc/)`暂时无法打开`
+[F搜](https://fsofso.com/)`需注册`
 [Magi](https://magi.com/)
 [yandex](https://yandex.com/)
-[蓝点CDN](https://dl.lancdn.com/landian)
+1. [蓝点CDN](https://dl.lancdn.com/landian)
 [52破解下载](https://down.52pojie.cn/)
 1. [一块剪切板](https://ykjtb.com/) `15分钟后自动销毁`
 [文本派](https://txtpad.cn/) `永久，多文本`
