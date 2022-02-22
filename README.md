@@ -2,7 +2,8 @@
 1. [svip](./svip/index.html)
 [qnyh](./qnyh/index.html)`不再维护`
 [gzsj.js](./gzsj/tempermonkey.js)`不再维护`
-[分享工具](?md/share.md)
+[开源镜像](?./md/mirror.md) [源站](https://gitee.com/gsls200808/chinese-opensource-mirror-site)
+[BAT命令](?./md/bat.md)
 1. [必应](https://www.bing.com/)
 [搜狗](https://www.sogou.com/)
 [百度](https://www.baidu.com/)
@@ -13,8 +14,9 @@
 [F搜](https://fsofso.com/)`需注册`
 [Magi](https://magi.com/)
 [yandex](https://yandex.com/)
-1. [蓝点CDN](https://dl.lancdn.com/landian)
-[52破解下载](https://down.52pojie.cn/)
+1. [雷霆运维下载](https://soft.l-t.top/)-[`站点`](https://l-t.top/)
+[蓝点CDN](https://dl.lancdn.com/landian)[`站点`](https://www.landian.vip/)
+[52破解下载](https://down.52pojie.cn/)[`站点`](https://www.52pojie.cn/)
 1. [一块剪切板](https://ykjtb.com/) `15分钟后自动销毁`
 [文本派](https://txtpad.cn/) `永久，多文本`
 [verybin](https://www.verybin.com/) `支持永久，评论`
@@ -90,6 +92,7 @@
 [自建](https://j.bulink.xyz)
 [自建2](https://js.bulink.xyz)
 1. [订阅列表](https://github.com/du5/free/blob/master/sub.list)
+
 
 # 一些资源 
 1. [AndroidtvApk](https://www.lanzoux.com/b0f1944aj)
