@@ -8,8 +8,6 @@
 [搜狗](https://www.sogou.com/)
 [百度](https://www.baidu.com/)
 [Searx](https://searx.space/)
-[`1`](https://serx.cf/)
-[`2`](https://paulgo.io/)
 [无追](https://www.wuzhuiso.com)
 [F搜](https://fsofso.com/)`需注册`
 [Magi](https://magi.com/)
@@ -37,12 +35,25 @@
 [南风娱乐网](https://www.nanfengyl.com)
 [无二辅助网](https://www.52fzg.com)
 1. [线报坊活动网](http://www.52xbf.com)
-1. [我的小站](https://pan.wuenci.com/)`间断性失联`
+1. [我的小站](https://www.pan666.cn/)
 1. [423down](https://www.423down.com)
 [tv920](https://www.tv920.com/)
 [优客api](http://api.iyk0.com/)
 1. [kfcx361](http://www.kfcx361.com/)
 [sjk/fq](http://site3.sjk.space/)
+1. [超星个人空间](http://i.chaoxing.com/)
+[超星首页](https://www.chaoxing.com/)
+[名师讲坛](https://pro.superlib.com/pc/home/index)
+1. [Z-Library](https://zh.fr1lib.org/)
+1. [在线看报](http://www.53bk.com/baokan/)
+1. [数字图书馆推广工程](http://www.ndlib.cn/)
+[读者云门户平台](http://read.nlc.cn/user/index)
+[手机门户](http://m.nlc.cn/)
+[龙源期刊](http://nlc.vip.qikan.cn/text/text.aspx)
+1. [百链云图书馆](http://lib.gdufe.edu.cn/digitalresource/linkProxy.htm?id=61000000281&resourceId=275)`用户名：dsqtsg 密码：dsqtsg0815`
+1. [国家中小学智慧教育平台](https://www.zxx.edu.cn/)
+[手机版](https://h5.zxx.edu.cn/)
+[国家中小学网络云平台（旧版）](https://ykt.eduyun.cn/)
 
 # 系统办公
 1. [Windows 11 下载](https://www.microsoft.com/zh-cn/software-download/windows11)
