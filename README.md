@@ -4,9 +4,10 @@
 [gzsj.js](./gzsj/tempermonkey.js)`不再维护`
 [开源镜像](?./md/mirror.md) [源站](https://gitee.com/gsls200808/chinese-opensource-mirror-site)
 [BAT命令](?./md/bat.md)
-1. [无水印视频解析](https://parse.bqrdh.com/smart)-[`不求人导航`](https://www.bqrdh.com/)
+1. [嗨呀去水印](http://haiya365.com/) - [`备用`](http://haiya365.com/)
 [酷豆去水印](https://dy.kukutool.com/)
-[疯狂视频去水印](https://douyin.video996.com/)-[`996工具箱`](http://www.video996.com/)
+[全网视频解析下载](http://www.qshuiyin.com/)
+[哔哩哔哩视频下载](https://bilibili.iiilab.com/)
 
 1. [必应](https://www.bing.com/)
 [搜狗](https://www.sogou.com/)
