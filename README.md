@@ -4,7 +4,7 @@
 [gzsj.js](./gzsj/tempermonkey.js)`不再维护`
 [开源镜像](?./md/mirror.md) [源站](https://gitee.com/gsls200808/chinese-opensource-mirror-site)
 [BAT命令](?./md/bat.md)
-1. [嗨呀去水印](http://haiya365.com/) - [`备用`](http://haiya365.com/)
+1. [嗨呀去水印](http://haiya360.com/)
 [酷豆去水印](https://dy.kukutool.com/)
 [全网视频解析下载](http://www.qshuiyin.com/)
 [哔哩哔哩视频下载](https://bilibili.iiilab.com/)
@@ -14,8 +14,7 @@
 [百度](https://www.baidu.com/)
 [Searx](https://searx.space/)
 [无追](https://www.wuzhuiso.com)
-[F搜](https://fsofso.com/)`需注册`
-[Magi](https://magi.com/)
+[F搜](https://fsofso.com/)
 [yandex](https://yandex.com/)
 1. [雷霆运维下载](https://soft.l-t.top/)-[`雷霆运维`](https://l-t.top/)
 [蓝点CDN](https://dl.lancdn.com/landian)[`蓝点网`](https://www.landian.vip/)
@@ -23,16 +22,15 @@
 1. [一块剪切板](https://ykjtb.com/) `15分钟后自动销毁`
 [文本派](https://txtpad.cn/) `永久，多文本`
 [verybin](https://www.verybin.com/) `支持永久，评论`
-1. [文叔叔](https://www.wenshushu.cn) `最大5G`
-[tmplink](https://app.tmp.link/) `50G,24小时`
-[小麦云链](https://ftpod.cn/) `最长30天`
-1. [空投](https://airportal.cn/) `24小时，最大1G文件`
+1. [文叔叔](https://www.wenshushu.cn) `最大5G >200M下载收费` 
+1. [空投](https://airportal.cn/) `24小时，最大1G文件，2次下载`
 [网络剪切板](https://netcut.cn/) `最长三年，支持10*50M文件`
 1. [懒得勤快](https://github.com/ldqk)
-[地址1](https://ldqk.org)
-[地址2](https://masuit.com)
-[地址3](https://masuit.tk)
+[地址1](https://masuit.org)
+[地址2](https://masuit.tk)
+[地址3](https://masuit.com)
 [地址4](https://ldqk.tk)
+[地址5](https://ldqk.xyz)
 1. [恰鹿导航](https://hao.qialu999.com)
 [龙轩导航](http://ilxdh.com)
 [七猫导航](https://www.qimaow.com/)
@@ -49,7 +47,7 @@
 1. [超星个人空间](http://i.chaoxing.com/)
 [超星首页](https://www.chaoxing.com/)
 [名师讲坛](https://pro.superlib.com/pc/home/index)
-1. [Z-Library](https://zh.fr1lib.org/)
+1. [Z-Library](https://zlib.life/) [`发布页`](https://820082.xyz/)
 1. [在线看报](http://www.53bk.com/baokan/)
 1. [数字图书馆推广工程](http://www.ndlib.cn/)
 [读者云门户平台](http://read.nlc.cn/user/index)
@@ -86,8 +84,6 @@
 # 编程开发
 1. [ZDAN导航](https://www.zdzn.net/)
 [cxy521导航](https://cxy521.com/)
-[ZDAN导航](https://www.zdzn.net/)
-[ZDAN导航](https://www.zdzn.net/)
 1. [dotnetfiddle](https://dotnetfiddle.net/)
 [在线工具](https://tool.lu/)
 1. [github](https://github.com/)
@@ -95,18 +91,16 @@
 [gitee](https://gitee.com/)
 [coding](https://coding.net/)
 1. [FastGithub](https://github.com/dotnetcore/FastGithub/)
-[fastgit](https://hub.fastgit.org/)`无法访问`
-[cnpmjs](https://github.com.cnpmjs.org/)
+[fastgit](https://hub.fastgit.org/)
 1. [gh-proxy项目](https://github.com/hunshcn/gh-proxy)
 [gh-proxy1](https://gh.api.99988866.xyz)
 [gh-proxy2](https://ghproxy.com/)
 1. [nogfw](https://github.com/gfw-breaker/nogfw)
 1. [Alvin9999](https://github.com/Alvin9999/new-pac/wiki)
-[地址2](http://tr1.freeair888.club)
+[地址2](https://tr1.freeair888.club/)
 1. [freefq](https://github.com/freefq/free)
 [订阅](https://raw.fastgit.org/freefq/free/master/v2)
-[自建](https://j.bulink.xyz)
-[自建2](https://js.bulink.xyz)
+[自建](https://burstlinker.com/)
 1. [订阅列表](https://github.com/du5/free/blob/master/sub.list)
 
 
