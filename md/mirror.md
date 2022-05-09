@@ -1,4 +1,5 @@
-# 国内开源镜像站点汇总 [源站](https://gitee.com/gsls200808/chinese-opensource-mirror-site)
+# [`源站`](https://gitee.com/gsls200808/chinese-opensource-mirror-site)
+# 国内开源镜像站点汇总 
 ## 一、站点版
 ### （一）、企业站
 1. 网易：[https://mirrors.163.com/](https://mirrors.163.com/)（2021.2已用容量估计：13.9T）
@@ -162,7 +163,7 @@
 
 
 ### （二）、服务器类
-1. Tomcat、Apache
+1. Tomcat、Apache 官方2021年第三季度转向CDN，不新增镜像站
  * 清华大学：[https://mirrors.tuna.tsinghua.edu.cn/apache/](https://mirrors.tuna.tsinghua.edu.cn/apache/)
  * 北京理工大学：[http://mirror.bit.edu.cn/apache/](http://mirror.bit.edu.cn/apache/)
 
@@ -284,7 +285,7 @@
 * PackMan：[http://packman.links2linux.org/mirrors](http://packman.links2linux.org/mirrors)
 * FreeBSD：[https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp](https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp)
 * OpenBSD：[http://www.openbsd.org/ftp.html](http://www.openbsd.org/ftp.html)
-* Apache：[http://www.apache.org/mirrors/#cn](http://www.apache.org/mirrors/#cn)
+* Apache：[https://www.apache.org/dev/mirrors.html](https://www.apache.org/dev/mirrors.html)
 * Cygwin：[https://www.cygwin.com/mirrors.html](https://www.cygwin.com/mirrors.html)
 * CRAN：[https://cran.r-project.org/mirrors.html](https://cran.r-project.org/mirrors.html)
 * CTAN：[http://www.ctan.org/mirrors/](http://www.ctan.org/mirrors/)，[http://www.ctan.org/mirrors/mirmon#cn](http://www.ctan.org/mirrors/mirmon#cn)

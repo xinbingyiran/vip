@@ -173,8 +173,6 @@
         ["草民电影网", "https://www.cmdyhd.com"],
         ["三米影视", "https://www.smmy365.com"],
         ["云播TV", "https://www.yunbtv.net"],
-        ["神马影院", "https://www.3s8m.com"],
-        ["淘影网", "http://www.tyw8188.com"],
         ["1090", "http://1090ys.com"],
 	];
 })();
