@@ -1,7 +1,5 @@
 ﻿# 常用链接
 1. [svip](./svip/index.html)
-[qnyh](./qnyh/index.html)`不再维护`
-[gzsj.js](./gzsj/tempermonkey.js)`不再维护`
 [开源镜像](?./md/mirror.md) [源站](https://gitee.com/gsls200808/chinese-opensource-mirror-site)
 [BAT命令](?./md/bat.md)
 1. [嗨呀去水印](http://haiya360.com/)
