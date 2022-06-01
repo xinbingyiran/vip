@@ -2,14 +2,37 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<script type="text/javascript">
-		if (window.location.host.startsWith("qnyh.")) {
-			window.location.href = "qnyh/index.html";
-		} else {
-			window.location.href = "svip/index.html" + window.location.search + window.location.hash;
-		}
-	</script>
-	<title>home</title>
+  <link rel="stylesheet" href="./css/thomasf-solarizedcssdark.css">
+  <script src="./js/axios.js"></script>
+  <script src="./js/showdown.js"></script>
+  <script type="text/javascript">
+    !(function () {
+      // Make a request for a user with a given ID
+      var s = window.location.search;
+      var h = window.location.hash;
+      var url = (s && s.length > 1) ? s.slice(1) : (h && h.length > 1) ? s.slice(1) : "./README.md";
+      window.axios({
+        method: 'get',
+        url: url,
+        changeOrigin: true,
+        responseType: 'text/plain'
+      })
+        .then(function (response) {
+          // handle success
+          var converter = new showdown.Converter({ tables: true });  // 生成转换器对象
+          var html_info = converter.makeHtml(response.data); // 转换 content 内容
+          document.body.innerHTML = html_info;
+        })
+        .catch(function (error) {
+          // handle error
+          console.log(error);
+        })
+        .then(function () {
+          // always executed
+        });
+    })();
+  </script>
+  <title>home</title>
 </head>
 
 <body>

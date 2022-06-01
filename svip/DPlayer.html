@@ -22,14 +22,15 @@
 	<body>
 		<div id="dplayer"></div>
 		<script type="text/javascript">
+		(function(){
 			var turl = window.location.hash.slice(1);
-			if(turl.slice(0,4) != "http")
+			if(turl.indexOf("://") == -1)
 			{
 				turl = window.location.search.slice(1);
-			}
-			if(turl.slice(0,4) != "http")
-			{
-				turl = "";
+				if(turl.indexOf("://") == -1)
+				{
+					return;
+				}
 			}
 			var url = decodeURIComponent(turl);
 			while(url && url != turl)
@@ -43,7 +44,8 @@
 			    video: {
 			        url: url,
 			    }
-			});
+			});			
+		})();
 		</script>
 	</body>
 </html>
