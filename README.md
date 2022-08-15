@@ -64,15 +64,16 @@
 [HWIDGEN](https://dl.lancdn.com/landian/software/HWIDGEN/)
 [HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator/releases)
 1. [Microsoft Store - Generation Project](https://store.rg-adguard.net)
-1. [uupdump](https://proxied.uupdump.net/)
-1. [密钥检测](https://github.com/FHWWC/KeyCheck)
-[地址1](https://pkeytools.azurewebsites.net)`永久域名`
-[地址2](https://pkeytool.live)
+1. [uupdump](https://www.uupdump.net/) `挂` [代理](https://proxied.uupdump.net/) `proxied` `挂`
+[备用](https://www.uupdump.cn)
+[备用](https://www.xiuxitong.com/uup/)
+[备用](https://uup.rg-adguard.net/)
+[备用](https://uupdump.7788.work/?lang=zh-cn)
 1. [密钥检测网页](https://webact.185.hk/mskey.php)
 [密钥分享网页](https://webact.185.hk/sharedkey.php)
-1. [激活网址1](https://getcid.cn)
-[激活网址2](http://tool.zhihupe.com/getcid.html)
-[激活网址3](http://khoatoantin.com/cidms) `用户名: trogiup24h 密码 : PHO`
+1. [激活网址](https://getcid.cn)
+[激活网址](http://www.lhdlhd.com/getcidweb.php)
+[激活网址](http://khoatoantin.com/cidms) `用户名: trogiup24h 密码 : PHO`
 1. [激活网址/fq](https://microsoft.gointeract.io/interact/index?interaction=1461173234028-3884f8602eccbe259104553afa8415434b4581-05d1&accountId=microsoft&loadFrom=CDN&appkey=196de13c-e946-4531-98f6-2719ec8405ce&Language=English&name=pana&CountryCode=en-US&Click%20To%20Call%20Caller%20Id=+17142064889&startedFromSmsToken=3jUenpr&dnis=26&token=0Yr8Nd)
 [激活网址2/fq](https://microsoft.gointeract.io/interact/index?interaction=1461173234028-3884f8602eccbe259104553afa8415434b4581-05d1&accountId=microsoft&appkey=196de13c-e946-4531-98f6-2719ec8405ce&Language=CN&CountryCode=cn&CountryLanguage=CN&Click%20To%20Call%20Caller%20Id=+31620950938&startedFromSmsToken=voZAx6D&token=DWON8k)
 1. [Telegram Analytics](https://tgstat.ru/en/channel)
@@ -89,10 +90,10 @@
 [gitee](https://gitee.com/)
 [coding](https://coding.net/)
 1. [FastGithub](https://github.com/dotnetcore/FastGithub/)
-[fastgit](https://hub.fastgit.org/)
 1. [gh-proxy项目](https://github.com/hunshcn/gh-proxy)
-[gh-proxy1](https://gh.api.99988866.xyz)
+[演示](https://github.com/hunshcn/gh-proxy) `挂`
 [gh-proxy2](https://ghproxy.com/)
+1. [github加速](https://doget.nocsdn.com/)
 1. [nogfw](https://github.com/gfw-breaker/nogfw)
 1. [Alvin9999](https://github.com/Alvin9999/new-pac/wiki)
 [地址2](https://tr1.freeair888.club/)
