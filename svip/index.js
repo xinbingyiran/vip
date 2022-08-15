@@ -172,7 +172,6 @@
 		["线报坊", "http://tv.iqxbf.com"],
         ["草民电影网", "https://www.cmdyhd.com"],
         ["三米影视", "https://www.smmy365.com"],
-        ["云播TV", "https://www.yunbtv.net"],
-        ["1090", "http://1090ys.com"],
+        ["云播TV", "https://www.yunbtv.net"]
 	];
 })();
