@@ -157,21 +157,17 @@
 	}
 	window.onload = InitDiv;	
 	var vipUrls = [
-		["1907", "https://z1.m1907.cn/?jx="],
-		["音萌", "https://api.v6.chat/?url="],
-		["BL解析", "https://vip.bljiex.com/?v="],
 		["ivito", "https://jx.ivito.cn/?url="],
 		["ckmov", "https://www.ckmov.vip/api.php?url="],
 		["123mingren", "https://parse.123mingren.com/?url="],
 		["okjs", "https://okjx.cc/?url="],
+		["BL解析", "http://vip.bljiex.com/?v="],
 		["1717云", "http://www.1717yun.com/jx/vip?url="],
 	];
 	var spUrls = [
 		["茶杯狐","https://www.cupfox.com"],
-		["M1907", "https://z1.m1907.cn"],
 		["线报坊", "http://tv.iqxbf.com"],
         ["草民电影网", "https://www.cmdyhd.com"],
-        ["三米影视", "https://www.smmy365.com"],
         ["云播TV", "https://www.yunbtv.net"]
 	];
 })();
