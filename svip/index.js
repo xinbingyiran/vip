@@ -157,6 +157,7 @@
 	}
 	window.onload = InitDiv;	
 	var vipUrls = [
+		["im1907", "https://im1907.top/?jx="],
 		["ivito", "https://jx.ivito.cn/?url="],
 		["ckmov", "https://www.ckmov.vip/api.php?url="],
 		["123mingren", "https://parse.123mingren.com/?url="],
@@ -165,6 +166,7 @@
 		["1717云", "http://www.1717yun.com/jx/vip?url="],
 	];
 	var spUrls = [
+		["im1907","https://im1907.top"],
 		["茶杯狐","https://www.cupfox.com"],
 		["线报坊", "http://tv.iqxbf.com"],
         ["草民电影网", "https://www.cmdyhd.com"],
