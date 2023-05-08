@@ -1,5 +1,6 @@
 ﻿### 常用链接
 1. [svip](./svip/index.html)
+[getpost](./html/getpost.html)
 [开源镜像](?./md/mirror.md) [源站](https://gitee.com/gsls200808/chinese-opensource-mirror-site)
 [BAT命令](?./md/bat.md)
 [个人分享](https://www.123pan.com/s/6Gd9-SmLEH)
