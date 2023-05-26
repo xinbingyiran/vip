@@ -2,10 +2,12 @@
 <html>
 
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>配置</title>
   <style>
     div {
       margin: 3px;
+      width: 600px;
     }
 
     input {
@@ -35,7 +37,7 @@
     </div>
     <div>
       <input id="postUrl" type="text" value="/config" />
-      <input id="post" type="button" value="发送数据" /><br/>
+      <input id="post" type="button" value="发送数据" /><br />
       <input id="postContentType" type="text" value="text/plain; charset=utf-8" />
     </div>
     <textarea id="result" placeholder="在这里显示请求结果！"></textarea>
@@ -58,12 +60,12 @@
         }
         xhr.onload = () => {
           if (xhr.status >= 200 && xhr.status < 300) {
-            resolve({data:xhr.responseText});
+            resolve({ data: xhr.responseText });
           } else {
-            reject({message:xhr.statusText});
+            reject({ message: xhr.statusText });
           }
         };
-        xhr.onerror = () => reject({message:xhr.statusText});
+        xhr.onerror = () => reject({ message: xhr.statusText });
         xhr.send(obj.data);
       });
     };
