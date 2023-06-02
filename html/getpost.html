@@ -1,86 +1,81 @@
+
 <!doctype html>
 <html>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>配置</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0.5,maximum-scale=2,user-scalable=1">
+  <title>网页配置</title>
   <style>
-    div {
-      margin: 3px;
-      width: 600px;
+    *{
+      font-size: 14px;
+    }
+    .cc {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: 96vw;
+      margin: 0 auto;
     }
 
-    input {
-      display: inline;
-      font-size: 24px;
+    .cc div {
+      display: flex;
+      margin: 10px 0;
     }
 
-    textarea {
+    .cc textarea {
       box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
       resize: none;
-      font-size: 18px;
-      margin-top: 10px;
-      width: calc(100% - 20px);
       height: 80px;
+      width: 100%;
+    }
+
+    input[type=text]{
+      flex: 1;
+      margin-right: 5px;
+      min-width: 25%;
     }
   </style>
 </head>
 
 <body>
   <div class="cc">
-    <textarea id="data" placeholder="在这里输入要发送的内容！"></textarea>
+    <textarea class="ta" id="data" placeholder="在这里输入要发送的内容！"></textarea>
     <div>
       <input id="getUrl" type="text" value="/get" />
       <input id="get" type="button" value="获取数据" />
     </div>
     <div>
-      <input id="postUrl" type="text" value="/config" />
-      <input id="post" type="button" value="发送数据" /><br />
+      <input id="postUrl" type="text" value="/post" />
       <input id="postContentType" type="text" value="text/plain; charset=utf-8" />
+      <input id="post" type="button" value="发送数据" />
     </div>
-    <textarea id="result" placeholder="在这里显示请求结果！"></textarea>
+    <textarea class="ta" id="result" placeholder="在这里显示请求结果！"></textarea>
   </div>
   <script>
-    function updateResult(r) {
-      let result = document.querySelector("#result");
+    let xhr, result = document.querySelector("#result");
+    updateResult = r => {
       result.style.height = 'auto';
       result.value = r;
       result.style.height = result.scrollHeight + 10 + 'px';
     }
-    let request = obj => {
-      return new Promise((resolve, reject) => {
-        let xhr = new XMLHttpRequest();
-        xhr.open(obj.method || "GET", obj.url);
-        if (obj.headers) {
-          Object.keys(obj.headers).forEach(key => {
-            xhr.setRequestHeader(key, obj.headers[key]);
-          });
-        }
-        xhr.onload = () => {
-          if (xhr.status >= 200 && xhr.status < 300) {
-            resolve({ data: xhr.responseText });
-          } else {
-            reject({ message: xhr.statusText });
-          }
-        };
-        xhr.onerror = () => reject({ message: xhr.statusText });
-        xhr.send(obj.data);
-      });
-    };
+    let request = obj => new Promise((resolve, reject) => {
+      xhr && xhr.abort();
+      xhr = new XMLHttpRequest();
+      xhr.open(obj.method || "GET", obj.url);
+      obj.headers && Object.keys(obj.headers).forEach(key => xhr.setRequestHeader(key, obj.headers[key]));
+      xhr.onload = () => xhr.status >= 200 && xhr.status < 300 ? resolve({ data: xhr.responseText }) : reject({ message: xhr.statusText });
+      xhr.onerror = () => reject({ message: xhr.statusText });
+      xhr.send(obj.data);
+    });
     document.querySelector("#get").addEventListener("click", () => {
       updateResult("正在获取数据。。。");
       request({
         method: 'get',
         url: document.querySelector('#getUrl').value,
       })
-        .then(function (response) {
-          updateResult('获取数据成功：\r\n' + response.data);
-        })
-        .catch(function (err) {
-          updateResult('获取数据失败：\r\n' + err.message);
-        });
+        .then(res => updateResult('获取数据成功：\r\n' + res.data))
+        .catch(err => updateResult('获取数据失败：\r\n' + err.message));
     })
     document.querySelector("#post").addEventListener("click", () => {
       updateResult("正在发送数据。。。");
@@ -89,15 +84,10 @@
         headers: {
           'Content-Type': document.querySelector('#postContentType').value
         },
-        url: document.querySelector('#postUrl').value,
-        data: document.querySelector('#data').value
+        url: document.querySelector('#postUrl').value, data: document.querySelector('#data').value
       })
-        .then(function (response) {
-          updateResult('发送数据成功：\r\n' + response.data);
-        })
-        .catch(function (err) {
-          updateResult('发送数据失败：\r\n' + err.message);
-        });
+        .then(res => updateResult('发送数据成功：\r\n' + res.data))
+        .catch(err => updateResult('发送数据失败：\r\n' + err.message));
     })
   </script>
 </body>
