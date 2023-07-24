@@ -158,15 +158,10 @@
 	window.onload = InitDiv;	
 	var vipUrls = [
 		["im1907", "https://im1907.top/?jx="],
-		["ckmov", "https://www.ckmov.vip/api.php?url="],
-		["okjs", "https://okjx.cc/?url="],
-		["BL解析", "http://vip.bljiex.com/?v="],
+		["BL解析", "http://vip.bljiex.com/?v="]
 	];
 	var spUrls = [
 		["im1907","https://im1907.top"],
-		["茶杯狐","https://cupfox.app"],
-		["零度影视", "http://tv.iqxbf.com"],
-        ["草民电影网", "https://www.cmdyhd.com"],
-        ["云播TV", "https://www.yunbtv.net"]
+		["茶杯狐","https://cupfox.app"]
 	];
 })();
