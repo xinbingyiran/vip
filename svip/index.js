@@ -159,6 +159,7 @@
 	var vipUrls = [
 		["im1907", "https://im1907.top/?jx="],
 		["BL解析", "http://vip.bljiex.com/?v="]
+		["vipjx", "https://vipjx.cc/?url="]
 	];
 	var spUrls = [
 		["im1907","https://im1907.top"],
