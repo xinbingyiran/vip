@@ -106,9 +106,12 @@
 [`订阅`](https://bulinkbulink.com/freefq/free/master/v2)
 [订阅列表](https://github.com/du5/free/blob/master/sub.list)
 - [Telegram Analytics](https://tgstat.ru/en/channel)
-[Microsoft Store - Generation Project](https://store.rg-adguard.net)
 [uupdump](https://www.uupdump.cn)
-[rg-adguard](https://uup.rg-adguard.net/)
+[rg-adguard](https://rg-adguard.net/)
+[`store`](https://store.rg-adguard.net)
+[`uup`](https://uup.rg-adguard.net)
+[`tb`](https://tb.rg-adguard.net)
+[`files`](https://files.rg-adguard.net/?lang=zh-cn)
 - [Windows 11](https://www.microsoft.com/zh-cn/software-download/windows11)
 [Windows 10](https://www.microsoft.com/zh-cn/software-download/windows10)
 [MSDN-山己几子木](https://msdn.sjjzm.com/)
@@ -127,6 +130,10 @@
 [khoatoantin](http://khoatoantin.com/cidms) `用户名: trogiup24h 密码 : PHO`
 
 ### 一些资源 
+- [鹤啸九天九天](https://www.aliyundrive.com/s/2wLtYs4guPP)
+ [鸟姐大秘密](https://www.aliyundrive.com/s/rF5j6PzPtZZ#51mm)
+ [1000t](https://www.aliyundrive.com/s/sjiLK92kaJP)
+ [tuostudy](https://www.aliyundrive.com/s/uTCMnaSTEn3) [`主站`](https://tuostudy.upnb.top/) 
 - [AndroidtvApk](https://www.lanzoux.com/b0f1944aj)
  [优软宝_小健](https://www.lanzoux.com/u/xiaojian68)
  [公众号：黑科技玩机（实时更新）](https://www.lanzoux.com/b281858)
