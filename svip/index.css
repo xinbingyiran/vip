@@ -1,5 +1,0 @@
-html,body,#viewdiv{width:100%; height:100%; margin: 0 auto; overflow: hidden; background: black;}
-div{margin:0 auto;}
-a{text-decoration: none;color: white;font-size:12px;}
-#_idxfloatdiv{color: Red; font-weight: bolder;border: solid 1px #CCCCCC;position: fixed; z-index: 2147483647;top:10px;left:10px;background-color: black}
-#_idxcontentdiv{border: solid 1px #CCCCCC;}
