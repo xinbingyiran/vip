@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using System.Collections.Immutable;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 namespace mulu;
@@ -110,22 +111,6 @@ public class Program
         }
     }
 
-
-    public static Game[] GetAllData(List<Sys_content_more> contentList)
-    {
-        return contentList.Select(p =>
-            new Game
-            {
-                Code = DESDecrypt(p.BH),
-                MMSS = DESDecrypt(p.MM),
-                Describe = DESDecrypt(p.Name2),
-                Name = DESDecrypt(p.Name1),
-                RLzz = DESDecrypt(p.RongL),
-                Types = DESDecrypt(p.BiaoQ)
-            }
-        ).ToArray();
-    }
-
     public static async Task huoquyx(Game game, string tt1a002A)
     {
         var ini1z = Ini.ParseString(await DecodecAsync($"{tt1a002A}{game.Code}.txt", fb));
@@ -173,7 +158,16 @@ public class Program
         var wjtext = await _client.GetStringAsync(wjurl);
         Console.WriteLine("------------------------------------------------------------------------");
         var ct = JsonSerializer.Deserialize(wjtext, serial.Sys_content_version)!;
-        var datas = GetAllData(ct.Content!);
+        var datas = ct.Content!.Select(p =>
+            new Game
+            {
+                Code = DESDecrypt(p.BH),
+                MMSS = DESDecrypt(p.MM),
+                Describe = DESDecrypt(p.Name2),
+                Name = DESDecrypt(p.Name1),
+                RLzz = DESDecrypt(p.RongL),
+                Types = DESDecrypt(p.BiaoQ)
+            }).OrderBy(s=>s.Code).ToArray();
         await File.WriteAllTextAsync("Game.json", JsonSerializer.Serialize(datas, serial.GameArray));
         Console.WriteLine("------------------------------------------------------------------------");
 

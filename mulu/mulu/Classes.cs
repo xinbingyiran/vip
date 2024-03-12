@@ -53,7 +53,7 @@ public class Sys_content_version
 {
     public string? Version { get; set; }
 
-    public List<Sys_content_more>? Content { get; set; }
+    public Sys_content_more[]? Content { get; set; }
 }
 public class Ini
 {
