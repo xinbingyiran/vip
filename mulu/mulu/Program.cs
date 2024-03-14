@@ -2,9 +2,13 @@
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 namespace mulu;
-public class Program
+public partial class Program
 {
+
+    [GeneratedRegex("[^0-9]+")]
+    private static partial Regex NonNumberRegex();
 
     private static Encoding? Encoding;
     private static readonly ICryptoTransform des = DES.Create().CreateDecryptor(Encoding.UTF8.GetBytes("consmkey"), new byte[] { 18, 52, 86, 120, 144, 171, 205, 239 });
@@ -15,6 +19,12 @@ public class Program
     private static byte fb;
     private static readonly string zxxzdz1 = "https://m.189.ly93.cc/share/";
     private static readonly HttpClient _client = new();
+    private static readonly SYS _sys = new(new(JsonSerializerDefaults.Web)
+    {
+        WriteIndented = true,
+        DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault,
+        Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+    });
     private static string Decrypt(string toDecrypt)
     {
         if (string.IsNullOrEmpty(toDecrypt))
@@ -82,14 +92,13 @@ public class Program
         Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
         Encoding = Encoding.GetEncoding("GBK");
 
-
         cstr = Decrypt(Decrypt(Decrypt(Decrypt(c))));
         fb = (byte)int.Parse(Decrypt(Decrypt(Decrypt(Decrypt(f)))));
-        Console.WriteLine(cstr);
-        Console.WriteLine(fb);
+        //Console.WriteLine(cstr);
+        //Console.WriteLine(fb);
 
     }
-    private static async Task jiancha(Ini ini)
+    private static async Task CheckTokenAsync(Ini ini)
     {
         try
         {
@@ -111,9 +120,10 @@ public class Program
         }
     }
 
-    public static async Task huoquyx(Game game, string tt1a002A)
+    public static async Task SyncGameAsync(Game game, string tt1a002A)
     {
-        var ini1z = Ini.ParseString(await DecodecAsync($"{tt1a002A}{game.Code}.txt", fb));
+        var filecode = await DecodecAsync($"{tt1a002A}{game.Code}.txt", fb);
+        var ini1z = Ini.ParseString(filecode);
         string yxbb = ini1z.GetStringValue("zhu", "yxbb", "WLCW");
         game.YXBB = yxbb == "WLCW" ? null : yxbb;
         string xiazai1_ming = ini1z.GetStringValue("xiazai", "xiazai1_ming", "WLCW");
@@ -129,16 +139,52 @@ public class Program
         string xiazai3_fwm = ini1z.GetStringValue("xiazai", "xiazai3_fwm", "WLCW");
         game.Addr3 = xiazai3_ming == "WLCW" ? null : $"{xiazai3_ming}: {xiazai3_dizhi}{(xiazai3_fwm == "WLCW" ? "" : $"#{xiazai3_fwm}")}";
     }
-
-    public static async Task Main()
+    private static string SHA1_Encrypt(string str) => BitConverter.ToString(SHA1.HashData(Encoding.Default.GetBytes(str))).Replace("-", "");
+    private static async Task DecryptCurrentAsync(string file)
     {
-        var serial = new SYS(new(JsonSerializerDefaults.Web)
-        {
-            WriteIndented = true,
-            DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault,
-            Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
-        });
-        Init();
+        Console.WriteLine("##解密文件##");
+        Console.WriteLine(file);
+        var str = await DecodecAsync(file, fb);
+        Console.WriteLine("------------------------------------------------------------------------");
+        await File.WriteAllTextAsync($"{file}.ini", str);
+        Console.WriteLine("------------------------------------------------------------------------");
+
+        var ini = Ini.ParseString(str);
+        //var BianHao__ = ini.GetStringValue("zhu", "bh", "WLCW");
+        var MiMa__ = ini.GetStringValue("zhu", "mm", "WLCW");
+        //var Exe__ = ini.GetStringValue("zhu", "exe", "WLCW");
+        //var Ming__ = ini.GetStringValue("zhu", "Ming", "WLCW");
+        //var RiQi__ = ini.GetStringValue("zhu", "RiQi", "WLCW");
+        //var BanBenHao__ = ini.GetStringValue("zhu", "BanBenHao", "WLCW");
+        //var ZhuYi__ = ini.GetStringValue("zhu", "ZhuYi", "WLCW"); 
+        //if (BianHao__ != "WLCW" && MiMa__ != "WLCW" && Exe__ != "WLCW")
+        //{
+        //    YeMian1.c = Exe__;
+        //    YeMian1.r2 = Ming__;
+        //    YeMian1.r = BanBenHao__;
+        //    YeMian1.y = BianHao__;
+        //    YeMian1.ZhuYiShiXiang = ZhuYi__;
+        //    YeMian1.z = MiMa__;
+        //    YeMian1.JiuBB = RiQi__;
+        //}
+
+        var km = NonNumberRegex().Replace(SHA1_Encrypt(MiMa__ + DateTime.Now.ToString("yyyyMM")) + "123456", "")[..6];
+
+
+        Console.WriteLine();
+        Console.WriteLine($"data_steam 解压密码： {MiMa__}");
+        Console.WriteLine($"激活码： {MiMa__}");
+        Console.WriteLine($"激活码： {km}");
+        Console.WriteLine();
+
+        Console.WriteLine("------------------------------------------------------------------------");
+
+        return;
+    }
+
+    private static async Task DownListAsync()
+    {
+        Console.WriteLine("##  获取列表  ##");
 
         Console.WriteLine(cstr + "a/a.txt");
         var str = await DecodecAsync(cstr + "a/a.txt", fb);
@@ -151,13 +197,13 @@ public class Program
         Ini ini = Ini.ParseString(str);
         var tt1a001 = ini.GetStringValue("zhu", "wj", "WLCW");
         var tt1a002A = ini.GetStringValue("zhu", "shuju1", "WLCW");
-        await jiancha(ini);
+        await CheckTokenAsync(ini);
 
         var wjurl = tt1a001 + "WenJian.json";
         Console.WriteLine(wjurl);
         var wjtext = await _client.GetStringAsync(wjurl);
         Console.WriteLine("------------------------------------------------------------------------");
-        var ct = JsonSerializer.Deserialize(wjtext, serial.Sys_content_version)!;
+        var ct = JsonSerializer.Deserialize(wjtext, _sys.Sys_content_version)!;
         var datas = ct.Content!.Select(p =>
             new Game
             {
@@ -167,8 +213,8 @@ public class Program
                 Name = DESDecrypt(p.Name1),
                 RLzz = DESDecrypt(p.RongL),
                 Types = DESDecrypt(p.BiaoQ)
-            }).OrderBy(s=>s.Code).ToArray();
-        await File.WriteAllTextAsync("Game.json", JsonSerializer.Serialize(datas, serial.GameArray));
+            }).OrderBy(s => s.Code).ToArray();
+        await File.WriteAllTextAsync("Game.json", JsonSerializer.Serialize(datas, _sys.GameArray));
         Console.WriteLine("------------------------------------------------------------------------");
 
         var l = datas.Length;
@@ -185,7 +231,7 @@ public class Program
                 retry++;
                 try
                 {
-                    await huoquyx(g, tt1a002A);
+                    await SyncGameAsync(g, tt1a002A);
                 }
                 catch
                 {
@@ -210,7 +256,36 @@ public class Program
             }
         });
         Console.WriteLine($"获取完成：获取成功 {suc} / {l} ,失败 {fai} / {l} 。");
-        await File.WriteAllTextAsync("GameAll.json", JsonSerializer.Serialize(datas, serial.GameArray));
+        await File.WriteAllTextAsync("GameAll.json", JsonSerializer.Serialize(datas, _sys.GameArray));
         Console.WriteLine("------------------------------------------------------------------------");
+    }
+
+    public static async Task Main(string[] args)
+    {
+        try
+        {
+            Init();
+            var file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SteamUI");
+            if (args.Length == 1 && args[0].EndsWith("SteamUI", StringComparison.OrdinalIgnoreCase))
+            {
+                await DecryptCurrentAsync(args[0]);
+            }
+            else if (File.Exists(file))
+            {
+                await DecryptCurrentAsync(file);
+            }
+            else
+            {
+                Console.WriteLine("未发现SteamUI，任意键 获取列表");
+                Console.ReadKey();
+                await DownListAsync();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"执行出错：{ex.Message}");
+        }
+        Console.WriteLine("------------------## 结束 ##--------------------");
+        Console.ReadKey();
     }
 }

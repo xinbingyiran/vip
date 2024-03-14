@@ -4504,6 +4504,14 @@
     "types": "恋爱养成.像素"
   },
   {
+    "code": "D5013",
+    "name": "丹王/药王",
+    "mmss": "658455",
+    "describe": "PillKing",
+    "rLzz": "3.5GB",
+    "types": "恋爱养成.PC/安卓"
+  },
+  {
     "code": "D51",
     "name": "东方的迷宫 幻想乡和通天的大树",
     "mmss": "365998",
@@ -5110,6 +5118,14 @@
     "describe": "REVEIL",
     "rLzz": "28GB",
     "types": "冒险.恐怖"
+  },
+  {
+    "code": "E22",
+    "name": "俄罗斯人对蜥蜴人",
+    "mmss": "958774",
+    "describe": "LIZARDS MUST DIE",
+    "rLzz": "3GB",
+    "types": "类魂系列.砍杀.开放世界"
   },
   {
     "code": "E5001",
@@ -8152,6 +8168,14 @@
     "types": "休闲.合作.卡通"
   },
   {
+    "code": "H155",
+    "name": "魂斗罗 加鲁加行动",
+    "mmss": "325887",
+    "describe": "魂斗罗初代 重制版、Contra: Operation Galuga",
+    "rLzz": "14GB",
+    "types": "动作.街机.射击.同屏多人"
+  },
+  {
     "code": "H16",
     "name": "火炬之光2典藏版",
     "mmss": "569745",
@@ -9480,6 +9504,14 @@
     "types": "开放世界.武术.沙盒.角色扮演"
   },
   {
+    "code": "J1015",
+    "name": "江湖路 缘起",
+    "mmss": "389745",
+    "describe": "Jiang Hu Lu: Yuan Qi",
+    "rLzz": "7GB",
+    "types": "角色扮演.武术"
+  },
+  {
     "code": "J102",
     "name": "精灵宝可梦 朱 紫",
     "mmss": "215478",
@@ -10718,6 +10750,14 @@
     "describe": "Rage 2",
     "rLzz": "45GB",
     "types": "射击游戏.开放世界.后末日"
+  },
+  {
+    "code": "K12A",
+    "name": "狂怒1",
+    "mmss": "325987",
+    "describe": "RAGE",
+    "rLzz": "14GB",
+    "types": "第一人称射击.后末日.动作"
   },
   {
     "code": "K13",
@@ -14624,6 +14664,14 @@
     "types": "解谜.像素"
   },
   {
+    "code": "N17",
+    "name": "南栀",
+    "mmss": "874445",
+    "describe": "NinNinDays",
+    "rLzz": "2.5GB",
+    "types": "LGBTQ+.女性主角.剧情丰富.休闲.恋爱模拟"
+  },
+  {
     "code": "N18",
     "name": "逆转裁判123：成步堂选集/逆转裁判三部曲/逆转裁判123成步堂合辑",
     "mmss": "874478",
@@ -14742,6 +14790,14 @@
     "describe": "SIMULACRA",
     "rLzz": "545MB",
     "types": "真人互动.恐怖"
+  },
+  {
+    "code": "N29",
+    "name": "奈斯启示录",
+    "mmss": "748477",
+    "describe": "Necesse",
+    "rLzz": "400MB",
+    "types": "开放世界.生存.沙盒.像素.基地建设.建造.制作"
   },
   {
     "code": "N30",
@@ -15054,6 +15110,14 @@
     "describe": "Nickelodeon All-Star Brawl 2",
     "rLzz": "15GB",
     "types": "格斗.卡通.同屏多人"
+  },
+  {
+    "code": "N55",
+    "name": "怒火 永恒遗迹",
+    "mmss": "326555",
+    "describe": "WRATH: Aeon of Ruin",
+    "rLzz": "1.6GB",
+    "types": "动作.第一人称射击.复古"
   },
   {
     "code": "O.DMLZ001",
@@ -18356,7 +18420,7 @@
     "name": "索拉斯塔：法师之冠",
     "mmss": "562221旧密码321447",
     "describe": "Solasta: Crown of the Magister",
-    "rLzz": "24GB",
+    "rLzz": "28GB",
     "types": "角色扮演"
   },
   {
@@ -18990,6 +19054,14 @@
     "describe": "Snufkin: Melody of Moominvalley",
     "rLzz": "4GB",
     "types": "彩色.解谜.角色扮演.风格化.氛围"
+  },
+  {
+    "code": "S228",
+    "name": "速速上菜",
+    "mmss": "325664",
+    "describe": "PlateUp",
+    "rLzz": "1.1GB",
+    "types": "合作.同屏多人.烹饪"
   },
   {
     "code": "S23",
@@ -20444,7 +20516,7 @@
     "name": "逃离塔科夫",
     "mmss": "236666旧密码656565.652899",
     "describe": "Escape from Tarkov",
-    "rLzz": "36GB",
+    "rLzz": "42GB",
     "types": "射击游戏.开放世界"
   },
   {
@@ -21812,7 +21884,7 @@
     "name": "武士少女",
     "mmss": "366558",
     "describe": "SAMURAI MAIDEN",
-    "rLzz": "9GB",
+    "rLzz": "11GB",
     "types": "忍者.可爱.女性主角.动作"
   },
   {
@@ -22628,7 +22700,7 @@
     "name": "消逝的光芒2 人与仁之战/消逝的光芒2坚守人性",
     "mmss": "254877",
     "describe": "Dying Light 2 Stay Human",
-    "rLzz": "58GB",
+    "rLzz": "91GB",
     "types": "开放世界.僵尸.生存"
   },
   {
@@ -28412,7 +28484,7 @@
     "name": "最远的边陲",
     "mmss": "358779",
     "describe": "Farthest Frontier",
-    "rLzz": "3GB",
+    "rLzz": "3.2GB",
     "types": "模拟经营.生存.城市营造.策略.殖民模拟"
   },
   {
