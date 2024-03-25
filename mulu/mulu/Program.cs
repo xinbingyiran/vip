@@ -1,4 +1,12 @@
-﻿using System.Collections.Immutable;
+﻿using dnlib.DotNet;
+using dnlib.DotNet.Emit;
+using FastWin32.Diagnostics;
+using System.Collections.Immutable;
+using System.Diagnostics;
+using System.IO.MemoryMappedFiles;
+using System.Reflection;
+using System.Reflection.Emit;
+using System.Security;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
@@ -98,6 +106,7 @@ public partial class Program
         //Console.WriteLine(fb);
 
     }
+
     private static async Task CheckTokenAsync(Ini ini)
     {
         try
@@ -140,9 +149,9 @@ public partial class Program
         game.Addr3 = xiazai3_ming == "WLCW" ? null : $"{xiazai3_ming}: {xiazai3_dizhi}{(xiazai3_fwm == "WLCW" ? "" : $"#{xiazai3_fwm}")}";
     }
     private static string SHA1_Encrypt(string str) => BitConverter.ToString(SHA1.HashData(Encoding.Default.GetBytes(str))).Replace("-", "");
-    private static async Task DecryptCurrentAsync(string file)
+    private static async Task DecryptStreamUIAsync(string file)
     {
-        Console.WriteLine("##解密文件##");
+        Console.WriteLine("## 解密SteamUI文件 ##");
         Console.WriteLine(file);
         var str = await DecodecAsync(file, fb);
         Console.WriteLine("------------------------------------------------------------------------");
@@ -181,7 +190,6 @@ public partial class Program
 
         return;
     }
-
     private static async Task DownListAsync()
     {
         Console.WriteLine("##  获取列表  ##");
@@ -260,19 +268,76 @@ public partial class Program
         Console.WriteLine("------------------------------------------------------------------------");
     }
 
+    private static async Task DecryptProgressAsync(string file)
+    {
+        Console.WriteLine("## 进程枚举 ##");
+        Console.WriteLine(file);
+        var pname = Path.GetFileNameWithoutExtension(file);
+        Console.WriteLine("------------------------------------------------------------------------");
+        var dllFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "muludll.dll");
+
+        if (!File.Exists(dllFile))
+        {
+            Console.WriteLine($"文件缺失 - {dllFile} -");
+        }
+        else
+        {
+            foreach (var p in Process.GetProcesses())
+            {
+                try
+                {
+                    if (p.ProcessName != pname)
+                    {
+                        continue;
+                    }
+                    if (p.MainModule is null || p.MainModule.FileName != file)
+                    {
+                        continue;
+                    }
+                    Injector.InjectManaged((uint)p.Id, dllFile, "muludll.Main", "Inject", string.Empty, out var result);
+                    using (var mmf = MemoryMappedFile.OpenExisting($"{p.Id}.pass"))
+                    {
+                        using (var s = mmf.CreateViewStream())
+                        {
+                            var lbytes = new byte[4];
+                            s.Read(lbytes, 0, lbytes.Length);
+                            var l = BitConverter.ToInt32(lbytes);
+                            var buffer = new byte[l];
+                            s.Read(buffer, 0, l);
+                            var str = Encoding.UTF8.GetString(buffer);
+                            Console.WriteLine();
+                            Console.WriteLine(str);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    Console.WriteLine($"发生错误：{ex.Message}");
+                }
+            }
+        }
+        Console.WriteLine();
+        Console.WriteLine("------------------------------------------------------------------------");
+    }
+
     public static async Task Main(string[] args)
     {
         try
         {
             Init();
-            var file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SteamUI");
+            var uifile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SteamUI");
             if (args.Length == 1 && args[0].EndsWith("SteamUI", StringComparison.OrdinalIgnoreCase))
             {
-                await DecryptCurrentAsync(args[0]);
+                await DecryptStreamUIAsync(args[0]);
             }
-            else if (File.Exists(file))
+            else if (File.Exists(uifile))
             {
-                await DecryptCurrentAsync(file);
+                await DecryptStreamUIAsync(uifile);
+            }
+            else if (args.Length == 1 && args[0].EndsWith("exe", StringComparison.OrdinalIgnoreCase))
+            {
+                await DecryptProgressAsync(args[0]);
             }
             else
             {

@@ -932,7 +932,7 @@
     "name": "边缘世界/环世界",
     "mmss": "254777旧密码215444.547889.336964",
     "describe": "RimWorld",
-    "rLzz": "2.2GB",
+    "rLzz": "700MB",
     "types": "沙盒.像素.模拟经营"
   },
   {
@@ -1000,6 +1000,14 @@
     "types": "自走棋.策略.卡牌"
   },
   {
+    "code": "B1007",
+    "name": "杯杯倒满",
+    "mmss": "521588",
+    "describe": "Feed The Cups",
+    "rLzz": "320MB",
+    "types": "可爱.模拟.烹饪.同屏多人.卡通"
+  },
+  {
     "code": "B11",
     "name": "不要喂食猴子/偷窥模拟器",
     "mmss": "101112",
@@ -1020,7 +1028,7 @@
     "name": "暴君的游戏",
     "mmss": "332333",
     "describe": "Despot's Game: Dystopian Army Builder",
-    "rLzz": "1.2GB",
+    "rLzz": "1GB",
     "types": "像素.战术.策略"
   },
   {
@@ -1300,7 +1308,7 @@
     "name": "不动就会死/不动就作死/不动即死",
     "mmss": "654741",
     "describe": "Move or Die",
-    "rLzz": "628MB",
+    "rLzz": "800MB",
     "types": "动作.同屏多人.局域网联机"
   },
   {
@@ -3092,7 +3100,7 @@
     "name": "创世理想乡",
     "mmss": "854777",
     "describe": "Craftopia",
-    "rLzz": "10GB",
+    "rLzz": "21GB",
     "types": "开放世界.局域网联机"
   },
   {
@@ -3329,7 +3337,7 @@
   },
   {
     "code": "C95",
-    "name": "Cosmoteer 星际飞船设计师兼舰长",
+    "name": "Cosmoteer 星舰设计师",
     "mmss": "215447",
     "describe": "Cosmoteer: 星舰设计师、Cosmoteer: Starship Architect Commander",
     "rLzz": "1.5GB",
@@ -4102,6 +4110,14 @@
     "describe": "Winter Survival",
     "rLzz": "8GB",
     "types": "开放世界.基地建设.生存.狩猎"
+  },
+  {
+    "code": "D141",
+    "name": "地平线 西之绝境",
+    "mmss": "218745",
+    "describe": "Horizon Forbidden West Complete Edition",
+    "rLzz": "122GB",
+    "types": "动作.开放世界.女性主角.动作角色扮演"
   },
   {
     "code": "D15",
@@ -6128,6 +6144,14 @@
     "types": "沉浸式模拟.建造"
   },
   {
+    "code": "F88",
+    "name": "风暴工程 建造和救援",
+    "mmss": "652111",
+    "describe": "Stormworks: Build and Rescue",
+    "rLzz": "1.3GB",
+    "types": "沙盒.基地建设.沉浸式模拟.英文版.开放世界.建造"
+  },
+  {
     "code": "G.DMDY001",
     "name": "宫崎骏动漫合集",
     "mmss": "235487",
@@ -7294,6 +7318,30 @@
     "describe": "Gordian Rooms 2: A curious island",
     "rLzz": "10GB",
     "types": "冒险.解谜.探索"
+  },
+  {
+    "code": "G89",
+    "name": "格兰蒂亚2高清重制版",
+    "mmss": "658666",
+    "describe": "GRANDIA II HD Remaster、冒險奇譚II高畫質重製版",
+    "rLzz": "3.6GB",
+    "types": "角色扮演"
+  },
+  {
+    "code": "G89A",
+    "name": "格兰蒂亚高清重制版",
+    "mmss": "658660",
+    "describe": "GRANDIA HD Remaster、冒險奇譚高畫質重製版",
+    "rLzz": "4.9GB",
+    "types": "角色扮演"
+  },
+  {
+    "code": "G90",
+    "name": "鬼屋魔影 重制版",
+    "mmss": "321587",
+    "describe": "Alone in the Dark",
+    "rLzz": "29GB",
+    "types": "心理恐怖.恐怖.洛夫克拉夫特式"
   },
   {
     "code": "H.DMLZ001",
@@ -8700,7 +8748,7 @@
     "name": "航母指挥官2",
     "mmss": "852332",
     "describe": "Carrier Command 2",
-    "rLzz": "530MB",
+    "rLzz": "1.3GB",
     "types": "策略.模拟.像素"
   },
   {
@@ -9736,6 +9784,14 @@
     "types": "模拟.休闲.拟真"
   },
   {
+    "code": "J126",
+    "name": "节奏光剑VR",
+    "mmss": "325487",
+    "describe": "Beat Saber VR",
+    "rLzz": "4.3GB",
+    "types": "虚拟现实.节奏.音乐.VR"
+  },
+  {
     "code": "J13",
     "name": "究极大越野传奇",
     "mmss": "521548",
@@ -9836,7 +9892,7 @@
     "name": "节奏地牢",
     "mmss": "548555",
     "describe": "Crypt of the NecroDancer",
-    "rLzz": "2.2GB",
+    "rLzz": "3.5GB",
     "types": "节奏.不可思议迷宫.困难.像素"
   },
   {
@@ -11278,6 +11334,14 @@
     "describe": "Berserk Boy",
     "rLzz": "1.6GB",
     "types": "动作.类银河战士恶魔城.像素"
+  },
+  {
+    "code": "K69",
+    "name": "烤肉串模拟器",
+    "mmss": "587965",
+    "describe": "Kebab Chefs! - Restaurant Simulator",
+    "rLzz": "5.2GB",
+    "types": "模拟.烹饪.生活模拟"
   },
   {
     "code": "L.DMLZ001",
@@ -13368,6 +13432,14 @@
     "types": "策略.休闲.同屏多人.桌上游戏.棋盘游戏"
   },
   {
+    "code": "M149",
+    "name": "命令与征服 红色警戒2及尤里的复仇",
+    "mmss": "658744",
+    "describe": "Command & Conquer Red Alert 2 and Yuri's Revenge",
+    "rLzz": "1.5GB",
+    "types": "策略.即时战略.英文版"
+  },
+  {
     "code": "M14A",
     "name": "模拟火车世界2/火车模拟世界2",
     "mmss": "256666旧密码254666",
@@ -13976,6 +14048,22 @@
     "types": "动作.冒险.恋爱养成"
   },
   {
+    "code": "M5027",
+    "name": "妹相随 黑白世界的缤纷冒险",
+    "mmss": "847555",
+    "describe": "Living With Sister: Monochrome Fantasy",
+    "rLzz": "700MB",
+    "types": "恋爱养成.角色扮演"
+  },
+  {
+    "code": "M5028",
+    "name": "妹 团圆之时",
+    "mmss": "658477",
+    "describe": "妹団欒の刻、Sister Loving Story",
+    "rLzz": "1GB",
+    "types": "恋爱养成.PC/安卓"
+  },
+  {
     "code": "M51",
     "name": "喵咪斗恶龙2/猫咪斗恶龙2/单机.同屏多人",
     "mmss": "854745",
@@ -14004,7 +14092,7 @@
     "name": "麻布仔大冒险",
     "mmss": "325552",
     "describe": "Sackboy A Big Adventure",
-    "rLzz": "54GB",
+    "rLzz": "53GB",
     "types": "冒险"
   },
   {
@@ -15576,6 +15664,14 @@
     "types": "刷宝射击游戏.第三人称射击.休闲"
   },
   {
+    "code": "P35",
+    "name": "佩妮大逃脱",
+    "mmss": "324785",
+    "describe": "Penny's Big Breakaway",
+    "rLzz": "2.8GB",
+    "types": "冒险"
+  },
+  {
     "code": "P5001",
     "name": "普姆普姆",
     "mmss": "326668",
@@ -15649,11 +15745,11 @@
   },
   {
     "code": "Q01C",
-    "name": "拳皇97：全球对决/KOF97/单机.同屏多人",
+    "name": "拳皇97：全球对决/KOF97",
     "mmss": "597444",
     "describe": "The king of fighters97 Global Match",
     "rLzz": "260MB",
-    "types": "格斗游戏"
+    "types": "格斗游戏.同屏多人"
   },
   {
     "code": "Q01D",
@@ -16201,7 +16297,7 @@
   },
   {
     "code": "Q5002",
-    "name": "巧克力与香子兰合集",
+    "name": "巧克力与香子兰合集/巧克力和香子兰合集",
     "mmss": "263554旧密码144785",
     "describe": "Nekopara Vol.4.3.2.1.0.Extra 6部合集",
     "rLzz": "19GB",
@@ -19064,12 +19160,36 @@
     "types": "合作.同屏多人.烹饪"
   },
   {
+    "code": "S229",
+    "name": "圣兽之王",
+    "mmss": "325466",
+    "describe": "聖獸之王、Unicorn Overlord",
+    "rLzz": "6.8GB",
+    "types": "YuZu模拟器.角色扮演"
+  },
+  {
     "code": "S23",
     "name": "双点医院",
     "mmss": "254444旧密码215445.521487",
     "describe": "Two Point Hospital",
     "rLzz": "9GB",
     "types": "模拟经营"
+  },
+  {
+    "code": "S230",
+    "name": "时空英豪 新起点",
+    "mmss": "958744",
+    "describe": "Outcast - A New Beginning",
+    "rLzz": "37GB",
+    "types": "动作.开放世界.第三人称射击"
+  },
+  {
+    "code": "S231",
+    "name": "3DMark",
+    "mmss": "321889",
+    "describe": "3DMark",
+    "rLzz": "9GB",
+    "types": "实用工具.软件"
   },
   {
     "code": "S23A",
@@ -19512,6 +19632,22 @@
     "types": "恋爱养成"
   },
   {
+    "code": "S5021",
+    "name": "神的不在场sex",
+    "mmss": "658744",
+    "describe": "Lovey-Dovey Lockdown",
+    "rLzz": "2GB",
+    "types": "恋爱养成"
+  },
+  {
+    "code": "S5022",
+    "name": "视灵",
+    "mmss": "219588",
+    "describe": "視靈",
+    "rLzz": "2GB",
+    "types": "恋爱养成.互动小说"
+  },
+  {
     "code": "S51",
     "name": "说谎",
     "mmss": "625412",
@@ -19713,11 +19849,11 @@
   },
   {
     "code": "S74",
-    "name": "世界汽车拉力锦标赛8/单机.同屏多人",
+    "name": "世界汽车拉力锦标赛8",
     "mmss": "256333",
     "describe": "WRC 8 FIA World Rally Championship",
     "rLzz": "20GB",
-    "types": "赛车竞技"
+    "types": "赛车竞技.同屏多人"
   },
   {
     "code": "S74A",
@@ -20238,6 +20374,14 @@
     "describe": "Raid on Taihoku",
     "rLzz": "7GB",
     "types": "战争.历史"
+  },
+  {
+    "code": "T102",
+    "name": "泰拉科技世界",
+    "mmss": "216588",
+    "describe": "TerraTech Worlds",
+    "rLzz": "8.5GB",
+    "types": "基地建设.生存.开放世界"
   },
   {
     "code": "T1020",
@@ -23216,6 +23360,14 @@
     "types": "冒险.同屏多人"
   },
   {
+    "code": "X138",
+    "name": "星球大战 前线 经典合集",
+    "mmss": "652485",
+    "describe": "STAR WARS Battlefront Classic Collection",
+    "rLzz": "63GB",
+    "types": "动作.太空.合集.第一人称射击.外星人"
+  },
+  {
     "code": "X14",
     "name": "新次元游戏海王星VIIR",
     "mmss": "632653",
@@ -23228,7 +23380,7 @@
     "name": "星露谷物语",
     "mmss": "215447旧密码225415",
     "describe": "Stardew Valley",
-    "rLzz": "700MB",
+    "rLzz": "900MB",
     "types": "模拟经营.像素.局域网联机"
   },
   {
@@ -25187,9 +25339,9 @@
     "code": "Y161",
     "name": "伊苏X 北境历险",
     "mmss": "215000",
-    "describe": "伊苏10 北境历险、伊蘇X北境歷險",
-    "rLzz": "8GB",
-    "types": "YuZu模拟器.角色扮演"
+    "describe": "伊苏10 北境历险、伊蘇X北境歷險、Ys X: Nordics",
+    "rLzz": "13GB",
+    "types": "角色扮演"
   },
   {
     "code": "Y162",
@@ -25292,7 +25444,7 @@
     "name": "夜勤人",
     "mmss": "215447旧密码326597",
     "describe": "Moonlighter",
-    "rLzz": "1.2GB",
+    "rLzz": "2GB",
     "types": "像素.Rogue类.动作角色扮演"
   },
   {
@@ -25438,6 +25590,14 @@
     "describe": "Expeditions: A MudRunner Game",
     "rLzz": "19GB",
     "types": "探索.竞速.驾驶.开放世界"
+  },
+  {
+    "code": "Y187",
+    "name": "一个关于攀爬的困难游戏",
+    "mmss": "658477",
+    "describe": "A Difficult Game About Climbing",
+    "rLzz": "360MB",
+    "types": "困难.物理.英文版"
   },
   {
     "code": "Y19",
@@ -25620,7 +25780,7 @@
     "name": "雨世界",
     "mmss": "851777",
     "describe": "雨世界 倾盆大雨、RAIN WORLD DOWNPOUR",
-    "rLzz": "6GB",
+    "rLzz": "7.5GB",
     "types": "氛围.生存.横版.探索.像素"
   },
   {
@@ -27196,7 +27356,7 @@
     "name": "最后生还者 重置版/美国末日重置版",
     "mmss": "258999",
     "describe": "最后的生还者 重置版、The Last of Us Part I",
-    "rLzz": "78GB",
+    "rLzz": "80GB",
     "types": "动作.冒险.僵尸.后末日.第三人称射击"
   },
   {
@@ -27836,7 +27996,7 @@
     "name": "祝你好死",
     "mmss": "326521",
     "describe": "Have a Nice Death",
-    "rLzz": "2GB",
+    "rLzz": "2.1GB",
     "types": "动作.卡通"
   },
   {
@@ -28014,6 +28174,14 @@
     "describe": "真实情欲、我真正的愿望、My Real Desire",
     "rLzz": "2.7GB",
     "types": "恋爱养成"
+  },
+  {
+    "code": "Z5013",
+    "name": "芝诺选集",
+    "mmss": "352888",
+    "describe": "Zeno's Anthology",
+    "rLzz": "2.1GB",
+    "types": "恋爱养成.PC/安卓"
   },
   {
     "code": "Z51",
