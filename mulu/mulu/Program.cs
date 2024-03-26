@@ -1,13 +1,4 @@
-﻿using dnlib.DotNet;
-using dnlib.DotNet.Emit;
-using FastWin32.Diagnostics;
-using System.Collections.Immutable;
-using System.Diagnostics;
-using System.IO.MemoryMappedFiles;
-using System.Reflection;
-using System.Reflection.Emit;
-using System.Security;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
@@ -181,9 +172,11 @@ public partial class Program
 
 
         Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Blue;
         Console.WriteLine($"data_steam 解压密码： {MiMa__}");
         Console.WriteLine($"激活码： {MiMa__}");
         Console.WriteLine($"激活码： {km}");
+        Console.ResetColor();
         Console.WriteLine();
 
         Console.WriteLine("------------------------------------------------------------------------");
@@ -268,61 +261,9 @@ public partial class Program
         Console.WriteLine("------------------------------------------------------------------------");
     }
 
-    private static async Task DecryptProgressAsync(string file)
-    {
-        Console.WriteLine("## 进程枚举 ##");
-        Console.WriteLine(file);
-        var pname = Path.GetFileNameWithoutExtension(file);
-        Console.WriteLine("------------------------------------------------------------------------");
-        var dllFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "muludll.dll");
-
-        if (!File.Exists(dllFile))
-        {
-            Console.WriteLine($"文件缺失 - {dllFile} -");
-        }
-        else
-        {
-            foreach (var p in Process.GetProcesses())
-            {
-                try
-                {
-                    if (p.ProcessName != pname)
-                    {
-                        continue;
-                    }
-                    if (p.MainModule is null || p.MainModule.FileName != file)
-                    {
-                        continue;
-                    }
-                    Injector.InjectManaged((uint)p.Id, dllFile, "muludll.Main", "Inject", string.Empty, out var result);
-                    using (var mmf = MemoryMappedFile.OpenExisting($"{p.Id}.pass"))
-                    {
-                        using (var s = mmf.CreateViewStream())
-                        {
-                            var lbytes = new byte[4];
-                            s.Read(lbytes, 0, lbytes.Length);
-                            var l = BitConverter.ToInt32(lbytes);
-                            var buffer = new byte[l];
-                            s.Read(buffer, 0, l);
-                            var str = Encoding.UTF8.GetString(buffer);
-                            Console.WriteLine();
-                            Console.WriteLine(str);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-
-                    Console.WriteLine($"发生错误：{ex.Message}");
-                }
-            }
-        }
-        Console.WriteLine();
-        Console.WriteLine("------------------------------------------------------------------------");
-    }
-
     public static async Task Main(string[] args)
     {
+        Console.WriteLine("------------------## 开始 ##--------------------");
         try
         {
             Init();
@@ -335,10 +276,6 @@ public partial class Program
             {
                 await DecryptStreamUIAsync(uifile);
             }
-            else if (args.Length == 1 && args[0].EndsWith("exe", StringComparison.OrdinalIgnoreCase))
-            {
-                await DecryptProgressAsync(args[0]);
-            }
             else
             {
                 Console.WriteLine("未发现SteamUI，任意键 获取列表");
@@ -348,7 +285,7 @@ public partial class Program
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"执行出错：{ex.Message}");
+            Console.Error.WriteLine($"执行出错：{ex.Message}");
         }
         Console.WriteLine("------------------## 结束 ##--------------------");
         Console.ReadKey();

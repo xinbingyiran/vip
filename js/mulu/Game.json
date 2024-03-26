@@ -13464,6 +13464,14 @@
     "types": "合作.解谜"
   },
   {
+    "code": "M150",
+    "name": "末日拾荒者",
+    "mmss": "215632",
+    "describe": "NEO Scavenger",
+    "rLzz": "240MB",
+    "types": "生存.后末日.沙盒.角色扮演"
+  },
+  {
     "code": "M16",
     "name": "面容",
     "mmss": "541111旧密码215968",
@@ -27756,7 +27764,7 @@
     "name": "征服之歌",
     "mmss": "254888旧密码526385",
     "describe": "Songs of Conquest",
-    "rLzz": "2.8GB",
+    "rLzz": "3GB",
     "types": "策略.像素.回合"
   },
   {
