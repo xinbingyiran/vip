@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Threading;
 
 namespace muluInject;
 
@@ -29,6 +30,13 @@ public class Program
 
     private static int InjectMethod()
     {
+        return EnableAllPass(out var pass) || FindCurrentPass(out pass) ? pass : 0;
+
+    }
+
+    private static bool FindCurrentPass(out int pass)
+    {
+        //测试 开始启动
         var passlist = FindPass().ToArray();
         if (passlist.Length == 1)
         {
@@ -41,7 +49,84 @@ public class Program
                 MessageBox.Show("可能的密码是：" + string.Join(",", passlist));
             }));
         }
-        return int.Parse(passlist.FirstOrDefault() ?? "0");
+        return int.TryParse(passlist.FirstOrDefault() ?? "0", out pass) && pass != 0;
+    }
+
+    private static bool EnableAllPass(out int pass)
+    {
+        //测试 打开我
+        pass = 0;
+        try
+        {
+            if (!Application.Current.Resources.Contains("Locator"))
+            {
+                return false;
+            }
+            var locator = Application.Current.Resources["Locator"];
+            if (locator is null)
+            {
+                return false;
+            }
+            var method = locator.GetType().GetProperty("Main");
+            if (method is null)
+            {
+                return false;
+            }
+            var main = method.GetValue(locator, null);
+            if (main == null)
+            {
+                return false;
+            }
+            var shijian3_f = main.GetType().GetField("shijian3", BindingFlags.Static | BindingFlags.NonPublic);
+            if (shijian3_f is null)
+            {
+                return false;
+            }
+            var shijian3 = shijian3_f.GetValue(null) as DispatcherTimer;
+            if (shijian3 is null)
+            {
+                return false;
+            }
+
+            var jhm_f = main.GetType().GetField("jhm", BindingFlags.Instance | BindingFlags.NonPublic);
+            if (jhm_f is not null)
+            {
+                var find = false;
+                foreach (Window win in Application.Current.Windows)
+                {
+                    foreach (var c in Find<UserControl>(win))
+                    {
+                        var click_f = c.GetType().GetMethod("Jiu_kan_Click", BindingFlags.Instance | BindingFlags.NonPublic);
+                        if (click_f is not null)
+                        {
+                            click_f.Invoke(c, [null, null]);
+                            find = true;
+                        }
+                    }
+                }
+                if (!find)
+                {
+                    Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+                    {
+                        MessageBox.Show("当前游戏的激活码是：" + jhm_f.GetValue(main));
+                    }));
+                }
+            }
+
+            var jhm1_f = main.GetType().GetField("jhm1", BindingFlags.Instance | BindingFlags.NonPublic);
+            if (jhm1_f is not null)
+            {
+                int.TryParse(jhm1_f.GetValue(main) as string ?? "0", out pass);
+            }
+
+
+            shijian3.Start();
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
     }
 
     private static IEnumerable<T> Find<T>(DependencyObject root)
@@ -112,7 +197,6 @@ public class Program
 
     private static void DecryptProgress(string file)
     {
-        Console.WriteLine("## 进程注入 ##");
         Console.WriteLine("------------------------------------------------------------------------");
         file = Path.GetFullPath(file);
         Console.WriteLine(file);
@@ -123,10 +207,18 @@ public class Program
             var p = Process.Start(file);
             Console.WriteLine("准备好后，按任意键继续。");
             Console.ReadKey();
-            Injector.InjectManaged((uint)p.Id, dllFile, typeof(Program).FullName, nameof(Inject), string.Empty, out var result);
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine($"解密结果：{result}");
-            Console.ResetColor();
+            p.Refresh();
+            if(p.HasExited)
+            {
+                Console.WriteLine("Emmm....目标已退出！");
+            }
+            else
+            {
+                Injector.InjectManaged((uint)p.Id, dllFile, typeof(Program).FullName, nameof(Inject), string.Empty, out var result);
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine($"结果：{result}");
+                Console.ResetColor();
+            }
         }
         catch (Exception ex)
         {
@@ -146,7 +238,7 @@ public class Program
         }
         else
         {
-            Console.WriteLine("请指定参数");
+            Console.WriteLine("请给我一个可执行文件。");
         }
 
         Console.WriteLine("------------------## 结束 ##--------------------");
