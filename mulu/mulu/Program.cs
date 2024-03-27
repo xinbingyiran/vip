@@ -10,7 +10,7 @@ public partial class Program
     private static partial Regex NonNumberRegex();
 
     private static Encoding? Encoding;
-    private static readonly ICryptoTransform des = DES.Create().CreateDecryptor(Encoding.UTF8.GetBytes("consmkey"), new byte[] { 18, 52, 86, 120, 144, 171, 205, 239 });
+    private static readonly ICryptoTransform des = DES.Create().CreateDecryptor(Encoding.UTF8.GetBytes("consmkey"), [18, 52, 86, 120, 144, 171, 205, 239]);
     private static readonly string h = "wg.MtbH&zvqS^!(d";
     private static readonly string c = "PTU18vZQEQka6CE2TOvwU/jsNrqWiGxPLm9u8oyznLFZbPOHTANpHM0yDKcB4J/bc6OS2RY2MuIKZS40b1ROZ+DbwG15s/m6ACXvz7L0Bnx5CyHuptfB+sR0JK3ljmsHlFDi2jh59r+pGNHho+st8AyS6ORMI/fNtTgOSUk8xTYHouvOdINg2EYdAuZaWttngunBnpawqYPmQQ+T0TYHtg==";
     private static readonly string f = "CWxXAmuJ0+QfAzurL4R8qZF5nUJq1YSyCO38gIlExuh66ZGv1k0De1yzZh13+agfe8oop8cS6UlsAK7DIHBbx8UMovijNBjiA/U2AuFNwbQ=";
@@ -110,8 +110,8 @@ public partial class Program
                 Console.WriteLine(toPath);
                 string stringValue = Ini.ParseString(await _client.GetStringAsync(toPath)).GetStringValue("To", "On1", "WLCW");
                 Console.WriteLine("------------------------------------------------------------------------");
-                //Console.WriteLine(stringValue);
-                await File.WriteAllTextAsync("to.txt", stringValue);
+                Console.WriteLine(stringValue);
+                //await File.WriteAllTextAsync("to.txt", stringValue);
                 Console.WriteLine("------------------------------------------------------------------------");
             }
         }
@@ -190,9 +190,9 @@ public partial class Program
         Console.WriteLine(cstr + "a/a.txt");
         var str = await DecodecAsync(cstr + "a/a.txt", fb);
         Console.WriteLine("------------------------------------------------------------------------");
-        await File.WriteAllTextAsync("a.txt", str);
+        //await File.WriteAllTextAsync("a.txt", str);
 
-        //Console.WriteLine(str);
+        Console.WriteLine(str);
         Console.WriteLine("------------------------------------------------------------------------");
 
         Ini ini = Ini.ParseString(str);
@@ -203,7 +203,6 @@ public partial class Program
         var wjurl = tt1a001 + "WenJian.json";
         Console.WriteLine(wjurl);
         var wjtext = await _client.GetStringAsync(wjurl);
-        Console.WriteLine("------------------------------------------------------------------------");
         var ct = JsonSerializer.Deserialize(wjtext, _sys.Sys_content_version)!;
         var datas = ct.Content!.Select(p =>
             new Game

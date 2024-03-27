@@ -2960,16 +2960,6 @@
     "addr3": "阿里云: https://www.aliyundrive.com/s/FVqJ4TzzSmV"
   },
   {
-    "code": "C09",
-    "name": "吃鸡模拟器/吃鸡教练",
-    "mmss": "326984",
-    "describe": "Battle Royale Trainer",
-    "rLzz": "2.4GB",
-    "types": "射击游戏",
-    "yxbb": "v1.0.3.2|容量2.4GB|官方简体中文|支持键盘.鼠标.手柄|2020年07月04号更新",
-    "addr1": "百度网盘: https://pan.baidu.com/s/1k2E0ELXRFTBC7erpGhm5PQ"
-  },
-  {
     "code": "C10",
     "name": "超级情圣2/绝世情圣2/泡妞搭讪教程2",
     "mmss": "145698",
@@ -5818,6 +5808,17 @@
     "addr1": "度盘: https://pan.baidu.com/s/15zpU9rDzvWYibnH3xaS1yw",
     "addr2": "天翼云: https://cloud.189.cn/t/ryyMvaraQRVf",
     "addr3": "阿里云: https://www.alipan.com/s/MoyNWyVWPcG"
+  },
+  {
+    "code": "D142",
+    "name": "达贡 致洛夫克拉夫特",
+    "mmss": "385477",
+    "describe": "Dagon: by H. P. Lovecraft",
+    "rLzz": "2GB",
+    "types": "恐怖.洛夫克拉夫特式.氛围.视觉小说",
+    "yxbb": "Build.13415657|容量2GB|官方简体中文|支持键盘.鼠标.手柄|2024年03月26号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1PQxplbfoWaxfBwKJCwfAOQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/vMn6FbRJRb2a"
   },
   {
     "code": "D15",
@@ -9910,11 +9911,11 @@
   },
   {
     "code": "G53",
-    "name": "观测号/观察",
+    "name": "观测号",
     "mmss": "357852",
     "describe": "Observation",
     "rLzz": "7GB",
-    "types": "冒险.太空",
+    "types": "冒险.太空.科幻.恐怖.氛围.解谜",
     "yxbb": "v5312960|容量7GB|官方简体中文|支持键盘.鼠标.手柄|2024年03月26号更新",
     "addr1": "度盘: https://pan.baidu.com/s/14jiq01jTaYfDXus8Tu1fUg",
     "addr2": "天翼云: https://cloud.189.cn/t/IZFRRzUJ7rMr"
@@ -11057,15 +11058,15 @@
   },
   {
     "code": "H111",
-    "name": "欢乐小镇/摇摆的人生",
+    "name": "晃晃人生",
     "mmss": "212222",
-    "describe": "Wobbly Life",
-    "rLzz": "1GB",
+    "describe": "欢乐小镇、摇摆的人生、Wobbly Life",
+    "rLzz": "2GB",
     "types": "休闲.同屏多人.沙盒",
-    "yxbb": "Build.10058473|容量1GB|英文版|2023年01月01号更新",
+    "yxbb": "v0.9.4|容量2GB|官方简体中文|2024年03月26号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1QJho6kaWKOdBBKT0fidiOg",
     "addr2": "天翼云: https://cloud.189.cn/t/YFVbeiieMVB3",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/oV7QVqdEmcv"
+    "addr3": "阿里云: https://www.alipan.com/s/jGJ7aa9u2o3"
   },
   {
     "code": "H112",
@@ -12409,9 +12410,9 @@
     "name": "荒野的召唤垂钓者",
     "mmss": "856336",
     "describe": "Call of the Wild: The Angler",
-    "rLzz": "14GB",
+    "rLzz": "30GB",
     "types": "模拟经营.钓鱼.休闲.开放世界",
-    "yxbb": "中文版|容量14GB|官方简体中文|【如果提示登陆按ESC】|2022年09月01号更新",
+    "yxbb": "v1.6.1|容量30GB|官方简体中文|2024年03月26号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1M1CPWXfMG5kVJCGaYvi04g",
     "addr2": "天翼云: https://cloud.189.cn/t/A77FfarYjUvq"
   },
@@ -28930,6 +28931,17 @@
     "addr2": "天翼云: https://cloud.189.cn/t/VR3IbevQfmMr"
   },
   {
+    "code": "T103",
+    "name": "逃离地心 桌面冒险",
+    "mmss": "254655",
+    "describe": "Outcore: Desktop Adventure",
+    "rLzz": "1.4GB",
+    "types": "探索",
+    "yxbb": "Build.13559442|容量1.4GB|官方简体中文|支持键盘.鼠标.手柄|2024年03月26号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1yO1SmMc48pgcOj-vZjLapQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/7nmeee77V3ie"
+  },
+  {
     "code": "T11",
     "name": "天穗之咲稻姬/天穗的长命草姬",
     "mmss": "363323",
@@ -33550,10 +33562,10 @@
     "code": "X46",
     "name": "猩红塔",
     "mmss": "365555",
-    "describe": "Scarlet Tower",
-    "rLzz": "1GB",
+    "describe": "猩红之塔、Scarlet Tower",
+    "rLzz": "1.4GB",
     "types": "弹幕射击.生存.像素",
-    "yxbb": "v0.4.0|容量1GB|官方简体中文|2023年01月02号更新",
+    "yxbb": "v1.0.0|容量1.4GB|官方简体中文|2024年03月26号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1Mj4Xuvm7VQl1IJyN203Zjw",
     "addr2": "天翼云: https://cloud.189.cn/t/yI32qyEn6VVn",
     "addr3": "阿里云: https://www.aliyundrive.com/s/iaFaMBK46NN"
@@ -33894,6 +33906,17 @@
     "yxbb": "v0.9|容量3GB|简体汉化|PC+安卓双版|2023年12月24号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1NnYY38tXhnvz3KX10NcZRw",
     "addr2": "天翼云: https://cloud.189.cn/t/yUR3Azqeiqmm"
+  },
+  {
+    "code": "X5026",
+    "name": "血族迷情 卡利斯卡",
+    "mmss": "854752",
+    "describe": "Kalyskah",
+    "rLzz": "15GB",
+    "types": "恋爱养成",
+    "yxbb": "v0.23.3|容量15GB|内置简体汉化|2024年03月24号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1O_lpmKhLFSUDDoz9NFEjAQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/vmYVzqqQbiiq"
   },
   {
     "code": "X51",
@@ -39325,6 +39348,17 @@
     "yxbb": "v1.0.0|容量19GB|官方简体中文|支持键盘.鼠标.手柄|2024年03月08号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1AQ23VPTmHj_cLYfxjSgLXw",
     "addr2": "天翼云: https://cloud.189.cn/t/yEf26bUvQzeu"
+  },
+  {
+    "code": "Z177",
+    "name": "终焉之玛格诺利亚 雾中盛放之花",
+    "mmss": "658945",
+    "describe": "ENDER MAGNOLIA: Bloom in the Mist",
+    "rLzz": "1.7GB",
+    "types": "类银河战士恶魔城.动作角色扮演",
+    "yxbb": "v0.5.0|容量1.7GB|官方简体中文|支持键盘.鼠标.手柄|2024年03月26号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1L5F6KjJ8OjY_yzeZKQxecQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/vayyqyJ7N3ma"
   },
   {
     "code": "Z18",
