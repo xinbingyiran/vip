@@ -2104,14 +2104,6 @@
     "types": "动作"
   },
   {
-    "code": "C09",
-    "name": "吃鸡模拟器/吃鸡教练",
-    "mmss": "326984",
-    "describe": "Battle Royale Trainer",
-    "rLzz": "2.4GB",
-    "types": "射击游戏"
-  },
-  {
     "code": "C10",
     "name": "超级情圣2/绝世情圣2/泡妞搭讪教程2",
     "mmss": "145698",
@@ -4118,6 +4110,14 @@
     "describe": "Horizon Forbidden West Complete Edition",
     "rLzz": "122GB",
     "types": "动作.开放世界.女性主角.动作角色扮演"
+  },
+  {
+    "code": "D142",
+    "name": "达贡 致洛夫克拉夫特",
+    "mmss": "385477",
+    "describe": "Dagon: by H. P. Lovecraft",
+    "rLzz": "2GB",
+    "types": "恐怖.洛夫克拉夫特式.氛围.视觉小说"
   },
   {
     "code": "D15",
@@ -7001,11 +7001,11 @@
   },
   {
     "code": "G53",
-    "name": "观测号/观察",
+    "name": "观测号",
     "mmss": "357852",
     "describe": "Observation",
     "rLzz": "7GB",
-    "types": "冒险.太空"
+    "types": "冒险.太空.科幻.恐怖.氛围.解谜"
   },
   {
     "code": "G54",
@@ -7809,10 +7809,10 @@
   },
   {
     "code": "H111",
-    "name": "欢乐小镇/摇摆的人生",
+    "name": "晃晃人生",
     "mmss": "212222",
-    "describe": "Wobbly Life",
-    "rLzz": "1GB",
+    "describe": "欢乐小镇、摇摆的人生、Wobbly Life",
+    "rLzz": "2GB",
     "types": "休闲.同屏多人.沙盒"
   },
   {
@@ -8756,7 +8756,7 @@
     "name": "荒野的召唤垂钓者",
     "mmss": "856336",
     "describe": "Call of the Wild: The Angler",
-    "rLzz": "14GB",
+    "rLzz": "30GB",
     "types": "模拟经营.钓鱼.休闲.开放世界"
   },
   {
@@ -20416,6 +20416,14 @@
     "types": "机甲.俯视射击"
   },
   {
+    "code": "T103",
+    "name": "逃离地心 桌面冒险",
+    "mmss": "254655",
+    "describe": "Outcore: Desktop Adventure",
+    "rLzz": "1.4GB",
+    "types": "探索"
+  },
+  {
     "code": "T11",
     "name": "天穗之咲稻姬/天穗的长命草姬",
     "mmss": "363323",
@@ -23651,8 +23659,8 @@
     "code": "X46",
     "name": "猩红塔",
     "mmss": "365555",
-    "describe": "Scarlet Tower",
-    "rLzz": "1GB",
+    "describe": "猩红之塔、Scarlet Tower",
+    "rLzz": "1.4GB",
     "types": "弹幕射击.生存.像素"
   },
   {
@@ -23894,6 +23902,14 @@
     "describe": "Projekt Passion",
     "rLzz": "3GB",
     "types": "恋爱养成.视觉小说.PC/安卓"
+  },
+  {
+    "code": "X5026",
+    "name": "血族迷情 卡利斯卡",
+    "mmss": "854752",
+    "describe": "Kalyskah",
+    "rLzz": "15GB",
+    "types": "恋爱养成"
   },
   {
     "code": "X51",
@@ -27726,6 +27742,14 @@
     "describe": "Zoria: Age of Shattering",
     "rLzz": "19GB",
     "types": "战术角色扮演.探索.回合.迷宫探索"
+  },
+  {
+    "code": "Z177",
+    "name": "终焉之玛格诺利亚 雾中盛放之花",
+    "mmss": "658945",
+    "describe": "ENDER MAGNOLIA: Bloom in the Mist",
+    "rLzz": "1.7GB",
+    "types": "类银河战士恶魔城.动作角色扮演"
   },
   {
     "code": "Z18",
