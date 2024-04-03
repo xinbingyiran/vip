@@ -4120,6 +4120,14 @@
     "types": "恐怖.洛夫克拉夫特式.氛围.视觉小说"
   },
   {
+    "code": "D143",
+    "name": "都要 小孩子才做选择",
+    "mmss": "589555",
+    "describe": "MY DESTINY GIRLS",
+    "rLzz": "38GB",
+    "types": "恋爱模拟.视觉小说.真人互动"
+  },
+  {
     "code": "D15",
     "name": "地下城与勇士：决斗",
     "mmss": "587458",
@@ -7225,7 +7233,7 @@
   },
   {
     "code": "G77",
-    "name": "古松岛",
+    "name": "古松岛/恐龙牧场",
     "mmss": "587444",
     "describe": "Paleo Pines",
     "rLzz": "4.5GB",
@@ -7342,6 +7350,14 @@
     "describe": "Alone in the Dark",
     "rLzz": "29GB",
     "types": "心理恐怖.恐怖.洛夫克拉夫特式"
+  },
+  {
+    "code": "G91",
+    "name": "光年拓荒",
+    "mmss": "254655",
+    "describe": "Lightyear Frontier",
+    "rLzz": "2.1GB",
+    "types": "农场模拟.休闲"
   },
   {
     "code": "H.DMLZ001",
@@ -11640,6 +11656,14 @@
     "types": "回合.战略.战争游戏"
   },
   {
+    "code": "L1015",
+    "name": "恋恋女团",
+    "mmss": "854655",
+    "describe": "To Be In Love With Girls Group",
+    "rLzz": "24GB",
+    "types": "恋爱模拟.真人互动"
+  },
+  {
     "code": "L10A",
     "name": "龙腾世纪2",
     "mmss": "759664",
@@ -12984,6 +13008,14 @@
     "types": "弹幕射击.牌组构建"
   },
   {
+    "code": "M1015",
+    "name": "美女 请别影响我学习",
+    "mmss": "584755",
+    "describe": "Knowledge, or know Lady",
+    "rLzz": "2GB",
+    "types": "恋爱模拟.视觉小说.真人互动"
+  },
+  {
     "code": "M102",
     "name": "迷之冒险：重制版",
     "mmss": "153224",
@@ -13470,6 +13502,14 @@
     "describe": "NEO Scavenger",
     "rLzz": "240MB",
     "types": "生存.后末日.沙盒.角色扮演"
+  },
+  {
+    "code": "M151",
+    "name": "木卫四协议",
+    "mmss": "218577",
+    "describe": "The Callisto Protocol",
+    "rLzz": "95GB",
+    "types": "恐怖.科幻.第三人称射击.太空"
   },
   {
     "code": "M16",
@@ -15216,6 +15256,14 @@
     "types": "动作.第一人称射击.复古"
   },
   {
+    "code": "N56",
+    "name": "南方公园 下雪天",
+    "mmss": "325887",
+    "describe": "SOUTH PARK: SNOW DAY!",
+    "rLzz": "27GB",
+    "types": "卡通.黑色幽默.英文版"
+  },
+  {
     "code": "O.DMLZ001",
     "name": "Overlord不死者之王 合集",
     "mmss": "256444",
@@ -15596,7 +15644,7 @@
     "name": "匹诺曹的谎言",
     "mmss": "263555",
     "describe": "Lies of P",
-    "rLzz": "24GB",
+    "rLzz": "40GB",
     "types": "类魂系列.动作"
   },
   {
@@ -16188,7 +16236,7 @@
     "name": "潜渊症",
     "mmss": "748774",
     "describe": "Barotrauma",
-    "rLzz": "1GB",
+    "rLzz": "1.1GB",
     "types": "模拟经营.生存"
   },
   {
@@ -16654,6 +16702,14 @@
     "describe": "The Thaumaturge",
     "rLzz": "25GB",
     "types": "角色扮演.选择取向.回合"
+  },
+  {
+    "code": "Q85",
+    "name": "请做coser的主人",
+    "mmss": "254114",
+    "describe": "Fellinlovewithcoser",
+    "rLzz": "40GB",
+    "types": "真人互动.恋爱模拟"
   },
   {
     "code": "R.DMLZ001",
@@ -19200,6 +19256,14 @@
     "types": "实用工具.软件"
   },
   {
+    "code": "S232",
+    "name": "失落王国",
+    "mmss": "565452",
+    "describe": "Stolen Realm",
+    "rLzz": "5GB",
+    "types": "回合.动作角色扮演.策略"
+  },
+  {
     "code": "S23A",
     "name": "双点校园",
     "mmss": "320220",
@@ -19491,8 +19555,8 @@
     "code": "S5002",
     "name": "Subverse",
     "mmss": "588887",
-    "describe": "Subverse",
-    "rLzz": "34GB",
+    "describe": "Subverse、颠覆",
+    "rLzz": "59GB",
     "types": "恋爱养成"
   },
   {
@@ -19900,7 +19964,7 @@
     "name": "赛道大师/边境制造者/机械制造者",
     "mmss": "526669旧密码548745",
     "describe": "Trailmakers",
-    "rLzz": "5.5GB",
+    "rLzz": "6.4GB",
     "types": "模拟.飞行游戏.沙盒"
   },
   {
@@ -21116,7 +21180,7 @@
     "name": "逃离密室/逃离后室/深入密室/逃出密室",
     "mmss": "326665",
     "describe": "Escape the Backrooms",
-    "rLzz": "9.5GB",
+    "rLzz": "23GB",
     "types": "恐怖"
   },
   {
@@ -21728,6 +21792,14 @@
     "types": "策略.回合"
   },
   {
+    "code": "W117",
+    "name": "王国 新大陆",
+    "mmss": "562445",
+    "describe": "Kingdom: New Lands",
+    "rLzz": "400MB",
+    "types": "塔防.生存.基地建设.探索"
+  },
+  {
     "code": "W12",
     "name": "维多利亚3",
     "mmss": "256666",
@@ -21772,7 +21844,7 @@
     "name": "武装突袭3",
     "mmss": "258888旧密码254111.652147.554877",
     "describe": "ArmA III",
-    "rLzz": "116GB",
+    "rLzz": "155GB",
     "types": "射击游戏.局域网联机"
   },
   {
@@ -23108,7 +23180,7 @@
     "name": "雄心壮志",
     "mmss": "254887",
     "describe": "Big Ambitions",
-    "rLzz": "4GB",
+    "rLzz": "6GB",
     "types": "模拟经营"
   },
   {
@@ -23384,12 +23456,28 @@
     "types": "动作.太空.合集.第一人称射击.外星人"
   },
   {
+    "code": "X139",
+    "name": "虚时异境 迷离时空 双重版",
+    "mmss": "658745",
+    "describe": "DYSCHRONIA: Chronos Alternate - Dual Edition",
+    "rLzz": "13GB",
+    "types": "动作.冒险.视觉小说.虚拟现实.VR"
+  },
+  {
     "code": "X14",
     "name": "新次元游戏海王星VIIR",
     "mmss": "632653",
     "describe": "Megadimension Neptunia VIIR",
     "rLzz": "18GB",
     "types": "角色扮演.女性主角"
+  },
+  {
+    "code": "X140",
+    "name": "小火车世界",
+    "mmss": "215874",
+    "describe": "Mashinky",
+    "rLzz": "2.3GB",
+    "types": "策略.模拟.火车.管理.沙盒"
   },
   {
     "code": "X15",
@@ -25708,7 +25796,7 @@
     "name": "要战便战",
     "mmss": "632254",
     "describe": "Diplomacy is Not an Option",
-    "rLzz": "1GB",
+    "rLzz": "2.1GB",
     "types": "城市建造.塔防.策略.沙盒.建造"
   },
   {
@@ -27752,6 +27840,22 @@
     "types": "类银河战士恶魔城.动作角色扮演"
   },
   {
+    "code": "Z178",
+    "name": "诸千年",
+    "mmss": "524885",
+    "describe": "Millennia",
+    "rLzz": "6.3GB",
+    "types": "策略.4X.回合战略.大战略.模拟"
+  },
+  {
+    "code": "Z179",
+    "name": "重装前哨",
+    "mmss": "859455",
+    "describe": "Outpost: Infinity Siege",
+    "rLzz": "37GB",
+    "types": "机器人.基地建设.塔防.第一人称射击"
+  },
+  {
     "code": "Z18",
     "name": "重炮母舰",
     "mmss": "587596",
@@ -27993,10 +28097,10 @@
   },
   {
     "code": "Z41",
-    "name": "在我们之中/在我们当中/我们之间有内鬼/我们中出了个叛徒/网络联机",
+    "name": "在我们之中/在我们当中/我们之间有内鬼/我们中出了个叛徒",
     "mmss": "658744",
     "describe": "Among Us",
-    "rLzz": "400MB",
+    "rLzz": "700MB",
     "types": "合作.太空.生存.社交推理"
   },
   {
