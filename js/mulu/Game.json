@@ -1008,6 +1008,14 @@
     "types": "可爱.模拟.烹饪.同屏多人.卡通"
   },
   {
+    "code": "B101",
+    "name": "白色情人节2谎言之花",
+    "mmss": "256323",
+    "describe": "白色情人节2 会说谎的花 完整版、White Day 2: The Flower That Tells Lies - Complete Edition",
+    "rLzz": "6.5GB",
+    "types": "探索.解谜.恐怖"
+  },
+  {
     "code": "B11",
     "name": "不要喂食猴子/偷窥模拟器",
     "mmss": "101112",
@@ -2432,6 +2440,14 @@
     "types": "驾驶.开放世界.模拟.拟真.沉浸式模拟.生活模拟"
   },
   {
+    "code": "C119",
+    "name": "纯爱声放送",
+    "mmss": "547441",
+    "describe": "Voice Love on Air",
+    "rLzz": "3GB",
+    "types": "恋爱模拟.LGBTQ+"
+  },
+  {
     "code": "C12",
     "name": "错误的信标2/错误里程碑2",
     "mmss": "215454",
@@ -2965,6 +2981,14 @@
     "mmss": "103222",
     "describe": "Da Capo 3 R",
     "rLzz": "4GB",
+    "types": "恋爱养成"
+  },
+  {
+    "code": "C5011",
+    "name": "纯白交响曲",
+    "mmss": "564822",
+    "describe": "SANA EDITION",
+    "rLzz": "8GB",
     "types": "恋爱养成"
   },
   {
@@ -4108,7 +4132,7 @@
     "name": "地平线 西之绝境",
     "mmss": "218745",
     "describe": "Horizon Forbidden West Complete Edition",
-    "rLzz": "122GB",
+    "rLzz": "145GB",
     "types": "动作.开放世界.女性主角.动作角色扮演"
   },
   {
@@ -4126,6 +4150,14 @@
     "describe": "MY DESTINY GIRLS",
     "rLzz": "38GB",
     "types": "恋爱模拟.视觉小说.真人互动"
+  },
+  {
+    "code": "D144",
+    "name": "地牢守护者",
+    "mmss": "258774",
+    "describe": "Dungeon Defenders",
+    "rLzz": "10GB",
+    "types": "塔防.策略.生存.英文版"
   },
   {
     "code": "D15",
@@ -4188,7 +4220,7 @@
     "name": "大将军：罗马/帝皇罗马/统治者罗马",
     "mmss": "566326",
     "describe": "Imperator: Rome",
-    "rLzz": "4GB",
+    "rLzz": "4.3GB",
     "types": "策略"
   },
   {
@@ -5665,10 +5697,10 @@
   },
   {
     "code": "F38",
-    "name": "富豪",
+    "name": "富豪/财阀崛起",
     "mmss": "785478",
     "describe": "Plutocracy",
-    "rLzz": "4GB",
+    "rLzz": "5.3GB",
     "types": "模拟经营"
   },
   {
@@ -5676,7 +5708,7 @@
     "name": "废土帝国 人类复兴",
     "mmss": "121445",
     "describe": "Revival Recolonization",
-    "rLzz": "1.5GB",
+    "rLzz": "1.8GB",
     "types": "大战略.回合.策略.经济.模拟"
   },
   {
@@ -6158,6 +6190,22 @@
     "describe": "Stormworks: Build and Rescue",
     "rLzz": "1.3GB",
     "types": "沙盒.基地建设.沉浸式模拟.英文版.开放世界.建造"
+  },
+  {
+    "code": "F89",
+    "name": "FIFA16",
+    "mmss": "658771",
+    "describe": "国际足球大联盟16",
+    "rLzz": "20GB",
+    "types": "体育运动.足球"
+  },
+  {
+    "code": "F90",
+    "name": "峰顶王国",
+    "mmss": "658774",
+    "describe": "Laysara: Summit Kingdom",
+    "rLzz": "3GB",
+    "types": "模拟经营.城市营造.资源管理.殖民模拟.建造"
   },
   {
     "code": "G.DMDY001",
@@ -9329,19 +9377,19 @@
   },
   {
     "code": "J04B",
-    "name": "狙击手：幽灵战士1/单机.局域网联机",
+    "name": "狙击手：幽灵战士1",
     "mmss": "524777",
     "describe": "Sniper Ghost Warrior",
     "rLzz": "4.5GB",
-    "types": "射击游戏"
+    "types": "射击游戏.局域网联机"
   },
   {
     "code": "J04C",
-    "name": "狙击手：幽灵战士2/单机.局域网联机",
+    "name": "狙击手：幽灵战士2",
     "mmss": "586999",
     "describe": "Sniper: Ghost Warrior 2",
     "rLzz": "8.2GB",
-    "types": "射击游戏"
+    "types": "射击游戏.局域网联机"
   },
   {
     "code": "J04D",
@@ -12344,6 +12392,14 @@
     "types": "模拟经营.城市营造.休闲"
   },
   {
+    "code": "L60",
+    "name": "零号奴隶X",
+    "mmss": "784779",
+    "describe": "Slave Zero X",
+    "rLzz": "5.6GB",
+    "types": "砍杀.像素"
+  },
+  {
     "code": "L61",
     "name": "流浪之神",
     "mmss": "158774",
@@ -13512,6 +13568,14 @@
     "types": "恐怖.科幻.第三人称射击.太空"
   },
   {
+    "code": "M152",
+    "name": "墨水氏族",
+    "mmss": "564755",
+    "describe": "Inkbound",
+    "rLzz": "3.4GB",
+    "types": "战术角色扮演.回合制战术"
+  },
+  {
     "code": "M16",
     "name": "面容",
     "mmss": "541111旧密码215968",
@@ -14112,6 +14176,14 @@
     "types": "恋爱养成.PC/安卓"
   },
   {
+    "code": "M5029",
+    "name": "谜语小丑",
+    "mmss": "589774",
+    "describe": "Riddle Joker",
+    "rLzz": "7GB",
+    "types": "视觉小说.恋爱养成"
+  },
+  {
     "code": "M51",
     "name": "喵咪斗恶龙2/猫咪斗恶龙2/单机.同屏多人",
     "mmss": "854745",
@@ -14651,7 +14723,7 @@
     "code": "N06B",
     "name": "女神异闻录4黄金版",
     "mmss": "874778",
-    "describe": "PERSONA4 The Golden",
+    "describe": "Persona 4 Golden",
     "rLzz": "12GB",
     "types": "角色扮演"
   },
@@ -15360,6 +15432,14 @@
     "types": "视觉小说.互动小说.情感.爱情"
   },
   {
+    "code": "O12",
+    "name": "欧米茄工匠",
+    "mmss": "958744",
+    "describe": "Omega Crafter",
+    "rLzz": "1.5GB",
+    "types": "开放世界.生存.制作.自动化"
+  },
+  {
     "code": "O5001",
     "name": "欧克按摩店",
     "mmss": "101221",
@@ -15728,6 +15808,14 @@
     "types": "冒险"
   },
   {
+    "code": "P36",
+    "name": "破碎之路",
+    "mmss": "745111",
+    "describe": "Broken Roads",
+    "rLzz": "12.3GB",
+    "types": "角色扮演.后末日"
+  },
+  {
     "code": "P5001",
     "name": "普姆普姆",
     "mmss": "326668",
@@ -15766,6 +15854,14 @@
     "describe": "ONEONE1",
     "rLzz": "9GB",
     "types": "恋爱养成"
+  },
+  {
+    "code": "P5006",
+    "name": "帕奎特",
+    "mmss": "254666",
+    "describe": "Parquet",
+    "rLzz": "3GB",
+    "types": "恋爱养成.视觉小说"
   },
   {
     "code": "Q.MJ001",
@@ -16710,6 +16806,14 @@
     "describe": "Fellinlovewithcoser",
     "rLzz": "40GB",
     "types": "真人互动.恋爱模拟"
+  },
+  {
+    "code": "Q86",
+    "name": "切勿尖叫",
+    "mmss": "522000",
+    "describe": "DON'T SCREAM",
+    "rLzz": "12GB",
+    "types": "恐怖"
   },
   {
     "code": "R.DMLZ001",
@@ -19264,6 +19368,30 @@
     "types": "回合.动作角色扮演.策略"
   },
   {
+    "code": "S233",
+    "name": "SuchArt艺术家模拟器",
+    "mmss": "356488",
+    "describe": "SuchArt: Genius Artist Simulator",
+    "rLzz": "2GB",
+    "types": "设计与插画.沙盒.沉浸式模拟"
+  },
+  {
+    "code": "S234",
+    "name": "丧尸围城2绝密档案",
+    "mmss": "584755",
+    "describe": "Dead Rising 2: Off the Record",
+    "rLzz": "7GB",
+    "types": "僵尸.动作.开放世界"
+  },
+  {
+    "code": "S235",
+    "name": "丧尸围城2",
+    "mmss": "654555",
+    "describe": "Dead Rising2",
+    "rLzz": "7GB",
+    "types": "僵尸.动作.开放世界"
+  },
+  {
     "code": "S23A",
     "name": "双点校园",
     "mmss": "320220",
@@ -19717,6 +19845,14 @@
     "mmss": "219588",
     "describe": "視靈",
     "rLzz": "2GB",
+    "types": "恋爱养成.互动小说"
+  },
+  {
+    "code": "S5023",
+    "name": "少女理论以及周边",
+    "mmss": "965865",
+    "describe": "Otome Riron to Sono Shuuhen -École de Paris",
+    "rLzz": "5.2GB",
     "types": "恋爱养成.互动小说"
   },
   {
@@ -21800,6 +21936,22 @@
     "types": "塔防.生存.基地建设.探索"
   },
   {
+    "code": "W118",
+    "name": "无感染区",
+    "mmss": "526212",
+    "describe": "Infection Free Zone",
+    "rLzz": "4.2GB",
+    "types": "后末日.基地建设.城市营造"
+  },
+  {
+    "code": "W119",
+    "name": "舞力全开2017",
+    "mmss": "526887",
+    "describe": "Just Dance 2017",
+    "rLzz": "15.1GB",
+    "types": "音乐.休闲"
+  },
+  {
     "code": "W12",
     "name": "维多利亚3",
     "mmss": "256666",
@@ -23612,7 +23764,7 @@
     "name": "狭间格斗/秘境对决/狭小空间战斗",
     "mmss": "852214",
     "describe": "Fights in Tight Spaces",
-    "rLzz": "2GB",
+    "rLzz": "2.3GB",
     "types": "策略.卡牌"
   },
   {
@@ -23997,6 +24149,14 @@
     "mmss": "854752",
     "describe": "Kalyskah",
     "rLzz": "15GB",
+    "types": "恋爱养成"
+  },
+  {
+    "code": "X5027",
+    "name": "幸福家里蹲的养成方法",
+    "mmss": "652555",
+    "describe": "幸福家里蹲的养成方法",
+    "rLzz": "600MB",
     "types": "恋爱养成"
   },
   {
@@ -25710,6 +25870,22 @@
     "describe": "A Difficult Game About Climbing",
     "rLzz": "360MB",
     "types": "困难.物理.英文版"
+  },
+  {
+    "code": "Y188",
+    "name": "影廊2 雨之四葩",
+    "mmss": "547588",
+    "describe": "Shadow Corridor 2 雨ノ四葩",
+    "rLzz": "7GB",
+    "types": "恐怖"
+  },
+  {
+    "code": "Y189",
+    "name": "银河历险记3",
+    "mmss": "656656",
+    "describe": "Samorost 3",
+    "rLzz": "2.3GB",
+    "types": "指向点击.手绘.迷幻"
   },
   {
     "code": "Y19",
@@ -27864,6 +28040,30 @@
     "types": "射击游戏"
   },
   {
+    "code": "Z180",
+    "name": "终焉之莉莉 骑士寂夜",
+    "mmss": "254855",
+    "describe": "ENDER LILIES: Quietus of the Knights",
+    "rLzz": "1.2GB",
+    "types": "类银河战士恶魔城.女性主角.类魂系列.黑暗奇幻"
+  },
+  {
+    "code": "Z181",
+    "name": "自豪 美女全攻略",
+    "mmss": "258775",
+    "describe": "Proud To Love",
+    "rLzz": "25GB",
+    "types": "真人互动.恋爱模拟"
+  },
+  {
+    "code": "Z182",
+    "name": "指挥部 二战",
+    "mmss": "587555",
+    "describe": "Headquarters: World War II",
+    "rLzz": "24GB",
+    "types": "回合制战术.战术角色扮演.战争游戏.二战"
+  },
+  {
     "code": "Z19",
     "name": "足球经理 合集",
     "mmss": "236665旧密码639819",
@@ -28385,7 +28585,7 @@
   },
   {
     "code": "Z58",
-    "name": "罪恶装备奋斗/罪恶装备斗争",
+    "name": "罪恶装备奋斗/罪恶装备斗争/罪恶装备奋战",
     "mmss": "521444旧密码698889",
     "describe": "GUILTY GEAR STRIVE",
     "rLzz": "24GB",
@@ -28425,7 +28625,7 @@
   },
   {
     "code": "Z62",
-    "name": "战争召唤/战争号令/单机.网络联机",
+    "name": "战争召唤/战争号令",
     "mmss": "365558",
     "describe": "Call to Arms",
     "rLzz": "43GB",
