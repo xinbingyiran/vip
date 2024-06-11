@@ -60,6 +60,7 @@
 - [文叔叔](https://www.wenshushu.cn) `最大5G >200M下载收费` 
 [空投](https://airportal.cn/) `24小时，最大1G文件，2次下载`
 [网络剪切板](https://netcut.cn/) `最长三年，支持10*50M文件`
+[UC](https://fast.uc.cn/) `需登录，10G，支持文件夹`
 - [数字图书馆推广工程](http://m.ndlib.cn/)
 [读者云门户平台](http://read.nlc.cn/user/index)
 [国家数字图书馆](http://www.nlc.cn/web/index.shtml)
