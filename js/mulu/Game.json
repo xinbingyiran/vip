@@ -28,7 +28,7 @@
     "name": "艾迪芬奇的记忆",
     "mmss": "635999旧密码005875",
     "describe": "What Remains of Edith Finch",
-    "rLzz": "2.58GB",
+    "rLzz": "2.6GB",
     "types": "冒险解谜"
   },
   {
@@ -177,9 +177,9 @@
   },
   {
     "code": "A09A",
-    "name": "奥日与鬼火意志/奥日与精灵意志/精灵与萤火意志",
+    "name": "奥日与鬼火意志",
     "mmss": "965874",
-    "describe": "Ori and the Will of the Wisps",
+    "describe": "精灵与萤火意志、Ori and the Will of the Wisps",
     "rLzz": "11GB",
     "types": "横向滚屏.卡通"
   },
@@ -1072,12 +1072,44 @@
     "types": "角色扮演.机器人"
   },
   {
+    "code": "B107",
+    "name": "不可思议的幻想乡FORESIGHT",
+    "mmss": "521022",
+    "describe": "Touhou Genso Wanderer -FORESIGHT-",
+    "rLzz": "4.5GB",
+    "types": "角色扮演.冒险"
+  },
+  {
+    "code": "B108",
+    "name": "波斯王子 Rogue",
+    "mmss": "226300",
+    "describe": "The Rogue Prince of Persia",
+    "rLzz": "1.1GB",
+    "types": "轻度Rogue.动作类Rogue.横板.卡通"
+  },
+  {
+    "code": "B109",
+    "name": "贝果爱情故事",
+    "mmss": "251330",
+    "describe": "Bagel Love Story",
+    "rLzz": "1.2GB",
+    "types": "视觉小说.恋爱模拟"
+  },
+  {
     "code": "B11",
     "name": "不要喂食猴子/偷窥模拟器",
     "mmss": "101112",
     "describe": "Do Not Feed the Monkeys",
     "rLzz": "1GB",
     "types": "像素.模拟经营"
+  },
+  {
+    "code": "B110",
+    "name": "百视达公司",
+    "mmss": "215477",
+    "describe": "Blockbuster Inc.",
+    "rLzz": "9GB",
+    "types": "模拟.沙盒.基地建设.建造"
   },
   {
     "code": "B11A",
@@ -1124,7 +1156,7 @@
     "name": "博德之门3",
     "mmss": "254887旧密码874458.254888.256447.266444",
     "describe": "Baldur's Gate 3",
-    "rLzz": "124GB",
+    "rLzz": "142GB",
     "types": "角色扮演.选择取向.剧情丰富.冒险"
   },
   {
@@ -1308,7 +1340,7 @@
     "name": "暴力赛车",
     "mmss": "521447",
     "describe": "TRAIL OUT",
-    "rLzz": "19GB",
+    "rLzz": "29GB",
     "types": "赛车竞技.竞速.车辆作战"
   },
   {
@@ -1356,7 +1388,7 @@
     "name": "碧蓝幻想Versus 崛起",
     "mmss": "456855",
     "describe": "碧蓝幻想对战 崛起、Granblue Fantasy Versus: Rising",
-    "rLzz": "17GB",
+    "rLzz": "18GB",
     "types": "格斗游戏.同屏多人"
   },
   {
@@ -2352,6 +2384,14 @@
     "types": "像素.策略.休闲.卡牌"
   },
   {
+    "code": "C1020",
+    "name": "重装岚影",
+    "mmss": "325100",
+    "describe": "Heavy Storm Shadow",
+    "rLzz": "5GB",
+    "types": "机甲"
+  },
+  {
     "code": "C102A",
     "name": "传奇生物2",
     "mmss": "215444",
@@ -2526,6 +2566,14 @@
     "describe": "fault - milestone two side:above",
     "rLzz": "1.6GB",
     "types": "文字游戏.解谜"
+  },
+  {
+    "code": "C120",
+    "name": "吃豆人 无尽地道争豆 暴食没有极限",
+    "mmss": "256320",
+    "describe": "PAC-MAN Mega Tunnel Battle: Chomp Champs",
+    "rLzz": "2.4GB",
+    "types": "休闲.街机"
   },
   {
     "code": "C13",
@@ -2945,11 +2993,11 @@
   },
   {
     "code": "C47",
-    "name": "超级鸡马/单机.同屏多人",
+    "name": "超级鸡马",
     "mmss": "625887",
     "describe": "Ultimate Chicken Horse",
-    "rLzz": "1.7GB",
-    "types": "卡通"
+    "rLzz": "2.1GB",
+    "types": "卡通.同屏多人"
   },
   {
     "code": "C48",
@@ -3061,6 +3109,30 @@
     "mmss": "564822",
     "describe": "SANA EDITION",
     "rLzz": "8GB",
+    "types": "恋爱养成"
+  },
+  {
+    "code": "C5012",
+    "name": "苍色之光与魔剑锻造师",
+    "mmss": "215300",
+    "describe": "苍色之光与魔剑锻造师",
+    "rLzz": "2GB",
+    "types": "恋爱养成.角色扮演"
+  },
+  {
+    "code": "C5013",
+    "name": "此后 勇者不知所踪",
+    "mmss": "215874",
+    "describe": "此后 勇者不知所踪",
+    "rLzz": "4.1GB",
+    "types": "恋爱养成.角色扮演"
+  },
+  {
+    "code": "C5014",
+    "name": "嵯峨之島",
+    "mmss": "215200",
+    "describe": "鏖呪ノ嶼",
+    "rLzz": "3.3GB",
     "types": "恋爱养成"
   },
   {
@@ -3345,10 +3417,10 @@
   },
   {
     "code": "C85",
-    "name": "城市巴士管理者/城市公交模拟器管理",
+    "name": "城市巴士管理者",
     "mmss": "521447",
-    "describe": "City Bus Manager",
-    "rLzz": "44GB",
+    "describe": "城市公交模拟器管理、城市公交经理、City Bus Manager",
+    "rLzz": "47GB",
     "types": "模拟经营.模拟.经济.管理.汽车模拟.休闲"
   },
   {
@@ -3377,10 +3449,10 @@
   },
   {
     "code": "C89",
-    "name": "CarX漂移赛车",
+    "name": "CarX漂移赛车在线",
     "mmss": "326558",
     "describe": "CarX Drift Racing Online",
-    "rLzz": "7GB",
+    "rLzz": "8GB",
     "types": "赛车竞技.驾驶.模拟.汽车模拟.同屏多人"
   },
   {
@@ -3856,6 +3928,14 @@
     "types": "开放世界.建造.生存.沙盒"
   },
   {
+    "code": "D1019",
+    "name": "道衍诀",
+    "mmss": "525111",
+    "describe": "道衍诀",
+    "rLzz": "12GB",
+    "types": "角色扮演.沙盒.刷宝"
+  },
+  {
     "code": "D102",
     "name": "堆叠 逐箱/积累逐箱/单机.同屏多人",
     "mmss": "651887",
@@ -4012,7 +4092,7 @@
     "name": "地狱之刃：塞娜的献祭",
     "mmss": "965874",
     "describe": "Hellblade：Senua's Sacrifice",
-    "rLzz": "20GB",
+    "rLzz": "19GB",
     "types": "动作.冒险"
   },
   {
@@ -4232,12 +4312,68 @@
     "types": "塔防.策略.生存.英文版"
   },
   {
+    "code": "D145",
+    "name": "动物之井",
+    "mmss": "251021",
+    "describe": "ANIMAL WELL",
+    "rLzz": "60MB",
+    "types": "探索.类银河战士恶魔城.解谜.像素"
+  },
+  {
+    "code": "D146",
+    "name": "喋血复仇",
+    "mmss": "251200",
+    "describe": "Back 4 Blood",
+    "rLzz": "51GB",
+    "types": "僵尸.第一人称射击"
+  },
+  {
+    "code": "D147",
+    "name": "对马岛之魂 导演剪辑版",
+    "mmss": "521522",
+    "describe": "Ghost of Tsushima DIRECTOR'S CUT",
+    "rLzz": "66GB",
+    "types": "动作.冒险.开放世界.类魂系列.动作角色扮演"
+  },
+  {
+    "code": "D148",
+    "name": "地狱之刃2 塞娜的献祭",
+    "mmss": "523522",
+    "describe": "Senua's Saga: Hellblade II",
+    "rLzz": "50GB",
+    "types": "剧情丰富.电影式.女性主角"
+  },
+  {
+    "code": "D149",
+    "name": "电竞教父",
+    "mmss": "652255",
+    "describe": "Esports Godfather",
+    "rLzz": "3.3GB",
+    "types": "策略.卡牌.管理"
+  },
+  {
     "code": "D15",
     "name": "地下城与勇士：决斗",
     "mmss": "587458",
     "describe": "DNF Duel",
     "rLzz": "8GB",
     "types": "格斗游戏"
+  },
+  {
+    "code": "D150",
+    "name": "地下城争夺战",
+    "mmss": "215200",
+    "describe": "超越世界战争、地下城守护者3地上战争、War for the Overworld",
+    "rLzz": "5GB",
+    "types": "策略.即时战略.基地建设"
+  },
+  {
+    "code": "D151",
+    "name": "点老救世记",
+    "mmss": "302100",
+    "describe": "dotAGE",
+    "rLzz": "400MB",
+    "types": "资源管理.像素.回合.棋盘游戏"
   },
   {
     "code": "D16",
@@ -4332,7 +4468,7 @@
     "name": "地下蚁国",
     "mmss": "221445",
     "describe": "Empires of the Undergrowth",
-    "rLzz": "5GB",
+    "rLzz": "6GB",
     "types": "策略.殖民模拟.基地建设"
   },
   {
@@ -5272,6 +5408,14 @@
     "types": "类魂系列.砍杀.开放世界"
   },
   {
+    "code": "E23",
+    "name": "厄瑞班 暗影之族",
+    "mmss": "652111",
+    "describe": "Ereban: Shadow Legacy",
+    "rLzz": "6GB",
+    "types": "潜行.女性主角.暗杀"
+  },
+  {
     "code": "E5001",
     "name": "恶魔合约孵化器/Incubus",
     "mmss": "254887",
@@ -5715,8 +5859,8 @@
     "code": "F29A",
     "name": "风火轮释放2",
     "mmss": "215888",
-    "describe": "风火轮爆发2、HOT WHEELS UNLEASHED 2",
-    "rLzz": "15GB",
+    "describe": "风火轮爆发2 涡轮增压、HOT WHEELS UNLEASHED 2 Turbocharged",
+    "rLzz": "22GB",
     "types": "赛车竞技.同屏多人"
   },
   {
@@ -5958,6 +6102,14 @@
     "describe": "FlipWitch - Forbidden Sex Hex",
     "rLzz": "3.5GB",
     "types": "恋爱养成"
+  },
+  {
+    "code": "F5010",
+    "name": "风流浪子",
+    "mmss": "102155",
+    "describe": "好色之徒、Womanizer",
+    "rLzz": "2GB",
+    "types": "视觉小说.恋爱养成.PC/安卓"
   },
   {
     "code": "F51",
@@ -6296,6 +6448,30 @@
     "types": "模拟经营.城市营造.资源管理.殖民模拟.建造"
   },
   {
+    "code": "F91",
+    "name": "辐射4次世代版",
+    "mmss": "536222",
+    "describe": "Fallout 4: Game of the Year Edition",
+    "rLzz": "95GB",
+    "types": "开放世界.后末日.探索"
+  },
+  {
+    "code": "F92",
+    "name": "非生物因素",
+    "mmss": "651874",
+    "describe": "Abiotic Factor",
+    "rLzz": "4GB",
+    "types": "开放世界.生存"
+  },
+  {
+    "code": "F93",
+    "name": "繁星旅途",
+    "mmss": "652588",
+    "describe": "Stardeus",
+    "rLzz": "1GB",
+    "types": "殖民模拟.基地建设.模拟经营"
+  },
+  {
     "code": "G.DMDY001",
     "name": "宫崎骏动漫合集",
     "mmss": "235487",
@@ -6562,7 +6738,7 @@
   {
     "code": "G09",
     "name": "光环战争2",
-    "mmss": "无需",
+    "mmss": "000000无需",
     "describe": "Halo Wars 2",
     "rLzz": "48GB",
     "types": "即时战略"
@@ -6817,10 +6993,10 @@
   },
   {
     "code": "G26",
-    "name": "国土防线2：革命/1",
+    "name": "国土防线2：革命",
     "mmss": "963225",
     "describe": "Homefront: The Revolution",
-    "rLzz": "68GB",
+    "rLzz": "98GB",
     "types": "射击游戏"
   },
   {
@@ -7496,6 +7672,14 @@
     "types": "农场模拟.休闲"
   },
   {
+    "code": "G92",
+    "name": "国土防线",
+    "mmss": "652555",
+    "describe": "Homefront",
+    "rLzz": "7GB",
+    "types": "第一人称射击"
+  },
+  {
     "code": "H.DMLZ001",
     "name": "黑社会的超能力女儿",
     "mmss": "326665",
@@ -7946,7 +8130,7 @@
   {
     "code": "H11",
     "name": "红色警戒合集/红警合集",
-    "mmss": "无需",
+    "mmss": "000000",
     "describe": "XXXX",
     "rLzz": "19GB",
     "types": "即时战略"
@@ -8416,6 +8600,14 @@
     "types": "动作角色扮演.迷宫.局域网联机"
   },
   {
+    "code": "H160",
+    "name": "湖",
+    "mmss": "542588",
+    "describe": "Lake",
+    "rLzz": "1.7GB",
+    "types": "剧情丰富.女性主角"
+  },
+  {
     "code": "H16A",
     "name": "火炬之光3",
     "mmss": "574855",
@@ -8763,8 +8955,8 @@
     "code": "H47",
     "name": "化妆镜 黄金之梦",
     "mmss": "152558",
-    "describe": "化妆镜 黄金之梦",
-    "rLzz": "5GB",
+    "describe": "Pocket Mirror ~ GoldenerTraum",
+    "rLzz": "2.3GB",
     "types": "恐怖.解谜.像素"
   },
   {
@@ -8877,6 +9069,14 @@
     "mmss": "523000",
     "describe": "Harem Hotel",
     "rLzz": "6GB",
+    "types": "恋爱养成.PC/安卓"
+  },
+  {
+    "code": "H5011",
+    "name": "还道 累之夜",
+    "mmss": "215488",
+    "describe": "還道-累ノ夜",
+    "rLzz": "1GB",
     "types": "恋爱养成.PC/安卓"
   },
   {
@@ -9570,7 +9770,7 @@
   {
     "code": "J09A",
     "name": "极限竞速：地平线3",
-    "mmss": "无需",
+    "mmss": "000000无需",
     "describe": "Forza Horizon 3",
     "rLzz": "60GB",
     "types": "赛车竞技.Win10独占"
@@ -9580,7 +9780,7 @@
     "name": "极限竞速：地平线5",
     "mmss": "357777旧密码215444.265985.215445",
     "describe": "Forza Horizon 5",
-    "rLzz": "160GB",
+    "rLzz": "173GB",
     "types": "赛车竞技.Win10独占"
   },
   {
@@ -9627,7 +9827,7 @@
     "code": "J1003",
     "name": "极乐迪斯科/迪斯科天堂",
     "mmss": "589669",
-    "describe": "Disco Elysium",
+    "describe": "Disco Elysium - The Final Cut",
     "rLzz": "10GB",
     "types": "角色扮演"
   },
@@ -9742,6 +9942,14 @@
     "describe": "Jiang Hu Lu: Yuan Qi",
     "rLzz": "7GB",
     "types": "角色扮演.武术"
+  },
+  {
+    "code": "J1016",
+    "name": "九日",
+    "mmss": "215220",
+    "describe": "Nine Sols",
+    "rLzz": "12GB",
+    "types": "动作.类魂系列.类银河战士恶魔城"
   },
   {
     "code": "J102",
@@ -9984,12 +10192,52 @@
     "types": "休闲.生活模拟"
   },
   {
+    "code": "J128",
+    "name": "巨型水族馆",
+    "mmss": "562330",
+    "describe": "Megaquarium",
+    "rLzz": "750MB",
+    "types": "模拟经营"
+  },
+  {
+    "code": "J129",
+    "name": "九魂的久远",
+    "mmss": "525144",
+    "describe": "Umbraclaw",
+    "rLzz": "1.8GB",
+    "types": "动作.冒险.像素"
+  },
+  {
     "code": "J13",
     "name": "究极大越野传奇",
     "mmss": "521548",
     "describe": "MX vs ATV Legends",
     "rLzz": "40GB",
     "types": "竞速.街机.体育"
+  },
+  {
+    "code": "J130",
+    "name": "寂静之歌",
+    "mmss": "320111",
+    "describe": "Songs of Silence",
+    "rLzz": "5GB",
+    "types": "4X.战略.策略.战棋"
+  },
+  {
+    "code": "J131",
+    "name": "饥饿派画家2 迷失",
+    "mmss": "215222",
+    "describe": "Passpartout 2: The Lost Artist",
+    "rLzz": "6GB",
+    "types": "模拟.休闲.设计与插画"
+  },
+  {
+    "code": "J132",
+    "name": "家族传奇 马匹养成竞技",
+    "mmss": "589666",
+    "describe": "Rival Stars Horse Racing: Desktop Edition",
+    "rLzz": "3.6GB",
+    "types": "马匹.竞速.沉浸式模拟.管理"
   },
   {
     "code": "J14",
@@ -10228,7 +10476,7 @@
     "name": "机甲战士5：雇佣兵",
     "mmss": "365447",
     "describe": "MechWarrior 5：Mercenaries",
-    "rLzz": "47GB",
+    "rLzz": "60GB",
     "types": "机甲.射击游戏"
   },
   {
@@ -10473,11 +10721,11 @@
   },
   {
     "code": "J54",
-    "name": "极速奔跑者/单机.同屏多人",
+    "name": "极速奔跑者",
     "mmss": "846952",
     "describe": "SpeedRunners",
     "rLzz": "700MB",
-    "types": "动作"
+    "types": "竞速.同屏多人"
   },
   {
     "code": "J55",
@@ -10633,9 +10881,9 @@
   },
   {
     "code": "J74",
-    "name": "精灵奥日与黑暗森林：终极版/精灵奥日与迷失森林终极版",
+    "name": "精灵奥日与黑暗森林",
     "mmss": "965874",
-    "describe": "Ori and the Blind Forest",
+    "describe": "精灵奥日与迷失森林、精灵奥日和黑暗森林、Ori and the Blind Forest: Definitive Edition",
     "rLzz": "10GB",
     "types": "类银河战士恶魔城"
   },
@@ -10873,11 +11121,11 @@
   },
   {
     "code": "K02",
-    "name": "看门狗2/1",
+    "name": "看门狗2",
     "mmss": "215555旧密码327887.521874",
     "describe": "Watch Dogs 2",
     "rLzz": "45.4GB",
-    "types": "开放世界.射击游戏"
+    "types": "开放世界.黑客.动作.第三人称射击"
   },
   {
     "code": "K02A",
@@ -10885,7 +11133,15 @@
     "mmss": "231554",
     "describe": "Watch Dogs: Legion",
     "rLzz": "106GB",
-    "types": "开放世界.射击游戏"
+    "types": "开放世界.黑客.动作.第三人称射击"
+  },
+  {
+    "code": "K02B",
+    "name": "看门狗",
+    "mmss": "352144",
+    "describe": "Watch Dogs",
+    "rLzz": "17GB",
+    "types": "开放世界.黑客.动作.第三人称射击"
   },
   {
     "code": "K03",
@@ -11017,10 +11273,10 @@
   },
   {
     "code": "K14",
-    "name": "控制/掌控/Control",
+    "name": "控制",
     "mmss": "254111旧密码365223",
-    "describe": "Control",
-    "rLzz": "42GB",
+    "describe": "掌控、Control Ultimate Edition",
+    "rLzz": "43GB",
     "types": "动作.女性主角.开放世界.射击游戏"
   },
   {
@@ -11536,6 +11792,14 @@
     "types": "模拟.烹饪.生活模拟"
   },
   {
+    "code": "K70",
+    "name": "狂发疯杰克",
+    "mmss": "521320",
+    "describe": "MULLET MADJACK",
+    "rLzz": "4GB",
+    "types": "街机.第一人称射击.快节奏"
+  },
+  {
     "code": "L.DMLZ001",
     "name": "龙珠超",
     "mmss": "659998",
@@ -11854,6 +12118,22 @@
     "describe": "To Be In Love With Girls Group",
     "rLzz": "24GB",
     "types": "恋爱模拟.真人互动"
+  },
+  {
+    "code": "L102",
+    "name": "洛蕾莱与激光眼",
+    "mmss": "526899",
+    "describe": "Lorelei and the Laser Eyes",
+    "rLzz": "1.4GB",
+    "types": "冒险.动作.解谜"
+  },
+  {
+    "code": "L103",
+    "name": "灵魂面甲",
+    "mmss": "215011",
+    "describe": "Soulmask",
+    "rLzz": "10GB",
+    "types": "生存.开放世界.沙盒.基地建设.制作"
   },
   {
     "code": "L10A",
@@ -12440,6 +12720,14 @@
     "types": "恋爱养成.角色扮演"
   },
   {
+    "code": "L5020",
+    "name": "龙与大剑",
+    "mmss": "256955",
+    "describe": "竜と大剣",
+    "rLzz": "6GB",
+    "types": "恋爱养成.角色扮演"
+  },
+  {
     "code": "L51B",
     "name": "炼金术士模拟器/我炼金超牛",
     "mmss": "879554",
@@ -12550,6 +12838,14 @@
     "describe": "Stray Gods: The Roleplaying Musical",
     "rLzz": "6GB",
     "types": "互动小说.剧情丰富.选择取向"
+  },
+  {
+    "code": "L62",
+    "name": "蓝精灵 群落派对",
+    "mmss": "698556",
+    "describe": "The Smurfs - Village Party",
+    "rLzz": "2.6GB",
+    "types": "冒险.卡通.休闲.同屏多人"
   },
   {
     "code": "L63",
@@ -13004,13 +13300,13 @@
     "name": "模拟人生4",
     "mmss": "569999旧密码526669.577887,258636",
     "describe": "The Sims 4",
-    "rLzz": "57GB",
+    "rLzz": "62GB",
     "types": "模拟经营.沙盒"
   },
   {
     "code": "M04A",
     "name": "模拟人生4绅士版",
-    "mmss": "无需",
+    "mmss": "000000无需",
     "describe": "The Sims 4",
     "rLzz": "68GB",
     "types": "模拟经营.沙盒"
@@ -13140,7 +13436,7 @@
     "name": "满庭芳 宋上繁华",
     "mmss": "256666",
     "describe": "Thriving City Song",
-    "rLzz": "900MB",
+    "rLzz": "2.4GB",
     "types": "模拟.策略.历史"
   },
   {
@@ -13156,7 +13452,7 @@
     "name": "漫野奇谭/荒野传说",
     "mmss": "564887",
     "describe": "Wildermyth",
-    "rLzz": "2.2GB",
+    "rLzz": "3GB",
     "types": "选择取向.角色扮演.剧情丰富"
   },
   {
@@ -14012,7 +14308,7 @@
     "name": "迷你高速公路",
     "mmss": "521447",
     "describe": "Mini Motorways",
-    "rLzz": "190MB",
+    "rLzz": "220MB",
     "types": "休闲.模拟.策略.管理"
   },
   {
@@ -14076,7 +14372,7 @@
     "name": "魅魔/恶魔女维迪亚",
     "mmss": "254445",
     "describe": "Succubus",
-    "rLzz": "101GB",
+    "rLzz": "112GB",
     "types": "恋爱养成"
   },
   {
@@ -14116,7 +14412,7 @@
     "name": "妹妹同居生活黑白色2：异世界幻想/妹同居黑白2异世界幻想",
     "mmss": "548887",
     "describe": "妹!せいかつ ～モノクローム～ 2",
-    "rLzz": "600MB",
+    "rLzz": "800MB",
     "types": "恋爱养成"
   },
   {
@@ -14209,11 +14505,11 @@
   },
   {
     "code": "M5012",
-    "name": "魔法学院 合集",
+    "name": "魔法少女泪甜",
     "mmss": "256332",
-    "describe": "魔法学院第二季、魔法学院第一季、Lust Academy - Season 2",
-    "rLzz": "6.5GB",
-    "types": "恋爱养成.合集"
+    "describe": "魔法少女ティアスイート",
+    "rLzz": "1GB",
+    "types": "恋爱养成"
   },
   {
     "code": "M5013",
@@ -14380,7 +14676,7 @@
     "name": "民主制度4",
     "mmss": "320221",
     "describe": "Democracy 4",
-    "rLzz": "800MB",
+    "rLzz": "900MB",
     "types": "策略.模拟.管理.政治"
   },
   {
@@ -15008,6 +15304,14 @@
     "types": "角色扮演"
   },
   {
+    "code": "N1010",
+    "name": "女鬼桥二 释魂路",
+    "mmss": "521022",
+    "describe": "女鬼桥2释魂路、The Bridge curse 2:The Extrication",
+    "rLzz": "5.3GB",
+    "types": "悬疑.恐怖"
+  },
+  {
     "code": "N11",
     "name": "匿名代码",
     "mmss": "141221",
@@ -15230,6 +15534,14 @@
     "describe": "Street of Rage 4，格斗五人组，格斗三人组4，格斗四人组4",
     "rLzz": "6.2GB",
     "types": "街机.合作.同屏多人"
+  },
+  {
+    "code": "N34",
+    "name": "南之町",
+    "mmss": "658745",
+    "describe": "Minami Lane",
+    "rLzz": "240MB",
+    "types": "休闲.可爱.模拟经营"
   },
   {
     "code": "N35",
@@ -16012,7 +16324,7 @@
     "name": "彷徨之街",
     "mmss": "326554",
     "describe": "The Street of Adrift",
-    "rLzz": "2.7GB",
+    "rLzz": "7GB",
     "types": "恋爱养成.视觉小说"
   },
   {
@@ -16212,7 +16524,7 @@
     "name": "骑马与砍杀2霸主/骑马与砍杀2领主/骑砍2霸主",
     "mmss": "288855旧密码236555.547896.254123",
     "describe": "Mount and Blade II: Bannerlord",
-    "rLzz": "47GB",
+    "rLzz": "50GB",
     "types": "开放世界.中世纪"
   },
   {
@@ -16492,7 +16804,7 @@
     "name": "求生岛 不老泉传说",
     "mmss": "158774",
     "describe": "Survival Fountain of Youth",
-    "rLzz": "27GB",
+    "rLzz": "23GB",
     "types": "生存.探索.制作.开放世界"
   },
   {
@@ -16561,10 +16873,10 @@
   },
   {
     "code": "Q43",
-    "name": "秋之回忆8：无垢少女/告别回忆：无垢少女",
+    "name": "秋之回忆8：无垢少女/告别回忆无垢少女 致最爱的你",
     "mmss": "874995",
     "describe": "Memories Off Innocent Fille  メモリーズオフ-Innocent Fille-",
-    "rLzz": "8GB",
+    "rLzz": "6GB",
     "types": "恋爱养成.文字游戏"
   },
   {
@@ -17008,6 +17320,38 @@
     "types": "恐怖"
   },
   {
+    "code": "Q87",
+    "name": "全网公敌2 新世界",
+    "mmss": "526215",
+    "describe": "Cyber Manhunt 2 New World",
+    "rLzz": "2GB",
+    "types": "选择取向.剧情丰富.解谜"
+  },
+  {
+    "code": "Q88",
+    "name": "奇星协力",
+    "mmss": "652545",
+    "describe": "Synergy - Ecological City Builder",
+    "rLzz": "4GB",
+    "types": "模拟经营.贸易.城市营造.经济"
+  },
+  {
+    "code": "Q89",
+    "name": "奇异恩典",
+    "mmss": "652144",
+    "describe": "What color is your attribute?",
+    "rLzz": "3.4GB",
+    "types": "可爱.恋爱模拟.视觉小说"
+  },
+  {
+    "code": "Q90",
+    "name": "枪 匠 模拟器",
+    "mmss": "215000",
+    "describe": "Gunsmith Simulator",
+    "rLzz": "16GB",
+    "types": "模拟.拟真.军事"
+  },
+  {
     "code": "R.DMLZ001",
     "name": "Re从零开始的异世界生活 合集",
     "mmss": "258887",
@@ -17369,11 +17713,11 @@
   },
   {
     "code": "R32",
-    "name": "Roboquest/机器人任务/机械守护者",
+    "name": "Roboquest",
     "mmss": "321887",
-    "describe": "Roboquest",
-    "rLzz": "5GB",
-    "types": "射击游戏"
+    "describe": "机械守护者、机器人任务、Roboquest",
+    "rLzz": "6GB",
+    "types": "第一人称射击.动作类Rogue"
   },
   {
     "code": "R33",
@@ -18228,7 +18572,7 @@
     "name": "死亡教堂",
     "mmss": "236666",
     "describe": "Corpse Keeper",
-    "rLzz": "6GB",
+    "rLzz": "7.3GB",
     "types": "动作"
   },
   {
@@ -18499,8 +18843,8 @@
     "code": "S120",
     "name": "深海远航",
     "mmss": "611547",
-    "describe": "From the Depths",
-    "rLzz": "3.5GB",
+    "describe": "深海坠毁、From the Depths",
+    "rLzz": "3.7GB",
     "types": "沙盒.即时战略.策略"
   },
   {
@@ -18860,7 +19204,7 @@
     "name": "死亡之夜",
     "mmss": "254444旧密码658997",
     "describe": "Night of the Dead",
-    "rLzz": "50GB",
+    "rLzz": "31GB",
     "types": "生存.僵尸.开放世界.女性主角.局域网联机"
   },
   {
@@ -19656,6 +20000,30 @@
     "types": "角色扮演.英文版"
   },
   {
+    "code": "S241",
+    "name": "时空幻境周年纪念版",
+    "mmss": "253022",
+    "describe": "Braid, Anniversary Edition",
+    "rLzz": "3GB",
+    "types": "解谜"
+  },
+  {
+    "code": "S242",
+    "name": "生化危机 启示录",
+    "mmss": "326002",
+    "describe": "Resident Evil Revelations",
+    "rLzz": "8GB",
+    "types": "恐怖.僵尸"
+  },
+  {
+    "code": "S243",
+    "name": "神奇英侠",
+    "mmss": "251200",
+    "describe": "Capes",
+    "rLzz": "3GB",
+    "types": "回合战略"
+  },
+  {
     "code": "S25",
     "name": "死亡循环",
     "mmss": "258749",
@@ -19772,7 +20140,7 @@
     "name": "沙丘：香料战争/沙丘香料大战",
     "mmss": "236665旧密码633369",
     "describe": "Dune: Spice Wars",
-    "rLzz": "5GB",
+    "rLzz": "6GB",
     "types": "即时战略.经济.建造.策略"
   },
   {
@@ -20356,7 +20724,7 @@
     "name": "森林之子",
     "mmss": "632311",
     "describe": "Sons Of The Forest",
-    "rLzz": "17GB",
+    "rLzz": "15GB",
     "types": "生存.恐怖"
   },
   {
@@ -20596,7 +20964,7 @@
     "name": "铁拳8",
     "mmss": "326552",
     "describe": "TEKKEN 8",
-    "rLzz": "88GB",
+    "rLzz": "95GB",
     "types": "格斗.同屏多人"
   },
   {
@@ -20636,7 +21004,7 @@
     "name": "泰坦陨落2/泰坦2",
     "mmss": "647889",
     "describe": "Titanfall 2",
-    "rLzz": "64.2GB",
+    "rLzz": "65GB",
     "types": "射击游戏"
   },
   {
@@ -20880,6 +21248,30 @@
     "types": "开放世界.科幻.太空"
   },
   {
+    "code": "T105",
+    "name": "兔子与钢铁",
+    "mmss": "256300",
+    "describe": "Rabbit and Steel",
+    "rLzz": "2GB",
+    "types": "弹幕射击.卡通"
+  },
+  {
+    "code": "T106",
+    "name": "太空医院",
+    "mmss": "258456",
+    "describe": "Galacticare",
+    "rLzz": "25.1GB",
+    "types": "模拟经营.太空.卡通"
+  },
+  {
+    "code": "T107",
+    "name": "淘金热",
+    "mmss": "152111",
+    "describe": "Gold Mining Simulator",
+    "rLzz": "19.2GB",
+    "types": "采矿.模拟.开放世界"
+  },
+  {
     "code": "T11",
     "name": "天穗之咲稻姬/天穗的长命草姬",
     "mmss": "363323",
@@ -21028,7 +21420,7 @@
     "name": "泰拉科技",
     "mmss": "548777旧密码859996",
     "describe": "TerraTech",
-    "rLzz": "1.1GB",
+    "rLzz": "700MB",
     "types": "沙盒.开放世界.建造"
   },
   {
@@ -21350,6 +21742,14 @@
     "describe": "Black Smith 4",
     "rLzz": "2GB",
     "types": "恋爱养成"
+  },
+  {
+    "code": "T5017",
+    "name": "铁道少女 梦想轨迹",
+    "mmss": "521522",
+    "describe": "Railway To Dream",
+    "rLzz": "1.2GB",
+    "types": "恋爱养成.文字游戏.LGBTQ+"
   },
   {
     "code": "T51",
@@ -22216,6 +22616,46 @@
     "types": "大战略.经济.策略.历史.模拟"
   },
   {
+    "code": "W120",
+    "name": "巫火/女巫之火/Witchfire",
+    "mmss": "210333",
+    "describe": "Witchfire",
+    "rLzz": "27GB",
+    "types": "动作"
+  },
+  {
+    "code": "W121",
+    "name": "雾隐战记",
+    "mmss": "254885",
+    "describe": "C.A.R.D.S. RPG: The Misty Battlefield",
+    "rLzz": "3.3GB",
+    "types": "卡牌构建.角色扮演"
+  },
+  {
+    "code": "W122",
+    "name": "王冠之战 黑王子",
+    "mmss": "251477",
+    "describe": "Crown Wars: The Black Prince",
+    "rLzz": "18GB",
+    "types": "角色扮演.中世纪"
+  },
+  {
+    "code": "W123",
+    "name": "五等分的新娘 与你一起度过的五个回忆",
+    "mmss": "258655",
+    "describe": "The Quintessential Quintuplets - Five Memories Spent With You",
+    "rLzz": "6GB",
+    "types": "视觉小说"
+  },
+  {
+    "code": "W124",
+    "name": "温迪尔 谎言瘟疫",
+    "mmss": "652100",
+    "describe": "Vendir: Plague of Lies",
+    "rLzz": "7.5GB",
+    "types": "角色扮演.黑暗奇幻"
+  },
+  {
     "code": "W13",
     "name": "我的英雄学院：一人的正义2/我的英雄学院唯我正义2",
     "mmss": "457778旧密码212156",
@@ -22332,7 +22772,7 @@
     "name": "王国风云3/十字军之王3",
     "mmss": "254441旧密码356214",
     "describe": "Crusader Kings III",
-    "rLzz": "11GB",
+    "rLzz": "12GB",
     "types": "大战略.策略.中世纪"
   },
   {
@@ -22379,7 +22819,7 @@
     "code": "W23",
     "name": "物质世界",
     "mmss": "326666旧密码121485",
-    "describe": "Outward",
+    "describe": "Outward Definitive Edition",
     "rLzz": "27GB",
     "types": "开放世界.生存.角色扮演.同屏多人"
   },
@@ -22465,10 +22905,10 @@
   },
   {
     "code": "W32A",
-    "name": "亡灵巫师2/亡灵法师2",
+    "name": "亡灵巫师2",
     "mmss": "230336",
     "describe": "Necrosmith 2",
-    "rLzz": "400MB",
+    "rLzz": "1.1GB",
     "types": "像素.弹幕射击.塔防"
   },
   {
@@ -22881,16 +23321,8 @@
   },
   {
     "code": "W62",
-    "name": "外星贸易公司/单机.网络联机",
+    "name": "外星贸易公司",
     "mmss": "365748",
-    "describe": "Offworld Trading Company",
-    "rLzz": "2GB",
-    "types": "模拟经营.太空.沙盒"
-  },
-  {
-    "code": "W62A",
-    "name": "外星贸易公司 单机",
-    "mmss": "658774",
     "describe": "Offworld Trading Company",
     "rLzz": "2.1GB",
     "types": "模拟经营.太空.沙盒"
@@ -23724,7 +24156,7 @@
     "name": "吸血鬼幸存者",
     "mmss": "215444旧密码329635",
     "describe": "Vampire Survivors",
-    "rLzz": "1GB",
+    "rLzz": "1.1GB",
     "types": "像素.弹幕射击.生存"
   },
   {
@@ -23748,7 +24180,7 @@
     "name": "星空",
     "mmss": "248777",
     "describe": "Starfield",
-    "rLzz": "116GB",
+    "rLzz": "128GB",
     "types": "开放世界.太空.角色扮演"
   },
   {
@@ -23942,6 +24374,38 @@
     "describe": "BEAST",
     "rLzz": "51GB",
     "types": "黑暗奇幻.俯视"
+  },
+  {
+    "code": "X145",
+    "name": "小猫咪大城市",
+    "mmss": "251200",
+    "describe": "Little Kitty, Big City",
+    "rLzz": "1.3GB",
+    "types": "猫.可爱.欢乐.探索"
+  },
+  {
+    "code": "X146",
+    "name": "消逝的光芒 仇恨",
+    "mmss": "325022",
+    "describe": "Dying Light: Bad Blood",
+    "rLzz": "21GB",
+    "types": "动作"
+  },
+  {
+    "code": "X147",
+    "name": "星际大战 前线/星球大战 前线",
+    "mmss": "521023",
+    "describe": "Star Wars: Battlefront",
+    "rLzz": "53GB",
+    "types": "动作.第一人称射击"
+  },
+  {
+    "code": "X148",
+    "name": "寻路者",
+    "mmss": "521400",
+    "describe": "Wayfinder",
+    "rLzz": "46GB",
+    "types": "动作角色扮演.迷宫探索"
   },
   {
     "code": "X15",
@@ -24476,7 +24940,7 @@
     "name": "吸血鬼崛起/夜族崛起",
     "mmss": "687448",
     "describe": "V Rising",
-    "rLzz": "12GB",
+    "rLzz": "9GB",
     "types": "生存.开放世界.吸血鬼"
   },
   {
@@ -24562,7 +25026,7 @@
   {
     "code": "X61A",
     "name": "星际争霸1母巢之战/星际争霸母巢之战",
-    "mmss": "无需",
+    "mmss": "000000无需",
     "describe": "Starcraft Brood War",
     "rLzz": "1.37GB",
     "types": "即时战略"
@@ -24683,8 +25147,8 @@
     "code": "X73B",
     "name": "心灵杀手2",
     "mmss": "154778",
-    "describe": "Alan Wake 2、Alan Wake II",
-    "rLzz": "82GB",
+    "describe": "心灵杀手2夜泉镇、Alan Wake 2、Alan Wake II",
+    "rLzz": "101GB",
     "types": "恐怖.射击游戏"
   },
   {
@@ -24986,7 +25450,7 @@
   {
     "code": "Y03",
     "name": "英雄无敌1234567",
-    "mmss": "无需",
+    "mmss": "000000无需",
     "describe": "Might & Magic Heroes VII",
     "rLzz": "15GB",
     "types": "策略.回合"
@@ -25492,7 +25956,7 @@
     "name": "永恒空间2",
     "mmss": "256665",
     "describe": "EVERSPACE 2",
-    "rLzz": "35GB",
+    "rLzz": "32GB",
     "types": "太空.冒险.射击游戏"
   },
   {
@@ -25522,7 +25986,7 @@
   {
     "code": "Y122",
     "name": "烟火",
-    "mmss": "无需",
+    "mmss": "000000无需",
     "describe": "Firework",
     "rLzz": "1GB",
     "types": "恐怖"
@@ -25756,7 +26220,7 @@
     "name": "遗迹2",
     "mmss": "256221",
     "describe": "Remnant II",
-    "rLzz": "71GB",
+    "rLzz": "82GB",
     "types": "类魂系列.后末日.恐怖.射击游戏"
   },
   {
@@ -26222,6 +26686,46 @@
     "describe": "Farm Together 2",
     "rLzz": "600MB",
     "types": "模拟经营.沙盒"
+  },
+  {
+    "code": "Y192",
+    "name": "亚瑟王 第九军团",
+    "mmss": "653220",
+    "describe": "King Arthur: Legion IX",
+    "rLzz": "37GB",
+    "types": "黑暗奇幻.战术角色扮演.角色扮演.中世纪"
+  },
+  {
+    "code": "Y193",
+    "name": "夜莺传说",
+    "mmss": "562520",
+    "describe": "Nightingale",
+    "rLzz": "64GB",
+    "types": "开放世界.生存.建造.探索"
+  },
+  {
+    "code": "Y194",
+    "name": "勇者斗恶龙X 觉醒的五种族 离线版",
+    "mmss": "542002",
+    "describe": "DRAGON QUEST X OFFLINE Deluxe Edition",
+    "rLzz": "56GB",
+    "types": "角色扮演"
+  },
+  {
+    "code": "Y195",
+    "name": "验尸模拟器",
+    "mmss": "215477",
+    "describe": "Autopsy Simulator",
+    "rLzz": "16GB",
+    "types": "模拟.恐怖"
+  },
+  {
+    "code": "Y196",
+    "name": "烟花模拟器",
+    "mmss": "325488",
+    "describe": "Fireworks Mania - An Explosive Simulator",
+    "rLzz": "1.5GB",
+    "types": "沙盒.物理.模拟"
   },
   {
     "code": "Y19A",
@@ -26736,6 +27240,30 @@
     "types": "恋爱养成.开放世界"
   },
   {
+    "code": "Y5027",
+    "name": "欲望学院",
+    "mmss": "652554",
+    "describe": "欲望学院第一季、魔法学院第一季、Lust Academy - Season 1",
+    "rLzz": "3.3GB",
+    "types": "恋爱养成"
+  },
+  {
+    "code": "Y5028",
+    "name": "欲望学院2",
+    "mmss": "652555",
+    "describe": "欲望学院第二季、魔法学院第二季、Lust Academy - Season 2",
+    "rLzz": "5GB",
+    "types": "恋爱养成"
+  },
+  {
+    "code": "Y5029",
+    "name": "欲望学院3",
+    "mmss": "256332",
+    "describe": "欲望学院第三季、魔法学院第三季、Lust Academy - Season 3",
+    "rLzz": "6.5GB",
+    "types": "恋爱养成"
+  },
+  {
     "code": "Y51",
     "name": "夜回三/夜迴三",
     "mmss": "302000",
@@ -27132,7 +27660,7 @@
     "name": "寓言之地",
     "mmss": "132587",
     "describe": "Fabledom",
-    "rLzz": "3GB",
+    "rLzz": "4GB",
     "types": "城市营造.沙盒.模拟经营"
   },
   {
@@ -27598,6 +28126,14 @@
     "describe": "Wargame: Red Dragon",
     "rLzz": "29GB",
     "types": "即时战略.策略"
+  },
+  {
+    "code": "Z1020",
+    "name": "真探2",
+    "mmss": "556999",
+    "describe": "CaseCracker2",
+    "rLzz": "500MB",
+    "types": "悬疑.推理"
   },
   {
     "code": "Z103",
@@ -28169,7 +28705,7 @@
   },
   {
     "code": "Z157",
-    "name": "指环王 重返摩瑞亚",
+    "name": "指环王 重返摩瑞亚/指环王 重返莫瑞亚",
     "mmss": "258444",
     "describe": "The Lord of the Rings: Return to Moria",
     "rLzz": "18GB",
@@ -28408,12 +28944,76 @@
     "types": "模拟经营.城市营造.基地建设.殖民模拟.策略"
   },
   {
+    "code": "Z184",
+    "name": "战国无双4DX",
+    "mmss": "525666",
+    "describe": "SAMURAI WARRIORS 4 DX",
+    "rLzz": "22GB",
+    "types": "动作.砍杀.同屏多人.英文版"
+  },
+  {
+    "code": "Z185",
+    "name": "纸片马力欧RPG 千年之门",
+    "mmss": "253666",
+    "describe": "纸片马里奥 千年之门、Paper Mario The Thousand Year Door",
+    "rLzz": "7.1GB",
+    "types": "YuZu模拟器"
+  },
+  {
+    "code": "Z186",
+    "name": "战锤40K 审判者 殉道者",
+    "mmss": "251205",
+    "describe": "Warhammer 40,000: Inquisitor - Martyr",
+    "rLzz": "81GB",
+    "types": "战锤40K.动作角色扮演"
+  },
+  {
+    "code": "Z187",
+    "name": "最后一站",
+    "mmss": "515477",
+    "describe": "The Final Station",
+    "rLzz": "2.4GB",
+    "types": "像素.后末日.生存.火车"
+  },
+  {
+    "code": "Z188",
+    "name": "纸间谜迹",
+    "mmss": "525444",
+    "describe": "Paper Trail",
+    "rLzz": "1GB",
+    "types": "解谜.探索.温馨惬意.治愈系"
+  },
+  {
+    "code": "Z189",
+    "name": "最后指令",
+    "mmss": "462011",
+    "describe": "Last Command",
+    "rLzz": "700MB",
+    "types": "弹幕射击.像素"
+  },
+  {
     "code": "Z19",
     "name": "足球经理 合集",
     "mmss": "236665旧密码639819",
     "describe": "足球经理2023、足球经理2021、足球经理2020、足球经理2019、足球经理2018、Football Manager 2023.2021.2020.2019",
     "rLzz": "26GB",
     "types": "模拟经营.体育运动.合集"
+  },
+  {
+    "code": "Z190",
+    "name": "植物大战僵尸杂交版",
+    "mmss": "215488",
+    "describe": "Plants vs. Zombies za jiao ban",
+    "rLzz": "210MB",
+    "types": "塔防.僵尸"
+  },
+  {
+    "code": "Z191",
+    "name": "职场浮生记",
+    "mmss": "215411",
+    "describe": "Office Life",
+    "rLzz": "2.3GB",
+    "types": "模拟.生活模拟.卡牌.恋爱模拟"
   },
   {
     "code": "Z20",
@@ -28436,7 +29036,7 @@
     "name": "征服之歌",
     "mmss": "254888旧密码526385",
     "describe": "Songs of Conquest",
-    "rLzz": "3GB",
+    "rLzz": "2.2GB",
     "types": "策略.像素.回合"
   },
   {
@@ -28506,7 +29106,7 @@
   {
     "code": "Z28",
     "name": "战争机器4",
-    "mmss": "无需548759",
+    "mmss": "548759无需",
     "describe": "Gears of War 4",
     "rLzz": "108GB",
     "types": "射击游戏"
@@ -28705,10 +29305,10 @@
   },
   {
     "code": "Z46C",
-    "name": "战锤40K：作战区域/战锤40K战斗区域/战锤40K战场/战锤40K战区蛮人",
+    "name": "战锤40000 战区",
     "mmss": "254666",
-    "describe": "Warhammer 40,000: Battlesector",
-    "rLzz": "10GB",
+    "describe": "战锤40K作战区域、战锤40K战斗区域、Warhammer 40,000: Battlesector",
+    "rLzz": "12GB",
     "types": "策略.战锤40K.回合战略"
   },
   {
@@ -28740,7 +29340,7 @@
     "name": "族人",
     "mmss": "456014",
     "describe": "Clanfolk",
-    "rLzz": "600MB",
+    "rLzz": "700MB",
     "types": "策略.殖民模拟.城市营造.建造.模拟经营"
   },
   {
@@ -28932,7 +29532,7 @@
     "name": "罪恶装备奋斗/罪恶装备斗争/罪恶装备奋战",
     "mmss": "521444旧密码698889",
     "describe": "GUILTY GEAR STRIVE",
-    "rLzz": "24GB",
+    "rLzz": "30GB",
     "types": "格斗游戏.同屏多人"
   },
   {
@@ -28980,7 +29580,7 @@
     "name": "战争号令 地狱之门 东线/战争召唤地狱之门东线",
     "mmss": "231555",
     "describe": "Call to Arms - Gates of Hell: Ostfront",
-    "rLzz": "52GB",
+    "rLzz": "74GB",
     "types": "策略.即时战略.射击游戏"
   },
   {
@@ -29276,7 +29876,7 @@
     "name": "揍击派对/乱揍派对",
     "mmss": "587963",
     "describe": "Pummel Party",
-    "rLzz": "2GB",
+    "rLzz": "2.2GB",
     "types": "合作.同屏多人"
   },
   {
