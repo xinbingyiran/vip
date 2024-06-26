@@ -113,6 +113,8 @@
 - [Office 官网](https://www.microsoft.com/zh-cn/microsoft-365)
 [Office 在线](https://www.office.com/)
 [Office Tool Plus](https://otp.landian.vip/zh-cn/)
+[vmware](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/)
+[winrar](https://github.com/n2far2000/winrarsc)
 [HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator/releases)
 [`蓝奏`](https://www.lanzoux.com/b05gumbe#9xum)
 [`百度`](https://pan.baidu.com/s/14U3zIG4tG6ZdMBrHaPaLzw?pwd=c65c)
