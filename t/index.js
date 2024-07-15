@@ -125,7 +125,7 @@
         }
         if (score > 0) {
             allScore += scores[score];
-            level = ~~(allScore / 100);
+            level = ~~(allScore / 10000);
             for (let i = score - 1; i >= 0; i--) {
                 board[i] = [...emptyRow];
             }
