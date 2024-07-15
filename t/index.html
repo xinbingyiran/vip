@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>俄罗斯方块</title>
 </head>
+
 <body>
-    <canvas id="gameCanvas"></canvas>
+    <div style="display:  flex;  color: green;">
+        <canvas id="gameCanvas"></canvas>
+        <div style="margin-left: 20px;">
+            <canvas id="nextShapeCanvas"></canvas>
+            <div style="display:  flex;">
+                分数： <span id="score">0</span>
+            </div>
+            <div style="display:  flex;">
+                等级： <span id="level">0</span>
+            </div>
+            <div style="display:  flex;">
+                倒转： <input type="checkbox" id="reverse" />
+            </div>
+            <div style="display:  flex;">
+                扩展： <input type="checkbox" id="extend" />
+            </div>
+            <div style="display:  flex;">
+                辅助： <input type="checkbox" id="helper" />
+            </div>
+            <div style="display:  flex;">
+                冻结： <input type="checkbox" id="freeze" />
+            </div>
+            <div style="display:  flex;">
+                重玩： <input type="button" value="重玩" id="restart" />
+            </div>
+        </div>
+    </div>
+    <dialog id="gameOverDialog"></dialog>
     <script src="./index.js"></script>
 </body>
+
 </html>

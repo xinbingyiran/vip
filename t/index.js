@@ -1,13 +1,48 @@
 !function () {
     const canvas = document.querySelector('#gameCanvas');
-    canvas.width = 480;
+    canvas.width = 300;
     canvas.height = 600;
     const ctx = canvas.getContext('2d');
+
+    const ncanvas = document.querySelector('#nextShapeCanvas');
+    ncanvas.width = 120;
+    ncanvas.height = 120;
+    const ctxNext = ncanvas.getContext('2d');
+
+    const gameOverDialog = document.querySelector("#gameOverDialog");
+
+    const checkboxExtend = document.querySelector('#extend');
+    const checkboxHelper = document.querySelector('#helper');
+    const checkboxFreeze = document.querySelector('#freeze');
+    const checkboxReverse = document.querySelector('#reverse');
+    const btnRestart = document.querySelector('#restart');
+    const scoreSpan = document.querySelector('#score');
+    const levelSpan = document.querySelector('#level');
+
+    let hasExtend = checkboxExtend.checked;
+    let hasHelper = checkboxHelper.checked;
+    let isFreeze = checkboxFreeze.checked;
+    let isReverse = checkboxReverse.checked;
+    checkboxExtend.onchange = () => { hasExtend = checkboxExtend.checked; resetAllShapes(); }
+    checkboxHelper.onchange = () => { hasHelper = checkboxHelper.checked; resetAllShapes(); }
+    checkboxFreeze.onchange = () => { isFreeze = checkboxFreeze.checked; }
+    checkboxReverse.onchange = () => { isReverse = checkboxReverse.checked; }
 
     const blockSize = 30;
     const boardRows = canvas.height / blockSize;
     const boardCols = 300 / blockSize;
     const boardEmptyColor = 'gray';
+
+    gameOverDialog.addEventListener("click", () => {
+        gameOverDialog.close();
+    });
+    gameOverDialog.onclose = () => {
+        isGameOver = false;
+        reset();
+    };
+    btnRestart.onclick = () => {
+        reset();
+    }
 
     function rotateItem(item, ignoreBoard) {
         const shape = item.shape;
@@ -23,7 +58,7 @@
         for (let c = 0; c < cols; c++) {
             rotated[c] = [];
             for (let r = 0; r < rows; r++) {
-                rotated[c][rows - 1 - r] = shape[r][c];
+               rotated[c][r] = isReverse ? shape[r][cols - 1 - c] : shape[rows - 1 - r][c];
             }
         }
         if (ignoreBoard) {
@@ -38,8 +73,9 @@
     }
 
     const gameOver = () => {
-        alert('Game Over ' + allScore);
-        reset();
+        isGameOver = true;
+        gameOverDialog.innerText = '游戏结束了，你的最终得分是： ' + allScore;
+        gameOverDialog.showModal();
     };
 
     const calcArray = (shape, x, y) => {
@@ -62,44 +98,70 @@
         return array.every(([x, y]) => x >= 0 && x < boardCols && (y < 0 || (y < boardRows && board[y][x] === boardEmptyColor)));
     };
 
-    const calcScore = () => {
+    const fullBoardRow = row => board[row].every((value) => value !== boardEmptyColor);
+
+    const emptyRow = Array.from({ length: boardCols }, () => boardEmptyColor);
+
+    const scores = { 0: 0, 1: 100, 2: 300, 3: 700, 4: 1500 };
+    const calcScore = (cy, length) => {
         let score = 0;
-        for (let r = boardRows - 1; r >= 0; r--) {
-            let rowFull = true;
-            for (let c = 0; c < boardCols; c++) {
-                if (board[r][c] === boardEmptyColor) {
-                    rowFull = false;
-                    break;
+        for (let r = cy + length - 1; r >= 0; r--) {
+            if (r < cy) {
+                if (score == 0) {
+                    return 0;
                 }
+                while (r >= 0) {
+                    board[r + score] = [...board[r]];
+                    r--;
+                }
+                break;
             }
-            if (rowFull) {
+            if (fullBoardRow(r)) {
                 score++;
             }
             else if (score > 0) {
-                board[r + score] = board[r];
+                board[r + score] = [...board[r]];
             }
         }
-        let getScore = { 0: 0, 1: 100, 2: 300, 3: 700, 4: 1500 }[score];
-
-        while (score > 0) {
-            board[--score] = Array.from({ length: boardCols }, () => boardEmptyColor);
+        if (score > 0) {
+            allScore += scores[score];
+            level = ~~(allScore / 100);
+            for (let i = score - 1; i >= 0; i--) {
+                board[i] = [...emptyRow];
+            }
         }
-        allScore += getScore;
+        return score;
     }
 
     const mergeItem = item => {
-        if (item.cy < 0) {
-            gameOver();
-            return;
-        }
         for (let r = 0; r < item.shape.length; r++) {
+            if (item.cy + r < 0) {
+                continue;
+            }
             for (let c = 0; c < item.shape[r].length; c++) {
                 if (item.shape[r][c]) {
                     board[item.cy + r][item.cx + c] = item.color;
                 }
             }
         }
-        calcScore();
+        let ll = calcScore(item.cy, item.shape.length);
+        if (item.cy < 0) {
+            let overLine = item.cy;
+            while (overLine < 0 && ll > 0) {
+                overLine++; ll--;
+                const row = item.shape[-overLine];
+                for (var i = 0; i < row.length; i++) {
+                    if (row[i]) {
+                        board[ll][item.cx + i] = item.color;
+                    }
+                }
+            }
+            if (overLine < 0) {
+                gameOver();
+                return;
+            }
+        }
+        cshape.finished = true;
     }
 
     const moveItem = (item, x) => {
@@ -121,7 +183,6 @@
             return;
         }
         mergeItem(cshape);
-        cshape.finished = true;
     }
 
     const dotDown = item => {
@@ -135,7 +196,6 @@
             return;
         }
         mergeItem(cshape);
-        cshape.finished = true;
     }
 
     const cancelDown = item => {
@@ -149,7 +209,8 @@
     }
     const cancelUp = item => {
         const x = item.cx;
-        for (let r = item.cy + 1; r < boardRows; r++) {
+        const y = item.cy + item.shape.length;
+        for (let r = y; r < boardRows; r++) {
             if (board[r][x] !== boardEmptyColor) {
                 board[r][x] = boardEmptyColor
                 return;
@@ -162,10 +223,10 @@
     const addtionlUp = item => {
         const x = item.cx;
         const y = item.cy + item.shape.length;
-        for (let r = y; r <= boardRows; r++) {
-            if ((r == boardRows || board[r][x] !== boardEmptyColor) && r > y) {
-                board[r - 1][x] = item.color
-                calcScore();
+        for (let r = y; r < boardRows; r++) {
+            if ((r == boardRows - 1 || board[r + 1][x] !== boardEmptyColor)) {
+                board[r][x] = item.color
+                calcScore(r, 1);
                 return;
             }
         }
@@ -305,13 +366,16 @@
     const reset = () => {
         action = undefined;
         allScore = 0;
+        level = 0;
         for (let r = 0; r < boardRows; r++) {
             board[r] = [];
             for (let c = 0; c < boardCols; c++) {
                 board[r][c] = boardEmptyColor;
             }
         }
+        resetAllShapes();
         cshape = createShape();
+        nshape = createShape();
     }
 
     function drawShape(ts) {
@@ -329,7 +393,7 @@
     }
 
     function drawBoard() {
-        ctx.clearRect(0,0,canvas.width,canvas.height);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.beginPath();
         for (let r = 0; r < boardRows; r++) {
             for (let c = 0; c < boardCols; c++) {
@@ -370,22 +434,50 @@
         }
     });
 
-    const allShapes = [
-        ...shapes,
-        //...extShapes, 
-        ...helpShapes];
+    let allShapes = [];
+
+    const resetAllShapes = () => {
+        allShapes = [
+            ...shapes,
+            ...(hasExtend ? extShapes : []),
+            ...(hasHelper ? helpShapes : [])]
+    }
 
     function createShape() {
         // 创建新的方块
         const pickShape = allShapes[~~(Math.random() * allShapes.length)];
         const color = colors[~~(Math.random() * colors.length)];
-        const shape = pickShape.shape.map(row => row.map(s => s));
-        const item = Object.assign({}, pickShape, { shape, color, cx: ~~((boardCols - shape[0].length) / 2), cy: -shape.length });
+        const shape = pickShape.shape.map(row => [...row]);
+        const item = Object.assign({}, pickShape, { shape, color });
         item.isHelper || Array.from({ length: ~~(Math.random() * 4) }).map(() => rotateItem(item, true));
+        Object.assign(item, { cx: ~~((boardCols - item.shape[0].length) / 2), cy: -item.shape.length })
         return item;
     }
 
     var gtime = 0;
+    const levels = {
+        0: 1000,
+        1: 900,
+        2: 800,
+        3: 700,
+        4: 600,
+        5: 500,
+        6: 450,
+        7: 400,
+        8: 350,
+        9: 300,
+        10: 250,
+        11: 200,
+        12: 150,
+        13: 100,
+        14: 50,
+        15: 25,
+        16: 10,
+        17: 5,
+        18: 2,
+        19: 1,
+        20: 0
+    };
 
     const globalDown = () => {
         cshape.downAction(cshape);
@@ -413,42 +505,48 @@
             action = undefined;
             return;
         }
-        if (ts - gtime > 1000 || ts < gtime) {
+        if (ts - gtime > (levels[level] ?? 1) || ts < gtime) {
             gtime = ts;
-            globalDown();
+            if (!isFreeze) {
+                globalDown();
+            }
         }
     }
 
-    const drawInfo = () => {        
-        ctx.fillStyle = 'red';
-        ctx.font = '20px Arial';
-        ctx.fillText('分数:' + allScore, 320, 20);
+    const drawInfo = () => {
+        ctxNext.clearRect(0, 0, ncanvas.width, ncanvas.height);
+        ctxNext.beginPath();
+        ctxNext.fillStyle = 'red';
         var sr = nshape.shape.length > 2 ? 0 : 1;
         var sc = nshape.shape[0].length > 2 ? 0 : 1;
+        scoreSpan.innerText = allScore;
+        levelSpan.innerText = level;
         for (let r = 0; r < 4; r++) {
             for (let c = 0; c < 4; c++) {
-                ctx.fillStyle = r >= sr && nshape.shape.length > r - sr && c >= sc && nshape.shape[0].length > c - sc && nshape.shape[r - sr][c - sc] ? nshape.color : 'gray';
-                ctx.fillRect(320 + c * blockSize, 40 + r * blockSize, blockSize, blockSize);
-                ctx.strokeStyle = '#fff';
-                ctx.strokeRect(320 + c * blockSize, 40 + r * blockSize, blockSize, blockSize);
+                ctxNext.fillStyle = r >= sr && nshape.shape.length > r - sr && c >= sc && nshape.shape[0].length > c - sc && nshape.shape[r - sr][c - sc] ? nshape.color : 'gray';
+                ctxNext.fillRect(c * blockSize, r * blockSize, blockSize, blockSize);
+                ctxNext.strokeStyle = '#fff';
+                ctxNext.strokeRect(c * blockSize, r * blockSize, blockSize, blockSize);
             }
         }
 
     }
     let cshape = undefined;
-    let nshape = createShape();
+    let nshape = undefined;
+    let isGameOver = false;
+    let level = 0;
 
     function gameLoop(ts) {
-        calc(ts);
-        if (cshape.finished) {
-            cshape = nshape;
-            nshape = createShape();
+        if (!isGameOver) {
+            calc(ts);
+            if (cshape.finished) {
+                cshape = nshape;
+                nshape = createShape();
+            }
+            drawBoard();
+            drawShape(ts);
+            drawInfo();
         }
-        // 更新游戏状态 
-        drawBoard();
-        drawShape(ts);
-        drawInfo();
-        // 绘制游戏界面
         requestAnimationFrame(gameLoop);
     }
     reset();
