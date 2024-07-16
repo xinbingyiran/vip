@@ -1,12 +1,35 @@
 !function () {
+    const boardEmptyColor = 'gray';
+
+    const maxWidth = document.body.clientWidth - 20;
+
+    let bs = ~~(maxWidth / 15);
+    const blockSize = bs < 10 ? 10 : bs > 40 ? 40 : bs;
+
+
+    const boardCols = 10;
+    const boardRows = ~~((document.body.clientHeight - 20) / blockSize);
+
+
+
+    const game = document.querySelector('#game');
+    game.style.width = `${maxWidth}px`;
+    game.style.height = `${blockSize * boardRows}px`;
+
+
     const canvas = document.querySelector('#gameCanvas');
-    canvas.width = 300;
-    canvas.height = 600;
+    canvas.width = blockSize * boardCols;
+    canvas.height = blockSize * boardRows;
+    canvas.style.width = `${canvas.width}px`;
+    canvas.style.height = `${canvas.height}px`;
     const ctx = canvas.getContext('2d');
 
+
     const ncanvas = document.querySelector('#nextShapeCanvas');
-    ncanvas.width = 120;
-    ncanvas.height = 120;
+    ncanvas.width = blockSize * 4;
+    ncanvas.height = ncanvas.width;
+    ncanvas.style.width = `${ncanvas.width}px`;
+    ncanvas.style.height = `${ncanvas.height}px`;
     const ctxNext = ncanvas.getContext('2d');
 
     const gameOverDialog = document.querySelector("#gameOverDialog");
@@ -28,10 +51,6 @@
     checkboxFreeze.onchange = () => { isFreeze = checkboxFreeze.checked; }
     checkboxReverse.onchange = () => { isReverse = checkboxReverse.checked; }
 
-    const blockSize = 30;
-    const boardRows = canvas.height / blockSize;
-    const boardCols = 300 / blockSize;
-    const boardEmptyColor = 'gray';
 
     gameOverDialog.addEventListener("click", () => {
         gameOverDialog.close();
@@ -43,32 +62,86 @@
     btnRestart.onclick = () => {
         reset();
     }
+    const btnX = document.querySelector('#X');
+    const btnY = document.querySelector('#Y');
+    const btnA = document.querySelector('#A');
+    const btnB = document.querySelector('#B');
+    const btnSpace = document.querySelector('#space');
+    let startEvent, endEvent;
 
-    function rotateItem(item, ignoreBoard) {
+    if ('ontouchend' in document) {
+        startEvent = 'touchstart';
+        endEvent = 'touchend';
+    }
+    else {
+        startEvent = 'mousedown';
+        endEvent = 'mouseup';
+    }
+    btnX.addEventListener(startEvent, () => {
+        action = 'a';
+    })
+    btnY.addEventListener(startEvent, () => {
+        action = 'w';
+    })
+    btnA.addEventListener(startEvent, () => {
+        action = 's';
+    })
+    btnB.addEventListener(startEvent, () => {
+        action = 'd';
+    })
+    btnSpace.addEventListener(startEvent, () => {
+        action = ' ';
+    })
+    btnX.addEventListener(endEvent, () => {
+        action = undefined;
+    })
+    btnY.addEventListener(endEvent, () => {
+        action = undefined;
+    })
+    btnA.addEventListener(endEvent, () => {
+        action = undefined;
+    })
+    btnB.addEventListener(endEvent, () => {
+        action = undefined;
+    })
+    btnSpace.addEventListener(endEvent, () => {
+        action = undefined;
+    })
+
+    function rotateItem(item, outofBoard) {
         const shape = item.shape;
         const rows = shape.length;
         const cols = shape[0].length;
+        const fix = ~~((rows - cols) / 2);
+        const ry = item.cy + fix;
+        let rx = item.cx - fix;
+        // if (item.cx - fix + rows > boardCols) {
+        //     return false;
+        // }
+        if (ry + cols > boardRows) {
+            return false;
+        }
         const rotated = [];
-        if (item.cx + rows > boardCols) {
-            return false;
-        }
-        if (item.cy + cols > boardRows) {
-            return false;
-        }
         for (let c = 0; c < cols; c++) {
             rotated[c] = [];
             for (let r = 0; r < rows; r++) {
                 rotated[c][r] = isReverse ? shape[r][cols - 1 - c] : shape[rows - 1 - r][c];
             }
         }
-        if (ignoreBoard) {
+        if (outofBoard) {
             item.shape = rotated;
             return;
         }
-        const array = calcArray(rotated, item.cx, item.cy);
-        if (allEmpty(array)) {
-            item.shape = rotated;
-            return;
+        const addtion = rows > cols ? ((~~((rows + 1 - cols) / 2)) * 2) : (cols - rows);
+        for (let i = 0; i <= addtion; i++) {
+            rx += i * ((i % 2 == 0) ? -1 : 1);
+            const array = calcArray(rotated, rx, ry);
+            if (allEmpty(array)) {
+                item.shape = rotated;
+                item.cx = rx;
+                item.cy = ry;
+                return;
+            }
         }
     }
 
@@ -383,7 +456,6 @@
             row.forEach((value, c) => {
                 if (value) {
                     ctx.fillStyle = cshape.isHelper && (~~ts % 300) > 150 ? "transparent" : cshape.color;
-
                     ctx.fillRect((c + cshape.cx) * blockSize, (r + cshape.cy) * blockSize, blockSize, blockSize);
                     ctx.strokeStyle = '#fff';
                     ctx.strokeRect((c + cshape.cx) * blockSize, (r + cshape.cy) * blockSize, blockSize, blockSize);
@@ -468,7 +540,7 @@
         d: [100, 0, (ts) => {
             moveItem(cshape, 1);
         }],
-        s: [0, 0, (ts) => {
+        s: [100, 0, (ts) => {
             globalDown();
         }],
         w: [200, 50, (ts) => {
@@ -671,5 +743,5 @@
         requestAnimationFrame(gameLoop);
     }
     reset();
-    gameLoop();
+    gameLoop(0);
 }();
