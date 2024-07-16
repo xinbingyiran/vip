@@ -58,7 +58,7 @@
         for (let c = 0; c < cols; c++) {
             rotated[c] = [];
             for (let r = 0; r < rows; r++) {
-               rotated[c][r] = isReverse ? shape[r][cols - 1 - c] : shape[rows - 1 - r][c];
+                rotated[c][r] = isReverse ? shape[r][cols - 1 - c] : shape[rows - 1 - r][c];
             }
         }
         if (ignoreBoard) {
@@ -161,7 +161,6 @@
                 return;
             }
         }
-        cshape.finished = true;
     }
 
     const moveItem = (item, x) => {
@@ -183,6 +182,7 @@
             return;
         }
         mergeItem(cshape);
+        cshape.finished = true;
     }
 
     const dotDown = item => {
@@ -196,6 +196,7 @@
             return;
         }
         mergeItem(cshape);
+        cshape.finished = true;
     }
 
     const cancelDown = item => {
@@ -249,7 +250,6 @@
                 }
             }
         }
-        item.finished = true;
     }
     const bombDown = item => {
         const newy = item.cy + 1;
@@ -259,7 +259,7 @@
             return true;
         }
         bomb(item);
-        return false;
+        item.finished = true;
     }
 
     const bombUp = item => {
@@ -408,24 +408,20 @@
     let action = undefined;
     document.addEventListener('keydown', (event) => {
         if (event.key === 'ArrowLeft' || event.key === 'a') {
-            event.preventDefault();
             action = 'a';
             // 移动方块到左边
         } else if (event.key === 'ArrowRight' || event.key === 'd') {
-            event.preventDefault();
             action = 'd';
             // 移动方块到右边
         } else if (event.key === 'ArrowDown' || event.key === 's') {
-            event.preventDefault();
             action = 's';
             // 加速方块下落
         } else if (event.key === 'ArrowUp' || event.key === 'w') {
-            event.preventDefault();
             action = 'w';
         } else if (event.key === 'Tab' || event.key === ' ') {
-            event.preventDefault();
             action = ' ';
         }
+        action && event.preventDefault();
     });
     document.addEventListener('keyup', (event) => {
         if (action) {
@@ -483,28 +479,64 @@
         cshape.downAction(cshape);
     }
 
-    function calc(ts) {
+    let lastAction = undefined;
+    let lastDelay = undefined;
+    let repeatTimes = undefined;
+    let freezeAction = undefined;
+
+    let actionMap = {
+        a: [100, 0, (ts) => {
+            moveItem(cshape, -1);
+        }],
+        d: [100, 0, (ts) => {
+            moveItem(cshape, 1);
+        }],
+        s: [0, 0, (ts) => {
+            globalDown();
+        }],
+        w: [300, 100, (ts) => {
+            upItem(cshape);
+        }],
+        " ": [100, 100, (ts) => {
+            nshape = createShape(); 
+        }]
+    }
+
+    function doAction(ts) {
         if (action) {
-            switch (action) {
-                case 'a':
-                    moveItem(cshape, -1);
-                    break;
-                case 'd':
-                    moveItem(cshape, 1);
-                    break;
-                case 's':
-                    globalDown();
-                    break;
-                case 'w':
-                    upItem(cshape);
-                    break;
-                case " ":
-                    nshape = createShape();
-                    break;
+            if (freezeAction) {
+                return;
             }
-            action = undefined;
-            return;
+            const [fdelay, odelay, actionCallback] = actionMap[action] ?? [undefined, undefined, undefined];
+            if (!actionCallback) {
+                return;
+            }
+            if (!lastAction) {
+                lastAction = action;
+                lastDelay = ts;
+                repeatTimes = 0;
+            }
+            else if (lastDelay) {
+                if (ts - lastDelay < (repeatTimes == 0 ? fdelay : odelay)) {
+                    return;
+                }
+                lastDelay = ts;
+                repeatTimes++;;
+            }
+            actionCallback();
+            if (cshape.finished) {
+                lastAction = undefined;
+                freezeAction = true;
+            }
         }
+        else {
+            lastAction = undefined;
+            freezeAction = undefined;
+        }
+    }
+
+    function calc(ts) {
+        doAction(ts);
         if (ts - gtime > (levels[level] ?? 1) || ts < gtime) {
             gtime = ts;
             if (!isFreeze) {
