@@ -494,7 +494,7 @@
         s: [0, 0, (ts) => {
             globalDown();
         }],
-        w: [300, 100, (ts) => {
+        w: [200, 50, (ts) => {
             upItem(cshape);
         }],
         " ": [100, 100, (ts) => {
@@ -510,7 +510,7 @@
             const [fdelay, odelay, actionCallback] = actionMap[action] ?? [undefined, undefined, undefined];
             if (!actionCallback) {
                 return;
-            }
+            }            
             if (!lastAction) {
                 lastAction = action;
                 lastDelay = ts;
