@@ -1,5 +1,6 @@
 ﻿### 常用链接
-- [通用请求](./html/getpost.html)
+- [方块游戏](./t/index.html) 
+[通用请求](./html/getpost.html)
 [开源镜像](?./md/mirror.md)
 [BAT命令](?./md/bat.md)
 [阿里云盘资源分享](./html/wpgxnas.html)
