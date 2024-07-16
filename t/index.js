@@ -405,30 +405,7 @@
         }
     }
 
-    let action = undefined;
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'ArrowLeft' || event.key === 'a') {
-            action = 'a';
-            // 移动方块到左边
-        } else if (event.key === 'ArrowRight' || event.key === 'd') {
-            action = 'd';
-            // 移动方块到右边
-        } else if (event.key === 'ArrowDown' || event.key === 's') {
-            action = 's';
-            // 加速方块下落
-        } else if (event.key === 'ArrowUp' || event.key === 'w') {
-            action = 'w';
-        } else if (event.key === 'Tab' || event.key === ' ') {
-            action = ' ';
-        }
-        action && event.preventDefault();
-    });
-    document.addEventListener('keyup', (event) => {
-        if (action) {
-            event.preventDefault();
-            action = undefined;
-        }
-    });
+
 
     let allShapes = [];
 
@@ -498,7 +475,7 @@
             upItem(cshape);
         }],
         " ": [100, 100, (ts) => {
-            nshape = createShape(); 
+            nshape = createShape();
         }]
     }
 
@@ -510,7 +487,7 @@
             const [fdelay, odelay, actionCallback] = actionMap[action] ?? [undefined, undefined, undefined];
             if (!actionCallback) {
                 return;
-            }            
+            }
             if (!lastAction) {
                 lastAction = action;
                 lastDelay = ts;
@@ -535,7 +512,119 @@
         }
     }
 
-    function calc(ts) {
+    // Button
+    // 0	Bottom button in right cluster   A
+    // 1	Right button in right cluster    B
+    // 2	Left button in right cluster     X
+    // 3	Top button in right cluster      Y
+    // 4	Top left front button            LT
+    // 5	Top right front button           RT
+    // 6	Bottom left front button         LB
+    // 7	Bottom right front button        RB
+    // 8	Left button in center cluster    Select
+    // 9	Right button in center cluster   Start
+    // 10	Left stick pressed button        LStick
+    // 11	Right stick pressed button       RStick
+    // 12	Top button in left cluster       Up
+    // 13	Bottom button in left cluster    Down
+    // 14	Left button in left cluster      Left
+    // 15	Right button in left cluster     Right
+    // 16	Center button in center cluster  Menu
+    // axes	
+    // 0	Horizontal axis for left stick (negative left/positive right)
+    // 1	Vertical axis for left stick (negative up/positive down)
+    // 2	Horizontal axis for right stick (negative left/positive right)
+    // 3	Vertical axis for right stick (negative up/positive down)
+
+    const bmap = {
+        0: 's',
+        1: 'd',
+        2: 'a',
+        3: 'w',
+        4: ' ',
+        5: ' ',
+        6: ' ',
+        7: ' ',
+        8: ' ',
+        9: ' ',
+        10: ' ',
+        11: ' ',
+        12: 'w',
+        13: 's',
+        14: 'a',
+        15: 'd',
+        16: ' '
+    }
+
+    function checkGamepads() {
+        if (navigator.getGamepads) {
+            const gamepads = navigator.getGamepads();
+            for (let i = 0; i < gamepads.length; i++) {
+                let gamepad = gamepads[i];
+                if (!gamepad) {
+                    continue;
+                }
+                for (let j = 0; j < gamepad.buttons.length; j++) {
+                    let button = gamepad.buttons[j];
+                    if (button.pressed) {
+                        return bmap[j];
+                    }
+                }
+                for (let j = 0; j < gamepad.axes.length; j++) {
+                    if (gamepad.axes[j] < -0.5) {
+                        lastAlex = `${i}-${j}`;
+                        return j % 2 == 0 ? 'a' : 'w';
+                    }
+                    else if (gamepad.axes[j] > 0.5) {
+                        return j % 2 == 0 ? 'd' : 's';
+                    }
+                }
+            }
+        }
+        return undefined;
+    }
+
+    let action = undefined;
+    let gpAction = undefined;
+    document.addEventListener('keydown', (event) => {
+        let newAction = undefined;
+        if (event.key === 'ArrowLeft' || event.key === 'a') {
+            newAction = 'a';
+            // 移动方块到左边
+        } else if (event.key === 'ArrowRight' || event.key === 'd') {
+            newAction = 'd';
+            // 移动方块到右边
+        } else if (event.key === 'ArrowDown' || event.key === 's') {
+            newAction = 's';
+            // 加速方块下落
+        } else if (event.key === 'ArrowUp' || event.key === 'w') {
+            newAction = 'w';
+        } else if (event.key === 'Tab' || event.key === ' ') {
+            newAction = ' ';
+        }
+        if (newAction && action != newAction) {
+            action = newAction;
+            event.preventDefault();
+        }
+    });
+    document.addEventListener('keyup', (event) => {
+        if (action) {
+            event.preventDefault();
+            action = undefined;
+        }
+    });
+
+    function checkAction(ts) {
+        const newAction = checkGamepads();
+        if (gpAction != newAction) {
+            action = gpAction = newAction;
+        }
+        if (isGameOver) {
+            if (action = ' ') {
+                gameOverDialog.close();
+            }
+            return;
+        }
         doAction(ts);
         if (ts - gtime > (levels[level] ?? 1) || ts < gtime) {
             gtime = ts;
@@ -569,8 +658,8 @@
     let level = 0;
 
     function gameLoop(ts) {
+        checkAction(ts);
         if (!isGameOver) {
-            calc(ts);
             if (cshape.finished) {
                 cshape = nshape;
                 nshape = createShape();
