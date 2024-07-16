@@ -3,34 +3,60 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0, user-scalable=no">
+    </meta>
     <title>俄罗斯方块</title>
+    <style>
+        html,body{
+            margin: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        canvas{
+            margin: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <div style="display:  flex;  color: green;">
-        <canvas id="gameCanvas"></canvas>
-        <div style="margin-left: 20px;">
-            <canvas id="nextShapeCanvas"></canvas>
-            <div style="display:  flex;">
-                分数： <span id="score">0</span>
+    <div style="display:  flex;  color: green; margin: 0;" id="game">
+        <div>
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <canvas id="nextShapeCanvas"></canvas>
+                <div>
+                    分数： <span id="score">0</span>
+                </div>
+                <div>
+                    等级： <span id="level">0</span>
+                </div>
+                <div>
+                    倒转： <input type="checkbox" id="reverse" />
+                </div>
+                <div>
+                    扩展： <input type="checkbox" id="extend" />
+                </div>
+                <div>
+                    辅助： <input type="checkbox" id="helper" />
+                </div>
+                <div>
+                    冻结： <input type="checkbox" id="freeze" />
+                </div>
+                <div>
+                    重玩： <input type="button" value="重玩" id="restart" />
+                </div>
             </div>
-            <div style="display:  flex;">
-                等级： <span id="level">0</span>
-            </div>
-            <div style="display:  flex;">
-                倒转： <input type="checkbox" id="reverse" />
-            </div>
-            <div style="display:  flex;">
-                扩展： <input type="checkbox" id="extend" />
-            </div>
-            <div style="display:  flex;">
-                辅助： <input type="checkbox" id="helper" />
-            </div>
-            <div style="display:  flex;">
-                冻结： <input type="checkbox" id="freeze" />
-            </div>
-            <div style="display:  flex;">
-                重玩： <input type="button" value="重玩" id="restart" />
+            <div id="touchControl"
+                style="display: grid; height: 120px; width: 120px;  grid-template-columns: 33.33% 33.33% 33.33%;  grid-template-rows: 33.33% 33.33% 33.33%;">
+                <input style="grid-column: 2; grid-row: 1;margin: 3px;" type="button" value="Y" id="Y" />
+                <input style="grid-column: 1; grid-row: 2;margin: 3px;" type="button" value="X" id="X" />
+                <input style="grid-column: 2; grid-row: 2;margin: 10px;" type="button" value="&nbsp;" id="space" />
+                <input style="grid-column: 3; grid-row: 2;margin: 3px;" type="button" value="B" id="B" />
+                <input style="grid-column: 2; grid-row: 3;margin: 3px;" type="button" value="A" id="A" />
             </div>
         </div>
     </div>
