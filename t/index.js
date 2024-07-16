@@ -620,7 +620,7 @@
             action = gpAction = newAction;
         }
         if (isGameOver) {
-            if (action = ' ') {
+            if (action == ' ') {
                 gameOverDialog.close();
             }
             return;
