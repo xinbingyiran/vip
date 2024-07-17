@@ -14,7 +14,7 @@ function withOptions(options) {
     const levels = { 0: 1000, 1: 900, 2: 800, 3: 700, 4: 600, 5: 500, 6: 450, 7: 400, 8: 350, 9: 300, 10: 250, 11: 200, 12: 150, 13: 100, 14: 50, 15: 25, 16: 10, 17: 5, 18: 2, 19: 1, 20: 0 };
     const colors = ["red", "green", "blue", "yellow", "purple", "orange"];
 
-    let cshape, nshape, allShapes, baseBoard, mBoard, sBoard, boardRows, boardCols, action;
+    let cshape, nshape, allShapes, baseBoard, mBoard, sBoard, boardRows, boardCols, currentAction;
 
     function rotateItem(item, outofBoard) {
         const shape = item.shape;
@@ -318,6 +318,7 @@ function withOptions(options) {
     let lastAction = undefined;
     let lastDelay = undefined;
     let repeatTimes = undefined;
+    let freezeAction = undefined;
 
     const actionMap = {
         [keys.KEY_LEFT]: [100, 0, () => moveItem(cshape, -1)],
@@ -329,21 +330,21 @@ function withOptions(options) {
     };
 
     function checkKeys(ts, keys, addKeys, removeKeys) {
-        if (!keys.size || !keys.has(action)) {
-            action = undefined;
+        if (currentAction && (!keys.size || !keys.has(currentAction))) {
+            freezeAction = currentAction = undefined;
         }
-        if (keys.size) {
+        if (!currentAction && keys.size) {
             Object.keys(actionMap).some(key => {
-                keys.has(key) && (action = key)
+                keys.has(key) && (currentAction = key)
             });
         }
-        if (action) {
-            const [fdelay, odelay, actionCallback] = actionMap[action] ?? [undefined, undefined, undefined];
+        if (currentAction && currentAction != freezeAction) {
+            const [fdelay, odelay, actionCallback] = actionMap[currentAction] ?? [undefined, undefined, undefined];
             if (!actionCallback) {
                 return;
             }
             if (!lastAction) {
-                lastAction = action;
+                lastAction = currentAction;
                 lastDelay = ts;
                 repeatTimes = 0;
             }
@@ -356,6 +357,7 @@ function withOptions(options) {
             }
             actionCallback();
             if (cshape.finished) {
+                freezeAction = currentAction;
                 lastAction = undefined;
             }
         }
@@ -371,10 +373,10 @@ function withOptions(options) {
         sBoard = subBoard;
         boardRows = baseBoard.length;
         boardCols = baseBoard[0].length;
-        action = undefined;
+        currentAction = undefined;
         for (let r = 0; r < boardRows; r++) {
             for (let c = 0; c < boardCols; c++) {
-                mBoard[r][c] = baseBoard[r][c] = boardEmptyColor;
+                baseBoard[r][c] = boardEmptyColor;
             }
         }
         Object.assign(status, { score: 0, level: 0, over: false });
@@ -407,6 +409,5 @@ function withOptions(options) {
     return { status, init, update };
 }
 
-const defaultGame = withOptions();
 
-export { defaultGame as default, withOptions };
+export { withOptions as default };
