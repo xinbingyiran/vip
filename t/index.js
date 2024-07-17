@@ -1,129 +1,135 @@
 
-import fkgame from './fk.js';
+import keyboard from './keyboard.js';
+import { default as fkgame, withOptions as fkgameWithOptions } from './fk.js';
 import tcsgame from './tcs.js';
 
 !function () {
 
+    const gameList = {
+        '方块标准': fkgame,
+        '方块扩展': fkgameWithOptions({ hasExtend: true, hasHelper: false }),
+        '方块辅助': fkgameWithOptions({ hasExtend: false, hasHelper: true }),
+        '方块扩展辅助': fkgameWithOptions({ hasExtend: true, hasHelper: true })
+    }
+
+    const selectGameList = document.querySelector('#gameList');
+    for (let v in gameList) {
+        selectGameList.options.add(new Option(v, v));
+    }
+    let game = undefined;
+
     const boardEmptyColor = 'gray';
-    const game = fkgame;
-
     const maxWidth = document.body.clientWidth - 20;
+    const blockSizeCalc = ~~(maxWidth / 17);
+    const blockSize = blockSizeCalc < 10 ? 10 : blockSizeCalc > 40 ? 40 : blockSizeCalc;
+    const mainCols = 10;
+    const mainRows = ~~((document.body.clientHeight - 20) / blockSize);
 
-    let bs = ~~(maxWidth / 15);
-    const blockSize = bs < 10 ? 10 : bs > 40 ? 40 : bs;
+    const mainDiv = document.querySelector('#game');
+    mainDiv.style.width = `${maxWidth}px`;
+    mainDiv.style.height = `${blockSize * mainRows}px`;
 
+    const mainCanvas = document.querySelector('#gameCanvas');
+    mainCanvas.width = blockSize * mainCols;
+    mainCanvas.height = blockSize * mainRows;
+    mainCanvas.style.width = `${mainCanvas.width}px`;
+    mainCanvas.style.height = `${mainCanvas.height}px`;
+    const mainCtx = mainCanvas.getContext('2d');
 
-    const boardCols = 10;
-    const boardRows = ~~((document.body.clientHeight - 20) / blockSize);
+    const subCols = 4;
+    const subRows = 4;
+    const subCanvas = document.querySelector('#nextShapeCanvas');
+    subCanvas.width = blockSize * subCols;
+    subCanvas.height = blockSize * subRows;
+    subCanvas.style.width = `${subCanvas.width}px`;
+    subCanvas.style.height = `${subCanvas.height}px`;
+    const subCtx = subCanvas.getContext('2d');
 
-
-
-    const gameDiv = document.querySelector('#game');
-    gameDiv.style.width = `${maxWidth}px`;
-    gameDiv.style.height = `${blockSize * boardRows}px`;
-
-
-    const canvas = document.querySelector('#gameCanvas');
-    canvas.width = blockSize * boardCols;
-    canvas.height = blockSize * boardRows;
-    canvas.style.width = `${canvas.width}px`;
-    canvas.style.height = `${canvas.height}px`;
-    const ctx = canvas.getContext('2d');
-
-
-    const ncanvas = document.querySelector('#nextShapeCanvas');
-    const sboardCols = 4;
-    const sboardRows = 4;
-    ncanvas.width = blockSize * sboardCols;
-    ncanvas.height = blockSize * sboardRows;
-    ncanvas.style.width = `${ncanvas.width}px`;
-    ncanvas.style.height = `${ncanvas.height}px`;
-    const ctxNext = ncanvas.getContext('2d');
-
-    const gameOverDialog = document.querySelector("#gameOverDialog");
-
-    const checkboxExtend = document.querySelector('#extend');
-    const checkboxHelper = document.querySelector('#helper');
-    const checkboxFreeze = document.querySelector('#freeze');
-    const checkboxReverse = document.querySelector('#reverse');
-    const btnRestart = document.querySelector('#restart');
-    const scoreSpan = document.querySelector('#score');
-    const levelSpan = document.querySelector('#level');
-
-    let hasExtend = checkboxExtend.checked;
-    let hasHelper = checkboxHelper.checked;
-    let isFreeze = checkboxFreeze.checked;
-    let isReverse = checkboxReverse.checked;
-    checkboxExtend.onchange = () => { hasExtend = checkboxExtend.checked; resetAllShapes(); }
-    checkboxHelper.onchange = () => { hasHelper = checkboxHelper.checked; resetAllShapes(); }
-    checkboxFreeze.onchange = () => { isFreeze = checkboxFreeze.checked; }
-    checkboxReverse.onchange = () => { isReverse = checkboxReverse.checked; }
-
-
-    gameOverDialog.addEventListener("click", () => {
-        gameOverDialog.close();
+    const dialogGameOver = document.querySelector("#gameOverDialog");
+    dialogGameOver.addEventListener("click", () => {
+        game = undefined;
+        dialogGameOver.close();
     });
 
-    let board, sboard, oldActions = [];
-    function initBoard() {
-        board = Array(boardRows).fill(undefined).map(() => Array(boardCols).fill(boardEmptyColor));
-        sboard = Array(sboardRows).fill(undefined).map(() => Array(sboardCols).fill(boardEmptyColor));
-    }
-    btnRestart.onclick = () => {
-        initBoard();
-        game.init(performance.now(), board, sboard);
-        drawBoard();
-    }
-    const btnX = document.querySelector('#X');
-    const btnY = document.querySelector('#Y');
-    const btnA = document.querySelector('#A');
-    const btnB = document.querySelector('#B');
-    const btnSpace = document.querySelector('#space');
-    let startEvent, endEvent;
+    const spanScore = document.querySelector('#score');
+    const spanLevel = document.querySelector('#level');
+    const spanSpeed = document.querySelector('#speed');
 
-    if ('ontouchend' in document) {
-        startEvent = 'touchstart';
-        endEvent = 'touchend';
-    }
-    else {
-        startEvent = 'mousedown';
-        endEvent = 'mouseup';
-    }
-    btnX.addEventListener(startEvent, () => {
-        action = 'a';
-    })
-    btnY.addEventListener(startEvent, () => {
-        action = 'w';
-    })
-    btnA.addEventListener(startEvent, () => {
-        action = 's';
-    })
-    btnB.addEventListener(startEvent, () => {
-        action = 'd';
-    })
-    btnSpace.addEventListener(startEvent, () => {
-        action = ' ';
-    })
-    btnX.addEventListener(endEvent, () => {
-        action = undefined;
-    })
-    btnY.addEventListener(endEvent, () => {
-        action = undefined;
-    })
-    btnA.addEventListener(endEvent, () => {
-        action = undefined;
-    })
-    btnB.addEventListener(endEvent, () => {
-        action = undefined;
-    })
-    btnSpace.addEventListener(endEvent, () => {
-        action = undefined;
-    })
-    const gameOver = () => {
-        gameOverDialog.innerText = '游戏结束了，你的最终得分是： ' + game.status.score;
-        gameOverDialog.showModal();
-    };
+    const mainBoard = Array(mainRows).fill(undefined).map(() => Array(mainCols).fill(boardEmptyColor));
+    const subBoard = Array(subRows).fill(undefined).map(() => Array(subCols).fill(boardEmptyColor));
+    const downActions = new Set();
+    let oldActions = new Set();
 
+    //按钮控制
+
+    const inputMap = {
+        "#select": keyboard.KEY_SELECT,
+        "#start": keyboard.KEY_START,
+        "#back": keyboard.KEY_BACK,
+        "#extend": keyboard.KEY_EXTEND,
+        "#reset": keyboard.KEY_RESET,
+        "#up": keyboard.KEY_UP,
+        "#down": keyboard.KEY_DOWN,
+        "#left": keyboard.KEY_LEFT,
+        "#right": keyboard.KEY_RIGHT,
+        "#rotate": keyboard.KEY_ROTATE
+    }
+
+    const createStartEvent = keyvalue => {
+        return (event) => {
+            updateDownActions(keyvalue, true);
+        }
+    }
+    const createEndEvent = keyvalue => {
+        return (event) => {
+            updateDownActions(keyvalue, false);
+        }
+    }
+    for (const key in inputMap) {
+        const ele = document.querySelector(key);
+        ['mousedown','touchstart'].forEach(startEvent => ele.addEventListener(startEvent, createStartEvent(inputMap[key])));
+        ['mouseup','touchend'].forEach(endEvent => ele.addEventListener(endEvent, createEndEvent(inputMap[key])));
+    }
+
+    //键盘控制
+    const keymap = {
+        ArrowLeft: keyboard.KEY_LEFT,
+        ArrowRight: keyboard.KEY_RIGHT,
+        ArrowDown: keyboard.KEY_DOWN,
+        ArrowUp: keyboard.KEY_UP,
+        ' ': keyboard.KEY_ROTATE,
+        Enter: keyboard.KEY_ROTATE,
+        z: keyboard.KEY_SELECT,
+        x: keyboard.KEY_START,
+        c: keyboard.KEY_BACK,
+        v: keyboard.KEY_RESET,
+        b: keyboard.KEY_EXTEND,
+        a: keyboard.KEY_LEFT,
+        d: keyboard.KEY_RIGHT,
+        s: keyboard.KEY_DOWN,
+        w: keyboard.KEY_UP,
+        j: keyboard.KEY_ROTATE,
+        k: keyboard.KEY_ROTATE,
+        y: keyboard.KEY_SELECT,
+        u: keyboard.KEY_START,
+        i: keyboard.KEY_BACK,
+        o: keyboard.KEY_RESET,
+        p: keyboard.KEY_EXTEND,
+    }
+
+    const updateKeys = (event, down) => {
+        const newAction = keymap[event.key];
+        if (newAction) {
+            event.preventDefault();
+            updateDownActions(newAction, down);
+        }
+    }
+
+    document.addEventListener('keydown', event => updateKeys(event, true));
+    document.addEventListener('keyup', event => updateKeys(event, false));
+
+
+    //手柄控制
 
     // Button
     // 0	Bottom button in right cluster   A
@@ -150,27 +156,43 @@ import tcsgame from './tcs.js';
     // 3	Vertical axis for right stick (negative up/positive down)
 
     const bmap = {
-        0: 's',
-        1: 'd',
-        2: 'a',
-        3: 'w',
-        4: ' ',
-        5: ' ',
-        6: ' ',
-        7: ' ',
-        8: ' ',
-        9: ' ',
-        10: ' ',
-        11: ' ',
-        12: 'w',
-        13: 's',
-        14: 'a',
-        15: 'd',
-        16: ' '
+        0: keyboard.KEY_ROTATE,
+        1: keyboard.KEY_ROTATE,
+        2: keyboard.KEY_ROTATE,
+        3: keyboard.KEY_ROTATE,
+        4: keyboard.KEY_SELECT,
+        5: keyboard.KEY_START,
+        6: keyboard.KEY_BACK,
+        7: keyboard.KEY_RESET,
+        8: keyboard.KEY_SELECT,
+        9: keyboard.KEY_START,
+        10: keyboard.KEY_EXTEND,
+        11: keyboard.KEY_EXTEND,
+        12: keyboard.KEY_UP,
+        13: keyboard.KEY_DOWN,
+        14: keyboard.KEY_LEFT,
+        15: keyboard.KEY_RIGHT,
+        16: keyboard.KEY_EXTEND
+    }
+
+
+
+
+    const gameOver = () => {
+        dialogGameOver.innerText = '游戏结束了，你的最终得分是： ' + game.status.score;
+        dialogGameOver.showModal();
+    };
+    const updateDownActions = (newAction, add) => {
+        if (add) {
+            downActions.add(newAction);
+        }
+        else {
+            downActions.delete(newAction);
+        }
     }
 
     function checkGamepads() {
-        const actions = [];
+        const actions = new Set();
         if (navigator.getGamepads) {
             const gamepads = navigator.getGamepads();
             for (let i = 0; i < gamepads.length; i++) {
@@ -181,19 +203,15 @@ import tcsgame from './tcs.js';
                 for (let j = 0; j < gamepad.buttons.length; j++) {
                     let button = gamepad.buttons[j];
                     if (button.pressed) {
-                        const newAction = bmap[j];
-                        !actions.includes(newAction) && actions.push(newAction);
+                        actions.add(bmap[j]);
                     }
                 }
                 for (let j = 0; j < gamepad.axes.length; j++) {
-                    if (gamepad.axes[j] < -0.5) {
-                        lastAlex = `${i}-${j}`;
-                        const newAction = j % 2 == 0 ? 'a' : 'w';
-                        !actions.includes(newAction) && actions.push(newAction);
+                    if (gamepad.axes[j] < -0.75) {
+                        actions.add(j % 2 == 0 ? keyboard.KEY_LEFT : keyboard.KEY_UP);
                     }
-                    else if (gamepad.axes[j] > 0.5) {
-                        const newAction = j % 2 == 0 ? 'd' : 's';
-                        !actions.includes(newAction) && actions.push(newAction);
+                    else if (gamepad.axes[j] > 0.75) {
+                        actions.add(j % 2 == 0 ? keyboard.KEY_RIGHT : keyboard.KEY_DOWN);
                     }
                 }
             }
@@ -201,91 +219,94 @@ import tcsgame from './tcs.js';
         return actions;
     }
 
-    let downActions = [];
+    function startGame(ts) {
+        game = gameList[selectGameList.value];
+        game.init(ts, mainBoard, subBoard);
+        drawBoard();
+    }
 
-    const updateActions = (newAction, add) => {
-        if (add) {
-            if (!downActions.includes(newAction)) {
-                downActions.push(newAction);
+
+    const filterKeys = new Set();;
+    function collectNewAction(ts) {
+        const actions = new Set(downActions);
+        checkGamepads().forEach(s => actions.add(s));
+        if (actions.has(keyboard.KEY_SELECT)) {
+            if (!filterKeys.has(keyboard.KEY_SELECT)) {
+                filterKeys.add(keyboard.KEY_SELECT);
+                if (selectGameList.options.selectedIndex < 0 || selectGameList.options.selectedIndex >= selectGameList.options.length - 1) {
+                    selectGameList.options.selectedIndex = 0;
+                }
+                else {
+                    selectGameList.options.selectedIndex++;
+                }
             }
         }
         else {
-            const index = downActions.indexOf(newAction);
-            if (index >= 0) {
-                downActions.splice(index, 1);
+            filterKeys.delete(keyboard.KEY_SELECT);
+        }
+        if (actions.has(keyboard.KEY_START)) {
+            if (!filterKeys.has(keyboard.KEY_START)) {
+                filterKeys.add(keyboard.KEY_START);
+                startGame(ts);
             }
         }
-    }
-
-    const updateKeys = (event, down) => {
-        let newAction = undefined;
-        if (event.key === 'ArrowLeft' || event.key === 'a') {
-            newAction = 'a';
-            // 移动方块到左边
-        } else if (event.key === 'ArrowRight' || event.key === 'd') {
-            newAction = 'd';
-            // 移动方块到右边
-        } else if (event.key === 'ArrowDown' || event.key === 's') {
-            newAction = 's';
-            // 加速方块下落
-        } else if (event.key === 'ArrowUp' || event.key === 'w') {
-            newAction = 'w';
-        } else if (event.key === 'Tab' || event.key === ' ') {
-            newAction = ' ';
+        else {
+            filterKeys.delete(keyboard.KEY_START);
         }
-        if (newAction) {
-            event.preventDefault();
-            updateActions(newAction, down);
-        }
-    }
-
-    document.addEventListener('keydown', event => updateKeys(event, true));
-    document.addEventListener('keyup', event => updateKeys(event, false));
-
-    function checkAction() {
-        const newActions = checkGamepads();
-        return downActions.concat(newActions);
+        return actions;
     }
 
     function drawBoard() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.beginPath();
-        for (let r = 0; r < boardRows; r++) {
-            for (let c = 0; c < boardCols; c++) {
-                ctx.fillStyle = board[r][c];
-                ctx.fillRect(c * blockSize, r * blockSize, blockSize, blockSize);
-                ctx.strokeStyle = '#fff';
-                ctx.strokeRect(c * blockSize, r * blockSize, blockSize, blockSize);
+        mainCtx.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
+        mainCtx.beginPath();
+        for (let r = 0; r < mainRows; r++) {
+            for (let c = 0; c < mainCols; c++) {
+                mainCtx.fillStyle = mainBoard[r][c];
+                mainCtx.fillRect(c * blockSize, r * blockSize, blockSize, blockSize);
+                mainCtx.strokeStyle = '#fff';
+                mainCtx.strokeRect(c * blockSize, r * blockSize, blockSize, blockSize);
             }
         }
-        ctxNext.clearRect(0, 0, ncanvas.width, ncanvas.height);
-        ctxNext.beginPath();
-        scoreSpan.innerText = game.status.score;
-        levelSpan.innerText = game.status.level;
-        for (let r = 0; r < sboardRows; r++) {
-            for (let c = 0; c < sboardCols; c++) {
-                ctxNext.fillStyle = sboard[r][c];
-                ctxNext.fillRect(c * blockSize, r * blockSize, blockSize, blockSize);
-                ctxNext.strokeStyle = '#fff';
-                ctxNext.strokeRect(c * blockSize, r * blockSize, blockSize, blockSize);
+        subCtx.clearRect(0, 0, subCanvas.width, subCanvas.height);
+        subCtx.beginPath();
+        spanScore.innerText = game ? game.status.score : 0;
+        spanLevel.innerText = game ? game.status.level : 0;
+        spanSpeed.innerText = game ? game.status.speed : 0;
+        for (let r = 0; r < subRows; r++) {
+            for (let c = 0; c < subCols; c++) {
+                subCtx.fillStyle = subBoard[r][c];
+                subCtx.fillRect(c * blockSize, r * blockSize, blockSize, blockSize);
+                subCtx.strokeStyle = '#fff';
+                subCtx.strokeRect(c * blockSize, r * blockSize, blockSize, blockSize);
             }
         }
 
     }
 
 
+    function setDifference(left, right) {
+        const result = new Set();
+        for (let e of left) {
+            if (!right.has(e)) {
+                result.add(e);
+            }
+        }
+        return result;
+    }
 
     function gameLoop(ts) {
-        const newActions = checkAction();
-        if (!game.status.over) {
-            game.update(ts, oldActions.filter(s => !newActions.includes(s)), newActions.filter(s => !oldActions.includes(s)));
+        const newActions = collectNewAction(ts);
+        if (game && !game.status.over) {
+            game.update(ts, newActions, setDifference(oldActions, newActions), setDifference(newActions, oldActions));
             oldActions = newActions;
             drawBoard();
         }
+        if (game && game.status.over) {
+            gameOver();
+        }
         requestAnimationFrame(gameLoop);
     }
-    initBoard();
     drawBoard();
-    oldActions = checkAction();
+    oldActions = collectNewAction();
     gameLoop(performance.now());
 }();
