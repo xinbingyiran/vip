@@ -5,6 +5,7 @@ const init = (ts, mainBoard, infoBoard) => {
 const status = {
     score: 0,
     level: 0,
+    speed: 0,
     over: false,
 };
 const update = (ts, addKeys, removeKeys) => { }

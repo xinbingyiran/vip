@@ -71,7 +71,21 @@
             </div>
         </div>
     </div>
-    <dialog id="gameOverDialog"></dialog>
+    <dialog id="gameOverDialog">
+        <div style="display: flex; flex-direction: column; align-items: center; font-size: 2em;">
+            <div>游戏结束</div>
+            <div>
+                分数： <span id="dscore">0</span>
+            </div>
+            <div>
+                等级： <span id="dlevel">0</span>
+            </div>
+            <div>
+                速度： <span id="dspeed">0</span>
+            </div>
+            <button id="dclose" style="font-size: 2em;">关闭</button>
+        </div>
+    </dialog>
     <script src="./index.js" type="module"></script>
 </body>
 

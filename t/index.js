@@ -9,7 +9,8 @@ import tcsgame from './tcs.js';
         '方块标准': fkgame,
         '方块扩展': fkgameWithOptions({ hasExtend: true, hasHelper: false }),
         '方块辅助': fkgameWithOptions({ hasExtend: false, hasHelper: true }),
-        '方块扩展辅助': fkgameWithOptions({ hasExtend: true, hasHelper: true })
+        '方块扩展辅助': fkgameWithOptions({ hasExtend: true, hasHelper: true }),
+        '贪吃蛇': tcsgame
     }
 
     const selectGameList = document.querySelector('#gameList');
@@ -45,15 +46,32 @@ import tcsgame from './tcs.js';
     subCanvas.style.height = `${subCanvas.height}px`;
     const subCtx = subCanvas.getContext('2d');
 
-    const dialogGameOver = document.querySelector("#gameOverDialog");
-    dialogGameOver.addEventListener("click", () => {
-        game = undefined;
-        dialogGameOver.close();
-    });
-
     const spanScore = document.querySelector('#score');
     const spanLevel = document.querySelector('#level');
     const spanSpeed = document.querySelector('#speed');
+
+    const dialogScore = document.querySelector('#dscore');
+    const dialogLevel = document.querySelector('#dlevel');
+    const dialogSpeed = document.querySelector('#dspeed');
+    const dialogClose = document.querySelector('#dclose');
+
+    const dialogGameOver = document.querySelector("#gameOverDialog");
+    const gameOver = () => {
+        if (!dialogGameOver.open) {
+            dialogScore.innerText = game ? game.status.score : 0;
+            dialogLevel.innerText = game ? game.status.level : 0;
+            dialogSpeed.innerText = game ? game.status.speed : 0;
+            dialogGameOver.showModal();
+        }
+    };
+
+    dialogClose.addEventListener("click", () => {
+        if (dialogGameOver.open) {
+            dialogGameOver.close();
+            game = undefined;
+        }
+    });
+
 
     const mainBoard = Array(mainRows).fill(undefined).map(() => Array(mainCols).fill(boardEmptyColor));
     const subBoard = Array(subRows).fill(undefined).map(() => Array(subCols).fill(boardEmptyColor));
@@ -87,8 +105,8 @@ import tcsgame from './tcs.js';
     }
     for (const key in inputMap) {
         const ele = document.querySelector(key);
-        ['mousedown','touchstart'].forEach(startEvent => ele.addEventListener(startEvent, createStartEvent(inputMap[key])));
-        ['mouseup','touchend'].forEach(endEvent => ele.addEventListener(endEvent, createEndEvent(inputMap[key])));
+        ['mousedown', 'touchstart'].forEach(startEvent => ele.addEventListener(startEvent, createStartEvent(inputMap[key])));
+        ['mouseup', 'touchend'].forEach(endEvent => ele.addEventListener(endEvent, createEndEvent(inputMap[key])));
     }
 
     //键盘控制
@@ -178,10 +196,6 @@ import tcsgame from './tcs.js';
 
 
 
-    const gameOver = () => {
-        dialogGameOver.innerText = '游戏结束了，你的最终得分是： ' + game.status.score;
-        dialogGameOver.showModal();
-    };
     const updateDownActions = (newAction, add) => {
         if (add) {
             downActions.add(newAction);
@@ -230,6 +244,13 @@ import tcsgame from './tcs.js';
     function collectNewAction(ts) {
         const actions = new Set(downActions);
         checkGamepads().forEach(s => actions.add(s));
+        if (dialogGameOver.open) {
+            if (actions.has(keyboard.KEY_BACK)) {
+                game = undefined;
+                dialogGameOver.close();
+            }
+            return actions;
+        }
         if (actions.has(keyboard.KEY_SELECT)) {
             if (!filterKeys.has(keyboard.KEY_SELECT)) {
                 filterKeys.add(keyboard.KEY_SELECT);
@@ -269,9 +290,6 @@ import tcsgame from './tcs.js';
         }
         subCtx.clearRect(0, 0, subCanvas.width, subCanvas.height);
         subCtx.beginPath();
-        spanScore.innerText = game ? game.status.score : 0;
-        spanLevel.innerText = game ? game.status.level : 0;
-        spanSpeed.innerText = game ? game.status.speed : 0;
         for (let r = 0; r < subRows; r++) {
             for (let c = 0; c < subCols; c++) {
                 subCtx.fillStyle = subBoard[r][c];
@@ -280,6 +298,9 @@ import tcsgame from './tcs.js';
                 subCtx.strokeRect(c * blockSize, r * blockSize, blockSize, blockSize);
             }
         }
+        spanScore.innerText = game ? game.status.score : 0;
+        spanLevel.innerText = game ? game.status.level : 0;
+        spanSpeed.innerText = game ? game.status.speed : 0;
 
     }
 
