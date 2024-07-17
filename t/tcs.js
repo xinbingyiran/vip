@@ -64,7 +64,7 @@ function game(options) {
             status.over = true;
             return false;
         }
-        const sets = new Set(snake.map(s => s.y * boardRows + s.x));
+        const sets = new Set(snake.slice(0,-1).map(s => s.y * boardRows + s.x));
         if (sets.has(newy * boardRows + newx)) {
             status.over = true;
             return false;
