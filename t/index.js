@@ -10,7 +10,8 @@ import tcsgame from './tcs.js';
         '方块扩展': fkgame({ hasExtend: true, hasHelper: false }),
         '方块辅助': fkgame({ hasExtend: false, hasHelper: true }),
         '方块扩展辅助': fkgame({ hasExtend: true, hasHelper: true }),
-        '贪吃蛇': tcsgame()
+        '贪吃蛇': tcsgame({ loop: false }),
+        '贪吃蛇穿墙': tcsgame({ loop: true })
     }
 
     const selectGameList = document.querySelector('#gameList');
@@ -106,7 +107,7 @@ import tcsgame from './tcs.js';
     for (const key in inputMap) {
         const ele = document.querySelector(key);
         ['mousedown', 'touchstart'].forEach(startEvent => ele.addEventListener(startEvent, createStartEvent(inputMap[key])));
-        ['mouseup', 'touchend'].forEach(endEvent => ele.addEventListener(endEvent, createEndEvent(inputMap[key])));
+        ['mouseup', "mouseleave", 'touchend'].forEach(endEvent => ele.addEventListener(endEvent, createEndEvent(inputMap[key])));
     }
 
     //键盘控制
@@ -316,12 +317,19 @@ import tcsgame from './tcs.js';
     function drawBoard() {
         mainCtx.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
         mainCtx.beginPath();
+        const perline = blockSize / 8;
+        const perline2 = blockSize / 4;
+        const perline4 = blockSize / 2;
         for (let r = 0; r < mainRows; r++) {
             for (let c = 0; c < mainCols; c++) {
                 mainCtx.fillStyle = mainBoard[r][c];
-                mainCtx.fillRect(c * blockSize, r * blockSize, blockSize, blockSize);
-                mainCtx.strokeStyle = '#fff';
-                mainCtx.strokeRect(c * blockSize, r * blockSize, blockSize, blockSize);
+                mainCtx.fillRect(c * blockSize + 0.5, r * blockSize + 0.5, blockSize - 1, blockSize - 1);
+
+                mainCtx.fillStyle = boardEmptyColor;
+                mainCtx.fillRect(c * blockSize + perline, r * blockSize + perline, blockSize - perline2, blockSize - perline2);
+
+                mainCtx.fillStyle = mainBoard[r][c];
+                mainCtx.fillRect(c * blockSize + perline2, r * blockSize + perline2, blockSize - perline4, blockSize - perline4);
             }
         }
         subCtx.clearRect(0, 0, subCanvas.width, subCanvas.height);
@@ -329,9 +337,13 @@ import tcsgame from './tcs.js';
         for (let r = 0; r < subRows; r++) {
             for (let c = 0; c < subCols; c++) {
                 subCtx.fillStyle = subBoard[r][c];
-                subCtx.fillRect(c * blockSize, r * blockSize, blockSize, blockSize);
-                subCtx.strokeStyle = '#fff';
-                subCtx.strokeRect(c * blockSize, r * blockSize, blockSize, blockSize);
+                subCtx.fillRect(c * blockSize + 0.5, r * blockSize + 0.5, blockSize - 1, blockSize - 1);
+
+                subCtx.fillStyle = boardEmptyColor;
+                subCtx.fillRect(c * blockSize + perline, r * blockSize + perline, blockSize - perline2, blockSize - perline2);
+
+                subCtx.fillStyle = subBoard[r][c];
+                subCtx.fillRect(c * blockSize + perline2, r * blockSize + perline2, blockSize - perline4, blockSize - perline4);
             }
         }
         spanScore.innerText = game ? game.status.score : 0;

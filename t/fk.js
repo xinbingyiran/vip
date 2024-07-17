@@ -1,18 +1,18 @@
 import keys from './keyboard.js';
 
-function withOptions(options) {
+function game(options) {
     const status = {
         score: 0,
-        level: 0,
         speed: 0,
+        level: 0,
         over: true,
     };
 
     options = Object.assign({ hasExtend: false, hasHelper: false, isFreeze: false, isReverse: false }, options ?? {});
     const boardEmptyColor = 'gray';
     const scores = { 0: 0, 1: 100, 2: 300, 3: 700, 4: 1500 };
-    const levels = { 0: 1000, 1: 900, 2: 800, 3: 700, 4: 600, 5: 500, 6: 450, 7: 400, 8: 350, 9: 300, 10: 250, 11: 200, 12: 150, 13: 100, 14: 50, 15: 25, 16: 10, 17: 5, 18: 2, 19: 1, 20: 0 };
-    const colors = ["red", "green", "blue", "yellow", "purple", "orange"];
+    const speeds = { 0: 1000, 1: 900, 2: 800, 3: 700, 4: 600, 5: 500, 6: 450, 7: 400, 8: 350, 9: 300, 10: 250, 11: 200, 12: 150, 13: 100, 14: 50, 15: 25, 16: 10, 17: 5, 18: 2, 19: 1, 20: 0 };
+    const colors = ["red", "green", "blue", "purple", "orange"];
 
     let cshape, nshape, allShapes, baseBoard, mBoard, sBoard, boardRows, boardCols, currentAction;
 
@@ -23,9 +23,6 @@ function withOptions(options) {
         const fix = ~~((rows - cols) / 2);
         const ry = item.cy + fix;
         let rx = item.cx - fix;
-        // if (item.cx - fix + rows > boardCols) {
-        //     return false;
-        // }
         if (ry + cols > boardRows) {
             return false;
         }
@@ -79,7 +76,7 @@ function withOptions(options) {
         for (let r = cy + length - 1; r >= 0; r--) {
             if (r < cy) {
                 if (score == 0) {
-                    return 0;
+                    break;
                 }
                 while (r >= 0) {
                     for (let c = 0; c < boardCols; c++) {
@@ -100,7 +97,10 @@ function withOptions(options) {
         }
         if (score > 0) {
             status.score += scores[score];
-            status.level = ~~(status.score / 10000);
+            const result = ~~(status.score / 10000);
+            const speedLength = Object.keys(speeds).length;
+            status.speed = result % speedLength;
+            status.level = ~~(result / speedLength);
             for (let i = score - 1; i >= 0; i--) {
                 for (let c = 0; c < boardCols; c++) {
                     baseBoard[i][c] = boardEmptyColor;
@@ -301,7 +301,6 @@ function withOptions(options) {
         ...(options.hasHelper ? helpShapes : [])]
 
     function createShape() {
-        // 创建新的方块
         const pickShape = allShapes[~~(Math.random() * allShapes.length)];
         const color = colors[~~(Math.random() * colors.length)];
         const shape = pickShape.shape.map(row => [...row]);
@@ -379,7 +378,7 @@ function withOptions(options) {
                 baseBoard[r][c] = boardEmptyColor;
             }
         }
-        Object.assign(status, { score: 0, level: 0, over: false });
+        Object.assign(status, { score: 0, level: 0, speed: 0, over: false });
         cshape = createShape();
         nshape = createShape();
         updateBoard(ts);
@@ -391,8 +390,7 @@ function withOptions(options) {
             checkKeys(ts, keys, addKeys, removeKeys);
         }
         if (!status.over) {
-            if (ts - gtime > (levels[status.level] ?? 1) || ts < gtime) {
-                console.log(ts, gtime);
+            if (ts - gtime > (speeds[status.speed] ?? 1) || ts < gtime) {
                 gtime = ts;
                 if (!options.isFreeze) {
                     globalDown();
@@ -411,4 +409,4 @@ function withOptions(options) {
 }
 
 
-export { withOptions as default };
+export { game as default };
