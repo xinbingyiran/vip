@@ -100,11 +100,11 @@ function game(options) {
     let freezeAction = undefined;
 
     const actionMap = {
-        [keys.KEY_LEFT]: [200, 100, () => doStep([-1, 0])],
-        [keys.KEY_RIGHT]: [200, 100, () => doStep([1, 0])],
-        [keys.KEY_DOWN]: [200, 100, () => doStep([0, 1])],
-        [keys.KEY_UP]: [200, 100, () => doStep([0, -1])],
-        [keys.KEY_ROTATE]: [200, 100, () => doStep(nstep)]
+        [keys.KEY_LEFT]: [100, 50, () => doStep([-1, 0])],
+        [keys.KEY_RIGHT]: [100, 50, () => doStep([1, 0])],
+        [keys.KEY_DOWN]: [100, 50, () => doStep([0, 1])],
+        [keys.KEY_UP]: [100, 50, () => doStep([0, -1])],
+        [keys.KEY_ROTATE]: [100, 50, () => doStep(nstep)]
     };
     function randomColor() {
         return colors[~~(Math.random() * colors.length)];
