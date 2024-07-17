@@ -1,15 +1,15 @@
 
 import keyboard from './keyboard.js';
-import { default as fkgame, withOptions as fkgameWithOptions } from './fk.js';
+import { default as fkgame } from './fk.js';
 import tcsgame from './tcs.js';
 
 !function () {
 
     const gameList = {
-        '方块标准': fkgame,
-        '方块扩展': fkgameWithOptions({ hasExtend: true, hasHelper: false }),
-        '方块辅助': fkgameWithOptions({ hasExtend: false, hasHelper: true }),
-        '方块扩展辅助': fkgameWithOptions({ hasExtend: true, hasHelper: true }),
+        '方块标准': fkgame({ hasExtend: false, hasHelper: false }),
+        '方块扩展': fkgame({ hasExtend: true, hasHelper: false }),
+        '方块辅助': fkgame({ hasExtend: false, hasHelper: true }),
+        '方块扩展辅助': fkgame({ hasExtend: true, hasHelper: true }),
         '贪吃蛇': tcsgame
     }
 
@@ -234,8 +234,23 @@ import tcsgame from './tcs.js';
     }
 
     function startGame(ts) {
+        resetAll();
         game = gameList[selectGameList.value];
         game.init(ts, mainBoard, subBoard);
+    }
+
+    function resetAll(ts) {
+        game = undefined;
+        for (let r = 0; r < mainRows; r++) {
+            for (let c = 0; c < mainCols; c++) {
+                mainBoard[r][c] = boardEmptyColor;
+            }
+        }
+        for (let r = 0; r < subRows; r++) {
+            for (let c = 0; c < subCols; c++) {
+                subBoard[r][c] = boardEmptyColor;
+            }
+        }
         drawBoard();
     }
 
@@ -273,6 +288,25 @@ import tcsgame from './tcs.js';
         }
         else {
             filterKeys.delete(keyboard.KEY_START);
+        }
+        if (actions.has(keyboard.KEY_BACK)) {
+            if (!filterKeys.has(keyboard.KEY_BACK)) {
+                filterKeys.add(keyboard.KEY_BACK);
+                resetAll(ts);
+            }
+        }
+        else {
+            filterKeys.delete(keyboard.KEY_BACK);
+        }
+        if (actions.has(keyboard.KEY_RESET)) {
+            if (!filterKeys.has(keyboard.KEY_RESET)) {
+                filterKeys.add(keyboard.KEY_RESET);
+                selectGameList.selectedIndex = 0;
+                resetAll(ts);
+            }
+        }
+        else {
+            filterKeys.delete(keyboard.KEY_RESET);
         }
         return actions;
     }
