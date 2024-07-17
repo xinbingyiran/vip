@@ -73,11 +73,11 @@ function game(options) {
             snake.push(cshape);
             cshape = createShape();
             status.score += 1;
-            if(snake.length > 5){
+            if(snake.length > boardCols * boardRows - 10){
                 snake = [createShape()];
                 status.speed += 1;
                 const speedLength = Object.keys(speeds).length;
-                if(status.speed >= boardCols * boardRows - 10){
+                if(status.speed >= speedLength){
                     status.speed = 0;
                     status.level ++;
                 }
