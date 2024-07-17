@@ -182,8 +182,7 @@ import tcsgame from './tcs.js';
     //	8
     //	9               8/7 or 16/7 -7/7:lu  -3/7:lr  1/7:ld 5/7:ll
 
-
-    const alex9map = {
+    const axe9map = {
         [-7]: keyboard.KEY_UP,
         [-3]: keyboard.KEY_RIGHT,
         [1]: keyboard.KEY_DOWN,
@@ -196,8 +195,8 @@ import tcsgame from './tcs.js';
             {
                 0: keyboard.KEY_ROTATE,
                 1: keyboard.KEY_ROTATE,
-                2: keyboard.KEY_ROTATE,
-                3: keyboard.KEY_ROTATE,
+                2: keyboard.KEY_PAUSE,
+                3: keyboard.KEY_RESET,
                 4: keyboard.KEY_SELECT,
                 5: keyboard.KEY_START,
                 6: keyboard.KEY_PAUSE,
@@ -212,7 +211,7 @@ import tcsgame from './tcs.js';
                 15: keyboard.KEY_RIGHT,
                 16: keyboard.KEY_EXTEND
             },
-            alexs:
+            axes:
             {
                 0: v => v < -0.75 ? keyboard.KEY_LEFT : v > 0.75 ? keyboard.KEY_RIGHT : undefined,
                 1: v => v < -0.75 ? keyboard.KEY_UP : v > 0.75 ? keyboard.KEY_DOWN : undefined,
@@ -226,9 +225,9 @@ import tcsgame from './tcs.js';
                 0: keyboard.KEY_ROTATE,
                 1: keyboard.KEY_ROTATE,
                 2: keyboard.KEY_ROTATE,
-                3: keyboard.KEY_ROTATE,
-                4: keyboard.KEY_ROTATE,
-                5: keyboard.KEY_ROTATE,
+                3: keyboard.KEY_PAUSE,
+                4: keyboard.KEY_RESET,
+                5: keyboard.KEY_EXTEND,
                 6: keyboard.KEY_SELECT,
                 7: keyboard.KEY_START,
                 8: keyboard.KEY_PAUSE,
@@ -239,14 +238,14 @@ import tcsgame from './tcs.js';
                 13: keyboard.KEY_EXTEND,
                 14: keyboard.KEY_EXTEND
             },
-            alexs: {
+            axes: {
                 0: v => v < -0.75 ? keyboard.KEY_LEFT : v > 0.75 ? keyboard.KEY_RIGHT : undefined,
                 1: v => v < -0.75 ? keyboard.KEY_UP : v > 0.75 ? keyboard.KEY_DOWN : undefined,
                 2: v => v < -0.75 ? keyboard.KEY_LEFT : v > 0.75 ? keyboard.KEY_RIGHT : undefined,
                 3: v => v > 0.75 ? keyboard.KEY_RESET : undefined,
                 4: v => v > 0.75 ? keyboard.KEY_PAUSE : undefined,
                 5: v => v < -0.75 ? keyboard.KEY_UP : v > 0.75 ? keyboard.KEY_DOWN : undefined,
-                9: v => alex9map[~~(v * 7.001)]
+                9: v => axe9map[~~(v * 7.001)]
             }
         },
     }
@@ -262,34 +261,36 @@ import tcsgame from './tcs.js';
 
     function checkGamepads() {
         const actions = new Set();
-        if (navigator.getGamepads) {
-            const gamepads = navigator.getGamepads();
-            for (let i = 0; i < gamepads.length; i++) {
-                const gamepad = gamepads[i];
-                if (!gamepad) {
-                    continue;
-                }
-                const gamepadMap = controlMap[gamepad.mapping];
-                if (!gamepadMap) {
-                    continue;
-                }
-                const gamepadButtons = gamepadMap.buttons;
-                for (let j = 0; j < gamepad.buttons.length; j++) {
-                    let button = gamepad.buttons[j];
-                    if (button.value > 0.75) {
-                        const newAction = gamepadButtons[j];
-                        newAction && actions.add(newAction);
-                    }
-                }
-                const gamepadAlexs = gamepadMap.alexs;
-                for (let j = 0; j < gamepad.axes.length; j++) {
-                    const gamepadAlex = gamepadAlexs[j];
-                    if (!gamepadAlex) {
-                        continue;
-                    }
-                    const newAction = gamepadAlex(gamepad.axes[j]);
+        const gamepads = navigator.getGamepads ? navigator.getGamepads() : undefined;
+        if (!gamepads) {
+            return actions;
+        }
+        for (let i in gamepads) {
+            const gamepad = gamepads[i];
+            if (!gamepad) {
+                continue;
+            }
+            const mapping = (gamepad.mapping == "standard" || gamepad.axes.length == 4) ? "standard" : "";
+            const gamepadMap = controlMap[mapping];
+            if (!gamepadMap) {
+                continue;
+            }
+            const gamepadButtons = gamepadMap.buttons;
+            for (let j = 0; j < gamepad.buttons.length; j++) {
+                let button = gamepad.buttons[j];
+                if (button.value > 0.75) {
+                    const newAction = gamepadButtons[j];
                     newAction && actions.add(newAction);
                 }
+            }
+            const gamepadaxes = gamepadMap.axes;
+            for (let j = 0; j < gamepad.axes.length; j++) {
+                const gamepadAxe = gamepadaxes[j];
+                if (!gamepadAxe) {
+                    continue;
+                }
+                const newAction = gamepadAxe(gamepad.axes[j]);
+                newAction && actions.add(newAction);
             }
         }
         return actions;
