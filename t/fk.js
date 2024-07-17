@@ -392,6 +392,7 @@ function withOptions(options) {
         }
         if (!status.over) {
             if (ts - gtime > (levels[status.level] ?? 1) || ts < gtime) {
+                console.log(ts, gtime);
                 gtime = ts;
                 if (!options.isFreeze) {
                     globalDown();

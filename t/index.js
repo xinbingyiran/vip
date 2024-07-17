@@ -1,6 +1,6 @@
 
 import keyboard from './keyboard.js';
-import { default as fkgame } from './fk.js';
+import fkgame from './fk.js';
 import tcsgame from './tcs.js';
 
 !function () {
@@ -10,7 +10,7 @@ import tcsgame from './tcs.js';
         '方块扩展': fkgame({ hasExtend: true, hasHelper: false }),
         '方块辅助': fkgame({ hasExtend: false, hasHelper: true }),
         '方块扩展辅助': fkgame({ hasExtend: true, hasHelper: true }),
-        '贪吃蛇': tcsgame
+        '贪吃蛇': tcsgame()
     }
 
     const selectGameList = document.querySelector('#gameList');
@@ -83,7 +83,7 @@ import tcsgame from './tcs.js';
     const inputMap = {
         "#select": keyboard.KEY_SELECT,
         "#start": keyboard.KEY_START,
-        "#back": keyboard.KEY_BACK,
+        "#pause": keyboard.KEY_PAUSE,
         "#extend": keyboard.KEY_EXTEND,
         "#reset": keyboard.KEY_RESET,
         "#up": keyboard.KEY_UP,
@@ -119,7 +119,7 @@ import tcsgame from './tcs.js';
         Enter: keyboard.KEY_ROTATE,
         z: keyboard.KEY_SELECT,
         x: keyboard.KEY_START,
-        c: keyboard.KEY_BACK,
+        c: keyboard.KEY_PAUSE,
         v: keyboard.KEY_RESET,
         b: keyboard.KEY_EXTEND,
         a: keyboard.KEY_LEFT,
@@ -130,7 +130,7 @@ import tcsgame from './tcs.js';
         k: keyboard.KEY_ROTATE,
         y: keyboard.KEY_SELECT,
         u: keyboard.KEY_START,
-        i: keyboard.KEY_BACK,
+        i: keyboard.KEY_PAUSE,
         o: keyboard.KEY_RESET,
         p: keyboard.KEY_EXTEND,
     }
@@ -180,7 +180,7 @@ import tcsgame from './tcs.js';
         3: keyboard.KEY_ROTATE,
         4: keyboard.KEY_SELECT,
         5: keyboard.KEY_START,
-        6: keyboard.KEY_BACK,
+        6: keyboard.KEY_PAUSE,
         7: keyboard.KEY_RESET,
         8: keyboard.KEY_SELECT,
         9: keyboard.KEY_START,
@@ -241,6 +241,7 @@ import tcsgame from './tcs.js';
 
     function resetAll(ts) {
         game = undefined;
+        pause = false;
         for (let r = 0; r < mainRows; r++) {
             for (let c = 0; c < mainCols; c++) {
                 mainBoard[r][c] = boardEmptyColor;
@@ -255,12 +256,13 @@ import tcsgame from './tcs.js';
     }
 
 
-    const filterKeys = new Set();;
+    const filterKeys = new Set();
+    let pause = false;
     function collectNewAction(ts) {
         const actions = new Set(downActions);
         checkGamepads().forEach(s => actions.add(s));
         if (dialogGameOver.open) {
-            if (actions.has(keyboard.KEY_BACK)) {
+            if (actions.has(keyboard.KEY_PAUSE)) {
                 game = undefined;
                 dialogGameOver.close();
             }
@@ -289,14 +291,14 @@ import tcsgame from './tcs.js';
         else {
             filterKeys.delete(keyboard.KEY_START);
         }
-        if (actions.has(keyboard.KEY_BACK)) {
-            if (!filterKeys.has(keyboard.KEY_BACK)) {
-                filterKeys.add(keyboard.KEY_BACK);
-                resetAll(ts);
+        if (actions.has(keyboard.KEY_PAUSE)) {
+            if (!filterKeys.has(keyboard.KEY_PAUSE)) {
+                filterKeys.add(keyboard.KEY_PAUSE);
+                pause = !pause;
             }
         }
         else {
-            filterKeys.delete(keyboard.KEY_BACK);
+            filterKeys.delete(keyboard.KEY_PAUSE);
         }
         if (actions.has(keyboard.KEY_RESET)) {
             if (!filterKeys.has(keyboard.KEY_RESET)) {
@@ -349,15 +351,24 @@ import tcsgame from './tcs.js';
         return result;
     }
 
+    let gameTime = 0;
+    let lastts = 0;
+
     function gameLoop(ts) {
-        const newActions = collectNewAction(ts);
-        if (game && !game.status.over) {
-            game.update(ts, newActions, setDifference(oldActions, newActions), setDifference(newActions, oldActions));
-            oldActions = newActions;
-            drawBoard();
+        if (!pause) {
+            gameTime += ts - lastts;
         }
-        if (game && game.status.over) {
-            gameOver();
+        lastts = ts;
+        const newActions = collectNewAction(gameTime);
+        if (!pause) {
+            if (game && !game.status.over) {
+                game.update(gameTime, newActions, setDifference(oldActions, newActions), setDifference(newActions, oldActions));
+                oldActions = newActions;
+                drawBoard();
+            }
+            if (game && game.status.over) {
+                gameOver();
+            }
         }
         requestAnimationFrame(gameLoop);
     }
