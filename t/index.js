@@ -149,53 +149,107 @@ import tcsgame from './tcs.js';
 
 
     //手柄控制
+    // standard 17-4
+    // ""       15-10-MGV2170
 
-    // Button
-    // 0	Bottom button in right cluster   A
-    // 1	Right button in right cluster    B
-    // 2	Left button in right cluster     X
-    // 3	Top button in right cluster      Y
-    // 4	Top left front button            LT
-    // 5	Top right front button           RT
-    // 6	Bottom left front button         LB
-    // 7	Bottom right front button        RB
-    // 8	Left button in center cluster    Select
-    // 9	Right button in center cluster   Start
-    // 10	Left stick pressed button        LStick
-    // 11	Right stick pressed button       RStick
-    // 12	Top button in left cluster       Up
-    // 13	Bottom button in left cluster    Down
-    // 14	Left button in left cluster      Left
-    // 15	Right button in left cluster     Right
-    // 16	Center button in center cluster  Menu
-    // axes	
-    // 0	Horizontal axis for left stick (negative left/positive right)
-    // 1	Vertical axis for left stick (negative up/positive down)
-    // 2	Horizontal axis for right stick (negative left/positive right)
-    // 3	Vertical axis for right stick (negative up/positive down)
+    //	Button	17		15		
+    //	0		A		A
+    //	1		B		B
+    //	2		X		C
+    //	3		Y		X
+    //	4		LT		Y
+    //	5		RT		Z
+    //	6		LB		LT
+    //	7		RB		RT
+    //	8		Select	LB
+    //	9		Start	RB
+    //	10		LStick	Select
+    //	11		RStick	Start
+    //	12		Up		Home
+    //	13		Down	LStick
+    //	14		Left	RStick
+    //	15		Right
+    //	16		Menu
+    //	axes	4       10
+    //	0	l-lr		l-lr
+    //	1	l-ud		l-ud
+    //	2	r-lr		r-lr
+    //	3	r-ud        -1   1:RB
+    //	4               -1   1:LB
+    //	5
+    //	6		        r-ud
+    //	7
+    //	8
+    //	9               8/7 or 16/7 -7/7:lu  -3/7:lr  1/7:ld 5/7:ll
 
-    const bmap = {
-        0: keyboard.KEY_ROTATE,
-        1: keyboard.KEY_ROTATE,
-        2: keyboard.KEY_ROTATE,
-        3: keyboard.KEY_ROTATE,
-        4: keyboard.KEY_SELECT,
-        5: keyboard.KEY_START,
-        6: keyboard.KEY_PAUSE,
-        7: keyboard.KEY_RESET,
-        8: keyboard.KEY_SELECT,
-        9: keyboard.KEY_START,
-        10: keyboard.KEY_EXTEND,
-        11: keyboard.KEY_EXTEND,
-        12: keyboard.KEY_UP,
-        13: keyboard.KEY_DOWN,
-        14: keyboard.KEY_LEFT,
-        15: keyboard.KEY_RIGHT,
-        16: keyboard.KEY_EXTEND
+
+    const alex9map = {
+        [-7]: keyboard.KEY_UP,
+        [-3]: keyboard.KEY_RIGHT,
+        [1]: keyboard.KEY_DOWN,
+        [5]: keyboard.KEY_LEFT,
+    };
+    const controlMap = {
+        "standard":
+        {
+            buttons:
+            {
+                0: keyboard.KEY_ROTATE,
+                1: keyboard.KEY_ROTATE,
+                2: keyboard.KEY_ROTATE,
+                3: keyboard.KEY_ROTATE,
+                4: keyboard.KEY_SELECT,
+                5: keyboard.KEY_START,
+                6: keyboard.KEY_PAUSE,
+                7: keyboard.KEY_RESET,
+                8: keyboard.KEY_SELECT,
+                9: keyboard.KEY_START,
+                10: keyboard.KEY_EXTEND,
+                11: keyboard.KEY_EXTEND,
+                12: keyboard.KEY_UP,
+                13: keyboard.KEY_DOWN,
+                14: keyboard.KEY_LEFT,
+                15: keyboard.KEY_RIGHT,
+                16: keyboard.KEY_EXTEND
+            },
+            alexs:
+            {
+                0: v => v < -0.75 ? keyboard.KEY_LEFT : v > 0.75 ? keyboard.KEY_RIGHT : undefined,
+                1: v => v < -0.75 ? keyboard.KEY_UP : v > 0.75 ? keyboard.KEY_DOWN : undefined,
+                2: v => v < -0.75 ? keyboard.KEY_LEFT : v > 0.75 ? keyboard.KEY_RIGHT : undefined,
+                3: v => v < -0.75 ? keyboard.KEY_UP : v > 0.75 ? keyboard.KEY_DOWN : undefined
+            }
+        },
+        "":
+        {
+            buttons: {
+                0: keyboard.KEY_ROTATE,
+                1: keyboard.KEY_ROTATE,
+                2: keyboard.KEY_ROTATE,
+                3: keyboard.KEY_ROTATE,
+                4: keyboard.KEY_ROTATE,
+                5: keyboard.KEY_ROTATE,
+                6: keyboard.KEY_SELECT,
+                7: keyboard.KEY_START,
+                8: keyboard.KEY_PAUSE,
+                9: keyboard.KEY_RESET,
+                10: keyboard.KEY_SELECT,
+                11: keyboard.KEY_START,
+                12: keyboard.KEY_RESET,
+                13: keyboard.KEY_EXTEND,
+                14: keyboard.KEY_EXTEND
+            },
+            alexs: {
+                0: v => v < -0.75 ? keyboard.KEY_LEFT : v > 0.75 ? keyboard.KEY_RIGHT : undefined,
+                1: v => v < -0.75 ? keyboard.KEY_UP : v > 0.75 ? keyboard.KEY_DOWN : undefined,
+                2: v => v < -0.75 ? keyboard.KEY_LEFT : v > 0.75 ? keyboard.KEY_RIGHT : undefined,
+                3: v => v > 0.75 ? keyboard.KEY_RESET : undefined,
+                4: v => v > 0.75 ? keyboard.KEY_PAUSE : undefined,
+                5: v => v < -0.75 ? keyboard.KEY_UP : v > 0.75 ? keyboard.KEY_DOWN : undefined,
+                9: v => alex9map[~~(v * 7.001)]
+            }
+        },
     }
-
-
-
 
     const updateDownActions = (newAction, add) => {
         if (add) {
@@ -211,23 +265,30 @@ import tcsgame from './tcs.js';
         if (navigator.getGamepads) {
             const gamepads = navigator.getGamepads();
             for (let i = 0; i < gamepads.length; i++) {
-                let gamepad = gamepads[i];
+                const gamepad = gamepads[i];
                 if (!gamepad) {
                     continue;
                 }
+                const gamepadMap = controlMap[gamepad.mapping];
+                if (!gamepadMap) {
+                    continue;
+                }
+                const gamepadButtons = gamepadMap.buttons;
                 for (let j = 0; j < gamepad.buttons.length; j++) {
                     let button = gamepad.buttons[j];
-                    if (button.pressed) {
-                        actions.add(bmap[j]);
+                    if (button.value > 0.75) {
+                        const newAction = gamepadButtons[j];
+                        newAction && actions.add(newAction);
                     }
                 }
+                const gamepadAlexs = gamepadMap.alexs;
                 for (let j = 0; j < gamepad.axes.length; j++) {
-                    if (gamepad.axes[j] < -0.75) {
-                        actions.add(j % 2 == 0 ? keyboard.KEY_LEFT : keyboard.KEY_UP);
+                    const gamepadAlex = gamepadAlexs[j];
+                    if (!gamepadAlex) {
+                        continue;
                     }
-                    else if (gamepad.axes[j] > 0.75) {
-                        actions.add(j % 2 == 0 ? keyboard.KEY_RIGHT : keyboard.KEY_DOWN);
-                    }
+                    const newAction = gamepadAlex(gamepad.axes[j]);
+                    newAction && actions.add(newAction);
                 }
             }
         }
