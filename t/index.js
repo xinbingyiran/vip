@@ -25,7 +25,8 @@ import tcsgame from './tcs.js';
     const blockSizeCalc = ~~(maxWidth / 17);
     const blockSize = blockSizeCalc < 10 ? 10 : blockSizeCalc > 40 ? 40 : blockSizeCalc;
     const mainCols = 10;
-    const mainRows = ~~((document.body.clientHeight - 20) / blockSize);
+    const mainRowsCalc = ~~((document.body.clientHeight - 20) / blockSize);
+    const mainRows = mainRowsCalc < 15 ? 15 : mainRowsCalc > 25 ? 25 : mainRowsCalc;
 
     const mainDiv = document.querySelector('#game');
     mainDiv.style.width = `${maxWidth}px`;
@@ -91,7 +92,7 @@ import tcsgame from './tcs.js';
         "#down": keyboard.KEY_DOWN,
         "#left": keyboard.KEY_LEFT,
         "#right": keyboard.KEY_RIGHT,
-        "#rotate": keyboard.KEY_ROTATE
+        "#action": keyboard.KEY_ACTION
     }
 
     const createStartEvent = keyvalue => {
@@ -116,8 +117,8 @@ import tcsgame from './tcs.js';
         ArrowRight: keyboard.KEY_RIGHT,
         ArrowDown: keyboard.KEY_DOWN,
         ArrowUp: keyboard.KEY_UP,
-        ' ': keyboard.KEY_ROTATE,
-        Enter: keyboard.KEY_ROTATE,
+        ' ': keyboard.KEY_ACTION,
+        Enter: keyboard.KEY_ACTION,
         z: keyboard.KEY_SELECT,
         x: keyboard.KEY_START,
         c: keyboard.KEY_PAUSE,
@@ -127,8 +128,8 @@ import tcsgame from './tcs.js';
         d: keyboard.KEY_RIGHT,
         s: keyboard.KEY_DOWN,
         w: keyboard.KEY_UP,
-        j: keyboard.KEY_ROTATE,
-        k: keyboard.KEY_ROTATE,
+        j: keyboard.KEY_ACTION,
+        k: keyboard.KEY_ACTION,
         y: keyboard.KEY_SELECT,
         u: keyboard.KEY_START,
         i: keyboard.KEY_PAUSE,
@@ -193,8 +194,8 @@ import tcsgame from './tcs.js';
         {
             buttons:
             {
-                0: keyboard.KEY_ROTATE,
-                1: keyboard.KEY_ROTATE,
+                0: keyboard.KEY_ACTION,
+                1: keyboard.KEY_ACTION,
                 2: keyboard.KEY_PAUSE,
                 3: keyboard.KEY_RESET,
                 4: keyboard.KEY_SELECT,
@@ -222,9 +223,9 @@ import tcsgame from './tcs.js';
         "":
         {
             buttons: {
-                0: keyboard.KEY_ROTATE,
-                1: keyboard.KEY_ROTATE,
-                2: keyboard.KEY_ROTATE,
+                0: keyboard.KEY_ACTION,
+                1: keyboard.KEY_ACTION,
+                2: keyboard.KEY_ACTION,
                 3: keyboard.KEY_PAUSE,
                 4: keyboard.KEY_RESET,
                 5: keyboard.KEY_EXTEND,
@@ -325,7 +326,7 @@ import tcsgame from './tcs.js';
         const actions = new Set(downActions);
         checkGamepads().forEach(s => actions.add(s));
         if (dialogGameOver.open) {
-            if (actions.has(keyboard.KEY_PAUSE)) {
+            if (actions.has(keyboard.KEY_SELECT) || actions.has(keyboard.KEY_START)) {
                 game = undefined;
                 dialogGameOver.close();
             }

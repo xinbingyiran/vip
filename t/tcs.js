@@ -8,11 +8,13 @@ function game(options) {
         over: true,
     };
 
+    const maxLevel = 30;
+
     options = Object.assign({ loop: false }, options ?? {});
 
     const boardEmptyColor = 'gray';
     const colors = ["red", "green", "blue", "purple", "orange"];
-    const speeds = { 0: 1000, 1: 900, 2: 800, 3: 700, 4: 600, 5: 500, 6: 450, 7: 400, 8: 350, 9: 300, 10: 250, 11: 200, 12: 150, 13: 100, 14: 50, 15: 25, 16: 10, 17: 5, 18: 2, 19: 1, 20: 0 };
+    const speeds = { 0: 1000, 1: 900, 2: 800, 3: 700, 4: 600, 5: 500, 6: 450, 7: 400, 8: 350, 9: 300, 10: 250, 11: 200, 12: 150, 13: 100, 14: 50, 15: 25, 16: 10 };
 
 
     let mBoard, sBoard, boardRows, boardCols, cshape, ncolor, snake, nstep;
@@ -51,6 +53,32 @@ function game(options) {
         return { ...item, color };
     }
 
+    function newSnake() {
+        ncolor = randomColor();
+        snake = [{ x: ~~(boardCols / 2), y: ~~(boardRows / 2), color: randomColor() }];
+        cshape = createShape();
+        const steps = [[0, 1], [1, 0], [0, -1], [-1, 0]];
+        nstep = steps[~~(Math.random() * steps.length)];
+    }
+
+    function nextLevel() {
+        const overPoint = boardCols * boardRows - maxLevel + status.level - snake.length;
+        if (overPoint > 0) {
+            status.score += overPoint * 100;
+        }
+        status.speed += 1;
+        const speedLength = Object.keys(speeds).length;
+        if (status.speed >= speedLength) {
+            status.speed = 0;
+            status.level++;
+            if (status.level > maxLevel) {
+                status.over = true;
+                return;
+            }
+        }
+        newSnake();
+    }
+
     function doStep(step) {
         if (step[0] + nstep[0] === 0 && step[1] + nstep[1] === 0) {
             return false;
@@ -64,7 +92,7 @@ function game(options) {
             status.over = true;
             return false;
         }
-        const sets = new Set(snake.slice(0,-1).map(s => s.y * boardRows + s.x));
+        const sets = new Set(snake.slice(0, -1).map(s => s.y * boardRows + s.x));
         if (sets.has(newy * boardRows + newx)) {
             status.over = true;
             return false;
@@ -72,15 +100,9 @@ function game(options) {
         if (cshape.x === newx && cshape.y === newy) {
             snake.push(cshape);
             cshape = createShape();
-            status.score += 1;
-            if(snake.length > boardCols * boardRows - 10){
-                snake = [createShape()];
-                status.speed += 1;
-                const speedLength = Object.keys(speeds).length;
-                if(status.speed >= speedLength){
-                    status.speed = 0;
-                    status.level ++;
-                }
+            status.score += 100;
+            if (snake.length >= boardCols * boardRows - maxLevel + status.level) {
+                nextLevel();
             }
         }
         for (let i = snake.length - 1; i > 0; i--) {
@@ -104,7 +126,8 @@ function game(options) {
         [keys.KEY_RIGHT]: [100, 50, () => doStep([1, 0])],
         [keys.KEY_DOWN]: [100, 50, () => doStep([0, 1])],
         [keys.KEY_UP]: [100, 50, () => doStep([0, -1])],
-        [keys.KEY_ROTATE]: [100, 50, () => doStep(nstep)]
+        [keys.KEY_ACTION]: [100, 50, () => doStep(nstep)],
+        [keys.KEY_EXTEND]: [3000, 1000, () => nextLevel()]
     };
     function randomColor() {
         return colors[~~(Math.random() * colors.length)];
@@ -142,8 +165,6 @@ function game(options) {
             lastAction = undefined;
         }
     }
-
-
     const init = (ts, mainBoard, subBoard) => {
         mBoard = mainBoard;
         sBoard = subBoard;
@@ -155,12 +176,8 @@ function game(options) {
                 mBoard[r][c] = boardEmptyColor;
             }
         }
-        ncolor = randomColor();
-        snake = [{ x: ~~(boardCols / 2), y: ~~(boardRows / 2), color: randomColor() }];
-        const steps = [[0, 1], [1, 0], [0, -1], [-1, 0]];
-        nstep = steps[~~(Math.random() * steps.length)];
-        Object.assign(status, { score: 0, level: 0, over: false });
-        cshape = createShape();
+        Object.assign(status, { score: 0, level: 0, speed: 0, over: false });
+        newSnake();
     }
 
     let gtime = 0;

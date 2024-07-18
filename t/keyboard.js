@@ -8,7 +8,7 @@ const keyboard = {
     KEY_DOWN: "down",
     KEY_LEFT: "left",
     KEY_RIGHT: "right",
-    KEY_ROTATE: "rotate"
+    KEY_ACTION: "action"
 };
 
 export default keyboard;

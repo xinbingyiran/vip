@@ -8,10 +8,12 @@ function game(options) {
         over: true,
     };
 
+    const maxLevel = 10000;
+
     options = Object.assign({ hasExtend: false, hasHelper: false, isFreeze: false, isReverse: false }, options ?? {});
     const boardEmptyColor = 'gray';
     const scores = { 0: 0, 1: 100, 2: 300, 3: 700, 4: 1500 };
-    const speeds = { 0: 1000, 1: 900, 2: 800, 3: 700, 4: 600, 5: 500, 6: 450, 7: 400, 8: 350, 9: 300, 10: 250, 11: 200, 12: 150, 13: 100, 14: 50, 15: 25, 16: 10, 17: 5, 18: 2, 19: 1, 20: 0 };
+    const speeds = { 0: 1000, 1: 900, 2: 800, 3: 700, 4: 600, 5: 500, 6: 450, 7: 400, 8: 350, 9: 300, 10: 250, 11: 200, 12: 150, 13: 100, 14: 50, 15: 25, 16: 10 };
     const colors = ["red", "green", "blue", "purple", "orange"];
 
     let cshape, nshape, allShapes, baseBoard, mBoard, sBoard, boardRows, boardCols, currentAction;
@@ -106,6 +108,9 @@ function game(options) {
                     baseBoard[i][c] = boardEmptyColor;
                 }
             }
+            if (level > maxLevel) {
+                status.over = true;
+            }
         }
         return score;
     }
@@ -125,7 +130,8 @@ function game(options) {
         if (item.cy < 0) {
             let overLine = item.cy;
             while (overLine < 0 && ll > 0) {
-                overLine++; ll--;
+                overLine++;
+                ll--;
                 const row = item.shape[-overLine];
                 for (var i = 0; i < row.length; i++) {
                     if (row[i]) {
@@ -324,7 +330,7 @@ function game(options) {
         [keys.KEY_RIGHT]: [100, 0, () => moveItem(cshape, 1)],
         [keys.KEY_DOWN]: [100, 0, globalDown],
         [keys.KEY_UP]: [200, 50, () => cshape.upAction(cshape)],
-        [keys.KEY_ROTATE]: [200, 50, () => cshape.upAction(cshape)],
+        [keys.KEY_ACTION]: [200, 50, () => cshape.upAction(cshape)],
         [keys.KEY_EXTEND]: [100, 100, () => nshape = createShape()]
     };
 
