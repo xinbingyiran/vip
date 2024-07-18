@@ -223,6 +223,13 @@ function game(options) {
         var ex = item.cx + item.shape[0].length + 1;
         var sy = item.cy;
         var ey = item.cy + item.shape.length + 3;
+        if(ey > boardRows){
+            ey = boardRows;
+            if(ey - sy < 4){
+                sy = ey - 4;
+            }
+        }
+
         const bombItems = [];
         for (let r = sy; r < ey; r++) {
             if (r < 0 || r >= boardRows) {
@@ -241,14 +248,15 @@ function game(options) {
 
         const bombMaping = [];
         const bombMaping2 = [];
+        const bombY = ~~((sy + ey) / 2) - 2;
         for (let rows = 0; rows < 4; rows++) {
-            if (item.cy + rows < 0 || item.cy + rows >= boardRows) {
+            if (bombY + rows < 0 || bombY + rows >= boardRows) {
                 continue;
             }
             for (var cols = 0; cols < 4; cols++) {
                 let match = (cols == rows) || (cols + rows == 3);
-                bombMaping.push([item.cx + cols, item.cy + rows, (match ? item.color : boardEmptyColor)]);
-                bombMaping2.push([item.cx + cols, item.cy + rows, (!match ? item.color : boardEmptyColor)]);
+                bombMaping.push([item.cx + cols, bombY + rows, (match ? item.color : boardEmptyColor)]);
+                bombMaping2.push([item.cx + cols, bombY + rows, (!match ? item.color : boardEmptyColor)]);
             }
         }
 
