@@ -13,6 +13,7 @@ function game(options) {
     options = Object.assign({ loop: false }, options ?? {});
 
     const boardEmptyColor = 'gray';
+    const snakeColor = '#000';
     const colors = ["red", "green", "blue", "purple", "orange"];
     const speeds = { 0: 1000, 1: 900, 2: 800, 3: 700, 4: 600, 5: 500, 6: 450, 7: 400, 8: 350, 9: 300, 10: 250, 11: 200, 12: 150, 13: 100, 14: 50, 15: 25, 16: 10 };
 
@@ -24,9 +25,11 @@ function game(options) {
         mBoard.forEach(row => row.fill(boardEmptyColor));
         snake.forEach(value => mBoard[value.y][value.x] = value.color);
 
-        (~~ts % 300) > 150 && (mBoard[snake[0].y][snake[0].x] = "transparent");
+        //(~~ts % 300) > 150 && (mBoard[snake[0].y][snake[0].x] = "transparent");
 
-        cshape && (mBoard[cshape.y][cshape.x] = cshape.color);
+        if (cshape) {
+            mBoard[cshape.y][cshape.x] = (~~ts % 300) > 150 ? cshape.color : "transparent";
+        }
 
         sBoard.forEach(row => row.fill(boardEmptyColor));
         sBoard[1][1] = ncolor;
@@ -55,10 +58,15 @@ function game(options) {
 
     function newSnake() {
         ncolor = randomColor();
-        snake = [{ x: ~~(boardCols / 2), y: ~~(boardRows / 2), color: randomColor() }];
+        const initColor = randomColor();
+        snake = [
+            { x: ~~(boardCols / 2) + 1, y: ~~(boardRows / 2), color: snakeColor },
+            { x: ~~(boardCols / 2), y: ~~(boardRows / 2), color: initColor },
+            { x: ~~(boardCols / 2) - 1, y: ~~(boardRows / 2), color: initColor },
+            { x: ~~(boardCols / 2) - 2, y: ~~(boardRows / 2), color: initColor }];
         cshape = createShape();
-        const steps = [[0, 1], [1, 0], [0, -1], [-1, 0]];
-        nstep = steps[~~(Math.random() * steps.length)];
+        //const steps = [[0, 1], [1, 0], [0, -1], [-1, 0]];
+        nstep = [1, 0];//steps[~~(Math.random() * steps.length)];
     }
 
     function nextLevel() {
@@ -83,7 +91,7 @@ function game(options) {
         if (step[0] + nstep[0] === 0 && step[1] + nstep[1] === 0) {
             return false;
         }
-        let newx = snake[0].x + step[0], newy = snake[0].y + step[1];
+        let newx = snake[0].x + step[0], newy = snake[0].y + step[1],newColor = undefined;
         if (options.loop) {
             newx = (newx + boardCols) % boardCols;
             newy = (newy + boardRows) % boardRows;
@@ -98,6 +106,7 @@ function game(options) {
             return false;
         }
         if (cshape.x === newx && cshape.y === newy) {
+            newColor = cshape.color;
             snake.push(cshape);
             cshape = createShape();
             status.score += 100;
@@ -108,6 +117,7 @@ function game(options) {
         for (let i = snake.length - 1; i > 0; i--) {
             snake[i].x = snake[i - 1].x;
             snake[i].y = snake[i - 1].y;
+            newColor && (snake[i].color = newColor);
         }
         snake[0].x = newx;
         snake[0].y = newy;
