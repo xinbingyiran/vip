@@ -24,11 +24,8 @@ function game(options) {
 
         mBoard.forEach(row => row.fill(boardEmptyColor));
         snake.forEach(value => mBoard[value.y][value.x] = value.color);
-
-        //(~~ts % 300) > 150 && (mBoard[snake[0].y][snake[0].x] = "transparent");
-
         if (cshape) {
-            mBoard[cshape.y][cshape.x] = (~~ts % 300) > 150 ? cshape.color : "transparent";
+            mBoard[cshape.y][cshape.x] = (~~ts % 300) > 150 ? cshape.color : boardEmptyColor;
         }
 
         sBoard.forEach(row => row.fill(boardEmptyColor));
