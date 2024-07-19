@@ -10,10 +10,8 @@ function game(options) {
 
     const maxLevel = 10000;
 
-    const dhItems = {
-        timeActions: undefined,
-        postAction: undefined
-    };
+    let pauseCallback = undefined;
+    let shapeCallbacks = new Set();
 
     options = Object.assign({ hasExtend: false, hasHelper: false, isFreeze: false, isReverse: false }, options ?? {});
     const boardEmptyColor = 'gray';
@@ -73,20 +71,32 @@ function game(options) {
         return array.every(([x, y]) => x >= 0 && x < boardCols && (y < 0 || (y < boardRows && baseBoard[y][x] === boardEmptyColor)));
     };
 
-    function createPostAction(lines, overLines) {
-        return (ts) => {
-            lines.forEach(line => baseBoard.splice(line, 1))
-            overLines.forEach(line => baseBoard.unshift(line));
-            for (let r = 0; r < lines.length - overLines.length; r++) {
-                baseBoard.unshift([...emptyCols]);
+    function createScorePauseCallback(ts, lines, overLines) {
+        pauseCallback = (newTs) => {
+            let ets = ~~((newTs - ts) / 20);
+            if (ets > 11) {
+                lines.forEach(line => baseBoard.splice(line, 1))
+                overLines.forEach(line => baseBoard.unshift(line));
+                for (let r = 0; r < lines.length - overLines.length; r++) {
+                    baseBoard.unshift([...emptyCols]);
+                }
+                status.score += scores[lines.length];
+                const result = ~~(status.score / 10000);
+                const speedLength = Object.keys(speeds).length;
+                status.speed = result % speedLength;
+                status.level = ~~(result / speedLength);
+                if (status.level > maxLevel) {
+                    status.over = true;
+                }
+                return false;
             }
-            status.score += scores[lines.length];
-            const result = ~~(status.score / 10000);
-            const speedLength = Object.keys(speeds).length;
-            status.speed = result % speedLength;
-            status.level = ~~(result / speedLength);
-            if (status.level > maxLevel) {
-                status.over = true;
+            else {
+                while (--ets >= 0) {
+                    lines.forEach(line => {
+                        baseBoard[line][ets] = boardEmptyColor;
+                    });
+                }
+                return true;
             }
         }
     }
@@ -103,13 +113,7 @@ function game(options) {
             return 0;
         }
         if (lines.length > 0) {
-            dhItems.postAction = createPostAction(lines, overLines);
-            dhItems.timeActions = [
-                ...emptyCols.map((_, i) => ({
-                    time: ts + 20 + i * 20,
-                    mapping: lines.map(r => [i, r, boardEmptyColor])
-                }))
-            ]
+            createScorePauseCallback(ts, lines, overLines);
         }
         return lines.length;
     }
@@ -195,12 +199,34 @@ function game(options) {
     }
     const cancelUp = (ts, item) => {
         const x = item.cx;
-        const y = item.cy + item.shape.length;
+        const y = item.cy + item.shape.length >= 0 ? item.cy + item.shape.length : 0;
+
+        let actionY = y - 1;
         for (let r = y; r < boardRows; r++) {
             if (baseBoard[r][x] !== boardEmptyColor) {
-                baseBoard[r][x] = boardEmptyColor
-                return;
+                actionY = r;
+                break;
             }
+        }
+        const toY = actionY >= y ? (actionY - 1) : (boardRows - 1);
+        if (toY < y) {
+            if (actionY >= y) {
+                baseBoard[actionY][x] = boardEmptyColor;
+            }
+        }
+        else {
+            const color = item.color;
+            shapeCallbacks.add(newTs => {
+                let ets = ~~((newTs - ts) / 5);
+                if (y + ets > toY) {
+                    if (actionY >= y) {
+                        baseBoard[actionY][x] = boardEmptyColor;
+                    }
+                    return false;
+                }
+                mBoard[y + ets][x] = color;
+                return true;
+            });
         }
     }
 
@@ -209,12 +235,36 @@ function game(options) {
     const addtionlUp = (ts, item) => {
         const x = item.cx;
         const y = item.cy + item.shape.length >= 0 ? item.cy + item.shape.length : 0;
+        let actionY = y - 1;
         for (let r = y; r < boardRows; r++) {
             if ((r == boardRows - 1 || baseBoard[r + 1][x] !== boardEmptyColor)) {
-                baseBoard[r][x] = item.color
-                calcScore(ts, r, r, []);
+                actionY = r;
+                break;
+            }
+        }
+        const toY = actionY >= y ? (actionY - 1) : (boardRows - 1);
+        if (toY < y) {
+            if (actionY >= y) {
+                baseBoard[actionY][x] = item.color
+                calcScore(ts, actionY, actionY, []);
                 return;
             }
+        }
+        else {
+            const color = item.color;
+            shapeCallbacks.add(newTs => {
+                let ets = ~~((newTs - ts) / 5);
+                if (y + ets > toY) {
+                    if (actionY >= y) {
+                        baseBoard[actionY][x] = color;
+                        calcScore(ts, actionY, actionY, []);
+                        return;
+                    }
+                    return false;
+                }
+                mBoard[y + ets][x] = color;
+                return true;
+            });
         }
     }
 
@@ -223,9 +273,9 @@ function game(options) {
         var ex = item.cx + item.shape[0].length + 1;
         var sy = item.cy;
         var ey = item.cy + item.shape.length + 3;
-        if(ey > boardRows){
+        if (ey > boardRows) {
             ey = boardRows;
-            if(ey - sy < 4){
+            if (ey - sy < 4) {
                 sy = ey - 4;
             }
         }
@@ -246,8 +296,7 @@ function game(options) {
         }
         bombItems.forEach(([c, r]) => baseBoard[r][c] = boardEmptyColor);
 
-        const bombMaping = [];
-        const bombMaping2 = [];
+        const bombMaping = [[], []];
         const bombY = ~~((sy + ey) / 2) - 2;
         for (let rows = 0; rows < 4; rows++) {
             if (bombY + rows < 0 || bombY + rows >= boardRows) {
@@ -255,34 +304,19 @@ function game(options) {
             }
             for (var cols = 0; cols < 4; cols++) {
                 let match = (cols == rows) || (cols + rows == 3);
-                bombMaping.push([item.cx + cols, bombY + rows, (match ? item.color : boardEmptyColor)]);
-                bombMaping2.push([item.cx + cols, bombY + rows, (!match ? item.color : boardEmptyColor)]);
+                bombMaping[match ? 0 : 1].push([item.cx + cols, bombY + rows, item.color]);
             }
         }
-
-        dhItems.timeActions = [
-            {
-                time: ts,
-                mapping: bombMaping2
-            },
-            {
-                time: ts + 100,
-                mapping: bombMaping
-            },
-            {
-                time: ts + 200,
-                mapping: bombMaping2
-            },
-            {
-                time: ts + 300,
-                mapping: bombMaping
-            },
-            {
-                time: ts + 400,
-                mapping: bombMaping2
+        pauseCallback = (newTs) => {
+            const ets = ~~((newTs - ts) / 100);
+            if (ets > 4) {
+                return false;
             }
-        ]
-
+            bombMaping[ets % 2].forEach(([x, y, color]) => {
+                mBoard[y][x] = color;
+            })
+            return true;
+        };
     }
     const bombUp = (ts, item) => {
         bomb(ts, item);
@@ -338,26 +372,12 @@ function game(options) {
                 }
             });
         });
-        if (dhItems.timeActions) {
-            let actionIndex = 0;
-            for (actionIndex = 0; actionIndex < dhItems.timeActions.length; actionIndex++) {
-                const timeAction = dhItems.timeActions[actionIndex];
-                if (timeAction.time > ts) {
-                    break;
-                }
-                timeAction.mapping.forEach(([x, y, v]) => {
-                    mBoard[y][x] = v;
-                });
-            }
-            if (actionIndex >= dhItems.timeActions.length) {
-                if (dhItems.postAction) {
-                    dhItems.postAction(ts);
-                    dhItems.postAction = undefined;
-                }
-                dhItems.timeActions = undefined;
-            }
-            gtime = ts;
+        if (pauseCallback) {
+            !pauseCallback(ts) && (pauseCallback = undefined);
         }
+        [...shapeCallbacks].forEach(callback => {
+            !callback(ts) && shapeCallbacks.delete(callback);
+        });
         const srow = nshape.shape.length;
         const scol = nshape.shape[0].length;
         const brow = sBoard.length;
@@ -393,7 +413,7 @@ function game(options) {
     let lastAction = undefined;
     let lastDelay = undefined;
     let repeatTimes = undefined;
-    let freezeAction = undefined;
+    let denyAction = undefined;
 
     const actionMap = {
         [keys.KEY_LEFT]: [100, 0, (ts) => moveItem(ts, cshape, -1)],
@@ -406,14 +426,14 @@ function game(options) {
 
     function checkKeys(ts, keys, addKeys, removeKeys) {
         if (currentAction && (!keys.size || !keys.has(currentAction))) {
-            freezeAction = currentAction = undefined;
+            denyAction = currentAction = undefined;
         }
         if (!currentAction && keys.size) {
             Object.keys(actionMap).some(key => {
                 keys.has(key) && (currentAction = key)
             });
         }
-        if (currentAction && currentAction != freezeAction) {
+        if (currentAction && currentAction != denyAction) {
             const [fdelay, odelay, actionCallback] = actionMap[currentAction] ?? [undefined, undefined, undefined];
             if (!actionCallback) {
                 return;
@@ -432,7 +452,7 @@ function game(options) {
             }
             actionCallback(ts);
             if (cshape.finished) {
-                freezeAction = currentAction;
+                denyAction = currentAction;
                 lastAction = undefined;
             }
         }
@@ -443,8 +463,7 @@ function game(options) {
 
 
     const init = (ts, mainBoard, subBoard) => {
-        dhItems.timeActions = undefined;
-        dhItems.postAction = undefined;
+        pauseCallback = undefined;
         gtime = ts;
         mBoard = mainBoard;
         baseBoard = mainBoard.map(s => [...s]);
@@ -467,7 +486,7 @@ function game(options) {
 
     let gtime = 0;
     const update = (ts, keys, addKeys, removeKeys) => {
-        if (!dhItems.timeActions) {
+        if (!pauseCallback) {
             if (!status.over) {
                 checkKeys(ts, keys, addKeys, removeKeys);
             }
