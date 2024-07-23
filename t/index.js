@@ -293,7 +293,7 @@ import tcsgame from './tcs.js';
 
     function startGame(ts) {
         resetAll();
-        currentAction = undefined;
+        currentActions = {};
         game = gameList[selectGameList.value];
         game.init(ts, mainBoard, subBoard);
     }
@@ -414,47 +414,41 @@ import tcsgame from './tcs.js';
         return result;
     }
 
-    let currentAction = undefined;
-    let lastAction = undefined;
-    let lastDelay = undefined;
-    let repeatTimes = undefined;
-    let denyAction = undefined;
+    let currentActions = {};
 
+    //{ fdelay,odelay,callback,ts,ticks,allow }
+    
     function checkKeys(ts, keys, addKeys, removeKeys) {
-        if (currentAction && (!keys.size || !keys.has(currentAction))) {
-            denyAction = currentAction = undefined;
-        }
-        if (!currentAction && keys.size) {
-            Object.keys(game.keyMap).some(key => {
-                keys.has(key) && (currentAction = key)
-            });
-        }
-        if (currentAction && currentAction != denyAction) {
-            const [fdelay, odelay, actionCallback] = game.keyMap[currentAction] ?? [undefined, undefined, undefined];
-            if (!actionCallback) {
-                return;
-            }
-            if (!lastAction) {
-                lastAction = currentAction;
-                lastDelay = ts;
-                repeatTimes = 0;
-            }
-            else if (lastDelay) {
-                if (ts - lastDelay < (repeatTimes == 0 ? fdelay : odelay)) {
-                    return;
+
+        for(let key of Object.keys(currentActions)){
+            if(keys.has(key)){
+                const keyItem = currentActions[key];
+                if (!keyItem.allow || ts - keyItem.ts < (keyItem.ticks == 0 ? keyItem.fdelay : keyItem.odelay)) {
+                    continue;
                 }
-                lastDelay = ts;
-                repeatTimes++;;
+                keyItem.allow = keyItem.callback(ts);
+                keyItem.ts = ts;
+                keyItem.ticks ++;
             }
-            if (!actionCallback(ts)) {
-                denyAction = currentAction;
-                lastAction = undefined;
+            else
+            {
+                delete currentActions[key];
             }
         }
-        else {
-            lastAction = undefined;
+        for(let key of keys){
+            if(currentActions[key]){
+                continue;
+            }
+            const findMap = game.keyMap[key];
+            if(!findMap){
+                continue;
+            }
+            if(findMap.length == 3){
+                currentActions[key] = { fdelay: findMap[0], odelay: findMap[1], callback: findMap[2], ts: ts, ticks: 0, allow: findMap[2](ts) };
+            }
         }
     }
+
 
     let gameTime = 0;
     let lastts = 0;
