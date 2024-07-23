@@ -85,9 +85,7 @@ import tcsgame from './tcs.js';
     const inputMap = {
         "#select": keyboard.KEY_SELECT,
         "#start": keyboard.KEY_START,
-        "#pause": keyboard.KEY_PAUSE,
         "#extend": keyboard.KEY_EXTEND,
-        "#reset": keyboard.KEY_RESET,
         "#up": keyboard.KEY_UP,
         "#down": keyboard.KEY_DOWN,
         "#left": keyboard.KEY_LEFT,
@@ -121,9 +119,7 @@ import tcsgame from './tcs.js';
         Enter: keyboard.KEY_ACTION,
         z: keyboard.KEY_SELECT,
         x: keyboard.KEY_START,
-        c: keyboard.KEY_PAUSE,
-        v: keyboard.KEY_RESET,
-        b: keyboard.KEY_EXTEND,
+        c: keyboard.KEY_EXTEND,
         a: keyboard.KEY_LEFT,
         d: keyboard.KEY_RIGHT,
         s: keyboard.KEY_DOWN,
@@ -132,9 +128,7 @@ import tcsgame from './tcs.js';
         k: keyboard.KEY_ACTION,
         y: keyboard.KEY_SELECT,
         u: keyboard.KEY_START,
-        i: keyboard.KEY_PAUSE,
-        o: keyboard.KEY_RESET,
-        p: keyboard.KEY_EXTEND,
+        i: keyboard.KEY_EXTEND
     }
 
     const updateKeys = (event, down) => {
@@ -196,12 +190,12 @@ import tcsgame from './tcs.js';
             {
                 0: keyboard.KEY_ACTION,
                 1: keyboard.KEY_ACTION,
-                2: keyboard.KEY_PAUSE,
-                3: keyboard.KEY_RESET,
+                2: keyboard.KEY_ACTION,
+                3: keyboard.KEY_ACTION,
                 4: keyboard.KEY_SELECT,
                 5: keyboard.KEY_START,
-                6: keyboard.KEY_PAUSE,
-                7: keyboard.KEY_RESET,
+                6: keyboard.KEY_SELECT,
+                7: keyboard.KEY_START,
                 8: keyboard.KEY_SELECT,
                 9: keyboard.KEY_START,
                 10: keyboard.KEY_EXTEND,
@@ -226,16 +220,16 @@ import tcsgame from './tcs.js';
                 0: keyboard.KEY_ACTION,
                 1: keyboard.KEY_ACTION,
                 2: keyboard.KEY_ACTION,
-                3: keyboard.KEY_PAUSE,
-                4: keyboard.KEY_RESET,
-                5: keyboard.KEY_EXTEND,
+                3: keyboard.KEY_ACTION,
+                4: keyboard.KEY_ACTION,
+                5: keyboard.KEY_ACTION,
                 6: keyboard.KEY_SELECT,
                 7: keyboard.KEY_START,
-                8: keyboard.KEY_PAUSE,
-                9: keyboard.KEY_RESET,
+                8: keyboard.KEY_SELECT,
+                9: keyboard.KEY_START,
                 10: keyboard.KEY_SELECT,
                 11: keyboard.KEY_START,
-                12: keyboard.KEY_RESET,
+                12: keyboard.KEY_START,
                 13: keyboard.KEY_EXTEND,
                 14: keyboard.KEY_EXTEND
             },
@@ -243,8 +237,8 @@ import tcsgame from './tcs.js';
                 0: v => v < -0.75 ? keyboard.KEY_LEFT : v > 0.75 ? keyboard.KEY_RIGHT : undefined,
                 1: v => v < -0.75 ? keyboard.KEY_UP : v > 0.75 ? keyboard.KEY_DOWN : undefined,
                 2: v => v < -0.75 ? keyboard.KEY_LEFT : v > 0.75 ? keyboard.KEY_RIGHT : undefined,
-                3: v => v > 0.75 ? keyboard.KEY_RESET : undefined,
-                4: v => v > 0.75 ? keyboard.KEY_PAUSE : undefined,
+                3: v => v > 0.75 ? keyboard.KEY_SELECT : undefined,
+                4: v => v > 0.75 ? keyboard.KEY_START : undefined,
                 5: v => v < -0.75 ? keyboard.KEY_UP : v > 0.75 ? keyboard.KEY_DOWN : undefined,
                 9: v => axe9map[~~(v * 7.001)]
             }
@@ -299,6 +293,7 @@ import tcsgame from './tcs.js';
 
     function startGame(ts) {
         resetAll();
+        currentAction = undefined;
         game = gameList[selectGameList.value];
         game.init(ts, mainBoard, subBoard);
     }
@@ -335,11 +330,18 @@ import tcsgame from './tcs.js';
         if (actions.has(keyboard.KEY_SELECT)) {
             if (!filterKeys.has(keyboard.KEY_SELECT)) {
                 filterKeys.add(keyboard.KEY_SELECT);
-                if (selectGameList.options.selectedIndex < 0 || selectGameList.options.selectedIndex >= selectGameList.options.length - 1) {
-                    selectGameList.options.selectedIndex = 0;
+                if (game) {
+                    filterKeys.add(keyboard.KEY_SELECT);
+                    selectGameList.selectedIndex = 0;
+                    resetAll(ts);
                 }
                 else {
-                    selectGameList.options.selectedIndex++;
+                    if (selectGameList.options.selectedIndex < 0 || selectGameList.options.selectedIndex >= selectGameList.options.length - 1) {
+                        selectGameList.options.selectedIndex = 0;
+                    }
+                    else {
+                        selectGameList.options.selectedIndex++;
+                    }
                 }
             }
         }
@@ -349,30 +351,16 @@ import tcsgame from './tcs.js';
         if (actions.has(keyboard.KEY_START)) {
             if (!filterKeys.has(keyboard.KEY_START)) {
                 filterKeys.add(keyboard.KEY_START);
-                startGame(ts);
+                if (game) {
+                    pause = !pause;
+                }
+                else {
+                    startGame(ts);
+                }
             }
         }
         else {
             filterKeys.delete(keyboard.KEY_START);
-        }
-        if (actions.has(keyboard.KEY_PAUSE)) {
-            if (!filterKeys.has(keyboard.KEY_PAUSE)) {
-                filterKeys.add(keyboard.KEY_PAUSE);
-                pause = !pause;
-            }
-        }
-        else {
-            filterKeys.delete(keyboard.KEY_PAUSE);
-        }
-        if (actions.has(keyboard.KEY_RESET)) {
-            if (!filterKeys.has(keyboard.KEY_RESET)) {
-                filterKeys.add(keyboard.KEY_RESET);
-                selectGameList.selectedIndex = 0;
-                resetAll(ts);
-            }
-        }
-        else {
-            filterKeys.delete(keyboard.KEY_RESET);
         }
         return actions;
     }
@@ -426,6 +414,48 @@ import tcsgame from './tcs.js';
         return result;
     }
 
+    let currentAction = undefined;
+    let lastAction = undefined;
+    let lastDelay = undefined;
+    let repeatTimes = undefined;
+    let denyAction = undefined;
+
+    function checkKeys(ts, keys, addKeys, removeKeys) {
+        if (currentAction && (!keys.size || !keys.has(currentAction))) {
+            denyAction = currentAction = undefined;
+        }
+        if (!currentAction && keys.size) {
+            Object.keys(game.keyMap).some(key => {
+                keys.has(key) && (currentAction = key)
+            });
+        }
+        if (currentAction && currentAction != denyAction) {
+            const [fdelay, odelay, actionCallback] = game.keyMap[currentAction] ?? [undefined, undefined, undefined];
+            if (!actionCallback) {
+                return;
+            }
+            if (!lastAction) {
+                lastAction = currentAction;
+                lastDelay = ts;
+                repeatTimes = 0;
+            }
+            else if (lastDelay) {
+                if (ts - lastDelay < (repeatTimes == 0 ? fdelay : odelay)) {
+                    return;
+                }
+                lastDelay = ts;
+                repeatTimes++;;
+            }
+            if (!actionCallback(ts)) {
+                denyAction = currentAction;
+                lastAction = undefined;
+            }
+        }
+        else {
+            lastAction = undefined;
+        }
+    }
+
     let gameTime = 0;
     let lastts = 0;
 
@@ -437,7 +467,8 @@ import tcsgame from './tcs.js';
         const newActions = collectNewAction(gameTime);
         if (!pause) {
             if (game && !game.status.over) {
-                game.update(gameTime, newActions, setDifference(oldActions, newActions), setDifference(newActions, oldActions));
+                game.keyMap && checkKeys(gameTime, newActions, setDifference(oldActions, newActions), setDifference(newActions, oldActions));
+                game.update(gameTime);
                 oldActions = newActions;
                 drawBoard();
             }

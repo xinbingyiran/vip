@@ -78,17 +78,18 @@ function game(options) {
             status.level++;
             if (status.level > maxLevel) {
                 status.over = true;
-                return;
+                return false;
             }
         }
         newSnake();
+        return true;
     }
 
     function doStep(step) {
         if (step[0] + nstep[0] === 0 && step[1] + nstep[1] === 0) {
             return false;
         }
-        let newx = snake[0].x + step[0], newy = snake[0].y + step[1],newColor = undefined;
+        let newx = snake[0].x + step[0], newy = snake[0].y + step[1], newColor = undefined;
         if (options.loop) {
             newx = (newx + boardCols) % boardCols;
             newy = (newy + boardRows) % boardRows;
@@ -122,13 +123,7 @@ function game(options) {
         return true;
     }
 
-    let currentAction = undefined;
-    let lastAction = undefined;
-    let lastDelay = undefined;
-    let repeatTimes = undefined;
-    let freezeAction = undefined;
-
-    const actionMap = {
+    const keyMap = {
         [keys.KEY_LEFT]: [100, 50, () => doStep([-1, 0])],
         [keys.KEY_RIGHT]: [100, 50, () => doStep([1, 0])],
         [keys.KEY_DOWN]: [100, 50, () => doStep([0, 1])],
@@ -136,48 +131,16 @@ function game(options) {
         [keys.KEY_ACTION]: [100, 50, () => doStep(nstep)],
         [keys.KEY_EXTEND]: [3000, 1000, () => nextLevel()]
     };
+
     function randomColor() {
         return colors[~~(Math.random() * colors.length)];
     }
 
-    function checkKeys(ts, keys, addKeys, removeKeys) {
-        if (currentAction && (!keys.size || !keys.has(currentAction))) {
-            freezeAction = currentAction = undefined;
-        }
-        if (!currentAction && keys.size) {
-            Object.keys(actionMap).some(key => {
-                keys.has(key) && (currentAction = key)
-            });
-        }
-        if (currentAction && currentAction != freezeAction) {
-            const [fdelay, odelay, actionCallback] = actionMap[currentAction] ?? [undefined, undefined, undefined];
-            if (!actionCallback) {
-                return;
-            }
-            if (!lastAction) {
-                lastAction = currentAction;
-                lastDelay = ts;
-                repeatTimes = 0;
-            }
-            else if (lastDelay) {
-                if (ts - lastDelay < (repeatTimes == 0 ? fdelay : odelay)) {
-                    return;
-                }
-                lastDelay = ts;
-                repeatTimes++;;
-            }
-            actionCallback() && (gtime = ts)
-        }
-        else {
-            lastAction = undefined;
-        }
-    }
     const init = (ts, mainBoard, subBoard) => {
         mBoard = mainBoard;
         sBoard = subBoard;
         boardRows = mBoard.length;
         boardCols = mBoard[0].length;
-        currentAction = undefined;
         for (let r = 0; r < boardRows; r++) {
             for (let c = 0; c < boardCols; c++) {
                 mBoard[r][c] = boardEmptyColor;
@@ -188,10 +151,7 @@ function game(options) {
     }
 
     let gtime = 0;
-    const update = (ts, keys, addKeys, removeKeys) => {
-        if (!status.over) {
-            checkKeys(ts, keys, addKeys, removeKeys);
-        }
+    const update = (ts) => {
         if (!status.over) {
             if (ts - gtime > (speeds[status.speed] ?? 1) || ts < gtime) {
                 gtime = ts;
@@ -200,7 +160,7 @@ function game(options) {
         }
         updateBoard(ts);
     }
-    return { status, init, update };
+    return { status, keyMap, init, update };
 }
 
 

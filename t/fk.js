@@ -146,15 +146,20 @@ function game(options) {
         cshape.finished = true;
     }
 
-    const moveItem = (ts, item, x) => {
-        var newx = item.cx + x;
-        if (newx < 0 || newx + item.shape[0].length > boardCols) {
-            return;
+    const globalMove = (ts, x) => {
+        if (pauseCallback) {
+            return false;
         }
-        const array = calcArray(item.shape, newx, item.cy);
+        var newx = cshape.cx + x;
+        if (newx < 0 || newx + cshape.shape[0].length > boardCols) {
+            return false;
+        }
+        const array = calcArray(cshape.shape, newx, cshape.cy);
         if (isAllAllowed(array)) {
-            item.cx = newx;
+            cshape.cx = newx;
+            return true;
         }
+        return false;
     }
 
     const commonDown = (ts, item) => {
@@ -406,60 +411,38 @@ function game(options) {
     }
 
     const globalDown = (ts) => {
+        if (pauseCallback) {
+            return false;
+        }
         cshape.downAction(ts, cshape);
         gtime = ts;
+        return !cshape.finished;
     }
 
-    let lastAction = undefined;
-    let lastDelay = undefined;
-    let repeatTimes = undefined;
-    let denyAction = undefined;
+    const globalUp = (ts) => {
+        if (pauseCallback) {
+            return false;
+        }
+        cshape.upAction(ts, cshape);
+        return true;
+    }
 
-    const actionMap = {
-        [keys.KEY_LEFT]: [100, 0, (ts) => moveItem(ts, cshape, -1)],
-        [keys.KEY_RIGHT]: [100, 0, (ts) => moveItem(ts, cshape, 1)],
+    const globalExtend = (ts) => {
+        if (pauseCallback) {
+            return false;
+        }
+        nshape = createShape(ts);
+        return true;
+    }
+
+    const keyMap = {
+        [keys.KEY_LEFT]: [100, 0, (ts) => globalMove(ts, -1)],
+        [keys.KEY_RIGHT]: [100, 0, (ts) => globalMove(ts, 1)],
         [keys.KEY_DOWN]: [100, 0, (ts) => globalDown(ts)],
-        [keys.KEY_UP]: [200, 50, (ts) => cshape.upAction(ts, cshape)],
-        [keys.KEY_ACTION]: [200, 50, (ts) => cshape.upAction(ts, cshape)],
-        [keys.KEY_EXTEND]: [100, 100, (ts) => nshape = createShape(ts)]
+        [keys.KEY_UP]: [200, 50, (ts) => globalUp(ts)],
+        [keys.KEY_ACTION]: [200, 50, (ts) => globalUp(ts)],
+        [keys.KEY_EXTEND]: [100, 100, (ts) => globalExtend(ts)]
     };
-
-    function checkKeys(ts, keys, addKeys, removeKeys) {
-        if (currentAction && (!keys.size || !keys.has(currentAction))) {
-            denyAction = currentAction = undefined;
-        }
-        if (!currentAction && keys.size) {
-            Object.keys(actionMap).some(key => {
-                keys.has(key) && (currentAction = key)
-            });
-        }
-        if (currentAction && currentAction != denyAction) {
-            const [fdelay, odelay, actionCallback] = actionMap[currentAction] ?? [undefined, undefined, undefined];
-            if (!actionCallback) {
-                return;
-            }
-            if (!lastAction) {
-                lastAction = currentAction;
-                lastDelay = ts;
-                repeatTimes = 0;
-            }
-            else if (lastDelay) {
-                if (ts - lastDelay < (repeatTimes == 0 ? fdelay : odelay)) {
-                    return;
-                }
-                lastDelay = ts;
-                repeatTimes++;;
-            }
-            actionCallback(ts);
-            if (cshape.finished) {
-                denyAction = currentAction;
-                lastAction = undefined;
-            }
-        }
-        else {
-            lastAction = undefined;
-        }
-    }
 
 
     const init = (ts, mainBoard, subBoard) => {
@@ -485,11 +468,8 @@ function game(options) {
     }
 
     let gtime = 0;
-    const update = (ts, keys, addKeys, removeKeys) => {
+    const update = (ts) => {
         if (!pauseCallback) {
-            if (!status.over) {
-                checkKeys(ts, keys, addKeys, removeKeys);
-            }
             if (options.isFreeze) {
                 gtime = ts;
             }
@@ -508,7 +488,7 @@ function game(options) {
         }
         updateBoard(ts);
     }
-    return { status, init, update };
+    return { status, keyMap, init, update };
 }
 
 

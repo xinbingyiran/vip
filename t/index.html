@@ -21,13 +21,16 @@
             margin: 10px;
         }
 
-        #touchControl input {
-            padding: 0;
+        #touchControl {
+            display: grid;
+            height: 280px;
+            width: 120px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(7, 1fr);
         }
 
-        #touchControl span input {
-            font-size: 10px;
-            margin: 1px;
+        #touchControl input {
+            padding: 0;
         }
     </style>
 </head>
@@ -50,24 +53,18 @@
                     速度： <span id="speed">0</span>
                 </div>
             </div>
-            <select id="gameList">
+            <select id="gameList" style="width: 120px;">
             </select>
-            <div id="touchControl"
-                style="display: grid; height: 280px; width: 120px; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(7, 1fr);">
-                <span
-                    style="display: grid;grid-column: 1 / span 3; grid-row: 1;  grid-template-columns: repeat(5,1fr); margin: 10px 0px;">
-                    <input type="button" value="选择" id="select" />
-                    <input type="button" value="开始" id="start" />
-                    <input type="button" value="暂停" id="pause" />
-                    <input type="button" value="复位" id="reset" />
-                    <input type="button" value="扩展" id="extend" />
-                </span>
-                <input style="grid-column: 2; grid-row: 2;margin: 3px;" type="button" value="上" id="up" />
-                <input style="grid-column: 1; grid-row: 3;margin: 3px;" type="button" value="左" id="left" />
-                <input style="grid-column: 3; grid-row: 3;margin: 3px;" type="button" value="右" id="right" />
-                <input style="grid-column: 2; grid-row: 4;margin: 3px;" type="button" value="下" id="down" />
-                <input style="grid-column: 1 / span 3; grid-row: 5 / span 3; margin: 3px;" type="button" value="变"
-                    id="action" />
+            <div id="touchControl">
+                    <input style="grid-column: 1; grid-row: 1;margin: 0 3px 20px 3px; font-size: 10px;"  type="button" value="选择" id="select" />
+                    <input style="grid-column: 2; grid-row: 1;margin: 0 3px 20px 3px; font-size: 10px;"  type="button" value="开始" id="start" />
+                    <input style="grid-column: 3; grid-row: 1;margin: 0 3px 20px 3px; font-size: 10px;"  type="button" value="扩展" id="extend" />
+                    <input style="grid-column: 2; grid-row: 2;margin: 3px;" type="button" value="上" id="up" />
+                    <input style="grid-column: 1; grid-row: 3;margin: 3px;" type="button" value="左" id="left" />
+                    <input style="grid-column: 3; grid-row: 3;margin: 3px;" type="button" value="右" id="right" />
+                    <input style="grid-column: 2; grid-row: 4;margin: 3px;" type="button" value="下" id="down" />
+                    <input style="grid-column: 1 / span 3; grid-row: 5 / span 3; margin: 10px 3px;" type="button" value="变"
+                        id="action" />
             </div>
         </div>
     </div>

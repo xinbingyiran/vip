@@ -1,8 +1,6 @@
 const keyboard = {
     KEY_SELECT: "select",
     KEY_START: "start",
-    KEY_PAUSE: "pause",
-    KEY_RESET: "reset",
     KEY_EXTEND: "extend",
     KEY_UP: "up",
     KEY_DOWN: "down",
