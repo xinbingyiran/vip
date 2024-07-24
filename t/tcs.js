@@ -5,38 +5,39 @@ function game(options) {
         score: 0,
         speed: 0,
         level: 0,
+        life: 0,
         over: true,
     };
 
     const maxLevel = 30;
 
+    let lastTagTime = 0;
+
     options = Object.assign({ loop: false }, options ?? {});
 
-    const boardEmptyColor = 'gray';
-    const snakeColor = '#000';
-    const colors = ["red", "green", "blue", "purple", "orange"];
     const speeds = { 0: 1000, 1: 900, 2: 800, 3: 700, 4: 600, 5: 500, 6: 450, 7: 400, 8: 350, 9: 300, 10: 250, 11: 200, 12: 150, 13: 100, 14: 50, 15: 25, 16: 10 };
 
 
-    let mBoard, sBoard, boardRows, boardCols, cshape, ncolor, snake, nstep;
+    let app, cshape, snake, nstep, headCell;
 
     function updateBoard(ts) {
-
-        mBoard.forEach(row => row.fill(boardEmptyColor));
-        snake.forEach(value => mBoard[value.y][value.x] = value.color);
+        app.mainBoard.forEach(row => row.fill(app.emptyCell));
+        snake.forEach(value => app.mainBoard[value.y][value.x] = value.cell);
         if (cshape) {
-            mBoard[cshape.y][cshape.x] = (~~ts % 300) > 150 ? cshape.color : boardEmptyColor;
+            app.mainBoard[cshape.y][cshape.x] = (~~ts % 300) > 150 ? cshape.cell : app.emptyCell;
         }
 
-        sBoard.forEach(row => row.fill(boardEmptyColor));
-        sBoard[1][1] = ncolor;
+        app.subBoard.forEach(row => row.fill(app.emptyCell));
+        for (let i = 0; i < app.subRows && i < status.life; i++) {
+            app.subBoard[4 - i - 1][1] = headCell;
+        }
     }
     function calcEmptyShapes() {
         const emptyShapes = [];
-        const sets = new Set(snake.map(s => s.y * boardRows + s.x));
-        for (let y = 0; y < boardRows; y++) {
-            for (let x = 0; x < boardCols; x++) {
-                !sets.has(y * boardRows + x) && emptyShapes.push({ x, y });
+        const sets = new Set(snake.map(s => s.y * app.mainRows + s.x));
+        for (let y = 0; y < app.mainRows; y++) {
+            for (let x = 0; x < app.mainCols; x++) {
+                !sets.has(y * app.mainRows + x) && emptyShapes.push({ x, y });
             }
         }
         return emptyShapes;
@@ -48,26 +49,24 @@ function game(options) {
             return undefined;
         }
         const item = emptyShapes[~~(Math.random() * emptyShapes.length)];
-        const color = ncolor;
-        ncolor = randomColor();
-        return { ...item, color };
+        const cell = randomCell();
+        return { ...item, cell };
     }
 
-    function newSnake() {
-        ncolor = randomColor();
-        const initColor = randomColor();
+    function initLevel(ts) {
+        const newCell = randomCell();
         snake = [
-            { x: ~~(boardCols / 2) + 1, y: ~~(boardRows / 2), color: snakeColor },
-            { x: ~~(boardCols / 2), y: ~~(boardRows / 2), color: initColor },
-            { x: ~~(boardCols / 2) - 1, y: ~~(boardRows / 2), color: initColor },
-            { x: ~~(boardCols / 2) - 2, y: ~~(boardRows / 2), color: initColor }];
+            { x: ~~(app.mainCols / 2) + 1, y: ~~(app.mainRows / 2), cell: headCell },
+            { x: ~~(app.mainCols / 2), y: ~~(app.mainRows / 2), cell: newCell },
+            { x: ~~(app.mainCols / 2) - 1, y: ~~(app.mainRows / 2), cell: newCell },
+            { x: ~~(app.mainCols / 2) - 2, y: ~~(app.mainRows / 2), cell: newCell }];
         cshape = createShape();
         //const steps = [[0, 1], [1, 0], [0, -1], [-1, 0]];
         nstep = [1, 0];//steps[~~(Math.random() * steps.length)];
     }
 
-    function nextLevel() {
-        const overPoint = boardCols * boardRows - maxLevel + status.level - snake.length;
+    function nextLevel(ts) {
+        const overPoint = app.mainCols * app.mainRows - maxLevel + status.level - snake.length;
         if (overPoint > 0) {
             status.score += overPoint * 100;
         }
@@ -81,41 +80,49 @@ function game(options) {
                 return false;
             }
         }
-        newSnake();
+        initLevel(ts);
         return true;
     }
 
-    function doStep(step) {
+    function subLife(ts) {
+        status.life--;
+        if (status.life <= 0) {
+            status.over = true;
+            return false;
+        }
+        app.addFlashCallback(ts, (newTs) => initLevel(newTs));
+        return true;
+    }
+
+    function doStep(ts, step) {
         if (step[0] + nstep[0] === 0 && step[1] + nstep[1] === 0) {
             return false;
         }
-        let newx = snake[0].x + step[0], newy = snake[0].y + step[1], newColor = undefined;
+        let newx = snake[0].x + step[0], newy = snake[0].y + step[1], newCell = undefined;
         if (options.loop) {
-            newx = (newx + boardCols) % boardCols;
-            newy = (newy + boardRows) % boardRows;
+            newx = (newx + app.mainCols) % app.mainCols;
+            newy = (newy + app.mainRows) % app.mainRows;
         }
-        else if (newx < 0 || newx >= boardCols || newy < 0 || newy >= boardRows) {
-            status.over = true;
-            return false;
+        else if (newx < 0 || newx >= app.mainCols || newy < 0 || newy >= app.mainRows) {
+            return subLife(ts);
         }
-        const sets = new Set(snake.slice(0, -1).map(s => s.y * boardRows + s.x));
-        if (sets.has(newy * boardRows + newx)) {
-            status.over = true;
-            return false;
+        const sets = new Set(snake.slice(0, -1).map(s => s.y * app.mainRows + s.x));
+        if (sets.has(newy * app.mainRows + newx)) {
+            return subLife(ts);
         }
         if (cshape.x === newx && cshape.y === newy) {
-            newColor = cshape.color;
+            newCell = cshape.cell;
             snake.push(cshape);
             cshape = createShape();
             status.score += 100;
-            if (snake.length >= boardCols * boardRows - maxLevel + status.level) {
+            if (snake.length >= app.mainCols * app.mainRows - maxLevel + status.level) {
                 nextLevel();
             }
         }
         for (let i = snake.length - 1; i > 0; i--) {
             snake[i].x = snake[i - 1].x;
             snake[i].y = snake[i - 1].y;
-            newColor && (snake[i].color = newColor);
+            newCell && (snake[i].cell = newCell);
         }
         snake[0].x = newx;
         snake[0].y = newy;
@@ -124,38 +131,35 @@ function game(options) {
     }
 
     const keyMap = {
-        [keys.KEY_LEFT]: [100, 50, () => doStep([-1, 0])],
-        [keys.KEY_RIGHT]: [100, 50, () => doStep([1, 0])],
-        [keys.KEY_DOWN]: [100, 50, () => doStep([0, 1])],
-        [keys.KEY_UP]: [100, 50, () => doStep([0, -1])],
-        [keys.KEY_ACTION]: [100, 50, () => doStep(nstep)],
-        [keys.KEY_EXTEND]: [3000, 1000, () => nextLevel()]
+        [keys.KEY_LEFT]: [100, 50, (ts) => doStep(ts, [-1, 0])],
+        [keys.KEY_RIGHT]: [100, 50, (ts) => doStep(ts, [1, 0])],
+        [keys.KEY_DOWN]: [100, 50, (ts) => doStep(ts, [0, 1])],
+        [keys.KEY_UP]: [100, 50, (ts) => doStep(ts, [0, -1])],
+        [keys.KEY_ACTION]: [100, 50, (ts) => doStep(ts, nstep)],
+        [keys.KEY_EXTEND]: [3000, 1000, (ts) => nextLevel(ts)]
     };
 
-    function randomColor() {
-        return colors[~~(Math.random() * colors.length)];
+    function randomCell() {
+        return app.cells[~~(Math.random() * app.cells.length - 1) + 1];
     }
 
-    const init = (ts, mainBoard, subBoard) => {
-        mBoard = mainBoard;
-        sBoard = subBoard;
-        boardRows = mBoard.length;
-        boardCols = mBoard[0].length;
-        for (let r = 0; r < boardRows; r++) {
-            for (let c = 0; c < boardCols; c++) {
-                mBoard[r][c] = boardEmptyColor;
+    const init = (ts, mainApp) => {
+        lastTagTime = ts;
+        app = mainApp;
+        headCell = app.cells[0];
+        for (let r = 0; r < app.mainRows; r++) {
+            for (let c = 0; c < app.mainCols; c++) {
+                app.mainBoard[r][c] = app.emptyCell;
             }
         }
-        Object.assign(status, { score: 0, level: 0, speed: 0, over: false });
-        newSnake();
+        Object.assign(status, { score: 0, level: 0, speed: 0, life: app.subRows, over: false });
+        initLevel(ts);
     }
-
-    let gtime = 0;
     const update = (ts) => {
         if (!status.over) {
-            if (ts - gtime > (speeds[status.speed] ?? 1) || ts < gtime) {
-                gtime = ts;
-                doStep(nstep);
+            if (ts - lastTagTime > (speeds[status.speed] ?? 1) || ts < lastTagTime) {
+                lastTagTime = ts;
+                doStep(ts, nstep);
             }
         }
         updateBoard(ts);

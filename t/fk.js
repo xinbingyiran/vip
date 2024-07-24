@@ -10,16 +10,13 @@ function game(options) {
 
     const maxLevel = 10000;
     let lastTagTime = 0;
-    let pauseCallback = undefined;
     let shapeCallbacks = new Set();
 
     options = Object.assign({ hasExtend: false, hasHelper: false, isFreeze: false, isReverse: false }, options ?? {});
-    const boardEmptyColor = 'gray';
     const scores = { 0: 0, 1: 100, 2: 300, 3: 700, 4: 1500 };
     const speeds = { 0: 1000, 1: 900, 2: 800, 3: 700, 4: 600, 5: 500, 6: 450, 7: 400, 8: 350, 9: 300, 10: 250, 11: 200, 12: 150, 13: 100, 14: 50, 15: 25, 16: 10 };
-    const colors = ["red", "green", "blue", "purple", "orange"];
 
-    let cshape, nshape, allShapes, baseBoard, mBoard, sBoard, boardRows, boardCols, emptyCols;
+    let app, cshape, nshape, allShapes, baseBoard;
 
     function rotateItem(ts, item, outofBoard) {
         const shape = item.shape;
@@ -28,7 +25,7 @@ function game(options) {
         const fix = ~~((rows - cols) / 2);
         const ry = item.cy + fix;
         let rx = item.cx - fix;
-        if (ry + cols > boardRows) {
+        if (ry + cols > app.mainRows) {
             return false;
         }
         const rotated = [];
@@ -68,17 +65,21 @@ function game(options) {
     }
 
     const isAllAllowed = (array) => {
-        return array.every(([x, y]) => x >= 0 && x < boardCols && (y < 0 || (y < boardRows && baseBoard[y][x] === boardEmptyColor)));
+        return array.every(([x, y]) => x >= 0 && x < app.mainCols && (y < 0 || (y < app.mainRows && baseBoard[y][x] === app.emptyCell)));
     };
 
     function createScorePauseCallback(ts, lines, overLines) {
-        pauseCallback = (newTs) => {
+        app.addPauseCallback((newTs) => {
             let ets = ~~((newTs - ts) / 20);
             if (ets > 10) {
                 lines.forEach(line => baseBoard.splice(line, 1))
                 overLines.forEach(line => baseBoard.unshift(line));
                 for (let r = 0; r < lines.length - overLines.length; r++) {
-                    baseBoard.unshift([...emptyCols]);
+                    let emptyRow = [];
+                    for (let c = 0; c < app.mainCols; c++) {
+                        emptyRow.push(app.emptyCell);
+                    }
+                    baseBoard.unshift(emptyRow);
                 }
                 status.score += scores[lines.length];
                 const result = ~~(status.score / 10000);
@@ -89,24 +90,26 @@ function game(options) {
                     status.over = true;
                 }
                 lastTagTime = newTs;
+                updateBoard();
                 return false;
             }
             else {
+                updateBoard();
                 while (--ets >= 0) {
                     lines.forEach((line, i) => {
-                        const index = i % 2 ? boardCols - 1 - ets : ets;
-                        baseBoard[line][index] = boardEmptyColor;
+                        const index = i % 2 ? app.mainCols - 1 - ets : ets;
+                        app.mainBoard[line][index] = app.emptyCell;
                     });
                 }
                 return true;
             }
-        }
+        });
     }
 
     const calcScore = (ts, fromLine, toLine, overLines) => {
         const lines = [];
         for (let r = toLine; r >= fromLine; r--) {
-            if (baseBoard[r].every((value) => value !== boardEmptyColor)) {
+            if (baseBoard[r].every((value) => value !== app.emptyCell)) {
                 (lines ??= []).push(r);
             }
         }
@@ -124,20 +127,24 @@ function game(options) {
         let count = 0 - item.cy;
         const overLines = [];
         while (count-- > 0) {
-            overLines.push([...emptyCols]);
+            let emptyRow = [];
+            for (let c = 0; c < app.mainCols; c++) {
+                emptyRow.push(app.emptyCell);
+            }
+            overLines.push(emptyRow);
         }
         for (let r = 0; r < item.shape.length; r++) {
             if (item.cy + r < 0) {
                 for (let c = 0; c < item.shape[r].length; c++) {
                     if (item.shape[r][c]) {
-                        overLines[r][item.cx + c] = item.color;
+                        overLines[r][item.cx + c] = item.cell;
                     }
                 }
             }
             else {
                 for (let c = 0; c < item.shape[r].length; c++) {
                     if (item.shape[r][c]) {
-                        baseBoard[item.cy + r][item.cx + c] = item.color;
+                        baseBoard[item.cy + r][item.cx + c] = item.cell;
                     }
                 }
             }
@@ -149,11 +156,8 @@ function game(options) {
     }
 
     const globalMove = (ts, x) => {
-        if (pauseCallback) {
-            return true;
-        }
         var newx = cshape.cx + x;
-        if (newx < 0 || newx + cshape.shape[0].length > boardCols) {
+        if (newx < 0 || newx + cshape.shape[0].length > app.mainCols) {
             return false;
         }
         const array = calcArray(cshape.shape, newx, cshape.cy);
@@ -174,20 +178,20 @@ function game(options) {
         mergeItem(ts, item);
     }
     const dotDown = (ts, item) => {
-        if (item.cy > 0 && baseBoard[item.cy][item.cx] == boardEmptyColor && (item.cy == boardRows - 1 || baseBoard[item.cy + 1][item.cx] != boardEmptyColor)) {
-            baseBoard[item.cy][item.cx] = item.color;
-            if (calcScore(ts, item.cy, item.cy, []) || item.cy == boardRows - 1) {
+        if (item.cy > 0 && baseBoard[item.cy][item.cx] == app.emptyCell && (item.cy == app.mainRows - 1 || baseBoard[item.cy + 1][item.cx] != app.emptyCell)) {
+            baseBoard[item.cy][item.cx] = item.cell;
+            if (calcScore(ts, item.cy, item.cy, []) || item.cy == app.mainRows - 1) {
                 item.finished = true;
                 return;
             }
-            baseBoard[item.cy][item.cx] = boardEmptyColor;
+            baseBoard[item.cy][item.cx] = app.emptyCell;
         }
         const array = [];
         const newy = item.cy + 1;
-        for (let r = newy; r < boardRows; r++) {
+        for (let r = newy; r < app.mainRows; r++) {
             array.push([item.cx, r]);
         }
-        if (array.some(([x, y]) => x >= 0 && x < boardCols && (y < 0 || (y < boardRows && baseBoard[y][x] === boardEmptyColor)))) {
+        if (array.some(([x, y]) => x >= 0 && x < app.mainCols && (y < 0 || (y < app.mainRows && baseBoard[y][x] == app.emptyCell)))) {
             item.cy = newy;
             return;
         }
@@ -195,7 +199,7 @@ function game(options) {
             status.over = true;
             return;
         }
-        baseBoard[item.cy][item.cx] = item.color;
+        baseBoard[item.cy][item.cx] = item.cell;
         item.finished = true;
     }
 
@@ -211,57 +215,56 @@ function game(options) {
     const cancelUp = (ts, item) => {
         const x = item.cx;
         let sy = item.cy + item.shape.length >= 0 ? item.cy + item.shape.length : 0;
-        if (sy >= boardRows) {
+        if (sy >= app.mainRows) {
             return;
         }
-        const color = item.color;
+        const newCell = item.cell;
         shapeCallbacks.add(newTs => {
             let ets = ~~((newTs - ts) / 5);
             let i = 0;
             for (i = 0; i < ets; i++) {
                 let calcY = sy + i;
-                if (calcY >= boardRows) {
+                if (calcY >= app.mainRows) {
                     return false;
                 }
-                if (baseBoard[calcY][x] != boardEmptyColor) {
-                    baseBoard[calcY][x] = boardEmptyColor;
+                if (baseBoard[calcY][x] != app.emptyCell) {
+                    baseBoard[calcY][x] = app.emptyCell;
                     return false;
                 }
             }
-            if (sy + i < boardRows) {
-                mBoard[sy + i][x] = color;
+            if (sy + i < app.mainRows) {
+                app.mainBoard[sy + i][x] = newCell;
             }
             return true;
         });
     }
 
     const addtionDown = cancelDown;
-
     const addtionUp = (ts, item) => {
         const x = item.cx;
         let sy = item.cy + item.shape.length >= 0 ? item.cy + item.shape.length : 0;
-        if (sy >= boardRows || baseBoard[sy][x] != boardEmptyColor) {
+        if (sy >= app.mainRows || baseBoard[sy][x] != app.emptyCell) {
             return;
         }
-        if (sy + 1 >= boardRows || baseBoard[sy + 1][x] != boardEmptyColor) {
-            baseBoard[sy][x] = item.color
+        const newCell = item.cell;
+        if (sy + 1 >= app.mainRows || baseBoard[sy + 1][x] != app.emptyCell) {
+            baseBoard[sy][x] = newCell;
             calcScore(ts, sy, sy, []);
             return;
         }
-        const color = item.color;
         shapeCallbacks.add(newTs => {
             let ets = ~~((newTs - ts) / 5);
             let i = 0;
             for (i = 0; i < ets; i++) {
                 let calcY = sy + i + 1;
-                if (calcY >= boardRows || baseBoard[calcY][x] != boardEmptyColor) {
+                if (calcY >= app.mainRows || baseBoard[calcY][x] != app.emptyCell) {
                     const actionY = calcY - 1;
-                    baseBoard[actionY][x] = color;
+                    baseBoard[actionY][x] = newCell;
                     calcScore(ts, actionY, actionY, []);
                     return false;
                 }
             }
-            mBoard[sy + i][x] = color;
+            app.mainBoard[sy + i][x] = newCell;
             return true;
         });
     }
@@ -271,8 +274,8 @@ function game(options) {
         var ex = item.cx + item.shape[0].length + 1;
         var sy = item.cy;
         var ey = item.cy + item.shape.length + 3;
-        if (ey > boardRows) {
-            ey = boardRows;
+        if (ey > app.mainRows) {
+            ey = app.mainRows;
             if (ey - sy < 4) {
                 sy = ey - 4;
             }
@@ -280,41 +283,43 @@ function game(options) {
 
         const bombItems = [];
         for (let r = sy; r < ey; r++) {
-            if (r < 0 || r >= boardRows) {
+            if (r < 0 || r >= app.mainRows) {
                 continue;
             }
             for (let c = sx; c < ex; c++) {
-                if (c < 0 || c >= boardCols) {
+                if (c < 0 || c >= app.mainCols) {
                     continue;
                 }
-                if (baseBoard[r][c] !== boardEmptyColor) {
+                if (baseBoard[r][c] !== app.emptyCell) {
                     bombItems.push([c, r]);
                 }
             }
         }
-        bombItems.forEach(([c, r]) => baseBoard[r][c] = boardEmptyColor);
+        bombItems.forEach(([c, r]) => baseBoard[r][c] = app.emptyCell);
 
+        const newCell = item.cell;
         const bombMaping = [[], []];
         const bombY = ~~((sy + ey) / 2) - 2;
         for (let rows = 0; rows < 4; rows++) {
-            if (bombY + rows < 0 || bombY + rows >= boardRows) {
+            if (bombY + rows < 0 || bombY + rows >= app.mainRows) {
                 continue;
             }
             for (var cols = 0; cols < 4; cols++) {
                 let match = (cols == rows) || (cols + rows == 3);
-                bombMaping[match ? 0 : 1].push([item.cx + cols, bombY + rows, item.color]);
+                bombMaping[match ? 0 : 1].push([item.cx + cols, bombY + rows, newCell]);
             }
         }
-        pauseCallback = (newTs) => {
+        app.addPauseCallback((newTs) => {
             const ets = ~~((newTs - ts) / 100);
             if (ets > 4) {
                 return false;
             }
-            bombMaping[ets % 2].forEach(([x, y, color]) => {
-                mBoard[y][x] = color;
+            updateBoard();
+            bombMaping[ets % 2].forEach(([x, y, cell]) => {
+                app.mainBoard[y][x] = cell;
             })
             return true;
-        };
+        });
     }
     const bombUp = (ts, item) => {
         bomb(ts, item);
@@ -358,77 +363,64 @@ function game(options) {
     ];
 
     function updateBoard(ts) {
-        for (let r = 0; r < boardRows; r++) {
-            for (let c = 0; c < boardCols; c++) {
-                mBoard[r][c] = baseBoard[r][c];
+        for (let r = 0; r < app.mainRows; r++) {
+            for (let c = 0; c < app.mainCols; c++) {
+                app.mainBoard[r][c] = baseBoard[r][c];
             }
         }
         cshape && !cshape.finished && cshape.shape.forEach((row, r) => {
             row.forEach((value, c) => {
                 if (value && r + cshape.cy >= 0 && cshape.cx + c >= 0) {
-                    mBoard[r + cshape.cy][cshape.cx + c] = cshape.isHelper && (~~ts % 300) > 150 ? boardEmptyColor : cshape.color;
+                    app.mainBoard[r + cshape.cy][cshape.cx + c] = cshape.isHelper && (~~ts % 300) > 150 ? app.emptyCell : cshape.cell;
                 }
             });
         });
-        if (pauseCallback) {
-            !pauseCallback(ts) && (pauseCallback = undefined);
-        }
-        else {
-            for (let callback of [...shapeCallbacks]) {
-                !callback(ts) && shapeCallbacks.delete(callback);
-                if (pauseCallback) { break; }
+    }
 
-            }
-        }
+
+    function updateSubBoard(ts) {
         const srow = nshape.shape.length;
         const scol = nshape.shape[0].length;
-        const brow = sBoard.length;
-        const bcol = sBoard[0].length;
-        const sr = ~~((brow - srow) / 2);
-        const sc = ~~((bcol - scol) / 2);
-        for (let r = 0; r < brow; r++) {
-            for (let c = 0; c < bcol; c++) {
-                sBoard[r][c] = r < sr || r - sr >= srow || c < sc || c - sc >= scol || nshape.shape[r - sr][c - sc] == 0 ? boardEmptyColor : nshape.color;
+        const sr = ~~((app.subRows - srow) / 2);
+        const sc = ~~((app.subCols - scol) / 2);
+        for (let r = 0; r < app.subRows; r++) {
+            for (let c = 0; c < app.subCols; c++) {
+                app.subBoard[r][c] = r < sr || r - sr >= srow || c < sc || c - sc >= scol || nshape.shape[r - sr][c - sc] == 0 ? app.emptyCell : nshape.cell;
             }
         }
     }
+
     allShapes = [
         ...shapes,
         ...(options.hasExtend ? extShapes : []),
         ...(options.hasHelper ? helpShapes : [])]
 
-    function createShape(ts) {
+    function updateNextShape(ts, refresh) {
+        const nextShape = nshape;
         const pickShape = allShapes[~~(Math.random() * allShapes.length)];
-        const color = colors[~~(Math.random() * colors.length)];
+        const cell = app.cells[~~(Math.random() * app.cells.length)];
         const shape = pickShape.shape.map(row => [...row]);
-        const item = Object.assign({}, pickShape, { shape, color });
+        const item = Object.assign({}, pickShape, { shape, cell });
         item.isHelper || Array.from({ length: ~~(Math.random() * 4) }).map(() => rotateItem(ts, item, true));
-        Object.assign(item, { cx: ~~((boardCols - item.shape[0].length) / 2), cy: -item.shape.length })
-        return item;
+        Object.assign(item, { cx: ~~((app.mainCols - item.shape[0].length) / 2), cy: -item.shape.length })
+        nshape = item;
+        refresh && updateSubBoard(ts);
+        return nextShape;
     }
 
     const globalDown = (ts) => {
-        if (pauseCallback) {
-            return true;
-        }
         cshape.downAction(ts, cshape);
         lastTagTime = ts;
         return !cshape.finished;
     }
 
     const globalUp = (ts) => {
-        if (pauseCallback) {
-            return true;
-        }
         cshape.upAction(ts, cshape);
         return true;
     }
 
     const globalExtend = (ts) => {
-        if (pauseCallback) {
-            return true;
-        }
-        nshape = createShape(ts);
+        updateNextShape(ts, true);
         return true;
     }
 
@@ -442,44 +434,42 @@ function game(options) {
     };
 
 
-    const init = (ts, mainBoard, subBoard) => {
-        pauseCallback = undefined;
+    const init = (ts, mainApp) => {
         lastTagTime = ts;
-        mBoard = mainBoard;
-        baseBoard = mainBoard.map(s => [...s]);
-        sBoard = subBoard;
-        boardRows = baseBoard.length;
-        boardCols = baseBoard[0].length;
-        emptyCols = Array(boardCols).fill(boardEmptyColor);
-        for (let r = 0; r < boardRows; r++) {
-            for (let c = 0; c < boardCols; c++) {
-                mBoard[r][c] = baseBoard[r][c] = boardEmptyColor;
+        app = mainApp;
+        baseBoard = [];
+        shapeCallbacks.clear();
+        for (let r = 0; r < app.mainRows; r++) {
+            let emptyRow = [];
+            for (let c = 0; c < app.mainCols; c++) {
+                emptyRow.push(app.emptyCell);
             }
+            baseBoard.push(emptyRow);
         }
         Object.assign(status, { score: 0, level: 0, speed: 0, over: false });
-        cshape = createShape(ts);
-        nshape = createShape(ts);
+        updateNextShape(ts, false);
+        cshape = updateNextShape(ts, true);
         updateBoard(ts);
     }
     const update = (ts) => {
-        if (!pauseCallback) {
-            if (!options.isFreeze && ts > lastTagTime && !status.over) {
-                if (ts - lastTagTime > (speeds[status.speed] ?? 1)) {
-                    lastTagTime = ts;
-                    globalDown(ts);
-                }
-            }
-            if (!status.over) {
-                if (!cshape || cshape.finished) {
-                    cshape = nshape;
-                    nshape = createShape(ts);
-                }
+        if (!options.isFreeze && ts > lastTagTime && !status.over) {
+            if (ts - lastTagTime > (speeds[status.speed] ?? 1)) {
+                lastTagTime = ts;
+                globalDown(ts);
             }
         }
-        else {
-            lastTagTime = ts;
+        if (!status.over) {
+            if (!cshape || cshape.finished) {
+                cshape = updateNextShape(ts, true);
+            }
         }
         updateBoard(ts);
+        for (let callback of [...shapeCallbacks]) {
+            if (!callback(ts)) {
+                shapeCallbacks.delete(callback);
+                break;
+            }
+        }
     }
     return { status, keyMap, init, update };
 }
