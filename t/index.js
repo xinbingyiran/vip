@@ -332,7 +332,6 @@ import tcsgame from './tcs.js';
                 filterKeys.add(keyboard.KEY_SELECT);
                 if (game) {
                     filterKeys.add(keyboard.KEY_SELECT);
-                    selectGameList.selectedIndex = 0;
                     resetAll(ts);
                 }
                 else {

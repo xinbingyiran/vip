@@ -9,7 +9,7 @@ function game(options) {
     };
 
     const maxLevel = 10000;
-
+    let lastTagTime = 0;
     let pauseCallback = undefined;
     let shapeCallbacks = new Set();
 
@@ -19,7 +19,7 @@ function game(options) {
     const speeds = { 0: 1000, 1: 900, 2: 800, 3: 700, 4: 600, 5: 500, 6: 450, 7: 400, 8: 350, 9: 300, 10: 250, 11: 200, 12: 150, 13: 100, 14: 50, 15: 25, 16: 10 };
     const colors = ["red", "green", "blue", "purple", "orange"];
 
-    let cshape, nshape, allShapes, baseBoard, mBoard, sBoard, boardRows, emptyRows, boardCols, emptyCols;
+    let cshape, nshape, allShapes, baseBoard, mBoard, sBoard, boardRows, boardCols, emptyCols;
 
     function rotateItem(ts, item, outofBoard) {
         const shape = item.shape;
@@ -74,7 +74,7 @@ function game(options) {
     function createScorePauseCallback(ts, lines, overLines) {
         pauseCallback = (newTs) => {
             let ets = ~~((newTs - ts) / 20);
-            if (ets > 11) {
+            if (ets > 10) {
                 lines.forEach(line => baseBoard.splice(line, 1))
                 overLines.forEach(line => baseBoard.unshift(line));
                 for (let r = 0; r < lines.length - overLines.length; r++) {
@@ -88,12 +88,14 @@ function game(options) {
                 if (status.level > maxLevel) {
                     status.over = true;
                 }
+                lastTagTime = newTs;
                 return false;
             }
             else {
                 while (--ets >= 0) {
-                    lines.forEach(line => {
-                        baseBoard[line][ets] = boardEmptyColor;
+                    lines.forEach((line, i) => {
+                        const index = i % 2 ? boardCols - 1 - ets : ets;
+                        baseBoard[line][index] = boardEmptyColor;
                     });
                 }
                 return true;
@@ -143,7 +145,7 @@ function game(options) {
         const fromLine = item.cy > 0 ? item.cy : 0;
         const toLine = item.cy + item.shape.length - 1;
         calcScore(ts, fromLine, toLine, overLines);
-        cshape.finished = true;
+        item.finished = true;
     }
 
     const globalMove = (ts, x) => {
@@ -169,7 +171,7 @@ function game(options) {
             item.cy = newy;
             return;
         }
-        mergeItem(ts, cshape);
+        mergeItem(ts, item);
     }
     const dotDown = (ts, item) => {
         if (item.cy > 0 && baseBoard[item.cy][item.cx] == boardEmptyColor && (item.cy == boardRows - 1 || baseBoard[item.cy + 1][item.cx] != boardEmptyColor)) {
@@ -204,7 +206,7 @@ function game(options) {
             item.cy = newy;
             return;
         }
-        cshape.finished = true;
+        item.finished = true;
     }
     const cancelUp = (ts, item) => {
         const x = item.cx;
@@ -410,7 +412,7 @@ function game(options) {
             return true;
         }
         cshape.downAction(ts, cshape);
-        gtime = ts;
+        lastTagTime = ts;
         return !cshape.finished;
     }
 
@@ -442,12 +444,11 @@ function game(options) {
 
     const init = (ts, mainBoard, subBoard) => {
         pauseCallback = undefined;
-        gtime = ts;
+        lastTagTime = ts;
         mBoard = mainBoard;
         baseBoard = mainBoard.map(s => [...s]);
         sBoard = subBoard;
         boardRows = baseBoard.length;
-        emptyRows = Array(boardRows).fill(undefined);
         boardCols = baseBoard[0].length;
         emptyCols = Array(boardCols).fill(boardEmptyColor);
         for (let r = 0; r < boardRows; r++) {
@@ -460,16 +461,11 @@ function game(options) {
         nshape = createShape(ts);
         updateBoard(ts);
     }
-
-    let gtime = 0;
     const update = (ts) => {
         if (!pauseCallback) {
-            if (options.isFreeze) {
-                gtime = ts;
-            }
-            else if (ts > gtime && !status.over) {
-                if (ts - gtime > (speeds[status.speed] ?? 1)) {
-                    gtime = ts;
+            if (!options.isFreeze && ts > lastTagTime && !status.over) {
+                if (ts - lastTagTime > (speeds[status.speed] ?? 1)) {
+                    lastTagTime = ts;
                     globalDown(ts);
                 }
             }
@@ -479,6 +475,9 @@ function game(options) {
                     nshape = createShape(ts);
                 }
             }
+        }
+        else {
+            lastTagTime = ts;
         }
         updateBoard(ts);
     }
