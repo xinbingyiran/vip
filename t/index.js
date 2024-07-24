@@ -1,4 +1,3 @@
-
 import keyboard from './keyboard.js';
 import fkgame from './fk.js';
 import tcsgame from './tcs.js';
@@ -18,9 +17,10 @@ import tcsgame from './tcs.js';
     for (let v in gameList) {
         selectGameList.options.add(new Option(v, v));
     }
-    let game = undefined;
+    selectGameList.addEventListener('change', event => {
+        drawBoard();
+    });
 
-    const boardEmptyColor = 'gray';
     const maxWidth = document.body.clientWidth - 20;
     const blockSizeCalc = ~~(maxWidth / 17);
     const blockSize = blockSizeCalc < 10 ? 10 : blockSizeCalc > 40 ? 40 : blockSizeCalc;
@@ -52,33 +52,18 @@ import tcsgame from './tcs.js';
     const spanLevel = document.querySelector('#level');
     const spanSpeed = document.querySelector('#speed');
 
-    const dialogScore = document.querySelector('#dscore');
-    const dialogLevel = document.querySelector('#dlevel');
-    const dialogSpeed = document.querySelector('#dspeed');
-    const dialogClose = document.querySelector('#dclose');
 
-    const dialogGameOver = document.querySelector("#gameOverDialog");
-    const gameOver = () => {
-        if (!dialogGameOver.open) {
-            dialogScore.innerText = game ? game.status.score : 0;
-            dialogLevel.innerText = game ? game.status.level : 0;
-            dialogSpeed.innerText = game ? game.status.speed : 0;
-            dialogGameOver.showModal();
-        }
-    };
-
-    dialogClose.addEventListener("click", () => {
-        if (dialogGameOver.open) {
-            dialogGameOver.close();
-            game = undefined;
-        }
-    });
-
-
-    const mainBoard = Array(mainRows).fill(undefined).map(() => Array(mainCols).fill(boardEmptyColor));
-    const subBoard = Array(subRows).fill(undefined).map(() => Array(subCols).fill(boardEmptyColor));
+    const emptyCell = { color: 'gray', type: undefined };
+    const colors = ["red", "green", "blue", "purple", "orange"];
+    const mainBoard = Array(mainRows).fill(undefined).map(() => Array(mainCols).fill(emptyCell));
+    const subBoard = Array(subRows).fill(undefined).map(() => Array(subCols).fill(emptyCell));
     const downActions = new Set();
-    let oldActions = new Set();
+    let currentActions;
+    let cellType = 0;
+    let cells;
+    let pauseCallbacks = new Set(), pause = false, game = undefined;
+    let gameTime = 0;
+    let lastts = 0;
 
     //按钮控制
 
@@ -291,48 +276,171 @@ import tcsgame from './tcs.js';
         return actions;
     }
 
-    function startGame(ts) {
-        resetAll();
-        currentActions = {};
-        game = gameList[selectGameList.value];
-        game.init(ts, mainBoard, subBoard);
+    function createFlashCallback(ts, postAction, delay) {
+        delay ??= 20;
+        return newTs => {
+            const ets = ~~((newTs - ts) / delay);
+            if (ets > mainRows * 2) {
+                postAction && postAction(newTs);
+                return false;
+            }
+            if (ets > mainRows) {
+                const overEts = ets - mainRows;
+                for (let i = 0; i < mainRows; i++) {
+                    for (let j = 0; j < mainCols; j++) {
+                        mainBoard[i][j] = i < overEts ? emptyCell : cells[(mainRows - i - 1) % cells.length];
+                    }
+                }
+            }
+            else {
+                for (let i = 0; i < ets; i++) {
+                    for (let j = 0; j < mainCols; j++) {
+                        mainBoard[mainRows - i - 1][j] = cells[i % cells.length];
+                    }
+                }
+            }
+            return true;
+        }
     }
 
-    function resetAll(ts) {
+    function resetCells() {
+        cells = colors.map(color => ({ color: color, type: cellType }));
+    }
+
+    function addPauseCallback(callback) {
+        if (callback && 'function' == typeof callback) {
+            pauseCallbacks.add(callback);
+            console.log(pauseCallbacks.size);
+        }
+    }
+
+    function addFlashCallback(ts, postCallback, delay) {
+        addPauseCallback(createFlashCallback(ts, postCallback, delay));
+    }
+
+    function startGame(ts) {
+        resetCells();
         game = undefined;
         pause = false;
-        for (let r = 0; r < mainRows; r++) {
-            for (let c = 0; c < mainCols; c++) {
-                mainBoard[r][c] = boardEmptyColor;
-            }
-        }
-        for (let r = 0; r < subRows; r++) {
-            for (let c = 0; c < subCols; c++) {
-                subBoard[r][c] = boardEmptyColor;
-            }
-        }
-        drawBoard();
+        const postCallback = (newTs) => {
+            pause = false;
+            downActions.clear();
+            currentActions = {};
+            pause = false;
+            game = gameList[selectGameList.value];
+            game.init(ts, {
+                mainBoard,
+                subBoard,
+                mainRows,
+                mainCols,
+                subRows,
+                subCols,
+                cells,
+                emptyCell,
+                addPauseCallback,
+                addFlashCallback,
+            });
+        };
+        addFlashCallback(ts, postCallback, 30);
     }
 
-
     const filterKeys = new Set();
-    let pause = false;
     function collectNewAction(ts) {
         const actions = new Set(downActions);
         checkGamepads().forEach(s => actions.add(s));
-        if (dialogGameOver.open) {
+        return actions;
+    }
+
+    const perline = blockSize / 8;
+    const perline2 = blockSize / 4;
+    const perline4 = blockSize / 2;
+
+    function drawItem(ctx, item, cols, rows) {
+        if (item == emptyCell) {
+            ctx.fillStyle = item.color;
+            ctx.fillRect(cols * blockSize + 0.5, rows * blockSize + 0.5, blockSize - 1, blockSize - 1);
+            return;
+        }
+        switch (item.type) {
+            case 1:
+                {
+                    ctx.fillStyle = item.color;
+                    ctx.fillRect(cols * blockSize + 0.5, rows * blockSize + 0.5, blockSize - 1, blockSize - 1);
+                }
+                break;
+            default:
+                {
+                    ctx.fillStyle = item.color;
+                    ctx.fillRect(cols * blockSize + 0.5, rows * blockSize + 0.5, blockSize - 1, blockSize - 1);
+
+                    ctx.fillStyle = emptyCell.color;
+                    ctx.fillRect(cols * blockSize + perline, rows * blockSize + perline, blockSize - perline2, blockSize - perline2);
+
+                    ctx.fillStyle = item.color;
+                    ctx.fillRect(cols * blockSize + perline2, rows * blockSize + perline2, blockSize - perline4, blockSize - perline4);
+                }
+                break;
+        }
+    }
+
+    function drawMainText(text, offset) {
+        const textWidth = mainCtx.measureText(text).width;
+        if (textWidth > blockSize * mainCols) {
+            textWidth = blockSize * mainCols;
+        }
+        const x = (blockSize * mainCols - textWidth) / 2;
+        const y = ~~(blockSize * mainRows / 2) + offset * blockSize;
+        const gd = mainCtx.createLinearGradient(x, y - blockSize, x + textWidth, y);
+        for (let i = 0; i < colors.length; i++) {
+            gd.addColorStop(i / (colors.length - 1), colors[i]);
+        }
+        mainCtx.fillStyle = gd;
+        mainCtx.fillText(text, x, y, textWidth);
+    }
+
+    function drawBoard() {
+        mainCtx.beginPath();
+        mainCtx.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
+        for (let r = 0; r < mainRows; r++) {
+            for (let c = 0; c < mainCols; c++) {
+                drawItem(mainCtx, mainBoard[r][c], c, r);
+            }
+        }
+        if (!game || game.status.over) {
+            mainCtx.font = mainCtx.font.replace(/\d+(?=px)/, blockSize);
+            drawMainText(selectGameList.value, -1);
+            if (game) {
+                drawMainText("游戏结束", 1);
+            }
+
+        }
+        subCtx.beginPath();
+        subCtx.clearRect(0, 0, subCanvas.width, subCanvas.height);
+        for (let r = 0; r < subRows; r++) {
+            for (let c = 0; c < subCols; c++) {
+                drawItem(subCtx, subBoard[r][c], c, r);
+            }
+        }
+        spanScore.innerText = game ? game.status.score : 0;
+        spanLevel.innerText = game ? game.status.level : 0;
+        spanSpeed.innerText = game ? game.status.speed : 0;
+    }
+
+
+    let checkSystemKeys = (ts, actions) => {
+        if (game && game.status.over) {
             if (actions.has(keyboard.KEY_SELECT) || actions.has(keyboard.KEY_START)) {
                 game = undefined;
-                dialogGameOver.close();
+                return true;
             }
-            return actions;
+            return true;
         }
         if (actions.has(keyboard.KEY_SELECT)) {
             if (!filterKeys.has(keyboard.KEY_SELECT)) {
                 filterKeys.add(keyboard.KEY_SELECT);
                 if (game) {
                     filterKeys.add(keyboard.KEY_SELECT);
-                    resetAll(ts);
+                    game = undefined;
                 }
                 else {
                     if (selectGameList.options.selectedIndex < 0 || selectGameList.options.selectedIndex >= selectGameList.options.length - 1) {
@@ -343,6 +451,7 @@ import tcsgame from './tcs.js';
                     }
                 }
             }
+            return true;
         }
         else {
             filterKeys.delete(keyboard.KEY_SELECT);
@@ -357,121 +466,82 @@ import tcsgame from './tcs.js';
                     startGame(ts);
                 }
             }
+            return true;
         }
         else {
             filterKeys.delete(keyboard.KEY_START);
         }
-        return actions;
+        return false;
     }
-
-    function drawBoard() {
-        mainCtx.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
-        mainCtx.beginPath();
-        const perline = blockSize / 8;
-        const perline2 = blockSize / 4;
-        const perline4 = blockSize / 2;
-        for (let r = 0; r < mainRows; r++) {
-            for (let c = 0; c < mainCols; c++) {
-                mainCtx.fillStyle = mainBoard[r][c];
-                mainCtx.fillRect(c * blockSize + 0.5, r * blockSize + 0.5, blockSize - 1, blockSize - 1);
-
-                mainCtx.fillStyle = boardEmptyColor;
-                mainCtx.fillRect(c * blockSize + perline, r * blockSize + perline, blockSize - perline2, blockSize - perline2);
-
-                mainCtx.fillStyle = mainBoard[r][c];
-                mainCtx.fillRect(c * blockSize + perline2, r * blockSize + perline2, blockSize - perline4, blockSize - perline4);
-            }
-        }
-        subCtx.clearRect(0, 0, subCanvas.width, subCanvas.height);
-        subCtx.beginPath();
-        for (let r = 0; r < subRows; r++) {
-            for (let c = 0; c < subCols; c++) {
-                subCtx.fillStyle = subBoard[r][c];
-                subCtx.fillRect(c * blockSize + 0.5, r * blockSize + 0.5, blockSize - 1, blockSize - 1);
-
-                subCtx.fillStyle = boardEmptyColor;
-                subCtx.fillRect(c * blockSize + perline, r * blockSize + perline, blockSize - perline2, blockSize - perline2);
-
-                subCtx.fillStyle = subBoard[r][c];
-                subCtx.fillRect(c * blockSize + perline2, r * blockSize + perline2, blockSize - perline4, blockSize - perline4);
-            }
-        }
-        spanScore.innerText = game ? game.status.score : 0;
-        spanLevel.innerText = game ? game.status.level : 0;
-        spanSpeed.innerText = game ? game.status.speed : 0;
-
-    }
-
-
-    function setDifference(left, right) {
-        const result = new Set();
-        for (let e of left) {
-            if (!right.has(e)) {
-                result.add(e);
-            }
-        }
-        return result;
-    }
-
-    let currentActions = {};
 
     //{ fdelay,odelay,callback,ts,ticks,allow }
-    
+
     function checkKeys(ts, keys, addKeys, removeKeys) {
 
-        for(let key of Object.keys(currentActions)){
-            if(keys.has(key)){
+        for (let key of Object.keys(currentActions)) {
+            if (keys.has(key)) {
                 const keyItem = currentActions[key];
                 if (!keyItem.allow || ts - keyItem.ts < (keyItem.ticks == 0 ? keyItem.fdelay : keyItem.odelay)) {
                     continue;
                 }
                 keyItem.allow = keyItem.callback(ts);
                 keyItem.ts = ts;
-                keyItem.ticks ++;
+                keyItem.ticks++;
             }
-            else
-            {
+            else {
                 delete currentActions[key];
             }
         }
-        for(let key of keys){
-            if(currentActions[key]){
+        for (let key of keys) {
+            if (currentActions[key]) {
                 continue;
             }
             const findMap = game.keyMap[key];
-            if(!findMap){
+            if (!findMap) {
                 continue;
             }
-            if(findMap.length == 3){
+            if (findMap.length == 3) {
                 currentActions[key] = { fdelay: findMap[0], odelay: findMap[1], callback: findMap[2], ts: ts, ticks: 0, allow: findMap[2](ts) };
             }
         }
     }
 
-
-    let gameTime = 0;
-    let lastts = 0;
+    let playPauseActions = (ts) => {
+        if (!pauseCallbacks.size) {
+            return false;
+        }
+        for (let pauseCallback of [...pauseCallbacks]) {
+            !pauseCallback(ts) && pauseCallbacks.delete(pauseCallback);
+        }
+        drawBoard();
+        return true;
+    }
 
     function gameLoop(ts) {
-        if (!pause) {
+        if (!pause && ts > lastts) {
             gameTime += ts - lastts;
         }
         lastts = ts;
-        const newActions = collectNewAction(gameTime);
-        if (!pause) {
+        do {
+            if (!game || (game && !pause)) {
+                if (playPauseActions(gameTime)) {
+                    break;
+                }
+            }
+            const newActions = collectNewAction(gameTime);
+            if (checkSystemKeys(gameTime, newActions)) {
+                drawBoard();
+                break;
+            }
             if (game && !game.status.over) {
-                game.keyMap && checkKeys(gameTime, newActions, setDifference(oldActions, newActions), setDifference(newActions, oldActions));
+                game.keyMap && checkKeys(gameTime, newActions);
                 game.update(gameTime);
-                oldActions = newActions;
                 drawBoard();
             }
-            if (game && game.status.over) {
-                gameOver();
-            }
         }
+        while (false);
         requestAnimationFrame(gameLoop);
     }
     drawBoard();
-    oldActions = collectNewAction();
-    gameLoop(performance.now());
+    requestAnimationFrame(gameLoop);
 }();
