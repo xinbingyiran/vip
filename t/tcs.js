@@ -54,19 +54,20 @@ function game(options) {
     }
 
     function initLevel(ts) {
+        lastTagTime = ts;
         const newCell = randomCell();
         const headx = 3;
         const heady = ~~(app.mainRows / 2);
         snake = [
             { x: headx, y: heady, cell: headCell },
-            { x: headx-1, y: heady, cell: newCell },
-            { x: headx-2, y: heady, cell: newCell },
-            { x: headx-3, y: heady, cell: newCell }
+            { x: headx - 1, y: heady, cell: newCell },
+            { x: headx - 2, y: heady, cell: newCell },
+            { x: headx - 3, y: heady, cell: newCell }
         ];
         cshape = createShape();
         //const steps = [[0, 1], [1, 0], [0, -1], [-1, 0]];
         nstep = [1, 0];//steps[~~(Math.random() * steps.length)];
-        lastTagTime = ts;
+        updateBoard(ts);
     }
 
     function nextLevel(ts) {
@@ -84,7 +85,10 @@ function game(options) {
                 return false;
             }
         }
-        initLevel(ts);
+        if (status.life < app.subRows) {
+            status.life++;
+        }
+        app.addFlashCallback(ts, (newTs) => initLevel(newTs));
         return true;
     }
 
@@ -117,11 +121,11 @@ function game(options) {
         if (cshape.x === newx && cshape.y === newy) {
             newCell = cshape.cell;
             snake.push(cshape);
-            cshape = createShape();
             status.score += 100;
             if (snake.length >= app.mainCols * app.mainRows - maxLevel + status.level) {
-                nextLevel();
+                return nextLevel();
             }
+            cshape = createShape();
         }
         for (let i = snake.length - 1; i > 0; i--) {
             snake[i].x = snake[i - 1].x;
@@ -151,11 +155,6 @@ function game(options) {
     const init = (ts, mainApp) => {
         app = mainApp;
         headCell = app.cells[0];
-        for (let r = 0; r < app.mainRows; r++) {
-            for (let c = 0; c < app.mainCols; c++) {
-                app.mainBoard[r][c] = app.emptyCell;
-            }
-        }
         Object.assign(status, { score: 0, level: 0, speed: 0, life: app.subRows, over: false });
         initLevel(ts);
     }

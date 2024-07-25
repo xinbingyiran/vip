@@ -9,7 +9,7 @@ function game(options) {
     };
 
     const maxLevel = 10000;
-    const scorePerSpeed = 1000;
+    const scorePerSpeed = 50000;
     let lastTagTime = 0;
     let shapeCallbacks = new Set();
 
@@ -36,13 +36,6 @@ function game(options) {
                     baseBoard.unshift(createEmptyRow());
                 }
                 status.score += scores[lines.length];
-                const totalSpeed = ~~(status.score / scorePerSpeed);
-                const speedLength = Object.keys(speeds).length;
-                status.speed = totalSpeed % speedLength;
-                status.level = ~~(totalSpeed / speedLength);
-                if (status.level > maxLevel) {
-                    status.over = true;
-                }
                 fixTagTime(newTs - ts);
                 updateBoard();
                 return false;
@@ -437,24 +430,51 @@ function game(options) {
     };
 
 
-    const init = (ts, mainApp) => {
+
+    const initLevel = ts => {
+        baseBoard.forEach(row => row.fill(app.emptyCell));
+        shapeCallbacks.clear();
+        cshape = updateNextShape(ts, true);
+        updateBoard(ts);
         lastTagTime = ts;
+    }
+
+    const init = (ts, mainApp) => {
         app = mainApp;
         baseBoard = [];
-        shapeCallbacks.clear();
         for (let r = 0; r < app.mainRows; r++) {
             baseBoard.push(createEmptyRow());
         }
         Object.assign(status, { score: 0, level: 0, speed: 0, over: false });
         updateNextShape(ts, false);
-        cshape = updateNextShape(ts, true);
-        updateBoard(ts);
+        initLevel(ts);
     }
 
     function fixTagTime(addtion) {
         lastTagTime += addtion;
     }
+
+    const checkScore = ts => {
+        const totalSpeed = ~~(status.score / scorePerSpeed);
+        const speedLength = Object.keys(speeds).length;
+        const newSpeed = totalSpeed % speedLength;
+        if (newSpeed != status.speed) {
+            status.speed = totalSpeed % speedLength;
+            status.level = ~~(totalSpeed / speedLength);
+            if (status.level > maxLevel) {
+                status.over = true;
+                return false;
+            }
+            app.addFlashCallback(ts, (newTs) => initLevel(newTs));
+            return true;
+        }
+        return false;
+    }
+
     const update = (ts) => {
+        if (checkScore(ts)) {
+            return;
+        }
         if (!options.isFreeze && ts > lastTagTime && !status.over) {
             if (ts - lastTagTime > (speeds[status.speed] ?? 1)) {
                 globalDown(ts);

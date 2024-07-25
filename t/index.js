@@ -1,6 +1,7 @@
 import keyboard from './keyboard.js';
 import fkgame from './fk.js';
 import tcsgame from './tcs.js';
+import sxgame from './sx.js';
 
 !function () {
 
@@ -10,7 +11,9 @@ import tcsgame from './tcs.js';
         '方块辅助': fkgame({ hasExtend: false, hasHelper: true }),
         '方块扩展辅助': fkgame({ hasExtend: true, hasHelper: true }),
         '贪吃蛇': tcsgame({ loop: false }),
-        '贪吃蛇穿墙': tcsgame({ loop: true })
+        '贪吃蛇穿墙': tcsgame({ loop: true }),
+        '三消': sxgame({ fk: false }),
+        '三增': sxgame({ fk: true }),
     }
 
     const selectGameList = document.querySelector('#gameList');
@@ -468,47 +471,61 @@ import tcsgame from './tcs.js';
         pause = false;
     }
 
+    function selectMenu(offset) {
+        selectGameList.options.selectedIndex += offset;
+        if (selectGameList.options.selectedIndex < 0) {
+            selectGameList.options.selectedIndex = 0;
+        }
+        if (selectGameList.options.selectedIndex >= selectGameList.options.length) {
+            selectGameList.options.selectedIndex = selectGameList.options.length - 1;
+        }
+        return true;
+    }
+
+    const systemKeyMap = {
+        [keyboard.KEY_SELECT]: ts => {
+            if (game) {
+                clearGame();
+            }
+            else {
+                selectMenu(1);
+            }
+            return true;
+        },
+        [keyboard.KEY_START]: ts => {
+            if (game) {
+                if (game.status.over) {
+                    //clearGame();
+                }
+                else {
+                    pause = !pause;
+                }
+            }
+            else {
+                startGame(ts);
+            }
+            return true;
+        },
+        [keyboard.KEY_UP]: ts => !game && selectMenu(-1),
+        [keyboard.KEY_LEFT]: ts => !game && selectMenu(-1),
+        [keyboard.KEY_DOWN]: ts => !game && selectMenu(1),
+        [keyboard.KEY_RIGHT]: ts => !game && selectMenu(1),
+    }
+
     function checkSystemKeys(ts, actions) {
-        if (actions.has(keyboard.KEY_SELECT)) {
-            if (!filterKeys.has(keyboard.KEY_SELECT)) {
-                filterKeys.add(keyboard.KEY_SELECT);
-                if (game) {
-                    filterKeys.add(keyboard.KEY_SELECT);
-                    clearGame();
-                }
-                else {
-                    if (selectGameList.options.selectedIndex < 0 || selectGameList.options.selectedIndex >= selectGameList.options.length - 1) {
-                        selectGameList.options.selectedIndex = 0;
-                    }
-                    else {
-                        selectGameList.options.selectedIndex++;
+
+        for (let key in systemKeyMap) {
+            if (actions.has(key)) {
+                if (!filterKeys.has(key)) {
+                    filterKeys.add(key);
+                    if (systemKeyMap[key](ts)) {
+                        return true;
                     }
                 }
             }
-            return true;
-        }
-        else {
-            filterKeys.delete(keyboard.KEY_SELECT);
-        }
-        if (actions.has(keyboard.KEY_START)) {
-            if (!filterKeys.has(keyboard.KEY_START)) {
-                filterKeys.add(keyboard.KEY_START);
-                if (game) {
-                    if (game.status.over) {
-                        //clearGame();
-                    }
-                    else {
-                        pause = !pause;
-                    }
-                }
-                else {
-                    startGame(ts);
-                }
+            else {
+                filterKeys.delete(key);
             }
-            return true;
-        }
-        else {
-            filterKeys.delete(keyboard.KEY_START);
         }
         return false;
     }
