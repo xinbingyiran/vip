@@ -116,9 +116,9 @@ import sxgame from './sx.js';
         w: keyboard.KEY_UP,
         j: keyboard.KEY_ACTION,
         k: keyboard.KEY_ACTION,
-        y: keyboard.KEY_SELECT,
-        u: keyboard.KEY_START,
-        i: keyboard.KEY_EXTEND
+        u: keyboard.KEY_SELECT,
+        i: keyboard.KEY_START,
+        o: keyboard.KEY_EXTEND
     }
 
     const updateKeys = (event, down) => {
