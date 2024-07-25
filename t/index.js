@@ -18,6 +18,7 @@ import tcsgame from './tcs.js';
         selectGameList.options.add(new Option(v, v));
     }
     selectGameList.addEventListener('change', event => {
+        clearGame();
         drawBoard();
     });
 
@@ -409,13 +410,13 @@ import tcsgame from './tcs.js';
             drawMainText("--选择新游戏--", -1);
             drawMainText(selectGameList.value, 1);
         }
-        else if(game.status.over){
+        else if (game.status.over) {
             drawMainText("游戏结束", -1);
         }
-        else if(pause){
+        else if (pause) {
             drawMainText("游戏暂停", -1);
         }
-        
+
         subCtx.beginPath();
         subCtx.clearRect(0, 0, subCanvas.width, subCanvas.height);
         for (let r = 0; r < subRows; r++) {
@@ -432,6 +433,7 @@ import tcsgame from './tcs.js';
         //downActions.clear();
         currentActions = {};
         pauseCallbacks.clear();
+        isStarting = false;
         game = undefined;
         pause = false;
     }
@@ -463,7 +465,7 @@ import tcsgame from './tcs.js';
                 filterKeys.add(keyboard.KEY_START);
                 if (game) {
                     if (game.status.over) {
-                        clearGame();
+                        //clearGame();
                     }
                     else {
                         pause = !pause;
@@ -533,7 +535,13 @@ import tcsgame from './tcs.js';
     }
 
     function updateSystem(gameTime, newActions) {
-        return (isStarting ? false : checkSystemKeys(gameTime, newActions)) || playPauseActions(gameTime);
+        if (isStarting) {
+            return playPauseActions(gameTime);
+        }
+        if (checkSystemKeys(gameTime, newActions)) {
+            return true;
+        }
+        return playPauseActions(gameTime);
     }
 
     function gameLoop(ts) {
