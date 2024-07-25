@@ -55,14 +55,18 @@ function game(options) {
 
     function initLevel(ts) {
         const newCell = randomCell();
+        const headx = 3;
+        const heady = ~~(app.mainRows / 2);
         snake = [
-            { x: ~~(app.mainCols / 2) + 1, y: ~~(app.mainRows / 2), cell: headCell },
-            { x: ~~(app.mainCols / 2), y: ~~(app.mainRows / 2), cell: newCell },
-            { x: ~~(app.mainCols / 2) - 1, y: ~~(app.mainRows / 2), cell: newCell },
-            { x: ~~(app.mainCols / 2) - 2, y: ~~(app.mainRows / 2), cell: newCell }];
+            { x: headx, y: heady, cell: headCell },
+            { x: headx-1, y: heady, cell: newCell },
+            { x: headx-2, y: heady, cell: newCell },
+            { x: headx-3, y: heady, cell: newCell }
+        ];
         cshape = createShape();
         //const steps = [[0, 1], [1, 0], [0, -1], [-1, 0]];
         nstep = [1, 0];//steps[~~(Math.random() * steps.length)];
+        lastTagTime = ts;
     }
 
     function nextLevel(ts) {
@@ -144,7 +148,6 @@ function game(options) {
     }
 
     const init = (ts, mainApp) => {
-        lastTagTime = ts;
         app = mainApp;
         headCell = app.cells[0];
         for (let r = 0; r < app.mainRows; r++) {
