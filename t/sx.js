@@ -111,6 +111,28 @@ function game(options) {
         return true;
     };
 
+    function createScorePauseCallback(ts, calcY) {
+        app.addPauseCallback((newTs) => {
+            let ets = ~~((newTs - ts) / 10);
+            if (ets > 10) {
+                baseBoard.unshift(...baseBoard.splice(calcY, 1));
+                baseBoard[0].fill(app.emptyCell);
+                status.score += scorePerDot * 10;
+                lastTagTime += newTs - ts;
+                checkScore(ts);
+                return false;
+            }
+            else {
+                //updateBoard();
+                while (--ets >= 0) {
+                    const index = ets;
+                    app.mainBoard[calcY][index] = app.emptyCell;
+                }
+                return true;
+            }
+        });
+    }
+
     const doAction = (ts) => {
         const x = actionItem.col;
         let sy = 1;
@@ -127,10 +149,7 @@ function game(options) {
                     if (calcY + 1 >= app.mainRows || baseBoard[calcY + 1][x] != app.emptyCell) {
                         baseBoard[calcY][x] = newCell;
                         if (baseBoard[calcY].every(s => s != app.emptyCell)) {
-                            baseBoard.unshift(...baseBoard.splice(calcY, 1));
-                            baseBoard[0].fill(app.emptyCell);
-                            status.score += scorePerDot * 10;
-                            checkScore(ts);
+                            createScorePauseCallback(newTs, [calcY], []);
                         }
                         return false;
                     }

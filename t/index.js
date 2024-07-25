@@ -6,14 +6,14 @@ import sxgame from './sx.js';
 !function () {
 
     const gameList = {
-        '方块标准': fkgame({ hasExtend: false, hasHelper: false }),
-        '方块扩展': fkgame({ hasExtend: true, hasHelper: false }),
-        '方块辅助': fkgame({ hasExtend: false, hasHelper: true }),
-        '方块扩展辅助': fkgame({ hasExtend: true, hasHelper: true }),
+        '标准方块': fkgame({ hasExtend: false, hasHelper: false }),
+        '扩展方块': fkgame({ hasExtend: true, hasHelper: false }),
+        '方块带辅助': fkgame({ hasExtend: false, hasHelper: true }),
+        '扩展方块带辅助': fkgame({ hasExtend: true, hasHelper: true }),
         '贪吃蛇': tcsgame({ loop: false }),
-        '贪吃蛇穿墙': tcsgame({ loop: true }),
-        '三消': sxgame({ fk: false }),
-        '三增': sxgame({ fk: true }),
+        '穿墙贪吃蛇': tcsgame({ loop: true }),
+        '消除方块': sxgame({ fk: false }),
+        '消除整行': sxgame({ fk: true }),
     }
 
     const selectGameList = document.querySelector('#gameList');
@@ -472,13 +472,14 @@ import sxgame from './sx.js';
     }
 
     function selectMenu(offset) {
-        selectGameList.options.selectedIndex += offset;
-        if (selectGameList.options.selectedIndex < 0) {
-            selectGameList.options.selectedIndex = 0;
+        let newOffset = selectGameList.options.selectedIndex + offset;
+        if (newOffset < 0) {
+            newOffset = selectGameList.options.length - 1;
         }
-        if (selectGameList.options.selectedIndex >= selectGameList.options.length) {
-            selectGameList.options.selectedIndex = selectGameList.options.length - 1;
+        if (newOffset >= selectGameList.options.length) {
+            newOffset = 0;
         }
+        selectGameList.options.selectedIndex = newOffset;
         return true;
     }
 
