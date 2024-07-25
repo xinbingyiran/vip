@@ -9,6 +9,7 @@ function game(options) {
     };
 
     const maxLevel = 10000;
+    const scorePerSpeed = 1000;
     let lastTagTime = 0;
     let shapeCallbacks = new Set();
 
@@ -18,56 +19,13 @@ function game(options) {
 
     let app, cshape, nshape, allShapes, baseBoard;
 
-    function rotateItem(ts, item, outofBoard) {
-        const shape = item.shape;
-        const rows = shape.length;
-        const cols = shape[0].length;
-        const fix = ~~((rows - cols) / 2);
-        const ry = item.cy + fix;
-        let rx = item.cx - fix;
-        if (ry + cols > app.mainRows) {
-            return false;
+    function createEmptyRow() {
+        let emptyRow = [];
+        for (let c = 0; c < app.mainCols; c++) {
+            emptyRow.push(app.emptyCell);
         }
-        const rotated = [];
-        for (let c = 0; c < cols; c++) {
-            rotated[c] = [];
-            for (let r = 0; r < rows; r++) {
-                rotated[c][r] = options.isReverse ? shape[r][cols - 1 - c] : shape[rows - 1 - r][c];
-            }
-        }
-        if (outofBoard) {
-            item.shape = rotated;
-            return;
-        }
-        const addtion = rows > cols ? ((~~((rows + 1 - cols) / 2)) * 2) : (cols - rows);
-        for (let i = 0; i <= addtion; i++) {
-            rx += i * ((i % 2 == 0) ? -1 : 1);
-            const array = calcArray(rotated, rx, ry);
-            if (isAllAllowed(array)) {
-                item.shape = rotated;
-                item.cx = rx;
-                item.cy = ry;
-                return;
-            }
-        }
+        return emptyRow;
     }
-
-    const calcArray = (shape, x, y) => {
-        const result = [];
-        shape.forEach((row, r) => {
-            row.forEach((value, c) => {
-                if (value) {
-                    result.push([x + c, y + r]);
-                }
-            });
-        });
-        return result;
-    }
-
-    const isAllAllowed = (array) => {
-        return array.every(([x, y]) => x >= 0 && x < app.mainCols && (y < 0 || (y < app.mainRows && baseBoard[y][x] === app.emptyCell)));
-    };
-
     function createScorePauseCallback(ts, lines, overLines) {
         app.addPauseCallback((newTs) => {
             let ets = ~~((newTs - ts) / 20);
@@ -75,21 +33,17 @@ function game(options) {
                 lines.forEach(line => baseBoard.splice(line, 1))
                 overLines.forEach(line => baseBoard.unshift(line));
                 for (let r = 0; r < lines.length - overLines.length; r++) {
-                    let emptyRow = [];
-                    for (let c = 0; c < app.mainCols; c++) {
-                        emptyRow.push(app.emptyCell);
-                    }
-                    baseBoard.unshift(emptyRow);
+                    baseBoard.unshift(createEmptyRow());
                 }
                 status.score += scores[lines.length];
-                const result = ~~(status.score / 10000);
+                const totalSpeed = ~~(status.score / scorePerSpeed);
                 const speedLength = Object.keys(speeds).length;
-                status.speed = result % speedLength;
-                status.level = ~~(result / speedLength);
+                status.speed = totalSpeed % speedLength;
+                status.level = ~~(totalSpeed / speedLength);
                 if (status.level > maxLevel) {
                     status.over = true;
                 }
-                lastTagTime = newTs;
+                fixTagTime(newTs - ts);
                 updateBoard();
                 return false;
             }
@@ -105,120 +59,172 @@ function game(options) {
             }
         });
     }
+    function rotateArray(shape) {
+        const rotated = [];
+        const rows = shape.length;
+        const cols = shape[0].length;
 
-    const calcScore = (ts, fromLine, toLine, overLines) => {
-        const lines = [];
-        for (let r = toLine; r >= fromLine; r--) {
-            if (baseBoard[r].every((value) => value !== app.emptyCell)) {
-                (lines ??= []).push(r);
+        for (let c = 0; c < cols; c++) {
+            rotated[c] = [];
+            for (let r = 0; r < rows; r++) {
+                rotated[c][r] = options.isReverse ? shape[r][cols - 1 - c] : shape[rows - 1 - r][c];
             }
         }
-        if (overLines.length > lines) {
-            status.over = true;
-            return 0;
-        }
-        if (lines.length > 0) {
-            createScorePauseCallback(ts, lines, overLines);
-        }
-        return lines.length;
+        return rotated;
     }
-
-    const mergeItem = (ts, item) => {
-        let count = 0 - item.cy;
-        const overLines = [];
-        while (count-- > 0) {
-            let emptyRow = [];
-            for (let c = 0; c < app.mainCols; c++) {
-                emptyRow.push(app.emptyCell);
-            }
-            overLines.push(emptyRow);
+    function rotateItem(ts) {
+        const rotated = rotateArray(cshape.shape);
+        const rows = rotated.length;
+        const cols = rotated[0].length;
+        const colsGrow = ~~((cols - rows) / 2);
+        const newy = cshape.cy + colsGrow;
+        let newx = cshape.cx - colsGrow;
+        if (newy + cols > app.mainRows) {
+            return;
         }
-        for (let r = 0; r < item.shape.length; r++) {
-            if (item.cy + r < 0) {
-                for (let c = 0; c < item.shape[r].length; c++) {
-                    if (item.shape[r][c]) {
-                        overLines[r][item.cx + c] = item.cell;
-                    }
-                }
-            }
-            else {
-                for (let c = 0; c < item.shape[r].length; c++) {
-                    if (item.shape[r][c]) {
-                        baseBoard[item.cy + r][item.cx + c] = item.cell;
-                    }
-                }
+        const addtion = cols > rows ? ((~~((cols + 1 - rows) / 2)) * 2) : (rows - cols);
+        for (let i = 0; i <= addtion; i++) {
+            newx += i * ((i % 2 == 0) ? -1 : 1);
+            if (canFitToMain(rotated, cols, rows, newx, newy)) {
+                cshape.shape = rotated;
+                cshape.cx = newx;
+                cshape.cy = newy;
+                return;
             }
         }
-        const fromLine = item.cy > 0 ? item.cy : 0;
-        const toLine = item.cy + item.shape.length - 1;
-        calcScore(ts, fromLine, toLine, overLines);
-        item.finished = true;
     }
-
-    const globalMove = (ts, x) => {
-        var newx = cshape.cx + x;
-        if (newx < 0 || newx + cshape.shape[0].length > app.mainCols) {
+    function canFitToMain(shape, cols, rows, cx, cy) {
+        if (cx < 0 || cx + cols > app.mainCols || cy + rows > app.mainRows) {
             return false;
         }
-        const array = calcArray(cshape.shape, newx, cshape.cy);
-        if (isAllAllowed(array)) {
+        for (let r = 0; r < rows; r++) {
+            if (cy + r < 0) {
+                continue;
+            }
+            for (let c = 0; c < cols; c++) {
+                if (shape[r][c] && baseBoard[cy + r][cx + c] != app.emptyCell) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    function mergeToMain(ts, shape, cols, rows, cx, cy, cell) {
+        const lines = [];
+        const emptyRows = [];
+        for (let r = rows - 1; r >= 0; r--) {
+            if (cy + r < 0) {
+                const emptyRow = createEmptyRow();
+                for (let c = 0; c < cols; c++) {
+                    shape[r][c] && (emptyRow[cx + c] = cell);
+                }
+                emptyRows.push(emptyRow);
+                continue;
+            }
+            let fullRow = true;
+            for (let c = 0; c < app.mainCols; c++) {
+                if (baseBoard[r + cy][c] == app.emptyCell) {
+                    if (c - cx < 0 || c - cx > cols || !shape[r][c - cx]) {
+                        fullRow = false;
+                        continue;
+                    }
+                    baseBoard[r + cy][c] = cell;
+                }
+            }
+            fullRow && lines.push(cy + r);
+        }
+        if (lines.length < emptyRows.length) {
+            status.over = true;
+        }
+        else if (lines.length) {
+            createScorePauseCallback(ts, lines, emptyRows);
+        }
+    }
+
+
+    const globalMove = (ts, step) => {
+        var newx = cshape.cx + step[0];
+        var newy = cshape.cy + step[1];
+        if (canFitToMain(cshape.shape, cshape.shape[0].length, cshape.shape.length, newx, cshape.cy)) {
             cshape.cx = newx;
+            cshape.cy = newy;
             return true;
         }
         return false;
     }
-
-    const commonDown = (ts, item) => {
-        const newy = item.cy + 1;
-        const array = calcArray(item.shape, item.cx, newy);
-        if (isAllAllowed(array)) {
-            item.cy = newy;
-            return;
-        }
-        mergeItem(ts, item);
+    const mergeCurrent = (ts) => {
+        mergeToMain(ts, cshape.shape, cshape.shape[0].length, cshape.shape.length, cshape.cx, cshape.cy, cshape.cell);
+        cshape.finished = true;
+        lastTagTime = ts;
     }
-    const dotDown = (ts, item) => {
-        if (item.cy > 0 && baseBoard[item.cy][item.cx] == app.emptyCell && (item.cy == app.mainRows - 1 || baseBoard[item.cy + 1][item.cx] != app.emptyCell)) {
-            baseBoard[item.cy][item.cx] = item.cell;
-            if (calcScore(ts, item.cy, item.cy, []) || item.cy == app.mainRows - 1) {
-                item.finished = true;
-                return;
+    const commonDown = (ts) => {
+        if (canFitToMain(cshape.shape, cshape.shape[0].length, cshape.shape.length, cshape.cx, cshape.cy + 1)) {
+            cshape.cy = cshape.cy + 1;
+            return true;
+            // if (canFitToMain(cshape.shape, cshape.shape[0].length, cshape.shape.length, cshape.cx, cshape.cy + 1)) {
+            //     return true;
+            // }
+            // if (canFitToMain(cshape.shape, cshape.shape[0].length, cshape.shape.length, cshape.cx - 1, cshape.cy)
+            //     || canFitToMain(cshape.shape, cshape.shape[0].length, cshape.shape.length, cshape.cx + 1, cshape.cy)) {
+            //     return true;
+            // }
+        }
+        mergeCurrent(ts);
+        return false;
+    }
+
+    const dotInFull = (x, y) => {
+        if (x < 0 || x >= app.mainCols || y < 0 || y >= app.mainRows) {
+            return false;
+        }
+        for (let c = 0; c < app.mainCols; c++) {
+            if (c == x ? baseBoard[y][c] != app.emptyCell : baseBoard[y][c] == app.emptyCell) {
+                return false;
             }
-            baseBoard[item.cy][item.cx] = app.emptyCell;
         }
-        const array = [];
-        const newy = item.cy + 1;
-        for (let r = newy; r < app.mainRows; r++) {
-            array.push([item.cx, r]);
+        return y + 1 >= app.mainRows || baseBoard[y + 1][x] != app.emptyCell;
+    }
+    const dotItem = [[1]];
+
+    const dotDown = (ts) => {
+        if (dotInFull(cshape.cx, cshape.cy)) {
+            mergeCurrent(ts);
+            return false;
         }
-        if (array.some(([x, y]) => x >= 0 && x < app.mainCols && (y < 0 || (y < app.mainRows && baseBoard[y][x] == app.emptyCell)))) {
-            item.cy = newy;
-            return;
+        let newy = cshape.cy + 1;
+        for (; newy < app.mainRows; newy++) {
+            if (baseBoard[newy][cshape.cx] == app.emptyCell) {
+                cshape.cy++;
+                break;
+            }
         }
-        if (item.cy < 0) {
-            status.over = true;
-            return;
+        if (newy == app.mainRows) {
+            mergeCurrent(ts);
+            return false;
         }
-        baseBoard[item.cy][item.cx] = item.cell;
-        item.finished = true;
+        // if (dotInFull(cshape.cx, cshape.cy)) {
+        //     mergeCurrent(ts);
+        //     return false;
+        // }
+        return true;
     }
 
-    const cancelDown = (ts, item) => {
-        const newy = item.cy + 1;
-        const array = calcArray(item.shape, item.cx, newy);
-        if (isAllAllowed(array)) {
-            item.cy = newy;
-            return;
+    const cancelDown = (ts) => {
+        if (canFitToMain(cshape.shape, cshape.shape[0].length, cshape.shape.length, cshape.cx, cshape.cy + 1)) {
+            cshape.cy = cshape.cy + 1;
+            return true;
         }
-        item.finished = true;
+        cshape.finished = true;
+        return false;
     }
-    const cancelUp = (ts, item) => {
-        const x = item.cx;
-        let sy = item.cy + item.shape.length >= 0 ? item.cy + item.shape.length : 0;
+    const cancelUp = (ts) => {
+        const x = cshape.cx;
+        let sy = cshape.cy + cshape.shape.length >= 0 ? cshape.cy + cshape.shape.length : 0;
         if (sy >= app.mainRows) {
             return;
         }
-        const newCell = item.cell;
+        const newCell = cshape.cell;
         shapeCallbacks.add(newTs => {
             let ets = ~~((newTs - ts) / 5);
             let i = 0;
@@ -228,7 +234,7 @@ function game(options) {
                     return false;
                 }
                 if (baseBoard[calcY][x] != app.emptyCell) {
-                    baseBoard[calcY][x] = app.emptyCell;
+                    app.mainBoard[calcY][x] = baseBoard[calcY][x] = app.emptyCell;
                     return false;
                 }
             }
@@ -237,50 +243,44 @@ function game(options) {
             }
             return true;
         });
+        return true;
     }
 
     const addtionDown = cancelDown;
-    const addtionUp = (ts, item) => {
-        const x = item.cx;
-        let sy = item.cy + item.shape.length >= 0 ? item.cy + item.shape.length : 0;
+    const addtionUp = (ts) => {
+        const x = cshape.cx;
+        let sy = cshape.cy + cshape.shape.length >= 0 ? cshape.cy + cshape.shape.length : 0;
         if (sy >= app.mainRows || baseBoard[sy][x] != app.emptyCell) {
             return;
         }
-        const newCell = item.cell;
-        if (sy + 1 >= app.mainRows || baseBoard[sy + 1][x] != app.emptyCell) {
-            baseBoard[sy][x] = newCell;
-            calcScore(ts, sy, sy, []);
-            return;
-        }
+        const newCell = cshape.cell;
         shapeCallbacks.add(newTs => {
             let ets = ~~((newTs - ts) / 5);
             let i = 0;
             for (i = 0; i < ets; i++) {
-                let calcY = sy + i + 1;
-                if (calcY >= app.mainRows || baseBoard[calcY][x] != app.emptyCell) {
-                    const actionY = calcY - 1;
-                    baseBoard[actionY][x] = newCell;
-                    calcScore(ts, actionY, actionY, []);
+                let calcY = sy + i;
+                if (calcY + 1 >= app.mainRows || baseBoard[calcY + 1][x] != app.emptyCell) {
+                    mergeToMain(newTs, dotItem, 1, 1, x, calcY, newCell);
                     return false;
                 }
             }
             app.mainBoard[sy + i][x] = newCell;
             return true;
         });
+        return true;
     }
 
-    const bomb = (ts, item) => {
-        var sx = item.cx - 1;
-        var ex = item.cx + item.shape[0].length + 1;
-        var sy = item.cy;
-        var ey = item.cy + item.shape.length + 3;
+    const bomb = (ts) => {
+        var sx = cshape.cx - 1;
+        var ex = cshape.cx + cshape.shape[0].length + 1;
+        var sy = cshape.cy;
+        var ey = cshape.cy + cshape.shape.length + 3;
         if (ey > app.mainRows) {
             ey = app.mainRows;
             if (ey - sy < 4) {
                 sy = ey - 4;
             }
         }
-
         const bombItems = [];
         for (let r = sy; r < ey; r++) {
             if (r < 0 || r >= app.mainRows) {
@@ -297,7 +297,7 @@ function game(options) {
         }
         bombItems.forEach(([c, r]) => baseBoard[r][c] = app.emptyCell);
 
-        const newCell = item.cell;
+        const newCell = cshape.cell;
         const bombMaping = [[], []];
         const bombY = ~~((sy + ey) / 2) - 2;
         for (let rows = 0; rows < 4; rows++) {
@@ -306,12 +306,13 @@ function game(options) {
             }
             for (var cols = 0; cols < 4; cols++) {
                 let match = (cols == rows) || (cols + rows == 3);
-                bombMaping[match ? 0 : 1].push([item.cx + cols, bombY + rows, newCell]);
+                bombMaping[match ? 0 : 1].push([cshape.cx + cols, bombY + rows, newCell]);
             }
         }
         app.addPauseCallback((newTs) => {
             const ets = ~~((newTs - ts) / 100);
             if (ets > 4) {
+                fixTagTime(newTs - ts);
                 return false;
             }
             updateBoard();
@@ -320,20 +321,19 @@ function game(options) {
             })
             return true;
         });
+        cshape.finished = true;
     }
-    const bombUp = (ts, item) => {
-        bomb(ts, item);
-        item.finished = true;
+    const bombUp = (ts) => {
+        bomb(ts);
+        return true;
     }
-    const bombDown = (ts, item) => {
-        const newy = item.cy + 1;
-        const array = calcArray(item.shape, item.cx, newy);
-        if (isAllAllowed(array)) {
-            item.cy = newy;
+    const bombDown = (ts) => {
+        if (canFitToMain(cshape.shape, cshape.shape[0].length, cshape.shape.length, cshape.cx, cshape.cy + 1)) {
+            cshape.cy = cshape.cy + 1;
             return true;
         }
-        bomb(ts, item);
-        item.finished = true;
+        bomb(ts);
+        return false;
     }
 
     const shapes = [
@@ -400,22 +400,25 @@ function game(options) {
         const pickShape = allShapes[~~(Math.random() * allShapes.length)];
         const cell = app.cells[~~(Math.random() * app.cells.length)];
         const shape = pickShape.shape.map(row => [...row]);
-        const item = Object.assign({}, pickShape, { shape, cell });
-        item.isHelper || Array.from({ length: ~~(Math.random() * 4) }).map(() => rotateItem(ts, item, true));
-        Object.assign(item, { cx: ~~((app.mainCols - item.shape[0].length) / 2), cy: -item.shape.length })
-        nshape = item;
+        const newShape = Object.assign({}, pickShape, { shape, cell });
+        if (!newShape.isHelper) {
+            let count = ~~(Math.random() * 4);
+            while (count-- > 0) {
+                newShape.shape = rotateArray(newShape.shape);
+            }
+        }
+        Object.assign(newShape, { cx: ~~((app.mainCols - newShape.shape[0].length) / 2), cy: -newShape.shape.length })
+        nshape = newShape;
         refresh && updateSubBoard(ts);
         return nextShape;
     }
 
-    const globalDown = (ts) => {
-        cshape.downAction(ts, cshape);
-        lastTagTime = ts;
-        return !cshape.finished;
+    const globalDown = ts => {
+        return cshape.downAction(ts);
     }
 
     const globalUp = (ts) => {
-        cshape.upAction(ts, cshape);
+        cshape.upAction(ts);
         return true;
     }
 
@@ -425,8 +428,8 @@ function game(options) {
     }
 
     const keyMap = {
-        [keys.KEY_LEFT]: [100, 0, (ts) => globalMove(ts, -1)],
-        [keys.KEY_RIGHT]: [100, 0, (ts) => globalMove(ts, 1)],
+        [keys.KEY_LEFT]: [100, 0, (ts) => globalMove(ts, [-1, 0])],
+        [keys.KEY_RIGHT]: [100, 0, (ts) => globalMove(ts, [1, 0])],
         [keys.KEY_DOWN]: [100, 0, (ts) => globalDown(ts)],
         [keys.KEY_UP]: [200, 50, (ts) => globalUp(ts)],
         [keys.KEY_ACTION]: [200, 50, (ts) => globalUp(ts)],
@@ -440,22 +443,22 @@ function game(options) {
         baseBoard = [];
         shapeCallbacks.clear();
         for (let r = 0; r < app.mainRows; r++) {
-            let emptyRow = [];
-            for (let c = 0; c < app.mainCols; c++) {
-                emptyRow.push(app.emptyCell);
-            }
-            baseBoard.push(emptyRow);
+            baseBoard.push(createEmptyRow());
         }
         Object.assign(status, { score: 0, level: 0, speed: 0, over: false });
         updateNextShape(ts, false);
         cshape = updateNextShape(ts, true);
         updateBoard(ts);
     }
+
+    function fixTagTime(addtion) {
+        lastTagTime += addtion;
+    }
     const update = (ts) => {
         if (!options.isFreeze && ts > lastTagTime && !status.over) {
             if (ts - lastTagTime > (speeds[status.speed] ?? 1)) {
-                lastTagTime = ts;
                 globalDown(ts);
+                lastTagTime = ts;
             }
         }
         if (!status.over) {

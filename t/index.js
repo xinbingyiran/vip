@@ -62,8 +62,9 @@ import tcsgame from './tcs.js';
     let cellType = 0;
     let cells;
     let pauseCallbacks = new Set(), pause = false, game = undefined;
-    let gameTime = 0;
-    let lastts = 0;
+    let pauseTime = 0;
+    let lastTime = 0;
+    let isStarting = false;
 
     //按钮控制
 
@@ -310,7 +311,6 @@ import tcsgame from './tcs.js';
     function addPauseCallback(callback) {
         if (callback && 'function' == typeof callback) {
             pauseCallbacks.add(callback);
-            console.log(pauseCallbacks.size);
         }
     }
 
@@ -320,15 +320,12 @@ import tcsgame from './tcs.js';
 
     function startGame(ts) {
         resetCells();
-        game = undefined;
-        pause = false;
+        clearGame();
+        isStarting = true;
         const postCallback = (newTs) => {
-            pause = false;
-            downActions.clear();
-            currentActions = {};
-            pause = false;
+            clearGame();
             game = gameList[selectGameList.value];
-            game.init(ts, {
+            game.init(newTs, {
                 mainBoard,
                 subBoard,
                 mainRows,
@@ -340,12 +337,13 @@ import tcsgame from './tcs.js';
                 addPauseCallback,
                 addFlashCallback,
             });
+            isStarting = false;
         };
         addFlashCallback(ts, postCallback, 30);
     }
 
     const filterKeys = new Set();
-    function collectNewAction(ts) {
+    function collectNewAction() {
         const actions = new Set(downActions);
         checkGamepads().forEach(s => actions.add(s));
         return actions;
@@ -406,14 +404,18 @@ import tcsgame from './tcs.js';
                 drawItem(mainCtx, mainBoard[r][c], c, r);
             }
         }
-        if (!game || game.status.over) {
+        if (!game) {
             mainCtx.font = mainCtx.font.replace(/\d+(?=px)/, blockSize);
-            drawMainText(selectGameList.value, -1);
-            if (game) {
-                drawMainText("游戏结束", 1);
-            }
-
+            drawMainText("--选择新游戏--", -1);
+            drawMainText(selectGameList.value, 1);
         }
+        else if(game.status.over){
+            drawMainText("游戏结束", -1);
+        }
+        else if(pause){
+            drawMainText("游戏暂停", -1);
+        }
+        
         subCtx.beginPath();
         subCtx.clearRect(0, 0, subCanvas.width, subCanvas.height);
         for (let r = 0; r < subRows; r++) {
@@ -426,21 +428,21 @@ import tcsgame from './tcs.js';
         spanSpeed.innerText = game ? game.status.speed : 0;
     }
 
+    function clearGame() {
+        //downActions.clear();
+        currentActions = {};
+        pauseCallbacks.clear();
+        game = undefined;
+        pause = false;
+    }
 
-    let checkSystemKeys = (ts, actions) => {
-        if (game && game.status.over) {
-            if (actions.has(keyboard.KEY_SELECT) || actions.has(keyboard.KEY_START)) {
-                game = undefined;
-                return true;
-            }
-            return true;
-        }
+    function checkSystemKeys(ts, actions) {
         if (actions.has(keyboard.KEY_SELECT)) {
             if (!filterKeys.has(keyboard.KEY_SELECT)) {
                 filterKeys.add(keyboard.KEY_SELECT);
                 if (game) {
                     filterKeys.add(keyboard.KEY_SELECT);
-                    game = undefined;
+                    clearGame();
                 }
                 else {
                     if (selectGameList.options.selectedIndex < 0 || selectGameList.options.selectedIndex >= selectGameList.options.length - 1) {
@@ -460,7 +462,12 @@ import tcsgame from './tcs.js';
             if (!filterKeys.has(keyboard.KEY_START)) {
                 filterKeys.add(keyboard.KEY_START);
                 if (game) {
-                    pause = !pause;
+                    if (game.status.over) {
+                        clearGame();
+                    }
+                    else {
+                        pause = !pause;
+                    }
                 }
                 else {
                     startGame(ts);
@@ -476,70 +483,70 @@ import tcsgame from './tcs.js';
 
     //{ fdelay,odelay,callback,ts,ticks,allow }
 
-    function checkKeys(ts, keys, addKeys, removeKeys) {
-
-        for (let key of Object.keys(currentActions)) {
-            if (keys.has(key)) {
-                const keyItem = currentActions[key];
-                if (!keyItem.allow || ts - keyItem.ts < (keyItem.ticks == 0 ? keyItem.fdelay : keyItem.odelay)) {
+    function updateGame(ts, keys) {
+        if (!game || game.status.over) {
+            return false;
+        }
+        if (game.keyMap) {
+            for (let key of Object.keys(currentActions)) {
+                if (keys.has(key)) {
+                    const keyItem = currentActions[key];
+                    if (!keyItem.allow || ts - keyItem.ts < (keyItem.ticks == 0 ? keyItem.fdelay : keyItem.odelay)) {
+                        continue;
+                    }
+                    keyItem.allow = keyItem.callback(ts);
+                    keyItem.ts = ts;
+                    keyItem.ticks++;
+                }
+                else {
+                    delete currentActions[key];
+                }
+            }
+            for (let key of keys) {
+                if (currentActions[key]) {
                     continue;
                 }
-                keyItem.allow = keyItem.callback(ts);
-                keyItem.ts = ts;
-                keyItem.ticks++;
-            }
-            else {
-                delete currentActions[key];
-            }
-        }
-        for (let key of keys) {
-            if (currentActions[key]) {
-                continue;
-            }
-            const findMap = game.keyMap[key];
-            if (!findMap) {
-                continue;
-            }
-            if (findMap.length == 3) {
-                currentActions[key] = { fdelay: findMap[0], odelay: findMap[1], callback: findMap[2], ts: ts, ticks: 0, allow: findMap[2](ts) };
+                const findMap = game.keyMap[key];
+                if (!findMap) {
+                    continue;
+                }
+                if (findMap.length == 3) {
+                    currentActions[key] = { fdelay: findMap[0], odelay: findMap[1], callback: findMap[2], ts: ts, ticks: 0, allow: findMap[2](ts) };
+                }
             }
         }
+        game.update(ts);
+        return true;
     }
 
     let playPauseActions = (ts) => {
+        if (pause) {
+            return true;
+        }
         if (!pauseCallbacks.size) {
             return false;
         }
         for (let pauseCallback of [...pauseCallbacks]) {
             !pauseCallback(ts) && pauseCallbacks.delete(pauseCallback);
         }
-        drawBoard();
         return true;
     }
 
+    function updateSystem(gameTime, newActions) {
+        return (isStarting ? false : checkSystemKeys(gameTime, newActions)) || playPauseActions(gameTime);
+    }
+
     function gameLoop(ts) {
-        if (!pause && ts > lastts) {
-            gameTime += ts - lastts;
+        if (pause) {
+            pauseTime += ts - lastTime;
         }
-        lastts = ts;
-        do {
-            if (!game || (game && !pause)) {
-                if (playPauseActions(gameTime)) {
-                    break;
-                }
-            }
-            const newActions = collectNewAction(gameTime);
-            if (checkSystemKeys(gameTime, newActions)) {
-                drawBoard();
-                break;
-            }
-            if (game && !game.status.over) {
-                game.keyMap && checkKeys(gameTime, newActions);
-                game.update(gameTime);
-                drawBoard();
-            }
+        lastTime = ts;
+        const gameTime = ts - pauseTime;
+        const newActions = collectNewAction();
+        if (updateSystem(gameTime, newActions) || updateGame(gameTime, newActions)) {
+            drawBoard();
         }
-        while (false);
+        lastTime = ts;
         requestAnimationFrame(gameLoop);
     }
     drawBoard();
