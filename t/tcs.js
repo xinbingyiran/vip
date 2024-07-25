@@ -131,6 +131,7 @@ function game(options) {
         snake[0].x = newx;
         snake[0].y = newy;
         nstep = step;
+        //lastTagTime = ts;
         return true;
     }
 

@@ -383,6 +383,7 @@ import tcsgame from './tcs.js';
     }
 
     function drawMainText(text, offset) {
+        mainCtx.font = mainCtx.font.replace(/\d+(?=px)/, blockSize);
         const textWidth = mainCtx.measureText(text).width;
         if (textWidth > blockSize * mainCols) {
             textWidth = blockSize * mainCols;
@@ -397,6 +398,37 @@ import tcsgame from './tcs.js';
         mainCtx.fillText(text, x, y, textWidth);
     }
 
+    function drawMenu() {
+        const fontSize = ~~(blockSize);
+        const border = 2;
+        mainCtx.font = mainCtx.font.replace(/\d+(?=px)/, fontSize);
+        let offset = 0;
+        const sx = ~~(fontSize / 2);
+        const sy = sx;
+        for (let gameName in gameList) {
+            const measure = mainCtx.measureText(gameName);
+            const textWidth = measure.width;
+            if (textWidth > fontSize * mainCols) {
+                textWidth = fontSize * mainCols;
+            }
+            const y = sx + (++offset) * (fontSize + border * 2);
+            if (gameName == selectGameList.value) {
+                const gd2 = mainCtx.createLinearGradient(sx, y, sx + textWidth, y);
+                gd2.addColorStop(0, 'lightblue');
+                gd2.addColorStop(0.5, 'darkgray');
+                gd2.addColorStop(1, 'lightblue');
+                mainCtx.fillStyle = gd2;
+                mainCtx.fillRect(sx - border, y - measure.actualBoundingBoxAscent - border, textWidth + border + border, fontSize + border + border);
+            }
+            const gd = mainCtx.createLinearGradient(sx, y, sx + textWidth, y);
+            for (let i = 0; i < colors.length; i++) {
+                gd.addColorStop(i / (colors.length - 1), colors[i]);
+            }
+            mainCtx.fillStyle = gd;
+            mainCtx.fillText(gameName, sx, y, textWidth);
+        }
+    }
+
     function drawBoard() {
         mainCtx.beginPath();
         mainCtx.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
@@ -406,9 +438,7 @@ import tcsgame from './tcs.js';
             }
         }
         if (!game) {
-            mainCtx.font = mainCtx.font.replace(/\d+(?=px)/, blockSize);
-            drawMainText("--选择新游戏--", -1);
-            drawMainText(selectGameList.value, 1);
+            drawMenu();
         }
         else if (game.status.over) {
             drawMainText("游戏结束", -1);
