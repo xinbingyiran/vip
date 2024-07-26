@@ -57,8 +57,10 @@ import sxgame from './sx.js';
     const spanSpeed = document.querySelector('#speed');
 
 
-    const emptyCell = { color: 'gray', type: undefined };
+
+    const speeds = [1000, 900, 800, 700, 600, 500, 450, 400, 350, 300, 250, 200, 150, 100, 50, 25];
     const colors = ["red", "green", "blue", "purple", "orange"];
+    const emptyCell = { color: 'gray', type: undefined };
     const mainBoard = Array(mainRows).fill(undefined).map(() => Array(mainCols).fill(emptyCell));
     const subBoard = Array(subRows).fill(undefined).map(() => Array(subCols).fill(emptyCell));
     const downActions = new Set();
@@ -69,6 +71,7 @@ import sxgame from './sx.js';
     let pauseTime = 0;
     let lastTime = 0;
     let isStarting = false;
+    let initSpeed = 0;
 
     //按钮控制
 
@@ -338,6 +341,8 @@ import sxgame from './sx.js';
                 subCols,
                 cells,
                 emptyCell,
+                speeds,
+                initSpeed,
                 addPauseCallback,
                 addFlashCallback,
             });
@@ -419,7 +424,7 @@ import sxgame from './sx.js';
                 mainCtx.fillStyle = 'lightblue';
                 mainCtx.fillRect(sx - border, y - measure.actualBoundingBoxAscent - border, textWidth + border + border, fontSize + border + border);
             }
-            else{
+            else {
                 mainCtx.fillStyle = 'white';
                 mainCtx.fillRect(sx - border, y - measure.actualBoundingBoxAscent - border, textWidth + border + border, fontSize + border + border);
             }
@@ -459,10 +464,13 @@ import sxgame from './sx.js';
         }
         spanScore.innerText = game ? game.status.score : 0;
         spanLevel.innerText = game ? game.status.level : 0;
-        spanSpeed.innerText = game ? game.status.speed : 0;
+        spanSpeed.innerText = game ? game.status.speed : initSpeed;
     }
 
     function clearGame() {
+        if (game) {
+            initSpeed = 0;
+        }
         //downActions.clear();
         currentActions = {};
         pauseCallbacks.clear();
@@ -480,6 +488,11 @@ import sxgame from './sx.js';
             newOffset = 0;
         }
         selectGameList.options.selectedIndex = newOffset;
+        return true;
+    }
+
+    function selectSpeed(offset) {
+        initSpeed = (initSpeed + speeds.length + offset) % speeds.length;
         return true;
     }
 
@@ -508,9 +521,9 @@ import sxgame from './sx.js';
             return true;
         },
         [keyboard.KEY_UP]: ts => !game && selectMenu(-1),
-        [keyboard.KEY_LEFT]: ts => !game && selectMenu(-1),
+        [keyboard.KEY_LEFT]: ts => !game && selectSpeed(-1),
         [keyboard.KEY_DOWN]: ts => !game && selectMenu(1),
-        [keyboard.KEY_RIGHT]: ts => !game && selectMenu(1),
+        [keyboard.KEY_RIGHT]: ts => !game && selectSpeed(1)
     }
 
     function checkSystemKeys(ts, actions) {

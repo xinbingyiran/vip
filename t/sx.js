@@ -19,9 +19,6 @@ function game(options) {
 
     options = Object.assign({ fk: false }, options ?? {});
 
-    const speeds = { 0: 1000, 1: 900, 2: 800, 3: 700, 4: 600, 5: 500, 6: 450, 7: 400, 8: 350, 9: 300, 10: 250, 11: 200, 12: 150, 13: 100, 14: 50, 15: 25, 16: 10 };
-
-
     let app, actionItem, baseBoard;
 
     function createEmptyRow() {
@@ -67,7 +64,7 @@ function game(options) {
 
     function updateLevel(ts) {
         status.speed += 1;
-        const speedLength = Object.keys(speeds).length;
+        const speedLength = app.speeds.length;
         if (status.speed >= speedLength) {
             status.speed = 0;
             status.level++;
@@ -216,12 +213,12 @@ function game(options) {
             col: ~~(app.mainCols / 2),
             cell: randomCell()
         };
-        Object.assign(status, { score: 0, level: 0, speed: 0, life: app.subRows, over: false });
+        Object.assign(status, { score: 0, level: 0, speed: app.initSpeed ?? 0, life: app.subRows, over: false });
         initLevel(ts);
     }
     const update = (ts) => {
         if (!status.over) {
-            if (ts - lastTagTime > (speeds[status.speed] * 4 ?? 1) || ts < lastTagTime) {
+            if (ts - lastTagTime > app.speeds[status.speed] * 4) {
                 lastTagTime = ts;
                 doGrow(ts);
             }

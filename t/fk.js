@@ -15,7 +15,6 @@ function game(options) {
 
     options = Object.assign({ hasExtend: false, hasHelper: false, isFreeze: false, isReverse: false }, options ?? {});
     const scores = { 0: 0, 1: 100, 2: 300, 3: 700, 4: 1500 };
-    const speeds = { 0: 1000, 1: 900, 2: 800, 3: 700, 4: 600, 5: 500, 6: 450, 7: 400, 8: 350, 9: 300, 10: 250, 11: 200, 12: 150, 13: 100, 14: 50, 15: 25, 16: 10 };
 
     let app, cshape, nshape, allShapes, baseBoard;
 
@@ -449,14 +448,14 @@ function game(options) {
         for (let r = 0; r < app.mainRows; r++) {
             baseBoard.push(createEmptyRow());
         }
-        Object.assign(status, { score: 0, level: 0, speed: 0, over: false });
+        Object.assign(status, { score: 0, level: 0, speed: app.initSpeed ?? 0, over: false });
         updateNextShape(ts, false);
         initLevel(ts);
     }
 
     function updateLevel(ts) {
         status.speed += 1;
-        const speedLength = Object.keys(speeds).length;
+        const speedLength = app.speeds.length;
         if (status.speed >= speedLength) {
             status.speed = 0;
             status.level++;
@@ -474,7 +473,7 @@ function game(options) {
 
     const update = (ts) => {
         if (!options.isFreeze && ts > lastTagTime && !status.over) {
-            if (ts - lastTagTime > (speeds[status.speed] ?? 1)) {
+            if (ts - lastTagTime > app.speeds[status.speed]) {
                 globalDown(ts);
                 lastTagTime = ts;
             }
