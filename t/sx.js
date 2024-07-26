@@ -65,31 +65,22 @@ function game(options) {
         updateBoard(ts);
     }
 
-    function nextLevel(ts) {
-        status.score = (Object.keys(speeds).length * status.level + status.speed + 1) * scorePerSpeed;
-        checkScore(ts);
-        return true;
-    }
-
-    function checkScore(ts) {
-        const totalSpeed = ~~(status.score / scorePerSpeed);
+    function updateLevel(ts) {
+        status.speed += 1;
         const speedLength = Object.keys(speeds).length;
-        const newSpeed = totalSpeed % speedLength;
-        if (newSpeed != status.speed) {
-            status.speed = totalSpeed % speedLength;
-            status.level = ~~(totalSpeed / speedLength);
+        if (status.speed >= speedLength) {
+            status.speed = 0;
+            status.level++;
             if (status.level > maxLevel) {
                 status.over = true;
                 return false;
             }
-            if (status.life < app.subRows) {
-                status.life++;
-            }
-            app.addFlashCallback(ts, (newTs) => initLevel(newTs));
-            return true;
         }
-        return false;
-
+        if (status.life < app.subRows) {
+            status.life++;
+        }
+        app.addFlashCallback(ts, (newTs) => initLevel(newTs));
+        return true;
     }
 
     function subLife(ts) {
@@ -117,9 +108,14 @@ function game(options) {
             if (ets > 10) {
                 baseBoard.unshift(...baseBoard.splice(calcY, 1));
                 baseBoard[0].fill(app.emptyCell);
-                status.score += scorePerDot * 10;
-                lastTagTime += newTs - ts;
-                checkScore(ts);
+                const oldScore = status.score;
+                status.score = status.score + scorePerDot * 10;
+                if (~~(status.score / scorePerSpeed) != ~~(oldScore / scorePerSpeed)) {
+                    updateLevel(ts);
+                }
+                else {
+                    lastTagTime += newTs - ts;
+                }
                 return false;
             }
             else {
@@ -169,8 +165,10 @@ function game(options) {
                     }
                     if (baseBoard[calcY][x] != app.emptyCell) {
                         app.mainBoard[calcY][x] = baseBoard[calcY][x] = app.emptyCell;
-                        status.score += scorePerDot;
-                        checkScore(ts);
+                        const newScore = status.score + scorePerDot;
+                        if (~~(newScore / scorePerSpeed) != ~~(status.score / scorePerSpeed)) {
+                            updateLevel(ts);
+                        }
                         return false;
                     }
                 }
@@ -199,7 +197,7 @@ function game(options) {
         [keys.KEY_DOWN]: [100, 50, (ts) => doGrow(ts)],
         [keys.KEY_UP]: [100, 50, (ts) => doGrow(ts)],
         [keys.KEY_ACTION]: [100, 50, (ts) => doAction(ts)],
-        [keys.KEY_EXTEND]: [3000, 1000, (ts) => nextLevel(ts)]
+        [keys.KEY_EXTEND]: [3000, 1000, (ts) => updateLevel(ts)]
     };
 
     function randomCell() {
