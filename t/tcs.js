@@ -1,14 +1,6 @@
 import keys from './keyboard.js';
 
 function game(options) {
-    const status = {
-        score: 0,
-        speed: 0,
-        level: 0,
-        life: 0,
-        over: true,
-    };
-
     const maxLevel = 30;
     let lastTagTime = 0;
     options = Object.assign({ loop: false }, options ?? {});
@@ -23,7 +15,7 @@ function game(options) {
         }
 
         app.subBoard.forEach(row => row.fill(app.emptyCell));
-        for (let i = 0; i < app.subRows && i < status.life; i++) {
+        for (let i = 0; i < app.subRows && i < app.status.life; i++) {
             app.subBoard[4 - i - 1][1] = headCell;
         }
     }
@@ -40,7 +32,7 @@ function game(options) {
     function createShape() {
         const emptyShapes = calcEmptyShapes();
         if (emptyShapes.length === 0) {
-            status.over = true;
+            app.status.over = true;
             return undefined;
         }
         const item = emptyShapes[~~(Math.random() * emptyShapes.length)];
@@ -65,32 +57,17 @@ function game(options) {
         updateBoard(ts);
     }
 
-    function updateLevel(ts) {
-        // const overPoint = app.mainCols * app.mainRows - maxLevel + status.level - snake.length;
-        // if (overPoint > 0) {
-        //     status.score += overPoint * 100;
-        // }
-        status.speed += 1;
-        const speedLength = app.speeds.length;
-        if (status.speed >= speedLength) {
-            status.speed = 0;
-            status.level++;
-            if (status.level > maxLevel) {
-                status.over = true;
-                return false;
-            }
+    function updateGrade(ts) {
+        if (!app.status.updateSpeed(app.speeds.length) && !app.status.updateGrade(maxLevel)) {
+            return false;
         }
-        if (status.life < app.subRows) {
-            status.life++;
-        }
+        app.status.updateLife(app.subRows, true);
         app.addFlashCallback(ts, (newTs) => initLevel(newTs));
         return true;
     }
 
     function subLife(ts) {
-        status.life--;
-        if (status.life <= 0) {
-            status.over = true;
+        if (!app.status.updateLife(app.subRows, false)) {
             return false;
         }
         app.addFlashCallback(ts, (newTs) => initLevel(newTs));
@@ -118,9 +95,9 @@ function game(options) {
         if (cshape.x === newx && cshape.y === newy) {
             newCell = cshape.cell;
             snake.push(cshape);
-            status.score += 100;
-            if (snake.length >= app.mainCols * app.mainRows - maxLevel + status.level) {
-                return updateLevel(ts);
+            app.status.score += 100;
+            if (snake.length >= app.mainCols * app.mainRows - maxLevel + app.status.level) {
+                return updateGrade(ts);
             }
             cshape = createShape();
         }
@@ -142,7 +119,7 @@ function game(options) {
         [keys.KEY_DOWN]: [100, 50, (ts) => doStep(ts, [0, 1])],
         [keys.KEY_UP]: [100, 50, (ts) => doStep(ts, [0, -1])],
         [keys.KEY_ACTION]: [100, 50, (ts) => doStep(ts, nstep)],
-        [keys.KEY_EXTEND]: [3000, 1000, (ts) => updateLevel(ts)]
+        [keys.KEY_EXTEND]: [3000, 1000, (ts) => updateGrade(ts)]
     };
 
     function randomCell() {
@@ -152,20 +129,18 @@ function game(options) {
     const init = (ts, mainApp) => {
         app = mainApp;
         headCell = app.cells[0];
-        Object.assign(status, { score: 0, level: 0, speed: app.initSpeed ?? 0, life: app.subRows, over: false });
         initLevel(ts);
     }
     const update = (ts) => {
-        if (!status.over) {
-            if (ts - lastTagTime > app.speeds[status.speed]) {
+        if (!app.status.over) {
+            if (ts - lastTagTime > app.speeds[app.status.speed]) {
                 lastTagTime = ts;
                 doStep(ts, nstep);
             }
         }
         updateBoard(ts);
     }
-    return { status, keyMap, init, update };
+    return { keyMap, init, update };
 }
-
 
 export { game as default };
