@@ -14,9 +14,8 @@ function game(options) {
             app.mainBoard[cshape.y][cshape.x] = (~~ts % 300) > 150 ? cshape.cell : app.emptyCell;
         }
 
-        app.subBoard.forEach(row => row.fill(app.emptyCell));
-        for (let i = 0; i < app.subRows && i < app.status.life; i++) {
-            app.subBoard[4 - i - 1][1] = headCell;
+        for (let i = 0; i < app.subRows; i++) {
+            app.subBoard[i].fill(app.status.life > (app.subRows - 1 - i) ? headCell : app.emptyCell);
         }
     }
     function calcEmptyShapes() {
