@@ -67,11 +67,53 @@ import sxgame from './sx.js';
     let currentActions;
     let cellType = 0;
     let cells;
-    let pauseCallbacks = new Set(), pause = false, game = undefined;
+    let pauseCallbacks = new Set(), pause = false, currentInstance = undefined;
     let pauseTime = 0;
     let lastTime = 0;
     let isStarting = false;
     let initSpeed = 0;
+    function createStatus(speed) {
+        const status = {
+            score: 0,
+            speed: speed,
+            level: 0,
+            life: subRows,
+            over: false,
+        };
+
+        status.updateLife = (maxLife, isAdd) => {
+            status.life += isAdd ? 1 : -1;
+            if (status.life > maxLife) {
+                status.life = maxLife;
+                return false;
+            }
+            if (status.life <= 0) {
+                status.life = 0;
+                status.over = true;
+                return false;
+            }
+            return true;
+        }
+
+        status.updateGrade = (maxLevel) => {
+            status.level += 1;
+            if (status.level >= maxLevel) {
+                status.level = maxLevel;
+                return false;
+            }
+            return true;
+        }
+
+        status.updateSpeed = (maxSpeed) => {
+            status.speed += 1;
+            if (status.speed >= maxSpeed) {
+                status.speed = 0;
+                return false;
+            }
+            return true;
+        }
+        return status;
+    }
 
     //按钮控制
 
@@ -331,8 +373,9 @@ import sxgame from './sx.js';
         isStarting = true;
         const postCallback = (newTs) => {
             clearGame();
-            game = gameList[selectGameList.value];
-            game.init(newTs, {
+            currentInstance = {
+                main: gameList[selectGameList.value],
+                status: createStatus(initSpeed),
                 mainBoard,
                 subBoard,
                 mainRows,
@@ -345,7 +388,8 @@ import sxgame from './sx.js';
                 initSpeed,
                 addPauseCallback,
                 addFlashCallback,
-            });
+            };
+            currentInstance.main.init(newTs, currentInstance);
             isStarting = false;
         };
         addFlashCallback(ts, postCallback, 30);
@@ -445,10 +489,10 @@ import sxgame from './sx.js';
                 drawItem(mainCtx, mainBoard[r][c], c, r);
             }
         }
-        if (!game) {
+        if (!currentInstance) {
             drawMenu();
         }
-        else if (game.status.over) {
+        else if (currentInstance.status.over) {
             drawMainText("游戏结束", -1);
         }
         else if (pause) {
@@ -462,20 +506,20 @@ import sxgame from './sx.js';
                 drawItem(subCtx, subBoard[r][c], c, r);
             }
         }
-        spanScore.innerText = game ? game.status.score : 0;
-        spanLevel.innerText = game ? game.status.level : 0;
-        spanSpeed.innerText = game ? game.status.speed : initSpeed;
+        spanScore.innerText = currentInstance ? currentInstance.status.score : 0;
+        spanLevel.innerText = currentInstance ? currentInstance.status.level : 0;
+        spanSpeed.innerText = currentInstance ? currentInstance.status.speed : initSpeed;
     }
 
     function clearGame() {
-        if (game) {
+        if (currentInstance) {
             initSpeed = 0;
         }
         //downActions.clear();
         currentActions = {};
         pauseCallbacks.clear();
         isStarting = false;
-        game = undefined;
+        currentInstance = undefined;
         pause = false;
     }
 
@@ -498,7 +542,7 @@ import sxgame from './sx.js';
 
     const systemKeyMap = {
         [keyboard.KEY_SELECT]: ts => {
-            if (game) {
+            if (currentInstance) {
                 clearGame();
             }
             else {
@@ -507,8 +551,8 @@ import sxgame from './sx.js';
             return true;
         },
         [keyboard.KEY_START]: ts => {
-            if (game) {
-                if (game.status.over) {
+            if (currentInstance) {
+                if (currentInstance.status.over) {
                     //clearGame();
                 }
                 else {
@@ -520,10 +564,10 @@ import sxgame from './sx.js';
             }
             return true;
         },
-        [keyboard.KEY_UP]: ts => !game && selectMenu(-1),
-        [keyboard.KEY_LEFT]: ts => !game && selectSpeed(-1),
-        [keyboard.KEY_DOWN]: ts => !game && selectMenu(1),
-        [keyboard.KEY_RIGHT]: ts => !game && selectSpeed(1)
+        [keyboard.KEY_UP]: ts => !currentInstance && selectMenu(-1),
+        [keyboard.KEY_LEFT]: ts => !currentInstance && selectSpeed(-1),
+        [keyboard.KEY_DOWN]: ts => !currentInstance && selectMenu(1),
+        [keyboard.KEY_RIGHT]: ts => !currentInstance && selectSpeed(1)
     }
 
     function checkSystemKeys(ts, actions) {
@@ -547,10 +591,10 @@ import sxgame from './sx.js';
     //{ fdelay,odelay,callback,ts,ticks,allow }
 
     function updateGame(ts, keys) {
-        if (!game || game.status.over) {
+        if (!currentInstance || currentInstance.status.over) {
             return false;
         }
-        if (game.keyMap) {
+        if (currentInstance.main.keyMap) {
             for (let key of Object.keys(currentActions)) {
                 if (keys.has(key)) {
                     const keyItem = currentActions[key];
@@ -569,7 +613,7 @@ import sxgame from './sx.js';
                 if (currentActions[key]) {
                     continue;
                 }
-                const findMap = game.keyMap[key];
+                const findMap = currentInstance.main.keyMap[key];
                 if (!findMap) {
                     continue;
                 }
@@ -578,7 +622,7 @@ import sxgame from './sx.js';
                 }
             }
         }
-        game.update(ts);
+        currentInstance.main.update(ts);
         return true;
     }
 

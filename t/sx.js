@@ -1,13 +1,6 @@
 import keys from './keyboard.js';
 
 function game(options) {
-    const status = {
-        score: 0,
-        speed: 0,
-        level: 0,
-        life: 0,
-        over: true,
-    };
 
     let maxLevel = 30;
     let scorePerSpeed = 50000;
@@ -38,7 +31,7 @@ function game(options) {
         app.mainBoard[0][actionItem.col] = actionItem.cell;
 
         app.subBoard.forEach(row => row.fill(app.emptyCell));
-        for (let i = 0; i < app.subRows && i < status.life; i++) {
+        for (let i = 0; i < app.subRows && i < app.status.life; i++) {
             app.subBoard[4 - i - 1][1] = actionItem.cell;
         }
     }
@@ -53,7 +46,7 @@ function game(options) {
         lastTagTime = ts;
         for (let row = 0; row < app.mainRows; row++) {
             baseBoard[row].fill(app.emptyCell);
-            if (app.mainRows - row <= status.level) {
+            if (app.mainRows - row <= app.status.level) {
                 fillRow(row);
             }
         }
@@ -62,28 +55,17 @@ function game(options) {
         updateBoard(ts);
     }
 
-    function updateLevel(ts) {
-        status.speed += 1;
-        const speedLength = app.speeds.length;
-        if (status.speed >= speedLength) {
-            status.speed = 0;
-            status.level++;
-            if (status.level > maxLevel) {
-                status.over = true;
-                return false;
-            }
+    function updateGrade(ts) {
+        if (!app.status.updateSpeed(app.speeds.length) && !app.status.updateGrade(maxLevel)) {
+            return false;
         }
-        if (status.life < app.subRows) {
-            status.life++;
-        }
+        app.status.updateLife(app.subRows, true);
         app.addFlashCallback(ts, (newTs) => initLevel(newTs));
         return true;
     }
 
     function subLife(ts) {
-        status.life--;
-        if (status.life <= 0) {
-            status.over = true;
+        if (!app.status.updateLife(app.subRows, false)) {
             return false;
         }
         app.addFlashCallback(ts, (newTs) => initLevel(newTs));
@@ -105,10 +87,10 @@ function game(options) {
             if (ets > 10) {
                 baseBoard.unshift(...baseBoard.splice(calcY, 1));
                 baseBoard[0].fill(app.emptyCell);
-                const oldScore = status.score;
-                status.score = status.score + scorePerDot * 10;
-                if (~~(status.score / scorePerSpeed) != ~~(oldScore / scorePerSpeed)) {
-                    updateLevel(ts);
+                const oldScore = app.status.score;
+                app.status.score = app.status.score + scorePerDot * 10;
+                if (~~(app.status.score / scorePerSpeed) != ~~(oldScore / scorePerSpeed)) {
+                    updateGrade(ts);
                 }
                 else {
                     lastTagTime += newTs - ts;
@@ -162,9 +144,10 @@ function game(options) {
                     }
                     if (baseBoard[calcY][x] != app.emptyCell) {
                         app.mainBoard[calcY][x] = baseBoard[calcY][x] = app.emptyCell;
-                        const newScore = status.score + scorePerDot;
-                        if (~~(newScore / scorePerSpeed) != ~~(status.score / scorePerSpeed)) {
-                            updateLevel(ts);
+                        const oldScore = app.status.score;
+                        app.status.score = app.status.score + scorePerDot;
+                        if (~~(app.status.score / scorePerSpeed) != ~~(oldScore / scorePerSpeed)) {
+                            updateGrade(ts);
                         }
                         return false;
                     }
@@ -194,7 +177,7 @@ function game(options) {
         [keys.KEY_DOWN]: [100, 50, (ts) => doGrow(ts)],
         [keys.KEY_UP]: [100, 50, (ts) => doGrow(ts)],
         [keys.KEY_ACTION]: [100, 50, (ts) => doAction(ts)],
-        [keys.KEY_EXTEND]: [3000, 1000, (ts) => updateLevel(ts)]
+        [keys.KEY_EXTEND]: [3000, 1000, (ts) => updateGrade(ts)]
     };
 
     function randomCell() {
@@ -213,15 +196,12 @@ function game(options) {
             col: ~~(app.mainCols / 2),
             cell: randomCell()
         };
-        Object.assign(status, { score: 0, level: 0, speed: app.initSpeed ?? 0, life: app.subRows, over: false });
         initLevel(ts);
     }
     const update = (ts) => {
-        if (!status.over) {
-            if (ts - lastTagTime > app.speeds[status.speed] * 4) {
-                lastTagTime = ts;
-                doGrow(ts);
-            }
+        if (ts - lastTagTime > app.speeds[app.status.speed] * 4) {
+            lastTagTime = ts;
+            doGrow(ts);
         }
         updateBoard(ts);
         for (let callback of [...actionCallbacks]) {
@@ -231,8 +211,7 @@ function game(options) {
             }
         }
     }
-    return { status, keyMap, init, update };
+    return { keyMap, init, update };
 }
-
 
 export { game as default };
