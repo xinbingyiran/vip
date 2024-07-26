@@ -70,11 +70,11 @@ function game(options) {
         updateBoard(ts);
     }
 
-    function nextLevel(ts) {
-        const overPoint = app.mainCols * app.mainRows - maxLevel + status.level - snake.length;
-        if (overPoint > 0) {
-            status.score += overPoint * 100;
-        }
+    function updateLevel(ts) {
+        // const overPoint = app.mainCols * app.mainRows - maxLevel + status.level - snake.length;
+        // if (overPoint > 0) {
+        //     status.score += overPoint * 100;
+        // }
         status.speed += 1;
         const speedLength = Object.keys(speeds).length;
         if (status.speed >= speedLength) {
@@ -112,18 +112,20 @@ function game(options) {
             newy = (newy + app.mainRows) % app.mainRows;
         }
         else if (newx < 0 || newx >= app.mainCols || newy < 0 || newy >= app.mainRows) {
-            return subLife(ts);
+            subLife(ts);
+            return false;
         }
         const sets = new Set(snake.slice(0, -1).map(s => s.y * app.mainRows + s.x));
         if (sets.has(newy * app.mainRows + newx)) {
-            return subLife(ts);
+            subLife(ts);
+            return false;
         }
         if (cshape.x === newx && cshape.y === newy) {
             newCell = cshape.cell;
             snake.push(cshape);
             status.score += 100;
             if (snake.length >= app.mainCols * app.mainRows - maxLevel + status.level) {
-                return nextLevel();
+                return updateLevel(ts);
             }
             cshape = createShape();
         }
@@ -145,7 +147,7 @@ function game(options) {
         [keys.KEY_DOWN]: [100, 50, (ts) => doStep(ts, [0, 1])],
         [keys.KEY_UP]: [100, 50, (ts) => doStep(ts, [0, -1])],
         [keys.KEY_ACTION]: [100, 50, (ts) => doStep(ts, nstep)],
-        [keys.KEY_EXTEND]: [3000, 1000, (ts) => nextLevel(ts)]
+        [keys.KEY_EXTEND]: [3000, 1000, (ts) => updateLevel(ts)]
     };
 
     function randomCell() {

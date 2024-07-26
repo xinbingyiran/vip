@@ -386,23 +386,23 @@ import sxgame from './sx.js';
     }
 
     function drawMainText(text, offset) {
-        mainCtx.font = mainCtx.font.replace(/\d+(?=px)/, blockSize);
-        const textWidth = mainCtx.measureText(text).width;
-        if (textWidth > blockSize * mainCols) {
-            textWidth = blockSize * mainCols;
+        const fontSize = ~~(blockSize);
+        mainCtx.font = mainCtx.font.replace(/\d+(?=px)/, fontSize);
+        const measure = mainCtx.measureText(text);
+        const textWidth = measure.width;
+        if (textWidth > fontSize * mainCols) {
+            textWidth = fontSize * mainCols;
         }
-        const x = (blockSize * mainCols - textWidth) / 2;
-        const y = ~~(blockSize * mainRows / 2) + offset * blockSize;
-        const gd = mainCtx.createLinearGradient(x, y - blockSize, x + textWidth, y);
-        for (let i = 0; i < colors.length; i++) {
-            gd.addColorStop(i / (colors.length - 1), colors[i]);
-        }
-        mainCtx.fillStyle = gd;
+        const x = (fontSize * mainCols - textWidth) / 2;
+        const y = ~~(fontSize * mainRows / 2) + offset * fontSize;
+        mainCtx.fillStyle = 'white';
+        mainCtx.fillRect(x, y - measure.actualBoundingBoxAscent, textWidth, fontSize);
+        mainCtx.fillStyle = 'black';
         mainCtx.fillText(text, x, y, textWidth);
     }
 
     function drawMenu() {
-        const fontSize = ~~(blockSize);
+        const fontSize = ~~(blockSize / 1.5);
         const border = 2;
         mainCtx.font = mainCtx.font.replace(/\d+(?=px)/, fontSize);
         let offset = 0;
@@ -414,20 +414,20 @@ import sxgame from './sx.js';
             if (textWidth > fontSize * mainCols) {
                 textWidth = fontSize * mainCols;
             }
-            const y = sx + (++offset) * (fontSize + border * 2);
+            const y = sy + (++offset) * (fontSize + border * 2);
             if (gameName == selectGameList.value) {
-                const gd2 = mainCtx.createLinearGradient(sx, y, sx + textWidth, y);
-                gd2.addColorStop(0, 'lightblue');
-                gd2.addColorStop(0.5, 'darkgray');
-                gd2.addColorStop(1, 'lightblue');
-                mainCtx.fillStyle = gd2;
+                mainCtx.fillStyle = 'lightblue';
+                mainCtx.fillRect(sx - border, y - measure.actualBoundingBoxAscent - border, textWidth + border + border, fontSize + border + border);
+            }
+            else{
+                mainCtx.fillStyle = 'white';
                 mainCtx.fillRect(sx - border, y - measure.actualBoundingBoxAscent - border, textWidth + border + border, fontSize + border + border);
             }
             const gd = mainCtx.createLinearGradient(sx, y, sx + textWidth, y);
             for (let i = 0; i < colors.length; i++) {
                 gd.addColorStop(i / (colors.length - 1), colors[i]);
             }
-            mainCtx.fillStyle = gd;
+            mainCtx.fillStyle = 'black';
             mainCtx.fillText(gameName, sx, y, textWidth);
         }
     }
