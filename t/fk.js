@@ -218,7 +218,7 @@ function game(options) {
         shapeCallbacks.add(newTs => {
             let ets = ~~((newTs - ts) / 5);
             let i = 0;
-            for (i = 0; i < ets; i++) {
+            for (i = 0; i <= ets; i++) {
                 let calcY = sy + i;
                 if (calcY >= app.mainRows) {
                     return false;
@@ -247,7 +247,7 @@ function game(options) {
         shapeCallbacks.add(newTs => {
             let ets = ~~((newTs - ts) / 5);
             let i = 0;
-            for (i = 0; i < ets; i++) {
+            for (i = 0; i <= ets; i++) {
                 let calcY = sy + i;
                 if (calcY + 1 >= app.mainRows || baseBoard[calcY + 1][x] != app.emptyCell) {
                     mergeToMain(newTs, dotItem, 1, 1, x, calcY, newCell);
@@ -328,9 +328,9 @@ function game(options) {
 
     const shapes = [
         [[1, 1], [1, 1]],
-        [[1, 0, 0], [1, 1, 1],],
-        [[0, 0, 1], [1, 1, 1],],
-        [[0, 1, 0], [1, 1, 1],],
+        [[1, 0, 0], [1, 1, 1]],
+        [[0, 0, 1], [1, 1, 1]],
+        [[0, 1, 0], [1, 1, 1]],
         [[0, 1, 1], [1, 1, 0]],
         [[1, 1, 0], [0, 1, 1]],
         [[1, 1, 1, 1]]
@@ -338,10 +338,11 @@ function game(options) {
 
 
     const extShapes = [
-        [[1, 0, 0], [1, 1, 1], [1, 0, 0],],
-        [[1, 0, 0], [1, 1, 1], [0, 0, 1],],
-        [[0, 1, 0], [1, 1, 1], [0, 1, 0],],
-        [[0, 0, 1], [1, 1, 1], [1, 0, 0],],
+        [[1, 0], [1, 1]],
+        [[1, 0, 0], [1, 1, 1], [1, 0, 0]],
+        [[1, 0, 0], [1, 1, 1], [0, 0, 1]],
+        [[0, 1, 0], [1, 1, 1], [0, 1, 0]],
+        [[0, 0, 1], [1, 1, 1], [1, 0, 0]],
         [[1, 0, 1], [1, 1, 1]]
     ].map(s => ({ shape: s, downAction: commonDown, upAction: rotateItem }));
 

@@ -28,11 +28,13 @@ function game(options) {
                 app.mainBoard[r][c] = baseBoard[r][c];
             }
         }
-        app.mainBoard[0][actionItem.col] = actionItem.cell;
+        app.mainBoard[app.mainRows - 2][actionItem.col] = actionItem.cell;
+        app.mainBoard[app.mainRows - 1][actionItem.col] = actionItem.cell;
+        actionItem.col > 0 && (app.mainBoard[app.mainRows - 1][actionItem.col - 1] = actionItem.cell);
+        actionItem.col < app.mainCols - 1 && (app.mainBoard[app.mainRows - 1][actionItem.col + 1] = actionItem.cell);
 
-        app.subBoard.forEach(row => row.fill(app.emptyCell));
-        for (let i = 0; i < app.subRows && i < app.status.life; i++) {
-            app.subBoard[4 - i - 1][1] = actionItem.cell;
+        for (let i = 0; i < app.subRows; i++) {
+            app.subBoard[i].fill(app.status.life > (app.subRows - 1 - i) ? actionItem.cell : app.emptyCell);
         }
     }
 
@@ -85,8 +87,8 @@ function game(options) {
         app.addPauseCallback((newTs) => {
             let ets = ~~((newTs - ts) / 10);
             if (ets > 10) {
-                baseBoard.unshift(...baseBoard.splice(calcY, 1));
-                baseBoard[0].fill(app.emptyCell);
+                baseBoard.push(...baseBoard.splice(calcY, 1));
+                baseBoard[app.mainRows - 1].fill(app.emptyCell);
                 const oldScore = app.status.score;
                 app.status.score = app.status.score + scorePerDot * 10;
                 if (~~(app.status.score / scorePerSpeed) != ~~(oldScore / scorePerSpeed)) {
@@ -110,7 +112,7 @@ function game(options) {
 
     const doAction = (ts) => {
         const x = actionItem.col;
-        let sy = 1;
+        let sy = app.mainRows - 3;
         const newCell = actionItem.cell;
         if (options.fk) {
             if (baseBoard[sy][x] != app.emptyCell) {
@@ -120,8 +122,8 @@ function game(options) {
                 let ets = ~~((newTs - ts) / 5);
                 let i = 0;
                 for (i = 0; i < ets; i++) {
-                    let calcY = sy + i;
-                    if (calcY + 1 >= app.mainRows || baseBoard[calcY + 1][x] != app.emptyCell) {
+                    let calcY = sy - i;
+                    if (calcY - 1 < 0 || baseBoard[calcY - 1][x] != app.emptyCell) {
                         baseBoard[calcY][x] = newCell;
                         if (baseBoard[calcY].every(s => s != app.emptyCell)) {
                             createScorePauseCallback(newTs, [calcY], []);
@@ -129,7 +131,7 @@ function game(options) {
                         return false;
                     }
                 }
-                app.mainBoard[sy + i][x] = newCell;
+                app.mainBoard[sy - i][x] = newCell;
                 return true;
             })
         }
@@ -137,9 +139,9 @@ function game(options) {
             actionCallbacks.add(newTs => {
                 let ets = ~~((newTs - ts) / 5);
                 let i = 0;
-                for (i = 0; i < ets; i++) {
-                    let calcY = sy + i;
-                    if (calcY >= app.mainRows) {
+                for (i = 0; i <= ets; i++) {
+                    let calcY = sy - i;
+                    if (sy - i < 0) {
                         return false;
                     }
                     if (baseBoard[calcY][x] != app.emptyCell) {
@@ -152,8 +154,8 @@ function game(options) {
                         return false;
                     }
                 }
-                if (sy + i < app.mainRows) {
-                    app.mainBoard[sy + i][x] = newCell;
+                if (sy - i >= 0) {
+                    app.mainBoard[sy - i][x] = newCell;
                 }
                 return true;
             });
@@ -162,9 +164,9 @@ function game(options) {
     };
 
     const doGrow = (ts) => {
-        baseBoard.push(baseBoard.shift());
-        fillRow(app.mainRows - 1);
-        if (!baseBoard[0].every(s => s == app.emptyCell)) {
+        baseBoard.unshift(baseBoard.pop());
+        fillRow(0);
+        if (!baseBoard[app.mainRows - 1].every(s => s == app.emptyCell) || !baseBoard[app.mainRows - 2].every(s => s == app.emptyCell)) {
             subLife(ts);
             return false;
         }

@@ -12,8 +12,8 @@ import sxgame from './sx.js';
         '扩展方块带辅助': fkgame({ hasExtend: true, hasHelper: true }),
         '贪吃蛇': tcsgame({ loop: false }),
         '穿墙贪吃蛇': tcsgame({ loop: true }),
-        '消除方块': sxgame({ fk: false }),
-        '消除整行': sxgame({ fk: true }),
+        '疯狂射击': sxgame({ fk: false }),
+        '疯狂垒墙': sxgame({ fk: true }),
     }
 
     const selectGameList = document.querySelector('#gameList');
