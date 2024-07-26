@@ -2,6 +2,7 @@ import keyboard from './keyboard.js';
 import fkgame from './fk.js';
 import tcsgame from './tcs.js';
 import sxgame from './sx.js';
+import tkgame from './tk.js';
 
 !function () {
 
@@ -14,6 +15,7 @@ import sxgame from './sx.js';
         '穿墙贪吃蛇': tcsgame({ loop: true }),
         '疯狂射击': sxgame({ fk: false }),
         '疯狂垒墙': sxgame({ fk: true }),
+        '坦克大战': tkgame({}),
     }
 
     const selectGameList = document.querySelector('#gameList');
