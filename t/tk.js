@@ -13,6 +13,7 @@ function game(options) {
     let createTankTicks = 2;
     let shotPercent = 0.25;
     let wayPercent = 0.2;
+    let maxFlySize = 2;
 
     let actionCallbacks = new Set();
     let tankSet = new Set();
@@ -25,7 +26,7 @@ function game(options) {
         [[body_common, body_tail, body_common], [body_common, body_common, body_common], [body_slide, body_common, body_slide]],
         [[body_slide, body_common, body_common], [body_common, body_common, body_tail], [body_slide, body_common, body_common]],
     ];
-    let flyItems = new Set();
+    let flyItems = [];
 
     let tankPosions;
 
@@ -61,6 +62,7 @@ function game(options) {
         lastTagTime = ts;
         actionCallbacks.clear();
         tankSet.clear();
+        flyItems.splice(0, flyItems.length);
         createTankTick = 0;
         tankItem = {
             x: ~~(app.mainCols / 2),
@@ -147,6 +149,22 @@ function game(options) {
         // })));
     }
 
+    const tryCreateFlyItem = (ts, tank) => {
+        const flyCount = flyItems.filter(s => s.tank == tank).length;
+        if (flyCount < maxFlySize) {
+            actionCallbacks.add(createShotAction(ts, tank));
+            return true;
+        }
+        return false;
+    }
+
+    const removeFlyItem = item => {
+        let curIndex = flyItems.findIndex(s => s == item);
+        if (curIndex >= 0) {
+            flyItems.splice(curIndex, 1);
+        }
+    }
+
     const createShotAction = (ts, tank) => {
         let x = tank.step[0];
         let y = tank.step[1];
@@ -160,7 +178,7 @@ function game(options) {
             y: sy,
             end: false
         }
-        flyItems.add(flyItem);
+        flyItems.push(flyItem);
         return newTs => {
             if (flyItem.end) {
                 return false;
@@ -172,18 +190,18 @@ function game(options) {
                 let nx = sx + i * x;
                 let ny = sy + i * y;
                 if (nx < 0 || nx >= app.mainCols || ny < 0 || ny >= app.mainRows) {
+                    removeFlyItem(flyItem);
                     return false;
                 }
-                let findFly = [...flyItems].find(s=>s.x == nx && s.y == ny && s.tank != tank);      
-                if(findFly){
-                    findFly.end = true;
-                    flyItems.delete(findFly);
-                }          
+                let findIndex = flyItems.findIndex(s => s.x == nx && s.y == ny && s.tank != tank);
+                if (findIndex >= 0) {
+                    flyItems[findIndex].end = true;
+                    flyItems.splice(findIndex, 1);
+                }
                 let findItem = findItems(items, [[1]], nx, ny);
                 if (!findItem) {
                     continue;
                 }
-                flyItems.delete(findFly);
                 if (tank == tankItem) {
                     tankSet.delete(findItem);
                     const oldScore = app.status.score;
@@ -195,9 +213,10 @@ function game(options) {
                 else if (findItem == tankItem) {
                     subLife(ts);
                 }
+                removeFlyItem(flyItem);
                 return false;
             }
-            flyItem.x = sx + x * ets;            
+            flyItem.x = sx + x * ets;
             flyItem.y = sy + y * ets;
             app.mainBoard[sy + y * ets][sx + x * ets] = newCell;
             lastEts = ets;
@@ -205,8 +224,7 @@ function game(options) {
         }
     }
     const doShot = (ts) => {
-        actionCallbacks.add(createShotAction(ts, tankItem));
-        return true;
+        return tryCreateFlyItem(ts, tankItem);
     };
 
     const tryCreateTank = (ts) => {
@@ -317,6 +335,7 @@ function game(options) {
         let newTank = undefined;
         if (createTankTick >= createTankTicks) {
             newTank = tryCreateTank(ts);
+            createTankTick = newTank ? 0 : createTankTicks;
         }
         tankSet.forEach(item => {
             if (item != newTank) {
@@ -330,7 +349,7 @@ function game(options) {
                 }
             }
             if (Math.random() < shotPercent) {
-                actionCallbacks.add(createShotAction(ts, item));
+                tryCreateFlyItem(ts, item);
             }
         });
         return true;
