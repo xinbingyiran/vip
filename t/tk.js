@@ -3,7 +3,7 @@ import keys from './keyboard.js';
 function game(options) {
 
     let maxLevel = 30;
-    let scorePerSpeed = 4000;
+    let scorePerSpeed = 2500;
     let scorePerTank = 100;
     let scorePerBoss = 1000;
     let levelScore = 0;
