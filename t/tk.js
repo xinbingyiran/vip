@@ -480,13 +480,16 @@ function game(options) {
 
     const createBossStep = () => {
         let actionIndex = 1;
+        let shotIndex = 0;
         return (ts, item) => {
             if (!tryMove(item)) {
                 actionIndex = (actionIndex + 1) % item.actions.length;
                 item.action = item.actions[actionIndex];
                 tryMove(item);
             }
-            tryCreateFlyItem(ts, item);
+            if (shotIndex++ % 3 <= 1) {
+                tryCreateFlyItem(ts, item);
+            }
         }
     }
 
