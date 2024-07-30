@@ -89,7 +89,7 @@ function game(options) {
         updateBoard(ts);
     }
 
-    function updateGrade(ts) {        
+    function updateGrade(ts) {
         levelScore = 0;
         if (!app.status.updateSpeed(app.speeds.length) && !app.status.updateGrade(maxLevel)) {
             return false;
@@ -124,20 +124,10 @@ function game(options) {
             if (item == tank) {
                 return;
             }
-            if (tank.x - item.x >= testBody[0].length || item.x - tank.x >= testBody[0].length || tank.y - item.y >= testBody.length || item.y - tank.y >= testBody.length) {
+            if (tank.x - item.x >= item.body[0].length || item.x - tank.x >= tank.body[0].length || tank.y - item.y >= item.body.length || item.y - tank.y >= tank.body.length) {
                 return;
             }
-            let body = item.body.map(row => [...row]);
-            let hasChange = false;
-            body.forEach((row, r) => row.forEach((cell, c) => {
-                if (cell && tankBody[item.x + c + (item.y + r) * app.mainCols]) {
-                    body[r][c] = 0;
-                    hasChange = true;
-                }
-            }));
-            if (hasChange) {
-                item.body = body;
-            }
+            item.body = item.body.map((row, r) => row.map((cell, c) => tankBody[item.x + c + (item.y + r) * app.mainCols] ? 0 : cell));
         });
     };
 
@@ -465,11 +455,11 @@ function game(options) {
             let removeIndex = actionTypes.findIndex(s => s == action_Up);
             removeIndex >= 0 && actionTypes.splice(removeIndex, 1);
         }
-        if (item.action == action_Right || item.x >= app.mainCols - item.body[0].length - 1) {
+        if (item.action == action_Right || item.x >= app.mainCols - item.body[0].length) {
             let removeIndex = actionTypes.findIndex(s => s == action_Right);
             removeIndex >= 0 && actionTypes.splice(removeIndex, 1);
         }
-        if (item.action == action_Down || item.y >= app.mainCols - item.body.length - 1) {
+        if (item.action == action_Down || item.y >= app.mainCols - item.body.length) {
             let removeIndex = actionTypes.findIndex(s => s == action_Down);
             removeIndex >= 0 && actionTypes.splice(removeIndex, 1);
         }
@@ -484,7 +474,7 @@ function game(options) {
         }
         !findWay && !tryMove(item) && changeAction(item);
         if (Math.random() < shotPercent) {
-            tryCreateFlyItem(ts,item);
+            tryCreateFlyItem(ts, item);
         }
     }
 
@@ -496,7 +486,7 @@ function game(options) {
                 item.action = item.actions[actionIndex];
                 tryMove(item);
             }
-            tryCreateFlyItem(ts,item);
+            tryCreateFlyItem(ts, item);
         }
     }
 
