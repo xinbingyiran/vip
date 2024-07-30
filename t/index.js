@@ -3,6 +3,9 @@ import fkgame from './fk.js';
 import tcsgame from './tcs.js';
 import sxgame from './sx.js';
 import tkgame from './tk.js';
+import flygame from './fly.js';
+import fly2game from './fly2.js';
+//import fly3game from './fly3.js';
 
 !function () {
 
@@ -12,10 +15,13 @@ import tkgame from './tk.js';
         '方块带辅助': fkgame({ hasExtend: false, hasHelper: true }),
         '扩展方块带辅助': fkgame({ hasExtend: true, hasHelper: true }),
         '贪吃蛇': tcsgame({ loop: false }),
-        '穿墙贪吃蛇': tcsgame({ loop: true }),
+        '疯狂贪吃蛇': tcsgame({ loop: true }),
         '疯狂射击': sxgame({ fk: false }),
         '疯狂垒墙': sxgame({ fk: true }),
         '坦克大战': tkgame({}),
+        '躲避敌人': flygame({}),
+        '窄道通行': fly2game({}),
+        //'飞行射击': fly3game({}),
     }
 
     const selectGameList = document.querySelector('#gameList');
