@@ -89,7 +89,8 @@ function game(options) {
         updateBoard(ts);
     }
 
-    function updateGrade(ts) {
+    function updateGrade(ts) {        
+        levelScore = 0;
         if (!app.status.updateSpeed(app.speeds.length) && !app.status.updateGrade(maxLevel)) {
             return false;
         }
