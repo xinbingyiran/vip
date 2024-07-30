@@ -89,7 +89,7 @@ import tkgame from './tk.js';
                 status.life = maxLife;
                 return false;
             }
-            if (status.life <= 0) {
+            if (status.life < 0) {
                 status.life = 0;
                 status.over = true;
                 return false;
