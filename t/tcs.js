@@ -96,7 +96,8 @@ function game(options) {
             snake.push(cshape);
             app.status.score += 100;
             if (snake.length >= app.mainCols * app.mainRows - maxLevel + app.status.level) {
-                return updateGrade(ts);
+                updateGrade(ts);
+                return false;
             }
             cshape = createShape();
         }
