@@ -3,34 +3,45 @@ import keys from './keyboard.js';
 function game(options) {
 
     let maxLevel = 30;
-    let scorePerSpeed = 2000;
+    let scorePerSpeed = 4000;
     let scorePerTank = 100;
     let scorePerBoss = 1000;
+    let levelScore = 0;
 
     let lastTagTime = 0;
-    let maxTankSize = 4;
+    let maxTankSize = 5;
     let createTankTick = 0;
     let createTankTicks = 2;
     let shotPercent = 0.25;
     let wayPercent = 0.2;
     let maxFlySize = 2;
 
-    let actionCallbacks = new Set();
-    let tankSet = new Set();
     const action_Up = 0, action_Right = 1, action_Down = 2, action_Left = 3;
     let steps = [[0, -1], [1, 0], [0, 1], [-1, 0]];
-    const body_none = 0, body_common = 1, body_slide = 2, body_tail = 3;
+    let testBody = [[1, 1, 1], [1, 1, 1], [1, 1, 1]];
     let tankBodys = [
-        [[body_slide, body_common, body_slide], [body_common, body_common, body_common], [body_common, body_tail, body_common]],
-        [[body_common, body_common, body_slide], [body_tail, body_common, body_common], [body_common, body_common, body_slide]],
-        [[body_common, body_tail, body_common], [body_common, body_common, body_common], [body_slide, body_common, body_slide]],
-        [[body_slide, body_common, body_common], [body_common, body_common, body_tail], [body_slide, body_common, body_common]],
+        [[0, 1, 0], [1, 1, 1], [1, 0, 1]],
+        [[1, 1, 0], [0, 1, 1], [1, 1, 0]],
+        [[1, 0, 1], [1, 1, 1], [0, 1, 0]],
+        [[0, 1, 1], [1, 1, 0], [0, 1, 1]],
     ];
+    let bossBody = [
+        [1, 1, 0, 0, 0, 1, 1],
+        [0, 1, 0, 0, 0, 1, 0],
+        [1, 0, 1, 1, 1, 0, 1],
+        [0, 1, 1, 0, 1, 1, 0],
+        [1, 0, 1, 1, 1, 0, 1],
+        [0, 1, 0, 1, 0, 1, 0],
+        [1, 1, 0, 1, 0, 1, 1],
+        [0, 0, 0, 1, 0, 0, 0]
+    ];
+    let actionCallbacks = [];
+    let tanks = [];
     let flyItems = [];
 
     let tankPosions;
 
-    let app, tankItem, tankCell;
+    let app, tankItem, bossItem, tankCell;
     function updateBoard(ts) {
         for (let r = 0; r < app.mainRows; r++) {
             for (let c = 0; c < app.mainCols; c++) {
@@ -38,16 +49,10 @@ function game(options) {
             }
         }
 
-        tankItem.body.forEach((row, r) => {
-            row.forEach((cell, c) => {
-                cell == body_common && (app.mainBoard[tankItem.y - 1 + r][tankItem.x - 1 + c] = (r == 1 && c == 1 && (~~ts % 300) > 150) ? app.emptyCell : tankItem.cell);
-            })
-        });
-
-        tankSet.forEach(tank => {
+        tanks.forEach(tank => {
             tank.body.forEach((row, r) => {
                 row.forEach((cell, c) => {
-                    cell == body_common && (app.mainBoard[tank.y - 1 + r][tank.x - 1 + c] = tank.cell);
+                    cell && (app.mainBoard[tank.y + r][tank.x + c] = (tank == tankItem && r == 1 && c == 1 && (~~ts % 300) > 150) ? app.emptyCell : tank.cell);
                 })
             });
         });
@@ -60,17 +65,27 @@ function game(options) {
 
     function initLevel(ts) {
         lastTagTime = ts;
-        actionCallbacks.clear();
-        tankSet.clear();
+        actionCallbacks.splice(0, actionCallbacks.length);
+        tanks.splice(0, tanks.length);
+        flyItems.forEach(s => s.end = true);
         flyItems.splice(0, flyItems.length);
         createTankTick = 0;
+        levelScore = 0;
         tankItem = {
-            x: ~~(app.mainCols / 2),
-            y: ~~(app.mainRows / 2),
-            step: steps[action_Up],
+            x: ~~((app.mainCols - testBody[0].length) / 2),
+            y: ~~((app.mainRows - testBody.length) / 2),
+            actions: [action_Left, action_Right, action_Up, action_Down],
+            action: action_Up,
+            cell: tankCell,
+            dead: false,
             body: tankBodys[action_Up],
-            cell: tankCell
+            withShot: isCommonShotPoint,
+            doStep: (ts, tank) => true,
+            getShotAction: tank => tank.action,
+            refreshBody: tank => tank.body = tankBodys[tank.action]
         };
+        tanks.push(tankItem);
+        bossItem = undefined;
         updateBoard(ts);
     }
 
@@ -80,7 +95,7 @@ function game(options) {
         }
         app.status.updateLife(app.subRows, true);
         //app.addFlashCallback(ts, (newTs) => initLevel(newTs));
-        initLevel(ts);
+        //initLevel(ts);
         return true;
     }
 
@@ -92,25 +107,30 @@ function game(options) {
         return true;
     }
 
-    const overrideOtherBody = (tank) => {
+    const calcTankBody = tank => {
         let tankBody = {};
         tank.body.forEach((row, r) => row.forEach((cell, c) => {
-            if (cell == body_common) {
-                tankBody[tank.x - 1 + c + (tank.y - 1 + r) * app.mainCols] = cell;
+            if (cell) {
+                tankBody[tank.x + c + (tank.y + r) * app.mainCols] = cell;
             }
         }));
-        [tankItem, ...tankSet].forEach(item => {
+        return tankBody;
+    }
+
+    const overrideOtherBody = (tank) => {
+        let tankBody = calcTankBody(tank);
+        tanks.forEach(item => {
             if (item == tank) {
                 return;
             }
-            if (tank.x - item.x >= 3 || item.x - tank.x >= 3 || tank.y - item.y >= 3 || item.y - tank.y >= 3) {
+            if (tank.x - item.x >= testBody[0].length || item.x - tank.x >= testBody[0].length || tank.y - item.y >= testBody.length || item.y - tank.y >= testBody.length) {
                 return;
             }
             let body = item.body.map(row => [...row]);
             let hasChange = false;
             body.forEach((row, r) => row.forEach((cell, c) => {
-                if (cell == body_common && tankBody[item.x - 1 + c + (item.y - 1 + r) * app.mainCols] == body_common) {
-                    body[r][c] = body_none;
+                if (cell && tankBody[item.x + c + (item.y + r) * app.mainCols]) {
+                    body[r][c] = 0;
                     hasChange = true;
                 }
             }));
@@ -121,38 +141,41 @@ function game(options) {
     };
 
     const doMove = (ts, actionType) => {
-        const newStep = steps[actionType];
-        if (newStep != tankItem.step) {
-            tankItem.step = newStep;
-            tankItem.body = tankBodys[actionType];
+        let index = tankItem.actions.findIndex(s => s == actionType);
+        if (index < 0) {
+            return false;
+        }
+        if (actionType != tankItem.action) {
+            tankItem.action = actionType;
+            tankItem.refreshBody(tankItem);
             overrideOtherBody(tankItem);
             return true;
         }
         return tryMove(tankItem);
     };
 
-    const findItems = (items, matrix, x, y) => {
-        return items.find(item =>
-            matrix.some((mrow, mr) =>
-                mrow.some((mcell, mc) =>
-                    mcell && (mc + x >= item.x - 1 && mc + x <= item.x + 1 && mr + y >= item.y - 1 && mr + y <= item.y + 1)
-                )
-            )
-        );
-        // return items.find(item => item.body.some((row, r) => row.some((cell, c) => {
-        //     if (cell == 0) {
-        //         return false;
-        //     }
-        //     let tx = item.x - 1 + c;
-        //     let ty = item.y - 1 + r;
-        //     return matrix.some((mrow, mr) => mrow.some((mcell, mc) => mcell && (tx == mc + x && ty == mr + y)));
-        // })));
+    const findBodyIndex = (matrix, x, y, ftank) => {
+        return tanks.findIndex(tank => {
+            if (ftank && !ftank(tank)) {
+                return false;
+            }
+            const tankBody = calcTankBody(tank);
+            return matrix.some((row, r) => row.some((cell, c) => cell && tankBody[(y + r) * app.mainCols + x + c]));
+        })
+    }
+    const findHitIndex = (x, y, ftank) => {
+        return tanks.findIndex(tank => {
+            if (ftank && !ftank(tank)) {
+                return false;
+            }
+            return tank.withShot(tank, x, y);
+        })
     }
 
     const tryCreateFlyItem = (ts, tank) => {
         const flyCount = flyItems.filter(s => s.tank == tank).length;
         if (flyCount < maxFlySize) {
-            actionCallbacks.add(createShotAction(ts, tank));
+            actionCallbacks.push(createShotAction(ts, tank));
             return true;
         }
         return false;
@@ -166,10 +189,13 @@ function game(options) {
     }
 
     const createShotAction = (ts, tank) => {
-        let x = tank.step[0];
-        let y = tank.step[1];
-        let sx = tank.x + x + x;
-        let sy = tank.y + y + y;
+        let step = steps[tank.getShotAction(tank)];
+        let x = step[0];
+        let y = step[1];
+        let mx = ~~((tank.body[0].length - 1) / 2);
+        let my = ~~((tank.body.length - 1) / 2);
+        let sx = tank.x + mx + x * mx;
+        let sy = tank.y + my + y * my;
         let lastEts = 0;
         let newCell = tank.cell;
         let flyItem = {
@@ -185,7 +211,6 @@ function game(options) {
             }
             let ets = ~~((newTs - ts) / 50);
             let i = lastEts;
-            let items = [tankItem, ...tankSet].filter(s => s != tank);
             for (; i <= ets; i++) {
                 let nx = sx + i * x;
                 let ny = sy + i * y;
@@ -198,22 +223,31 @@ function game(options) {
                     flyItems[findIndex].end = true;
                     flyItems.splice(findIndex, 1);
                 }
-                let findItem = findItems(items, [[1]], nx, ny);
-                if (!findItem) {
+                let targetIndex = findHitIndex(nx, ny, t => t != tank);
+                if (targetIndex < 0) {
                     continue;
                 }
-                if (tank == tankItem) {
-                    tankSet.delete(findItem);
-                    const oldScore = app.status.score;
-                    app.status.score = app.status.score + scorePerTank;
-                    if (~~(app.status.score / scorePerSpeed) != ~~(oldScore / scorePerSpeed)) {
-                        updateGrade(ts);
+                removeFlyItem(flyItem);
+                let findItem = tanks[targetIndex];
+                if (findItem.dead) {
+                    if (tank == tankItem) {
+                        tanks.splice(targetIndex, 1);
+                        if (findItem == bossItem) {
+                            app.status.score += scorePerBoss;
+                            bossKilled(newTs);
+                        }
+                        else {
+                            app.status.score += scorePerTank;
+                            levelScore += scorePerTank;
+                            if (levelScore >= scorePerSpeed) {
+                                bossCome(newTs);
+                            }
+                        }
+                    }
+                    else if (findItem == tankItem) {
+                        subLife(newTs);
                     }
                 }
-                else if (findItem == tankItem) {
-                    subLife(ts);
-                }
-                removeFlyItem(flyItem);
                 return false;
             }
             flyItem.x = sx + x * ets;
@@ -227,12 +261,15 @@ function game(options) {
         return tryCreateFlyItem(ts, tankItem);
     };
 
+    const isCommonShotPoint = (tank, x, y) => {
+        return tank.dead = tank.body.some((row, r) => row.some((cell, c) => cell && tank.x + c == x && tank.y + r == y));
+    }
+
     const tryCreateTank = (ts) => {
-        if (tankSet.size >= maxTankSize) {
+        if (tanks.length >= maxTankSize) {
             return undefined;
         }
         let positions = [...tankPosions];
-        let allItems = [...tankSet, tankItem];
         while (positions.length) {
             let pi = ~~(positions.length * Math.random());
             let position = positions.splice(pi, 1)[0];
@@ -240,17 +277,22 @@ function game(options) {
             while (actionTypes.length) {
                 let ai = ~~(actionTypes.length * Math.random());
                 let actionType = actionTypes.splice(ai, 1)[0];
-                let body = tankBodys[actionType];
-                let findItem = findItems(allItems, body, position.x - 1, position.y - 1);
-                if (!findItem) {
+                let findIndex = findBodyIndex(testBody, position.x, position.y);
+                if (findIndex < 0) {
                     let newTank = {
                         x: position.x,
                         y: position.y,
-                        step: steps[actionType],
-                        body: body,
-                        cell: randomCell()
+                        actions: [action_Left, action_Right, action_Up, action_Down],
+                        action: actionType,
+                        body: tankBodys[actionType],
+                        cell: randomCell(),
+                        dead: false,
+                        withShot: isCommonShotPoint,
+                        doStep: doCommonAction,
+                        getShotAction: tank => tank.action,
+                        refreshBody: tank => tank.body = tankBodys[tank.action]
                     };
-                    tankSet.add(newTank);
+                    tanks.push(newTank);
                     return newTank;
                 }
             }
@@ -258,98 +300,222 @@ function game(options) {
         return undefined;
     }
 
-    const tryMove = item => {
-        let matrix, findx, findy, actionType;
-        switch (item.step) {
-            case steps[action_Up]:
-                actionType = action_Up;
-                if (item.y + item.step[1] < 1) {
-                    return false;
-                }
-                matrix = [[0, 1, 0], [1, 0, 1]];
-                findx = item.x - 1;
-                findy = item.y + item.step[1] - 1;
-                break;
-            case steps[action_Down]:
-                actionType = action_Down;
-                if (item.y + item.step[1] > app.mainRows - 2) {
-                    return false;
-                }
-                matrix = [[1, 0, 1], [0, 1, 0]];
-                findx = item.x - 1;
-                findy = item.y + item.step[1];
-                break;
-            case steps[action_Left]:
-                actionType = action_Left;
-                if (item.x + item.step[0] < 1) {
-                    return false;
-                }
-                matrix = [[0, 1], [1, 0], [0, 1]];
-                findx = item.x + item.step[0] - 1;
-                findy = item.y - 1;
-                break;
-            case steps[action_Right]:
-                actionType = action_Right;
-                if (item.x + item.step[0] > app.mainCols - 2) {
-                    return false;
-                }
-                matrix = [[1, 0], [0, 1], [1, 0]];
-                findx = item.x + item.step[0];
-                findy = item.y - 1;
-                break;
-            default:
-                return false;
+    const withShotBoss = (tank, x, y) => {
+        if (tank.x - x >= tank.body[0].length || x - tank.x >= tank.body[0].length || tank.y - y >= tank.body.length || y - tank.y >= tank.body.length) {
+            return;
         }
-        let allItems = [...tankSet, tankItem].filter(s => s != item);
-        if (findItems(allItems, matrix, findx, findy)) {
+        let body = tank.body.map(row => [...row]);
+        let hasHit = false;
+        body.forEach((row, r) => row.forEach((cell, c) => {
+            if (cell && tank.x + c == x && tank.y + r == y) {
+                body[r][c] = 0;
+                hasHit = true;
+            }
+        }));
+        if (hasHit) {
+            tank.body = body;
+        }
+        tank.dead = ~~((bossBody[0].length - 1) / 2) + tank.x == x && bossBody.length - 1 + tank.y == y;
+        return hasHit;
+    }
+
+    const clearStage = (ts) => {
+        tanks.splice(1, tanks.length - 1);
+        flyItems.forEach(s => s.end = true);
+        flyItems.splice(0, flyItems.length);
+        updateBoard(ts);
+    }
+
+    const createBossComeCallback = (ts) => {
+        let sx = ~~((app.mainCols - bossBody[0].length) / 2);
+        let tsy = tankItem.y;
+        let tey = app.mainRows - testBody.length;
+        let bsy = -bossBody.length;
+        let bey = 1;
+        let bossCell = randomCell();
+        return newTs => {
+            let ets = ~~((newTs - ts) / 75);
+            let ty = tsy + ets;
+            let action = action_Down;
+            if (ty >= tey) {
+                ty = tey;
+                action = action_Up;
+            }
+            tankItem.y = ty;
+            tankItem.action = action;
+            tankItem.refreshBody(tankItem);
+            updateBoard(newTs);
+            let by = bsy + ets + tsy - tey;
+            if (by >= bey) {
+                bossItem = {
+                    x: ~~((app.mainCols - bossBody[0].length) / 2),
+                    y: 1,
+                    actions: [action_Left, action_Right],
+                    action: action_Right,
+                    cell: bossCell,
+                    dead: false,
+                    body: bossBody,
+                    withShot: withShotBoss,
+                    doStep: createBossStep(),
+                    getShotAction: tank => action_Down,
+                    refreshBody: tank => tank.body = bossBody
+                }
+                tanks.push(bossItem);
+                tankItem.actions = [action_Left, action_Right];
+                tankItem.action = action_Up;
+                tankItem.refreshBody = tank => tank.body = tankBodys[action_Up];
+                tankItem.getShotAction = tank => action_Up;
+                tankItem.refreshBody(tankItem);
+                lastTagTime = newTs;
+                return false;
+            }
+            else if (by > 0) {
+                for (let y = 0; y < by; y++) {
+                    for (let x = 0; x < bossBody[0].length; x++) {
+                        app.mainBoard[y][x + sx] = app.emptyCell;
+                    }
+                }
+            }
+            else if (-by <= bossBody.length) {
+                for (let y = 0; y - by < bossBody.length; y++) {
+                    for (let x = 0; x < bossBody[0].length; x++) {
+                        app.mainBoard[y][x + sx] = bossBody[y - by][x] ? bossCell : app.emptyCell;
+                    }
+                }
+            }
+            return true;
+        }
+    }
+
+    const createBossKilledCallback = (ts) => {
+        let sx = tankItem.x;
+        let sy = tankItem.y;
+        let tx = ~~((app.mainCols - tankItem.body[0].length) / 2);
+        let ty = ~~((app.mainRows - tankItem.body.length) / 2);
+        bossItem = undefined;
+        tankItem.actions = [action_Left, action_Right, action_Up, action_Down];
+        tankItem.refreshBody = tank => tank.body = tankBodys[tank.action];
+        return newTs => {
+            let ets = ~~((newTs - ts) / 75);
+            let es = Math.abs(sx - tx);
+            if (ets < es) {
+                if (sx < tx) {
+                    tankItem.x = sx + ets;
+                    tankItem.action = action_Right;
+                }
+                else {
+                    tankItem.x = sx - ets;
+                    tankItem.action = action_Left;
+                }
+            }
+            else if (ets < es + (sy - ty)) {
+                tankItem.x = tx;
+                tankItem.y = sy - (ets - es);
+                tankItem.action = action_Up;
+            }
+            else {
+                tankItem.x = tx;
+                tankItem.y = ty;
+                tankItem.action = action_Up;
+                tankItem.getShotAction = tank => tank.action;
+                lastTagTime = newTs;
+                updateGrade(newTs);
+                return false;
+            }
+            tankItem.refreshBody(tankItem);
+            updateBoard(ts);
+            return true;
+        }
+    }
+
+    const bossCome = (ts) => {
+        clearStage(ts);
+        app.addPauseCallback(createBossComeCallback(ts));
+    }
+
+    const bossKilled = (ts) => {
+        clearStage(ts);
+        app.addPauseCallback(createBossKilledCallback(ts));
+    }
+
+    const tryMove = item => {
+        let actionType = item.action, step = steps[actionType];
+        const newx = item.x + step[0];
+        const newy = item.y + step[1];
+        if (newx < 0 || newx > app.mainCols - item.body[0].length || newy < 0 || newy > app.mainRows - item.body.length) {
             return false;
         }
-        item.x += item.step[0];
-        item.y += item.step[1];
-        item.body = tankBodys[actionType];
+        if (findBodyIndex(testBody, newx, newy, t => t != item) >= 0) {
+            return false;
+        }
+        item.x = newx;
+        item.y = newy;
+        item.refreshBody(item);
         return true;
     }
 
-    const findNewWay = item => {
-        const actionTypes = [];
-        if (item.x > 1 && item.step != steps[action_Left]) {
-            actionTypes.push(action_Left);
+    const changeAction = item => {
+        const actionTypes = [...item.actions];
+        if (item.action == action_Left || item.x <= 0) {
+            let removeIndex = actionTypes.findIndex(s => s == action_Left);
+            removeIndex >= 0 && actionTypes.splice(removeIndex, 1);
         }
-        if (item.y > 1 && item.step != steps[action_Up]) {
-            actionTypes.push(action_Up);
+        if (item.action == action_Up || item.y <= 0) {
+            let removeIndex = actionTypes.findIndex(s => s == action_Up);
+            removeIndex >= 0 && actionTypes.splice(removeIndex, 1);
         }
-        if (item.x < app.mainCols - 2 && item.step != steps[action_Right]) {
-            actionTypes.push(action_Right);
+        if (item.action == action_Right || item.x >= app.mainCols - item.body[0].length - 1) {
+            let removeIndex = actionTypes.findIndex(s => s == action_Right);
+            removeIndex >= 0 && actionTypes.splice(removeIndex, 1);
         }
-        if (item.y < app.mainRows - 2 && item.step != steps[action_Down]) {
-            actionTypes.push(action_Down);
+        if (item.action == action_Down || item.y >= app.mainCols - item.body.length - 1) {
+            let removeIndex = actionTypes.findIndex(s => s == action_Down);
+            removeIndex >= 0 && actionTypes.splice(removeIndex, 1);
         }
-        let actionType = actionTypes[~~(Math.random() * actionTypes.length)];
-        item.step = steps[actionType];
-        item.body = tankBodys[actionType];
-        overrideOtherBody(item);
+        item.action = actionTypes[~~(Math.random() * actionTypes.length)];
+        item.refreshBody(item);
+    }
+    const doCommonAction = (ts, item) => {
+        let findWay = false;
+        if (Math.random() < wayPercent) {
+            changeAction(item);
+            findWay = true;
+        }
+        !findWay && !tryMove(item) && changeAction(item);
+        if (Math.random() < shotPercent) {
+            tryCreateFlyItem(ts,item);
+        }
     }
 
-    const doStep = (ts) => {
-        createTankTick++;
-        let newTank = undefined;
-        if (createTankTick >= createTankTicks) {
-            newTank = tryCreateTank(ts);
-            createTankTick = newTank ? 0 : createTankTicks;
-        }
-        tankSet.forEach(item => {
-            if (item != newTank) {
-                let findWay = false;
-                if (Math.random() < wayPercent) {
-                    findNewWay(item);
-                    findWay = true;
-                }
-                if (!tryMove(item) && !findWay) {
-                    findNewWay(item);
-                }
+    const createBossStep = () => {
+        let actionIndex = 1;
+        return (ts, item) => {
+            if (!tryMove(item)) {
+                actionIndex = (actionIndex + 1) % item.actions.length;
+                item.action = item.actions[actionIndex];
+                tryMove(item);
             }
-            if (Math.random() < shotPercent) {
-                tryCreateFlyItem(ts, item);
+            tryCreateFlyItem(ts,item);
+        }
+    }
+
+
+    const doStep = (ts) => {
+        let newTank = undefined;
+        if (!bossItem) {
+            createTankTick++;
+            if (createTankTick >= createTankTicks) {
+                newTank = tryCreateTank(ts);
+                createTankTick = newTank ? 0 : createTankTicks;
+            }
+        }
+        tanks.forEach(item => {
+            if (item == tankItem) {
+                return;
+            }
+            if (item != newTank) {
+                item.doStep(ts, item);
+                overrideOtherBody(item);
             }
         });
         return true;
@@ -372,22 +538,22 @@ function game(options) {
         app = mainApp;
         tankCell = randomCell();
         tankPosions = [
-            { x: 1, y: 1, ac: [action_Right, action_Down] },
-            { x: app.mainCols - 2, y: 1, ac: [action_Left, action_Down] },
-            { x: app.mainCols - 2, y: app.mainRows - 2, ac: [action_Left, action_Up] },
-            { x: 1, y: app.mainRows - 2, ac: [action_Right, action_Up] }
+            { x: 0, y: 0, ac: [action_Right, action_Down] },
+            { x: app.mainCols - testBody[0].length, y: 0, ac: [action_Left, action_Down] },
+            { x: app.mainCols - testBody[0].length, y: app.mainRows - testBody.length, ac: [action_Left, action_Up] },
+            { x: 0, y: app.mainRows - testBody.length, ac: [action_Right, action_Up] }
         ];
         initLevel(ts);
     }
     const update = (ts) => {
-        if (ts - lastTagTime > app.speeds[app.status.speed] * 2) {
+        if (ts - lastTagTime > app.speeds[app.status.speed]) {
             lastTagTime = ts;
             doStep(ts);
         }
         updateBoard(ts);
-        for (let callback of [...actionCallbacks]) {
-            if (!callback(ts)) {
-                actionCallbacks.delete(callback);
+        for (let index = 0; index < actionCallbacks.length; index++) {
+            if (!actionCallbacks[index](ts)) {
+                actionCallbacks.splice(index, 1);
                 break;
             }
         }
