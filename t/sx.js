@@ -9,6 +9,7 @@ function game(options) {
     let lastTagTime = 0;
 
     let actionCallbacks = new Set();
+    let scoreCallbackCreated;
 
     options = Object.assign({ fk: false }, options ?? {});
 
@@ -84,6 +85,7 @@ function game(options) {
     };
 
     function createScorePauseCallback(ts, calcY) {
+        scoreCallbackCreated = true;
         app.addPauseCallback((newTs) => {
             let ets = ~~((newTs - ts) / 10);
             if (ets > 10) {
@@ -206,10 +208,13 @@ function game(options) {
             doGrow(ts);
         }
         updateBoard(ts);
+        scoreCallbackCreated = false;
         for (let callback of [...actionCallbacks]) {
             if (!callback(ts)) {
                 actionCallbacks.delete(callback);
-                break;
+                if (scoreCallbackCreated) {
+                    break;
+                }
             }
         }
     }

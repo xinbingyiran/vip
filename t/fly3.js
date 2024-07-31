@@ -6,13 +6,15 @@ function game(options) {
     const scorePer10Distance = 100;
     let speedScore = 0;
     let lastTagTime = 0;
+    let actionPercent = 0.2;
+    let actionDistance = 100;
+    let actionCallbacks = new Set();
     options = Object.assign({ loop: false }, options ?? {});
 
     let flybody = [[0, 1, 0], [1, 1, 1], [0, 1, 0], [1, 0, 1]];
-    let itemBody = [...flybody].reverse();
     let app, backCell, distance, flyItem;
     let items = [];
-    let itemDistance = 12;
+    let itemDistance = 16;
 
     function updateBoard(ts) {
         app.mainBoard.forEach((row, r) => row.forEach((cell, c) => row[c] = (c == 0 || c == app.mainCols - 1) && ((distance - r) % 4 + 4) % 4 > 0 ? backCell : app.emptyCell));
@@ -33,9 +35,11 @@ function game(options) {
             x: 2,
             y: app.mainRows - flybody.length - 2,
             body: flybody,
-            cell: backCell
+            cell: backCell,
+            action: 0
         }
         items.splice(0, items.length);
+        actionCallbacks.clear();
         updateBoard(ts);
     }
 
@@ -58,28 +62,55 @@ function game(options) {
     }
 
     function checkHit(ts) {
-        let index = items.findIndex(item => !item.broke && item.x == flyItem.x && ((item.y >= flyItem.y && item.y - flyItem.y < flyItem.body.length) || (flyItem.y >= item.y && flyItem.y - item.y < item.body.length)));
+        let index = items.findIndex(item => !item.broke && item.body.some((row, r) => row.some((cell, c) => cell && flyItem.body.some((frow, fr) => frow.some((fcell, fc) => fcell && item.x + c == flyItem.x + fc && item.y + r == flyItem.y + fr)))));
         if (index >= 0) {
-            items[index].broke = true;
-            subLife(ts);
+            const fitem = items[index];
+            fitem.broke = true;
+            if (fitem.action) {
+                items.splice(index, 1);
+                fitem.action(ts);
+            }
+            else {
+                subLife(ts);
+            }
         }
         return index >= 0;
     }
 
     function doStep(ts) {
         if (distance % itemDistance == 0) {
+            let body = [];
+            let sc = ~~(Math.random() * (app.mainCols - 5)) + 1;
+            for (let r = 0; r < 3; r++) {
+                body.push(app.mainBoard[0].map((cell, c) => c < sc || c >= sc + 3 ? 1 : 0));
+            }
             items.push({
-                x: ~~(Math.random() * 2) ? 2 : 5,
-                y: -itemBody.length,
-                body: itemBody,
+                x: 0,
+                y: -body.length,
+                body: body,
                 cell: randomCell()
             });
+        }
+        else if (distance % itemDistance == ~~(itemDistance / 2)) {
+            if (Math.random() < actionPercent) {
+                const body = [[1], [1]];
+                items.push({
+                    x: Math.random() < 0.5 ? 2 : app.mainCols - 2 - body[0].length,
+                    y: -body.length,
+                    body: body,
+                    cell: randomCell(),
+                    action: (ts) => {
+                        flyItem.action = actionDistance
+                    }
+                });
+            }
         }
         if (items.length && items[0].y >= app.mainRows) {
             items.shift();
         }
         items.forEach(item => item.y++);
         distance++;
+        flyItem.action > 0 && flyItem.action--;
         if (checkHit(ts)) {
             return false;
         }
@@ -94,17 +125,55 @@ function game(options) {
     }
 
     function doMove(ts, x) {
-        flyItem.x = x;
-        checkHit(ts);
+        if (flyItem.x + x < 1 || flyItem.x + x > app.mainCols - 1 - flyItem.body[0].length) {
+            return false;
+        }
+        flyItem.x += x;
+        return !checkHit(ts);
+    }
+
+    function doAction(ts) {
+        if (flyItem.action > 0) {
+            const x = flyItem.x + 1;
+            const sy = flyItem.y;
+            const newCell = flyItem.cell;
+            actionCallbacks.add(newTs => {
+                let ets = ~~((newTs - ts) / 5);
+                let i = 0;
+                for (i = 0; i <= ets; i++) {
+                    let calcY = sy - i;
+                    if (sy - i < 0) {
+                        return false;
+                    }
+                    if (items.some(item => {
+                        if (calcY < item.y || calcY > item.y + item.body.length - 1 || x < item.x || x > item.x + item.body[0].length - 1) {
+                            return false;
+                        }
+                        if (item.body[calcY - item.y][x - item.x]) {
+                            item.body.forEach(row => (row[x - item.x] = 0, (x - item.x - 1 >= 0 && (row[x - item.x - 1] = 0)), (x - item.x + 1 < row.length && (row[x - item.x + 1] = 0))));
+                            return true;
+                        }
+                        return false;
+                    })) {
+                        return false;
+                    }
+                }
+                if (sy - i >= 0) {
+                    app.mainBoard[sy - i][x] = newCell;
+                }
+                return true;
+            });
+            return true;
+        }
         return false;
     }
 
     const keyMap = {
-        [keys.KEY_LEFT]: [100, 50, (ts) => doMove(ts, 2)],
-        [keys.KEY_RIGHT]: [100, 50, (ts) => doMove(ts, 5)],
+        [keys.KEY_LEFT]: [100, 50, (ts) => doMove(ts, -1)],
+        [keys.KEY_RIGHT]: [100, 50, (ts) => doMove(ts, 1)],
         [keys.KEY_DOWN]: [100, 50, (ts) => doStep(ts)],
         [keys.KEY_UP]: [100, 50, (ts) => doStep(ts)],
-        [keys.KEY_ACTION]: [100, 50, (ts) => doStep(ts)],
+        [keys.KEY_ACTION]: [100, 50, (ts) => doAction(ts)],
         [keys.KEY_EXTEND]: [3000, 1000, (ts) => updateGrade(ts)]
     };
 
@@ -125,6 +194,11 @@ function game(options) {
             }
         }
         updateBoard(ts);
+        for (let callback of [...actionCallbacks]) {
+            if (!callback(ts)) {
+                actionCallbacks.delete(callback);
+            }
+        }
     }
     return { keyMap, init, update };
 }
