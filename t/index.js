@@ -5,7 +5,7 @@ import sxgame from './sx.js';
 import tkgame from './tk.js';
 import flygame from './fly.js';
 import fly2game from './fly2.js';
-//import fly3game from './fly3.js';
+import fly3game from './fly3.js';
 
 !function () {
 
@@ -21,7 +21,7 @@ import fly2game from './fly2.js';
         '坦克大战': tkgame({}),
         '躲避敌人': flygame({}),
         '窄道通行': fly2game({}),
-        //'飞行射击': fly3game({}),
+        '飞行射击': fly3game({}),
     }
 
     const selectGameList = document.querySelector('#gameList');

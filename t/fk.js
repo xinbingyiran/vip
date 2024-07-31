@@ -6,6 +6,7 @@ function game(options) {
     const scorePerSpeed = 50000;
     let lastTagTime = 0;
     let shapeCallbacks = new Set();
+    let scoreCallbackCreated;
 
     options = Object.assign({ hasExtend: false, hasHelper: false, isFreeze: false, isReverse: false }, options ?? {});
     const scores = { 0: 0, 1: 100, 2: 300, 3: 700, 4: 1500 };
@@ -20,6 +21,7 @@ function game(options) {
         return emptyRow;
     }
     function createScorePauseCallback(ts, lines, overLines) {
+        scoreCallbackCreated = true;
         app.addPauseCallback((newTs) => {
             let ets = ~~((newTs - ts) / 20);
             if (ets > 10) {
@@ -466,10 +468,13 @@ function game(options) {
             cshape = updateNextShape(ts, true);
         }
         updateBoard(ts);
+        scoreCallbackCreated = false;
         for (let callback of [...shapeCallbacks]) {
             if (!callback(ts)) {
                 shapeCallbacks.delete(callback);
-                break;
+                if (scoreCallbackCreated) {
+                    break;
+                }
             }
         }
     }
