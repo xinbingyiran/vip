@@ -68,7 +68,7 @@ import fly2game from './fly2.js';
 
     const speeds = [1000, 900, 800, 700, 600, 500, 450, 400, 350, 300, 250, 200, 150, 100, 50, 25];
     const colors = ["red", "green", "blue", "purple", "orange"];
-    const emptyCell = { color: 'gray', type: undefined };
+    const emptyCell = { color: 'lightgray', type: undefined };
     const mainBoard = Array(mainRows).fill(undefined).map(() => Array(mainCols).fill(emptyCell));
     const subBoard = Array(subRows).fill(undefined).map(() => Array(subCols).fill(emptyCell));
     const downActions = new Set();
@@ -415,28 +415,33 @@ import fly2game from './fly2.js';
     const perline4 = blockSize / 2;
 
     function drawItem(ctx, item, cols, rows) {
-        if (item == emptyCell) {
-            ctx.fillStyle = item.color;
-            ctx.fillRect(cols * blockSize + 0.5, rows * blockSize + 0.5, blockSize - 1, blockSize - 1);
+        // if (item == emptyCell) {
+        //     ctx.fillStyle = item.color;
+        //     ctx.fillRect(cols * blockSize + 0.5, rows * blockSize + 0.5, blockSize - 1, blockSize - 1);
+        //     return;
+        // }
+        if (item.custom && typeof item.custom == 'function') {
+            item.custom(ctx, cols, rows);
             return;
         }
         switch (item.type) {
             case 1:
                 {
                     ctx.fillStyle = item.color;
-                    ctx.fillRect(cols * blockSize + 0.5, rows * blockSize + 0.5, blockSize - 1, blockSize - 1);
+                    ctx.fillRect(cols * blockSize + 1, rows * blockSize + 1, blockSize - 2, blockSize - 2);
                 }
                 break;
+            case 0:
             default:
                 {
                     ctx.fillStyle = item.color;
-                    ctx.fillRect(cols * blockSize + 0.5, rows * blockSize + 0.5, blockSize - 1, blockSize - 1);
+                    ctx.fillRect(cols * blockSize + 1, rows * blockSize + 1, blockSize - 2, blockSize - 2);
 
-                    ctx.fillStyle = emptyCell.color;
-                    ctx.fillRect(cols * blockSize + perline, rows * blockSize + perline, blockSize - perline2, blockSize - perline2);
+                    ctx.fillStyle = 'white';
+                    ctx.fillRect(cols * blockSize + 1 + perline, rows * blockSize + perline + 1, blockSize - perline2 - 2, blockSize - perline2 - 2);
 
                     ctx.fillStyle = item.color;
-                    ctx.fillRect(cols * blockSize + perline2, rows * blockSize + perline2, blockSize - perline4, blockSize - perline4);
+                    ctx.fillRect(cols * blockSize + perline2 + 1, rows * blockSize + perline2 + 1, blockSize - perline4 - 2, blockSize - perline4 - 2);
                 }
                 break;
         }
@@ -459,34 +464,19 @@ import fly2game from './fly2.js';
     }
 
     function drawMenu() {
-        const fontSize = ~~(blockSize / 1.5);
-        const border = 2;
+        let gameName = selectGameList.value;
+        mainCtx.font = mainCtx.font.replace(/\d+(?=px)/, blockSize);
+        const fontSize = ~~(mainCols*blockSize*blockSize/mainCtx.measureText(gameName).width);
+        mainCtx.fillStyle = 'white';
         mainCtx.font = mainCtx.font.replace(/\d+(?=px)/, fontSize);
-        let offset = 0;
-        const sx = ~~(fontSize / 2);
-        const sy = sx;
-        for (let gameName in gameList) {
-            const measure = mainCtx.measureText(gameName);
-            const textWidth = measure.width;
-            if (textWidth > fontSize * mainCols) {
-                textWidth = fontSize * mainCols;
-            }
-            const y = sy + (++offset) * (fontSize + border * 2);
-            if (gameName == selectGameList.value) {
-                mainCtx.fillStyle = 'lightblue';
-                mainCtx.fillRect(sx - border, y - measure.actualBoundingBoxAscent - border, textWidth + border + border, fontSize + border + border);
-            }
-            else {
-                mainCtx.fillStyle = 'white';
-                mainCtx.fillRect(sx - border, y - measure.actualBoundingBoxAscent - border, textWidth + border + border, fontSize + border + border);
-            }
-            const gd = mainCtx.createLinearGradient(sx, y, sx + textWidth, y);
-            for (let i = 0; i < colors.length; i++) {
-                gd.addColorStop(i / (colors.length - 1), colors[i]);
-            }
-            mainCtx.fillStyle = 'black';
-            mainCtx.fillText(gameName, sx, y, textWidth);
-        }
+        const measure = mainCtx.measureText(gameName);
+        const textWidth = measure.width;
+        const x = (mainCols * blockSize - textWidth) / 2;
+        const y = (mainRows * blockSize - fontSize) / 2;
+        mainCtx.fillRect(x, y, textWidth, fontSize);
+        const ty = y + measure.actualBoundingBoxAscent;
+        mainCtx.fillStyle = 'black';
+        mainCtx.fillText(gameName, x, ty, textWidth);
     }
 
     function drawBoard() {
