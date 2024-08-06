@@ -34,9 +34,6 @@ function game(options) {
             body: flybody,
             cell: backCell
         }
-        for (let y = 0; y < app.length; y++) {
-
-        }
         updateBoard(ts);
     }
 
