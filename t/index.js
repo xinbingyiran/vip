@@ -303,12 +303,11 @@ import fly3game from './fly3.js';
         if (!gamepads) {
             return actions;
         }
-        for (let i in gamepads) {
-            const gamepad = gamepads[i];
+        for (let gamepad of gamepads) {
             if (!gamepad) {
                 continue;
             }
-            const mapping = (gamepad.mapping == "standard" || gamepad.axes.length == 4) ? "standard" : "";
+            const mapping = (gamepad.mapping == "standard" || gamepad.axes?.length == 4) ? "standard" : "";
             const gamepadMap = controlMap[mapping];
             if (!gamepadMap) {
                 continue;
@@ -593,7 +592,7 @@ import fly3game from './fly3.js';
             return false;
         }
         if (currentInstance.main.keyMap) {
-            for (let key of Object.keys(currentActions)) {
+            for (let key in currentActions) {
                 if (keys.has(key)) {
                     const keyItem = currentActions[key];
                     if (!keyItem.allow || ts - keyItem.ts < (keyItem.ticks == 0 ? keyItem.fdelay : keyItem.odelay)) {
