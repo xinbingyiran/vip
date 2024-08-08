@@ -37,7 +37,7 @@ function game(options) {
     ];
     let actionCallbacks = [];
     let tanks = [];
-    let flyItems = [];
+    let overItems = [];
 
     let tankPosions;
 
@@ -57,6 +57,12 @@ function game(options) {
             });
         });
 
+        overItems.forEach(item => {
+            if (!item.end) {
+                app.mainBoard[item.y][item.x] = item.cell;
+            }
+        });
+
         for (let i = 0; i < app.subRows; i++) {
             app.subBoard[i].fill(app.status.life > (app.subRows - 1 - i) ? tankCell : app.emptyCell);
         }
@@ -67,8 +73,7 @@ function game(options) {
         lastTagTime = ts;
         actionCallbacks.splice(0, actionCallbacks.length);
         tanks.splice(0, tanks.length);
-        flyItems.forEach(s => s.end = true);
-        flyItems.splice(0, flyItems.length);
+        overItems.splice(0, overItems.length);
         createTankTick = 0;
         levelScore = 0;
         tankItem = {
@@ -164,7 +169,7 @@ function game(options) {
     }
 
     const tryCreateFlyItem = (ts, tank) => {
-        const flyCount = flyItems.filter(s => s.tank == tank).length;
+        const flyCount = overItems.filter(s => s.tank == tank).length;
         if (flyCount < maxFlySize) {
             actionCallbacks.push(createShotAction(ts, tank));
             return true;
@@ -172,10 +177,10 @@ function game(options) {
         return false;
     }
 
-    const removeFlyItem = item => {
-        let curIndex = flyItems.findIndex(s => s == item);
+    const removeOverItem = item => {
+        let curIndex = overItems.findIndex(s => s == item);
         if (curIndex >= 0) {
-            flyItems.splice(curIndex, 1);
+            overItems.splice(curIndex, 1);
         }
     }
 
@@ -189,15 +194,17 @@ function game(options) {
         let sy = tank.y + my + y * my;
         let lastEts = 0;
         let newCell = tank.cell;
-        let flyItem = {
+        let overItem = {
             tank: tank,
             x: sx,
             y: sy,
-            end: false
+            end: false,
+            cell: newCell
         }
-        flyItems.push(flyItem);
+        overItems.push(overItem);
         return newTs => {
-            if (flyItem.end) {
+            if (overItem.end) {
+                removeOverItem(overItem);
                 return false;
             }
             let ets = ~~((newTs - ts) / 50);
@@ -206,19 +213,19 @@ function game(options) {
                 let nx = sx + i * x;
                 let ny = sy + i * y;
                 if (nx < 0 || nx >= app.mainCols || ny < 0 || ny >= app.mainRows) {
-                    removeFlyItem(flyItem);
+                    removeOverItem(overItem);
                     return false;
                 }
-                let findIndex = flyItems.findIndex(s => s.x == nx && s.y == ny && s.tank != tank);
+                let findIndex = overItems.findIndex(s => s.x == nx && s.y == ny && s.tank != tank);
                 if (findIndex >= 0) {
-                    flyItems[findIndex].end = true;
-                    flyItems.splice(findIndex, 1);
+                    overItems[findIndex].end = true;
+                    overItems.splice(findIndex, 1);
                 }
                 let targetIndex = findHitIndex(nx, ny, t => t != tank);
                 if (targetIndex < 0) {
                     continue;
                 }
-                removeFlyItem(flyItem);
+                removeOverItem(overItem);
                 let findItem = tanks[targetIndex];
                 if (findItem.dead) {
                     if (tank == tankItem) {
@@ -241,9 +248,8 @@ function game(options) {
                 }
                 return false;
             }
-            flyItem.x = sx + x * ets;
-            flyItem.y = sy + y * ets;
-            app.mainBoard[sy + y * ets][sx + x * ets] = newCell;
+            overItem.x = sx + x * ets;
+            overItem.y = sy + y * ets;
             lastEts = ets;
             return true;
         }
@@ -312,9 +318,8 @@ function game(options) {
 
     const clearStage = (ts) => {
         tanks.splice(1, tanks.length - 1);
-        flyItems.forEach(s => s.end = true);
-        flyItems.splice(0, flyItems.length);
-        updateBoard(ts);
+        overItems.forEach(s => s.end = true);
+        overItems.splice(0, overItems.length);
     }
 
     const createBossComeCallback = (ts) => {
@@ -335,7 +340,6 @@ function game(options) {
             tankItem.y = ty;
             tankItem.action = action;
             tankItem.refreshBody(tankItem);
-            updateBoard(newTs);
             let by = bsy + ets + tsy - tey;
             if (by >= bey) {
                 bossItem = {
@@ -374,6 +378,7 @@ function game(options) {
                     }
                 }
             }
+            updateBoard(newTs);
             return true;
         }
     }
@@ -414,7 +419,7 @@ function game(options) {
                 return false;
             }
             tankItem.refreshBody(tankItem);
-            updateBoard(ts);
+            updateBoard(newTs);
             return true;
         }
     }
@@ -544,13 +549,13 @@ function game(options) {
             lastTagTime = ts;
             doStep(ts);
         }
-        updateBoard(ts);
         for (let index = 0; index < actionCallbacks.length; index++) {
             if (!actionCallbacks[index](ts)) {
                 actionCallbacks.splice(index, 1);
-                break;
+                index--;
             }
         }
+        updateBoard(ts);
     }
     return { keyMap, init, update };
 }

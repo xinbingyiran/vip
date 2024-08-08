@@ -20,10 +20,10 @@ function game(options) {
     }
     function calcEmptyShapes() {
         const emptyShapes = [];
-        const sets = new Set(snake.map(s => s.y * app.mainRows + s.x));
+        const sets = new Set(snake.map(s => s.y * app.mainCols + s.x));
         for (let y = 0; y < app.mainRows; y++) {
             for (let x = 0; x < app.mainCols; x++) {
-                !sets.has(y * app.mainRows + x) && emptyShapes.push({ x, y });
+                !sets.has(y * app.mainCols + x) && emptyShapes.push({ x, y });
             }
         }
         return emptyShapes;
@@ -31,7 +31,7 @@ function game(options) {
     function createShape() {
         const emptyShapes = calcEmptyShapes();
         if (emptyShapes.length === 0) {
-            app.status.over = true;
+            subLife(ts);
             return undefined;
         }
         const item = emptyShapes[~~(Math.random() * emptyShapes.length)];
@@ -86,8 +86,8 @@ function game(options) {
             subLife(ts);
             return false;
         }
-        const sets = new Set(snake.slice(0, -1).map(s => s.y * app.mainRows + s.x));
-        if (sets.has(newy * app.mainRows + newx)) {
+        const sets = new Set(snake.slice(0, -1).map(s => s.y * app.mainCols + s.x));
+        if (sets.has(newy * app.mainCols + newx)) {
             subLife(ts);
             return false;
         }
