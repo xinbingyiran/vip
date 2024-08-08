@@ -8,12 +8,13 @@ function game(options) {
     let lastTagTime = 0;
     let actionPercent = 0.2;
     let actionDistance = 100;
-    let actionCallbacks = new Set();
+    let actionCallbacks = [];
     options = Object.assign({ loop: false }, options ?? {});
 
     let flybody = [[0, 1, 0], [1, 1, 1], [0, 1, 0], [1, 0, 1]];
     let app, backCell, distance, flyItem;
     let items = [];
+    let overItems = [];
     let itemDistance = 16;
 
     function updateBoard(ts) {
@@ -21,6 +22,9 @@ function game(options) {
         flyItem.body.forEach((row, r) => row.forEach((cell, c) => cell && (app.mainBoard[flyItem.y + r][flyItem.x + c] = flyItem.cell)));
         items.forEach(item => {
             item.body.forEach((row, r) => item.y + r >= 0 && item.y + r < app.mainRows && row.forEach((cell, c) => cell && (app.mainBoard[item.y + r][item.x + c] = item.cell)));
+        });
+        overItems.forEach(item => {
+            app.mainBoard[item.y][item.x] = item.cell;
         });
         for (let i = 0; i < app.subRows; i++) {
             app.subBoard[i].fill(app.status.life > (app.subRows - 1 - i) ? backCell : app.emptyCell);
@@ -39,7 +43,8 @@ function game(options) {
             action: 0
         }
         items.splice(0, items.length);
-        actionCallbacks.clear();
+        actionCallbacks.splice(0, actionCallbacks.length);
+        overItems.splice(0, overItems.length);
         updateBoard(ts);
     }
 
@@ -131,18 +136,31 @@ function game(options) {
         flyItem.x += x;
         return !checkHit(ts);
     }
+    const removeOverItem = item => {
+        let curIndex = overItems.findIndex(s => s == item);
+        if (curIndex >= 0) {
+            overItems.splice(curIndex, 1);
+        }
+    }
 
     function doAction(ts) {
         if (flyItem.action > 0) {
             const x = flyItem.x + 1;
             const sy = flyItem.y;
             const newCell = flyItem.cell;
-            actionCallbacks.add(newTs => {
+            const overItem = {
+                x: x,
+                y: sy,
+                cell: newCell
+            }
+            overItems.push(overItem);
+            actionCallbacks.push(newTs => {
                 let ets = ~~((newTs - ts) / 5);
                 let i = 0;
                 for (i = 0; i <= ets; i++) {
                     let calcY = sy - i;
                     if (sy - i < 0) {
+                        removeOverItem(overItem);
                         return false;
                     }
                     if (items.some(item => {
@@ -155,11 +173,12 @@ function game(options) {
                         }
                         return false;
                     })) {
+                        removeOverItem(overItem);
                         return false;
                     }
                 }
                 if (sy - i >= 0) {
-                    app.mainBoard[sy - i][x] = newCell;
+                    overItem.y = sy - i;
                 }
                 return true;
             });
@@ -193,12 +212,13 @@ function game(options) {
                 doStep(ts);
             }
         }
-        updateBoard(ts);
-        for (let callback of [...actionCallbacks]) {
-            if (!callback(ts)) {
-                actionCallbacks.delete(callback);
+        for (let index = 0; index < actionCallbacks.length; index++) {
+            if (!actionCallbacks[index](ts)) {
+                actionCallbacks.splice(index, 1);
+                index--;
             }
         }
+        updateBoard(ts);
     }
     return { keyMap, init, update };
 }

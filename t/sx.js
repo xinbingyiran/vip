@@ -8,8 +8,9 @@ function game(options) {
 
     let lastTagTime = 0;
 
-    let actionCallbacks = new Set();
+    let actionCallbacks = [];
     let scoreCallbackCreated;
+    let overItems = [];
 
     options = Object.assign({ fk: false }, options ?? {});
 
@@ -34,6 +35,13 @@ function game(options) {
         actionItem.col > 0 && (app.mainBoard[app.mainRows - 1][actionItem.col - 1] = actionItem.cell);
         actionItem.col < app.mainCols - 1 && (app.mainBoard[app.mainRows - 1][actionItem.col + 1] = actionItem.cell);
 
+
+        overItems.forEach(item => {
+            if (!item.end) {
+                app.mainBoard[item.y][item.x] = item.cell;
+            }
+        });
+
         for (let i = 0; i < app.subRows; i++) {
             app.subBoard[i].fill(app.status.life > (app.subRows - 1 - i) ? actionItem.cell : app.emptyCell);
         }
@@ -47,6 +55,7 @@ function game(options) {
 
     function initLevel(ts) {
         lastTagTime = ts;
+        overItems.splice(0, overItems.length);
         for (let row = 0; row < app.mainRows; row++) {
             baseBoard[row].fill(app.emptyCell);
             if (app.mainRows - row <= app.status.level) {
@@ -54,7 +63,7 @@ function game(options) {
             }
         }
         actionItem.col = ~~(app.mainCols / 2);
-        actionCallbacks.clear();
+        actionCallbacks.splice(0, actionCallbacks.length);
         updateBoard(ts);
     }
 
@@ -102,7 +111,6 @@ function game(options) {
                 return false;
             }
             else {
-                //updateBoard();
                 while (--ets >= 0) {
                     const index = ets;
                     app.mainBoard[calcY][index] = app.emptyCell;
@@ -112,15 +120,29 @@ function game(options) {
         });
     }
 
+    const removeOverItem = item => {
+        let curIndex = overItems.findIndex(s => s == item);
+        if (curIndex >= 0) {
+            overItems.splice(curIndex, 1);
+        }
+    }
+
+
     const doAction = (ts) => {
         const x = actionItem.col;
         let sy = app.mainRows - 3;
         const newCell = actionItem.cell;
+        const overItem = {
+            x: x,
+            y: sy,
+            cell: newCell
+        }
         if (options.fk) {
             if (baseBoard[sy][x] != app.emptyCell) {
                 return true;
             }
-            actionCallbacks.add(newTs => {
+            overItems.push(overItem);
+            actionCallbacks.push(newTs => {
                 let ets = ~~((newTs - ts) / 5);
                 let i = 0;
                 for (i = 0; i < ets; i++) {
@@ -128,36 +150,40 @@ function game(options) {
                     if (calcY - 1 < 0 || baseBoard[calcY - 1][x] != app.emptyCell) {
                         baseBoard[calcY][x] = newCell;
                         if (baseBoard[calcY].every(s => s != app.emptyCell)) {
-                            createScorePauseCallback(newTs, [calcY], []);
+                            createScorePauseCallback(newTs, calcY);
                         }
+                        removeOverItem(overItem);
                         return false;
                     }
                 }
-                app.mainBoard[sy - i][x] = newCell;
+                overItem.y = sy - i;
                 return true;
             })
         }
         else {
-            actionCallbacks.add(newTs => {
+            overItems.push(overItem);
+            actionCallbacks.push(newTs => {
                 let ets = ~~((newTs - ts) / 5);
                 let i = 0;
                 for (i = 0; i <= ets; i++) {
                     let calcY = sy - i;
                     if (sy - i < 0) {
+                        removeOverItem(overItem);
                         return false;
                     }
                     if (baseBoard[calcY][x] != app.emptyCell) {
-                        app.mainBoard[calcY][x] = baseBoard[calcY][x] = app.emptyCell;
+                        baseBoard[calcY][x] = app.emptyCell;
                         const oldScore = app.status.score;
                         app.status.score = app.status.score + scorePerDot;
                         if (~~(app.status.score / scorePerSpeed) != ~~(oldScore / scorePerSpeed)) {
                             updateGrade(ts);
                         }
+                        removeOverItem(overItem);
                         return false;
                     }
                 }
                 if (sy - i >= 0) {
-                    app.mainBoard[sy - i][x] = newCell;
+                    overItem.y = sy - i;
                 }
                 return true;
             });
@@ -192,7 +218,6 @@ function game(options) {
         app = mainApp;
         maxLevel = app.mainRows - 5;
         baseBoard = [];
-        actionCallbacks.clear();
         for (let r = 0; r < app.mainRows; r++) {
             baseBoard.push(createEmptyRow());
         }
@@ -207,16 +232,17 @@ function game(options) {
             lastTagTime = ts;
             doGrow(ts);
         }
-        updateBoard(ts);
         scoreCallbackCreated = false;
-        for (let callback of [...actionCallbacks]) {
-            if (!callback(ts)) {
-                actionCallbacks.delete(callback);
+        for (let index = 0; index < actionCallbacks.length; index++) {
+            if (!actionCallbacks[index](ts)) {
+                actionCallbacks.splice(index, 1);
                 if (scoreCallbackCreated) {
                     break;
                 }
+                index--;
             }
         }
+        updateBoard(ts);
     }
     return { keyMap, init, update };
 }

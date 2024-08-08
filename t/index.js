@@ -75,7 +75,7 @@ import fly3game from './fly3.js';
     let currentActions;
     let cellType = 0;
     let cells;
-    let pauseCallbacks = new Set(), pause = false, currentInstance = undefined;
+    let pauseCallbacks = [], pause = false, currentInstance = undefined;
     let pauseTime = 0;
     let lastTime = 0;
     let isStarting = false;
@@ -366,7 +366,7 @@ import fly3game from './fly3.js';
 
     function addPauseCallback(callback) {
         if (callback && 'function' == typeof callback) {
-            pauseCallbacks.add(callback);
+            pauseCallbacks.push(callback);
         }
     }
 
@@ -465,7 +465,7 @@ import fly3game from './fly3.js';
     function drawMenu() {
         let gameName = selectGameList.value;
         mainCtx.font = mainCtx.font.replace(/\d+(?=px)/, blockSize);
-        const fontSize = ~~(mainCols*blockSize*blockSize/mainCtx.measureText(gameName).width);
+        const fontSize = ~~(mainCols * blockSize * blockSize / mainCtx.measureText(gameName).width);
         mainCtx.fillStyle = 'white';
         mainCtx.font = mainCtx.font.replace(/\d+(?=px)/, fontSize);
         const measure = mainCtx.measureText(gameName);
@@ -514,7 +514,7 @@ import fly3game from './fly3.js';
         }
         //downActions.clear();
         currentActions = {};
-        pauseCallbacks.clear();
+        pauseCallbacks.splice(0, pauseCallbacks.length);
         isStarting = false;
         currentInstance = undefined;
         pause = false;
@@ -627,11 +627,14 @@ import fly3game from './fly3.js';
         if (pause) {
             return true;
         }
-        if (!pauseCallbacks.size) {
+        if (!pauseCallbacks.length) {
             return false;
         }
-        for (let pauseCallback of [...pauseCallbacks]) {
-            !pauseCallback(ts) && pauseCallbacks.delete(pauseCallback);
+        for (let index = 0; index < pauseCallbacks.length; index++) {
+            if (!pauseCallbacks[index](ts)) {
+                pauseCallbacks.splice(index, 1);
+                index--;
+            }
         }
         return true;
     }
