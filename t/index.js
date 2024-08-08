@@ -175,7 +175,7 @@ import fly3game from './fly3.js';
     }
 
     const updateKeys = (event, down) => {
-        const newAction = keymap[event.key];
+        const newAction = keymap[event.key] ?? keymap[event.key.toLowerCase()];
         if (newAction) {
             event.preventDefault();
             updateDownActions(newAction, down);
