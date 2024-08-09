@@ -22,7 +22,7 @@ function game({ loop = false } = {}) {
         const sets = new Set(snake.map(s => s.y * app.mainCols + s.x));
         const totalCells = app.mainRows * app.mainCols;
         for (let i = 0; i < totalCells; i++) {
-            !sets.has(i) && emptyPositions.push({ x: ~~(i / app.mainCols), y: i % app.mainCols });
+            !sets.has(i) && emptyPositions.push({ x: i % app.mainCols, y: ~~(i / app.mainCols) });
         }
         return emptyPositions;
     }
