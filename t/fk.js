@@ -6,7 +6,7 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
     const scorePerSpeed = 50000;
     let lastTagTime = 0;
     let actionCallbacks;
-    let scoreCallbackCreated;
+    let scoreItems;
     let overItems;
 
     const scores = { 0: 0, 1: 100, 2: 300, 3: 700, 4: 1500 };
@@ -20,19 +20,26 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
         }
         return emptyRow;
     }
-    function createScorePauseCallback(ts, lines, overLines) {
-        scoreCallbackCreated = true;
-        app.addPauseCallback((newTs) => {
-            let ets = ~~((newTs - ts) / 20);
+    function createOrUpdateScorePauseCallback(ts, lines, overLines) {
+        scoreItems.add(lines);
+        if (scoreItems.size > 1) {
+            return;
+        }
+        app.addFreezeCallback(elapsedTime => {
+            let ets = ~~(elapsedTime / 20);
             if (ets > 10) {
-                lines.forEach(line => baseBoard.splice(line, 1))
+                const oldScore = app.status.score;
+                const allLines = [];
+                for (let scoreLines of scoreItems) {
+                    app.status.score += scores[scoreLines.length];
+                    scoreItems.delete(scoreLines);
+                    allLines.push(...scoreLines);
+                };
+                allLines.sort().reverse().forEach(line => baseBoard.splice(line, 1));
                 overLines.forEach(line => baseBoard.unshift(line));
-                for (let r = 0; r < lines.length - overLines.length; r++) {
+                while (baseBoard.length < app.mainRows) {
                     baseBoard.unshift(createEmptyRow());
                 }
-                const oldScore = app.status.score;
-                app.status.score = app.status.score + scores[lines.length];
-                lastTagTime += newTs - ts;
                 if (~~(app.status.score / scorePerSpeed) != ~~(oldScore / scorePerSpeed)) {
                     updateGrade(ts);
                 }
@@ -40,10 +47,10 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
             }
             else {
                 while (--ets >= 0) {
-                    lines.forEach((line, i) => {
-                        const index = i % 2 ? app.mainCols - 1 - ets : ets;
+                    scoreItems.forEach(scoreLines => scoreLines.forEach(line => {
+                        const index = line % 2 ? app.mainCols - 1 - ets : ets;
                         app.mainBoard[line][index] = app.emptyCell;
-                    });
+                    }));
                 }
                 return true;
             }
@@ -128,7 +135,7 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
             app.status.over = true;
         }
         else if (lines.length) {
-            createScorePauseCallback(ts, lines, emptyRows);
+            createOrUpdateScorePauseCallback(ts, lines, emptyRows);
         }
     }
 
@@ -315,10 +322,9 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
                 bombMaping[match ? 1 : 0].push([curShape.cx + cols, bombY + rows, app.emptyCell]);
             }
         }
-        app.addPauseCallback((newTs) => {
-            const ets = ~~((newTs - ts) / 100);
+        app.addFreezeCallback(elapsedTime => {
+            let ets = ~~(elapsedTime / 100);
             if (ets > 4) {
-                lastTagTime += newTs - ts;
                 return false;
             }
             bombMaping[ets % 2].forEach(([x, y, cell]) => {
@@ -451,6 +457,7 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
         baseBoard.forEach(row => row.fill(app.emptyCell));
         actionCallbacks = new Set();
         overItems = new Set();
+        scoreItems = new Set();
         curShape = updateNextShape(ts, true);
         updateBoard(ts);
         lastTagTime = ts;
@@ -470,7 +477,7 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
         if (!app.status.updateSpeed(app.speeds.length) && !app.status.updateGrade(maxLevel)) {
             return false;
         }
-        app.addFlashCallback(ts, (newTs) => initLevel(newTs));
+        app.addFlashCallback(() => initLevel(ts));
         return true;
     }
 
@@ -481,17 +488,15 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
                 lastTagTime = ts;
             }
         }
-        if (!curShape || curShape.finished) {
-            curShape = updateNextShape(ts, true);
-        }
-        scoreCallbackCreated = false;
-        for (let callback of actionCallbacks) {
-            if (!callback(ts)) {
-                actionCallbacks.delete(callback);
-                if (scoreCallbackCreated) {
-                    break;
+        if (actionCallbacks.size) {
+            for (let callback of actionCallbacks) {
+                if (!callback(ts)) {
+                    actionCallbacks.delete(callback);
                 }
             }
+        }
+        else if (!curShape || curShape.finished) {
+            curShape = updateNextShape(ts, true);
         }
         updateBoard(ts);
     }

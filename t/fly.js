@@ -44,7 +44,6 @@ function game({ } = {}) {
         }
         app.status.updateLife(app.subRows, true);
         speedScore = 0;
-        //app.addFlashCallback(ts, (newTs) => initLevel(newTs));
         return true;
     }
 
@@ -52,7 +51,7 @@ function game({ } = {}) {
         if (!app.status.updateLife(app.subRows, false)) {
             return false;
         }
-        app.addFlashCallback(ts, (newTs) => initLevel(newTs));
+        app.addFlashCallback(()=>initLevel(ts));
         return true;
     }
 

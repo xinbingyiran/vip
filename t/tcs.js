@@ -59,7 +59,7 @@ function game({ loop = false } = {}) {
             return false;
         }
         app.status.updateLife(app.subRows, true);
-        app.addFlashCallback(ts, (newTs) => initLevel(newTs));
+        app.addFlashCallback(()=>initLevel(ts));
         return true;
     }
 
@@ -67,7 +67,7 @@ function game({ loop = false } = {}) {
         if (!app.status.updateLife(app.subRows, false)) {
             return false;
         }
-        app.addFlashCallback(ts, (newTs) => initLevel(newTs));
+        app.addFlashCallback(()=>initLevel(ts));
         return true;
     }
 

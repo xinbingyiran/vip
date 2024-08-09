@@ -88,7 +88,6 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
             actions: [action_Left, action_Right, action_Up, action_Down],
             action: action_Up,
             cell: tankCell,
-            dead: false,
             body: tankBodys[action_Up],
             withShot: withShotTank,
             doStep: (ts, tank) => true,
@@ -106,8 +105,6 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
             return false;
         }
         app.status.updateLife(app.subRows, true);
-        //app.addFlashCallback(ts, (newTs) => initLevel(newTs));
-        //initLevel(ts);
         return true;
     }
 
@@ -115,7 +112,7 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
         if (!app.status.updateLife(app.subRows, false)) {
             return false;
         }
-        app.addFlashCallback(ts, (newTs) => initLevel(newTs));
+        app.addFlashCallback(() => initLevel(ts));
         return true;
     }
 
@@ -218,39 +215,13 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
                         break;
                     }
                 }
-
-                let findItem = undefined;
                 let shotItem = { x: nx, y: ny, tank: tank, overTank: overItem.overTank };
                 for (let t of tanks) {
                     if (t != tank && t.withShot(newTs, t, shotItem)) {
-                        findItem = t;
-                        break;
-                    }
-
-                }
-                if (!findItem) {
-                    continue;
-                }
-                if (!findItem.dead) {
-                }
-                else if (findItem == tankItem) {
-                    subLife(newTs);
-                }
-                else if (findItem == bossItem) {
-                    tanks.delete(findItem);
-                    app.status.score += scorePerBoss;
-                    bossKilled(newTs);
-                }
-                else {
-                    tanks.delete(findItem);
-                    app.status.score += scorePerTank;
-                    levelScore += scorePerTank;
-                    if (levelScore >= scorePerSpeed) {
-                        bossCome(newTs);
+                        overItems.delete(overItem);
+                        return false;
                     }
                 }
-                overItems.delete(overItem);
-                return false;
             }
             overItem.x = sx + x * ets;
             overItem.y = sy + y * ets;
@@ -264,39 +235,22 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
 
     const withShotTank = (ts, tank, shotItem) => {
         const hasHist = tank.body.some((row, r) => row.some((cell, c) => cell && tank.x + c == shotItem.x && tank.y + r == shotItem.y));
-        tank.dead = shotItem.tank != tankItem;
+        if (hasHist && shotItem.tank != tankItem) {
+            subLife(ts);
+        }
         return hasHist;
     }
     const withShotCommon = (ts, tank, shotItem) => {
         const hasHist = tank.body.some((row, r) => row.some((cell, c) => cell && tank.x + c == shotItem.x && tank.y + r == shotItem.y));
-        tank.dead = shotItem.tank == tankItem;
+        if (hasHist && shotItem.tank == tankItem) {
+            tanks.delete(tank);
+            app.status.score += scorePerTank;
+            levelScore += scorePerTank;
+            if (levelScore >= scorePerSpeed) {
+                bossCome(ts);
+            }
+        }
         return hasHist;
-    }
-
-    const createShotBossPauseCallback = (ts, tank) => {
-        app.addPauseCallback((newTs) => {
-            let ets = ~~((newTs - ts) / 50);
-            if (ets > 10) {
-                lastTagTime += newTs - ts;
-                return false;
-            }
-            else {
-                tank.body.forEach((row, r) => {
-                    row.forEach((cell, c) => {
-                        if (!cell) {
-                            return;
-                        }
-                        let row = tank.y + r;
-                        let col = tank.x + c;
-                        if (row < 0 || row >= app.mainRows || col < 0 || col >= app.mainCols) {
-                            return;
-                        }
-                        app.mainBoard[row][col] = (ets % 2) ? app.emptyCell : tank.cell;
-                    })
-                });
-                return true;
-            }
-        });
     }
 
     const withShotBoss = (ts, tank, shotItem) => {
@@ -322,12 +276,42 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
         if (hitPosition) {
             tank.body = body;
             if (shotItem.tank == tankItem && shotItem.overTank == tank && hitPosition[0] == ~~((bossBody[0].length - 1) / 2) && hitPosition[1] == bossBody.length - 1) {
-                tank.life--;
-                tank.dead = tank.life <= 0;
-                createShotBossPauseCallback(ts, tank);
+                createShotBossPauseCallback(tank, () => {
+                    tank.life--;
+                    if (tank.life <= 0) {
+                        app.status.score += scorePerBoss;
+                        bossKilled(ts);
+                    }
+                });
             }
         }
         return !!hitPosition;
+    }
+
+    const createShotBossPauseCallback = (tank, callback) => {
+        app.addFreezeCallback(elapsedTime => {
+            let ets = ~~(elapsedTime / 50);
+            if (ets > 10) {
+                callback();
+                return false;
+            }
+            else {
+                tank.body.forEach((row, r) => {
+                    row.forEach((cell, c) => {
+                        if (!cell) {
+                            return;
+                        }
+                        let row = tank.y + r;
+                        let col = tank.x + c;
+                        if (row < 0 || row >= app.mainRows || col < 0 || col >= app.mainCols) {
+                            return;
+                        }
+                        app.mainBoard[row][col] = (ets % 2) ? app.emptyCell : tank.cell;
+                    })
+                });
+                return true;
+            }
+        });
     }
 
 
@@ -351,7 +335,6 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
                         action: actionType,
                         body: tankBodys[actionType],
                         cell: randomCell(),
-                        dead: false,
                         withShot: withShotCommon,
                         doStep: doCommonAction,
                         getShotAction: tank => tank.action,
@@ -384,7 +367,6 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
             actions: [action_Left, action_Right],
             action: action_Right,
             cell: bossCell,
-            dead: false,
             body: bossBody,
             life: bossLife,
             withShot: withShotBoss,
@@ -393,8 +375,8 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
             refreshBody: tank => tank.body = bossBody
         }
         tanks.add(bossItem);
-        return newTs => {
-            let ets = ~~((newTs - ts) / 75);
+        return elapsedTime => {
+            let ets = ~~(elapsedTime / 75);
             if (tsy + ets >= tey) {
                 tankItem.y = tey;
                 tankItem.action = action_Up;
@@ -413,13 +395,12 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
                 tankItem.refreshBody = tank => tank.body = tankBodys[action_Up];
                 tankItem.getShotAction = tank => action_Up;
                 tankItem.refreshBody(tankItem);
-                lastTagTime = newTs;
                 return false;
             }
             else if (by >= bsy) {
                 bossItem.y = by;
             }
-            updateBoard(newTs);
+            updateBoard(ts);
             return true;
         }
     }
@@ -432,8 +413,8 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
         bossItem = undefined;
         tankItem.actions = [action_Left, action_Right, action_Up, action_Down];
         tankItem.refreshBody = tank => tank.body = tankBodys[tank.action];
-        return newTs => {
-            let ets = ~~((newTs - ts) / 75);
+        return elapsedTime => {
+            let ets = ~~(elapsedTime / 75);
             let es = Math.abs(sx - tx);
             if (ets < es) {
                 if (sx < tx) {
@@ -455,24 +436,23 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
                 tankItem.y = ty;
                 tankItem.action = action_Up;
                 tankItem.getShotAction = tank => tank.action;
-                lastTagTime = newTs;
-                updateGrade(newTs);
+                updateGrade(ts);
                 return false;
             }
             tankItem.refreshBody(tankItem);
-            updateBoard(newTs);
+            updateBoard(ts);
             return true;
         }
     }
 
     const bossCome = (ts) => {
         clearStage(ts);
-        app.addPauseCallback(createBossComeCallback(ts));
+        app.addFreezeCallback(createBossComeCallback(ts));
     }
 
     const bossKilled = (ts) => {
         clearStage(ts);
-        app.addPauseCallback(createBossKilledCallback(ts));
+        app.addFreezeCallback(createBossKilledCallback(ts));
     }
 
     const tryMove = item => {
