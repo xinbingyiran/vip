@@ -1,9 +1,9 @@
 import keys from './keyboard.js';
 
-function game({}={}) {
+function game({ tankCount = 25, bossLife = 1 } = {}) {
 
     let maxLevel = 30;
-    let scorePerSpeed = 2500;
+    let scorePerSpeed = 100 * (tankCount > 0 ? tankCount : 25);
     let scorePerTank = 100;
     let scorePerBoss = 1000;
     let levelScore = 0;
@@ -35,9 +35,9 @@ function game({}={}) {
         [1, 1, 0, 1, 0, 1, 1],
         [0, 0, 0, 1, 0, 0, 0]
     ];
-    let actionCallbacks = [];
-    let tanks = [];
-    let overItems = [];
+    let actionCallbacks;
+    let tanks;
+    let overItems;
 
     let tankPosions;
 
@@ -52,15 +52,21 @@ function game({}={}) {
         tanks.forEach(tank => {
             tank.body.forEach((row, r) => {
                 row.forEach((cell, c) => {
-                    cell && (app.mainBoard[tank.y + r][tank.x + c] = (tank == tankItem && r == 1 && c == 1 && (~~ts % 300) > 150) ? app.emptyCell : tank.cell);
+                    if (!cell) {
+                        return;
+                    }
+                    let row = tank.y + r;
+                    let col = tank.x + c;
+                    if (row < 0 || row >= app.mainRows || col < 0 || col >= app.mainCols) {
+                        return;
+                    }
+                    app.mainBoard[row][col] = (tank == tankItem && r == 1 && c == 1 && (~~ts % 300) > 150) ? app.emptyCell : tank.cell;
                 })
             });
         });
 
         overItems.forEach(item => {
-            if (!item.end) {
-                app.mainBoard[item.y][item.x] = item.cell;
-            }
+            app.mainBoard[item.y][item.x] = item.cell;
         });
 
         for (let i = 0; i < app.subRows; i++) {
@@ -71,9 +77,9 @@ function game({}={}) {
 
     function initLevel(ts) {
         lastTagTime = ts;
-        actionCallbacks.splice(0, actionCallbacks.length);
-        tanks.splice(0, tanks.length);
-        overItems.splice(0, overItems.length);
+        actionCallbacks = new Set();
+        tanks = new Set();
+        overItems = new Set();
         createTankTick = 0;
         levelScore = 0;
         tankItem = {
@@ -84,12 +90,12 @@ function game({}={}) {
             cell: tankCell,
             dead: false,
             body: tankBodys[action_Up],
-            withShot: isCommonShotPoint,
+            withShot: withShotTank,
             doStep: (ts, tank) => true,
             getShotAction: tank => tank.action,
             refreshBody: tank => tank.body = tankBodys[tank.action]
         };
-        tanks.push(tankItem);
+        tanks.add(tankItem);
         bossItem = undefined;
         updateBoard(ts);
     }
@@ -150,38 +156,27 @@ function game({}={}) {
         return tryMove(tankItem);
     };
 
-    const findBodyIndex = (matrix, x, y, ftank) => {
-        return tanks.findIndex(tank => {
+    const findTank = (matrix, x, y, ftank) => {
+        for (let tank of tanks) {
             if (ftank && !ftank(tank)) {
-                return false;
+                continue;
             }
             const tankBody = calcTankBody(tank);
-            return matrix.some((row, r) => row.some((cell, c) => cell && tankBody[(y + r) * app.mainCols + x + c]));
-        })
-    }
-    const findHitIndex = (x, y, ftank) => {
-        return tanks.findIndex(tank => {
-            if (ftank && !ftank(tank)) {
-                return false;
+            if (matrix.some((row, r) => row.some((cell, c) => cell && tankBody[(y + r) * app.mainCols + x + c]))) {
+                return tank;
             }
-            return tank.withShot(tank, x, y);
-        })
+        }
+        return undefined;
     }
 
     const tryCreateFlyItem = (ts, tank) => {
-        const flyCount = overItems.filter(s => s.tank == tank).length;
+        let flyCount = 0;
+        overItems.forEach(item => item.tank == tank && flyCount++);
         if (flyCount < maxFlySize) {
-            actionCallbacks.push(createShotAction(ts, tank));
+            actionCallbacks.add(createShotAction(ts, tank));
             return true;
         }
         return false;
-    }
-
-    const removeOverItem = item => {
-        let curIndex = overItems.findIndex(s => s == item);
-        if (curIndex >= 0) {
-            overItems.splice(curIndex, 1);
-        }
     }
 
     const createShotAction = (ts, tank) => {
@@ -199,12 +194,12 @@ function game({}={}) {
             x: sx,
             y: sy,
             end: false,
-            cell: newCell
+            cell: newCell,
+            overTank: undefined
         }
-        overItems.push(overItem);
+        overItems.add(overItem);
         return newTs => {
-            if (overItem.end) {
-                removeOverItem(overItem);
+            if (!overItems.has(overItem)) {
                 return false;
             }
             let ets = ~~((newTs - ts) / 50);
@@ -213,39 +208,48 @@ function game({}={}) {
                 let nx = sx + i * x;
                 let ny = sy + i * y;
                 if (nx < 0 || nx >= app.mainCols || ny < 0 || ny >= app.mainRows) {
-                    removeOverItem(overItem);
+                    overItems.delete(overItem);
                     return false;
                 }
-                let findIndex = overItems.findIndex(s => s.x == nx && s.y == ny && s.tank != tank);
-                if (findIndex >= 0) {
-                    overItems[findIndex].end = true;
-                    overItems.splice(findIndex, 1);
+                for (let s of overItems) {
+                    if (s.x == nx && s.y == ny && s.tank != tank) {
+                        overItem.overTank = s.tank;
+                        overItems.delete(s);
+                        break;
+                    }
                 }
-                let targetIndex = findHitIndex(nx, ny, t => t != tank);
-                if (targetIndex < 0) {
+
+                let findItem = undefined;
+                let shotItem = { x: nx, y: ny, tank: tank, overTank: overItem.overTank };
+                for (let t of tanks) {
+                    if (t != tank && t.withShot(newTs, t, shotItem)) {
+                        findItem = t;
+                        break;
+                    }
+
+                }
+                if (!findItem) {
                     continue;
                 }
-                removeOverItem(overItem);
-                let findItem = tanks[targetIndex];
-                if (findItem.dead) {
-                    if (tank == tankItem) {
-                        tanks.splice(targetIndex, 1);
-                        if (findItem == bossItem) {
-                            app.status.score += scorePerBoss;
-                            bossKilled(newTs);
-                        }
-                        else {
-                            app.status.score += scorePerTank;
-                            levelScore += scorePerTank;
-                            if (levelScore >= scorePerSpeed) {
-                                bossCome(newTs);
-                            }
-                        }
-                    }
-                    else if (findItem == tankItem) {
-                        subLife(newTs);
+                if (!findItem.dead) {
+                }
+                else if (findItem == tankItem) {
+                    subLife(newTs);
+                }
+                else if (findItem == bossItem) {
+                    tanks.delete(findItem);
+                    app.status.score += scorePerBoss;
+                    bossKilled(newTs);
+                }
+                else {
+                    tanks.delete(findItem);
+                    app.status.score += scorePerTank;
+                    levelScore += scorePerTank;
+                    if (levelScore >= scorePerSpeed) {
+                        bossCome(newTs);
                     }
                 }
+                overItems.delete(overItem);
                 return false;
             }
             overItem.x = sx + x * ets;
@@ -258,12 +262,77 @@ function game({}={}) {
         return tryCreateFlyItem(ts, tankItem);
     };
 
-    const isCommonShotPoint = (tank, x, y) => {
-        return tank.dead = tank.body.some((row, r) => row.some((cell, c) => cell && tank.x + c == x && tank.y + r == y));
+    const withShotTank = (ts, tank, shotItem) => {
+        const hasHist = tank.body.some((row, r) => row.some((cell, c) => cell && tank.x + c == shotItem.x && tank.y + r == shotItem.y));
+        tank.dead = shotItem.tank != tankItem;
+        return hasHist;
+    }
+    const withShotCommon = (ts, tank, shotItem) => {
+        const hasHist = tank.body.some((row, r) => row.some((cell, c) => cell && tank.x + c == shotItem.x && tank.y + r == shotItem.y));
+        tank.dead = shotItem.tank == tankItem;
+        return hasHist;
     }
 
+    const createShotBossPauseCallback = (ts, tank) => {
+        app.addPauseCallback((newTs) => {
+            let ets = ~~((newTs - ts) / 50);
+            if (ets > 10) {
+                lastTagTime += newTs - ts;
+                return false;
+            }
+            else {
+                tank.body.forEach((row, r) => {
+                    row.forEach((cell, c) => {
+                        if (!cell) {
+                            return;
+                        }
+                        let row = tank.y + r;
+                        let col = tank.x + c;
+                        if (row < 0 || row >= app.mainRows || col < 0 || col >= app.mainCols) {
+                            return;
+                        }
+                        app.mainBoard[row][col] = (ets % 2) ? app.emptyCell : tank.cell;
+                    })
+                });
+                return true;
+            }
+        });
+    }
+
+    const withShotBoss = (ts, tank, shotItem) => {
+        if (tank.x - shotItem.x >= tank.body[0].length || shotItem.x - tank.x >= tank.body[0].length || tank.y - shotItem.y >= tank.body.length || shotItem.y - tank.y >= tank.body.length) {
+            return false;
+        }
+        let body = tank.body.map(row => [...row]);
+        let hitPosition = undefined;
+        for (let r = 0; r < body.length; r++) {
+            const row = body[r];
+            for (let c = 0; c < row.length; c++) {
+                const cell = row[c];
+                if (cell && tank.x + c == shotItem.x && tank.y + r == shotItem.y) {
+                    body[r][c] = 0;
+                    hitPosition = [c, r];
+                    break;
+                }
+            }
+            if (hitPosition) {
+                break;
+            }
+        }
+        if (hitPosition) {
+            tank.body = body;
+            if (shotItem.tank == tankItem && shotItem.overTank == tank && hitPosition[0] == ~~((bossBody[0].length - 1) / 2) && hitPosition[1] == bossBody.length - 1) {
+                tank.life--;
+                tank.dead = tank.life <= 0;
+                createShotBossPauseCallback(ts, tank);
+            }
+        }
+        return !!hitPosition;
+    }
+
+
     const tryCreateTank = (ts) => {
-        if (tanks.length >= maxTankSize) {
+        if (tanks.size >= maxTankSize) {
             return undefined;
         }
         let positions = [...tankPosions];
@@ -274,8 +343,7 @@ function game({}={}) {
             while (actionTypes.length) {
                 let ai = ~~(actionTypes.length * Math.random());
                 let actionType = actionTypes.splice(ai, 1)[0];
-                let findIndex = findBodyIndex(testBody, position.x, position.y);
-                if (findIndex < 0) {
+                if (!findTank(testBody, position.x, position.y)) {
                     let newTank = {
                         x: position.x,
                         y: position.y,
@@ -284,42 +352,23 @@ function game({}={}) {
                         body: tankBodys[actionType],
                         cell: randomCell(),
                         dead: false,
-                        withShot: isCommonShotPoint,
+                        withShot: withShotCommon,
                         doStep: doCommonAction,
                         getShotAction: tank => tank.action,
                         refreshBody: tank => tank.body = tankBodys[tank.action]
                     };
-                    tanks.push(newTank);
+                    tanks.add(newTank);
                     return newTank;
                 }
             }
         }
         return undefined;
     }
-
-    const withShotBoss = (tank, x, y) => {
-        if (tank.x - x >= tank.body[0].length || x - tank.x >= tank.body[0].length || tank.y - y >= tank.body.length || y - tank.y >= tank.body.length) {
-            return;
-        }
-        let body = tank.body.map(row => [...row]);
-        let hasHit = false;
-        body.forEach((row, r) => row.forEach((cell, c) => {
-            if (cell && tank.x + c == x && tank.y + r == y) {
-                body[r][c] = 0;
-                hasHit = true;
-            }
-        }));
-        if (hasHit) {
-            tank.body = body;
-        }
-        tank.dead = ~~((bossBody[0].length - 1) / 2) + tank.x == x && bossBody.length - 1 + tank.y == y;
-        return hasHit;
-    }
-
     const clearStage = (ts) => {
-        tanks.splice(1, tanks.length - 1);
-        overItems.forEach(s => s.end = true);
-        overItems.splice(0, overItems.length);
+        tanks = new Set();
+        tanks.add(tankItem);
+        actionCallbacks = new Set();
+        overItems = new Set();
     }
 
     const createBossComeCallback = (ts) => {
@@ -329,33 +378,36 @@ function game({}={}) {
         let bsy = -bossBody.length;
         let bey = 1;
         let bossCell = randomCell();
+        bossItem = {
+            x: ~~((app.mainCols - bossBody[0].length) / 2),
+            y: bsy,
+            actions: [action_Left, action_Right],
+            action: action_Right,
+            cell: bossCell,
+            dead: false,
+            body: bossBody,
+            life: bossLife,
+            withShot: withShotBoss,
+            doStep: createBossStep(),
+            getShotAction: tank => action_Down,
+            refreshBody: tank => tank.body = bossBody
+        }
+        tanks.add(bossItem);
         return newTs => {
             let ets = ~~((newTs - ts) / 75);
-            let ty = tsy + ets;
-            let action = action_Down;
-            if (ty >= tey) {
-                ty = tey;
-                action = action_Up;
+            if (tsy + ets >= tey) {
+                tankItem.y = tey;
+                tankItem.action = action_Up;
             }
-            tankItem.y = ty;
-            tankItem.action = action;
+            else {
+                tankItem.y = tsy + ets;
+                tankItem.action = action_Down;
+            }
             tankItem.refreshBody(tankItem);
+
             let by = bsy + ets + tsy - tey;
             if (by >= bey) {
-                bossItem = {
-                    x: ~~((app.mainCols - bossBody[0].length) / 2),
-                    y: 1,
-                    actions: [action_Left, action_Right],
-                    action: action_Right,
-                    cell: bossCell,
-                    dead: false,
-                    body: bossBody,
-                    withShot: withShotBoss,
-                    doStep: createBossStep(),
-                    getShotAction: tank => action_Down,
-                    refreshBody: tank => tank.body = bossBody
-                }
-                tanks.push(bossItem);
+                bossItem.y = bey;
                 tankItem.actions = [action_Left, action_Right];
                 tankItem.action = action_Up;
                 tankItem.refreshBody = tank => tank.body = tankBodys[action_Up];
@@ -364,19 +416,8 @@ function game({}={}) {
                 lastTagTime = newTs;
                 return false;
             }
-            else if (by > 0) {
-                for (let y = 0; y < by; y++) {
-                    for (let x = 0; x < bossBody[0].length; x++) {
-                        app.mainBoard[y][x + sx] = app.emptyCell;
-                    }
-                }
-            }
-            else if (-by <= bossBody.length) {
-                for (let y = 0; y - by < bossBody.length; y++) {
-                    for (let x = 0; x < bossBody[0].length; x++) {
-                        app.mainBoard[y][x + sx] = bossBody[y - by][x] ? bossCell : app.emptyCell;
-                    }
-                }
+            else if (by >= bsy) {
+                bossItem.y = by;
             }
             updateBoard(newTs);
             return true;
@@ -441,7 +482,7 @@ function game({}={}) {
         if (newx < 0 || newx > app.mainCols - item.body[0].length || newy < 0 || newy > app.mainRows - item.body.length) {
             return false;
         }
-        if (findBodyIndex(testBody, newx, newy, t => t != item) >= 0) {
+        if (findTank(testBody, newx, newy, t => t != item)) {
             return false;
         }
         item.x = newx;
@@ -549,10 +590,9 @@ function game({}={}) {
             lastTagTime = ts;
             doStep(ts);
         }
-        for (let index = 0; index < actionCallbacks.length; index++) {
-            if (!actionCallbacks[index](ts)) {
-                actionCallbacks.splice(index, 1);
-                index--;
+        for (let callback of actionCallbacks) {
+            if (!callback(ts)) {
+                actionCallbacks.delete(callback);
             }
         }
         updateBoard(ts);
