@@ -1,6 +1,6 @@
 import keys from './keyboard.js';
 
-function game(options) {
+function game({ fk = false } = {}) {
 
     let maxLevel = 30;
     let scorePerSpeed = 50000;
@@ -11,8 +11,6 @@ function game(options) {
     let actionCallbacks = [];
     let scoreCallbackCreated;
     let overItems = [];
-
-    options = Object.assign({ fk: false }, options ?? {});
 
     let app, actionItem, baseBoard;
 
@@ -137,7 +135,7 @@ function game(options) {
             y: sy,
             cell: newCell
         }
-        if (options.fk) {
+        if (fk) {
             if (baseBoard[sy][x] != app.emptyCell) {
                 return true;
             }

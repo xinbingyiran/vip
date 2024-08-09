@@ -1,40 +1,38 @@
 import keys from './keyboard.js';
 
-function game(options) {
+function game({ loop = false } = {}) {
     const maxLevel = 30;
     let lastTagTime = 0;
-    options = Object.assign({ loop: false }, options ?? {});
 
-    let app, cshape, snake, nstep, headCell;
+    let app, food, snake, nstep, headCell;
 
     function updateBoard(ts) {
         app.mainBoard.forEach(row => row.fill(app.emptyCell));
         snake.forEach(value => app.mainBoard[value.y][value.x] = value.cell);
-        if (cshape) {
-            app.mainBoard[cshape.y][cshape.x] = (~~ts % 300) > 150 ? cshape.cell : app.emptyCell;
+        if (food) {
+            app.mainBoard[food.y][food.x] = (~~ts % 300) > 150 ? food.cell : app.emptyCell;
         }
 
         for (let i = 0; i < app.subRows; i++) {
             app.subBoard[i].fill(app.status.life > (app.subRows - 1 - i) ? headCell : app.emptyCell);
         }
     }
-    function calcEmptyShapes() {
-        const emptyShapes = [];
+    function calcEmptyPositions() {
+        const emptyPositions = [];
         const sets = new Set(snake.map(s => s.y * app.mainCols + s.x));
-        for (let y = 0; y < app.mainRows; y++) {
-            for (let x = 0; x < app.mainCols; x++) {
-                !sets.has(y * app.mainCols + x) && emptyShapes.push({ x, y });
-            }
+        const totalCells = app.mainRows * app.mainCols;
+        for (let i = 0; i < totalCells; i++) {
+            !sets.has(i) && emptyPositions.push({ x: ~~(i / app.mainCols), y: i % app.mainCols });
         }
-        return emptyShapes;
+        return emptyPositions;
     }
-    function createShape() {
-        const emptyShapes = calcEmptyShapes();
-        if (emptyShapes.length === 0) {
+    function createFood() {
+        const emptyPositions = calcEmptyPositions();
+        if (emptyPositions.length === 0) {
             subLife(ts);
             return undefined;
         }
-        const item = emptyShapes[~~(Math.random() * emptyShapes.length)];
+        const item = emptyPositions[~~(Math.random() * emptyPositions.length)];
         const cell = randomCell();
         return { ...item, cell };
     }
@@ -50,7 +48,7 @@ function game(options) {
             { x: headx - 2, y: heady, cell: newCell },
             { x: headx - 3, y: heady, cell: newCell }
         ];
-        cshape = createShape();
+        food = createFood();
         //const steps = [[0, 1], [1, 0], [0, -1], [-1, 0]];
         nstep = [1, 0];//steps[~~(Math.random() * steps.length)];
         updateBoard(ts);
@@ -78,7 +76,7 @@ function game(options) {
             return false;
         }
         let newx = snake[0].x + step[0], newy = snake[0].y + step[1], newCell = undefined;
-        if (options.loop) {
+        if (loop) {
             newx = (newx + app.mainCols) % app.mainCols;
             newy = (newy + app.mainRows) % app.mainRows;
         }
@@ -91,15 +89,15 @@ function game(options) {
             subLife(ts);
             return false;
         }
-        if (cshape.x === newx && cshape.y === newy) {
-            newCell = cshape.cell;
-            snake.push(cshape);
+        if (food.x === newx && food.y === newy) {
+            newCell = food.cell;
+            snake.push(food);
             app.status.score += 100;
             if (snake.length >= app.mainCols * app.mainRows - maxLevel + app.status.level) {
                 updateGrade(ts);
                 return false;
             }
-            cshape = createShape();
+            food = createFood();
         }
         for (let i = snake.length - 1; i > 0; i--) {
             snake[i].x = snake[i - 1].x;

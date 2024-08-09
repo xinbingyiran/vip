@@ -1,6 +1,6 @@
 import keys from './keyboard.js';
 
-function game(options) {
+function game({ hasExtend = false, hasHelper = false, isFreeze = false, isReverse = false } = {}) {
 
     const maxLevel = 10000;
     const scorePerSpeed = 50000;
@@ -9,7 +9,6 @@ function game(options) {
     let scoreCallbackCreated;
     let overItems = [];
 
-    options = Object.assign({ hasExtend: false, hasHelper: false, isFreeze: false, isReverse: false }, options ?? {});
     const scores = { 0: 0, 1: 100, 2: 300, 3: 700, 4: 1500 };
 
     let app, cshape, nshape, allShapes, baseBoard;
@@ -60,7 +59,7 @@ function game(options) {
         for (let c = 0; c < cols; c++) {
             rotated[c] = [];
             for (let r = 0; r < rows; r++) {
-                rotated[c][r] = options.isReverse ? shape[r][cols - 1 - c] : shape[rows - 1 - r][c];
+                rotated[c][r] = isReverse ? shape[r][cols - 1 - c] : shape[rows - 1 - r][c];
             }
         }
         return rotated;
@@ -411,8 +410,8 @@ function game(options) {
 
     allShapes = [
         ...shapes,
-        ...(options.hasExtend ? extShapes : []),
-        ...(options.hasHelper ? helpShapes : [])]
+        ...(hasExtend ? extShapes : []),
+        ...(hasHelper ? helpShapes : [])]
 
     function updateNextShape(ts, refresh) {
         const nextShape = nshape;
@@ -485,7 +484,7 @@ function game(options) {
     }
 
     const update = (ts) => {
-        if (!options.isFreeze && ts > lastTagTime) {
+        if (!isFreeze && ts > lastTagTime) {
             if (ts - lastTagTime > app.speeds[app.status.speed]) {
                 globalDown(ts);
                 lastTagTime = ts;

@@ -1,12 +1,11 @@
 import keys from './keyboard.js';
 
-function game(options) {
+function game({}={}) {
     const maxLevel = 30;
     const scorePerSpeed = 2500;
     const scorePer10Distance = 100;
     let speedScore = 0;
     let lastTagTime = 0;
-    options = Object.assign({ loop: false }, options ?? {});
 
     let flybody = [[0, 1, 0], [1, 1, 1], [0, 1, 0], [1, 0, 1]];
     let app, backCell, distance, flyItem;
