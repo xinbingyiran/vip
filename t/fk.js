@@ -5,13 +5,13 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
     const maxLevel = 10000;
     const scorePerSpeed = 50000;
     let lastTagTime = 0;
-    let actionCallbacks = [];
+    let actionCallbacks;
     let scoreCallbackCreated;
-    let overItems = [];
+    let overItems;
 
     const scores = { 0: 0, 1: 100, 2: 300, 3: 700, 4: 1500 };
 
-    let app, cshape, nshape, allShapes, baseBoard;
+    let app, curShape, nshape, allShapes, baseBoard;
 
     function createEmptyRow() {
         let emptyRow = [];
@@ -32,11 +32,9 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
                 }
                 const oldScore = app.status.score;
                 app.status.score = app.status.score + scores[lines.length];
+                lastTagTime += newTs - ts;
                 if (~~(app.status.score / scorePerSpeed) != ~~(oldScore / scorePerSpeed)) {
                     updateGrade(ts);
-                }
-                else {
-                    lastTagTime += newTs - ts;
                 }
                 return false;
             }
@@ -65,12 +63,12 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
         return rotated;
     }
     function rotateItem(ts) {
-        const rotated = rotateArray(cshape.shape);
+        const rotated = rotateArray(curShape.shape);
         const rows = rotated.length;
         const cols = rotated[0].length;
         const colsGrow = ~~((cols - rows) / 2);
-        const newy = cshape.cy + colsGrow;
-        let newx = cshape.cx - colsGrow;
+        const newy = curShape.cy + colsGrow;
+        let newx = curShape.cx - colsGrow;
         if (newy + cols > app.mainRows) {
             return;
         }
@@ -78,9 +76,9 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
         for (let i = 0; i <= addtion; i++) {
             newx += i * ((i % 2 == 0) ? -1 : 1);
             if (canFitToMain(rotated, cols, rows, newx, newy)) {
-                cshape.shape = rotated;
-                cshape.cx = newx;
-                cshape.cy = newy;
+                curShape.shape = rotated;
+                curShape.cx = newx;
+                curShape.cy = newy;
                 return;
             }
         }
@@ -136,29 +134,29 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
 
 
     const globalMove = (ts, step) => {
-        var newx = cshape.cx + step[0];
-        var newy = cshape.cy + step[1];
-        if (canFitToMain(cshape.shape, cshape.shape[0].length, cshape.shape.length, newx, cshape.cy)) {
-            cshape.cx = newx;
-            cshape.cy = newy;
+        var newx = curShape.cx + step[0];
+        var newy = curShape.cy + step[1];
+        if (canFitToMain(curShape.shape, curShape.shape[0].length, curShape.shape.length, newx, curShape.cy)) {
+            curShape.cx = newx;
+            curShape.cy = newy;
             return true;
         }
         return false;
     }
     const mergeCurrent = (ts) => {
-        mergeToMain(ts, cshape.shape, cshape.shape[0].length, cshape.shape.length, cshape.cx, cshape.cy, cshape.cell);
-        cshape.finished = true;
+        mergeToMain(ts, curShape.shape, curShape.shape[0].length, curShape.shape.length, curShape.cx, curShape.cy, curShape.cell);
+        curShape.finished = true;
         lastTagTime = ts;
     }
     const commonDown = (ts) => {
-        if (canFitToMain(cshape.shape, cshape.shape[0].length, cshape.shape.length, cshape.cx, cshape.cy + 1)) {
-            cshape.cy = cshape.cy + 1;
+        if (canFitToMain(curShape.shape, curShape.shape[0].length, curShape.shape.length, curShape.cx, curShape.cy + 1)) {
+            curShape.cy = curShape.cy + 1;
             return true;
-            // if (canFitToMain(cshape.shape, cshape.shape[0].length, cshape.shape.length, cshape.cx, cshape.cy + 1)) {
+            // if (canFitToMain(curShape.shape, curShape.shape[0].length, curShape.shape.length, curShape.cx, curShape.cy + 1)) {
             //     return true;
             // }
-            // if (canFitToMain(cshape.shape, cshape.shape[0].length, cshape.shape.length, cshape.cx - 1, cshape.cy)
-            //     || canFitToMain(cshape.shape, cshape.shape[0].length, cshape.shape.length, cshape.cx + 1, cshape.cy)) {
+            // if (canFitToMain(curShape.shape, curShape.shape[0].length, curShape.shape.length, curShape.cx - 1, curShape.cy)
+            //     || canFitToMain(curShape.shape, curShape.shape[0].length, curShape.shape.length, curShape.cx + 1, curShape.cy)) {
             //     return true;
             // }
         }
@@ -180,14 +178,14 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
     const dotItem = [[1]];
 
     const dotDown = (ts) => {
-        if (dotInFull(cshape.cx, cshape.cy)) {
+        if (dotInFull(curShape.cx, curShape.cy)) {
             mergeCurrent(ts);
             return false;
         }
-        let newy = cshape.cy + 1;
+        let newy = curShape.cy + 1;
         for (; newy < app.mainRows; newy++) {
-            if (baseBoard[newy][cshape.cx] == app.emptyCell) {
-                cshape.cy++;
+            if (baseBoard[newy][curShape.cx] == app.emptyCell) {
+                curShape.cy++;
                 break;
             }
         }
@@ -195,7 +193,7 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
             mergeCurrent(ts);
             return false;
         }
-        // if (dotInFull(cshape.cx, cshape.cy)) {
+        // if (dotInFull(curShape.cx, curShape.cy)) {
         //     mergeCurrent(ts);
         //     return false;
         // }
@@ -203,37 +201,38 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
     }
 
     const cancelDown = (ts) => {
-        if (canFitToMain(cshape.shape, cshape.shape[0].length, cshape.shape.length, cshape.cx, cshape.cy + 1)) {
-            cshape.cy = cshape.cy + 1;
+        if (canFitToMain(curShape.shape, curShape.shape[0].length, curShape.shape.length, curShape.cx, curShape.cy + 1)) {
+            curShape.cy = curShape.cy + 1;
             return true;
         }
-        cshape.finished = true;
+        curShape.finished = true;
         return false;
     }
     const cancelUp = (ts) => {
-        const x = cshape.cx;
-        let sy = cshape.cy + cshape.shape.length >= 0 ? cshape.cy + cshape.shape.length : 0;
+        const x = curShape.cx;
+        let sy = curShape.cy + curShape.shape.length >= 0 ? curShape.cy + curShape.shape.length : 0;
         if (sy >= app.mainRows) {
             return;
         }
-        const newCell = cshape.cell;
+        const newCell = curShape.cell;
         const overItem = {
             x: x,
             y: sy,
             cell: newCell
         }
-        actionCallbacks.push(newTs => {
+        overItems.add(overItem);
+        actionCallbacks.add(newTs => {
             let ets = ~~((newTs - ts) / 5);
             let i = 0;
             for (i = 0; i <= ets; i++) {
                 let calcY = sy + i;
                 if (calcY >= app.mainRows) {
-                    removeOverItem(overItem);
+                    overItems.delete(overItem);
                     return false;
                 }
                 if (baseBoard[calcY][x] != app.emptyCell) {
                     baseBoard[calcY][x] = app.emptyCell;
-                    removeOverItem(overItem);
+                    overItems.delete(overItem);
                     return false;
                 }
             }
@@ -247,25 +246,26 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
 
     const addtionDown = cancelDown;
     const addtionUp = (ts) => {
-        const x = cshape.cx;
-        let sy = cshape.cy + cshape.shape.length >= 0 ? cshape.cy + cshape.shape.length : 0;
+        const x = curShape.cx;
+        let sy = curShape.cy + curShape.shape.length >= 0 ? curShape.cy + curShape.shape.length : 0;
         if (sy >= app.mainRows || baseBoard[sy][x] != app.emptyCell) {
             return;
         }
-        const newCell = cshape.cell;
+        const newCell = curShape.cell;
         const overItem = {
             x: x,
             y: sy,
             cell: newCell
         }
-        actionCallbacks.push(newTs => {
+        overItems.add(overItem);
+        actionCallbacks.add(newTs => {
             let ets = ~~((newTs - ts) / 5);
             let i = 0;
             for (i = 0; i <= ets; i++) {
                 let calcY = sy + i;
                 if (calcY + 1 >= app.mainRows || baseBoard[calcY + 1][x] != app.emptyCell) {
                     mergeToMain(newTs, dotItem, 1, 1, x, calcY, newCell);
-                    removeOverItem(overItem);
+                    overItems.delete(overItem);
                     return false;
                 }
             }
@@ -276,10 +276,10 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
     }
 
     const bomb = (ts) => {
-        var sx = cshape.cx - 1;
-        var ex = cshape.cx + cshape.shape[0].length + 1;
-        var sy = cshape.cy;
-        var ey = cshape.cy + cshape.shape.length + 3;
+        var sx = curShape.cx - 1;
+        var ex = curShape.cx + curShape.shape[0].length + 1;
+        var sy = curShape.cy;
+        var ey = curShape.cy + curShape.shape.length + 3;
         if (ey > app.mainRows) {
             ey = app.mainRows;
             if (ey - sy < 4) {
@@ -302,7 +302,7 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
         }
         bombItems.forEach(([c, r]) => baseBoard[r][c] = app.emptyCell);
 
-        const newCell = cshape.cell;
+        const newCell = curShape.cell;
         const bombMaping = [[], []];
         const bombY = ~~((sy + ey) / 2) - 2;
         for (let rows = 0; rows < 4; rows++) {
@@ -311,8 +311,8 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
             }
             for (var cols = 0; cols < 4; cols++) {
                 let match = (cols == rows) || (cols + rows == 3);
-                bombMaping[match ? 0 : 1].push([cshape.cx + cols, bombY + rows, newCell]);
-                bombMaping[match ? 1 : 0].push([cshape.cx + cols, bombY + rows, app.emptyCell]);
+                bombMaping[match ? 0 : 1].push([curShape.cx + cols, bombY + rows, newCell]);
+                bombMaping[match ? 1 : 0].push([curShape.cx + cols, bombY + rows, app.emptyCell]);
             }
         }
         app.addPauseCallback((newTs) => {
@@ -326,15 +326,15 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
             })
             return true;
         });
-        cshape.finished = true;
+        curShape.finished = true;
     }
     const bombUp = (ts) => {
         bomb(ts);
         return true;
     }
     const bombDown = (ts) => {
-        if (canFitToMain(cshape.shape, cshape.shape[0].length, cshape.shape.length, cshape.cx, cshape.cy + 1)) {
-            cshape.cy = cshape.cy + 1;
+        if (canFitToMain(curShape.shape, curShape.shape[0].length, curShape.shape.length, curShape.cx, curShape.cy + 1)) {
+            curShape.cy = curShape.cy + 1;
             return true;
         }
         bomb(ts);
@@ -367,31 +367,22 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
         { shape: [[1], [1], [1]], downAction: addtionDown, upAction: addtionUp, isHelper: true },
         { shape: [[1, 0, 0, 1], [0, 1, 1, 0], [0, 1, 1, 0]], downAction: bombDown, upAction: bombUp, isHelper: true }
     ];
-
-    const removeOverItem = item => {
-        let curIndex = overItems.findIndex(s => s == item);
-        if (curIndex >= 0) {
-            overItems.splice(curIndex, 1);
-        }
-    }
     function updateBoard(ts) {
         for (let r = 0; r < app.mainRows; r++) {
             for (let c = 0; c < app.mainCols; c++) {
                 app.mainBoard[r][c] = baseBoard[r][c];
             }
         }
-        cshape && !cshape.finished && cshape.shape.forEach((row, r) => {
+        curShape && !curShape.finished && curShape.shape.forEach((row, r) => {
             row.forEach((value, c) => {
-                if (value && r + cshape.cy >= 0 && cshape.cx + c >= 0) {
-                    app.mainBoard[r + cshape.cy][cshape.cx + c] = cshape.isHelper && (~~ts % 300) > 150 ? app.emptyCell : cshape.cell;
+                if (value && r + curShape.cy >= 0 && curShape.cx + c >= 0) {
+                    app.mainBoard[r + curShape.cy][curShape.cx + c] = curShape.isHelper && (~~ts % 300) > 150 ? app.emptyCell : curShape.cell;
                 }
             });
         });
 
         overItems.forEach(item => {
-            if (!item.end) {
-                app.mainBoard[item.y][item.x] = item.cell;
-            }
+            app.mainBoard[item.y][item.x] = item.cell;
         });
     }
 
@@ -432,11 +423,11 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
     }
 
     const globalDown = ts => {
-        return cshape.downAction(ts);
+        return curShape.downAction(ts);
     }
 
     const globalUp = (ts) => {
-        cshape.upAction(ts);
+        curShape.upAction(ts);
         return true;
     }
 
@@ -458,9 +449,9 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
 
     const initLevel = ts => {
         baseBoard.forEach(row => row.fill(app.emptyCell));
-        actionCallbacks.splice(0, actionCallbacks.length);
-        overItems.splice(0, overItems.length);
-        cshape = updateNextShape(ts, true);
+        actionCallbacks = new Set();
+        overItems = new Set();
+        curShape = updateNextShape(ts, true);
         updateBoard(ts);
         lastTagTime = ts;
     }
@@ -490,17 +481,16 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
                 lastTagTime = ts;
             }
         }
-        if (!cshape || cshape.finished) {
-            cshape = updateNextShape(ts, true);
+        if (!curShape || curShape.finished) {
+            curShape = updateNextShape(ts, true);
         }
         scoreCallbackCreated = false;
-        for (let index = 0; index < actionCallbacks.length; index++) {
-            if (!actionCallbacks[index](ts)) {
-                actionCallbacks.splice(index, 1);
+        for (let callback of actionCallbacks) {
+            if (!callback(ts)) {
+                actionCallbacks.delete(callback);
                 if (scoreCallbackCreated) {
                     break;
                 }
-                index--;
             }
         }
         updateBoard(ts);

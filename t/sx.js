@@ -1,6 +1,6 @@
 import keys from './keyboard.js';
 
-function game({ fk = false } = {}) {
+function game({ isAddtion = false } = {}) {
 
     let maxLevel = 30;
     let scorePerSpeed = 50000;
@@ -8,9 +8,9 @@ function game({ fk = false } = {}) {
 
     let lastTagTime = 0;
 
-    let actionCallbacks = [];
+    let actionCallbacks;
     let scoreCallbackCreated;
-    let overItems = [];
+    let overItems;
 
     let app, actionItem, baseBoard;
 
@@ -35,9 +35,7 @@ function game({ fk = false } = {}) {
 
 
         overItems.forEach(item => {
-            if (!item.end) {
-                app.mainBoard[item.y][item.x] = item.cell;
-            }
+            app.mainBoard[item.y][item.x] = item.cell;
         });
 
         for (let i = 0; i < app.subRows; i++) {
@@ -53,7 +51,6 @@ function game({ fk = false } = {}) {
 
     function initLevel(ts) {
         lastTagTime = ts;
-        overItems.splice(0, overItems.length);
         for (let row = 0; row < app.mainRows; row++) {
             baseBoard[row].fill(app.emptyCell);
             if (app.mainRows - row <= app.status.level) {
@@ -61,7 +58,8 @@ function game({ fk = false } = {}) {
             }
         }
         actionItem.col = ~~(app.mainCols / 2);
-        actionCallbacks.splice(0, actionCallbacks.length);
+        actionCallbacks = new Set();
+        overItems = new Set();
         updateBoard(ts);
     }
 
@@ -118,13 +116,6 @@ function game({ fk = false } = {}) {
         });
     }
 
-    const removeOverItem = item => {
-        let curIndex = overItems.findIndex(s => s == item);
-        if (curIndex >= 0) {
-            overItems.splice(curIndex, 1);
-        }
-    }
-
 
     const doAction = (ts) => {
         const x = actionItem.col;
@@ -135,12 +126,12 @@ function game({ fk = false } = {}) {
             y: sy,
             cell: newCell
         }
-        if (fk) {
+        if (isAddtion) {
             if (baseBoard[sy][x] != app.emptyCell) {
                 return true;
             }
-            overItems.push(overItem);
-            actionCallbacks.push(newTs => {
+            overItems.add(overItem);
+            actionCallbacks.add(newTs => {
                 let ets = ~~((newTs - ts) / 5);
                 let i = 0;
                 for (i = 0; i < ets; i++) {
@@ -150,7 +141,7 @@ function game({ fk = false } = {}) {
                         if (baseBoard[calcY].every(s => s != app.emptyCell)) {
                             createScorePauseCallback(newTs, calcY);
                         }
-                        removeOverItem(overItem);
+                        overItems.delete(overItem);
                         return false;
                     }
                 }
@@ -159,14 +150,14 @@ function game({ fk = false } = {}) {
             })
         }
         else {
-            overItems.push(overItem);
-            actionCallbacks.push(newTs => {
+            overItems.add(overItem);
+            actionCallbacks.add(newTs => {
                 let ets = ~~((newTs - ts) / 5);
                 let i = 0;
                 for (i = 0; i <= ets; i++) {
                     let calcY = sy - i;
                     if (sy - i < 0) {
-                        removeOverItem(overItem);
+                        overItems.delete(overItem);
                         return false;
                     }
                     if (baseBoard[calcY][x] != app.emptyCell) {
@@ -176,7 +167,7 @@ function game({ fk = false } = {}) {
                         if (~~(app.status.score / scorePerSpeed) != ~~(oldScore / scorePerSpeed)) {
                             updateGrade(ts);
                         }
-                        removeOverItem(overItem);
+                        overItems.delete(overItem);
                         return false;
                     }
                 }
@@ -231,13 +222,12 @@ function game({ fk = false } = {}) {
             doGrow(ts);
         }
         scoreCallbackCreated = false;
-        for (let index = 0; index < actionCallbacks.length; index++) {
-            if (!actionCallbacks[index](ts)) {
-                actionCallbacks.splice(index, 1);
+        for (let callback of actionCallbacks) {
+            if (!callback(ts)) {
+                actionCallbacks.delete(callback);
                 if (scoreCallbackCreated) {
                     break;
                 }
-                index--;
             }
         }
         updateBoard(ts);
