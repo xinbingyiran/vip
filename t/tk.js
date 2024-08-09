@@ -1,6 +1,6 @@
 import keys from './keyboard.js';
 
-function game(options) {
+function game({}={}) {
 
     let maxLevel = 30;
     let scorePerSpeed = 2500;
