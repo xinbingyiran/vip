@@ -9,7 +9,7 @@ function game({ isAddtion = false } = {}) {
     let lastTagTime = 0;
 
     let actionCallbacks;
-    let scoreCallbackCreated;
+    let scoreItems;
     let overItems;
 
     let app, actionItem, baseBoard;
@@ -60,6 +60,7 @@ function game({ isAddtion = false } = {}) {
         actionItem.col = ~~(app.mainCols / 2);
         actionCallbacks = new Set();
         overItems = new Set();
+        scoreItems = new Set();
         updateBoard(ts);
     }
 
@@ -68,7 +69,7 @@ function game({ isAddtion = false } = {}) {
             return false;
         }
         app.status.updateLife(app.subRows, true);
-        app.addFlashCallback(ts, (newTs) => initLevel(newTs));
+        app.addFlashCallback(() => initLevel(ts));
         return true;
     }
 
@@ -76,7 +77,7 @@ function game({ isAddtion = false } = {}) {
         if (!app.status.updateLife(app.subRows, false)) {
             return false;
         }
-        app.addFlashCallback(ts, (newTs) => initLevel(newTs));
+        app.addFlashCallback(() => initLevel(ts));
         return true;
     }
 
@@ -89,27 +90,36 @@ function game({ isAddtion = false } = {}) {
         return true;
     };
 
-    function createScorePauseCallback(ts, calcY) {
-        scoreCallbackCreated = true;
-        app.addPauseCallback((newTs) => {
-            let ets = ~~((newTs - ts) / 10);
+    function createOrUpdateScorePauseCallback(ts, calcY) {
+        scoreItems.add(calcY);
+        if (scoreItems.size > 1) {
+            return;
+        }
+        app.addFreezeCallback(elapsedTime => {
+            let ets = ~~(elapsedTime / 10);
             if (ets > 10) {
-                baseBoard.push(...baseBoard.splice(calcY, 1));
-                baseBoard[app.mainRows - 1].fill(app.emptyCell);
                 const oldScore = app.status.score;
-                app.status.score = app.status.score + scorePerDot * 10;
+                const allLines = [];
+                for (let scoreLine of scoreItems) {
+                    app.status.score += scorePerDot * 10;
+                    scoreItems.delete(scoreLine);
+                    allLines.push(scoreLine);
+                };
+                allLines.sort().reverse().forEach(line => baseBoard.splice(line, 1));
+                while (baseBoard.length < app.mainRows) {
+                    baseBoard.push(createEmptyRow());
+                }
                 if (~~(app.status.score / scorePerSpeed) != ~~(oldScore / scorePerSpeed)) {
                     updateGrade(ts);
-                }
-                else {
-                    lastTagTime += newTs - ts;
                 }
                 return false;
             }
             else {
                 while (--ets >= 0) {
-                    const index = ets;
-                    app.mainBoard[calcY][index] = app.emptyCell;
+                    scoreItems.forEach(line => {
+                        const index = line % 2 ? app.mainCols - 1 - ets : ets;
+                        app.mainBoard[line][index] = app.emptyCell;
+                    });
                 }
                 return true;
             }
@@ -139,7 +149,7 @@ function game({ isAddtion = false } = {}) {
                     if (calcY - 1 < 0 || baseBoard[calcY - 1][x] != app.emptyCell) {
                         baseBoard[calcY][x] = newCell;
                         if (baseBoard[calcY].every(s => s != app.emptyCell)) {
-                            createScorePauseCallback(newTs, calcY);
+                            createOrUpdateScorePauseCallback(newTs, calcY);
                         }
                         overItems.delete(overItem);
                         return false;
@@ -221,13 +231,9 @@ function game({ isAddtion = false } = {}) {
             lastTagTime = ts;
             doGrow(ts);
         }
-        scoreCallbackCreated = false;
         for (let callback of actionCallbacks) {
             if (!callback(ts)) {
                 actionCallbacks.delete(callback);
-                if (scoreCallbackCreated) {
-                    break;
-                }
             }
         }
         updateBoard(ts);

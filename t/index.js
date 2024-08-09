@@ -76,10 +76,10 @@ import fly3game from './fly3.js';
     let currentActions;
     let cellType = 0;
     let cells;
-    let pauseCallbacks = [], pause = false, currentInstance = undefined;
-    let pauseTime = 0;
+    let freezeCallbacks = new Set(), pause = false, currentInstance = undefined;
+    let gameTime = 0;
+    let freezeTime = 0;
     let lastTime = 0;
-    let isStarting = false;
     let initSpeed = 0;
     function createStatus(speed) {
         const status = {
@@ -334,12 +334,12 @@ import fly3game from './fly3.js';
         return actions;
     }
 
-    function createFlashCallback(ts, postAction, delay) {
-        delay ??= 20;
+    function createFlashCallback(callback, delay) {
+        delay = ~~delay > 0 ? ~~delay : 20;
         return newTs => {
-            const ets = ~~((newTs - ts) / delay);
+            const ets = ~~(newTs / delay);
             if (ets > mainRows * 2) {
-                postAction && postAction(newTs);
+                typeof callback == "function" && callback();
                 return false;
             }
             if (ets > mainRows) {
@@ -365,42 +365,40 @@ import fly3game from './fly3.js';
         cells = colors.map(color => ({ color: color, type: cellType }));
     }
 
-    function addPauseCallback(callback) {
+    function addFreezeCallback(callback) {
         if (callback && 'function' == typeof callback) {
-            pauseCallbacks.push(callback);
+            freezeCallbacks.add({
+                time: freezeTime,
+                callback: callback,
+            });
         }
     }
 
-    function addFlashCallback(ts, postCallback, delay) {
-        addPauseCallback(createFlashCallback(ts, postCallback, delay));
+    function addFlashCallback(callback, delay) {
+        addFreezeCallback(createFlashCallback(callback, delay));
     }
 
-    function startGame(ts) {
+    function createGame() {
         resetCells();
         clearGame();
-        isStarting = true;
-        const postCallback = (newTs) => {
-            clearGame();
-            currentInstance = {
-                main: gameList[selectGameList.value],
-                status: createStatus(initSpeed),
-                mainBoard,
-                subBoard,
-                mainRows,
-                mainCols,
-                subRows,
-                subCols,
-                cells,
-                emptyCell,
-                speeds,
-                initSpeed,
-                addPauseCallback,
-                addFlashCallback,
-            };
-            currentInstance.main.init(newTs, currentInstance);
-            isStarting = false;
+        currentInstance = {
+            init: false,
+            main: gameList[selectGameList.value],
+            status: createStatus(initSpeed),
+            mainBoard,
+            subBoard,
+            mainRows,
+            mainCols,
+            subRows,
+            subCols,
+            cells,
+            emptyCell,
+            speeds,
+            initSpeed,
+            addFreezeCallback,
+            addFlashCallback,
         };
-        addFlashCallback(ts, postCallback, 30);
+        addFlashCallback(undefined, 30);
     }
 
     const filterKeys = new Set();
@@ -515,8 +513,7 @@ import fly3game from './fly3.js';
         }
         //downActions.clear();
         currentActions = {};
-        pauseCallbacks.splice(0, pauseCallbacks.length);
-        isStarting = false;
+        freezeCallbacks = new Set();
         currentInstance = undefined;
         pause = false;
     }
@@ -530,60 +527,48 @@ import fly3game from './fly3.js';
             newOffset = 0;
         }
         selectGameList.options.selectedIndex = newOffset;
-        return true;
     }
 
     function selectSpeed(offset) {
         initSpeed = (initSpeed + speeds.length + offset) % speeds.length;
-        return true;
     }
 
     const systemKeyMap = {
-        [keyboard.KEY_SELECT]: ts => {
+        [keyboard.KEY_SELECT]: () => {
             if (currentInstance) {
                 clearGame();
             }
             else {
                 selectMenu(1);
             }
-            return true;
         },
-        [keyboard.KEY_START]: ts => {
+        [keyboard.KEY_START]: () => {
             if (currentInstance) {
-                if (currentInstance.status.over) {
-                    //clearGame();
-                }
-                else {
-                    pause = !pause;
-                }
+                pause = !pause;
             }
             else {
-                startGame(ts);
+                createGame();
             }
-            return true;
         },
-        [keyboard.KEY_UP]: ts => !currentInstance && selectMenu(-1),
-        [keyboard.KEY_LEFT]: ts => !currentInstance && selectSpeed(-1),
-        [keyboard.KEY_DOWN]: ts => !currentInstance && selectMenu(1),
-        [keyboard.KEY_RIGHT]: ts => !currentInstance && selectSpeed(1)
+        [keyboard.KEY_UP]: () => !currentInstance && selectMenu(-1),
+        [keyboard.KEY_LEFT]: () => !currentInstance && selectSpeed(-1),
+        [keyboard.KEY_DOWN]: () => !currentInstance && selectMenu(1),
+        [keyboard.KEY_RIGHT]: () => !currentInstance && selectSpeed(1)
     }
 
-    function checkSystemKeys(ts, actions) {
-
+    function getSystemAction(actions) {
         for (let key in systemKeyMap) {
             if (actions.has(key)) {
                 if (!filterKeys.has(key)) {
                     filterKeys.add(key);
-                    if (systemKeyMap[key](ts)) {
-                        return true;
-                    }
+                    return systemKeyMap[key];
                 }
             }
             else {
                 filterKeys.delete(key);
             }
         }
-        return false;
+        return undefined;
     }
 
     //{ fdelay,odelay,callback,ts,ticks,allow }
@@ -624,41 +609,35 @@ import fly3game from './fly3.js';
         return true;
     }
 
-    let playPauseActions = (ts) => {
-        if (pause) {
-            return true;
-        }
-        if (!pauseCallbacks.length) {
-            return false;
-        }
-        for (let index = 0; index < pauseCallbacks.length; index++) {
-            if (!pauseCallbacks[index](ts)) {
-                pauseCallbacks.splice(index, 1);
-                index--;
-            }
-        }
-        return true;
-    }
-
-    function updateSystem(gameTime, newActions) {
-        if (isStarting) {
-            return playPauseActions(gameTime);
-        }
-        if (checkSystemKeys(gameTime, newActions)) {
-            return true;
-        }
-        return playPauseActions(gameTime);
-    }
-
     function gameLoop(ts) {
-        if (pause) {
-            pauseTime += ts - lastTime;
-        }
-        lastTime = ts;
-        const gameTime = ts - pauseTime;
         const newActions = collectNewAction();
-        if (updateSystem(gameTime, newActions) || updateGame(gameTime, newActions)) {
+        const action = getSystemAction(newActions);
+        if (action) {
+            action(gameTime);
             drawBoard();
+        }
+        else if (pause) {
+            //do nothing
+        }
+        else if (freezeCallbacks.size) {
+            freezeTime += ts - lastTime;
+            for (let freezeCallback of freezeCallbacks) {
+                if (!freezeCallback.callback(freezeTime - freezeCallback.time)) {
+                    freezeCallbacks.delete(freezeCallback);
+                }
+            }
+            drawBoard();
+        }
+        else if (currentInstance && !currentInstance.init) {
+            gameTime += ts - lastTime;
+            currentInstance.main.init(gameTime, currentInstance);
+            currentInstance.init = true;
+        }
+        else if (currentInstance && !currentInstance.status.over) {
+            gameTime += ts - lastTime;
+            if (updateGame(gameTime, newActions)) {
+                drawBoard();
+            }
         }
         lastTime = ts;
         requestAnimationFrame(gameLoop);
