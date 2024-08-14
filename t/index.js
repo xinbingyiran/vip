@@ -68,13 +68,11 @@ import fly3game from './fly3.js';
 
 
     const speeds = [1000, 900, 800, 700, 600, 500, 450, 400, 350, 300, 250, 200, 150, 100, 50, 25];
-    const colors = ["red", "green", "blue", "purple", "orange"];
-    const emptyCell = { color: 'lightgray', type: undefined };
-    const mainBoard = Array(mainRows).fill(undefined).map(() => Array(mainCols).fill(emptyCell));
-    const subBoard = Array(subRows).fill(undefined).map(() => Array(subCols).fill(emptyCell));
+    let emptyCell;
+    const mainBoard = Array(mainRows).fill(undefined).map(() => Array(mainCols).fill(undefined));
+    const subBoard = Array(subRows).fill(undefined).map(() => Array(subCols).fill(undefined));
     const downActions = new Set();
     let currentActions;
-    let cellType = 0;
     let cells;
     let freezeCallbacks = new Set(), pause = false, currentInstance = undefined;
     let gameTime = 0;
@@ -361,8 +359,62 @@ import fly3game from './fly3.js';
         }
     }
 
-    function resetCells() {
-        cells = colors.map(color => ({ color: color, type: cellType }));
+    const perline = blockSize / 8;
+    const perline2 = blockSize / 4;
+    const perline4 = blockSize / 2;
+    const defaultEmptyCell = {
+        draw: (ctx, cols, rows) => {
+            ctx.fillStyle = 'lightGray';
+            ctx.fillRect(cols * blockSize + 1, rows * blockSize + 1, blockSize - 2, blockSize - 2);
+
+            ctx.fillStyle = 'white';
+            ctx.fillRect(cols * blockSize + 1 + perline, rows * blockSize + perline + 1, blockSize - perline2 - 2, blockSize - perline2 - 2);
+
+            ctx.fillStyle = 'lightGray';
+            ctx.fillRect(cols * blockSize + perline2 + 1, rows * blockSize + perline2 + 1, blockSize - perline4 - 2, blockSize - perline4 - 2);
+        }
+    };
+
+    const imageCells = new Array(10).fill(undefined).map((_, i) => {
+        const img = new Image(blockSize - 2, blockSize - 2);
+        img.src = `./imgs/${i + 1}.png`;
+        return {
+            draw: (ctx, cols, rows) => {
+                ctx.drawImage(img, cols * blockSize + 1, rows * blockSize + 1, blockSize - 2, blockSize - 2);
+            }
+        };
+    });
+
+    const colorCells = ["red", "green", "blue", "purple", "orange"].map(color => ({
+        draw: (ctx, cols, rows) => {
+            ctx.fillStyle = color;
+            ctx.fillRect(cols * blockSize + 1, rows * blockSize + 1, blockSize - 2, blockSize - 2);
+
+            ctx.fillStyle = 'white';
+            ctx.fillRect(cols * blockSize + 1 + perline, rows * blockSize + perline + 1, blockSize - perline2 - 2, blockSize - perline2 - 2);
+
+            ctx.fillStyle = color;
+            ctx.fillRect(cols * blockSize + perline2 + 1, rows * blockSize + perline2 + 1, blockSize - perline4 - 2, blockSize - perline4 - 2);
+        }
+    }));
+
+    const cellTypes = {
+        image: () => {
+            cells = imageCells;
+            emptyCell = defaultEmptyCell;
+        },
+        color: () => {
+            cells = colorCells;
+            emptyCell = defaultEmptyCell;
+        }
+    }
+
+    let cellType = 'image';
+
+    function initCells() {
+        (cellTypes[cellType] ?? Object.values(cellTypes)[0])();
+        mainBoard.forEach(row => row.fill(emptyCell));
+        subBoard.forEach(row => row.fill(emptyCell));
     }
 
     function addFreezeCallback(callback) {
@@ -379,7 +431,7 @@ import fly3game from './fly3.js';
     }
 
     function createGame() {
-        resetCells();
+        initCells();
         clearGame();
         currentInstance = {
             init: false,
@@ -408,40 +460,10 @@ import fly3game from './fly3.js';
         return actions;
     }
 
-    const perline = blockSize / 8;
-    const perline2 = blockSize / 4;
-    const perline4 = blockSize / 2;
-
     function drawItem(ctx, item, cols, rows) {
-        // if (item == emptyCell) {
-        //     ctx.fillStyle = item.color;
-        //     ctx.fillRect(cols * blockSize + 0.5, rows * blockSize + 0.5, blockSize - 1, blockSize - 1);
-        //     return;
-        // }
-        if (item.custom && typeof item.custom == 'function') {
-            item.custom(ctx, cols, rows);
+        if (item.draw && typeof item.draw == 'function') {
+            item.draw(ctx, cols, rows);
             return;
-        }
-        switch (item.type) {
-            case 1:
-                {
-                    ctx.fillStyle = item.color;
-                    ctx.fillRect(cols * blockSize + 1, rows * blockSize + 1, blockSize - 2, blockSize - 2);
-                }
-                break;
-            case 0:
-            default:
-                {
-                    ctx.fillStyle = item.color;
-                    ctx.fillRect(cols * blockSize + 1, rows * blockSize + 1, blockSize - 2, blockSize - 2);
-
-                    ctx.fillStyle = 'white';
-                    ctx.fillRect(cols * blockSize + 1 + perline, rows * blockSize + perline + 1, blockSize - perline2 - 2, blockSize - perline2 - 2);
-
-                    ctx.fillStyle = item.color;
-                    ctx.fillRect(cols * blockSize + perline2 + 1, rows * blockSize + perline2 + 1, blockSize - perline4 - 2, blockSize - perline4 - 2);
-                }
-                break;
         }
     }
 
@@ -642,6 +664,7 @@ import fly3game from './fly3.js';
         lastTime = ts;
         requestAnimationFrame(gameLoop);
     }
+    initCells();
     drawBoard();
     requestAnimationFrame(gameLoop);
 }();

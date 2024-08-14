@@ -193,7 +193,7 @@ function game({ } = {}) {
     };
 
     function randomCell() {
-        return app.cells[~~(Math.random() * app.cells.length - 1) + 1];
+        return app.cells[~~(Math.random() * app.cells.length)];
     }
 
     const init = (ts, mainApp) => {
