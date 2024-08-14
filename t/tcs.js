@@ -120,13 +120,13 @@ function game({ loop = false } = {}) {
         [keys.KEY_EXTEND]: [3000, 1000, (ts) => updateGrade(ts)]
     };
 
-    function randomCell() {
-        return app.cells[~~(Math.random() * app.cells.length - 1) + 1];
+    function randomCell() {        
+        return app.cells[~~(Math.random() * app.cells.length)];
     }
 
     const init = (ts, mainApp) => {
         app = mainApp;
-        headCell = app.cells[0];
+        headCell = randomCell();
         initLevel(ts);
     }
     const update = (ts) => {
