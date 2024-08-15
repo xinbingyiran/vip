@@ -533,7 +533,7 @@ import fly3game from './fly3.js';
         if (currentInstance) {
             initSpeed = 0;
         }
-        //downActions.clear();
+        downActions.clear();
         currentActions = {};
         freezeCallbacks = new Set();
         currentInstance = undefined;
@@ -556,22 +556,8 @@ import fly3game from './fly3.js';
     }
 
     const systemKeyMap = {
-        [keyboard.KEY_SELECT]: () => {
-            if (currentInstance) {
-                clearGame();
-            }
-            else {
-                selectMenu(1);
-            }
-        },
-        [keyboard.KEY_START]: () => {
-            if (currentInstance) {
-                pause = !pause;
-            }
-            else {
-                createGame();
-            }
-        },
+        [keyboard.KEY_SELECT]: () => currentInstance ? clearGame() : selectMenu(1),
+        [keyboard.KEY_START]: () => currentInstance ? (pause = !pause) : createGame(),
         [keyboard.KEY_UP]: () => !currentInstance && selectMenu(-1),
         [keyboard.KEY_LEFT]: () => !currentInstance && selectSpeed(-1),
         [keyboard.KEY_DOWN]: () => !currentInstance && selectMenu(1),
@@ -593,12 +579,7 @@ import fly3game from './fly3.js';
         return undefined;
     }
 
-    //{ fdelay,odelay,callback,ts,ticks,allow }
-
     function updateGame(ts, keys) {
-        if (!currentInstance || currentInstance.status.over) {
-            return false;
-        }
         if (currentInstance.main.keyMap) {
             for (let key in currentActions) {
                 if (keys.has(key)) {
@@ -628,7 +609,6 @@ import fly3game from './fly3.js';
             }
         }
         currentInstance.main.update(ts);
-        return true;
     }
 
     function gameLoop(ts) {
@@ -650,16 +630,14 @@ import fly3game from './fly3.js';
             }
             drawBoard();
         }
-        else if (currentInstance && !currentInstance.init) {
-            gameTime += ts - lastTime;
-            currentInstance.main.init(gameTime, currentInstance);
-            currentInstance.init = true;
-        }
         else if (currentInstance && !currentInstance.status.over) {
             gameTime += ts - lastTime;
-            if (updateGame(gameTime, newActions)) {
-                drawBoard();
+            if (!currentInstance.init) {
+                currentInstance.main.init(gameTime, currentInstance);
+                currentInstance.init = true;
             }
+            updateGame(gameTime, newActions);
+            drawBoard();
         }
         lastTime = ts;
         requestAnimationFrame(gameLoop);
