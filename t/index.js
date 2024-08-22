@@ -1,28 +1,21 @@
 import keyboard from './keyboard.js';
-import fkgame from './fk.js';
-import tcsgame from './tcs.js';
-import sxgame from './sx.js';
-import tkgame from './tk.js';
-import flygame from './fly.js';
-import fly2game from './fly2.js';
-import fly3game from './fly3.js';
 
 !function () {
 
     const gameList = {
-        '标准方块': fkgame({ hasExtend: false, hasHelper: false }),
-        '扩展方块': fkgame({ hasExtend: true, hasHelper: false }),
-        '方块带辅助': fkgame({ hasExtend: false, hasHelper: true }),
-        '扩展方块带辅助': fkgame({ hasExtend: true, hasHelper: true }),
-        '贪吃蛇': tcsgame({ loop: false }),
-        '疯狂贪吃蛇': tcsgame({ loop: true }),
-        '疯狂射击': sxgame({ isAddtion: false }),
-        '疯狂垒墙': sxgame({ isAddtion: true }),
-        '坦克大战': tkgame({ tankCount: 25, bossLife: 1 }),
-        '坦克大战领主': tkgame({ tankCount: 1, bossLife: 5 }),
-        '躲避敌人': flygame({}),
-        '窄道通行': fly2game({}),
-        '飞行射击': fly3game({}),
+        '标准方块': async () => (await import('./fk.js')).default({ hasExtend: false, hasHelper: false }),
+        '扩展方块': async () => (await import('./fk.js')).default({ hasExtend: true, hasHelper: false }),
+        '方块带辅助': async () => (await import('./fk.js')).default({ hasExtend: false, hasHelper: true }),
+        '扩展方块带辅助': async () => (await import('./fk.js')).default({ hasExtend: true, hasHelper: true }),
+        '贪吃蛇': async () => (await import('./tcs.js')).default({ loop: false }),
+        '疯狂贪吃蛇': async () => (await import('./tcs.js')).default({ loop: true }),
+        '疯狂射击': async () => (await import('./sx.js')).default({ isAddtion: false }),
+        '疯狂垒墙': async () => (await import('./sx.js')).default({ isAddtion: true }),
+        '坦克大战': async () => (await import('./tk.js')).default({ tankCount: 25, bossLife: 1 }),
+        '坦克大战领主': async () => (await import('./tk.js')).default({ tankCount: 1, bossLife: 5 }),
+        '躲避敌人': async () => (await import('./fly.js')).default({}),
+        '窄道通行': async () => (await import('./fly2.js')).default({}),
+        '飞行射击': async () => (await import('./fly3.js')).default({}),
     }
 
     const selectGameList = document.querySelector('#gameList');
@@ -65,12 +58,7 @@ import fly3game from './fly3.js';
     const spanLevel = document.querySelector('#level');
     const spanSpeed = document.querySelector('#speed');
 
-
-
     const speeds = [1000, 900, 800, 700, 600, 500, 450, 400, 350, 300, 250, 200, 150, 100, 50, 25];
-    let emptyCell;
-    const mainBoard = Array(mainRows).fill(undefined).map(() => Array(mainCols).fill(undefined));
-    const subBoard = Array(subRows).fill(undefined).map(() => Array(subCols).fill(undefined));
     const downActions = new Set();
     let currentActions;
     let cells;
@@ -79,6 +67,7 @@ import fly3game from './fly3.js';
     let freezeTime = 0;
     let lastTime = 0;
     let initSpeed = 0;
+    let loading = false;
     function createStatus(speed) {
         const status = {
             score: 0,
@@ -375,44 +364,59 @@ import fly3game from './fly3.js';
         }
     };
 
-    const imageCells = new Array(10).fill(undefined).map((_, i) => {
-        const img = new Image(blockSize - 2, blockSize - 2);
-        img.src = `./imgs/${i + 1}.png`;
-        return {
+    let emptyCell = defaultEmptyCell;
+    const mainBoard = Array(mainRows).fill(0).map(() => Array(mainCols).fill(emptyCell));
+    const subBoard = Array(subRows).fill(0).map(() => Array(subCols).fill(emptyCell));
+
+    let imageCells = async () => {
+        const result = new Array(10).fill(0).map((_, i) => new Promise(r => {
+            const img = new Image(blockSize - 2, blockSize - 2);
+            img.src = `./imgs/${i + 1}.png`;
+            const item = {
+                loaded: false,
+                draw: (ctx, cols, rows) => {
+                    ctx.drawImage(img, cols * blockSize + 1, rows * blockSize + 1, blockSize - 2, blockSize - 2);
+                }
+            }
+            img.onload = () => {
+                item.loaded = true;
+                r(item);
+            }
+        }));
+        return await Promise.all(result);
+    };
+
+    let colorCells = () => ["red", "green", "blue", "purple", "orange"].map(color => {
+        const item = {
+            color: color,
             draw: (ctx, cols, rows) => {
-                ctx.drawImage(img, cols * blockSize + 1, rows * blockSize + 1, blockSize - 2, blockSize - 2);
+                ctx.fillStyle = color;
+                ctx.fillRect(cols * blockSize + 1, rows * blockSize + 1, blockSize - 2, blockSize - 2);
+
+                ctx.fillStyle = 'white';
+                ctx.fillRect(cols * blockSize + 1 + perline, rows * blockSize + perline + 1, blockSize - perline2 - 2, blockSize - perline2 - 2);
+
+                ctx.fillStyle = color;
+                ctx.fillRect(cols * blockSize + perline2 + 1, rows * blockSize + perline2 + 1, blockSize - perline4 - 2, blockSize - perline4 - 2);
             }
         };
+        return item;
     });
 
-    const colorCells = ["red", "green", "blue", "purple", "orange"].map(color => ({
-        draw: (ctx, cols, rows) => {
-            ctx.fillStyle = color;
-            ctx.fillRect(cols * blockSize + 1, rows * blockSize + 1, blockSize - 2, blockSize - 2);
-
-            ctx.fillStyle = 'white';
-            ctx.fillRect(cols * blockSize + 1 + perline, rows * blockSize + perline + 1, blockSize - perline2 - 2, blockSize - perline2 - 2);
-
-            ctx.fillStyle = color;
-            ctx.fillRect(cols * blockSize + perline2 + 1, rows * blockSize + perline2 + 1, blockSize - perline4 - 2, blockSize - perline4 - 2);
-        }
-    }));
-
     const cellTypes = {
-        image: () => {
-            cells = imageCells;
+        image: async () => {
+            cells = typeof imageCells == 'function' ? (imageCells = await imageCells()) : imageCells;
             emptyCell = defaultEmptyCell;
         },
         color: () => {
-            cells = colorCells;
+            cells = typeof colorCells == 'function' ? (colorCells = colorCells()) : colorCells;
             emptyCell = defaultEmptyCell;
         }
     }
 
     let cellType = 'image';
-
-    function initCells() {
-        (cellTypes[cellType] ?? Object.values(cellTypes)[0])();
+    async function initCells() {
+        await (cellTypes[cellType] ?? Object.values(cellTypes)[0])();
         mainBoard.forEach(row => row.fill(emptyCell));
         subBoard.forEach(row => row.fill(emptyCell));
     }
@@ -429,13 +433,13 @@ import fly3game from './fly3.js';
     function addFlashCallback(callback, delay) {
         addFreezeCallback(createFlashCallback(callback, delay));
     }
-
-    function createGame() {
-        initCells();
+    async function createGame() {
+        await initCells();
         clearGame();
+        const main = await gameList[selectGameList.value]();
         currentInstance = {
             init: false,
-            main: gameList[selectGameList.value],
+            main,
             status: createStatus(initSpeed),
             mainBoard,
             subBoard,
@@ -507,14 +511,17 @@ import fly3game from './fly3.js';
                 drawItem(mainCtx, mainBoard[r][c], c, r);
             }
         }
-        if (!currentInstance) {
+        if (loading) {
+            drawMainText("==>资源加载中<==", -1);
+        }
+        else if (!currentInstance) {
             drawMenu();
         }
         else if (currentInstance.status.over) {
-            drawMainText("游戏结束", -1);
+            drawMainText("==>游戏结束<==", -1);
         }
         else if (pause) {
-            drawMainText("游戏暂停", -1);
+            drawMainText("==>游戏暂停<==", -1);
         }
 
         subCtx.beginPath();
@@ -557,7 +564,7 @@ import fly3game from './fly3.js';
 
     const systemKeyMap = {
         [keyboard.KEY_SELECT]: () => currentInstance ? clearGame() : selectMenu(1),
-        [keyboard.KEY_START]: () => currentInstance ? (pause = !pause) : createGame(),
+        [keyboard.KEY_START]: async () => currentInstance ? (pause = !pause) : await createGame(),
         [keyboard.KEY_UP]: () => !currentInstance && selectMenu(-1),
         [keyboard.KEY_LEFT]: () => !currentInstance && selectSpeed(-1),
         [keyboard.KEY_DOWN]: () => !currentInstance && selectMenu(1),
@@ -611,17 +618,28 @@ import fly3game from './fly3.js';
         currentInstance.main.update(ts);
     }
 
-    function gameLoop(ts) {
-        const newActions = collectNewAction();
+    function checkSystem(ts, newActions) {
+        if (loading) {
+            return true;
+        }
         const action = getSystemAction(newActions);
         if (action) {
-            action(gameTime);
-            drawBoard();
+            new Promise(async r => {
+                loading = true;
+                drawBoard();
+                await action(gameTime);
+                r();
+            }).then(r => {
+                loading = false;
+                drawBoard();
+            });
+            return true;
         }
-        else if (pause) {
-            //do nothing
-        }
-        else if (freezeCallbacks.size) {
+        return pause;
+    }
+
+    function checkFreeze(ts) {
+        if (freezeCallbacks.size) {
             freezeTime += ts - lastTime;
             for (let freezeCallback of freezeCallbacks) {
                 if (!freezeCallback.callback(freezeTime - freezeCallback.time)) {
@@ -629,8 +647,12 @@ import fly3game from './fly3.js';
                 }
             }
             drawBoard();
+            return true;
         }
-        else if (currentInstance && !currentInstance.status.over) {
+    }
+
+    function checkCurrentInstance(ts, newActions) {
+        if (currentInstance && !currentInstance.status.over) {
             gameTime += ts - lastTime;
             if (!currentInstance.init) {
                 currentInstance.main.init(gameTime, currentInstance);
@@ -638,11 +660,16 @@ import fly3game from './fly3.js';
             }
             updateGame(gameTime, newActions);
             drawBoard();
+            return true;
         }
+    }
+
+    function gameLoop(ts) {
+        const newActions = collectNewAction();
+        checkSystem(ts, newActions) || checkFreeze(ts) || checkCurrentInstance(ts, newActions);
         lastTime = ts;
         requestAnimationFrame(gameLoop);
     }
-    initCells();
     drawBoard();
     requestAnimationFrame(gameLoop);
 }();
