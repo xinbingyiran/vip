@@ -2,20 +2,22 @@ import keyboard from './keyboard.js';
 
 !function () {
 
+    const createLoader = (path, option) => async () => (await import(path)).default(option);
+
     const gameList = {
-        '标准方块': async () => (await import('./fk.js')).default({ hasExtend: false, hasHelper: false }),
-        '扩展方块': async () => (await import('./fk.js')).default({ hasExtend: true, hasHelper: false }),
-        '方块带辅助': async () => (await import('./fk.js')).default({ hasExtend: false, hasHelper: true }),
-        '扩展方块带辅助': async () => (await import('./fk.js')).default({ hasExtend: true, hasHelper: true }),
-        '贪吃蛇': async () => (await import('./tcs.js')).default({ loop: false }),
-        '疯狂贪吃蛇': async () => (await import('./tcs.js')).default({ loop: true }),
-        '疯狂射击': async () => (await import('./sx.js')).default({ isAddtion: false }),
-        '疯狂垒墙': async () => (await import('./sx.js')).default({ isAddtion: true }),
-        '坦克大战': async () => (await import('./tk.js')).default({ tankCount: 25, bossLife: 1 }),
-        '坦克大战领主': async () => (await import('./tk.js')).default({ tankCount: 1, bossLife: 5 }),
-        '躲避敌人': async () => (await import('./fly.js')).default({}),
-        '窄道通行': async () => (await import('./fly2.js')).default({}),
-        '飞行射击': async () => (await import('./fly3.js')).default({}),
+        '标准方块': createLoader('./fk.js', { hasExtend: false, hasHelper: false }),
+        '扩展方块': createLoader('./fk.js', { hasExtend: true, hasHelper: false }),
+        '方块带辅助': createLoader('./fk.js', { hasExtend: false, hasHelper: true }),
+        '扩展方块带辅助': createLoader('./fk.js', { hasExtend: true, hasHelper: true }),
+        '贪吃蛇': createLoader('./tcs.js', { loop: false }),
+        '疯狂贪吃蛇': createLoader('./tcs.js', { loop: true }),
+        '疯狂射击': createLoader('./sx.js', { isAddtion: false }),
+        '疯狂垒墙': createLoader('./sx.js', { isAddtion: true }),
+        '坦克大战': createLoader('./tk.js', { tankCount: 25, bossLife: 1 }),
+        '坦克大战领主': createLoader('./tk.js', { tankCount: 1, bossLife: 5 }),
+        '躲避敌人': createLoader('./fly.js', {}),
+        '窄道通行': createLoader('./fly2.js', {}),
+        '飞行射击': createLoader('./fly3.js', {}),
     }
 
     const selectGameList = document.querySelector('#gameList');
@@ -124,16 +126,9 @@ import keyboard from './keyboard.js';
         "#action": keyboard.KEY_ACTION
     }
 
-    const createStartEvent = keyvalue => {
-        return (event) => {
-            updateDownActions(keyvalue, true);
-        }
-    }
-    const createEndEvent = keyvalue => {
-        return (event) => {
-            updateDownActions(keyvalue, false);
-        }
-    }
+    const createStartEvent = keyvalue => () => updateDownActions(keyvalue, true);
+    const createEndEvent = keyvalue => () => updateDownActions(keyvalue, false);
+
     for (const key in inputMap) {
         const ele = document.querySelector(key);
         ['mousedown', 'touchstart'].forEach(startEvent => ele.addEventListener(startEvent, createStartEvent(inputMap[key])));
@@ -276,15 +271,7 @@ import keyboard from './keyboard.js';
         },
     }
 
-    const updateDownActions = (newAction, add) => {
-        if (add) {
-            downActions.add(newAction);
-        }
-        else {
-            downActions.delete(newAction);
-        }
-    }
-
+    const updateDownActions = (newAction, add) => add ? downActions.add(newAction) : downActions.delete(newAction);
     function checkGamepads() {
         const actions = new Set();
         const gamepads = navigator.getGamepads ? navigator.getGamepads() : undefined;
@@ -323,26 +310,29 @@ import keyboard from './keyboard.js';
 
     function createFlashCallback(callback, delay) {
         delay = ~~delay > 0 ? ~~delay : 20;
+        let lastEts = 0;
+        let scells = [...cells].sort(() => Math.random() - 0.5);
+        const flashArray = [
+            ...Array(mainRows).keys().map(i => () => {
+                for (let j = 0; j < mainCols; j++) {
+                    mainBoard[mainRows - i - 1][j] = scells[Math.min(Math.min(i, j), Math.min(mainCols - j - 1, mainRows - i - 1)) % scells.length];
+                }
+            }),
+            ...Array(mainRows).keys().map(i => () => {
+                for (let j = 0; j < mainCols; j++) {
+                    mainBoard[i][j] = emptyCell;
+                }
+            })
+        ];
         return newTs => {
             const ets = ~~(newTs / delay);
-            if (ets > mainRows * 2) {
-                typeof callback == "function" && callback();
+            while (lastEts < ets && lastEts < flashArray.length) {
+                flashArray[lastEts]();
+                lastEts++;
+            }
+            if (ets >= flashArray.length) {
+                typeof callback == 'function' && callback();
                 return false;
-            }
-            if (ets > mainRows) {
-                const overEts = ets - mainRows;
-                for (let i = 0; i < mainRows; i++) {
-                    for (let j = 0; j < mainCols; j++) {
-                        mainBoard[i][j] = i < overEts ? emptyCell : cells[(mainRows - i - 1) % cells.length];
-                    }
-                }
-            }
-            else {
-                for (let i = 0; i < ets; i++) {
-                    for (let j = 0; j < mainCols; j++) {
-                        mainBoard[mainRows - i - 1][j] = cells[i % cells.length];
-                    }
-                }
             }
             return true;
         }
@@ -623,13 +613,10 @@ import keyboard from './keyboard.js';
             return true;
         }
         const action = getSystemAction(newActions);
-        if (action) {
-            new Promise(async r => {
-                loading = true;
-                drawBoard();
-                await action(gameTime);
-                r();
-            }).then(r => {
+        if (typeof action == "function") {
+            loading = true;
+            drawBoard();
+            Promise.resolve(action(gameTime)).finally(() => {
                 loading = false;
                 drawBoard();
             });
@@ -639,29 +626,31 @@ import keyboard from './keyboard.js';
     }
 
     function checkFreeze(ts) {
-        if (freezeCallbacks.size) {
-            freezeTime += ts - lastTime;
-            for (let freezeCallback of freezeCallbacks) {
-                if (!freezeCallback.callback(freezeTime - freezeCallback.time)) {
-                    freezeCallbacks.delete(freezeCallback);
-                }
-            }
-            drawBoard();
-            return true;
+        if (freezeCallbacks.size <= 0) {
+            return false;
         }
+        freezeTime += ts - lastTime;
+        for (let freezeCallback of freezeCallbacks) {
+            if (!freezeCallback.callback(freezeTime - freezeCallback.time)) {
+                freezeCallbacks.delete(freezeCallback);
+            }
+        }
+        drawBoard();
+        return true;
     }
 
     function checkCurrentInstance(ts, newActions) {
-        if (currentInstance && !currentInstance.status.over) {
-            gameTime += ts - lastTime;
-            if (!currentInstance.init) {
-                currentInstance.main.init(gameTime, currentInstance);
-                currentInstance.init = true;
-            }
-            updateGame(gameTime, newActions);
-            drawBoard();
-            return true;
+        if (!currentInstance || currentInstance.status.over) {
+            return false;
         }
+        gameTime += ts - lastTime;
+        if (!currentInstance.init) {
+            currentInstance.main.init(gameTime, currentInstance);
+            currentInstance.init = true;
+        }
+        updateGame(gameTime, newActions);
+        drawBoard();
+        return true;
     }
 
     function gameLoop(ts) {
