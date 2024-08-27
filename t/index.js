@@ -313,12 +313,12 @@ import keyboard from './keyboard.js';
         let lastEts = 0;
         let scells = [...cells].sort(() => Math.random() - 0.5);
         const flashArray = [
-            ...Array(mainRows).keys().map(i => () => {
+            ...Array.from({ length: mainRows }, (_, i) => () => {
                 for (let j = 0; j < mainCols; j++) {
                     mainBoard[mainRows - i - 1][j] = scells[Math.min(Math.min(i, j), Math.min(mainCols - j - 1, mainRows - i - 1)) % scells.length];
                 }
             }),
-            ...Array(mainRows).keys().map(i => () => {
+            ...Array.from({ length: mainRows }, (_, i) => () => {
                 for (let j = 0; j < mainCols; j++) {
                     mainBoard[i][j] = emptyCell;
                 }
@@ -338,60 +338,76 @@ import keyboard from './keyboard.js';
         }
     }
 
-    const perline = blockSize / 8;
-    const perline2 = blockSize / 4;
-    const perline4 = blockSize / 2;
-    const defaultEmptyCell = {
+    const cellSpace = ~~(blockSize / 10);
+    const lineSize = blockSize - cellSpace * 2;
+    const perline = lineSize / 8;
+    const perline2 = lineSize / 4;
+    const perline4 = lineSize / 2;
+
+    const crateColorCellMaker = (color) => ({
+        color: color,
         draw: (ctx, cols, rows) => {
-            ctx.fillStyle = 'lightGray';
-            ctx.fillRect(cols * blockSize + 1, rows * blockSize + 1, blockSize - 2, blockSize - 2);
+            ctx.shadowOffsetX = cellSpace;
+            ctx.shadowOffsetY = cellSpace;
+            ctx.shadowBlur = cellSpace * 2;
+            ctx.shadowColor = color;
+            ctx.fillStyle = color;
+            ctx.fillRect(cols * blockSize, rows * blockSize, blockSize - cellSpace * 2, blockSize - cellSpace * 2);
 
+            ctx.shadowColor = 'transparent';
             ctx.fillStyle = 'white';
-            ctx.fillRect(cols * blockSize + 1 + perline, rows * blockSize + perline + 1, blockSize - perline2 - 2, blockSize - perline2 - 2);
+            ctx.fillRect(cols * blockSize + perline, rows * blockSize + perline, blockSize - perline2 - cellSpace * 2, blockSize - perline2 - cellSpace * 2);
 
-            ctx.fillStyle = 'lightGray';
-            ctx.fillRect(cols * blockSize + perline2 + 1, rows * blockSize + perline2 + 1, blockSize - perline4 - 2, blockSize - perline4 - 2);
+            ctx.shadowColor = ctx.fillStyle;
+            ctx.fillStyle = color;
+            ctx.fillRect(cols * blockSize + perline2, rows * blockSize + perline2, blockSize - perline4 - cellSpace * 2, blockSize - perline4 - cellSpace * 2);
         }
-    };
+    });
+
+    const defaultEmptyCell = crateColorCellMaker('lightGray');
 
     let emptyCell = defaultEmptyCell;
     const mainBoard = Array(mainRows).fill(0).map(() => Array(mainCols).fill(emptyCell));
     const subBoard = Array(subRows).fill(0).map(() => Array(subCols).fill(emptyCell));
 
+
     let imageCells = async () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = blockSize;
+        canvas.height = blockSize;
+        const context = canvas.getContext('2d');
         const result = new Array(10).fill(0).map((_, i) => new Promise(r => {
-            const img = new Image(blockSize - 2, blockSize - 2);
+            const img = new Image(blockSize - cellSpace * 2, blockSize - cellSpace * 2);
             img.src = `./imgs/${i + 1}.png`;
+            let shadowColor = undefined;
             const item = {
-                loaded: false,
+                color: shadowColor,
                 draw: (ctx, cols, rows) => {
-                    ctx.drawImage(img, cols * blockSize + 1, rows * blockSize + 1, blockSize - 2, blockSize - 2);
+                    ctx.shadowOffsetX = cellSpace;
+                    ctx.shadowOffsetY = cellSpace;
+                    ctx.shadowBlur = cellSpace * 2;
+                    ctx.fillStyle = shadowColor;
+                    ctx.strokeStyle = shadowColor;
+                    ctx.shadowColor = shadowColor;
+                    ctx.strokeRect(cols * blockSize, rows * blockSize, blockSize - cellSpace * 2, blockSize - cellSpace * 2);
+                    ctx.drawImage(img, cols * blockSize, rows * blockSize, blockSize - cellSpace * 2, blockSize - cellSpace * 2);
                 }
             }
             img.onload = () => {
-                item.loaded = true;
+                context.drawImage(img, 0, 0, blockSize - cellSpace * 2, blockSize - cellSpace * 2);
+                const imageData = context.getImageData(0, 0, blockSize - cellSpace * 2, blockSize - cellSpace * 2);
+                const datas = [0, 0, 0, 0];
+                imageData.data.forEach((v, i) => {
+                    datas[i % 4] += v;
+                });
+                const total = imageData.width * imageData.height;
+                item.color = shadowColor = `rgba(${~~(datas[0] / total)}, ${~~(datas[1] / total)},${~~(datas[2] / total)},${~~(datas[3] / total)})`;
                 r(item);
             }
         }));
         return await Promise.all(result);
     };
-
-    let colorCells = () => ["red", "green", "blue", "purple", "orange"].map(color => {
-        const item = {
-            color: color,
-            draw: (ctx, cols, rows) => {
-                ctx.fillStyle = color;
-                ctx.fillRect(cols * blockSize + 1, rows * blockSize + 1, blockSize - 2, blockSize - 2);
-
-                ctx.fillStyle = 'white';
-                ctx.fillRect(cols * blockSize + 1 + perline, rows * blockSize + perline + 1, blockSize - perline2 - 2, blockSize - perline2 - 2);
-
-                ctx.fillStyle = color;
-                ctx.fillRect(cols * blockSize + perline2 + 1, rows * blockSize + perline2 + 1, blockSize - perline4 - 2, blockSize - perline4 - 2);
-            }
-        };
-        return item;
-    });
+    let colorCells = () => ["red", "green", "blue", "purple", "orange"].map(color => crateColorCellMaker(color));
 
     const cellTypes = {
         image: async () => {
@@ -456,7 +472,9 @@ import keyboard from './keyboard.js';
 
     function drawItem(ctx, item, cols, rows) {
         if (item.draw && typeof item.draw == 'function') {
+            ctx.save();
             item.draw(ctx, cols, rows);
+            ctx.restore();
             return;
         }
     }
@@ -494,8 +512,8 @@ import keyboard from './keyboard.js';
     }
 
     function drawBoard() {
-        mainCtx.beginPath();
-        mainCtx.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
+        mainCtx.reset();
+        //mainCtx.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
         for (let r = 0; r < mainRows; r++) {
             for (let c = 0; c < mainCols; c++) {
                 drawItem(mainCtx, mainBoard[r][c], c, r);
