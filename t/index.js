@@ -1,34 +1,4 @@
-import keyboard from './keyboard.js';
-
 !function () {
-
-    const createLoader = (path, option) => async () => (await import(path)).default(option);
-
-    const gameList = {
-        '标准方块': createLoader('./fk.js', { hasExtend: false, hasHelper: false }),
-        '扩展方块': createLoader('./fk.js', { hasExtend: true, hasHelper: false }),
-        '方块带辅助': createLoader('./fk.js', { hasExtend: false, hasHelper: true }),
-        '扩展方块带辅助': createLoader('./fk.js', { hasExtend: true, hasHelper: true }),
-        '贪吃蛇': createLoader('./tcs.js', { loop: false }),
-        '疯狂贪吃蛇': createLoader('./tcs.js', { loop: true }),
-        '疯狂射击': createLoader('./sx.js', { isAddtion: false }),
-        '疯狂垒墙': createLoader('./sx.js', { isAddtion: true }),
-        '坦克大战': createLoader('./tk.js', { tankCount: 25, bossLife: 1 }),
-        '坦克大战领主': createLoader('./tk.js', { tankCount: 1, bossLife: 5 }),
-        '躲避敌人': createLoader('./fly.js', {}),
-        '窄道通行': createLoader('./fly2.js', {}),
-        '飞行射击': createLoader('./fly3.js', {}),
-    }
-
-    const selectGameList = document.querySelector('#gameList');
-    for (let v in gameList) {
-        selectGameList.options.add(new Option(v, v));
-    }
-    selectGameList.addEventListener('change', event => {
-        clearGame();
-        drawBoard();
-    });
-
     const maxWidth = document.body.clientWidth - 20;
     const blockSizeCalc = ~~(maxWidth / 17);
     const blockSize = blockSizeCalc < 10 ? 10 : blockSizeCalc > 40 ? 40 : blockSizeCalc;
@@ -71,11 +41,13 @@ import keyboard from './keyboard.js';
     let initSpeed = 0;
     let loading = false;
     function createStatus(speed) {
+        let level = 0;
+        let life = subRows;
         const status = {
             score: 0,
-            speed: speed,
-            level: 0,
-            life: subRows,
+            get speed() { return speed; },
+            get level() { return level; },
+            get life() { return life; },
             over: false,
         };
 
@@ -113,17 +85,28 @@ import keyboard from './keyboard.js';
         return status;
     }
 
+    const keys = {
+        KEY_SELECT: "select",
+        KEY_START: "start",
+        KEY_EXTEND: "extend",
+        KEY_UP: "up",
+        KEY_DOWN: "down",
+        KEY_LEFT: "left",
+        KEY_RIGHT: "right",
+        KEY_ACTION: "action"
+    };
+
     //按钮控制
 
     const inputMap = {
-        "#select": keyboard.KEY_SELECT,
-        "#start": keyboard.KEY_START,
-        "#extend": keyboard.KEY_EXTEND,
-        "#up": keyboard.KEY_UP,
-        "#down": keyboard.KEY_DOWN,
-        "#left": keyboard.KEY_LEFT,
-        "#right": keyboard.KEY_RIGHT,
-        "#action": keyboard.KEY_ACTION
+        "#select": keys.KEY_SELECT,
+        "#start": keys.KEY_START,
+        "#extend": keys.KEY_EXTEND,
+        "#up": keys.KEY_UP,
+        "#down": keys.KEY_DOWN,
+        "#left": keys.KEY_LEFT,
+        "#right": keys.KEY_RIGHT,
+        "#action": keys.KEY_ACTION
     }
 
     const createStartEvent = keyvalue => () => updateDownActions(keyvalue, true);
@@ -137,24 +120,24 @@ import keyboard from './keyboard.js';
 
     //键盘控制
     const keymap = {
-        ArrowLeft: keyboard.KEY_LEFT,
-        ArrowRight: keyboard.KEY_RIGHT,
-        ArrowDown: keyboard.KEY_DOWN,
-        ArrowUp: keyboard.KEY_UP,
-        ' ': keyboard.KEY_ACTION,
-        Enter: keyboard.KEY_ACTION,
-        z: keyboard.KEY_SELECT,
-        x: keyboard.KEY_START,
-        c: keyboard.KEY_EXTEND,
-        a: keyboard.KEY_LEFT,
-        d: keyboard.KEY_RIGHT,
-        s: keyboard.KEY_DOWN,
-        w: keyboard.KEY_UP,
-        j: keyboard.KEY_ACTION,
-        k: keyboard.KEY_ACTION,
-        u: keyboard.KEY_SELECT,
-        i: keyboard.KEY_START,
-        o: keyboard.KEY_EXTEND
+        ArrowLeft: keys.KEY_LEFT,
+        ArrowRight: keys.KEY_RIGHT,
+        ArrowDown: keys.KEY_DOWN,
+        ArrowUp: keys.KEY_UP,
+        ' ': keys.KEY_ACTION,
+        Enter: keys.KEY_ACTION,
+        z: keys.KEY_SELECT,
+        x: keys.KEY_START,
+        c: keys.KEY_EXTEND,
+        a: keys.KEY_LEFT,
+        d: keys.KEY_RIGHT,
+        s: keys.KEY_DOWN,
+        w: keys.KEY_UP,
+        j: keys.KEY_ACTION,
+        k: keys.KEY_ACTION,
+        u: keys.KEY_SELECT,
+        i: keys.KEY_START,
+        o: keys.KEY_EXTEND
     }
 
     const updateKeys = (event, down) => {
@@ -204,68 +187,68 @@ import keyboard from './keyboard.js';
     //	9               8/7 or 16/7 -7/7:lu  -3/7:lr  1/7:ld 5/7:ll
 
     const axe9map = {
-        [-7]: keyboard.KEY_UP,
-        [-3]: keyboard.KEY_RIGHT,
-        [1]: keyboard.KEY_DOWN,
-        [5]: keyboard.KEY_LEFT,
+        [-7]: keys.KEY_UP,
+        [-3]: keys.KEY_RIGHT,
+        [1]: keys.KEY_DOWN,
+        [5]: keys.KEY_LEFT,
     };
     const controlMap = {
         "standard":
         {
             buttons:
             {
-                0: keyboard.KEY_ACTION,
-                1: keyboard.KEY_ACTION,
-                2: keyboard.KEY_ACTION,
-                3: keyboard.KEY_ACTION,
-                4: keyboard.KEY_SELECT,
-                5: keyboard.KEY_START,
-                6: keyboard.KEY_SELECT,
-                7: keyboard.KEY_START,
-                8: keyboard.KEY_SELECT,
-                9: keyboard.KEY_START,
-                10: keyboard.KEY_EXTEND,
-                11: keyboard.KEY_EXTEND,
-                12: keyboard.KEY_UP,
-                13: keyboard.KEY_DOWN,
-                14: keyboard.KEY_LEFT,
-                15: keyboard.KEY_RIGHT,
-                16: keyboard.KEY_EXTEND
+                0: keys.KEY_ACTION,
+                1: keys.KEY_ACTION,
+                2: keys.KEY_ACTION,
+                3: keys.KEY_ACTION,
+                4: keys.KEY_SELECT,
+                5: keys.KEY_START,
+                6: keys.KEY_SELECT,
+                7: keys.KEY_START,
+                8: keys.KEY_SELECT,
+                9: keys.KEY_START,
+                10: keys.KEY_EXTEND,
+                11: keys.KEY_EXTEND,
+                12: keys.KEY_UP,
+                13: keys.KEY_DOWN,
+                14: keys.KEY_LEFT,
+                15: keys.KEY_RIGHT,
+                16: keys.KEY_EXTEND
             },
             axes:
             {
-                0: v => v < -0.75 ? keyboard.KEY_LEFT : v > 0.75 ? keyboard.KEY_RIGHT : undefined,
-                1: v => v < -0.75 ? keyboard.KEY_UP : v > 0.75 ? keyboard.KEY_DOWN : undefined,
-                2: v => v < -0.75 ? keyboard.KEY_LEFT : v > 0.75 ? keyboard.KEY_RIGHT : undefined,
-                3: v => v < -0.75 ? keyboard.KEY_UP : v > 0.75 ? keyboard.KEY_DOWN : undefined
+                0: v => v < -0.75 ? keys.KEY_LEFT : v > 0.75 ? keys.KEY_RIGHT : undefined,
+                1: v => v < -0.75 ? keys.KEY_UP : v > 0.75 ? keys.KEY_DOWN : undefined,
+                2: v => v < -0.75 ? keys.KEY_LEFT : v > 0.75 ? keys.KEY_RIGHT : undefined,
+                3: v => v < -0.75 ? keys.KEY_UP : v > 0.75 ? keys.KEY_DOWN : undefined
             }
         },
         "":
         {
             buttons: {
-                0: keyboard.KEY_ACTION,
-                1: keyboard.KEY_ACTION,
-                2: keyboard.KEY_ACTION,
-                3: keyboard.KEY_ACTION,
-                4: keyboard.KEY_ACTION,
-                5: keyboard.KEY_ACTION,
-                6: keyboard.KEY_SELECT,
-                7: keyboard.KEY_START,
-                8: keyboard.KEY_SELECT,
-                9: keyboard.KEY_START,
-                10: keyboard.KEY_SELECT,
-                11: keyboard.KEY_START,
-                12: keyboard.KEY_START,
-                13: keyboard.KEY_EXTEND,
-                14: keyboard.KEY_EXTEND
+                0: keys.KEY_ACTION,
+                1: keys.KEY_ACTION,
+                2: keys.KEY_ACTION,
+                3: keys.KEY_ACTION,
+                4: keys.KEY_ACTION,
+                5: keys.KEY_ACTION,
+                6: keys.KEY_SELECT,
+                7: keys.KEY_START,
+                8: keys.KEY_SELECT,
+                9: keys.KEY_START,
+                10: keys.KEY_SELECT,
+                11: keys.KEY_START,
+                12: keys.KEY_START,
+                13: keys.KEY_EXTEND,
+                14: keys.KEY_EXTEND
             },
             axes: {
-                0: v => v < -0.75 ? keyboard.KEY_LEFT : v > 0.75 ? keyboard.KEY_RIGHT : undefined,
-                1: v => v < -0.75 ? keyboard.KEY_UP : v > 0.75 ? keyboard.KEY_DOWN : undefined,
-                2: v => v < -0.75 ? keyboard.KEY_LEFT : v > 0.75 ? keyboard.KEY_RIGHT : undefined,
-                3: v => v > 0.75 ? keyboard.KEY_SELECT : undefined,
-                4: v => v > 0.75 ? keyboard.KEY_START : undefined,
-                5: v => v < -0.75 ? keyboard.KEY_UP : v > 0.75 ? keyboard.KEY_DOWN : undefined,
+                0: v => v < -0.75 ? keys.KEY_LEFT : v > 0.75 ? keys.KEY_RIGHT : undefined,
+                1: v => v < -0.75 ? keys.KEY_UP : v > 0.75 ? keys.KEY_DOWN : undefined,
+                2: v => v < -0.75 ? keys.KEY_LEFT : v > 0.75 ? keys.KEY_RIGHT : undefined,
+                3: v => v > 0.75 ? keys.KEY_SELECT : undefined,
+                4: v => v > 0.75 ? keys.KEY_START : undefined,
+                5: v => v < -0.75 ? keys.KEY_UP : v > 0.75 ? keys.KEY_DOWN : undefined,
                 9: v => axe9map[~~(v * 7.001)]
             }
         },
@@ -407,6 +390,7 @@ import keyboard from './keyboard.js';
         }));
         return await Promise.all(result);
     };
+
     let colorCells = () => ["red", "green", "blue", "purple", "orange"].map(color => crateColorCellMaker(color));
 
     const cellTypes = {
@@ -439,6 +423,26 @@ import keyboard from './keyboard.js';
     function addFlashCallback(callback, delay) {
         addFreezeCallback(createFlashCallback(callback, delay));
     }
+
+    let voice = undefined;
+
+    const app = {
+        get mainBoard() { return mainBoard; },
+        get subBoard() { return subBoard; },
+        get mainRows() { return mainRows; },
+        get mainCols() { return mainCols; },
+        get subRows() { return subRows; },
+        get subCols() { return subCols; },
+        get cells() { return cells; },
+        get emptyCell() { return emptyCell; },
+        get speeds() { return speeds; },
+        get keys() { return keys; },
+        get voice() { return voice; },
+        get addFreezeCallback() { return addFreezeCallback; },
+        get addFlashCallback() { return addFlashCallback; },
+    }
+
+
     async function createGame() {
         await initCells();
         clearGame();
@@ -447,18 +451,6 @@ import keyboard from './keyboard.js';
             init: false,
             main,
             status: createStatus(initSpeed),
-            mainBoard,
-            subBoard,
-            mainRows,
-            mainCols,
-            subRows,
-            subCols,
-            cells,
-            emptyCell,
-            speeds,
-            initSpeed,
-            addFreezeCallback,
-            addFlashCallback,
         };
         addFlashCallback(undefined, 30);
     }
@@ -571,12 +563,12 @@ import keyboard from './keyboard.js';
     }
 
     const systemKeyMap = {
-        [keyboard.KEY_SELECT]: () => currentInstance ? clearGame() : selectMenu(1),
-        [keyboard.KEY_START]: async () => currentInstance ? (pause = !pause) : await createGame(),
-        [keyboard.KEY_UP]: () => !currentInstance && selectMenu(-1),
-        [keyboard.KEY_LEFT]: () => !currentInstance && selectSpeed(-1),
-        [keyboard.KEY_DOWN]: () => !currentInstance && selectMenu(1),
-        [keyboard.KEY_RIGHT]: () => !currentInstance && selectSpeed(1)
+        [keys.KEY_SELECT]: () => currentInstance ? clearGame() : selectMenu(1),
+        [keys.KEY_START]: async () => currentInstance ? (pause = !pause) : await createGame(),
+        [keys.KEY_UP]: () => !currentInstance && selectMenu(-1),
+        [keys.KEY_LEFT]: () => !currentInstance && selectSpeed(-1),
+        [keys.KEY_DOWN]: () => !currentInstance && selectMenu(1),
+        [keys.KEY_RIGHT]: () => !currentInstance && selectSpeed(1)
     }
 
     function getSystemAction(actions) {
@@ -663,7 +655,7 @@ import keyboard from './keyboard.js';
         }
         gameTime += ts - lastTime;
         if (!currentInstance.init) {
-            currentInstance.main.init(gameTime, currentInstance);
+            currentInstance.main.init(gameTime, currentInstance.status);
             currentInstance.init = true;
         }
         updateGame(gameTime, newActions);
@@ -677,6 +669,65 @@ import keyboard from './keyboard.js';
         lastTime = ts;
         requestAnimationFrame(gameLoop);
     }
+
+    const createLoader = (path, option) => async () => {
+        if (voice === undefined && globalThis.AudioContext) {
+            try {
+                const context = new AudioContext()
+                const resp = await fetch('./static/music.mp3');
+                if (!resp.ok) {
+                    throw resp;
+                }
+                const buffer = await resp.arrayBuffer();
+                const buf = await context.decodeAudioData(buffer);
+                const getSource = () => {
+                    const source = context.createBufferSource()
+                    source.buffer = buf
+                    source.connect(context.destination)
+                    return source
+                }
+                voice = {
+                    getSource: getSource,
+                    clear: () => getSource().start(0, 0, 0.7675),
+                    fall: ()=> getSource().start(0, 1.2558, 0.3546),
+                    rotate: ()=> getSource().start(0, 2.2471, 0.0807),
+                    move: ()=> getSource().start(0, 2.9088, 0.1437),
+                    start: () => getSource().start(0, 3.7202, 3.6224),
+                    gameover: ()=> getSource().start(0, 8.1276, 1.1437),
+                };
+            }
+            catch (e) { }
+            finally {
+                voice ??= {};
+            }
+        }
+        return (await import(path)).default(app, option);
+    };
+
+    const gameList = {
+        '标准方块': createLoader('./fk.js', { hasExtend: false, hasHelper: false }),
+        '扩展方块': createLoader('./fk.js', { hasExtend: true, hasHelper: false }),
+        '方块带辅助': createLoader('./fk.js', { hasExtend: false, hasHelper: true }),
+        '扩展方块带辅助': createLoader('./fk.js', { hasExtend: true, hasHelper: true }),
+        '贪吃蛇': createLoader('./tcs.js', { loop: false }),
+        '疯狂贪吃蛇': createLoader('./tcs.js', { loop: true }),
+        '疯狂射击': createLoader('./sx.js', { isAddtion: false }),
+        '疯狂垒墙': createLoader('./sx.js', { isAddtion: true }),
+        '坦克大战': createLoader('./tk.js', { tankCount: 25, bossLife: 1 }),
+        '坦克大战领主': createLoader('./tk.js', { tankCount: 1, bossLife: 5 }),
+        '躲避敌人': createLoader('./fly.js', {}),
+        '窄道通行': createLoader('./fly2.js', {}),
+        '飞行射击': createLoader('./fly3.js', {}),
+    }
+
+    const selectGameList = document.querySelector('#gameList');
+    for (let v in gameList) {
+        selectGameList.options.add(new Option(v, v));
+    }
+    selectGameList.addEventListener('change', event => {
+        clearGame();
+        drawBoard();
+    });
     drawBoard();
     requestAnimationFrame(gameLoop);
 }();
