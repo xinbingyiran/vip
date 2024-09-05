@@ -1,6 +1,4 @@
-import keys from './keyboard.js';
-
-function game({ hasExtend = false, hasHelper = false, isFreeze = false, isReverse = false } = {}) {
+function game(app, { hasExtend = false, hasHelper = false, isFreeze = false, isReverse = false } = {}) {
 
     const maxLevel = 10000;
     const scorePerSpeed = 50000;
@@ -11,7 +9,7 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
 
     const scores = { 0: 0, 1: 100, 2: 300, 3: 700, 4: 1500 };
 
-    let app, curShape, nshape, allShapes, baseBoard;
+    let status, curShape, nshape, allShapes, baseBoard;
 
     function createEmptyRow() {
         let emptyRow = [];
@@ -28,10 +26,10 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
         app.addFreezeCallback(elapsedTime => {
             let ets = ~~(elapsedTime / 20);
             if (ets > 10) {
-                const oldScore = app.status.score;
+                const oldScore = status.score;
                 const allLines = [];
                 for (let scoreLines of scoreItems) {
-                    app.status.score += scores[scoreLines.length];
+                    status.score += scores[scoreLines.length];
                     scoreItems.delete(scoreLines);
                     allLines.push(...scoreLines);
                 };
@@ -40,7 +38,7 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
                 while (baseBoard.length < app.mainRows) {
                     baseBoard.unshift(createEmptyRow());
                 }
-                if (~~(app.status.score / scorePerSpeed) != ~~(oldScore / scorePerSpeed)) {
+                if (~~(status.score / scorePerSpeed) != ~~(oldScore / scorePerSpeed)) {
                     updateGrade(ts);
                 }
                 return false;
@@ -132,7 +130,7 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
             fullRow && lines.push(cy + r);
         }
         if (lines.length < emptyRows.length) {
-            app.status.over = true;
+            status.over = true;
         }
         else if (lines.length) {
             createOrUpdateScorePauseCallback(ts, lines, emptyRows);
@@ -443,12 +441,12 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
     }
 
     const keyMap = {
-        [keys.KEY_LEFT]: [100, 0, (ts) => globalMove(ts, [-1, 0])],
-        [keys.KEY_RIGHT]: [100, 0, (ts) => globalMove(ts, [1, 0])],
-        [keys.KEY_DOWN]: [100, 0, (ts) => globalDown(ts)],
-        [keys.KEY_UP]: [200, 50, (ts) => globalUp(ts)],
-        [keys.KEY_ACTION]: [200, 50, (ts) => globalUp(ts)],
-        [keys.KEY_EXTEND]: [100, 100, (ts) => globalExtend(ts)]
+        [app.keys.KEY_LEFT]: [100, 0, (ts) => globalMove(ts, [-1, 0])],
+        [app.keys.KEY_RIGHT]: [100, 0, (ts) => globalMove(ts, [1, 0])],
+        [app.keys.KEY_DOWN]: [100, 0, (ts) => globalDown(ts)],
+        [app.keys.KEY_UP]: [200, 50, (ts) => globalUp(ts)],
+        [app.keys.KEY_ACTION]: [200, 50, (ts) => globalUp(ts)],
+        [app.keys.KEY_EXTEND]: [100, 100, (ts) => globalExtend(ts)]
     };
 
 
@@ -463,8 +461,8 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
         lastTagTime = ts;
     }
 
-    const init = (ts, mainApp) => {
-        app = mainApp;
+    const init = (ts, mainStatus) => {
+        status = mainStatus;
         baseBoard = [];
         for (let r = 0; r < app.mainRows; r++) {
             baseBoard.push(createEmptyRow());
@@ -474,7 +472,7 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
     }
 
     function updateGrade(ts) {
-        if (!app.status.updateSpeed(app.speeds.length) && !app.status.updateGrade(maxLevel)) {
+        if (!status.updateSpeed(app.speeds.length) && !status.updateGrade(maxLevel)) {
             return false;
         }
         app.addFlashCallback(() => initLevel(ts));
@@ -483,7 +481,7 @@ function game({ hasExtend = false, hasHelper = false, isFreeze = false, isRevers
 
     const update = (ts) => {
         if (!isFreeze && ts > lastTagTime) {
-            if (ts - lastTagTime > app.speeds[app.status.speed]) {
+            if (ts - lastTagTime > app.speeds[status.speed]) {
                 globalDown(ts);
                 lastTagTime = ts;
             }

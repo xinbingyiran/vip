@@ -1,6 +1,4 @@
-import keys from './keyboard.js';
-
-function game({ tankCount = 25, bossLife = 1 } = {}) {
+function game(app, { tankCount = 25, bossLife = 1 } = {}) {
 
     let maxLevel = 30;
     let scorePerSpeed = 100 * (tankCount > 0 ? tankCount : 25);
@@ -70,7 +68,7 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
         });
 
         for (let i = 0; i < app.subRows; i++) {
-            app.subBoard[i].fill(app.status.life > (app.subRows - 1 - i) ? tankCell : app.emptyCell);
+            app.subBoard[i].fill(status.life > (app.subRows - 1 - i) ? tankCell : app.emptyCell);
         }
     }
 
@@ -101,15 +99,15 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
 
     function updateGrade(ts) {
         levelScore = 0;
-        if (!app.status.updateSpeed(app.speeds.length) && !app.status.updateGrade(maxLevel)) {
+        if (!status.updateSpeed(app.speeds.length) && !status.updateGrade(maxLevel)) {
             return false;
         }
-        app.status.updateLife(app.subRows, true);
+        status.updateLife(app.subRows, true);
         return true;
     }
 
     function subLife(ts) {
-        if (!app.status.updateLife(app.subRows, false)) {
+        if (!status.updateLife(app.subRows, false)) {
             return false;
         }
         app.addFlashCallback(() => initLevel(ts));
@@ -244,7 +242,7 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
         const hasHist = tank.body.some((row, r) => row.some((cell, c) => cell && tank.x + c == shotItem.x && tank.y + r == shotItem.y));
         if (hasHist && shotItem.tank == tankItem) {
             tanks.delete(tank);
-            app.status.score += scorePerTank;
+            status.score += scorePerTank;
             levelScore += scorePerTank;
             if (levelScore >= scorePerSpeed) {
                 bossCome(ts);
@@ -279,7 +277,7 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
                 createShotBossPauseCallback(tank, () => {
                     tank.life--;
                     if (tank.life <= 0) {
-                        app.status.score += scorePerBoss;
+                        status.score += scorePerBoss;
                         bossKilled(ts);
                     }
                 });
@@ -542,20 +540,20 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
     };
 
     const keyMap = {
-        [keys.KEY_LEFT]: [100, 100, (ts) => doMove(ts, action_Left)],
-        [keys.KEY_RIGHT]: [100, 100, (ts) => doMove(ts, action_Right)],
-        [keys.KEY_DOWN]: [100, 100, (ts) => doMove(ts, action_Down)],
-        [keys.KEY_UP]: [100, 100, (ts) => doMove(ts, action_Up)],
-        [keys.KEY_ACTION]: [300, 300, (ts) => doShot(ts)],
-        [keys.KEY_EXTEND]: [3000, 1000, (ts) => updateGrade(ts)]
+        [app.keys.KEY_LEFT]: [100, 100, (ts) => doMove(ts, action_Left)],
+        [app.keys.KEY_RIGHT]: [100, 100, (ts) => doMove(ts, action_Right)],
+        [app.keys.KEY_DOWN]: [100, 100, (ts) => doMove(ts, action_Down)],
+        [app.keys.KEY_UP]: [100, 100, (ts) => doMove(ts, action_Up)],
+        [app.keys.KEY_ACTION]: [300, 300, (ts) => doShot(ts)],
+        [app.keys.KEY_EXTEND]: [3000, 1000, (ts) => updateGrade(ts)]
     };
 
     function randomCell() {
         return app.cells[~~(Math.random() * app.cells.length)];
     }
 
-    const init = (ts, mainApp) => {
-        app = mainApp;
+    const init = (ts, mainStatus) => {
+        status = mainStatus;
         tankCell = randomCell();
         tankPosions = [
             { x: 0, y: 0, ac: [action_Right, action_Down] },
@@ -566,7 +564,7 @@ function game({ tankCount = 25, bossLife = 1 } = {}) {
         initLevel(ts);
     }
     const update = (ts) => {
-        if (ts - lastTagTime > app.speeds[app.status.speed]) {
+        if (ts - lastTagTime > app.speeds[status.speed]) {
             lastTagTime = ts;
             doStep(ts);
         }

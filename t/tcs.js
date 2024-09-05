@@ -1,6 +1,4 @@
-import keys from './keyboard.js';
-
-function game({ loop = false } = {}) {
+function game(app, { loop = false } = {}) {
     const maxLevel = 30;
     let lastTagTime = 0;
 
@@ -14,7 +12,7 @@ function game({ loop = false } = {}) {
         }
 
         for (let i = 0; i < app.subRows; i++) {
-            app.subBoard[i].fill(app.status.life > (app.subRows - 1 - i) ? headCell : app.emptyCell);
+            app.subBoard[i].fill(status.life > (app.subRows - 1 - i) ? headCell : app.emptyCell);
         }
     }
     function calcEmptyPositions() {
@@ -55,16 +53,16 @@ function game({ loop = false } = {}) {
     }
 
     function updateGrade(ts) {
-        if (!app.status.updateSpeed(app.speeds.length) && !app.status.updateGrade(maxLevel)) {
+        if (!status.updateSpeed(app.speeds.length) && !status.updateGrade(maxLevel)) {
             return false;
         }
-        app.status.updateLife(app.subRows, true);
+        status.updateLife(app.subRows, true);
         app.addFlashCallback(()=>initLevel(ts));
         return true;
     }
 
     function subLife(ts) {
-        if (!app.status.updateLife(app.subRows, false)) {
+        if (!status.updateLife(app.subRows, false)) {
             return false;
         }
         app.addFlashCallback(()=>initLevel(ts));
@@ -92,8 +90,8 @@ function game({ loop = false } = {}) {
         if (food.x === newx && food.y === newy) {
             newCell = food.cell;
             snake.push(food);
-            app.status.score += 100;
-            if (snake.length >= app.mainCols * app.mainRows - maxLevel + app.status.level) {
+            status.score += 100;
+            if (snake.length >= app.mainCols * app.mainRows - maxLevel + status.level) {
                 updateGrade(ts);
                 return false;
             }
@@ -112,26 +110,26 @@ function game({ loop = false } = {}) {
     }
 
     const keyMap = {
-        [keys.KEY_LEFT]: [100, 50, (ts) => doStep(ts, [-1, 0])],
-        [keys.KEY_RIGHT]: [100, 50, (ts) => doStep(ts, [1, 0])],
-        [keys.KEY_DOWN]: [100, 50, (ts) => doStep(ts, [0, 1])],
-        [keys.KEY_UP]: [100, 50, (ts) => doStep(ts, [0, -1])],
-        [keys.KEY_ACTION]: [100, 50, (ts) => doStep(ts, nstep)],
-        [keys.KEY_EXTEND]: [3000, 1000, (ts) => updateGrade(ts)]
+        [app.keys.KEY_LEFT]: [100, 50, (ts) => doStep(ts, [-1, 0])],
+        [app.keys.KEY_RIGHT]: [100, 50, (ts) => doStep(ts, [1, 0])],
+        [app.keys.KEY_DOWN]: [100, 50, (ts) => doStep(ts, [0, 1])],
+        [app.keys.KEY_UP]: [100, 50, (ts) => doStep(ts, [0, -1])],
+        [app.keys.KEY_ACTION]: [100, 50, (ts) => doStep(ts, nstep)],
+        [app.keys.KEY_EXTEND]: [3000, 1000, (ts) => updateGrade(ts)]
     };
 
     function randomCell() {        
         return app.cells[~~(Math.random() * app.cells.length)];
     }
 
-    const init = (ts, mainApp) => {
-        app = mainApp;
+    const init = (ts, mainStatus) => {
+        status = mainStatus;
         headCell = randomCell();
         initLevel(ts);
     }
     const update = (ts) => {
-        if (!app.status.over) {
-            if (ts - lastTagTime > app.speeds[app.status.speed]) {
+        if (!status.over) {
+            if (ts - lastTagTime > app.speeds[status.speed]) {
                 lastTagTime = ts;
                 doStep(ts, nstep);
             }
