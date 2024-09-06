@@ -9,7 +9,7 @@ function game(app, { } = {}) {
     let actionCallbacks;
 
     let flybody = [[0, 1, 0], [1, 1, 1], [0, 1, 0], [1, 0, 1]];
-    let app, backCell, distance, flyItem;
+    let status, backCell, distance, flyItem;
     let otherItems;
     let overItems;
     let itemDistance = 16;

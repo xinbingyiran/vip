@@ -7,7 +7,7 @@ function game(app, { } = {}) {
 
     let flybody = [[0, 1, 0], [1, 1, 1], [0, 1, 0], [1, 0, 1]];
     let itemBody = [...flybody].reverse();
-    let app, backCell, distance, flyItem;
+    let status, backCell, distance, flyItem;
     let otherItems;
     let itemDistance = 12;
 
