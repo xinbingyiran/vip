@@ -10,7 +10,7 @@ function game(app, { isAddtion = false } = {}) {
     let scoreItems;
     let overItems;
 
-    let app, actionItem, baseBoard;
+    let status, actionItem, baseBoard;
 
     function createEmptyRow() {
         let emptyRow = [];

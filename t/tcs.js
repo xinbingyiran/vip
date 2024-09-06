@@ -2,7 +2,7 @@ function game(app, { loop = false } = {}) {
     const maxLevel = 30;
     let lastTagTime = 0;
 
-    let app, food, snake, nstep, headCell;
+    let status, food, snake, nstep, headCell;
 
     function updateBoard(ts) {
         app.mainBoard.forEach(row => row.fill(app.emptyCell));

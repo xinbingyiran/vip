@@ -39,7 +39,7 @@ function game(app, { tankCount = 25, bossLife = 1 } = {}) {
 
     let tankPosions;
 
-    let app, tankItem, bossItem, tankCell;
+    let status, tankItem, bossItem, tankCell;
     function updateBoard(ts) {
         for (let r = 0; r < app.mainRows; r++) {
             for (let c = 0; c < app.mainCols; c++) {

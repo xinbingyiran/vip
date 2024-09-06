@@ -6,7 +6,7 @@ function game(app, {}={}) {
     let lastTagTime = 0;
 
     let flybody = [[0, 1, 0], [1, 1, 1], [0, 1, 0], [1, 0, 1]];
-    let app, backCell, distance, flyItem;
+    let status, backCell, distance, flyItem;
     let baseBoard = [];
     let itemBodys = [];
     let itemIndex, itemDistance = 12;
