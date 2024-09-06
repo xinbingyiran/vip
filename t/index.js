@@ -424,7 +424,54 @@
         addFreezeCallback(createFlashCallback(callback, delay));
     }
 
-    let voice = undefined;
+    function createVoice() {
+        if (!globalThis.AudioContext) {
+            return {};
+        }
+        const urlSource = {};
+        let context = undefined;
+        const sources = new Set();
+        const getAudioFromUrl = async url => {
+            const resp = await fetch(url);
+            if(!resp.ok){
+                throw resp;
+            }
+            const buffer = await resp.arrayBuffer();
+            return await context.decodeAudioData(buffer);
+        }
+        const play = async (url, offset, duration) => {
+            context ??= new AudioContext();
+            try {
+                url = new URL(url, globalThis.location.href).href;
+                const audioData = await (urlSource[url] ??= getAudioFromUrl(url));
+                const source = context.createBufferSource();
+                source.buffer = audioData;
+                source.connect(context.destination);
+                source.onended = () => sources.delete(source);
+                source.start(0, offset, duration);
+                sources.add(source);
+            }
+            catch (e) { }
+        }
+        const stop = async ()=>{
+            for (const source of sources) {
+                source.stop();
+            }
+            sources.clear();
+        }
+        return {
+            get play() { return play; },
+            get stop() { return stop; },
+            // clear: () => play("./static/music.mp3", 0, 0.7675),
+            // fall: () => play("./static/music.mp3", 1.2558, 0.3546),
+            // rotate: () => play("./static/music.mp3", 2.2471, 0.0807),
+            // move: () => play("./static/music.mp3", 2.9088, 0.1437),
+            // gamestart: () => play("./static/music.mp3", 3.7202, 3.6224),
+            // gameover: () => play("./static/music.mp3", 8.1276, 1.1437),
+        };
+    }
+
+    const voice = createVoice();
 
     const app = {
         get mainBoard() { return mainBoard; },
@@ -451,7 +498,8 @@
             init: false,
             main,
             status: createStatus(initSpeed),
-        };
+        };        
+        //await app.voice.gamestart?.();
         addFlashCallback(undefined, 30);
     }
 
@@ -660,6 +708,9 @@
         }
         updateGame(gameTime, newActions);
         drawBoard();
+        // if(currentInstance.status.over){
+        //     app.voice.gameover?.();
+        // }
         return true;
     }
 
@@ -670,39 +721,7 @@
         requestAnimationFrame(gameLoop);
     }
 
-    const createLoader = (path, option) => async () => {
-        if (voice === undefined && globalThis.AudioContext) {
-            try {
-                const context = new AudioContext()
-                const resp = await fetch('./static/music.mp3');
-                if (!resp.ok) {
-                    throw resp;
-                }
-                const buffer = await resp.arrayBuffer();
-                const buf = await context.decodeAudioData(buffer);
-                const getSource = () => {
-                    const source = context.createBufferSource()
-                    source.buffer = buf
-                    source.connect(context.destination)
-                    return source
-                }
-                voice = {
-                    getSource: getSource,
-                    clear: () => getSource().start(0, 0, 0.7675),
-                    fall: ()=> getSource().start(0, 1.2558, 0.3546),
-                    rotate: ()=> getSource().start(0, 2.2471, 0.0807),
-                    move: ()=> getSource().start(0, 2.9088, 0.1437),
-                    start: () => getSource().start(0, 3.7202, 3.6224),
-                    gameover: ()=> getSource().start(0, 8.1276, 1.1437),
-                };
-            }
-            catch (e) { }
-            finally {
-                voice ??= {};
-            }
-        }
-        return (await import(path)).default(app, option);
-    };
+    const createLoader = (path, option) => async () => (await import(path)).default(app, option);
 
     const gameList = {
         '标准方块': createLoader('./fk.js', { hasExtend: false, hasHelper: false }),
