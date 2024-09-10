@@ -52,13 +52,13 @@
         };
 
         status.updateLife = (maxLife, isAdd) => {
-            status.life += isAdd ? 1 : -1;
-            if (status.life > maxLife) {
-                status.life = maxLife;
+            life += isAdd ? 1 : -1;
+            if (life > maxLife) {
+                life = maxLife;
                 return false;
             }
-            if (status.life < 0) {
-                status.life = 0;
+            if (life < 0) {
+                life = 0;
                 status.over = true;
                 return false;
             }
@@ -66,18 +66,18 @@
         }
 
         status.updateGrade = (maxLevel) => {
-            status.level += 1;
-            if (status.level >= maxLevel) {
-                status.level = maxLevel;
+            level += 1;
+            if (level >= maxLevel) {
+                level = maxLevel;
                 return false;
             }
             return true;
         }
 
         status.updateSpeed = (maxSpeed) => {
-            status.speed += 1;
-            if (status.speed >= maxSpeed) {
-                status.speed = 0;
+            speed += 1;
+            if (speed >= maxSpeed) {
+                speed = 0;
                 return false;
             }
             return true;
