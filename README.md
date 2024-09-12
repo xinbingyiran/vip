@@ -13,6 +13,7 @@
 [虫部落](https://search.chongbuluo.com/) [`主站`](https://www.chongbuluo.com/)
 - [聚集TV](https://v.ijujitv.cc/)
 - [up云搜(1919/1918)](https://www.upyunso.com/#1919/1918)
+ [猫狸盘搜(5678)](https://www.alipansou.com/#5678)
  [阿里U盘](https://aliupan.com/)
  [阿里云盘资源分享](https://wp.gxnas.com/11785.html)
  [阿里小站](https://pan666.net/) [`导航`](https://www.pan666.cn/)  [`导航2`](https://nav.magictool.cn/)
