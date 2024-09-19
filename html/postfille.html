@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta path="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=0.5,maximum-scale=2,user-scalable=1">
+  <title>文件上传</title>
+</head>
+
+<body>
+  <span id="message"></span><br />
+  <input id="path" type="text" value="/" />
+  <input type="button" onclick="load()" value="获取" /><br />
+  <span id="list"></span><br />
+  <input type="file" path="file" multiple="multiple" id="files" onchange="choosefile()" /><br />
+  <span id="name"></span><br />
+  <input type="button" onclick="upload()" value="上传" />
+  <script type="text/javascript">
+    const baseUrl = "http://192.168.1.118";
+    const items = [];
+    function showMessage(msg) {
+      document.querySelector('#message').innerText = msg;
+    }
+    async function choosefile() {
+      items.splice(0, items.length);
+      const fileList = document.querySelector('#files').files;
+      const nameList = document.querySelector('#name');
+      [...nameList.childNodes].forEach(s => nameList.removeChild(s));
+      for (let i = 0; i < fileList.length; i++) {
+        const fi = fileList[i];
+        const buffer = await new Promise(function (resolve, reject) {
+          let reader = new FileReader();
+          reader.onload = function (e) {
+            resolve(e.target.result);
+          }
+          reader.readAsArrayBuffer(fi);
+        });
+        const div = document.createElement('div');
+        div.appendChild(document.createTextNode(fi.name + ' - ' + fi.size));
+        const statusNode = document.createTextNode("准备上传！");
+        div.appendChild(statusNode);
+        nameList.appendChild(div);
+        items.push({
+          name: fi.name,
+          type: fi.type,
+          size: fi.size,
+          buffer: buffer,
+          statusNode: statusNode
+        });
+      }
+
+    }
+    async function load() {
+      showMessage("正在获取文件列表...");
+      const path = document.querySelector('#path').value;
+      const resp = await fetch(baseUrl + '/File/List?path=' + path);
+      if (resp.status !== 200) {
+        showMessage(`获取文件列表失败：${resp.statusText}[${resp.status}]`);
+        return;
+      }
+      const list = document.querySelector('#list');
+      [...list.childNodes].forEach(s => list.removeChild(s));
+      (await resp.json()).forEach(element => {
+        const div = document.createElement('div');
+        div.appendChild(document.createTextNode(element.name + ' - ' + element.size));
+        if (!element.name.endsWith('/')) {
+          const down = document.createElement('a');
+          down.href = baseUrl + '/File/Download?path=' + path.trimEnd('/') + '/' + element.name;
+          down.text = '下载';
+          down.style.marginLeft = '10px';
+          div.appendChild(down);
+        }
+        const del = document.createElement('a');
+        del.href = "javascript:void(0)";
+        del.text = '删除';
+        del.style.marginLeft = '10px';
+        del.onclick = async function () {
+          const deleteType = element.name.endsWith('/') ? '目录' : '文件';
+          showMessage(`正在删除${deleteType}...`);
+          const resp = await fetch(baseUrl + '/File/Delete?path=' + encodeURIComponent(path.trimEnd('/') + '/' + element.name), {method: 'POST'});
+          if (resp.status !== 200) {
+            showMessage(`删除${deleteType}失败：${resp.statusText}[${resp.status}]`);
+            return;
+          }
+          showMessage(`删除${deleteType}完成。`);
+        }
+        div.appendChild(del);
+        list.appendChild(div);
+      });
+      showMessage("获取文件列表完成。");
+    }
+    async function upload() {
+      showMessage("正在上传...");
+      for (const item of items) {
+        item.statusNode.textContent = "上传中。。。";
+        const resp = await fetch(baseUrl + '/File/Add?path=' + encodeURIComponent(document.querySelector('#path').value.trimEnd('/') + '/' + item.name), {
+          method: 'POST',
+          body: item.buffer
+        });
+        if (resp.status !== 200) {
+          item.statusNode.textContent = `上传文件失败：${resp.statusText}[${resp.status}]`;
+        }
+        else {
+          item.statusNode.textContent = "上传完成！";
+        }
+      }
+      showMessage("上传文件完成。");
+    }
+  </script>
+</body>
+
+</html>
