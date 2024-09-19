@@ -45,9 +45,9 @@
         let life = subRows;
         const status = {
             score: 0,
-            get speed() { return speed; },
-            get level() { return level; },
-            get life() { return life; },
+            get speed() {return speed;},
+            get level() {return level;},
+            get life() {return life;},
             over: false,
         };
 
@@ -257,7 +257,7 @@
     const updateDownActions = (newAction, add) => add ? downActions.add(newAction) : downActions.delete(newAction);
     function checkGamepads() {
         const actions = new Set();
-        const gamepads = navigator.getGamepads ? navigator.getGamepads() : undefined;
+        const gamepads = globalThis.location.protocol.startsWith("https:") && navigator.getGamepads ? navigator.getGamepads() : undefined;
         if (!gamepads) {
             return actions;
         }
@@ -296,12 +296,12 @@
         let lastEts = 0;
         let scells = [...cells].sort(() => Math.random() - 0.5);
         const flashArray = [
-            ...Array.from({ length: mainRows }, (_, i) => () => {
+            ...Array.from({length: mainRows}, (_, i) => () => {
                 for (let j = 0; j < mainCols; j++) {
                     mainBoard[mainRows - i - 1][j] = scells[Math.min(Math.min(i, j), Math.min(mainCols - j - 1, mainRows - i - 1)) % scells.length];
                 }
             }),
-            ...Array.from({ length: mainRows }, (_, i) => () => {
+            ...Array.from({length: mainRows}, (_, i) => () => {
                 for (let j = 0; j < mainCols; j++) {
                     mainBoard[i][j] = emptyCell;
                 }
@@ -358,37 +358,40 @@
         const canvas = document.createElement('canvas');
         canvas.width = blockSize;
         canvas.height = blockSize;
-        const context = canvas.getContext('2d');
-        const result = new Array(10).fill(0).map((_, i) => new Promise(r => {
-            const img = new Image(blockSize - cellSpace * 2, blockSize - cellSpace * 2);
-            img.src = `./imgs/${i + 1}.png`;
-            let shadowColor = undefined;
-            const item = {
-                color: shadowColor,
-                draw: (ctx, cols, rows) => {
-                    ctx.shadowOffsetX = cellSpace;
-                    ctx.shadowOffsetY = cellSpace;
-                    ctx.shadowBlur = cellSpace * 2;
-                    ctx.fillStyle = shadowColor;
-                    ctx.strokeStyle = shadowColor;
-                    ctx.shadowColor = shadowColor;
-                    ctx.strokeRect(cols * blockSize, rows * blockSize, blockSize - cellSpace * 2, blockSize - cellSpace * 2);
-                    ctx.drawImage(img, cols * blockSize, rows * blockSize, blockSize - cellSpace * 2, blockSize - cellSpace * 2);
+        const context = canvas.getContext('2d', {willReadFrequently: true});
+        const result = [];
+        for (let i = 0; i < 10; i++) {
+            result.push(await new Promise(r => {
+                const img = new Image(blockSize - cellSpace * 2, blockSize - cellSpace * 2);
+                img.src = `./imgs/${i + 1}.png`;
+                let shadowColor = undefined;
+                const item = {
+                    color: shadowColor,
+                    draw: (ctx, cols, rows) => {
+                        ctx.shadowOffsetX = cellSpace;
+                        ctx.shadowOffsetY = cellSpace;
+                        ctx.shadowBlur = cellSpace * 2;
+                        ctx.fillStyle = shadowColor;
+                        ctx.strokeStyle = shadowColor;
+                        ctx.shadowColor = shadowColor;
+                        ctx.strokeRect(cols * blockSize, rows * blockSize, blockSize - cellSpace * 2, blockSize - cellSpace * 2);
+                        ctx.drawImage(img, cols * blockSize, rows * blockSize, blockSize - cellSpace * 2, blockSize - cellSpace * 2);
+                    }
                 }
-            }
-            img.onload = () => {
-                context.drawImage(img, 0, 0, blockSize - cellSpace * 2, blockSize - cellSpace * 2);
-                const imageData = context.getImageData(0, 0, blockSize - cellSpace * 2, blockSize - cellSpace * 2);
-                const datas = [0, 0, 0, 0];
-                imageData.data.forEach((v, i) => {
-                    datas[i % 4] += v;
-                });
-                const total = imageData.width * imageData.height;
-                item.color = shadowColor = `rgba(${~~(datas[0] / total)}, ${~~(datas[1] / total)},${~~(datas[2] / total)},${~~(datas[3] / total)})`;
-                r(item);
-            }
-        }));
-        return await Promise.all(result);
+                img.onload = () => {
+                    context.drawImage(img, 0, 0, blockSize - cellSpace * 2, blockSize - cellSpace * 2);
+                    const imageData = context.getImageData(0, 0, blockSize - cellSpace * 2, blockSize - cellSpace * 2);
+                    const datas = [0, 0, 0, 0];
+                    imageData.data.forEach((v, i) => {
+                        datas[i % 4] += v;
+                    });
+                    const total = imageData.width * imageData.height;
+                    item.color = shadowColor = `rgba(${~~(datas[0] / total)}, ${~~(datas[1] / total)},${~~(datas[2] / total)},${~~(datas[3] / total)})`;
+                    r(item);
+                }
+            }))
+        };
+        return result;
     };
 
     let colorCells = () => ["red", "green", "blue", "purple", "orange"].map(color => crateColorCellMaker(color));
@@ -433,7 +436,7 @@
         const sources = new Set();
         const getAudioFromUrl = async url => {
             const resp = await fetch(url);
-            if(!resp.ok){
+            if (!resp.ok) {
                 throw resp;
             }
             const buffer = await resp.arrayBuffer();
@@ -453,15 +456,15 @@
             }
             catch (e) { }
         }
-        const stop = async ()=>{
+        const stop = async () => {
             for (const source of sources) {
                 source.stop();
             }
             sources.clear();
         }
         return {
-            get play() { return play; },
-            get stop() { return stop; },
+            get play() {return play;},
+            get stop() {return stop;},
             // clear: () => play("./static/music.mp3", 0, 0.7675),
             // fall: () => play("./static/music.mp3", 1.2558, 0.3546),
             // rotate: () => play("./static/music.mp3", 2.2471, 0.0807),
@@ -474,19 +477,19 @@
     const voice = createVoice();
 
     const app = {
-        get mainBoard() { return mainBoard; },
-        get subBoard() { return subBoard; },
-        get mainRows() { return mainRows; },
-        get mainCols() { return mainCols; },
-        get subRows() { return subRows; },
-        get subCols() { return subCols; },
-        get cells() { return cells; },
-        get emptyCell() { return emptyCell; },
-        get speeds() { return speeds; },
-        get keys() { return keys; },
-        get voice() { return voice; },
-        get addFreezeCallback() { return addFreezeCallback; },
-        get addFlashCallback() { return addFlashCallback; },
+        get mainBoard() {return mainBoard;},
+        get subBoard() {return subBoard;},
+        get mainRows() {return mainRows;},
+        get mainCols() {return mainCols;},
+        get subRows() {return subRows;},
+        get subCols() {return subCols;},
+        get cells() {return cells;},
+        get emptyCell() {return emptyCell;},
+        get speeds() {return speeds;},
+        get keys() {return keys;},
+        get voice() {return voice;},
+        get addFreezeCallback() {return addFreezeCallback;},
+        get addFlashCallback() {return addFlashCallback;},
     }
 
 
@@ -498,7 +501,7 @@
             init: false,
             main,
             status: createStatus(initSpeed),
-        };        
+        };
         //await app.voice.gamestart?.();
         addFlashCallback(undefined, 30);
     }
@@ -659,7 +662,7 @@
                     continue;
                 }
                 if (findMap.length == 3) {
-                    currentActions[key] = { fdelay: findMap[0], odelay: findMap[1], callback: findMap[2], ts: ts, ticks: 0, allow: findMap[2](ts) };
+                    currentActions[key] = {fdelay: findMap[0], odelay: findMap[1], callback: findMap[2], ts: ts, ticks: 0, allow: findMap[2](ts)};
                 }
             }
         }
@@ -724,16 +727,16 @@
     const createLoader = (path, option) => async () => (await import(path)).default(app, option);
 
     const gameList = {
-        '标准方块': createLoader('./fk.js', { hasExtend: false, hasHelper: false }),
-        '扩展方块': createLoader('./fk.js', { hasExtend: true, hasHelper: false }),
-        '方块带辅助': createLoader('./fk.js', { hasExtend: false, hasHelper: true }),
-        '扩展方块带辅助': createLoader('./fk.js', { hasExtend: true, hasHelper: true }),
-        '贪吃蛇': createLoader('./tcs.js', { loop: false }),
-        '疯狂贪吃蛇': createLoader('./tcs.js', { loop: true }),
-        '疯狂射击': createLoader('./sx.js', { isAddtion: false }),
-        '疯狂垒墙': createLoader('./sx.js', { isAddtion: true }),
-        '坦克大战': createLoader('./tk.js', { tankCount: 25, bossLife: 1 }),
-        '坦克大战领主': createLoader('./tk.js', { tankCount: 1, bossLife: 5 }),
+        '标准方块': createLoader('./fk.js', {hasExtend: false, hasHelper: false}),
+        '扩展方块': createLoader('./fk.js', {hasExtend: true, hasHelper: false}),
+        '方块带辅助': createLoader('./fk.js', {hasExtend: false, hasHelper: true}),
+        '扩展方块带辅助': createLoader('./fk.js', {hasExtend: true, hasHelper: true}),
+        '贪吃蛇': createLoader('./tcs.js', {loop: false}),
+        '疯狂贪吃蛇': createLoader('./tcs.js', {loop: true}),
+        '疯狂射击': createLoader('./sx.js', {isAddtion: false}),
+        '疯狂垒墙': createLoader('./sx.js', {isAddtion: true}),
+        '坦克大战': createLoader('./tk.js', {tankCount: 25, bossLife: 1}),
+        '坦克大战领主': createLoader('./tk.js', {tankCount: 1, bossLife: 5}),
         '躲避敌人': createLoader('./fly.js', {}),
         '窄道通行': createLoader('./fly2.js', {}),
         '飞行射击': createLoader('./fly3.js', {}),
