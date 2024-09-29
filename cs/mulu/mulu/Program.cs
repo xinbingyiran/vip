@@ -98,27 +98,27 @@ public partial class Program
 
     }
 
-    private static async Task CheckTokenAsync(Ini ini)
-    {
-        try
-        {
-            string text = zxxzdz1 + "list";
-            if ((await _client.GetAsync(text)).IsSuccessStatusCode)
-            {
-                var ZXXZ_To = ini.GetStringValue("C3", "ZaiXian_To", "WLCW");
-                var toPath = ZXXZ_To + "To.txt";
-                Console.WriteLine(toPath);
-                string stringValue = Ini.ParseString(await _client.GetStringAsync(toPath)).GetStringValue("To", "On1", "WLCW");
-                Console.WriteLine("------------------------------------------------------------------------");
-                Console.WriteLine(stringValue);
-                //await File.WriteAllTextAsync("to.txt", stringValue);
-                Console.WriteLine("------------------------------------------------------------------------");
-            }
-        }
-        catch (HttpRequestException)
-        {
-        }
-    }
+    // private static async Task CheckTokenAsync(Ini ini)
+    // {
+    //     try
+    //     {
+    //         string text = zxxzdz1 + "list";
+    //         if ((await _client.GetAsync(text)).IsSuccessStatusCode)
+    //         {
+    //             var ZXXZ_To = ini.GetStringValue("C3", "ZaiXian_To", "WLCW");
+    //             var toPath = ZXXZ_To + "To.txt";
+    //             Console.WriteLine(toPath);
+    //             string stringValue = Ini.ParseString(await _client.GetStringAsync(toPath)).GetStringValue("To", "On1", "WLCW");
+    //             Console.WriteLine("------------------------------------------------------------------------");
+    //             Console.WriteLine(stringValue);
+    //             //await File.WriteAllTextAsync("to.txt", stringValue);
+    //             Console.WriteLine("------------------------------------------------------------------------");
+    //         }
+    //     }
+    //     catch (HttpRequestException)
+    //     {
+    //     }
+    // }
 
     public static async Task SyncGameAsync(Game game, string tt1a002A)
     {
@@ -198,7 +198,7 @@ public partial class Program
         Ini ini = Ini.ParseString(str);
         var tt1a001 = ini.GetStringValue("zhu", "wj", "WLCW");
         var tt1a002A = ini.GetStringValue("zhu", "shuju1", "WLCW");
-        await CheckTokenAsync(ini);
+        //await CheckTokenAsync(ini);
 
         var wjurl = tt1a001 + "WenJian.json";
         Console.WriteLine(wjurl);

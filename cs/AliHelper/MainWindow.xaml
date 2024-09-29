@@ -5,57 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AliHelper"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}" TextBlock.FontSize="20">
-    <Window.Resources>
-        <HierarchicalDataTemplate DataType="{x:Type local:FolderItem}" ItemsSource="{Binding Items}">
-            <DockPanel VerticalAlignment="Center">
-                <Button DockPanel.Dock="Right" Command="{x:Static local:Commands.List}" CommandParameter="{Binding}" Margin="3" Padding="10,0">获取列表</Button>
-                <TextBlock VerticalAlignment="Center">
-                    <Run Text="[文件夹] "></Run>
-                    <Run Text="{Binding Name}"></Run>
-                </TextBlock>
-            </DockPanel>
-        </HierarchicalDataTemplate>
-        <DataTemplate DataType="{x:Type local:FileItem}">
-            <DockPanel VerticalAlignment="Center">
-                <TextBlock DockPanel.Dock="Right" VerticalAlignment="Center">
-                    <TextBlock.Style>
-                        <Style TargetType="{x:Type TextBlock}">
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding Url}" Value="{x:Null}">
-                                    <Setter Property="Visibility" Value="Collapsed"></Setter>
-                                </DataTrigger>
-                                <DataTrigger Binding="{Binding Url}" Value="">
-                                    <Setter Property="Visibility" Value="Collapsed"></Setter>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </TextBlock.Style>
-                    <Hyperlink NavigateUri="{Binding Url}" CommandParameter="{Binding}" Command="{x:Static local:Commands.Preview}">
-                        <Run Text="{Binding Url}"></Run>
-                    </Hyperlink>
-                </TextBlock>
-                <Button DockPanel.Dock="Right" Command="{x:Static local:Commands.Preview}" CommandParameter="{Binding}" Margin="3" Padding="10,0">获取地址</Button>
-                <TextBlock VerticalAlignment="Center">
-                    <Run Text="[文件] "></Run>
-                    <Run Text="{Binding Name}"></Run>
-                </TextBlock>
-            </DockPanel>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type local:DriverItem}">
-            <TextBlock Text="{Binding Name}"></TextBlock>
-        </DataTemplate>
-    </Window.Resources>
-    <DockPanel>
-        <StatusBar DockPanel.Dock="Bottom" Margin="3">
-            <TextBlock Text="{Binding Status}" FontSize="20">
-            </TextBlock>
-        </StatusBar>
-        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" TextBlock.FontSize="20" HorizontalAlignment="Right">
-            <ComboBox ItemsSource="{Binding Drivers}" SelectedItem="{Binding CurrentDriver}" Width="100" Margin="3"></ComboBox>
-            <Button Command="{x:Static local:Commands.List}" CommandParameter="{x:Null}" Margin="3" Padding="10,0">获取列表</Button>
-        </StackPanel>
-        <TreeView Margin="3" ItemsSource="{Binding Root.Items}">
-        </TreeView>
-    </DockPanel>
+        WindowStartupLocation="CenterScreen"
+        Title="功能选择" Height="120" Width="240" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}">
+    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.FontSize="20">
+        <Button Margin="10" Command="{x:Static local:Commands.Ali}">阿里解析</Button>
+        <Button Margin="10" Command="{x:Static local:Commands.TianYi}">天翼解析</Button>
+    </StackPanel>
 </Window>

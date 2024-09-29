@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AliHelper"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="QrWindow" Width="440" Height="480" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}">
     <DockPanel>
         <StatusBar DockPanel.Dock="Bottom">
