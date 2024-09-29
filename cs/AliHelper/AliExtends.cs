@@ -12,7 +12,7 @@ using System.Net.Http.Json;
 
 namespace AliHelper
 {
-    internal class Helper
+    internal class AliExtends
     {
 
         public static readonly Random RANDOM = new Random();
@@ -38,7 +38,7 @@ namespace AliHelper
             .Concat("abcdef".Select((c, i) => (c, i: (byte)(i + 10))))
             .ToDictionary(s => s.c, s => s.i);
         private static readonly HttpClient client = new();
-        static Helper()
+        static AliExtends()
         {
             var x9 = GMNamedCurves.GetByName("SM2P256V1");
 

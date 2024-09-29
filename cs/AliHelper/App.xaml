@@ -4,6 +4,36 @@
              xmlns:local="clr-namespace:AliHelper"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <local:NullOrEmptyConverter x:Key="CollapsedIfNullOrEmpty" EmptyValue="" NullValue="{x:Static Visibility.Collapsed}" NotNullValue="{x:Static Visibility.Visible}"></local:NullOrEmptyConverter>
+        <local:NullOrEmptyConverter x:Key="CollapsedIfNotNullOrEmpty" EmptyValue="" NullValue="{x:Static Visibility.Visible}" NotNullValue="{x:Static Visibility.Collapsed}"></local:NullOrEmptyConverter>
+        <HierarchicalDataTemplate DataType="{x:Type local:IFolderViewItem}" ItemsSource="{Binding Items}">
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBox VerticalAlignment="Center" IsReadOnly="True" BorderThickness="0" Margin="3" Text="{Binding Name}"></TextBox>
+                <Button Command="{x:Static local:Commands.List}" CommandParameter="{Binding}" Margin="3" Visibility="{Binding RefreshTag,Converter={StaticResource CollapsedIfNullOrEmpty}}">获取列表</Button>
+            </StackPanel>
+        </HierarchicalDataTemplate>
+        <DataTemplate DataType="{x:Type local:IFileViewItem}">
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBox VerticalAlignment="Center" IsReadOnly="True" BorderThickness="0" Margin="3" Text="{Binding Name}"></TextBox>
+                <TextBlock VerticalAlignment="Center" Margin="3">
+                    <Run Text="【"></Run>
+                    <Run Text="{Binding Size, Mode=OneWay}"></Run>
+                    <Run Text="】"></Run>
+                </TextBlock>
+                <Button Command="{x:Static local:Commands.Get}" CommandParameter="{Binding}" Margin="3" Visibility="{Binding Url, Converter={StaticResource CollapsedIfNotNullOrEmpty}}">获取地址</Button>
+                <TextBlock VerticalAlignment="Center" Margin="3" Visibility="{Binding Url, Converter={StaticResource CollapsedIfNullOrEmpty}}">
+                    <Hyperlink Command="{x:Static local:Commands.DownLoad}" CommandParameter="{Binding Url}">
+                        <Run Text="下载"></Run>
+                    </Hyperlink>                    
+                    <Hyperlink Command="{x:Static local:Commands.Copy}" CommandParameter="{Binding Url}">
+                        <Run Text="复制链接"></Run>
+                    </Hyperlink>
+                </TextBlock>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:AliDriverItem}">
+            <TextBlock Text="{Binding Name}"></TextBlock>
+        </DataTemplate>
+        <local:StandardDataTemplateSelector x:Key="iselector"></local:StandardDataTemplateSelector>
     </Application.Resources>
 </Application>
