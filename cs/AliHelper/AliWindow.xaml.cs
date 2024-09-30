@@ -1,4 +1,6 @@
-﻿using System.Collections.ObjectModel;
+﻿using Org.BouncyCastle.Asn1.X509;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.InteropServices.JavaScript;
 using System.Text;
@@ -31,6 +33,18 @@ namespace AliHelper
         public static readonly DependencyProperty StatusProperty =
             DependencyProperty.Register("Status", typeof(string), typeof(AliWindow), new PropertyMetadata(null));
 
+
+
+
+        public string? Source
+        {
+            get { return (string?)GetValue(SourceProperty); }
+            set { SetValue(SourceProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Source.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty SourceProperty =
+            DependencyProperty.Register("Source", typeof(string), typeof(AliWindow), new PropertyMetadata(""));
 
 
 
@@ -85,13 +99,55 @@ namespace AliHelper
             CommandBindings.Add(new CommandBinding(Commands.Copy, OnCopy, CanCopy));
             CommandBindings.Add(new CommandBinding(Commands.DownLoad, OnDownLoad, CanDownLoad));
         }
+        private static IEnumerable<string> CollectFileUrls(AliViewItem item, string folder)
+        {
+            if (item is AliFileItem fi)
+            {
+                if (string.IsNullOrEmpty(fi.Url))
+                {
+                    yield break;
+                }
+                yield return $"{folder}{fi.Name}： {fi.Url}";
+            }
+            else if (item is AliFolderItem di && di.Items is ObservableCollection<AliViewItem> items)
+            {
+                var subFolder = $"{folder}{di.Name}/";
+                foreach (var subItem in items)
+                {
+                    foreach (var result in CollectFileUrls(subItem, subFolder))
+                    {
+                        yield return result;
+                    }
+                }
+            }
+        }
+
+        private async Task TryGetFileUrl(AliFileItem item)
+        {
+            using var result = await AliExtends.AliOpenQueryAsync("/adrive/v1.0/openFile/getDownloadUrl", _access_token, new Dictionary<string, object?>
+            {
+                { "drive_id", item.Driver },
+                { "file_id",item.Current }
+            });
+            if (result is null)
+            {
+                throw new Exception($"获取下载地址失败：{item.Name} 【返回内容无效】");
+            }
+            if (result.RootElement.TryGetProperty("url", out var url))
+            {
+                item.Url = url.GetString();
+                return;
+            }
+            throw new Exception($"获取下载地址失败：{item.Name} 【返回内容无URL】");
+        }
+
         private void CanList(object sender, CanExecuteRoutedEventArgs e)
         {
             e.CanExecute = _access_token is not null && !_isLoading && ((e.Parameter is AliFolderItem item && (!string.IsNullOrWhiteSpace(item.Marker) || item.Items is null)) || CurrentDriver is not null);
         }
         private void CanGet(object sender, CanExecuteRoutedEventArgs e)
         {
-            e.CanExecute = _access_token is not null && !_isLoading && e.Parameter is AliFileItem item && string.IsNullOrEmpty(item.Url);
+            e.CanExecute = _access_token is not null && !_isLoading;
         }
         private void CanCopy(object sender, CanExecuteRoutedEventArgs e)
         {
@@ -137,21 +193,22 @@ namespace AliHelper
                     UpdateStatus("已完成获取。。。");
                     return;
                 }
-                var result = await AliExtends.AliOpenQueryAsync("/adrive/v1.0/openFile/list", _access_token, new Dictionary<string, object?>
+                using var result = await AliExtends.AliOpenQueryAsync("/adrive/v1.0/openFile/list", _access_token, new Dictionary<string, object?>
                 {
                     { "drive_id", item.Driver },
                     { "parent_file_id",item.Current },
                     { "marker",item.Marker }
                 });
-                if (result is not JsonElement element)
+                if (result is null)
                 {
                     UpdateStatus("返回内容无效。。。");
                     return;
                 }
+                var element = result.RootElement;
                 item.Marker = element.GetProperty("next_marker").GetString();
                 item.RefreshTag = item.Marker;
                 var all = element.GetProperty("items");
-                var subItems = item.Items ??= new ObservableCollection<AliViewItem>();
+                var subItems = item.Items ??= [];
                 if (all.ValueKind == JsonValueKind.Array)
                 {
                     foreach (var citem in all.EnumerateArray())
@@ -178,6 +235,7 @@ namespace AliHelper
                         subItems.Add(viewItem);
                     }
                 }
+                Source = string.Join(Environment.NewLine, CollectFileUrls(item, "/"));
                 UpdateStatus("获取列表成功");
             }
             catch (Exception ex)
@@ -191,38 +249,88 @@ namespace AliHelper
             }
         }
 
+
+        private TaskCompletionSource? _batchSource = null;
         private async void OnGet(object sender, ExecutedRoutedEventArgs e)
         {
-            if (e.Parameter is not AliFileItem item)
+            if (e.Parameter is AliFileItem item)
             {
-                UpdateStatus("未指定源。。。");
-                return;
-            }
-            try
-            {
-                _isLoading = true;
-                UpdateStatus("正在获取地址。。。");
-                var result = await AliExtends.AliOpenQueryAsync("/adrive/v1.0/openFile/getDownloadUrl", _access_token, new Dictionary<string, object?>
+                Source = Root is null ? "" : string.Join(Environment.NewLine, CollectFileUrls(item, "/"));
+                if (!string.IsNullOrEmpty(item.Url))
                 {
-                    { "drive_id", item.Driver },
-                    { "file_id",item.Current }
-                });
-                if (result.Value.TryGetProperty("url", out var url))
-                {
-                    item.Url = url.GetString();
+                    UpdateStatus("已经获取过。。。");
+                    return;
                 }
-                UpdateStatus("获取地址成功");
+                try
+                {
+                    _isLoading = true;
+                    UpdateStatus($"正在获取地址：{item.Name}");
+                    await TryGetFileUrl(item);
+                    Source = Root is null ? "" : string.Join(Environment.NewLine, CollectFileUrls(item, "/"));
+                    UpdateStatus($"获取地址成功：{item.Name}");
+                }
+                catch (Exception ex)
+                {
+                    UpdateStatus($"获取地址失败：{item.Name} 【{ex.Message}】");
+                }
+                finally
+                {
+                    _isLoading = false;
+                    CommandManager.InvalidateRequerySuggested();
+                }
             }
-            catch (Exception ex)
+            else if (e.Parameter is AliFolderItem folder)
             {
-                UpdateStatus($"获取地址失败：{ex.Message}");
-            }
-            finally
-            {
-                _isLoading = false;
-                CommandManager.InvalidateRequerySuggested();
+                var oldCts = Interlocked.Exchange(ref _batchSource, null);
+                if (oldCts != null)
+                {
+                    oldCts.TrySetCanceled();
+                    await Task.Delay(10);
+                }
+                Source = Root is null ? "" : string.Join(Environment.NewLine, CollectFileUrls(folder, "/"));
+                if (folder.Items is not ObservableCollection<AliViewItem> items)
+                {
+                    UpdateStatus("无需获取。。。");
+                    return;
+                }
+                var findItems = items.Where(s => s is AliFileItem fi && string.IsNullOrEmpty(fi.Url)).Cast<AliFileItem>().ToArray();
+                if (findItems.Length <= 0)
+                {
+                    UpdateStatus("无需获取。。。");
+                    return;
+                }
+                var cts = new TaskCompletionSource();
+                if(Interlocked.CompareExchange(ref _batchSource, cts, null) != null)
+                {
+                    cts.TrySetCanceled();
+                    UpdateStatus("操作冲突，稍后再试。。。");
+                    return;
+                }
+                AliFileItem? currentFile = null;
+                try
+                {
+                    foreach (var fi in findItems)
+                    {
+                        currentFile = fi;
+                        UpdateStatus($"正在获取地址：{fi.Name}");
+                        await TryGetFileUrl(fi);
+                        Source = Root is null ? "" : string.Join(Environment.NewLine, CollectFileUrls(folder, "/"));
+                        await Task.WhenAny(Task.Delay(1000), cts.Task).Unwrap();
+                    }
+                    UpdateStatus($"批量获取地址成功：{findItems.Length}");
+                }
+                catch (Exception ex)
+                {
+                    cts.TrySetException(ex);
+                    UpdateStatus($"获取地址失败：{currentFile?.Name} 【{ex.Message}】");
+                }
+                finally
+                {
+                    cts.TrySetResult();
+                }
             }
         }
+
 
         private void OnCopy(object sender, ExecutedRoutedEventArgs e)
         {
@@ -284,20 +392,34 @@ namespace AliHelper
 
         private async Task<bool> Step1()
         {
-            string ck = string.Empty, t = string.Empty, codeContent = string.Empty;
-            async Task RefreshQrcode()
+            async Task<(string ck, string t, string codeContent)> RefreshQrcode()
             {
-                var code = await AliExtends.GetAliWebQrCodeAsync();
-                var contentData = code.Value.GetProperty("content").GetProperty("data");
-                ck = contentData.GetProperty("ck").GetString() ?? string.Empty;
-                t = contentData.GetProperty("t").GetRawText() ?? string.Empty;
-                codeContent = contentData.GetProperty("codeContent").GetString() ?? string.Empty;
+                using var result = await AliExtends.GetAliWebQrCodeAsync();
+                if (result is null)
+                {
+                    UpdateStatus("返回内容无效。。。");
+                    return default;
+                }
+                var contentData = result.RootElement.GetProperty("content").GetProperty("data");
+                var ck = contentData.GetProperty("ck").GetString() ?? string.Empty;
+                var t = contentData.GetProperty("t").GetRawText() ?? string.Empty;
+                var codeContent = contentData.GetProperty("codeContent").GetString() ?? string.Empty;
+                return (ck, t, codeContent);
             }
-            await RefreshQrcode();
+            var (ck, t, codeContent) = await RefreshQrcode();
+            if (ck is null)
+            {
+                return false;
+            }
             return await QrWindow.OpenAsync(win => win.UpdateFromContent(codeContent), async (win) =>
             {
-                var result = await AliExtends.CheckAliWebQrcodeAsync(ck, t, default);
-                var status = result.Value.GetProperty("content").GetProperty("data").GetProperty("qrCodeStatus").GetString();
+                using var result = await AliExtends.CheckAliWebQrcodeAsync(ck, t, default);
+                if (result is null)
+                {
+                    UpdateStatus("返回内容无效。。。");
+                    return false;
+                }
+                var status = result.RootElement.GetProperty("content").GetProperty("data").GetProperty("qrCodeStatus").GetString();
                 switch (status)
                 {
                     case "NEW":
@@ -332,20 +454,40 @@ namespace AliHelper
 
         private async Task<bool> Step2()
         {
-            string openCodeUrl = string.Empty, openCodeSid = string.Empty, authCode = string.Empty;
+            var authCode = string.Empty;
             var signObj = new Dictionary<string, object> { { "width", 250 }, { "height", 250 }, { "access_token", "" } };
-            async Task RefreshQrcode()
+            async Task<(string openCodeUrl, string openCodeSid)> RefreshQrcode()
             {
-                var openCode = await AliExtends.WoniuQueryAsync("/api/woniu/getQrcode", signObj);
-                openCodeUrl = openCode.Value.GetProperty("qrCodeUrl").GetString() ?? string.Empty;
-                openCodeSid = openCode.Value.GetProperty("sid").GetString() ?? string.Empty;
+                using var result = await AliExtends.WoniuQueryAsync("/api/woniu/getQrcode", signObj);
+                if (result is null)
+                {
+                    UpdateStatus("返回内容无效。。。");
+                    return default;
+                }
+                var openCodeUrl = result.RootElement.GetProperty("qrCodeUrl").GetString() ?? string.Empty;
+                var openCodeSid = result.RootElement.GetProperty("sid").GetString() ?? string.Empty;
+                return (openCodeUrl, openCodeSid);
             }
-            await RefreshQrcode();
+            var (openCodeUrl, openCodeSid) = await RefreshQrcode();
+            if (openCodeUrl is null)
+            {
+                return false;
+            }
             if (!await QrWindow.OpenAsync(win => win.UpdateFromUrl(openCodeUrl), async (win) =>
             {
-                var result = await AliExtends.CheckAliOpenQrcodeAsync(openCodeSid, default);
-                var status = result.Value.GetProperty("status").GetString();
-                authCode = result.Value.GetProperty("authCode").GetString() ?? string.Empty;
+                if(!this.IsVisible)
+                {
+                    return true;
+                }
+                using var result = await AliExtends.CheckAliOpenQrcodeAsync(openCodeSid, default);
+                if (result is null)
+                {
+                    UpdateStatus("返回内容无效。。。");
+                    return false;
+                }
+                var re = result.RootElement;
+                var status = re.GetProperty("status").GetString();
+                authCode = re.GetProperty("authCode").GetString() ?? string.Empty;
                 switch (status)
                 {
                     case "WaitLogin":
@@ -364,30 +506,41 @@ namespace AliHelper
                         await Task.Delay(500);
                         return false;
                 }
-            }))
+            }) || string.IsNullOrWhiteSpace(authCode))
             {
                 UpdateStatus("取消登录！");
                 return false;
             }
 
             signObj = new Dictionary<string, object>() { { "authCode", authCode }, { "access_token", "" } };
-            var param = await AliExtends.WoniuQueryAsync("/api/woniu/loginByCode", signObj);
-
-            _access_token = param.Value.GetProperty("access_token").GetString() ?? string.Empty;
-            _refresh_token = param.Value.GetProperty("refresh_token").GetString() ?? string.Empty;
-            _expires_in = param.Value.GetProperty("expires_in").GetInt32();
+            using var param = await AliExtends.WoniuQueryAsync("/api/woniu/loginByCode", signObj);
+            if (param is null)
+            {
+                UpdateStatus("返回内容无效。。。");
+                return false;
+            }
+            var element = param.RootElement;
+            _access_token = element.GetProperty("access_token").GetString() ?? string.Empty;
+            _refresh_token = element.GetProperty("refresh_token").GetString() ?? string.Empty;
+            _expires_in = element.GetProperty("expires_in").GetInt32();
             return true;
         }
 
         private async Task<bool> LoadDrivers()
         {
-            var result = await AliExtends.AliOpenQueryAsync("/adrive/v1.0/user/getDriveInfo", _access_token);
-            this.Title = result.Value.GetProperty("name").GetString();
+            using var result = await AliExtends.AliOpenQueryAsync("/adrive/v1.0/user/getDriveInfo", _access_token);
+            if (result is null)
+            {
+                UpdateStatus("返回内容无效。。。");
+                return false;
+            }
+            var element = result.RootElement;
+            this.Title = result.RootElement.GetProperty("name").GetString();
             var drivers = new List<AliDriverItem>();
             Drivers = null;
             CurrentDriver = null;
             AliDriverItem? current = null;
-            var defaultid = result.Value.GetProperty("default_drive_id").GetString();
+            var defaultid = element.GetProperty("default_drive_id").GetString();
             var driverMap = new Dictionary<string, string>
             {
                 { "backup_drive_id","备份盘" },
@@ -396,7 +549,7 @@ namespace AliHelper
             };
             foreach (var driver in driverMap)
             {
-                if (result.Value.TryGetProperty(driver.Key, out var value))
+                if (element.TryGetProperty(driver.Key, out var value))
                 {
                     var id = value.GetString();
                     if (!string.IsNullOrWhiteSpace(id))
@@ -424,10 +577,16 @@ namespace AliHelper
                 return false;
             }
             var signObj = new Dictionary<string, object> { { "refresh_token", _refresh_token }, { "access_token", "" }, { "user_id", "" }, { "decvice_type", 3 }, { "app_version", AliExtends.versionName } };
-            var param = await AliExtends.WoniuQueryAsync("/api/woniu/refreshToken", signObj);
-            _access_token = param.Value.GetProperty("access_token").GetString() ?? string.Empty;
-            _refresh_token = param.Value.GetProperty("refresh_token").GetString() ?? string.Empty;
-            _expires_in = param.Value.GetProperty("expires_in").GetInt32();
+            using var result = await AliExtends.WoniuQueryAsync("/api/woniu/refreshToken", signObj);
+            if (result is null)
+            {
+                UpdateStatus("返回内容无效。。。");
+                return false;
+            }
+            var element = result.RootElement;
+            _access_token = element.GetProperty("access_token").GetString() ?? string.Empty;
+            _refresh_token = element.GetProperty("refresh_token").GetString() ?? string.Empty;
+            _expires_in = element.GetProperty("expires_in").GetInt32();
             return true;
 
         }

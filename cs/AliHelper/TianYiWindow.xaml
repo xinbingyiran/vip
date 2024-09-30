@@ -13,10 +13,13 @@
             </TextBlock>
         </StatusBar>
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" TextBlock.FontSize="20" HorizontalAlignment="Right">
-            <TextBox Text="{Binding Code,UpdateSourceTrigger=PropertyChanged}" Margin="3" Padding="10,0" MinWidth="400"></TextBox>
+            <TextBox Text="{Binding Url,UpdateSourceTrigger=PropertyChanged}" Margin="3" Padding="10,0" MinWidth="200"></TextBox>
+            <TextBox Text="{Binding Code,UpdateSourceTrigger=PropertyChanged}" Margin="3" Padding="10,0" MinWidth="200"></TextBox>
+            <TextBox Text="{Binding Pwd,UpdateSourceTrigger=PropertyChanged}" Margin="3" Padding="10,0" MinWidth="80"></TextBox>
             <Button Command="{x:Static local:Commands.List}" CommandParameter="{x:Null}" Margin="3" Padding="10,0">获取列表</Button>
             <Button Command="{x:Static local:Commands.Login}" CommandParameter="{x:Null}" Margin="3" Padding="10,0">登录</Button>
         </StackPanel>
+        <TextBox DockPanel.Dock="Bottom" Height="100" Text="{Binding Source}" IsReadOnly="True"></TextBox>
         <TreeView Margin="3" ItemsSource="{Binding Root.Items}" d:ItemsSource="{d:SampleData ItemCount=10}" ItemTemplateSelector="{StaticResource iselector}">
         </TreeView>
     </DockPanel>

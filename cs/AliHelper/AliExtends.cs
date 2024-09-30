@@ -85,7 +85,7 @@ namespace AliHelper
             return new string(result);
         }
 
-        public static async Task<JsonElement?> WoniuQueryAsync<T>(string url, T obj, Dictionary<string, string?>? paras = null, CancellationToken token = default)
+        public static async Task<JsonDocument?> WoniuQueryAsync<T>(string url, T obj, Dictionary<string, string?>? paras = null, CancellationToken token = default)
         {
             var sign = GetSign(obj);
             var fullUrl = new StringBuilder(wonuiUrl, 240);
@@ -106,28 +106,28 @@ namespace AliHelper
             var repStr = await rep.Content.ReadAsStringAsync(token);
             var repBytes = FromHex(repStr);
             var dresult = sm2Decoder.ProcessBlock(repBytes, 0, repBytes.Length);
-            return JsonSerializer.Deserialize<JsonElement>(dresult);
+            return JsonDocument.Parse(dresult);
         }
-        public static async Task<JsonElement?> GetAliWebQrCodeAsync(CancellationToken token = default)
+        public static async Task<JsonDocument?> GetAliWebQrCodeAsync(CancellationToken token = default)
         {
-            return await client.GetFromJsonAsync<JsonElement>($"{aliWebLoginUrl}/newlogin/qrcode/generate.do?appName=aliyun_drive&fromSite=52&appName=aliyun_drive&appEntrance=web_default&_csrf_token=8iPG8rL8zndjoUQhrQnko5&umidToken=27f197668ac305a0a521e32152af7bafdb0ebc6c&isMobile=false&lang=zh_CN&returnUrl=&hsiz=1d3d27ee188453669e48ee140ea0d8e1&fromSite=52&bizParams=&_bx-v=2.5.3", token);
+            return await client.GetFromJsonAsync<JsonDocument>($"{aliWebLoginUrl}/newlogin/qrcode/generate.do?appName=aliyun_drive&fromSite=52&appName=aliyun_drive&appEntrance=web_default&_csrf_token=8iPG8rL8zndjoUQhrQnko5&umidToken=27f197668ac305a0a521e32152af7bafdb0ebc6c&isMobile=false&lang=zh_CN&returnUrl=&hsiz=1d3d27ee188453669e48ee140ea0d8e1&fromSite=52&bizParams=&_bx-v=2.5.3", token);
         }
 
-        public static async Task<JsonElement?> CheckAliOpenQrcodeAsync(string sid, CancellationToken token = default)
+        public static async Task<JsonDocument?> CheckAliOpenQrcodeAsync(string sid, CancellationToken token = default)
         {
-            return await client.GetFromJsonAsync<JsonElement>($"{aliOpenUrl}/oauth/qrcode/{sid}/status", token);
+            return await client.GetFromJsonAsync<JsonDocument>($"{aliOpenUrl}/oauth/qrcode/{sid}/status", token);
         }
-        public static async Task<JsonElement?> CheckAliWebQrcodeAsync(string ck, string t, CancellationToken token = default)
+        public static async Task<JsonDocument?> CheckAliWebQrcodeAsync(string ck, string t, CancellationToken token = default)
         {
             var content = new StringContent($"ck={Uri.EscapeDataString(ck)}&t={Uri.EscapeDataString(t)}");
             content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
             await content.LoadIntoBufferAsync();
             using var rep = await client.PostAsync($"{aliWebLoginUrl}/newlogin/qrcode/query.do?appName=aliyun_drive&fromSite=52&_bx-v=2.0.31", content, token);
             var repStr = await rep.Content.ReadAsStringAsync(token);
-            return JsonSerializer.Deserialize<JsonElement>(repStr);
+            return JsonDocument.Parse(repStr);
         }
 
-        public static async Task<JsonElement?> AliOpenQueryAsync(string url, string? access_token, Dictionary<string, object?>? paras = null, CancellationToken token = default)
+        public static async Task<JsonDocument?> AliOpenQueryAsync(string url, string? access_token, Dictionary<string, object?>? paras = null, CancellationToken token = default)
         {
             var fullUrl = $"{aliOpenUrl}{url}";
             var message = new HttpRequestMessage(HttpMethod.Post, fullUrl.ToString());
@@ -139,7 +139,7 @@ namespace AliHelper
             await message.Content.LoadIntoBufferAsync();
             using var rep = await client.SendAsync(message, token);
             var repStr = await rep.Content.ReadAsStringAsync(token);
-            return JsonSerializer.Deserialize<JsonElement>(repStr);
+            return JsonDocument.Parse(repStr);
         }
     }
 }
