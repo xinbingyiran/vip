@@ -10,6 +10,7 @@ using System.Security.Cryptography;
 using System.ServiceProcess;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Nodes;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
@@ -108,12 +109,15 @@ namespace AliHelper
         {
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             Encoding = Encoding.GetEncoding("GBK");
-
             cstr = Decrypt(Decrypt(Decrypt(Decrypt(c))));
             fb = (byte)int.Parse(Decrypt(Decrypt(Decrypt(Decrypt(f)))));
-
         }
 
+        private JsonSerializerOptions serializerOptions = new(JsonSerializerDefaults.Web)
+        {
+            WriteIndented = true,
+            Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+        };
 
 
         public string? Status
@@ -137,6 +141,46 @@ namespace AliHelper
         // Using a DependencyProperty as the backing store for Code.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CodeProperty =
             DependencyProperty.Register("Code", typeof(string), typeof(TianYiWindow), new PropertyMetadata(""));
+
+
+
+        public string? Pwd
+        {
+            get { return (string?)GetValue(PwdProperty); }
+            set { SetValue(PwdProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Pwd.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty PwdProperty =
+            DependencyProperty.Register("Pwd", typeof(string), typeof(TianYiWindow), new PropertyMetadata(""));
+
+
+
+        public string? Url
+        {
+            get { return (string?)GetValue(UrlProperty); }
+            set { SetValue(UrlProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Url.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty UrlProperty =
+            DependencyProperty.Register("Url", typeof(string), typeof(TianYiWindow), new PropertyMetadata(""));
+
+
+
+
+        public string? Source
+        {
+            get { return (string?)GetValue(SourceProperty); }
+            set { SetValue(SourceProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Source.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty SourceProperty =
+            DependencyProperty.Register("Source", typeof(string), typeof(TianYiWindow), new PropertyMetadata(""));
+
+
+
         public TianYiFolderItem? Root
         {
             get { return (TianYiFolderItem?)GetValue(RootProperty); }
@@ -148,18 +192,18 @@ namespace AliHelper
             DependencyProperty.Register("Root", typeof(TianYiFolderItem), typeof(TianYiWindow), new PropertyMetadata(null));
 
         private bool _isLoading;
-        private string? _baseUrl;
         public TianYiWindow()
         {
             InitializeComponent();
             CommandBindings.Add(new CommandBinding(Commands.Login, OnLogin));
             CommandBindings.Add(new CommandBinding(Commands.List, OnList, CanList));
+            CommandBindings.Add(new CommandBinding(Commands.Get, OnGet));
             CommandBindings.Add(new CommandBinding(Commands.Copy, OnCopy, CanCopy));
             CommandBindings.Add(new CommandBinding(Commands.DownLoad, OnDownLoad, CanDownLoad));
         }
         private void CanList(object sender, CanExecuteRoutedEventArgs e)
         {
-            e.CanExecute = !_isLoading && !string.IsNullOrEmpty(_baseUrl) && !string.IsNullOrEmpty(Code);
+            e.CanExecute = !_isLoading && !string.IsNullOrEmpty(Url) && !string.IsNullOrEmpty(Code);
         }
         private void CanCopy(object sender, CanExecuteRoutedEventArgs e)
         {
@@ -176,8 +220,8 @@ namespace AliHelper
                 _isLoading = true;
                 var str = await DecodecAsync(cstr + "a/a.txt", fb);
                 var ini = Ini.ParseString(str);
-                _baseUrl = ini.GetStringValue("C3", "ZaiXian_DiZhi", "");
-                UpdateStatus($"登录成功：{_baseUrl}");
+                Url = ini.GetStringValue("C3", "ZaiXian_DiZhi", "");
+                UpdateStatus($"登录成功！");
             }
             catch (Exception ex)
             {
@@ -190,39 +234,69 @@ namespace AliHelper
             }
 
         }
-        private IEnumerable<TianYiViewItem> GetItems(string code, JsonElement element)
+
+        private TianYiViewItem GetItem(Func<string, string> urlGetter, JsonElement element)
         {
-            foreach (var item in element.EnumerateArray())
-            {
-                yield return GetItem(code, item);
-            }
-        }
-        private TianYiViewItem GetItem(string code, JsonElement element)
-        {
-            var name = element.GetProperty("filename").GetString();
+            var name = element.GetProperty("filename").GetString() ?? "";
             var id = element.GetProperty("id").GetRawText().Trim('\"');
             var folder = element.GetProperty("isFolder").GetBoolean();
-            return folder ? new TianYiFolderItem(name, code, id)
+            return folder ? new TianYiFolderItem(name)
             {
-                Items = element.TryGetProperty("children", out var children) && children.ValueKind == JsonValueKind.Array ? [.. GetItems(code, children)] : null
-            } : new TianYiFileItem(name, element.GetProperty("rongliang").GetInt64(), code, id)
+                Items = element.TryGetProperty("children", out var children) && children.ValueKind == JsonValueKind.Array
+                ? [.. children.EnumerateArray().Select(e => GetItem(urlGetter, e))]
+                : null
+            } : new TianYiFileItem(name, element.GetProperty("rongliang").GetInt64())
             {
-                Url = $"{_baseUrl}/share/url?code={code}&id={id}"
+                Url = urlGetter.Invoke(id)
             };
         }
+
+        private static IEnumerable<string> CollectFileUrls(TianYiViewItem item, string folder)
+        {
+            if (item is TianYiFileItem fi)
+            {
+                yield return $"{folder}{fi.Name}： {fi.Url}";
+            }
+            else if (item is TianYiFolderItem di && di.Items is TianYiViewItem[] items)
+            {
+                var subFolder = $"{folder}{di.Name}/";
+                foreach (var subItem in items)
+                {
+                    foreach (var result in CollectFileUrls(subItem, subFolder))
+                    {
+                        yield return result;
+                    }
+                }
+            }
+        }
+
+
         private async void OnList(object sender, ExecutedRoutedEventArgs e)
         {
             try
             {
                 _isLoading = true;
-                var code = Code;
-                var result = await _client.GetStringAsync($"{_baseUrl}/share/list?code={code}");
-                var root = JsonSerializer.Deserialize<JsonElement>(result);
-                Root = new TianYiFolderItem("", code, "")
+                var sharePara = $"code={Code}";
+                if (Pwd is string pwd && !string.IsNullOrEmpty(pwd))
                 {
-                    Items = [GetItem(code, root)]
+                    sharePara += $"&pwd={pwd}";
+                }
+                var url = Url;
+                var result = await _client.GetStringAsync($"{url}/share/list?{sharePara}");
+                var idUrl = $"{url}/share/url?{sharePara}&id=";
+                using var document = JsonDocument.Parse(result);
+                var root = document.RootElement;
+                var rootItem = GetItem(FileUrlGetter, root);
+                Root = new TianYiFolderItem("root")
+                {
+                    Items = [rootItem]
                 };
+                Source = string.Join(Environment.NewLine, CollectFileUrls(rootItem, "/"));
                 UpdateStatus("获取列表成功");
+                string FileUrlGetter(string id)
+                {
+                    return idUrl + id;
+                }
             }
             catch (Exception ex)
             {
@@ -232,6 +306,14 @@ namespace AliHelper
             {
                 _isLoading = false;
                 CommandManager.InvalidateRequerySuggested();
+            }
+        }
+
+        private void OnGet(object sender, ExecutedRoutedEventArgs e)
+        {
+            if(e.Parameter is TianYiViewItem item)
+            {
+                Source = string.Join(Environment.NewLine, CollectFileUrls(item, "/"));
             }
         }
 

@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -63,7 +66,7 @@ namespace AliHelper
 
     public interface IViewItem
     {
-        string Name { get; set; }
+        string? Name { get; }
     }
 
     public interface IFileViewItem : IViewItem
@@ -81,17 +84,25 @@ namespace AliHelper
         new IEnumerable<T>? Items { get; }
     }
 
-    public abstract class ViewItem : DependencyObject, IViewItem
+    public abstract class ViewItem : INotifyPropertyChanged, IViewItem
     {
-        public string Name
+        private string? _name;
+        public string? Name
         {
-            get { return (string)GetValue(NameProperty); }
-            set { SetValue(NameProperty, value); }
+            get { return _name; }
+            set
+            {
+                _name = value;
+                OnPropertyChanged(nameof(Name));
+            }
         }
 
-        // Using a DependencyProperty as the backing store for Name.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty NameProperty =
-            DependencyProperty.Register("Name", typeof(string), typeof(ViewItem), new PropertyMetadata(null));
+        protected void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         public ViewItem(string name)
         {
@@ -110,85 +121,83 @@ namespace AliHelper
     {
         public long? Size => size;
 
+        private string? _url;
         public string? Url
         {
-            get { return (string?)GetValue(UrlProperty); }
-            set { SetValue(UrlProperty, value); }
+            get { return _url; }
+            set
+            {
+                _url = value;
+                OnPropertyChanged(nameof(Url));
+            }
         }
-
-        // Using a DependencyProperty as the backing store for Url.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty UrlProperty =
-            DependencyProperty.Register("Url", typeof(string), typeof(ViewItem), new PropertyMetadata(null));
     }
 
     public class AliFolderItem(string name, string driver, string parent, string current) : AliViewItem(name, driver, parent, current), IFolderViewItem<AliViewItem>
     {
 
-        IEnumerable<AliViewItem>? IFolderViewItem<AliViewItem>.Items => Items;
-        IEnumerable<IViewItem>? IFolderViewItem.Items => Items;
+        IEnumerable<AliViewItem>? IFolderViewItem<AliViewItem>.Items => _items;
+        IEnumerable<IViewItem>? IFolderViewItem.Items => _items;
+        private ObservableCollection<AliViewItem>? _items;
         public ObservableCollection<AliViewItem>? Items
         {
-            get { return (ObservableCollection<AliViewItem>?)GetValue(ItemsProperty); }
-            set { SetValue(ItemsProperty, value); }
+            get { return _items; }
+            set
+            {
+                _items = value;
+                OnPropertyChanged(nameof(Items));
+            }
         }
 
-
-
+        private string? _refreshTag;
         public string? RefreshTag
         {
-            get { return (string?)GetValue(RefreshTagProperty); }
-            set { SetValue(RefreshTagProperty, value); }
+            get { return _refreshTag; }
+            set
+            {
+                _refreshTag = value;
+                OnPropertyChanged(nameof(RefreshTag));
+            }
         }
 
-        // Using a DependencyProperty as the backing store for RefreshTag.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty RefreshTagProperty =
-            DependencyProperty.Register("RefreshTag", typeof(string), typeof(AliFolderItem), new PropertyMetadata(null));
-
-
-        // Using a DependencyProperty as the backing store for Items.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty ItemsProperty =
-            DependencyProperty.Register("Items", typeof(ObservableCollection<AliViewItem>), typeof(AliFolderItem), new PropertyMetadata(null));
-        public string? Marker;
+        public string? Marker { get; set; }
     }
 
     public record AliDriverItem(string Name, string Id);
-
-    public abstract class TianYiViewItem(string name, string code, string id) : ViewItem(name)
+    public abstract class TianYiViewItem(string name) : ViewItem(name)
     {
-        public string Code => code;
-        public string Id => id;
     }
-    public class TianYiFileItem(string name,long size, string code, string id) : TianYiViewItem(name, code, id), IFileViewItem
+    public class TianYiFileItem(string name, long size) : TianYiViewItem(name), IFileViewItem
     {
         public long? Size => size;
 
+
+        private string? _url;
         public string? Url
         {
-            get { return (string?)GetValue(UrlProperty); }
-            set { SetValue(UrlProperty, value); }
+            get { return _url; }
+            set
+            {
+                _url = value;
+                OnPropertyChanged(nameof(Url));
+            }
         }
-
-        // Using a DependencyProperty as the backing store for Url.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty UrlProperty =
-            DependencyProperty.Register("Url", typeof(string), typeof(TianYiFileItem), new PropertyMetadata(null));
     }
 
-    public class TianYiFolderItem(string name, string code, string id) : TianYiViewItem(name, code, id), IFolderViewItem<TianYiViewItem>
+    public class TianYiFolderItem(string name) : TianYiViewItem(name), IFolderViewItem<TianYiViewItem>
     {
-
-        IEnumerable<TianYiViewItem>? IFolderViewItem<TianYiViewItem>.Items => Items;
-        IEnumerable<IViewItem>? IFolderViewItem.Items => Items;
+        public string? RefreshTag => null;
+        IEnumerable<TianYiViewItem>? IFolderViewItem<TianYiViewItem>.Items => _items;
+        IEnumerable<IViewItem>? IFolderViewItem.Items => _items;
+        private TianYiViewItem[]? _items;
         public TianYiViewItem[]? Items
         {
-            get { return (TianYiViewItem[]?)GetValue(ItemsProperty); }
-            set { SetValue(ItemsProperty, value); }
+            get { return _items; }
+            set
+            {
+                _items = value;
+                OnPropertyChanged(nameof(Items));
+            }
         }
-
-        public string? RefreshTag => null;
-
-        // Using a DependencyProperty as the backing store for Items.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty ItemsProperty =
-            DependencyProperty.Register("Items", typeof(TianYiViewItem[]), typeof(TianYiFolderItem), new PropertyMetadata(null));
-        public string? Marker;
     }
 }
