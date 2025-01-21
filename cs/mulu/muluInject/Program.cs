@@ -38,199 +38,45 @@ public class Program
 
     }
 
-    private static IEnumerable<string> FindPass()
+    private static int Extract()
     {
-        var strType = typeof(string);
         foreach (Window win in Application.Current.Windows)
         {
             foreach (var item in Find<UserControl>(win))
             {
-                foreach (var f in item.GetType().GetFields(BindingFlags.Static | BindingFlags.Public))
+                foreach (var f in item.GetType().GetFields(BindingFlags.Instance | BindingFlags.NonPublic))
                 {
-                    if (f.FieldType == strType)
+                    var value = f.GetValue(item);
+                    if (value is null)
                     {
-                        if (f.GetValue(null) is string v && v.Length == 6 && int.TryParse(v, out var _))
-                        {
-                            yield return v;
-                        }
+                        continue;
                     }
+                    var method = value.GetType().GetMethod("JieYaGuoCheng", BindingFlags.NonPublic | BindingFlags.Instance);
+                    if (method is null)
+                    {
+                        continue;
+
+                    }
+                    method.Invoke(value, null);
+                    return 1;
                 }
             }
         }
+        return 0;
     }
 
-    private static bool FillPass(string pass)
+    public static int Inject(string args)
     {
-        var strType = typeof(string);
-        foreach (Window win in Application.Current.Windows)
-        {
-            foreach (var item in Find<ContentControl>(win))
-            {
-                foreach (var f in item.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
-                {
-                    if (f.Name == "MiMaKuang")
-                    {
-                        var v = f.GetValue(item);
-                        if (v is PasswordBox password)
-                        {
-                            Application.Current.Dispatcher.Invoke(new Action(() => { password.Password = pass; }));
-                            return true;
-                        }
-                        else if (v is TextBox textBox)
-                        {
-                            Application.Current.Dispatcher.Invoke(new Action(() => { textBox.Text = pass; }));
-                            return true;
-                        }
-                    }
-                }
-            }
-        }
-        return false;
-    }
-
-    private static bool FindCurrentPass(out int pass)
-    {
-        //开始启动
-        pass = 0;
         try
         {
-            string[] passlist = [];
-            {
-                var time = DateTime.Now;
-                while ((DateTime.Now - time).TotalSeconds < 10 && passlist.Length == 0)
-                {
-                    Thread.Sleep(100);
-                    passlist = Application.Current.Dispatcher.Invoke(() => FindPass().ToArray()) as string[];
-                }
-            }
-            if (passlist == null || passlist.Length == 0)
-            {
-                return false;
-            }
-            if (passlist.Length == 1)
-            {
-                var time = DateTime.Now;
-                var firstPass = passlist[0];
-                while ((DateTime.Now - time).TotalSeconds < 10)
-                {
-                    Thread.Sleep(100);
-                    if (Application.Current.Dispatcher.Invoke(() => FillPass(firstPass)) is bool b && b)
-                    {
-                        break;
-                    }
-                }
-            }
-            else if (passlist.Length > 1)
-            {
-                Application.Current.Dispatcher.BeginInvoke(new Action(() =>
-                {
-                    MessageBox.Show(string.Join("，", passlist), "可能的密码", MessageBoxButton.OK, MessageBoxImage.Information);
-                }));
-            }
-            return int.TryParse(passlist.FirstOrDefault() ?? "0", out pass) && pass != 0;
+            Thread.Sleep(3000);
+            var result = (int)Application.Current.Dispatcher.Invoke(() => Extract());
+            return result;
         }
         catch
         {
-            return false;
+            return -1;
         }
-    }
-
-    private static bool EnableAllPass(out int pass)
-    {
-        //打开我
-        pass = 0;
-        try
-        {
-            if (!Application.Current.Resources.Contains("Locator"))
-            {
-                return false;
-            }
-            var locator = Application.Current.Resources["Locator"];
-            if (locator is null)
-            {
-                return false;
-            }
-            var method = locator.GetType().GetProperty("Main");
-            if (method is null)
-            {
-                return false;
-            }
-            var main = method.GetValue(locator, null);
-            if (main == null)
-            {
-                return false;
-            }
-            var shijian3_f = main.GetType().GetField("shijian3", BindingFlags.Static | BindingFlags.NonPublic);
-            if (shijian3_f is null)
-            {
-                return false;
-            }
-            var shijian3 = shijian3_f.GetValue(null) as DispatcherTimer;
-            if (shijian3 is null)
-            {
-                return false;
-            }
-            //var jhm_f = main.GetType().GetField("jhm", BindingFlags.Instance | BindingFlags.NonPublic);
-            //if (jhm_f is not null)
-            //{
-            //    var find = false;
-            //    Hyperlink link = null;
-            //    foreach (Window win in Application.Current.Windows)
-            //    {
-            //        foreach (var c in Find<TextBlock>(win))
-            //        {
-            //            foreach (Hyperlink hl in c.Inlines.Where(e => e is Hyperlink il && il.Inlines.Any(s => s is Run r && r.Text == "查看旧密码")))
-            //            {
-            //                hl.DoClick();
-            //                link = hl;
-            //                find = true;
-            //            }
-            //            //var click_f = c.GetType().GetMethod("Jiu_kan_Click", BindingFlags.Instance | BindingFlags.NonPublic);
-            //            //if (click_f is not null)
-            //            //{
-            //            //    click_f.Invoke(c, [null, null]);
-            //            //    find = true;
-            //            //}
-            //        }
-            //    }
-            //    if (link != null)
-            //    {
-            //        var btn = new Button { Content = "点我！", HorizontalAlignment = HorizontalAlignment.Center, VerticalAlignment = VerticalAlignment.Center };
-            //        btn.Click += (s, e) =>
-            //        {
-            //            link.DoClick();
-            //        };
-            //        var win = new Window { WindowStyle = WindowStyle.ToolWindow, WindowStartupLocation = WindowStartupLocation.CenterOwner, Owner = Application.Current.MainWindow, Width = 100, MaxWidth = 100, Height = 60, MaxHeight = 60, Content = btn };
-            //        win.Show();
-            //    }
-            //    if (!find)
-            //    {
-            //        Application.Current.Dispatcher.BeginInvoke(new Action(() =>
-            //        {
-            //            MessageBox.Show("当前游戏的激活码是：" + jhm_f.GetValue(main));
-            //        }));
-            //    }
-            //}
-            var jhm1_f = main.GetType().GetField("jhm1", BindingFlags.Instance | BindingFlags.NonPublic);
-            if (jhm1_f is not null)
-            {
-                int.TryParse(jhm1_f.GetValue(main) as string ?? "0", out pass);
-            }
-            shijian3.Start();
-            if (pass == 0)
-            {
-                pass = -2;
-            }
-            return true;
-        }
-        catch
-        {
-            return false;
-        }
-    }
-    public static int Inject(string _)
-    {
-        return EnableAllPass(out var pass) || FindCurrentPass(out pass) ? pass : -1;
 
     }
     private static void DecryptProgress(string file)
@@ -244,7 +90,7 @@ public class Program
         {
             if (p.HasExited)
             {
-                throw new Exception("进程已退出！");
+                return;
             }
             if (p.MainWindowHandle == IntPtr.Zero)
             {
@@ -255,14 +101,6 @@ public class Program
             break;
         }
         Injector.InjectManaged((uint)p.Id, dllFile, typeof(Program).FullName, nameof(Inject), string.Empty, out var result);
-        if (result == -1)
-        {
-            throw new Exception("目标未找到！");
-        }
-        if (result == 0)
-        {
-            throw new Exception("注入失败了！");
-        }
     }
 
 
