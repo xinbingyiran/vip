@@ -18,6 +18,7 @@ namespace AliHelper
         public static readonly RoutedUICommand DownLoad = new();
         public static readonly RoutedUICommand Ali = new();
         public static readonly RoutedUICommand TianYi = new();
+        public static readonly RoutedUICommand QrCode = new();
     }
 
     public class NullOrEmptyConverter : IValueConverter
