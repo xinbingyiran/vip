@@ -6,9 +6,15 @@
         xmlns:local="clr-namespace:AliHelper"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="功能选择" Height="120" Width="240" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}">
-    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.FontSize="20">
-        <Button Margin="10" Command="{x:Static local:Commands.Ali}">阿里解析</Button>
-        <Button Margin="10" Command="{x:Static local:Commands.TianYi}">天翼解析</Button>
+        Title="功能选择" Height="140" Width="240" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}">
+    <StackPanel VerticalAlignment="Center" TextBlock.FontSize="20">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Margin="10" Command="{x:Static local:Commands.Ali}">阿里解析</Button>
+            <Button Margin="10" Command="{x:Static local:Commands.TianYi}">天翼解析</Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBox Text="{Binding TextStr}" VerticalAlignment="Center" Width="100"></TextBox>
+            <Button Margin="10" Command="{x:Static local:Commands.QrCode}">二维码</Button>
+        </StackPanel>
     </StackPanel>
 </Window>
