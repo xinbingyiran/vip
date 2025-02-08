@@ -218,6 +218,7 @@ namespace AliHelper
             try
             {
                 _isLoading = true;
+                UpdateStatus($"登录中。。。");
                 var str = await DecodecAsync(cstr + "a/a.txt", fb);
                 var ini = Ini.ParseString(str);
                 Url = ini.GetStringValue("C3", "ZaiXian_DiZhi", "");
@@ -235,7 +236,34 @@ namespace AliHelper
 
         }
 
-        private TianYiViewItem GetItem(Func<string, string> urlGetter, JsonElement element)
+        private TianYiViewItem[] GetItems(Func<string, string> urlGetter, JsonElement element)
+        {
+            if (element.TryGetProperty("code", out var code))
+            {
+                var codeStr = code.GetRawText();
+                if (codeStr != "0")
+                {
+                    throw new Exception($"【{codeStr}】：{(element.TryGetProperty("msg",out var msg) ? msg.GetString() : "未知错误")}");
+                }
+                else if (element.TryGetProperty("data", out var newElement))
+                {
+                    element = newElement;
+                }
+                else
+                {
+                    throw new KeyNotFoundException("未找到有效数据data");
+                }
+            }
+            if (element.ValueKind == JsonValueKind.Array)
+            {
+                return [.. element.EnumerateArray().Select(e => GetItemCore(urlGetter, e))];
+            }
+            else
+            {
+                return [GetItemCore(urlGetter, element)];
+            }
+        }
+        private TianYiViewItem GetItemCore(Func<string, string> urlGetter, JsonElement element)
         {
             var name = element.GetProperty("filename").GetString() ?? "";
             var id = element.GetProperty("id").GetRawText().Trim('\"');
@@ -243,7 +271,7 @@ namespace AliHelper
             return folder ? new TianYiFolderItem(name)
             {
                 Items = element.TryGetProperty("children", out var children) && children.ValueKind == JsonValueKind.Array
-                ? [.. children.EnumerateArray().Select(e => GetItem(urlGetter, e))]
+                ? [.. children.EnumerateArray().Select(e => GetItemCore(urlGetter, e))]
                 : null
             } : new TianYiFileItem(name, element.GetProperty("rongliang").GetInt64())
             {
@@ -251,18 +279,18 @@ namespace AliHelper
             };
         }
 
-        private static IEnumerable<string> CollectFileUrls(TianYiViewItem item, string folder)
+        private static IEnumerable<string> CollectFileUrls(TianYiViewItem[] items, string folder)
         {
-            if (item is TianYiFileItem fi)
+            foreach (var item in items)
             {
-                yield return $"{folder}{fi.Name}： {fi.Url}";
-            }
-            else if (item is TianYiFolderItem di && di.Items is TianYiViewItem[] items)
-            {
-                var subFolder = $"{folder}{di.Name}/";
-                foreach (var subItem in items)
+                if (item is TianYiFileItem fi)
                 {
-                    foreach (var result in CollectFileUrls(subItem, subFolder))
+                    yield return $"{folder}{fi.Name}： {fi.Url}";
+                }
+                else if (item is TianYiFolderItem di && di.Items is TianYiViewItem[] subItems)
+                {
+                    var subFolder = $"{folder}{di.Name}/";
+                    foreach (var result in CollectFileUrls(subItems, subFolder))
                     {
                         yield return result;
                     }
@@ -276,6 +304,7 @@ namespace AliHelper
             try
             {
                 _isLoading = true;
+                UpdateStatus("获取列表中。。。");
                 var sharePara = $"code={Code}";
                 if (Pwd is string pwd && !string.IsNullOrEmpty(pwd))
                 {
@@ -286,13 +315,13 @@ namespace AliHelper
                 var idUrl = $"{url}/share/url?{sharePara}&id=";
                 using var document = JsonDocument.Parse(result);
                 var root = document.RootElement;
-                var rootItem = GetItem(FileUrlGetter, root);
+                var rootItems = GetItems(FileUrlGetter, root);
                 Root = new TianYiFolderItem("root")
                 {
-                    Items = [rootItem]
+                    Items = rootItems
                 };
-                Source = string.Join(Environment.NewLine, CollectFileUrls(rootItem, "/"));
-                UpdateStatus("获取列表成功");
+                Source = string.Join(Environment.NewLine, CollectFileUrls(rootItems, "/"));
+                UpdateStatus("获取列表成功！");
                 string FileUrlGetter(string id)
                 {
                     return idUrl + id;
@@ -311,9 +340,9 @@ namespace AliHelper
 
         private void OnGet(object sender, ExecutedRoutedEventArgs e)
         {
-            if(e.Parameter is TianYiViewItem item)
+            if (e.Parameter is TianYiViewItem item)
             {
-                Source = string.Join(Environment.NewLine, CollectFileUrls(item, "/"));
+                Source = string.Join(Environment.NewLine, CollectFileUrls([item], "/"));
             }
         }
 
