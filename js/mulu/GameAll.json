@@ -117,19 +117,18 @@
     "describe": "Darkest Dungeon",
     "rLzz": "3.7GB",
     "types": "冒险.地牢.回合",
-    "yxbb": "v25721|容量3.7GB|官方简体中文|支持键盘.鼠标.手柄赠多项修改器|2022年11月04号更新",
+    "yxbb": "v25807|容量3.7GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2025年02月24号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1PcY4uHkJTW-47evL0P4Myg",
-    "addr2": "天翼云: https://cloud.189.cn/t/yQRJvmamUfei",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/m3jjKLreRpS"
+    "addr2": "天翼云: https://cloud.189.cn/t/yQRJvmamUfei"
   },
   {
     "code": "A04A",
     "name": "暗黑地牢2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Darkest Dungeon 2，Darkest Dungeon II",
-    "rLzz": "8GB",
+    "rLzz": "9GB",
     "types": "冒险.地牢.回合",
-    "yxbb": "v1.06.67316|容量8GB|官方简体中文|支持键盘.鼠标|赠多项修改器|2024年11月14号更新",
+    "yxbb": "v2.00.73370|容量9GB|官方简体中文|支持键盘.鼠标|赠多项修改器|2025年01月31号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1Iva-jlSgk-9g_IQVGXWJlQ",
     "addr2": "天翼云: https://cloud.189.cn/t/m6VBRrm6niei"
   },
@@ -443,10 +442,9 @@
     "describe": "A-Train: All Aboard! Tourism",
     "rLzz": "12GB",
     "types": "模拟经营",
-    "yxbb": "v34350.965|容量12GB|官方简体中文|支持键盘.鼠标|2023年02月08号更新",
+    "yxbb": "v34396.1074|容量12GB|官方简体中文|支持键盘.鼠标|2025年01月22号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1nbAhLpAahsZ7Rc5VF_i2Vw",
-    "addr2": "天翼云: https://cloud.189.cn/t/6fQjErRz6BJb",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/US2DgZdPEd8"
+    "addr2": "天翼云: https://cloud.189.cn/t/6fQjErRz6BJb"
   },
   {
     "code": "A21",
@@ -745,13 +743,12 @@
     "code": "A51",
     "name": "澳洲梦想镇",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Dinkum",
-    "rLzz": "2.4GB",
+    "describe": "Dinkum、金垦小镇",
+    "rLzz": "3GB",
     "types": "模拟经营",
-    "yxbb": "v0.52|容量2.4GB|内置简中汉化|2023年02月10号更新",
+    "yxbb": "v0.9.1|容量3GB|官方简体中文|2025年02月17号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1XZCm6-R0Gf8E3Y0eKEpPQA",
-    "addr2": "天翼云: https://cloud.189.cn/t/63yYJr63A7Fz",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/i1sy5Q9WdSs"
+    "addr2": "天翼云: https://cloud.189.cn/t/63yYJr63A7Fz"
   },
   {
     "code": "A52",
@@ -1086,7 +1083,7 @@
     "describe": "AdobePhotoshop/PS",
     "rLzz": "29GB",
     "types": "软件",
-    "yxbb": "PS软件全家桶2018-2023.win/mac|容量29GB|中文|2023年06月08号更新",
+    "yxbb": "PS软件全家桶2018-2025.win/mac|容量29GB|中文|2025年02月04号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1rGjymAqXg2qybvGuZP97fw",
     "addr2": "天翼云: https://cloud.189.cn/t/JbqeyuMnYZzq"
   },
@@ -1759,6 +1756,28 @@
     "addr2": "天翼云: https://cloud.189.cn/t/F3qQzqzuuiqm"
   },
   {
+    "code": "B127",
+    "name": "边境猎人 艾尔莎的命运之轮",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Frontier Hunter: Erza's Wheel of Fortune",
+    "rLzz": "14GB",
+    "types": "类银河战士恶魔城.横版",
+    "yxbb": "v1.1.02|容量14GB|官方简体中文|支持键盘.鼠标.手柄|2025年01月20号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1kkBijfic1TFE3wWWdCZc0w",
+    "addr2": "天翼云: https://cloud.189.cn/t/B3yyu2UZjIFf"
+  },
+  {
+    "code": "B128",
+    "name": "边界 第三部",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Liminal Border Part III",
+    "rLzz": "3GB",
+    "types": "视觉小说",
+    "yxbb": "v1.0.0|容量3GB|官方简体中文|支持键盘.鼠标|2025年02月15号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1bFgFubPjVY0rWaAQcw8N6A",
+    "addr2": "天翼云: https://cloud.189.cn/t/iIRJZjnyiqe2"
+  },
+  {
     "code": "B13",
     "name": "不想死就按X",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -1785,9 +1804,9 @@
     "name": "孢子：银河大冒险",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Spore Galactic Adventures",
-    "rLzz": "8GB",
+    "rLzz": "6GB",
     "types": "模拟经营",
-    "yxbb": "v1.06版|容量8GB|集成原版,银河冒险,美美丑丑,惊悚卡通DLCs|官方繁体中文|支持键盘.鼠标|赠多项修改器|赠超时空要塞战机模型存档_feng-001|赠2019个生物包|赠生物建筑UFOS载具TOP100包|赠游戏攻略|2021年04月28号更新",
+    "yxbb": "v1.06|容量6GB|官方繁体中文|支持键盘.鼠标|集成原版,银河冒险,美美丑丑,惊悚卡通DLCs|赠多项修改器+超时空要塞战机模型存档+2019个生物包+生物建筑UFOS载具TOP100包+游戏攻略|2025年02月03号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1mtDt9dtubSeXKiKYW1bA-Q",
     "addr2": "天翼云: https://cloud.189.cn/t/7Zv2yarmyEVj"
   },
@@ -2739,10 +2758,9 @@
     "describe": "Immortals of Aveum Deluxe Edition",
     "rLzz": "57GB",
     "types": "动作.冒险.第一人称射击",
-    "yxbb": "v220.430豪华版|容量57GB|官方简体中文|+全DLC|2023年12月18号更新",
+    "yxbb": "v226.971|容量57GB|官方简体中文|2025年02月08号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1mQ6W-xjvxmZtqvzYyXqwfw",
-    "addr2": "天翼云: https://cloud.189.cn/t/zEvyaueE3uEj",
-    "addr3": "阿里云: https://www.alipan.com/s/VdmwUkFLAwu"
+    "addr2": "天翼云: https://cloud.189.cn/t/zEvyaueE3uEj"
   },
   {
     "code": "B91",
@@ -3550,7 +3568,7 @@
     "describe": "Blazblue Entropy Effect",
     "rLzz": "9GB",
     "types": "横版.动作",
-    "yxbb": "v1.0.1.93029.0|容量9GB|官方简体中文|2024年09月14号更新",
+    "yxbb": "v1.0.2.100463|容量9GB|官方简体中文|+修改器|2025年02月02号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1i1BjeqQypDEMwi9-4T9snA",
     "addr2": "天翼云: https://cloud.189.cn/t/MJ7vUvm2UNZb"
   },
@@ -3952,6 +3970,17 @@
     "yxbb": "v1.0.6|容量42GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2024年11月19号更新",
     "addr1": "度盘: https://pan.baidu.com/s/12OO1zxhb6o2tCaW4WGQHew",
     "addr2": "天翼云: https://cloud.189.cn/t/aa677briYbY3"
+  },
+  {
+    "code": "C138",
+    "name": "超阈限空间",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Superliminal",
+    "rLzz": "15GB",
+    "types": "解谜.超现实",
+    "yxbb": "v20230219|容量15GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月06号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1IEAUdO5ebxX6xxN2i-RdVQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/qUVbAnQBFzY3"
   },
   {
     "code": "C14",
@@ -5248,17 +5277,6 @@
     "addr3": "阿里云: https://www.aliyundrive.com/s/ptkHLEJkgnv"
   },
   {
-    "code": "D01C",
-    "name": "帝国时代4/网络联机",
-    "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Age Of Empires IV",
-    "rLzz": "36GB",
-    "types": "策略.即时战略.中世纪",
-    "yxbb": "v5.0.7274.0|容量36GB|官方简体中文.国语发音|支持键盘.鼠标|2021年10月31号更新",
-    "addr1": "度盘: https://pan.baidu.com/s/1BwApZCqV-cP9hNuYpJxhRA",
-    "addr2": "天翼云: https://cloud.189.cn/t/ZBjueaIbqe2a"
-  },
-  {
     "code": "D01D",
     "name": "帝国时代4",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -5296,9 +5314,9 @@
     "name": "电脑装机模拟器2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "PC Building Simulator 2",
-    "rLzz": "26GB",
+    "rLzz": "24GB",
     "types": "模拟经营",
-    "yxbb": "v1.85.17|容量26GB|官方简体中文|+修改器|2024年08月27号更新",
+    "yxbb": "v1.11.11|容量24GB|官方简体中文|+修改器|2025年03月02号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1GCquZzke6f0M0rXU0XxRIw",
     "addr2": "天翼云: https://cloud.189.cn/t/3Av6JnMruQJj"
   },
@@ -6008,7 +6026,7 @@
     "name": "丁丁历险记 法老的雪茄",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Tintin Reporter - Cigars of the Pharaoh",
-    "rLzz": "35GB",
+    "rLzz": "36GB",
     "types": "动作.冒险",
     "yxbb": "v1.0.39277|容量36GB|官方简体中文|2025年01月20号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1krMMk9lcEY2L052ySd5vUw",
@@ -6320,7 +6338,7 @@
     "describe": "EARTH DEFENSE FORCE 6",
     "rLzz": "42GB",
     "types": "第三人称射击.科幻.同屏多人",
-    "yxbb": "v1.0.0|容量42GB|官方简体中文|支持键盘.鼠标.手柄|2024年07月26号更新",
+    "yxbb": "v20250122|容量42GB|官方简体中文|支持键盘.鼠标.手柄|2025年01月25号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1rpVxsy70TBIuYuXEsWbzEg",
     "addr2": "天翼云: https://cloud.189.cn/t/EFF7nijieY7n"
   },
@@ -6542,9 +6560,9 @@
     "name": "奠基",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Foundation",
-    "rLzz": "5GB",
+    "rLzz": "6GB",
     "types": "城市营造.策略.模拟经营.中世纪.管理.经济",
-    "yxbb": "v1.9.7.9|容量5GB|官方简体中文|2024年09月25号更新",
+    "yxbb": "v1.10.2.7|容量6GB|官方简体中文|2025年02月06号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1ntns3YWITvqIKyydFiYMqw",
     "addr2": "天翼云: https://cloud.189.cn/t/7ZzAziiE3YZv"
   },
@@ -6994,10 +7012,9 @@
     "describe": "Streets of Rogue",
     "rLzz": "400MB",
     "types": "Rogue类.像素.同屏多人.局域网联机",
-    "yxbb": "v97.2版|容量400MB|官方简体中文|支持键盘.鼠标.手柄|赠局域网联机教程|2022年08月28号更新",
+    "yxbb": "v98|容量400MB|官方简体中文|支持键盘.鼠标.手柄|2025年02月24号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1DcxohnWHuLyrVYW_GoklSQ",
-    "addr2": "天翼云: https://cloud.189.cn/t/yAbA3u7NZvie",
-    "addr3": "夸克: https://pan.quark.cn/s/79c30a2ea5ce"
+    "addr2": "天翼云: https://cloud.189.cn/t/yAbA3u7NZvie"
   },
   {
     "code": "D63",
@@ -7120,7 +7137,7 @@
     "describe": "Indiana Jones and the Great Circle",
     "rLzz": "112GB",
     "types": "动作.冒险",
-    "yxbb": "v1.0.0|容量112GB|官方简体中文|支持键盘.鼠标.手柄|2024年12月06号更新",
+    "yxbb": "v1.0.4.0|容量112GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月23号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1bSsk63vrfPfHbrqS1xLalw",
     "addr2": "天翼云: https://cloud.189.cn/t/jQnea26zmmqe"
   },
@@ -7251,7 +7268,7 @@
     "describe": "地平线黎明时分重制版、Horizon Zero Dawn Remastered",
     "rLzz": "107GB",
     "types": "动作.开放世界",
-    "yxbb": "v1.2.45.0|容量107GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2024年11月16号更新",
+    "yxbb": "v1.5.89.0|容量107GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2025年02月09号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1_ysSo6baZjFUEcIR6xgwag",
     "addr2": "天翼云: https://cloud.189.cn/t/faU7nyZRZ3am"
   },
@@ -7389,7 +7406,7 @@
     "describe": "Lords of the Fallen",
     "rLzz": "34GB",
     "types": "类魂系列.动作角色扮演.黑暗奇幻",
-    "yxbb": "v1.6.64|容量34GB|官方简体中文|+修改器|2024年12月06号更新",
+    "yxbb": "v1.7.106|容量34GB|官方简体中文|+修改器|2025年02月07号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1qucfzvlWYOCvKX4fqyx4Pw",
     "addr2": "天翼云: https://cloud.189.cn/t/3iyUFz6BBRvm"
   },
@@ -7636,7 +7653,7 @@
     "describe": "No Rest for the Wicked",
     "rLzz": "29GB",
     "types": "动作角色扮演",
-    "yxbb": "v15647|容量29GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2024年11月02号更新",
+    "yxbb": "v20134|容量29GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2025年02月27号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1z-gdCjRCzk7M4Bu2F-4H3w",
     "addr2": "天翼云: https://cloud.189.cn/t/qi2UJf7JRNZz"
   },
@@ -7824,7 +7841,7 @@
     "describe": "Tetris Forever",
     "rLzz": "6GB",
     "types": "解谜.像素.街机.同屏多人",
-    "yxbb": "v1.0.0|容量6GB|官方原版英文|支持键盘.鼠标.手柄|2024年11月14号更新",
+    "yxbb": "Build.17413465|容量6GB|官方繁体中文|支持键盘.鼠标.手柄|2025年03月02号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1ejnksxPiuXW7Ogc8EReMBQ",
     "addr2": "天翼云: https://cloud.189.cn/t/vqyY32niqUvi"
   },
@@ -7887,15 +7904,14 @@
   },
   {
     "code": "F02A",
-    "name": "方舟 生存进化Steam版/方舟生存飞升",
+    "name": "方舟 生存飞升",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "ARK: Survival Ascended",
-    "rLzz": "80GB",
+    "rLzz": "204GB",
     "types": "生存.开放世界.沙盒",
-    "yxbb": "v25.7|容量80GB|官方简体中文|2023年10月29号更新",
+    "yxbb": "v58.32|容量204GB|官方简体中文|2025年02月20号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1cw0rocyGf_bbMh9YZphUsQ",
-    "addr2": "天翼云: https://cloud.189.cn/t/QBNnieVrQbYz",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/LLzqnf8L6Fn"
+    "addr2": "天翼云: https://cloud.189.cn/t/QBNnieVrQbYz"
   },
   {
     "code": "F03",
@@ -8229,6 +8245,17 @@
     "yxbb": "Build.17005602|容量23GB|官方简体中文|支持VR|2025年01月19号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1puhi9Ymy7tc269HESAWDRw",
     "addr2": "天翼云: https://cloud.189.cn/t/veAjeaN7FFVz"
+  },
+  {
+    "code": "F105",
+    "name": "疯狂之石",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "The Stone of Madness",
+    "rLzz": "9GB",
+    "types": "潜行.即时战略",
+    "yxbb": "v1.0.0|容量9GB|官方简体中文|支持键盘.鼠标.手柄|2025年01月30号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1b17rYQVwbPLFy3BnKgpPBg",
+    "addr2": "天翼云: https://cloud.189.cn/t/YRZFBvAjiyea"
   },
   {
     "code": "F11",
@@ -9610,12 +9637,12 @@
   },
   {
     "code": "G04D",
-    "name": "古墓丽影三部曲 重制版",
+    "name": "古墓丽影1.2.3重制版",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Tomb Raider I-III Remastered Starring Lara Croft",
     "rLzz": "6GB",
     "types": "动作.冒险.探索",
-    "yxbb": "v1.0.0|容量6GB|官方简体中文|支持键盘.鼠标.手柄|2024年02月14号更新",
+    "yxbb": "v20241104|容量6GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月15号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1K8tMGTQyEufU7oscezEHZw",
     "addr2": "天翼云: https://cloud.189.cn/t/MnEVBvmARr2e"
   },
@@ -9623,19 +9650,18 @@
     "code": "G05",
     "name": "钢铁之师2/钢铁雄狮2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Steel Division 2 Total Conflict Edition",
-    "rLzz": "79GB",
+    "describe": "Steel Division 2 Total Conflict Edition、钢铁之师2全面冲突",
+    "rLzz": "89GB",
     "types": "即时战略",
-    "yxbb": "v111984全面冲突版|容量79GB|官方简体中文|支持键盘.鼠标|+全DLC|2023年12月28号更新",
+    "yxbb": "v143305|容量89GB|官方简体中文|支持键盘.鼠标|2025年01月22号更新",
     "addr1": "度盘: https://pan.baidu.com/s/10T_U6fE7tsKoX8zi9e5Dow",
-    "addr2": "天翼云: https://cloud.189.cn/t/ARVBBjiuArE3",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/XQJ49qrskr4"
+    "addr2": "天翼云: https://cloud.189.cn/t/ARVBBjiuArE3"
   },
   {
     "code": "G05A",
     "name": "钢铁之师：诺曼底44",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": " ",
+    "describe": "Steel Division: Normandy 44",
     "rLzz": "39GB",
     "types": "即时战略",
     "yxbb": "v300102836|容量39GB|官方简体中文|支持键盘.鼠标|赠多项修改器|2023年10月08号更新",
@@ -9702,12 +9728,11 @@
     "name": "光环：士官长合集",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "光环致远星.光环战斗进化周年版.光环2周年版.光环3.光环3地狱伞兵.光环4等6部合集，Halo: The Master Chief Collection",
-    "rLzz": "105GB",
+    "rLzz": "135GB",
     "types": "射击游戏.科幻.外星人.太空.合集",
-    "yxbb": "v1.3385.0.0|容量105GB|包含光环致远星.光环战斗进化周年版.光环2周年版.光环3.光环3地狱伞兵.光环4等6部合集|官方简体中文.国语发音|支持键盘.鼠标.手柄|赠多项修改器|2024年02月17号更新",
+    "yxbb": "v1.3495.0.0|容量135GB|官方简体中文.国语发音|支持键盘.鼠标.手柄|包含光环致远星.光环战斗进化周年版.光环2周年版.光环3.光环3地狱伞兵.光环4等6部合集|赠多项修改器|2025年03月02号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1AEIUiFc_z8uKRYwiNmjLng",
-    "addr2": "天翼云: https://cloud.189.cn/t/yEbYbub2equa",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/PyUxKEbwKBQ"
+    "addr2": "天翼云: https://cloud.189.cn/t/yEbYbub2equa"
   },
   {
     "code": "G10",
@@ -9930,6 +9955,28 @@
     "yxbb": "v0.5|容量6GB|官方简体中文|2025年01月15号更新",
     "addr1": "度盘: https://pan.baidu.com/s/17dyrXVyyTDs1uP1vof9dYQ",
     "addr2": "天翼云: https://cloud.189.cn/t/M77nIj3IRVJz"
+  },
+  {
+    "code": "G108",
+    "name": "公主与利刃",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Princess_Blade",
+    "rLzz": "32GB",
+    "types": "女性主角.冒险.砍杀.角色扮演",
+    "yxbb": "v0.95.6|容量32GB|官方简体中文|2025年01月27号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1ucebcHdhjGBrKHb3oXGSew",
+    "addr2": "天翼云: https://cloud.189.cn/t/bEN3uun2267b"
+  },
+  {
+    "code": "G109",
+    "name": "古墓丽影4.5.6重制版",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "古墓丽影 IV 最后的启示、Tomb Raider: The Last Revelation、古墓丽影 V 历代记、Tomb Raider: Chronicles、古墓丽影 VI 黑暗天使、Tomb Raider: The Angel of Darkness、Tomb Raider IV-VI Remastered",
+    "rLzz": "11GB",
+    "types": "动作.冒险",
+    "yxbb": "包含4.5.6中文重制版合集|容量11GB|官方简体中文|包含古墓丽影 IV最后的启示1999、古墓丽影 V历代记2000、古墓丽影 VI黑暗天使2003|2025年02月15号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1yM_wKRbgbKVFgXgDqZZsvQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/fmeUji2euUbq"
   },
   {
     "code": "G11",
@@ -11305,7 +11352,7 @@
     "describe": "NARUTO X BORUTO",
     "rLzz": "30GB",
     "types": "格斗游戏.同屏多人",
-    "yxbb": "v1.50|容量30GB|官方简体中文|2024年09月26号更新",
+    "yxbb": "v1.60|容量30GB|官方简体中文|2025年02月07号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1c-7YCsEuyN-rBkR6r1lC8g",
     "addr2": "天翼云: https://cloud.189.cn/t/RNN3uumUruye"
   },
@@ -11867,22 +11914,20 @@
     "describe": "Command & Conquer: Red Alert 3",
     "rLzz": "5GB",
     "types": "即时战略.局域网联机",
-    "yxbb": "v1.13_v1.12双版|容量5GB|官方简体中文|支持键盘.鼠标|内置地图包|赠多项修改器|赠局域网联机教程|2022年10月30号更新",
+    "yxbb": "v1.13andv1.12|容量5GB|官方简体中文|支持键盘.鼠标|内置地图包|内置域网联机教程|赠多项修改器|2025年02月03号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1hmr5YSqEBErCd6to0NDCBg",
-    "addr2": "天翼云: https://cloud.189.cn/t/Fje6V3QryYNn",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/9sRk6e3Ny2C"
+    "addr2": "天翼云: https://cloud.189.cn/t/Fje6V3QryYNn"
   },
   {
     "code": "H11B",
     "name": "红色警戒3：起义时刻/红警3",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Command & Conquer Red Alert 3: Uprising",
-    "rLzz": "6GB",
+    "rLzz": "7GB",
     "types": "即时战略",
-    "yxbb": "v1.00|容量6GB|支持全屏.窗口切换|官方简体中文|支持键盘.鼠标|赠多项修改器|赠玩家自制地图包20张|2023年09月23号更新",
+    "yxbb": "v1.00|容量7GB|官方简体中文|支持键盘.鼠标|赠多项修改器|赠玩家自制地图包20张|2025年02月04号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1FH2EVQzDE5YCYAJ1ll8eQQ",
-    "addr2": "天翼云: https://cloud.189.cn/t/bUJ3me3MJjEb",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/bgtPz41PNSG"
+    "addr2": "天翼云: https://cloud.189.cn/t/bUJ3me3MJjEb"
   },
   {
     "code": "H11C",
@@ -12200,9 +12245,9 @@
     "name": "幻兽帕鲁",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Palworld",
-    "rLzz": "26GB",
+    "rLzz": "27GB",
     "types": "开放世界.生物收集.生存.制作",
-    "yxbb": "v0.4.12.64723|容量26GB|官方简体中文|+修改器+联机补丁(无售后)|2024年12月27号更新",
+    "yxbb": "v0.4.15.66880|容量27GB|官方简体中文|+修改器|2025年03月01号更新",
     "addr1": "度盘: https://pan.baidu.com/s/10kN510l08wC3TtabYbRXAg",
     "addr2": "天翼云: https://cloud.189.cn/t/BZNzmi6JFr2e"
   },
@@ -12381,7 +12426,7 @@
     "describe": "Hades II",
     "rLzz": "6GB",
     "types": "动作.动作角色扮演.砍杀",
-    "yxbb": "v0.102084|容量6GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2024年10月17号更新",
+    "yxbb": "v0.110698|容量6GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2025年02月20号更新",
     "addr1": "度盘: https://pan.baidu.com/s/13UyAKcBeUdydr6UvS_9XvQ",
     "addr2": "天翼云: https://cloud.189.cn/t/BRFby2E3YjYb"
   },
@@ -12758,6 +12803,28 @@
     "yxbb": "v20250110|容量31GB|官方简体中文|2025年01月19号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1Ky1s7rLwWzrlHfVE8Os1rw",
     "addr2": "天翼云: https://cloud.189.cn/t/neYZRbYj6jQv"
+  },
+  {
+    "code": "H188",
+    "name": "红色警戒2共和国之辉",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "红警2共和国之辉",
+    "rLzz": "500MB",
+    "types": "策略.即时战略.局域网联机",
+    "yxbb": "v1.0|容量500MB|官方繁体中文|2025年02月19号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/19yH9nbPDkXCUAY9ANg1RlA",
+    "addr2": "天翼云: https://cloud.189.cn/t/zaaa6rRvMFVv"
+  },
+  {
+    "code": "H189",
+    "name": "混乱失序",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "DISORDER",
+    "rLzz": "14GB",
+    "types": "动作",
+    "yxbb": "中文版|容量14GB|官方简体中文|2025年02月19号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1Yn47W-Mvk8nlBbT1OJIndA",
+    "addr2": "天翼云: https://cloud.189.cn/t/6fMBVjaIfmMn"
   },
   {
     "code": "H19",
@@ -14117,9 +14184,9 @@
     "name": "狙击手：幽灵战士契约2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Sniper Ghost Warrior Contracts 2",
-    "rLzz": "15GB",
+    "rLzz": "26GB",
     "types": "射击游戏.潜行",
-    "yxbb": "v20210722|容量15GB|集成DLCs|官方简体中文.国语发音|支持键盘.鼠标.手柄|赠多项修改器|赠挑战100%.全收集.全赏金存档|2021年08月04号更新",
+    "yxbb": "v20240905|容量26GB|官方简体中文.国语发音|支持键盘.鼠标.手柄|赠多项修改器+挑战100%.全收集.全赏金存档|2025年01月23号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1eibj54QsOybkW2A0z7JN6w",
     "addr2": "天翼云: https://cloud.189.cn/t/uIRRRz3MjAV3"
   },
@@ -14158,6 +14225,17 @@
     "addr2": "天翼云: https://cloud.189.cn/t/uieEJvYRzaqe"
   },
   {
+    "code": "J06",
+    "name": "极品飞车21 热度",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "极品飞车 热度、Need for Speed Heat",
+    "rLzz": "31GB",
+    "types": "赛车竞技",
+    "yxbb": "v1.0.59.46514|容量31GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器+配件全解锁,所有任务0完成,车辆全解锁存档|2025年03月02号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1FwXJgDgHVWVJjJ9zOqxoNw",
+    "addr2": "天翼云: https://cloud.189.cn/t/qYbiAfq6FvAb"
+  },
+  {
     "code": "J06A",
     "name": "极品飞车21：热度/赠1-20合集共14部",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -14185,11 +14263,10 @@
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Forza Horizon 4",
     "rLzz": "95GB",
-    "types": "赛车竞技.Win10独占",
-    "yxbb": "v1.477.567.0|容量95GB|官方简体中文|赠车辆解锁存档.700多辆车.500多涂装.乐高.财富岛通关|2023年03月14号更新",
+    "types": "赛车竞技",
+    "yxbb": "v1.477.567.0|容量95GB|官方简体中文|赠车辆解锁存档.700多辆车.500多涂装.乐高.财富岛通关|2025年03月01号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1Y0X1SzqSsp7MHe0n3VMeBA",
-    "addr2": "天翼云: https://cloud.189.cn/t/6bayq22yYVfu",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/91gR1s7EqW6"
+    "addr2": "天翼云: https://cloud.189.cn/t/6bayq22yYVfu"
   },
   {
     "code": "J09A",
@@ -14197,7 +14274,7 @@
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Forza Horizon 3",
     "rLzz": "60GB",
-    "types": "赛车竞技.Win10独占",
+    "types": "赛车竞技",
     "yxbb": "要求win10 1703-1803系统,win10游戏系统要求极高,很大可能玩不了|容量58GB|2021年03月10号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1AsyiHE9Kns4EKnl2Z92vNw"
   },
@@ -14207,7 +14284,7 @@
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Forza Horizon 5",
     "rLzz": "164GB",
-    "types": "赛车竞技.Win10独占",
+    "types": "赛车竞技",
     "yxbb": "v1.607.493.0顶级版|容量164GB|官方简体中文.国语发音|支持键盘.鼠标.手柄|+810全车辆.全改装.剧情三星存档+修改器+联机补丁(没售后)|2024年11月19号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1D2l5Y-0OHoYu91wWupq9wQ",
     "addr2": "天翼云: https://cloud.189.cn/t/QvmEnev2UrIr"
@@ -14218,7 +14295,7 @@
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Forza Motorsport 7",
     "rLzz": "100GB",
-    "types": "赛车竞技.Win10独占",
+    "types": "赛车竞技",
     "yxbb": "v1.174.4791.2|容量100GB|官方简体中文|win10独占|支持键盘.鼠标.手柄|2022年03月17号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1_2EZmin06GhZ4Y9x_y0_Zg",
     "addr2": "天翼云: https://cloud.189.cn/t/ze2uamQbQRBv"
@@ -15033,7 +15110,7 @@
     "describe": "SILENT HILL 2 Remake",
     "rLzz": "35GB",
     "types": "恐怖",
-    "yxbb": "v1.1.248.905|容量35GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2024年11月23号更新",
+    "yxbb": "v1.1.258.834|容量35GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2025年01月31号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1-H7dyJ4vT2pTCE272UOoPQ",
     "addr2": "天翼云: https://cloud.189.cn/t/7NZbE3EVBrIn"
   },
@@ -15136,6 +15213,61 @@
     "yxbb": "v1.23.7640008|容量30GB|官方简体中文|支持键盘.鼠标.手柄|2024年11月21号更新",
     "addr1": "度盘: https://pan.baidu.com/s/15Zcf8yZK9Pr1rLybb1brVg",
     "addr2": "天翼云: https://cloud.189.cn/t/nuiuEn3ARZNj"
+  },
+  {
+    "code": "J155",
+    "name": "巨人杀手 暗黑之潮",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Jotunnslayer: Hordes of Hel",
+    "rLzz": "11GB",
+    "types": "弹幕射击",
+    "yxbb": "v0.1.0.79121|容量11GB|官方简体中文|2025年01月22号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1DKPS12f4_3G_-OX2DX6ptA",
+    "addr2": "天翼云: https://cloud.189.cn/t/Ijuue2F3Izuq"
+  },
+  {
+    "code": "J156",
+    "name": "节奏裂隙",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Rift of the NecroDancer",
+    "rLzz": "3GB",
+    "types": "节奏.音乐",
+    "yxbb": "v1.0.1|容量3GB|官方简体中文|2025年02月06号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1nm4opEndQGSxVbBW7jsEyA",
+    "addr2": "天翼云: https://cloud.189.cn/t/zyeUZvMBVVBv"
+  },
+  {
+    "code": "J157",
+    "name": "救护车生活 救护员模拟器",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Ambulance Life: A Paramedic Simulator",
+    "rLzz": "63GB",
+    "types": "模拟.开放世界.驾驶",
+    "yxbb": "v1.1.1|容量63GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月07号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1HyRBAP4QXlkf9IImTJtAvg",
+    "addr2": "天翼云: https://cloud.189.cn/t/nMBVf2RNfE32"
+  },
+  {
+    "code": "J158",
+    "name": "掘地求财",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "A Game About Digging A Hole",
+    "rLzz": "1GB",
+    "types": "探索.沙盒",
+    "yxbb": "v1.0.0|容量1GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月11号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1dy6yj0EJxuX-mdyRn8yhuQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/re2qYjuMrIFr"
+  },
+  {
+    "code": "J159",
+    "name": "极限国度",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Riders Republic",
+    "rLzz": "27GB",
+    "types": "竞速.开放世界",
+    "yxbb": "v1.26.0|容量27GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月23号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1lENSMHZbIQMRgFJvCky-PQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/aQjUb2ru2Yr2"
   },
   {
     "code": "J16",
@@ -15244,9 +15376,9 @@
     "name": "节奏地牢",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Crypt of the NecroDancer",
-    "rLzz": "3GB",
+    "rLzz": "10GB",
     "types": "节奏.不可思议迷宫.困难.像素",
-    "yxbb": "v4.1.1|容量3GB|官方简体中文|2024年08月26号更新",
+    "yxbb": "v4.1.1|容量10GB|官方简体中文|2025年02月08号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1vQ7l1lfkh26QKktZnbhrsQ",
     "addr2": "天翼云: https://cloud.189.cn/t/RrUF3iyqqy6z"
   },
@@ -15257,10 +15389,9 @@
     "describe": "Kenshi",
     "rLzz": "12GB",
     "types": "开放世界.沙盒.生存",
-    "yxbb": "v1.0.64|容量12GB|官方简体中文|支持键盘.鼠标|赠多项修改器|2023年06月20号更新",
+    "yxbb": "v1.0.68|容量12GB|官方简体中文|支持键盘.鼠标|赠多项修改器|2025年02月27号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1fV9_Jq11KaYnmVWO_4Pmlw",
-    "addr2": "天翼云: https://cloud.189.cn/t/Fn22qqfyiiMv",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/qEP7iAxHAq7"
+    "addr2": "天翼云: https://cloud.189.cn/t/Fn22qqfyiiMv"
   },
   {
     "code": "J27",
@@ -15358,10 +15489,9 @@
     "describe": "Prison Architect",
     "rLzz": "800MB",
     "types": "模拟经营.沙盒",
-    "yxbb": "v20230517_1.02|容量800MB|官方简体中文|支持键盘.鼠标|赠多项修改器|2023年05月17号更新",
+    "yxbb": "v11056|容量800MB|官方简体中文|支持键盘.鼠标|赠多项修改器|2025年02月27号更新",
     "addr1": "度盘: https://pan.baidu.com/s/11Exocu4TPoFkytlbdgYD7A",
-    "addr2": "天翼云: https://cloud.189.cn/t/ziqAVfrQZrIr",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/unHpjokiCT9"
+    "addr2": "天翼云: https://cloud.189.cn/t/ziqAVfrQZrIr"
   },
   {
     "code": "J36",
@@ -15491,9 +15621,9 @@
     "name": "饥荒",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Don't Starve",
-    "rLzz": "4.5GB",
+    "rLzz": "4GB",
     "types": "开放世界.生存",
-    "yxbb": "v429404|容量4.5GB|集成全DLCs|官方简体中文|支持键盘.鼠标.手柄|2021年09月19号更新",
+    "yxbb": "v20250228|容量4GB|官方简体中文|支持键盘.鼠标.手柄|2025年03月02号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1nhCpoYEQU_vXouaBqKjdyw",
     "addr2": "天翼云: https://cloud.189.cn/t/2QfQVjy2yQFr"
   },
@@ -15504,7 +15634,7 @@
     "describe": "Don't Starve Together",
     "rLzz": "4GB",
     "types": "开放世界.生存.局域网联机",
-    "yxbb": "v634023|容量4GB|官方简体中文|支持键盘.鼠标.手柄|2024年10月22号更新",
+    "yxbb": "v657420|容量4GB|官方简体中文|支持键盘.鼠标.手柄|2025年03月02号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1ATBOGGEvpa3qsQ5RRDKMjA",
     "addr2": "天翼云: https://cloud.189.cn/t/ZJvqmmN3uiYz"
   },
@@ -15540,6 +15670,17 @@
     "yxbb": "v1.0.4|容量12GB|官方简体中文|支持键盘.鼠标.手柄|赠电子攻略PDF|赠网络联机教程|2021年09月05号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1DecLFJ22gJEifYdLVy5OHw",
     "addr2": "天翼云: https://cloud.189.cn/t/iURnyymm6FJr"
+  },
+  {
+    "code": "J5015",
+    "name": "禁忌试炼",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Taboo Trial",
+    "rLzz": "23GB",
+    "types": "动作.砍杀",
+    "yxbb": "v20240611|容量23GB|官方简体中文|2025年01月19号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1z-O8YI4-PDBmVPpRTeQHbQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/zqayey2UrIbq"
   },
   {
     "code": "J51",
@@ -15864,11 +16005,11 @@
     "name": "节奏医生",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Rhythm Doctor",
-    "rLzz": "620MB",
+    "rLzz": "1GB",
     "types": "像素.音乐游戏",
-    "yxbb": "v0.9.1|容量620MB|官方简体中文.国语发音|支持键盘|2021年03月01号更新",
+    "yxbb": "v0.13.0|容量1GB|官方简体中文.国语发音|支持键盘|2025年02月27号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1qVq4HlI8uWmZBHHSlE8YjQ",
-    "addr2": "天翼云: https://cloud.189.cn/t/MVBrMbQJNjQr"
+    "addr2": "天翼云: https://cloud.189.cn/t/NJ7ZnizQRvmu"
   },
   {
     "code": "J81",
@@ -16405,11 +16546,12 @@
     "code": "K18",
     "name": "口袋妖怪合集/精灵宝可梦合集",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Pokémon",
-    "rLzz": "17GB",
-    "types": "角色扮演.模拟器",
-    "yxbb": "完整合集|容量17GB|整合GBA.NDS.3DS.等21部作品：《超级绿宝石改8.0》《火红中文版》《绿宝石386中文版》《叶绿386中文版》《口袋妖怪漆黑的魅影5.0EX+BW》《口袋妖怪漆黑的魅影5.0EX+DP》《口袋妖怪永恒之焱zero》《精灵宝可梦白2》《精灵宝可梦黑2》《口袋妖怪白V3修正版》《口袋妖怪黑V3修正版》《口袋妖怪白金简》《口袋妖怪金心》《口袋妖怪银灵》《口袋妖怪珍珠简》《口袋妖怪钻石简》《口袋妖怪X》《口袋妖怪Y》《口袋妖怪红宝石终极版》《口袋妖怪蓝宝石终极版》《口袋妖怪太阳终极版》 |内置简中汉化|支持键盘.鼠标|2019年12月08号更新",
-    "addr1": "百度网盘: https://pan.baidu.com/s/1HEmfa19TkqZWoIYjV4eA8A"
+    "describe": "Pokémon、超级绿宝石改8.0、火红中文版、绿宝石386中文版、叶绿386中文版、口袋妖怪漆黑的魅影5.0EX+BW、口袋妖怪漆黑的魅影5.0EX+DP、口袋妖怪永恒之焱zero、精灵宝可梦白2、精灵宝可梦黑2、口袋妖怪白V3修正版、口袋妖怪黑V3修正版、口袋妖怪白金简、口袋妖怪金心、口袋妖怪银灵、口袋妖怪珍珠简、口袋妖怪钻石简、口袋妖怪X、口袋妖怪Y、口袋妖怪红宝石终极版、口袋妖怪蓝宝石终极版、口袋妖怪太阳终极版",
+    "rLzz": "18GB",
+    "types": "角色扮演.像素.模拟器",
+    "yxbb": "完整合集|容量18GB|整合GBA.NDS.3DS.等21部作品,超级绿宝石改8.0、火红中文版、绿宝石386中文版、叶绿386中文版、口袋妖怪漆黑的魅影5.0EX+BW、口袋妖怪漆黑的魅影5.0EX+DP、口袋妖怪永恒之焱zero、精灵宝可梦白2、精灵宝可梦黑2、口袋妖怪白V3修正版、口袋妖怪黑V3修正版、口袋妖怪白金简、口袋妖怪金心、口袋妖怪银灵、口袋妖怪珍珠简、口袋妖怪钻石简、口袋妖怪X、口袋妖怪Y、口袋妖怪红宝石终极版、口袋妖怪蓝宝石终极版、口袋妖怪太阳终极版|内置简中汉化|支持键盘.鼠标|2025年01月24号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1mnfyrBb0u7Lkx3lXMh50aQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/7zeueizIrIz2"
   },
   {
     "code": "K18A",
@@ -16869,12 +17011,11 @@
     "name": "壳之少女",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "The Shell Part I: Inferno",
-    "rLzz": "2.5GB",
-    "types": "视觉小说.推理.悬疑.选择取向.恐怖",
-    "yxbb": "v1.0.0高清重置版|容量2.5GB|官方简体中文|2023年07月29号更新",
+    "rLzz": "3GB",
+    "types": "视觉小说.推理.悬疑",
+    "yxbb": "v1.0.2|容量3GB|官方简体中文|2025年02月15号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1D5knDgBt0JBR_D6qnvL_IQ",
-    "addr2": "天翼云: https://cloud.189.cn/t/aeY3meeYrEZn",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/w3ueT4JM6wc"
+    "addr2": "天翼云: https://cloud.189.cn/t/aeY3meeYrEZn"
   },
   {
     "code": "K58",
@@ -16969,12 +17110,12 @@
   },
   {
     "code": "K66",
-    "name": "苦痛庄园/苦痛殿堂",
+    "name": "苦痛殿堂",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Halls of Torment",
-    "rLzz": "1.5GB",
+    "describe": "苦痛庄园、Halls of Torment",
+    "rLzz": "2GB",
     "types": "弹幕射击.黑暗奇幻.像素",
-    "yxbb": "v1.0正式版|容量1.5GB|官方简体中文|支持键盘.鼠标.手柄|2024年09月25号更新",
+    "yxbb": "Build.17250974|容量2GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月07号更新",
     "addr1": "度盘: https://pan.baidu.com/s/11kRKi3k9LAb26l-5hhT6ug",
     "addr2": "天翼云: https://cloud.189.cn/t/6jeeInjY3EBv"
   },
@@ -17307,10 +17448,9 @@
     "describe": "七龙珠Z卡卡罗特、龙珠斗士Z卡卡特罗、DRAGON BALL Z: KAKAROT",
     "rLzz": "52GB",
     "types": "格斗游戏.开放世界",
-    "yxbb": "v2.10|容量52GB|官方简体中文|+全DLC|赠多项修改器+通关存档|2024年02月23号更新",
+    "yxbb": "v2.12|容量52GB|官方简体中文|赠多项修改器+通关存档|2025年02月28号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1aq9s-kFZK2DcU5BoNIEHNg",
-    "addr2": "天翼云: https://cloud.189.cn/t/yYfqae6b6nIb",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/bD5L1occsjD"
+    "addr2": "天翼云: https://cloud.189.cn/t/yYfqae6b6nIb"
   },
   {
     "code": "L05B",
@@ -17865,7 +18005,7 @@
     "describe": "龙腾世纪4 影障守护者、Dragon Age: The Veilguard",
     "rLzz": "91GB",
     "types": "角色扮演",
-    "yxbb": "v20241121|容量91GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2024年11月23号更新",
+    "yxbb": "v20250123|容量91GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2025年01月25号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1M44zzX2mB0UVdVCa-6EUkg",
     "addr2": "天翼云: https://cloud.189.cn/t/RjumuiQz6fuy"
   },
@@ -17958,6 +18098,17 @@
     "addr2": "天翼云: https://cloud.189.cn/t/BziIvmZ7Rz2m"
   },
   {
+    "code": "L129",
+    "name": "乐高 大电影2 电子游戏",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "The LEGO Movie 2 Videogame",
+    "rLzz": "8GB",
+    "types": "乐高.冒险.同屏多人",
+    "yxbb": "v78586|容量8GB|官方繁体中文|支持键盘.鼠标.手柄|2025年03月02号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1jI4J9R3rjjtwq-TgGpFJ3w",
+    "addr2": "天翼云: https://cloud.189.cn/t/qmeyUz6ZrmAr"
+  },
+  {
     "code": "L12A",
     "name": "蜡笔小新 风起云涌 火焰的春日部快腿侠",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -17980,13 +18131,35 @@
     "addr2": "天翼云: https://cloud.189.cn/t/fiQr6jrQJVva"
   },
   {
+    "code": "L130",
+    "name": "乐高都市 卧底风云",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "LEGO City Undercover",
+    "rLzz": "19GB",
+    "types": "乐高.同屏多人",
+    "yxbb": "v76596|容量19GB|官方繁体中文|支持键盘.鼠标.手柄|2025年03月02号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1C_KhipC24-L_BxpbkIY2_g",
+    "addr2": "天翼云: https://cloud.189.cn/t/jYJJVn3MnQFz"
+  },
+  {
+    "code": "L131",
+    "name": "乐高旋风忍者大电影",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "The LEGO NINJAGO Movie Video Game",
+    "rLzz": "17GB",
+    "types": "乐高.同屏多人",
+    "yxbb": "v78560|容量17GB|官方繁体中文|支持键盘.鼠标.手柄|2025年03月02号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/138kDDeRvt617PwosAht2aw",
+    "addr2": "天翼云: https://cloud.189.cn/t/jI7Z73aaQBvu"
+  },
+  {
     "code": "L14",
     "name": "绿色地狱",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "丛林地狱、Green Hell",
     "rLzz": "10GB",
     "types": "开放世界.生存",
-    "yxbb": "v2.9.0|容量10GB|官方简体中文|2024年09月04号更新",
+    "yxbb": "v2.9.1|容量10GB|官方简体中文|2025年02月07号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1boDbto-gHspgsgqTxmQPMQ",
     "addr2": "天翼云: https://cloud.189.cn/t/YvmUZv3aiAJr"
   },
@@ -18645,7 +18818,7 @@
     "code": "L61",
     "name": "流浪之神",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Stray Gods: The Roleplaying Musical",
+    "describe": "迷失神祇 角色扮演音乐剧、Stray Gods: The Roleplaying Musical",
     "rLzz": "6GB",
     "types": "互动小说.剧情丰富.选择取向",
     "yxbb": "v6544|容量6GB|官方简体中文|2023年08月12号更新",
@@ -18755,9 +18928,9 @@
     "name": "灵魂摆渡者/逝者摆渡人/精神战士/Spiritfarer",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Spiritfarer",
-    "rLzz": "8.1GB",
+    "rLzz": "7GB",
     "types": "模拟经营.卡通.剧情丰富.管理.休闲",
-    "yxbb": "v20210901|容量8.1GB|集成Beverly升级|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2020年08月19号更新",
+    "yxbb": "Build.9986620|容量7GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2025年02月27号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1I11zDYZ-kszbS5p5S7OTpw",
     "addr2": "天翼云: https://cloud.189.cn/t/JniYFnQBZryq"
   },
@@ -18944,12 +19117,11 @@
     "name": "龙之信条 黑暗觉者",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Dragon's Dogma: Dark Arisen",
-    "rLzz": "23GB",
+    "rLzz": "20GB",
     "types": "角色扮演.开放世界",
-    "yxbb": "v1.12高清中文豪华版|容量23GB|官方繁体中文|赠多项修改器|2023年10月03号更新",
+    "yxbb": "v2364871|容量20GB|官方繁体中文|赠多项修改器|2025年02月27号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1wA0Mzs79VmPcd9JLvHpXcA",
-    "addr2": "天翼云: https://cloud.189.cn/t/VV77FfEJRJFb",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/fvRachFnBMK"
+    "addr2": "天翼云: https://cloud.189.cn/t/VV77FfEJRJFb"
   },
   {
     "code": "L88",
@@ -19010,13 +19182,12 @@
     "code": "L93",
     "name": "流放者柯南",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "蛮王、Conan Exiles",
+    "describe": "蛮王、野蛮人柯南、Conan Exiles",
     "rLzz": "100GB",
     "types": "生存.开放世界",
     "yxbb": "v4.2.0_606055.39625|容量100GB|官方简体中文|支持键盘.鼠标.手柄|+高清跑图攻略地图|2023年12月23号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1bB7HDyzEBdzm2o7o-AZ48w",
-    "addr2": "天翼云: https://cloud.189.cn/t/rEzIFfuEBVza",
-    "addr3": "阿里云: https://www.alipan.com/s/Va2soHYmhxq"
+    "addr2": "天翼云: https://cloud.189.cn/t/rEzIFfuEBVza"
   },
   {
     "code": "L94",
@@ -19257,12 +19428,12 @@
   },
   {
     "code": "M02",
-    "name": "迷失森林 局域网联机版/支持单机",
+    "name": "迷失森林 局域网联机版",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "The Forest",
     "rLzz": "2GB",
-    "types": "开放世界.生存.恐怖",
-    "yxbb": "v1.10.1正式版|容量2GB|官方简体中文|支持键盘.鼠标.手柄|赠全解锁存档|内置多项修改器.按V呼出|2022年02月16号更新",
+    "types": "开放世界.生存.恐怖.局域网联机",
+    "yxbb": "v1.10.1|容量2GB|官方简体中文|支持键盘.鼠标.手柄|赠全解锁存档|内置多项修改器.按V呼出|2025年02月27号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1ua1H6DZ1Qi47oLrIwXEC_Q",
     "addr2": "天翼云: https://cloud.189.cn/t/a6VRr2jYvAz2"
   },
@@ -19295,7 +19466,7 @@
     "describe": "The Sims 4",
     "rLzz": "67GB",
     "types": "模拟经营.沙盒",
-    "yxbb": "v1.112.481.1030|容量67GB|集成DLCs|官方简体中文|支持键盘.鼠标|2025年01月16号更新",
+    "yxbb": "v1.112.519.1020|容量67GB|集成DLCs|官方简体中文|支持键盘.鼠标|2025年02月07号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1ZnqfcB7rBp_OMEkqmgzEfg",
     "addr2": "天翼云: https://cloud.189.cn/t/UnYFNnuA3eei"
   },
@@ -19739,12 +19910,12 @@
   },
   {
     "code": "M11",
-    "name": "木筏生存网络联机/木筏求生/船长漂流记/海洋生存/单机.网络联机",
+    "name": "木筏生存/木筏求生/船长漂流记/海洋生存",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Raft",
-    "rLzz": "5.5GB",
+    "rLzz": "7GB",
     "types": "开放世界.生存",
-    "yxbb": "v13版|容量5.5GB|整合13号升级档|官方简体中文版|支持键盘.鼠标|赠网络联机教程|2021年11月12号更新",
+    "yxbb": "v1.09|容量7GB|官方简体中文版|2025年02月27号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1tt9wFafF6TStnsczZ0MZJg",
     "addr2": "天翼云: https://cloud.189.cn/t/zMZZvuINNNVz"
   },
@@ -19871,18 +20042,6 @@
     "addr3": "阿里云: https://www.aliyundrive.com/s/nBX4Cb8zALJ"
   },
   {
-    "code": "M11C",
-    "name": "木筏生存/木筏求生/船长漂流记/海洋生存",
-    "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Raft",
-    "rLzz": "7GB",
-    "types": "开放世界.生存",
-    "yxbb": "v1.08|容量7GB|官方简体中文版|2023年11月23号更新",
-    "addr1": "度盘: https://pan.baidu.com/s/1UPNvF_4GKcUfCp3S4lnRLA",
-    "addr2": "天翼云: https://cloud.189.cn/t/Jj6j6na6RnU3",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/ZAypN24st1C"
-  },
-  {
     "code": "M12",
     "name": "墨西哥英雄大混战2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -19942,9 +20101,9 @@
     "name": "漫威蜘蛛侠2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Marvel's Spider-Man 2",
-    "rLzz": "252GB",
+    "rLzz": "110GB",
     "types": "动作.冒险.开放世界.漫威",
-    "yxbb": "v1.4.0非官方移植PC版|容量252GB|官方简体中文|支持键盘.鼠标.手柄|赠100%终极难度全收集全黄金终极等级9存档|2024年08月24号更新",
+    "yxbb": "v1.205.0.0|容量110GB|官方简体中文|支持键盘.鼠标.手柄|+修改器+全解锁存档|2025年02月10号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1PnwapxorLB_aVntWA20Dbg",
     "addr2": "天翼云: https://cloud.189.cn/t/IJrE3mb6fIRb"
   },
@@ -19969,17 +20128,6 @@
     "yxbb": "正式版|容量8.9GB|官方简体中文|支持键盘.鼠标|赠多项修改器|2021年04月16号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1YuQxxldevnyrbRKOFEuB5A",
     "addr2": "天翼云: https://cloud.189.cn/t/fqa2MzFJne2i"
-  },
-  {
-    "code": "M124",
-    "name": "迷宫物语",
-    "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "FALL IN LABYRINTH",
-    "rLzz": "1.9GB",
-    "types": "角色扮演.迷宫",
-    "yxbb": "中文版|容量1.9GB|内置简中汉化|支持键盘.鼠标.手柄|2021年04月21号更新",
-    "addr1": "度盘: https://pan.baidu.com/s/1eGDz9fS66QAAqAGL3yjeZQ",
-    "addr2": "天翼云: https://cloud.189.cn/t/EZJv6jrEvMZr"
   },
   {
     "code": "M125",
@@ -20198,10 +20346,9 @@
     "describe": "圣夜女巫、Witch On The Holy Night",
     "rLzz": "17GB",
     "types": "视觉小说.冒险.剧情",
-    "yxbb": "Build.12768080_v1.0|容量17GB|官方简体中文|2023年12月15号更新",
+    "yxbb": "v1.1|容量17GB|官方简体中文|2025年02月25号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1LL6FME8nxxnvkSjuvhb3BA",
-    "addr2": "天翼云: https://cloud.189.cn/t/VVveAzvuQjQf",
-    "addr3": "阿里云: https://www.alipan.com/s/X9JDi7p6RU7"
+    "addr2": "天翼云: https://cloud.189.cn/t/VVveAzvuQjQf"
   },
   {
     "code": "M142",
@@ -20283,12 +20430,12 @@
   },
   {
     "code": "M149",
-    "name": "命令与征服 红色警戒2及尤里的复仇",
+    "name": "命令与征服 红色警戒2 尤里的复仇",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Command & Conquer Red Alert 2 and Yuri's Revenge",
-    "rLzz": "1.5GB",
-    "types": "策略.即时战略.英文版",
-    "yxbb": "Build.13635401|容量1.5GB|官方原版英文|支持键盘.鼠标|2024年03月14号更新",
+    "describe": "红警2尤里的复仇、Command & Conquer Red Alert 2 and Yuri's Revenge",
+    "rLzz": "2GB",
+    "types": "策略.即时战略.局域网联机",
+    "yxbb": "v1.006|容量2GB|官方繁体中文|支持键盘.鼠标|+修改器存档MOD等(赠品无售后)|2025年02月19号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1un5QsS85Ni0ikZN9nPSUgw",
     "addr2": "天翼云: https://cloud.189.cn/t/7BBr6ja2EVji"
   },
@@ -20532,7 +20679,7 @@
     "describe": "Farming Simulator 25",
     "rLzz": "36GB",
     "types": "模拟经营.农场模拟.模拟",
-    "yxbb": "v1.2.1.0|容量36GB|官方简体中文|支持键盘.鼠标.手柄|2024年11月13号更新",
+    "yxbb": "v1.5.0.1|容量36GB|官方简体中文|支持键盘.鼠标.手柄|2025年01月31号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1t0jk3QF7mJxpyeBNL4iLcQ",
     "addr2": "天翼云: https://cloud.189.cn/t/B7vQna6vaqiy"
   },
@@ -20599,7 +20746,7 @@
     "describe": "MiSide",
     "rLzz": "3GB",
     "types": "可爱",
-    "yxbb": "Build.16849983|容量3GB|官方简体中文|支持键盘.鼠标|2024年12月30号更新",
+    "yxbb": "v0.924|容量3GB|官方简体中文|支持键盘.鼠标|2025年02月06号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1rqDYH3SFfNhwV4GX9r4heQ",
     "addr2": "天翼云: https://cloud.189.cn/t/eAJjEv7JreEr"
   },
@@ -20613,6 +20760,28 @@
     "yxbb": "v1.0.0|容量11GB|官方简体中文|2025年01月17号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1qecy2MGjk_OgplsHQUpm7w",
     "addr2": "天翼云: https://cloud.189.cn/t/ZZJBVfVFFN7f"
+  },
+  {
+    "code": "M174",
+    "name": "模拟人生 经典合集",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "The Sims Legacy Collection",
+    "rLzz": "4GB",
+    "types": "模拟经营",
+    "yxbb": "v1.0.0.70|容量4GB|官方简体中文|2025年02月02号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1EWSDLQucpNFxZ9r9C0KUBA",
+    "addr2": "天翼云: https://cloud.189.cn/t/zIBrU3jmYzqq"
+  },
+  {
+    "code": "M175",
+    "name": "模拟人生2经典合集",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "The Sims 2 Legacy Collection、The Sims 2 经典合集",
+    "rLzz": "13GB",
+    "types": "模拟经营",
+    "yxbb": "v1.0.0.72|容量13GB|官方简体中文|2025年02月02号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1KvM1OCtVQdtfq0_kDz_RlA",
+    "addr2": "天翼云: https://cloud.189.cn/t/VbMRj23eueEn"
   },
   {
     "code": "M17A",
@@ -20668,10 +20837,9 @@
     "describe": "Disgaea 7、魔界戦記ディスガイア7",
     "rLzz": "11GB",
     "types": "角色扮演",
-    "yxbb": "v1.0.0豪华终极版|容量11GB|官方简体中文|+全DLC+特典|2023年10月05号更新",
+    "yxbb": "v1.12|容量11GB|官方简体中文|2025年02月27号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1s1uQxuZkz04eKJAKjtT1fA",
-    "addr2": "天翼云: https://cloud.189.cn/t/2u2ArqVraiI3",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/yiG54S2W7FM"
+    "addr2": "天翼云: https://cloud.189.cn/t/2u2ArqVraiI3"
   },
   {
     "code": "M19",
@@ -20689,12 +20857,11 @@
     "name": "模拟农场22",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Farming Simulator 22",
-    "rLzz": "34GB",
+    "rLzz": "39GB",
     "types": "模拟经营",
-    "yxbb": "v1.12.0.0|容量34GB|官方简体中文|支持键盘.鼠标.手柄|2023年08月30号更新",
+    "yxbb": "v1.14.0.0|容量39GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月25号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1RffwUEd0JpBa6WXa3kr-3A",
-    "addr2": "天翼云: https://cloud.189.cn/t/by6vyiUN7re2",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/5Kn59aoQasA"
+    "addr2": "天翼云: https://cloud.189.cn/t/by6vyiUN7re2"
   },
   {
     "code": "M20",
@@ -20949,12 +21116,11 @@
     "name": "迷瘴纪事",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Miasma Chronicles",
-    "rLzz": "19GB",
+    "rLzz": "18GB",
     "types": "动作.战术.策略.回合",
-    "yxbb": "中文版|容量19GB|官方简体中文|2023年05月24号更新",
+    "yxbb": "v1.1.1|容量18GB|官方简体中文|2025年02月25号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1qVI44razPi_2NG6vw_6bAA",
-    "addr2": "天翼云: https://cloud.189.cn/t/yyEZfuMfInM3",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/hrv5YoWTujm"
+    "addr2": "天翼云: https://cloud.189.cn/t/yyEZfuMfInM3"
   },
   {
     "code": "M41",
@@ -21012,6 +21178,17 @@
     "yxbb": "v1.06d|容量350MB|官方简体中文|支持键盘.鼠标.手柄|2021年10月14号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1XWQOP1TX4Qui3XWXIIjBcQ",
     "addr2": "天翼云: https://cloud.189.cn/t/U7ZJvqnUV7zq"
+  },
+  {
+    "code": "M46",
+    "name": "曼岛TT 边缘竞速3",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "TT Isle Of Man: Ride on the Edge 3",
+    "rLzz": "16GB",
+    "types": "赛车竞技.同屏多人",
+    "yxbb": "v20250122|容量16GB|官方简体中文|2025年01月25号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1rS1q8L7zVAbVTIh80ybezw",
+    "addr2": "天翼云: https://cloud.189.cn/t/BZVbeeBbE7rm"
   },
   {
     "code": "M47",
@@ -21179,9 +21356,9 @@
     "name": "密室逃脱模拟器",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Escape Simulator",
-    "rLzz": "32GB",
+    "rLzz": "35GB",
     "types": "解谜.密室逃脱.悬疑.探索.虚拟现实.VR",
-    "yxbb": "v34136r|容量32GB|官方简体中文|支持键盘.鼠标|2024年11月15号更新",
+    "yxbb": "v35389r|容量35GB|官方简体中文|支持键盘.鼠标|2025年02月06号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1fhMxTBFKLY4ocwBcm6R04w",
     "addr2": "天翼云: https://cloud.189.cn/t/NRny2aMvUnqu"
   },
@@ -21627,12 +21804,11 @@
     "name": "牧场物语Welcome美丽人生",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "STORY OF SEASONS: A Wonderful Life、牧场物语美丽人生",
-    "rLzz": "1.2GB",
+    "rLzz": "2GB",
     "types": "模拟经营.农场管理.休闲",
-    "yxbb": "v1.0.0|容量1.2GB|官方简体中文|2023年06月28号更新",
+    "yxbb": "v1.0.1|容量2GB|官方简体中文|2025年02月25号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1mOGcRZodSXmzw-fzppvDhw",
-    "addr2": "天翼云: https://cloud.189.cn/t/qYZ7JrFnIFJr",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/UyFwVPLqqJS"
+    "addr2": "天翼云: https://cloud.189.cn/t/qYZ7JrFnIFJr"
   },
   {
     "code": "M95",
@@ -22129,9 +22305,9 @@
     "name": "女巫/巫婆",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Noita",
-    "rLzz": "1.6GB",
+    "rLzz": "2GB",
     "types": "像素.迷宫.Rogue类",
-    "yxbb": "Build.15345724|容量1.6GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2024年08月14号更新",
+    "yxbb": "v20250125|容量2GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2025年01月27号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1e-3Oco1zjOX58RoTuGJ6gg",
     "addr2": "天翼云: https://cloud.189.cn/t/zqeEFzvaaQJ3"
   },
@@ -22154,10 +22330,9 @@
     "describe": "NUKITASHI",
     "rLzz": "800MB",
     "types": "视觉小说.选择取向",
-    "yxbb": "v2.0.0|容量800MB|官方简体中文|2023年06月25号更新",
+    "yxbb": "v20231129_2.0.0|容量800MB|官方简体中文|2025年01月25号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1NTAAufD3JVjp2OtcUilTzQ",
-    "addr2": "天翼云: https://cloud.189.cn/t/2uMNJnyQzaey",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/K4RFZfuDVkV"
+    "addr2": "天翼云: https://cloud.189.cn/t/2uMNJnyQzaey"
   },
   {
     "code": "N21A",
@@ -23424,6 +23599,17 @@
     "addr2": "天翼云: https://cloud.189.cn/t/yiiMBj2YRvia"
   },
   {
+    "code": "P41",
+    "name": "破门而入2 北方特遣队",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Door Kickers 2: Task Force North",
+    "rLzz": "3GB",
+    "types": "战术.即时战术.俯视",
+    "yxbb": "v1.04|容量3GB|官方简体中文|支持键盘.鼠标|2025年02月21号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1Ch8mBi-rQYk9jjQ4GUYJFQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/aAjMfeM3Y7fq"
+  },
+  {
     "code": "Q.MJ001",
     "name": "权力的游戏全八季/冰与火之歌全八季",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -23447,13 +23633,14 @@
   },
   {
     "code": "Q01A",
-    "name": "拳皇13/格斗之王13/KOF13/单机.同屏多人",
+    "name": "拳皇13 全球对决",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "The King of Fighters XIII",
-    "rLzz": "2.3GB",
+    "describe": "格斗之王13、KOF13、THE KING OF FIGHTERS XIII GLOBAL MATCH",
+    "rLzz": "3GB",
     "types": "格斗游戏.同屏多人",
-    "yxbb": "v1.4b版|容量2.3GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|赠隐藏人物全开存档|2021年03月13号更新",
-    "addr1": "度盘: https://pan.baidu.com/s/1N4cSyHqHdzs-uK-WJHVGdQ"
+    "yxbb": "v1.0.0|容量3GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月22号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1N4cSyHqHdzs-uK-WJHVGdQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/BbYRfyeA3uaq"
   },
   {
     "code": "Q01B",
@@ -23504,20 +23691,20 @@
     "name": "缺氧",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "氧气不足、缺氧 眼冒金星、Oxygen Not Included",
-    "rLzz": "3GB",
-    "types": "模拟经营",
-    "yxbb": "v642443|容量3GB|官方简体中文|2024年11月22号更新",
+    "rLzz": "4GB",
+    "types": "殖民模拟.基地建设.模拟经营",
+    "yxbb": "v652372|容量4GB|官方简体中文|2025年02月06号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1qM6QRBBg7_jFToz90ZRoow",
     "addr2": "天翼云: https://cloud.189.cn/t/3uA3AzyANbqy"
   },
   {
     "code": "Q03",
-    "name": "全面战争：战锤2/单机.网络联机",
+    "name": "全面战争 战锤2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Total War: Warhammer 2",
-    "rLzz": "64GB",
+    "describe": "战锤 全面战争2、Total War: WARHAMMER 2",
+    "rLzz": "61GB",
     "types": "即时战略",
-    "yxbb": "v1.12.0|容量64GB|集成DLCs|官方简体中文|支持键盘.鼠标|赠多项修改器|赠网络联机教程|2021年10月07号更新",
+    "yxbb": "v1.12.0|容量61GB|官方简体中文|支持键盘.鼠标|赠多项修改器|2025年02月19号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1RP2D1-HqHjulCI1laVihIA",
     "addr2": "天翼云: https://cloud.189.cn/t/FfqUFnuMzu6z"
   },
@@ -23737,6 +23924,17 @@
     "addr2": "天翼云: https://cloud.189.cn/t/EN7fUf7NNnQj"
   },
   {
+    "code": "Q1005",
+    "name": "青天井",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Aotenjo: Infinite Hands",
+    "rLzz": "500MB",
+    "types": "策略.牌组构建.麻将.卡牌",
+    "yxbb": "v0.2.1.5|容量500MB|官方简体中文|支持键盘.鼠标|2025年01月20号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1BskO9c119kFwP6QVxt0T_w",
+    "addr2": "天翼云: https://cloud.189.cn/t/2Aj2mimyMFJ3"
+  },
+  {
     "code": "Q101",
     "name": "QANGA",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -23763,9 +23961,9 @@
     "name": "潜行者2 切尔诺贝利之心",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
-    "rLzz": "154GB",
+    "rLzz": "158GB",
     "types": "开放世界.后末日.生存",
-    "yxbb": "v1.0.3|容量154GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2024年12月08号更新",
+    "yxbb": "v1.2.1|容量158GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2025年02月16号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1K6aWYVl7mZALgh3-Oc-i3g",
     "addr2": "天翼云: https://cloud.189.cn/t/73eAvuNVJbQr"
   },
@@ -23790,6 +23988,28 @@
     "yxbb": "v1.0|容量58GB|官方简体中文|2025年01月18号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1ZB_IfUvDfxGhoGLwA3mYIg",
     "addr2": "天翼云: https://cloud.189.cn/t/MnAFzeAFRB7v"
+  },
+  {
+    "code": "Q106",
+    "name": "巧克力与香子兰4",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "NEKOPARA Vol. 4",
+    "rLzz": "6GB",
+    "types": "视觉小说",
+    "yxbb": "v5891804|容量6GB|官方繁体中文|支持键盘.鼠标.手柄|2025年02月01号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1FJajiKis51tww1DOHG3C4g",
+    "addr2": "天翼云: https://cloud.189.cn/t/2UzeEjIFNzmm"
+  },
+  {
+    "code": "Q107",
+    "name": "骑士精神 中世纪战争",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "骑士 中世纪战争、Chivalry: Medieval Warfare",
+    "rLzz": "8GB",
+    "types": "中世纪.动作",
+    "yxbb": "v147655|容量8GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月26号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1pFRI45OL0ST8uilTHC97Jg",
+    "addr2": "天翼云: https://cloud.189.cn/t/JzeUvmzQrQre"
   },
   {
     "code": "Q11",
@@ -24188,12 +24408,11 @@
     "name": "去月球",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "To the Moon，Sigmund Holiday Special 1+2",
-    "rLzz": "170MB",
+    "rLzz": "600MB",
     "types": "剧情丰富.冒险.像素.互动小说.PC/安卓",
-    "yxbb": "中文版|容量170MB|集成2部小插曲DLC.官方原声带33首BGM|官方简体中文|支持键盘.鼠标.手柄|赠33首游戏BGM|赠v3.7安卓版|2022年10月29号更新",
+    "yxbb": "Build.15984484|容量600MB|官方简体中文|支持键盘.鼠标.手柄|2025年02月18号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1NMexXrEjUDxvk9_sf26zsA",
-    "addr2": "天翼云: https://cloud.189.cn/t/BVNFVvE7VRVz",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/PXvretJCcfn"
+    "addr2": "天翼云: https://cloud.189.cn/t/BVNFVvE7VRVz"
   },
   {
     "code": "Q43",
@@ -24301,7 +24520,7 @@
     "describe": "Griftlands",
     "rLzz": "6GB",
     "types": "卡牌",
-    "yxbb": "v484799|容量6GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2021年12月02号更新",
+    "yxbb": "v487311|容量6GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2025年02月18号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1TdXm6Gdd6HyOGg_axIpNEw",
     "addr2": "天翼云: https://cloud.189.cn/t/UfiMVfqMrUrm"
   },
@@ -24847,9 +25066,9 @@
     "name": "七龙珠 电光炸裂 ZERO",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "DRAGON BALL Sparking! ZERO",
-    "rLzz": "28GB",
+    "rLzz": "29GB",
     "types": "格斗.同屏多人",
-    "yxbb": "v20241220|容量28GB|官方简体中文|+多项修改器|2024年12月23号更新",
+    "yxbb": "v20250120|容量29GB|官方简体中文|+多项修改器|2025年01月21号更新",
     "addr1": "度盘: https://pan.baidu.com/s/15ax97vYzmZCH2UBqki7dEg",
     "addr2": "天翼云: https://cloud.189.cn/t/v2iY3mMNBnAj"
   },
@@ -24993,7 +25212,7 @@
     "describe": "SCUM",
     "rLzz": "74GB",
     "types": "开放世界.生存",
-    "yxbb": "v0.9.537.73638|容量74GB|官方简体中文|支持键盘.鼠标|赠多项修改器|2024年07月09号更新",
+    "yxbb": "v0.9.606.86781|容量74GB|官方简体中文|支持键盘.鼠标|赠多项修改器|2025年02月08号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1PN-v6pgfmnXv3TP36_09Cw",
     "addr2": "天翼云: https://cloud.189.cn/t/u2YBb2bamm2m"
   },
@@ -25069,11 +25288,11 @@
     "name": "人类黎明",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Dawn of Man",
-    "rLzz": "1.8GB",
+    "rLzz": "2GB",
     "types": "模拟经营",
-    "yxbb": "v1.7.0|容量1.8GB|内置简体中文|支持键盘.鼠标|2021年03月04号更新",
+    "yxbb": "v1.8.2|容量2GB|内置简体中文|支持键盘.鼠标|2025年02月16号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1cErcPcI88yhod6xRs3fdNw",
-    "addr2": "天翼云: https://cloud.189.cn/t/ZnMjqiBvIRny"
+    "addr2": "天翼云: https://cloud.189.cn/t/IbEz6jFJj6Vb"
   },
   {
     "code": "R14",
@@ -25132,26 +25351,25 @@
   },
   {
     "code": "R15D",
-    "name": "如龙6：生命诗篇/单机.同屏多人",
+    "name": "如龙6 生命诗篇",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Yakuza 6 The Song of Life",
     "rLzz": "39GB",
-    "types": "动作.开放世界",
-    "yxbb": "中文版|容量39GB|官方繁体中文|支持键盘.鼠标.手柄|赠多项修改器|赠10亿金钱初始存档|2021年03月26号更新",
+    "types": "动作.开放世界.同屏多人",
+    "yxbb": "v1.0.0.9|容量39GB|官方繁体中文|支持键盘.鼠标.手柄|+多项修改器|2025年02月15号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1891_w7kCeSUiSHbjggWMXQ",
     "addr2": "天翼云: https://cloud.189.cn/t/UrAR32jyEFjy"
   },
   {
     "code": "R15E",
-    "name": "如龙7：光与暗的去向",
+    "name": "如龙7 光与暗的去向",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Yakuza: Like a Dragon",
-    "rLzz": "56GB",
+    "rLzz": "47GB",
     "types": "冒险.动作.角色扮演.开放世界",
-    "yxbb": "国际终极版|容量56GB|官方简体中文|支持键盘.鼠标.手柄|多项修改器|外送一周目通关存档|2023年08月01号更新",
+    "yxbb": "v1.009国际版|容量47GB|官方简体中文|支持键盘.鼠标.手柄|+多项修改器|2025年02月16号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1PADadlQljk6miQMupzQ2Cg",
-    "addr2": "天翼云: https://cloud.189.cn/t/JbiyUjieIJRn",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/gZ7JFQdk9eZ"
+    "addr2": "天翼云: https://cloud.189.cn/t/JbiyUjieIJRn"
   },
   {
     "code": "R16",
@@ -25170,9 +25388,9 @@
     "name": "人类",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "HUMANKIND",
-    "rLzz": "35GB",
+    "rLzz": "44GB",
     "types": "策略.回合战略.大战略.城市营造",
-    "yxbb": "v1.0.27.4539|容量35GB|官方简体中文|赠多项修改器|2024年11月30号更新",
+    "yxbb": "v1.0.28.4599|容量44GB|官方简体中文|赠多项修改器|2025年02月06号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1aMbvOOU3rv8zmH4x_Vu4SA",
     "addr2": "天翼云: https://cloud.189.cn/t/JBFVJnZBZjau"
   },
@@ -25239,10 +25457,9 @@
     "describe": "Knights of Honor II: Sovereign",
     "rLzz": "13GB",
     "types": "策略.即时战略.大战略.中世纪",
-    "yxbb": "v1.5.0_31728|容量13GB|官方简体中文.国语发音|2023年09月20号更新",
+    "yxbb": "v20240216|容量13GB|官方简体中文.国语发音|2025年02月14号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1jvuXcczcLBqY-fIlQF_FxA",
-    "addr2": "天翼云: https://cloud.189.cn/t/2mMniymue6Rj",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/LCtpXvQQdHp"
+    "addr2": "天翼云: https://cloud.189.cn/t/2mMniymue6Rj"
   },
   {
     "code": "R22",
@@ -25612,14 +25829,14 @@
   },
   {
     "code": "R55",
-    "name": "忍者神龟 斯普林特的命运",
+    "name": "人工智能的选择",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Teenage Mutant Ninja Turtles: Splintered Fate",
-    "rLzz": "2.2GB",
-    "types": "动作.模拟器",
-    "yxbb": "v1.1.0模拟器整合版|容量2.2GB|官方简体中文|支持键盘.鼠标.手柄|2024年09月09号更新",
-    "addr1": "度盘: https://pan.baidu.com/s/1L2XQrVrrGtFjO8QI-TrmHg",
-    "addr2": "天翼云: https://cloud.189.cn/t/vIj2MbjqM36z"
+    "describe": "Heart of the Machine",
+    "rLzz": "4GB",
+    "types": "策略.模拟.大战略",
+    "yxbb": "v0.651.9|容量4GB|官方简体中文|支持键盘.鼠标|2025年02月17号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1ig5btU7xZfrAU9U2S0Gd1g",
+    "addr2": "天翼云: https://cloud.189.cn/t/2An6zeF3YNnu"
   },
   {
     "code": "R56",
@@ -25647,10 +25864,10 @@
     "code": "R58",
     "name": "忍者神龟 破碎命运",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Teenage Mutant Ninja Turtles: Splintered Fate",
-    "rLzz": "4GB",
+    "describe": "忍者神龟 斯普林特的命运、Teenage Mutant Ninja Turtles: Splintered Fate",
+    "rLzz": "5GB",
     "types": "动作.冒险.同屏多人",
-    "yxbb": "v1.0.0|容量4GB|官方简体中文|支持键盘.鼠标.手柄|2024年11月07号更新",
+    "yxbb": "v1.7.1|容量5GB|官方简体中文|支持键盘.鼠标.手柄|+忍者神龟 斯普林特的命运DLC|2025年02月06号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1PXejjPRfaRWTYIwsPuro2g",
     "addr2": "天翼云: https://cloud.189.cn/t/NjqiEnQBz2Ij"
   },
@@ -25686,6 +25903,17 @@
     "yxbb": "v1.12.1.2|容量12GB|官方简体中文|支持键盘.鼠标.手柄|2024年12月17号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1ReSUWa3d4G54HnLNm-MjhA",
     "addr2": "天翼云: https://cloud.189.cn/t/MnAVjqbAJJjy"
+  },
+  {
+    "code": "R62",
+    "name": "忍者龙剑传2 黑之章",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "NINJA GAIDEN 2 Black",
+    "rLzz": "82GB",
+    "types": "动作.武术",
+    "yxbb": "v1.0.7.0|容量82GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2025年02月12号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1MYBs4WJOsT7mpylPZRJXKw",
+    "addr2": "天翼云: https://cloud.189.cn/t/6N3A3uZFzi2u"
   },
   {
     "code": "S.DMDY001",
@@ -25803,9 +26031,9 @@
     "name": "生化危机7",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "生化危机7黄金终极版、Resident Evil 7 biohazard Gold Edition",
-    "rLzz": "64GB",
+    "rLzz": "103GB",
     "types": "僵尸.恐怖.射击游戏",
-    "yxbb": "Build.9473356黄金终极版|容量64GB|集成全DLCs|官方简体中文|支持键盘.鼠标.手柄|赠音乐BGM|赠多项修改器|2022年10月06号更新",
+    "yxbb": "v20230508|容量103GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2025年02月14号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1LqzVCheKlR_kYja6nneNTw",
     "addr2": "天翼云: https://cloud.189.cn/t/vm67RfMNrMJb",
     "addr3": "阿里云: https://www.aliyundrive.com/s/JvaTbkjphnd"
@@ -25850,13 +26078,12 @@
     "code": "S02C",
     "name": "生化危机1HD高清重制版",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Biohazard HD Remaster，Resident Evil",
+    "describe": "生化危机HD重制版、Resident Evil HD REMASTER",
     "rLzz": "18GB",
     "types": "僵尸.恐怖.射击游戏",
-    "yxbb": "中文版|容量18GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|赠七周目通关存档|2023年06月08号更新",
+    "yxbb": "v20250502|容量18GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器+七周目通关存档|2025年02月06号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1aGbJ7AwoNbgfrEuHbkACbg",
-    "addr2": "天翼云: https://cloud.189.cn/t/7NVZJz3IVjIb",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/A6soa6FqZT6"
+    "addr2": "天翼云: https://cloud.189.cn/t/7NVZJz3IVjIb"
   },
   {
     "code": "S02D",
@@ -25881,15 +26108,14 @@
   },
   {
     "code": "S02F",
-    "name": "生化危机3：重制版",
+    "name": "生化危机3 重制版",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Resident Evil 3 Remake",
-    "rLzz": "24GB",
+    "rLzz": "46GB",
     "types": "僵尸.恐怖.射击游戏",
-    "yxbb": "Build.11026988光追版_普通版双版本|容量24GB|官方简体中文.国语发音|支持键盘.鼠标.手柄|赠多项修改器|2023年04月23号更新",
+    "yxbb": "v20230427|容量46GB|官方简体中文.国语发音|支持键盘.鼠标.手柄|+多项修改器|2025年02月14号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1QvBzy4aHfwUCkbzRXqZdqg",
-    "addr2": "天翼云: https://cloud.189.cn/t/aEVn2m632uay",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/t1KeDugKSF2"
+    "addr2": "天翼云: https://cloud.189.cn/t/aEVn2m632uay"
   },
   {
     "code": "S02G",
@@ -26736,7 +26962,7 @@
     "describe": "Murders on the Yangtze River",
     "rLzz": "8GB",
     "types": "冒险.解谜.推理.剧情丰富",
-    "yxbb": "v1.4.20|容量8GB|官方简体中文|2024年12月11号更新",
+    "yxbb": "v1.5.50|容量8GB|官方简体中文|2025年02月10号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1T2z2Yub9sHsn6D0Yg6wYtw",
     "addr2": "天翼云: https://cloud.189.cn/t/ami2Enb6vIZv"
   },
@@ -26750,6 +26976,17 @@
     "yxbb": "v1.54|容量3GB|官方简体中文|支持键盘.鼠标|2025年01月03号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1AMF2iPIla4r9SHt2HCxoFg",
     "addr2": "天翼云: https://cloud.189.cn/t/QruIbm7famqq"
+  },
+  {
+    "code": "S1039",
+    "name": "三相奇谈",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Threefold Recital",
+    "rLzz": "5GB",
+    "types": "剧情.视觉小说",
+    "yxbb": "v1.0.4|容量5GB|官方简体中文|支持键盘.鼠标.手柄|2025年03月02号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1XkAS3PxTi_7PuFU6fl4Zlw",
+    "addr2": "天翼云: https://cloud.189.cn/t/vEBbiefAJvea"
   },
   {
     "code": "S104",
@@ -27270,10 +27507,9 @@
     "describe": "Age of Mythology: Extended Edition",
     "rLzz": "2.7GB",
     "types": "策略.即时战略.局域网联机",
-    "yxbb": "v2.8|容量2.7GB|官方繁体中文|2023年06月11号更新",
+    "yxbb": "v2.8高清重制版|容量2.7GB|简体中文|集成龙之传说DLC|2025年02月05号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1vKLwxgDAQhPaeXDGv0qRnA",
-    "addr2": "天翼云: https://cloud.189.cn/t/eIBNZzuInqMb",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/eyzfES98Qdi"
+    "addr2": "天翼云: https://cloud.189.cn/t/eIBNZzuInqMb"
   },
   {
     "code": "S13A",
@@ -27962,12 +28198,11 @@
     "name": "苏菲的炼金工房2不可思议梦的炼金术士",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Atelier Sophie 2: The Alchemist of the Mysterious Dream",
-    "rLzz": "20GB",
+    "rLzz": "24GB",
     "types": "角色扮演.女性主角",
-    "yxbb": "v1.08豪华版|容量20GB|官方简体中文|支持键盘.鼠标.手柄|2023年02月16号更新",
+    "yxbb": "v1.08|容量24GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月05号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1lF9cy0ngiFBSS6Vfc79M3Q",
-    "addr2": "天翼云: https://cloud.189.cn/t/7B7nQjY7zEVj",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/CmvjTg7hmcW"
+    "addr2": "天翼云: https://cloud.189.cn/t/7B7nQjY7zEVj"
   },
   {
     "code": "S19",
@@ -28046,10 +28281,9 @@
     "describe": "Thief、神偷4盗神版",
     "rLzz": "24GB",
     "types": "潜行.动作.冒险",
-    "yxbb": "v1.5盗神版|容量24GB|简体中文|赠修改器.存档|2023年06月11号更新",
+    "yxbb": "v1.7完全版|容量24GB|简体中文|赠修改器.存档|2025年02月05号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1LEGg6lLG66T0kcKlnCkwHg",
-    "addr2": "天翼云: https://cloud.189.cn/t/uMBBn2mMVZ32",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/hgJA55EaUWa"
+    "addr2": "天翼云: https://cloud.189.cn/t/uMBBn2mMVZ32"
   },
   {
     "code": "S196",
@@ -28081,11 +28315,10 @@
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Dead Island 2",
     "rLzz": "46GB",
-    "types": "动作.冒险",
-    "yxbb": "v20230716黄金版|容量46GB|官方简体中文|+DLCs|2023年07月16号更新",
+    "types": "僵尸.后末日.冒险.动作",
+    "yxbb": "v24089|容量46GB|官方简体中文|+修改器|2025年01月25号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1xhWLq-UhV66KW-VI4Mbn0Q",
-    "addr2": "天翼云: https://cloud.189.cn/t/zi67Nbvm6f63",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/iBiBSa6UMXF"
+    "addr2": "天翼云: https://cloud.189.cn/t/zi67Nbvm6f63"
   },
   {
     "code": "S199",
@@ -28137,10 +28370,9 @@
     "describe": "Judgment  Remastered",
     "rLzz": "36GB",
     "types": "动作.冒险",
-    "yxbb": "v1.12|容量36GB|官方简体中文|2023年08月16号更新",
+    "yxbb": "v1.12|容量36GB|官方简体中文|+修改器+解锁存档|2025年02月05号更新",
     "addr1": "度盘: https://pan.baidu.com/s/13cYLMw7oPyuyjneDmv1oEQ",
-    "addr2": "天翼云: https://cloud.189.cn/t/jmEneymqEjYj",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/g7oQ5C3jwwb"
+    "addr2": "天翼云: https://cloud.189.cn/t/jmEneymqEjYj"
   },
   {
     "code": "S202",
@@ -28484,7 +28716,7 @@
     "describe": "Two Point Hospital",
     "rLzz": "9GB",
     "types": "模拟经营",
-    "yxbb": "v1.29|容量9GB|集成全DLCs|官方简体中文.国语发音|赠多项修改器|外送满金币初始存档|2022年12月13号更新",
+    "yxbb": "v1.30|容量9GB|官方简体中文.国语发音|赠多项修改器|2025年02月16号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1R813GPTFdK6eeHkFZJy7EA",
     "addr2": "天翼云: https://cloud.189.cn/t/z6juuii26BJr",
     "addr3": "阿里云: https://www.aliyundrive.com/s/ctgoGc4aZvG"
@@ -28741,7 +28973,7 @@
     "describe": "DEATHLOOP",
     "rLzz": "30GB",
     "types": "第一人称射击.潜行",
-    "yxbb": "v1.769.5.5|容量30GB|官方简体中文|支持键盘.鼠标.手柄|2022年04月09号更新",
+    "yxbb": "v1.769.0.5|容量30GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月13号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1LV5C0DynoOL_Wc1xVsv2ZA",
     "addr2": "天翼云: https://cloud.189.cn/t/QBZ7nmeummUz"
   },
@@ -28805,9 +29037,9 @@
     "name": "神话时代 重述版",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Age of Mythology: Retold",
-    "rLzz": "25GB",
+    "rLzz": "22GB",
     "types": "策略.即时战略.奇幻",
-    "yxbb": "v100.17.46557.0|容量25GB|官方简体中文|支持键盘.鼠标.手柄|2024年11月15号更新",
+    "yxbb": "v100.18.419.0|容量22GB|官方简体中文|支持键盘.鼠标.手柄|2025年01月31号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1vKfVpW6JoovHtC8CzcBL3g",
     "addr2": "天翼云: https://cloud.189.cn/t/eAB7z2vUnUjy"
   },
@@ -28860,12 +29092,11 @@
     "name": "杀戮空间2/杀地板2/杀戮间2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Killing Floor 2",
-    "rLzz": "92GB",
+    "rLzz": "95GB",
     "types": "射击游戏.僵尸",
-    "yxbb": "v1143豪华版|容量92GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2023年09月21号更新",
+    "yxbb": "v1148.24337|容量95GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2025年02月13号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1vdHYeFdjGXonDfFEwGM6lg",
-    "addr2": "天翼云: https://cloud.189.cn/t/qiiYviq63MRv",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/jHCTApgCg3Z"
+    "addr2": "天翼云: https://cloud.189.cn/t/qiiYviq63MRv"
   },
   {
     "code": "S260",
@@ -28907,7 +29138,7 @@
     "describe": "三国志8REMAKE、ROMANCE OF THE THREE KINGDOMS 8 REMAKE",
     "rLzz": "22GB",
     "types": "战争游戏.策略",
-    "yxbb": "v1.0.4|容量22GB|官方简体中文|支持键盘.鼠标.手柄|2024年11月28号更新",
+    "yxbb": "v1.0.6|容量22GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2025年02月08号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1ven2bd7bsc6HkXrMK6l36w",
     "addr2": "天翼云: https://cloud.189.cn/t/emiyau63IBnu"
   },
@@ -28998,6 +29229,83 @@
     "yxbb": "v0.1|容量40GB|官方简体中文|2025年01月17号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1lsR0T0RcXmYOJd9gqzDKEA",
     "addr2": "天翼云: https://cloud.189.cn/t/RFZjU3nQzyiu"
+  },
+  {
+    "code": "S271",
+    "name": "首都高赛车",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Tokyo Xtreme Racer、首都高バトル",
+    "rLzz": "7GB",
+    "types": "竞速.赛车竞技",
+    "yxbb": "v0.10.1|容量7GB|官方简体中文|2025年01月24号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1G1X8AHt_KkY2Ach2nGBU1w",
+    "addr2": "天翼云: https://cloud.189.cn/t/3i6vMfeIZJzm"
+  },
+  {
+    "code": "S272",
+    "name": "随身摄像机",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Bodycam",
+    "rLzz": "45GB",
+    "types": "策略.第一人称射击",
+    "yxbb": "v0.1.3.3|容量45GB|官方简体中文|支持键盘.鼠标|2025年01月28号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1Fe2m10SySSPklnR9pmKcVg",
+    "addr2": "天翼云: https://cloud.189.cn/t/bUBf6vjMbuau"
+  },
+  {
+    "code": "S273",
+    "name": "兽人必须死 死亡陷阱",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Orcs Must Die! Deathtrap",
+    "rLzz": "11GB",
+    "types": "塔防.动作.第三人称射击",
+    "yxbb": "v1.0.6|容量11GB|官方简体中文|支持键盘.鼠标.手柄|2025年01月30号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1apjtOSE2LoQbOnuHGthnHQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/eYZVZjERNBbi"
+  },
+  {
+    "code": "S274",
+    "name": "世界大战 西方战线",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "The Great War: Western Front",
+    "rLzz": "14GB",
+    "types": "策略.即时战略.一战",
+    "yxbb": "Build.822194|容量14GB|官方简体中文|支持键盘.鼠标|2025年02月01号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1ldtRT-pzb3MCyzYD7f68wg",
+    "addr2": "天翼云: https://cloud.189.cn/t/N32eiiiMZzYz"
+  },
+  {
+    "code": "S275",
+    "name": "谁是你爸爸",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Who's Your Daddy?!",
+    "rLzz": "7GB",
+    "types": "休闲",
+    "yxbb": "Build.17202325|容量7GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月02号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1gHb3QdSbOp5tWJYErW-kIw",
+    "addr2": "天翼云: https://cloud.189.cn/t/VfiUrqFbUB3e"
+  },
+  {
+    "code": "S276",
+    "name": "失落的记录 绽放与愤怒",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Lost Records: Bloom & Rage",
+    "rLzz": "44GB",
+    "types": "LGBTQ+.选择取向.90年代",
+    "yxbb": "v1.02.118358|容量44GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月19号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1TPZOYcey56I1pQT1wr39dw",
+    "addr2": "天翼云: https://cloud.189.cn/t/zEvEVj63IVBr"
+  },
+  {
+    "code": "S277",
+    "name": "圣剑传说 玛娜幻象",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Visions of Mana",
+    "rLzz": "38GB",
+    "types": "角色扮演",
+    "yxbb": "v20250225|容量38GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月25号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1heJwAZlNEA6QkcauusCsxg",
+    "addr2": "天翼云: https://cloud.189.cn/t/iENZviN7vEby"
   },
   {
     "code": "S28",
@@ -29107,10 +29415,9 @@
     "describe": "Triangle Strategy",
     "rLzz": "9GB",
     "types": "角色扮演.策略",
-    "yxbb": "Build.9842040|容量9GB|官方简体中文|2023年04月07号更新",
+    "yxbb": "v1.1.0|容量9GB|官方简体中文|2025年02月13号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1XNvcIk44ai2318koCQghHw",
-    "addr2": "天翼云: https://cloud.189.cn/t/iauaEf6J7zea",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/FReJQWuXezJ"
+    "addr2": "天翼云: https://cloud.189.cn/t/iauaEf6J7zea"
   },
   {
     "code": "S34",
@@ -29160,15 +29467,14 @@
   },
   {
     "code": "S38",
-    "name": "生化危机2：重制版",
+    "name": "生化危机2 重制版",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Resident Evil 2",
-    "rLzz": "24GB",
+    "describe": "Resident Evil 2 Remake",
+    "rLzz": "50GB",
     "types": "僵尸.射击游戏.恐怖",
-    "yxbb": "Build.11026357光追版_普通版双版|容量24GB|官方简体中文.国语发音|赠多项修改器|2023年04月23号更新",
+    "yxbb": "v20230814|容量50GB|官方简体中文.国语发音|赠多项修改器|2025年02月13号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1r6yUadhqjyBmmbAXRjR7_w",
-    "addr2": "天翼云: https://cloud.189.cn/t/6bu2y2NRNRBz",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/x4wm7WK6RtM"
+    "addr2": "天翼云: https://cloud.189.cn/t/6bu2y2NRNRBz"
   },
   {
     "code": "S39",
@@ -29184,34 +29490,34 @@
   },
   {
     "code": "S40",
-    "name": "生化奇兵3：无限/生化奇兵无限",
+    "name": "生化奇兵3 无限/生化奇兵无限",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "BioShock Infinite",
-    "rLzz": "43.3GB",
-    "types": "射击游戏",
-    "yxbb": "v1.1.25.5165完全版|容量43.3GB|官方繁体中文|支持键盘.鼠标.手柄|赠音乐原声|赠多项修改器|赠全关卡装备解锁存档|2021年04月12号更新",
+    "rLzz": "45GB",
+    "types": "第一人称射击.动作",
+    "yxbb": "v20220831|容量45GB|官方繁体中文|支持键盘.鼠标.手柄|赠多项修改器+全关卡装备解锁存档|2025年02月13号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1PuznP7TrJ74B-zk8q1cIAQ",
     "addr2": "天翼云: https://cloud.189.cn/t/FjmqyiYVnyMv"
   },
   {
     "code": "S40A",
-    "name": "生化奇兵：重制版",
+    "name": "生化奇兵 重制版",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "BioShock Remastered",
-    "rLzz": "20.8GB",
-    "types": "射击游戏",
-    "yxbb": "v1.0.122872版|容量20.8GB|官方简体中文|支持键盘.鼠标.手柄|赠音乐原声|2021年04月12号更新",
+    "rLzz": "21GB",
+    "types": "第一人称射击.动作",
+    "yxbb": "v20220831|容量21GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月13号更新",
     "addr1": "度盘: https://pan.baidu.com/s/17Qlj_CgxFqvp-LMpJZDHNQ",
     "addr2": "天翼云: https://cloud.189.cn/t/nQviEvbmIvEv"
   },
   {
     "code": "S40B",
-    "name": "生化奇兵2：重制版",
+    "name": "生化奇兵2 重制版",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "BioShock 2 Remastered",
     "rLzz": "20GB",
-    "types": "射击游戏",
-    "yxbb": "v1.0.122864|容量20GB|官方简体中文|支持键盘.鼠标.手柄|赠音乐原声|2021年04月12号更新",
+    "types": "第一人称射击.动作",
+    "yxbb": "v20220831|容量20GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月13号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1pO07GszFpX8jL2ZPfICoLA",
     "addr2": "天翼云: https://cloud.189.cn/t/JryEVjRVZBjq"
   },
@@ -29342,7 +29648,7 @@
     "code": "S5037",
     "name": "圣修女",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Nunholy",
+    "describe": "Nunholy、修女地下城",
     "rLzz": "1GB",
     "types": "动作.砍杀",
     "yxbb": "v1.0.1|容量1GB|官方简体中文|2025年01月15号更新",
@@ -29614,9 +29920,9 @@
   },
   {
     "code": "S72",
-    "name": "死亡之门/死神之门/死亡门扉",
+    "name": "死亡之门",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Death's Door",
+    "describe": "死神之门、死亡门扉、Death's Door",
     "rLzz": "5.2GB",
     "types": "动作角色扮演.探索",
     "yxbb": "v1.1.5|容量5.2GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2021年09月28号更新",
@@ -29687,10 +29993,9 @@
     "describe": "The Ascent",
     "rLzz": "21GB",
     "types": "射击游戏.赛博朋克",
-    "yxbb": "v#72946|容量21GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2022年08月20号更新",
+    "yxbb": "v72946|容量21GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2025年02月12号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1rhpbohWbbirhKI52Xk7nOg",
-    "addr2": "天翼云: https://cloud.189.cn/t/UNNn2iABjeQj",
-    "addr3": "夸克: https://pan.quark.cn/s/5a34c89c1dd1"
+    "addr2": "天翼云: https://cloud.189.cn/t/UNNn2iABjeQj"
   },
   {
     "code": "S77",
@@ -29813,10 +30118,9 @@
     "describe": "Returnal",
     "rLzz": "54GB",
     "types": "射击游戏.太空",
-    "yxbb": "Build.10726315 中文版|容量54GB|官方简体中文|+终极归宿+预购奖励+全DLC|赠多项修改器|2023年03月12号更新",
+    "yxbb": "v20230425|容量54GB|官方简体中文|赠多项修改器|2025年02月12号更新",
     "addr1": "度盘: https://pan.baidu.com/s/10Cf7RMmXZ_cKLPlewZ14BQ",
-    "addr2": "天翼云: https://cloud.189.cn/t/qamMFjI3QnI3",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/VBUZy8sZooL"
+    "addr2": "天翼云: https://cloud.189.cn/t/qamMFjI3QnI3"
   },
   {
     "code": "S86",
@@ -29987,10 +30291,9 @@
     "describe": "SD GUNDAM BATTLE ALLIANCE",
     "rLzz": "25GB",
     "types": "机甲.机器人.动作角色扮演",
-    "yxbb": "v20230514_v4.27.2.0|容量25GB|官方简体中文|赠多项修改器|2023年05月14号更新",
+    "yxbb": "v1.40|容量25GB|官方简体中文|赠多项修改器|2025年02月12号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1sZKxwZkSFuir-2P-QwBwew",
-    "addr2": "天翼云: https://cloud.189.cn/t/JbQZbyvyYnmu",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/EenckidgBT5"
+    "addr2": "天翼云: https://cloud.189.cn/t/JbQZbyvyYnmu"
   },
   {
     "code": "S98",
@@ -30122,10 +30425,9 @@
     "describe": "Kingdom Come: Deliverance",
     "rLzz": "80GB",
     "types": "中世纪.开放世界.角色扮演",
-    "yxbb": "v1.9.6.404.504pt|容量80GB|集成她的命运.远征骑士.花花公子.比武大会.废土新生.往日宝藏.高清材质包DLCs|官方简体中文|赠多项修改器|2022年12月18号更新",
+    "yxbb": "v1.9.6.404.504pt|容量80GB|官方简体中文|集成她的命运.远征骑士.花花公子.比武大会.废土新生.往日宝藏.高清材质包DLCs|赠多项修改器|2025年02月25号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1XbpN0DmFaYM4mKvjs0DOGw",
-    "addr2": "天翼云: https://cloud.189.cn/t/uU7BnmQvMFZf",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/bPefRPMmKXW"
+    "addr2": "天翼云: https://cloud.189.cn/t/uU7BnmQvMFZf"
   },
   {
     "code": "T07",
@@ -30639,10 +30941,9 @@
     "describe": "A Way Out",
     "rLzz": "21GB",
     "types": "合作.冒险.同屏多人",
-    "yxbb": "v1.2.0.2|容量21GB|内置3DM完整汉化补丁|必须2人玩|支持键盘.鼠标.手柄|2021年09月20号更新",
+    "yxbb": "v1.2.0.2|容量21GB|内置3DM完整汉化补丁|必须2人玩|支持键盘.鼠标.手柄|2025年02月04号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1S_0VZQjOUTRg4171UCo8gw",
-    "addr2": "天翼云: https://cloud.189.cn/t/FVviEz7fy2Ez",
-    "addr3": "阿里云: https://www.alipan.com/s/YySASH3ExSU"
+    "addr2": "天翼云: https://cloud.189.cn/t/FVviEz7fy2Ez"
   },
   {
     "code": "T120",
@@ -30698,6 +30999,28 @@
     "yxbb": "中文版|容量26GB|官方简体中文|2025年01月18号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1SToK00rob6KzJu6t8BQLjw",
     "addr2": "天翼云: https://cloud.189.cn/t/iaQnieEZjeMf"
+  },
+  {
+    "code": "T125",
+    "name": "铁尾传奇2 凛冬之战",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Tails of Iron 2: Whiskers of Winter",
+    "rLzz": "5GB",
+    "types": "动作.冒险",
+    "yxbb": "v1.0.0|容量5GB|官方简体中文|支持键盘.鼠标.手柄|2025年01月30号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1iEq1nXwC_KUvbxg5nssSyg",
+    "addr2": "天翼云: https://cloud.189.cn/t/rummYzj22aAb"
+  },
+  {
+    "code": "T126",
+    "name": "天国 拯救2",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Kingdom Come: Deliverance II",
+    "rLzz": "112GB",
+    "types": "角色扮演.中世纪.开放世界",
+    "yxbb": "v1.1.1|容量112GB|官方简体中文|+修改器|2025年02月05号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1ie1eq5KsmZyCcOsgGf4ZJA",
+    "addr2": "天翼云: https://cloud.189.cn/t/Ij2uQvU36Bbu"
   },
   {
     "code": "T13",
@@ -30795,9 +31118,9 @@
     "name": "太空工程师",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "space engineers",
-    "rLzz": "38GB",
+    "rLzz": "41GB",
     "types": "太空.沙盒",
-    "yxbb": "v1.204.018|容量38GB|官方简体中文|+DLCs|2024年07月01号更新",
+    "yxbb": "v1.205.026|容量41GB|官方简体中文|2025年02月21号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1gdfeqasYieDVcvQiL-taAA",
     "addr2": "天翼云: https://cloud.189.cn/t/iANz6vYVZBre"
   },
@@ -30815,12 +31138,12 @@
   },
   {
     "code": "T21",
-    "name": "挺进地牢/单机.同屏多人",
+    "name": "挺进地牢",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Enter the Gungeon",
     "rLzz": "310MB",
-    "types": "弹幕射击.像素",
-    "yxbb": "v2.1.9a|容量310MB|官方简体中文|支持键盘.鼠标.手柄|赠音乐原声集|赠多项修改器|赠全人物.武器.BOSS解锁存档|赠官方原画PDF|2021年08月22号更新",
+    "types": "弹幕射击.像素.同屏多人",
+    "yxbb": "v2.1.9a|容量310MB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|赠全人物.武器.BOSS解锁存档|2025年01月26号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1v8BSHwWzYNimgBDkJik3mg",
     "addr2": "天翼云: https://cloud.189.cn/t/ERVZZffQb63i"
   },
@@ -30950,15 +31273,14 @@
   },
   {
     "code": "T33",
-    "name": "天外世界 太空人之选/外部世界太空人之选",
+    "name": "天外世界 太空人之选",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "The Outer Worlds",
     "rLzz": "52GB",
     "types": "动作角色扮演.开放世界.探索",
-    "yxbb": "Build.10559393|容量52GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2023年03月08号更新",
+    "yxbb": "v1.6411|容量52GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2025年01月26号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1wljlmJ9SGO8IcOHniCm27A",
-    "addr2": "天翼云: https://cloud.189.cn/t/maeMBjZR36Z3",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/qKj35d33hLc"
+    "addr2": "天翼云: https://cloud.189.cn/t/maeMBjZR36Z3"
   },
   {
     "code": "T34",
@@ -31169,6 +31491,17 @@
     "yxbb": "Build.16802271|容量3GB|官方简体中文|2025年01月06号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1H4Ec558oDygah6SnoPA6BA",
     "addr2": "天翼云: https://cloud.189.cn/t/QNr63q7FRjIz"
+  },
+  {
+    "code": "T5022",
+    "name": "天之少女",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "The Shell Part III: Paradiso、天ノ少女",
+    "rLzz": "3GB",
+    "types": "视觉小说.推理.悬疑",
+    "yxbb": "v1.0.0|容量3GB|官方简体中文|支持键盘.鼠标|2025年01月21号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1DpddxtWAzfEg0HAhCE3UrQ",
+    "addr2": "天翼云: http://cloud.189.cn/t/FNb2Av7Z7RRf"
   },
   {
     "code": "T51",
@@ -31789,6 +32122,17 @@
     "addr2": "天翼云: https://cloud.189.cn/t/ZBJvIrQRziEz"
   },
   {
+    "code": "V01",
+    "name": "VR战士5 R E V O",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Virtua Fighter 5 R.E.V.O.",
+    "rLzz": "22GB",
+    "types": "格斗.同屏多人",
+    "yxbb": "中文版|容量22GB|官方简体中文|2025年01月28号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1I6HKWs-l1cVyXS3EhADayQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/RNZzii6F3UBn"
+  },
+  {
     "code": "V02",
     "name": "Voyage/单机.同屏多人",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -31850,10 +32194,9 @@
     "describe": "The Witcher 2 - Assassins of Kings - Enhanced Edition",
     "rLzz": "23GB",
     "types": "角色扮演",
-    "yxbb": "Build.8710817|容量23GB|官方繁体中文|支持键盘.鼠标.手柄|赠多项修改器|2023年05月01号更新",
+    "yxbb": "Build.8710817|容量23GB|官方繁体中文|支持键盘.鼠标.手柄|赠多项修改器|2025年01月26号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1_NUNwt-ZrJmlSRgaw508Vw",
-    "addr2": "天翼云: https://cloud.189.cn/t/Vn6bimUFBjYz",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/1R3bmsYpGFT"
+    "addr2": "天翼云: https://cloud.189.cn/t/Vn6bimUFBjYz"
   },
   {
     "code": "W01B",
@@ -32215,7 +32558,7 @@
     "describe": "The Invincible",
     "rLzz": "41GB",
     "types": "冒险.机器人.科幻.太空.探索",
-    "yxbb": "Build.44475|容量41GB|官方简体中文|+全DLC|2024年09月26号更新",
+    "yxbb": "Build.44494|容量41GB|官方简体中文|2025年01月21号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1Q9GFd4jgeVzCVoTfLh4nSQ",
     "addr2": "天翼云: https://cloud.189.cn/t/MneQFjeUNNFn"
   },
@@ -32323,9 +32666,9 @@
     "name": "雾锁王国",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Enshrouded",
-    "rLzz": "32GB",
+    "rLzz": "33GB",
     "types": "生存.基地建设.开放世界",
-    "yxbb": "v614175|容量32GB|官方简体中文|+修改器|2024年12月25号更新",
+    "yxbb": "v635482|容量33GB|官方简体中文|+修改器|2025年01月31号更新",
     "addr1": "度盘: https://pan.baidu.com/s/11len5tWhWXnIGPJ0QqqJYA",
     "addr2": "天翼云: https://cloud.189.cn/t/EFjMzmNNveQz"
   },
@@ -32717,16 +33060,59 @@
     "addr2": "天翼云: https://cloud.189.cn/t/B3U3UzYziy6v"
   },
   {
+    "code": "W147",
+    "name": "王国英雄",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Hero of the Kingdom",
+    "rLzz": "400MB",
+    "types": "休闲.角色扮演.指向点击.冒险",
+    "yxbb": "v1.6.14|容量400MB|官方简体中文|2025年01月27号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1PvHGgxEpGDIf-nrNtPkhSA",
+    "addr2": "天翼云: https://cloud.189.cn/t/iuiuumqiA3ym"
+  },
+  {
+    "code": "W148",
+    "name": "王国英雄3",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Hero of the Kingdom III、王国英雄III",
+    "rLzz": "600MB",
+    "types": "休闲.角色扮演.指向点击.冒险",
+    "yxbb": "v1.2.13|容量600MB|官方简体中文|2025年01月27号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1pQclZ1_9fAcBhADdEjHsdQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/BzA3IjuaENVb"
+  },
+  {
+    "code": "W149",
+    "name": "王国英雄 失落传说2",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Hero of the Kingdom The Lost Tales 2",
+    "rLzz": "500MB",
+    "types": "休闲.角色扮演.指向点击.冒险",
+    "yxbb": "v1.2.9|容量500MB|官方简体中文|2025年01月27号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/12Rk-gRLQLnZyYsrV8nL4Mg",
+    "addr2": "天翼云: https://cloud.189.cn/t/6veUBzMVbINz"
+  },
+  {
     "code": "W15",
     "name": "瘟疫公司：进化/瘟疫公司物竞天择/瘟疫公司解药风云",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Plague Inc: Evolved",
     "rLzz": "1.5GB",
     "types": "策略.模拟.后末日",
-    "yxbb": "v1.19.1.0|容量1.5GB|官方简体中文|支持键盘.鼠标|赠多项修改器|2023年06月10号更新",
+    "yxbb": "v1.19.1.0|容量1.5GB|官方简体中文|支持键盘.鼠标|赠多项修改器|2025年01月26号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1DPHcICHGNyHLYdPMIV0tOA",
-    "addr2": "天翼云: https://cloud.189.cn/t/VNZVj22AnuUz",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/jJxzs2CK9aP"
+    "addr2": "天翼云: https://cloud.189.cn/t/VNZVj22AnuUz"
+  },
+  {
+    "code": "W150",
+    "name": "无双深渊",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "WARRIORS Abyss",
+    "rLzz": "4GB",
+    "types": "动作.砍杀",
+    "yxbb": "v1.0.1|容量4GB|官方简体中文|2025年02月13号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1EgqziZRC93UZeW6NbLE8sA",
+    "addr2": "天翼云: https://cloud.189.cn/t/NvUzMvuYJrIv"
   },
   {
     "code": "W16",
@@ -32735,10 +33121,9 @@
     "describe": "Celeste",
     "rLzz": "1.1GB",
     "types": "像素.横向滚屏",
-    "yxbb": "v1.4.0.0|容量1.1GB|官方简体中文|支持键盘.鼠标.手柄|2023年09月29号更新",
+    "yxbb": "v1.4.0.0|容量1.1GB|官方简体中文|支持键盘.鼠标.手柄|2025年01月26号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1Ppa6KSiuLg0i7XHsVPmyFg",
-    "addr2": "天翼云: https://cloud.189.cn/t/E7ZRZrrArQbi",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/NsfYMEKQVRN"
+    "addr2": "天翼云: https://cloud.189.cn/t/E7ZRZrrArQbi"
   },
   {
     "code": "W17",
@@ -33522,10 +33907,9 @@
     "describe": "王国英雄 失落的传说1、Hero of the Kingdom: The Lost Tales 1",
     "rLzz": "400MB",
     "types": "冒险.休闲.角色扮演.策略.指向点击",
-    "yxbb": "v1.08|容量400MB|官方简体中文|支持键盘.鼠标|2023年10月28号更新",
+    "yxbb": "v1.2.12|容量400MB|官方简体中文|支持键盘.鼠标|2025年01月27号更新",
     "addr1": "度盘: https://pan.baidu.com/s/18J-dHhUhhggB2tJG-T3PtQ",
-    "addr2": "天翼云: https://cloud.189.cn/t/UVR7B3u6viai",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/J2kNG6Tqr3m"
+    "addr2": "天翼云: https://cloud.189.cn/t/UVR7B3u6viai"
   },
   {
     "code": "W68A",
@@ -33534,7 +33918,7 @@
     "describe": "王国英雄II、Hero of the Kingdom II",
     "rLzz": "500MB",
     "types": "冒险.休闲.指向点击.角色扮演",
-    "yxbb": "v1.25|容量500MB|官方简体中文|2023年10月28号更新",
+    "yxbb": "v1.3.11|容量500MB|官方简体中文|2025年01月27号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1gmlozEbSkZJWpDQhEWBdvg",
     "addr2": "天翼云: https://cloud.189.cn/t/eYbI7nMFZnua"
   },
@@ -33797,9 +34181,9 @@
     "name": "网球世界巡回赛2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Tennis World Tour 2",
-    "rLzz": "12.7GB",
+    "rLzz": "13GB",
     "types": "体育运动",
-    "yxbb": "Ace版|容量12.7GB|官方简体中文|支持键盘.鼠标.手柄|2021年04月12号更新",
+    "yxbb": "v1.0.4637|容量13GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月06号更新",
     "addr1": "度盘: https://pan.baidu.com/s/11dtg34K0d0VhfBlFgTRMxQ",
     "addr2": "天翼云: https://cloud.189.cn/t/zaeE7zFbaquq"
   },
@@ -33843,12 +34227,11 @@
     "name": "We Who Are About To Die",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "即将死去的我们、我们这些即将死去的人、角斗士模拟器、向死而生",
-    "rLzz": "6GB",
+    "rLzz": "8GB",
     "types": "策略.模拟.动作",
-    "yxbb": "v0.17HF|容量6GB|简体中文汉化|2023年05月04号更新",
+    "yxbb": "v0.73|容量8GB|简体中文汉化|2025年01月29号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1Pb4yPicA8a4PQGKjTlt0lw",
-    "addr2": "天翼云: https://cloud.189.cn/t/Rv2aArrauiyu",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/zw3GUJDoaEt"
+    "addr2": "天翼云: https://cloud.189.cn/t/Rv2aArrauiyu"
   },
   {
     "code": "W92",
@@ -34041,7 +34424,7 @@
     "describe": "雪地奔驰高级版、SnowRunner - Premium Edition",
     "rLzz": "56GB",
     "types": "模拟经营.汽车模拟.越野",
-    "yxbb": "v33|容量56GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2024年12月05号更新",
+    "yxbb": "v20250218|容量56GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2025年02月20号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1GwWMEZpn5JYo1M5jzNtEwg",
     "addr2": "天翼云: https://cloud.189.cn/t/F7beQ3mmuQre"
   },
@@ -34117,9 +34500,9 @@
     "name": "消逝的光芒2 人与仁之战/消逝的光芒2坚守人性",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Dying Light 2 Stay Human",
-    "rLzz": "76GB",
+    "rLzz": "72GB",
     "types": "开放世界.僵尸.生存",
-    "yxbb": "v1.19.2终极版|容量76GB|官方简体中文.中文语音|赠多项修改器|2024年11月18号更新",
+    "yxbb": "v1.21.1终极版|容量72GB|官方简体中文.中文语音|赠多项修改器|2025年02月20号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1kxofTITsHD0i2t5IIOm32A",
     "addr2": "天翼云: https://cloud.189.cn/t/zYz2yqZZJJzq"
   },
@@ -34447,6 +34830,17 @@
     "yxbb": "v1.1.38.30|容量14GB|官方简体中文|2024年08月17号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1PH8UrqgXal58VjAdR0AX_w",
     "addr2": "天翼云: https://cloud.189.cn/t/rEnEnaqy6fQf"
+  },
+  {
+    "code": "X1019",
+    "name": "仙剑奇侠传七",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "仙剑奇侠传七 人间如梦、仙剑奇侠传7人间如梦、Sword and Fairy 7 Dreamlike World Expansion",
+    "rLzz": "42GB",
+    "types": "角色扮演",
+    "yxbb": "v2.1.0|容量42GB|官方简体中文|+修改器|2025年02月01号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/19Z64E-F5Tay_BR_HV_pD3A",
+    "addr2": "天翼云: https://cloud.189.cn/t/YzuiQ3eYrEfa"
   },
   {
     "code": "X102",
@@ -34953,9 +35347,9 @@
     "name": "虚之少女",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "The Shell Part II: Purgatorio",
-    "rLzz": "5.4GB",
+    "rLzz": "6GB",
     "types": "推理.调查.视觉小说",
-    "yxbb": "Build.13413133|容量5.4GB|官方简体中文|支持键盘.鼠标|2024年04月21号更新",
+    "yxbb": "v1.0.1|容量6GB|官方简体中文|支持键盘.鼠标|2025年02月18号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1XP7_qcDzXGLZsZTP91o3Bw",
     "addr2": "天翼云: https://cloud.189.cn/t/ryA7jqrUNbYr"
   },
@@ -35268,6 +35662,17 @@
     "addr2": "天翼云: https://cloud.189.cn/t/zQrMf2aiIVBn"
   },
   {
+    "code": "X169",
+    "name": "星球大战前传1 幽灵的威胁",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "STAR WARS Episode I Jedi Power Battles",
+    "rLzz": "7GB",
+    "types": "动作.复古",
+    "yxbb": "中文版|容量7GB|官方简体中文|2025年01月24号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1fHQ2O6b9YQshAyJU8myy0A",
+    "addr2": "天翼云: https://cloud.189.cn/t/qqyYRnbUbmaa"
+  },
+  {
     "code": "X16A",
     "name": "小偷模拟器2/窃贼模拟器2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -35288,6 +35693,17 @@
     "yxbb": "vR.1.1.51172|容量23GB|官方简体中文|2022年05月20号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1-HOaM1_ca7WPb8gufnSZxw",
     "addr2": "天翼云: https://cloud.189.cn/t/feYbeyqqM3a2"
+  },
+  {
+    "code": "X170",
+    "name": "宣誓",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "宣誓高级版、Avowed Premium Edition",
+    "rLzz": "74GB",
+    "types": "角色扮演.奇幻",
+    "yxbb": "v1.0.0|容量74GB|官方简体中文|支持键盘.鼠标.手柄|2025年02月14号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1HjXr9xbU-U9yjrV5NUqWRQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/6naMfeNvqeme"
   },
   {
     "code": "X18",
@@ -35789,7 +36205,7 @@
     "describe": "StarCraft 2: Legacy of the Void",
     "rLzz": "27GB",
     "types": "即时战略",
-    "yxbb": "v3.1.4.41219|容量27GB|官方繁体中文.国语发音|集成虚空之遗.虫群之心.自由之翼|支持键盘.鼠标|赠多项修改器|2025年01月16号更新",
+    "yxbb": "v3.1.4.41219|容量27GB|官方繁体中文.国语发音|集成虚空之遗.虫群之心.自由之翼|支持键盘.鼠标|赠多项修改器|2025年02月09号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1mK0vjOWcCYWgEp8z-vg3tw",
     "addr2": "天翼云: https://cloud.189.cn/t/m2mMJ3MvUJBn"
   },
@@ -35967,9 +36383,9 @@
     "name": "心灵杀手2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "心灵杀手2夜泉镇、Alan Wake 2、Alan Wake II",
-    "rLzz": "113GB",
+    "rLzz": "106GB",
     "types": "恐怖.射击游戏",
-    "yxbb": "v1.2.5|容量113GB|官方简体中文|+修改器|2024年11月27号更新",
+    "yxbb": "v1.2.8|容量106GB|官方简体中文|+修改器|2025年02月01号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1tDoT4RrMvUZmHsySbOWpqQ",
     "addr2": "天翼云: https://cloud.189.cn/t/meQBVjf2Qnia"
   },
@@ -35989,9 +36405,9 @@
     "name": "X4基石",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "X4: Foundations、X4行星共同体典藏版、Community of Planets Collector's Edition",
-    "rLzz": "31GB",
+    "rLzz": "35GB",
     "types": "探索.沙盒.建造.经济.管理.太空",
-    "yxbb": "v7.10行星共同体典藏版|容量31GB|官方简体中文|赠多项修改器|2024年08月30号更新",
+    "yxbb": "v7.50|容量35GB|官方简体中文|赠多项修改器|2025年02月21号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1Qu3F6dPgO4aeDqK_a0LK4A",
     "addr2": "天翼云: https://cloud.189.cn/t/eie6nazqiaQb"
   },
@@ -37650,12 +38066,11 @@
     "name": "要塞 决定版",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Stronghold: Definitive Edition",
-    "rLzz": "4GB",
+    "rLzz": "13GB",
     "types": "即时战术.城市营造.殖民模拟.沙盒.中世纪",
-    "yxbb": "Build.12662053_v1.01|容量4GB|官方简体中文|+全DLC|2023年11月10号更新",
+    "yxbb": "v1.33|容量13GB|官方简体中文|2025年01月22号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1uVfMLnYlkHm_kiHz2E4SuQ",
-    "addr2": "天翼云: https://cloud.189.cn/t/ZfUVR3juaiai",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/PWFRgn9zH3a"
+    "addr2": "天翼云: https://cloud.189.cn/t/ZfUVR3juaiai"
   },
   {
     "code": "Y16",
@@ -37687,7 +38102,7 @@
     "describe": "伊苏10 北境历险、伊蘇X北境歷險、Ys X: Nordics",
     "rLzz": "13GB",
     "types": "角色扮演",
-    "yxbb": "v2.0.0|容量13GB|官方简体中文|支持键盘.鼠标.手柄|2024年09月27号更新",
+    "yxbb": "v2.03|容量13GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2025年02月14号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1z-FdZndINmP0MkMBC2v9Mw",
     "addr2": "天翼云: https://cloud.189.cn/t/qMZ3merYRzUr"
   },
@@ -38546,26 +38961,81 @@
     "addr2": "天翼云: https://cloud.189.cn/t/vIneMrny2ea2"
   },
   {
-    "code": "Y23",
-    "name": "以撒的结合：胎衣+",
+    "code": "Y226",
+    "name": "英雄传说 界之轨迹 告别塞姆利亚",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "The Binding of Isaac: Rebirth",
+    "describe": "The Legend of Heroes Kai no Kiseki Farewell O Zemuria",
+    "rLzz": "52GB",
+    "types": "角色扮演",
+    "yxbb": "v1.0|容量52GB|官方简体中文|2025年01月23号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1dw8usMghguMc4UEvxTahkA",
+    "addr2": "天翼云: https://cloud.189.cn/t/qa6R3qJ777Nn"
+  },
+  {
+    "code": "Y227",
+    "name": "佣兵哀歌 巫女与七煞星",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Mercenaries Lament Requiem of the Silver Wolf",
+    "rLzz": "1GB",
+    "types": "角色扮演.像素",
+    "yxbb": "v1.0.0|容量1GB|官方简体中文|2025年01月24号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1K7oaDAOJHizxvLewkwxQmQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/ju6rieYJ7Bza"
+  },
+  {
+    "code": "Y228",
+    "name": "永恒之链",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Eternal Strands",
+    "rLzz": "19GB",
+    "types": "动作.冒险",
+    "yxbb": "v1.0.12.8195|容量19GB|官方简体中文|2025年01月29号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1EyYahx_J9sTV_nEwgrFcjQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/qyyyyyBBNz63"
+  },
+  {
+    "code": "Y229",
+    "name": "游戏无损缩放",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "小黄鸭补帧、Lossless Scaling",
+    "rLzz": "300MB",
+    "types": "软件.像素.实用工具",
+    "yxbb": "v3.0|容量300MB|官方简体中文|支持键盘.鼠标|2025年02月11号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1QO_Wluya32Ymm-BWJjQplg",
+    "addr2": "天翼云: https://cloud.189.cn/t/aYR7RjbuaAje"
+  },
+  {
+    "code": "Y23",
+    "name": "以撒的结合",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "以撒的结合重生、以撒的结合 胎衣、以撒的结合 胎衣+、以撒的结合 忏悔、The Binding of Isaac: Repentance",
     "rLzz": "2GB",
     "types": "Rogue类.像素.迷宫探索",
-    "yxbb": "整合6号升级档|集成重生+胎衣+胎衣+|内置简体中文汉化|支持键盘.鼠标.手柄|赠音乐原声|赠多项修改器|赠全道具.成就解锁存档|赠MOD合集包|2021年04月28号更新",
+    "yxbb": "v1.7.9c|容量2GB|官方简体中文|集成重生+胎衣+胎衣++忏悔|支持键盘.鼠标.手柄|2025年02月05号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1-Eu5WY-9Z6hFb7YK62CHCQ",
     "addr2": "天翼云: https://cloud.189.cn/t/maiyA3ju2Erm"
   },
   {
-    "code": "Y23A",
-    "name": "以撒的结合：重生",
+    "code": "Y230",
+    "name": "英雄传说 黎之轨迹2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "The Binding of Isaac: Rebirth",
-    "rLzz": "2GB",
-    "types": "恐怖.像素",
-    "yxbb": "v1.7.9c|容量2GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2024年11月21号更新",
-    "addr1": "度盘: https://pan.baidu.com/s/1EBBm9giE6JIFSrES550o0w",
-    "addr2": "天翼云: https://cloud.189.cn/t/UfaUjemqU7za"
+    "describe": "The Legend of Heroes: Trails through Daybreak II",
+    "rLzz": "16GB",
+    "types": "角色扮演",
+    "yxbb": "v1.12|容量16GB|官方繁体中文|支持键盘.鼠标.手柄|2025年02月16号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1426lJwa9WMNdVMp8Yct9iA",
+    "addr2": "天翼云: https://cloud.189.cn/t/N7JZBz2In26r"
+  },
+  {
+    "code": "Y231",
+    "name": "游戏王合集",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Yu-Gi-Oh! EARLY DAYS COLLECTION",
+    "rLzz": "5GB",
+    "types": "策略.角色扮演.卡牌.像素",
+    "yxbb": "英文版|容量5GB|官方英文|2025年02月28号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1GtfFjMjxH_N_Ks3flaMsIQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/ERFzYnqqYjYf"
   },
   {
     "code": "Y24",
@@ -40161,6 +40631,17 @@
     "addr2": "天翼云: https://cloud.189.cn/t/ABBVneyuY3iq"
   },
   {
+    "code": "Z1024",
+    "name": "中国式相亲",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Chinese Dating",
+    "rLzz": "6GB",
+    "types": "休闲.恋爱模拟.模拟经营",
+    "yxbb": "v1.0.1|容量6GB|官方简体中文|2025年01月23号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1KljkHp38kELozHR3zq9B8A",
+    "addr2": "天翼云: https://cloud.189.cn/t/BRfMNrVjMVV3"
+  },
+  {
     "code": "Z103",
     "name": "致命躯壳",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -40689,12 +41170,11 @@
     "name": "最后生还者 重置版/美国末日重置版",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "最后的生还者 重置版、The Last of Us Part I",
-    "rLzz": "80GB",
+    "rLzz": "81GB",
     "types": "动作.冒险.僵尸.后末日.第三人称射击",
-    "yxbb": "v1.1.3.0数字豪华版|容量80GB|官方简体中文|赠动画章节作弊服装全解锁存档+多项修改器|2024年03月20号更新",
+    "yxbb": "v1.1.4.0|容量81GB|官方简体中文|赠动画章节作弊服装全解锁存档+多项修改器|2025年01月25号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1BQjdotIDIZk-PVzHatDQ_A",
-    "addr2": "天翼云: https://cloud.189.cn/t/M3MB3qIBrU3y",
-    "addr3": "阿里云: https://www.aliyundrive.com/s/ZzqR8XxvcUR"
+    "addr2": "天翼云: https://cloud.189.cn/t/M3MB3qIBrU3y"
   },
   {
     "code": "Z137",
@@ -41208,9 +41688,9 @@
     "name": "终焉之玛格诺利亚 雾中盛放之花",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "ENDER MAGNOLIA: Bloom in the Mist",
-    "rLzz": "1.7GB",
+    "rLzz": "5GB",
     "types": "类银河战士恶魔城.动作角色扮演",
-    "yxbb": "v0.5.0|容量1.7GB|官方简体中文|支持键盘.鼠标.手柄|2024年03月26号更新",
+    "yxbb": "v1.0.2|容量5GB|官方简体中文|支持键盘.鼠标.手柄|2025年01月23号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1L5F6KjJ8OjY_yzeZKQxecQ",
     "addr2": "天翼云: https://cloud.189.cn/t/vayyqyJ7N3ma"
   },
@@ -41482,15 +41962,14 @@
   },
   {
     "code": "Z20",
-    "name": "真三国无双8/历代76543合集",
+    "name": "真三国无双8",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Dynasty Warriors 9",
-    "rLzz": "53GB",
+    "rLzz": "54GB",
     "types": "砍杀.开放世界",
-    "yxbb": "Build.4745195_v1.31|容量53GB|官方简体中文,国语发音|支持键盘.鼠标.手柄|赠多项修改器+全事典.全事件.全武器.地图全开.全武将满级.全支援兽满级.马匹全满级完美存档|赠真三国无双76543历代游戏|2023年11月30号更新",
+    "yxbb": "v1.31|容量54GB|官方简体中文,国语发音|支持键盘.鼠标.手柄|赠多项修改器+完美存档|2025年02月08号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1_hgOxoMWWWS-W1RGpiTEJA",
-    "addr2": "天翼云: https://cloud.189.cn/t/ENvmQnaMjaae",
-    "addr3": "阿里云: https://www.alipan.com/s/StdyanCMLnV"
+    "addr2": "天翼云: https://cloud.189.cn/t/ENvmQnaMjaae"
   },
   {
     "code": "Z200",
@@ -41552,9 +42031,9 @@
     "name": "战锤40K 星际战士2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Warhammer 40,000: Space Marine 2",
-    "rLzz": "68GB",
+    "rLzz": "164GB",
     "types": "战锤40K.动作.冒险.第三人称射击",
-    "yxbb": "v20241024|容量68GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2024年10月26号更新",
+    "yxbb": "v6.1.0.1|容量164GB|官方简体中文|支持键盘.鼠标.手柄|赠多项修改器|2025年02月16号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1uiZ-lfEXeEe5Fc1vt6m-iw",
     "addr2": "天翼云: https://cloud.189.cn/t/jIrUzyZjYZz2"
   },
@@ -41587,7 +42066,7 @@
     "describe": "战神 诸神黄昏、God of War Ragnarok",
     "rLzz": "176GB",
     "types": "动作.冒险",
-    "yxbb": "v1.7|容量176GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2024年11月17号更新",
+    "yxbb": "v1.8|容量176GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2025年02月01号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1Y1J8xSTKRGKp92JcuL3cjw",
     "addr2": "天翼云: https://cloud.189.cn/t/qI7jMfrYRbmy"
   },
@@ -41838,11 +42317,22 @@
     "name": "真 三国无双 起源",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "DYNASTY WARRIORS: ORIGINS",
-    "rLzz": "50GB",
-    "types": "砍杀.武术.动作",
+    "rLzz": "52GB",
+    "types": "砍杀.动作",
     "yxbb": "v1.0.0.3|容量52GB|官方简体中文|支持键盘.鼠标.手柄|+修改器|2025年01月21号更新",
     "addr1": "度盘: https://pan.baidu.com/s/1boz61lyEWpWLbCJIm7K1JQ",
     "addr2": "天翼云: https://cloud.189.cn/t/M3UvMruIv6Zr"
+  },
+  {
+    "code": "Z229",
+    "name": "殖民地生存",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Colony Survival",
+    "rLzz": "200MB",
+    "types": "殖民模拟.生存.基地建设",
+    "yxbb": "Build.17065364|容量200MB|官方简体中文|支持键盘.鼠标.手柄|2025年01月22号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1CW_SGSMZzzPMUaqe593Amw",
+    "addr2": "天翼云: https://cloud.189.cn/t/zyAz6rveAvye"
   },
   {
     "code": "Z22A",
@@ -41866,6 +42356,72 @@
     "addr1": "度盘: https://pan.baidu.com/s/1IL3gAscE2FSnosduNL3s0w",
     "addr2": "天翼云: https://cloud.189.cn/t/R7v2Un6rQrYz",
     "addr3": "阿里云: https://www.aliyundrive.com/s/Xrh9eSaw9PL"
+  },
+  {
+    "code": "Z230",
+    "name": "主播女孩重度依赖 网络梗打字通",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "NEEDY STREAMER OVERLOAD Typing of The Net",
+    "rLzz": "400MB",
+    "types": "打字.像素",
+    "yxbb": "中文版|容量400MB|官方简体中文|2025年01月23号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1p5H2LACnM02dfJD0hAdazA",
+    "addr2": "天翼云: https://cloud.189.cn/t/YVviQnEz2EJ3"
+  },
+  {
+    "code": "Z231",
+    "name": "最终幻想7 重生",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "FINAL FANTASY VII REBIRTH",
+    "rLzz": "153GB",
+    "types": "角色扮演",
+    "yxbb": "豪华版|容量153GB|官方简体中文|2025年01月24号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1DVqd_IY7Z_IXYNBOW6fTMw",
+    "addr2": "天翼云: https://cloud.189.cn/t/2am2InqmI3ya"
+  },
+  {
+    "code": "Z232",
+    "name": "主播生活模拟器2",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Streamer Life Simulator 2",
+    "rLzz": "9GB",
+    "types": "模拟经营.生活模拟.沉浸式模拟",
+    "yxbb": "v0.10|容量9GB|官方简体中文|2025年01月25号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1gta3UBK6k9tyajimZzDg-w",
+    "addr2": "天翼云: https://cloud.189.cn/t/qIzeMvnUF3eu"
+  },
+  {
+    "code": "Z233",
+    "name": "自杀小队 消灭正义联盟",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Suicide Squad: Kill the Justice League",
+    "rLzz": "98GB",
+    "types": "动作",
+    "yxbb": "Buid.17107881|容量98GB|官方简体中文|支持键盘.鼠标.手柄|2025年01月28号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1biN4s1EvbQb5dLKu4gUqAQ",
+    "addr2": "天翼云: https://cloud.189.cn/t/7JZzy2nINjAf"
+  },
+  {
+    "code": "Z234",
+    "name": "真三国无双7 猛将传",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "真三国无双7 with 猛将传、Shin Sangokumusou 7 with Moushouden",
+    "rLzz": "21GB",
+    "types": "砍杀.动作.同屏多人",
+    "yxbb": "中文版|容量21GB|官方繁体中文|+修改器|2025年02月08号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/1iQrESuFyGsKOtW7OKpiIiA",
+    "addr2": "天翼云: https://cloud.189.cn/t/Mzq6FbbA3eie"
+  },
+  {
+    "code": "Z235",
+    "name": "真三国无双7帝国",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "真 三国无双7Empires、Dynasty Warriors 8 Empires",
+    "rLzz": "15GB",
+    "types": "砍杀.动作",
+    "yxbb": "中文版|容量15GB|官方繁体中文|2025年02月08号更新",
+    "addr1": "度盘: https://pan.baidu.com/s/11axjnyh5mHyEFOaeWUGCCg",
+    "addr2": "天翼云: https://cloud.189.cn/t/YjYbIbeeUreu"
   },
   {
     "code": "Z24",
