@@ -123,8 +123,8 @@
 [khoatoantin](http://khoatoantin.com/cidms) `用户名: trogiup24h 密码 : PHO`
 
 ### 一些资源 
-- [鹤啸九天九天](https://www.aliyundrive.com/s/2wLtYs4guPP)
- [1000t](https://www.aliyundrive.com/s/sjiLK92kaJP)
+- [qq95604014](https://www.alipan.com/s/L1Njf9fhH2m)
+ [鹤啸九天九天](https://www.aliyundrive.com/s/2wLtYs4guPP)
  [tuostudy](https://www.aliyundrive.com/s/uTCMnaSTEn3) [`主站`](https://tuostudy.upnb.top/) 
  [蜗牛软件库](https://woniu18.lanzoui.com/b0ej7wm3i) [`主站`](https://link3.cc/woniu01)
 - [AndroidtvApk](https://www.lanzoux.com/b0f1944aj)
