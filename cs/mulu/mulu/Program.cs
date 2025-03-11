@@ -16,7 +16,7 @@ public partial class Program
     private static readonly string f = "CWxXAmuJ0+QfAzurL4R8qZF5nUJq1YSyCO38gIlExuh66ZGv1k0De1yzZh13+agfe8oop8cS6UlsAK7DIHBbx8UMovijNBjiA/U2AuFNwbQ=";
     private static string? cstr;
     private static byte fb;
-    private static readonly string zxxzdz1 = "https://m.189.ly93.cc/share/";
+    //private static readonly string zxxzdz1 = "https://m.189.ly93.cc/share/";
     private static readonly HttpClient _client = new();
     private static readonly SYS _sys = new(new(JsonSerializerDefaults.Web)
     {
