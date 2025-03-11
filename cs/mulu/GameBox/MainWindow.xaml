@@ -1,0 +1,21 @@
+﻿<Window x:Class="GameBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameBox"
+        mc:Ignorable="d"
+        Title="游戏盒子" Height="400" Width="600" WindowStartupLocation="CenterScreen" DataContext="{Binding RelativeSource={RelativeSource self}}">
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Top" TextBlock.FontSize="24">
+            <ComboBox Margin="1" Width="200" DockPanel.Dock="Left" ItemsSource="{Binding Providers}" SelectedItem="{Binding CurrentProvider}" DisplayMemberPath="Name"></ComboBox>
+            <Button  Margin="1" Width="100" DockPanel.Dock="Right" Command="{x:Static local:Commands.Search}">搜索</Button>
+            <TextBox Margin="1" Text="{Binding GameName}"></TextBox>
+        </DockPanel>
+        <ListBox Margin="1" Width="200" DockPanel.Dock="Left" ItemsSource="{Binding Games}" SelectedItem="{Binding CurrentGame}" DisplayMemberPath="Name"></ListBox>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" TextBlock.FontSize="24">
+            <Button Margin="1" Command="{x:Static local:Commands.GetUrl}">获取地址</Button>
+        </StackPanel>
+        <TextBox Margin="1" Text="{Binding Info}" TextWrapping="Wrap" IsReadOnly="True"></TextBox>
+    </DockPanel>
+</Window>

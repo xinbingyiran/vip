@@ -18,8 +18,8 @@
  [阿里小站](https://pan666.net/) [`导航`](https://www.pan666.cn/)  [`导航2`](https://nav.magictool.cn/)
  [小叽资源](https://steamzg.com/) [`发布页`](http://acgbns.com/)
  [移动云盘资源分享](https://www.91panta.cn/)
-- [ZDAN导航](https://www.zdzn.net/)`证书错误`
-[cxy521导航](http://www.cxy521.com/)
+ [小刀娱乐网](https://www.x6g.com/) [`地址2`](https://www.xiaodao1.com/) [`发布页`](https://www.xiaodao.biz/)
+- [cxy521导航](http://www.cxy521.com/)
 [恰鹿导航](https://hao.qialu999.com)
 [龙轩导航](http://ilxdh.com)
 [爱达杂货铺](https://adzhp.net/) [`发布页`](https://adzhp.vip/)
