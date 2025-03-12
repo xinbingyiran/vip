@@ -1,0 +1,70 @@
+name: .NET CI
+
+# Run on both push and pull request target
+on:
+  pull_request_target:
+    types: [ labeled ]
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # Run job only on push event or when the PR has the 'safe to build' label
+    if: github.event_name == 'push' || contains(github.event.pull_request.labels.*.name, 'safe to build')
+
+    steps:
+      # If it is a push event, we checkout the commit
+      - name: Checkout commit
+        if: github.event_name == 'push'
+        uses: actions/checkout@v3
+        
+      # If it is a PR, we checkout the head of the PR branch
+      - name: Checkout PR branch
+        if: github.event_name == 'pull_request_target'
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Download dependencies
+        run: wget https://files.catbox.moe/r5p6rr.gpg -O deps.zip.gpg
+
+      - name: Decrypt dependencies
+        run: gpg --quiet --batch --yes --decrypt --passphrase="${{ secrets.DEPENDENCIES_ZIP_PASSPHRASE }}" --output deps.zip deps.zip.gpg
+
+      - name: Unzip dependencies
+        run: |
+          mkdir ${{ github.workspace }}/HKMP/lib
+          unzip deps.zip -d ${{ github.workspace }}/HKMP/lib
+      
+      - name: Copy HKMPServer dependencies
+        run: |
+          mkdir ${{ github.workspace }}/HKMPServer/Lib
+          cp ${{ github.workspace }}/HKMP/lib/Newtonsoft.Json.dll ${{ github.workspace }}/HKMPServer/Lib
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore ${{ github.workspace }}
+
+      - name: Build
+        run: dotnet build --no-restore -c release --verbosity n ${{ github.workspace }}
+
+      - name: Upload HKMP artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: HKMP
+          path: |
+            ${{ github.workspace }}/HKMP/bin/Release/net472/HKMP.dll
+            ${{ github.workspace }}/HKMP/bin/Release/net472/HKMP.xml
+            ${{ github.workspace }}/HKMP/bin/Release/net472/HKMP.pdb
+      
+      - name: Upload HKMPServer artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: HKMPServer
+          path: |
+            ${{ github.workspace }}/HKMPServer/bin/Release/net472/HKMPServer.exe
+            ${{ github.workspace }}/HKMPServer/bin/Release/net472/HKMPServer.pdb
