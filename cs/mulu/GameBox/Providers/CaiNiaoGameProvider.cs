@@ -20,7 +20,7 @@ class CaiNiaoGameProvider : WebGameProvider
     private static int urlIndex = 0;
     public override string Name => "菜鸟盒子";
 
-    private static async Task<string> GetTrueUrlAsync(string name, string gameId, JsonElement fileId, CancellationToken token)
+    private static async Task<GameFileInfo> GetTrueUrlAsync(string name, string gameId, JsonElement fileId, CancellationToken token)
     {
         using var message = new HttpRequestMessage(HttpMethod.Get, $"{baseAddress[urlIndex]}/geturl/{gameId}?fileid={fileId}");
         using var result = await DefaultClient.SendAsync(message, token);
@@ -36,14 +36,7 @@ class CaiNiaoGameProvider : WebGameProvider
         {
             if (obj.ValueKind is JsonValueKind.Object && obj.TryGetProperty("url", out var url))
             {
-                try
-                {
-                    return $"{Encoding.UTF8.GetString(Convert.FromBase64String($"{url}"))}#|#{fileId}#|#{name}#|#";
-                }
-                catch
-                {
-                    return $"{url}#|#{fileId}#|#{name}#|#";
-                }
+                return new GameFileInfo(string.Empty, name, $"{url}");
             }
         }
         throw new Exception(resultStr);
@@ -105,9 +98,9 @@ class CaiNiaoGameProvider : WebGameProvider
             UrlGetter = CreateUrlGetter(obj, dict)
         };
     }
-    static Func<Action<string>, CancellationToken, Task<string[]>> CreateInfoGetter(JsonElement obj, Dictionary<string, string> gameDict)
+    static Func<Action<string>, CancellationToken, Task<GameInfo[]>> CreateInfoGetter(JsonElement obj, Dictionary<string, string> gameDict)
     {
-        string[]? cacheResult = null;
+        GameInfo[]? cacheResult = null;
         return async (logger, tk) =>
         {
             if (cacheResult is null)
@@ -132,14 +125,14 @@ class CaiNiaoGameProvider : WebGameProvider
                 {
                     gameDict[$"{item.Name}"] = $"{item.Value}";
                 }
-                cacheResult = [.. gameDict.Select(e => $"{e.Key}={e.Value}")];
+                cacheResult = [.. gameDict.Select(e => new GameInfo(e.Key, e.Value))];
             }
             return cacheResult;
         };
     }
-    static Func<Action<string>, CancellationToken, Task<string[]>> CreateUrlGetter(JsonElement obj, Dictionary<string, string> gameDict)
+    static Func<Action<string>, CancellationToken, Task<GameFileInfo[]>> CreateUrlGetter(JsonElement obj, Dictionary<string, string> gameDict)
     {
-        Func<CancellationToken, Task<string>>[]? cacheGetter = null;
+        Func<CancellationToken, Task<GameFileInfo>>[]? cacheGetter = null;
         return async (logger, tk) =>
         {
             if (cacheGetter is null)
@@ -181,7 +174,7 @@ class CaiNiaoGameProvider : WebGameProvider
                 if (items.TryGetProperty("maps", out var list) && list.ValueKind is JsonValueKind.Array)
                 {
                     //{"f5ntk":"","fileId":"","fileSize":0,"sha1":"","utf_name":""},
-                    var getter = new List<Func<CancellationToken, Task<string>>>();
+                    var getter = new List<Func<CancellationToken, Task<GameFileInfo>>>();
                     foreach (var item in list.EnumerateArray())
                     {
                         if (item.ValueKind is JsonValueKind.Object && item.TryGetProperty("fileId", out var fileId)
@@ -202,7 +195,7 @@ class CaiNiaoGameProvider : WebGameProvider
                 }
             }
             var count = cacheGetter.Length;
-            var result = new string[count];
+            var result = new GameFileInfo[count];
             var current = 0;
             logger($"获取地址【0 / {count}】。。。");
             await Parallel.ForAsync(0, count, tk, async (index, token) =>

@@ -169,9 +169,9 @@ class MuluGameProvider : WebGameProvider
             UrlGetter = CreateUrlGetter(obj, dict)
         };
     }
-    static Func<Action<string>, CancellationToken, Task<string[]>> CreateInfoGetter(JsonElement obj, Dictionary<string, string> gameDict)
+    static Func<Action<string>, CancellationToken, Task<GameInfo[]>> CreateInfoGetter(JsonElement obj, Dictionary<string, string> gameDict)
     {
-        string[]? cacheResult = null;
+        GameInfo[]? cacheResult = null;
         return async (logger, tk) =>
         {
             if (cacheResult is null)
@@ -189,14 +189,14 @@ class MuluGameProvider : WebGameProvider
                 {
                     gameDict[$"{(k.Item1 == "zhu" ? k.Item2 : k)}"] = v;
                 }
-                cacheResult = [.. gameDict.Select(e => $"{e.Key}={e.Value}")];
+                cacheResult = [.. gameDict.Select(e => new GameInfo(e.Key, e.Value))];
             }
             return cacheResult;
         };
     }
-    static Func<Action<string>, CancellationToken, Task<string[]>> CreateUrlGetter(JsonElement obj, Dictionary<string, string> gameDict)
+    static Func<Action<string>, CancellationToken, Task<GameFileInfo[]>> CreateUrlGetter(JsonElement _, Dictionary<string, string> gameDict)
     {
-        string[]? cacheResult = null;
+        GameFileInfo[]? cacheResult = null;
         return async (logger, tk) =>
         {
             if (cacheResult is null)
@@ -253,7 +253,7 @@ class MuluGameProvider : WebGameProvider
         return dict;
     }
 
-    private static string[] GetItems(JsonElement element, Func<string, string> urlGetter)
+    private static GameFileInfo[] GetItems(JsonElement element, Func<string, string> urlGetter)
     {
         if (element.TryGetProperty("code", out var code))
         {
@@ -280,13 +280,13 @@ class MuluGameProvider : WebGameProvider
             return GetItemCore(element, "", urlGetter);
         }
     }
-    private static string[] GetItemCore(JsonElement element, string path, Func<string, string> urlGetter)
+    private static GameFileInfo[] GetItemCore(JsonElement element, string path, Func<string, string> urlGetter)
     {
         var name = element.GetProperty("filename").GetString() ?? "";
         var id = element.GetProperty("id").GetRawText().Trim('\"');
         var folder = element.GetProperty("isFolder").GetBoolean();
         return folder ? [.. (element.TryGetProperty("children", out var children) ? children.EnumerateArray() : []).SelectMany(e => GetItemCore(e, Path.Combine(path, name), urlGetter))]
-         : [$"{urlGetter.Invoke(id)}#|#{id}#|#{name}#|#{path}"];
+         : [new GameFileInfo(path, name, urlGetter.Invoke(id))];
     }
 
     public override async Task<Game[]> SearchGame(Action<string> logger, string name, CancellationToken token)

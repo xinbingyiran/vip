@@ -4193,7 +4193,7 @@
   },
   {
     "code": "D112",
-    "name": "地心护核者",
+    "name": "地心护核者/护核纪元",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Core Keeper",
     "rLzz": "700MB",
@@ -9216,6 +9216,14 @@
     "types": "策略.城市营造.模拟经营"
   },
   {
+    "code": "H192",
+    "name": "后室 一起逃脱",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Backrooms: Escape Together",
+    "rLzz": "10GB",
+    "types": "恐怖"
+  },
+  {
     "code": "H19A",
     "name": "海贼无双4",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -11836,7 +11844,7 @@
     "name": "控制",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "掌控、Control Ultimate Edition",
-    "rLzz": "43GB",
+    "rLzz": "42GB",
     "types": "动作.女性主角.开放世界.射击游戏"
   },
   {
@@ -12060,7 +12068,7 @@
     "name": "恐鬼症/恐相症/恐惧症/幽灵恐怖",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Phasmophobia",
-    "rLzz": "28GB",
+    "rLzz": "30GB",
     "types": "恐怖"
   },
   {
@@ -13022,6 +13030,14 @@
     "describe": "The LEGO NINJAGO Movie Video Game",
     "rLzz": "17GB",
     "types": "乐高.同屏多人"
+  },
+  {
+    "code": "L132",
+    "name": "浪人崛起",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Rise of the Ronin",
+    "rLzz": "149GB",
+    "types": "动作角色扮演"
   },
   {
     "code": "L14",
@@ -14828,7 +14844,7 @@
     "name": "模拟农场25",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Farming Simulator 25",
-    "rLzz": "36GB",
+    "rLzz": "38GB",
     "types": "模拟经营.农场模拟.模拟"
   },
   {
@@ -21212,7 +21228,7 @@
     "name": "深岩银河",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Deep Rock Galactic Dive",
-    "rLzz": "3.3GB",
+    "rLzz": "4GB",
     "types": "射击游戏"
   },
   {
@@ -22262,6 +22278,14 @@
     "describe": "Kingdom Come: Deliverance II",
     "rLzz": "112GB",
     "types": "角色扮演.中世纪.开放世界"
+  },
+  {
+    "code": "T127",
+    "name": "头条猎手",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "The Headliners",
+    "rLzz": "8GB",
+    "types": "恐怖"
   },
   {
     "code": "T13",
@@ -30140,7 +30164,7 @@
     "name": "终点站 僵尸幸存者",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Terminus: Zombie Survivors",
-    "rLzz": "670MB",
+    "rLzz": "700MB",
     "types": "生存.像素.开放世界.僵尸"
   },
   {

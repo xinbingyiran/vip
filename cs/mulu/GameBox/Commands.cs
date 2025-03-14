@@ -9,10 +9,8 @@ namespace GameBox;
 
 public static class Commands
 {
-    public static readonly RoutedUICommand Mulu = new ();
-    public static readonly RoutedUICommand CaiNiao = new ();
     public static readonly RoutedUICommand Search = new ();
     public static readonly RoutedUICommand GetFile = new ();
     public static readonly RoutedUICommand GetUrl = new ();
-    public static readonly RoutedUICommand Copy = new ();
+    public static readonly RoutedUICommand Download = new ();
 }
