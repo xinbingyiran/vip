@@ -1,7 +1,10 @@
 ﻿using GameBox.Providers;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Formats.Tar;
+using System.Security.Policy;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -80,6 +83,19 @@ public partial class MainWindow : Window
 
 
 
+
+    public GameFileInfo[]? GameFiles
+    {
+        get { return (GameFileInfo[]?)GetValue(GameFilesProperty); }
+        set { SetValue(GameFilesProperty, value); }
+    }
+
+    // Using a DependencyProperty as the backing store for GameFiles.  This enables animation, styling, binding, etc...
+    public static readonly DependencyProperty GameFilesProperty =
+        DependencyProperty.Register("GameFiles", typeof(GameFileInfo[]), typeof(MainWindow), new PropertyMetadata(null));
+
+
+
     public IGameProvider? CurrentProvider
     {
         get { return (IGameProvider?)GetValue(CurrentProviderProperty); }
@@ -93,15 +109,32 @@ public partial class MainWindow : Window
 
     private CancellationTokenSource? lastCts;
 
+    [GeneratedRegex("^https?://")]
+    private static partial Regex UrlRegex();
+
     public MainWindow()
     {
         InitializeComponent();
         CommandBindings.Add(new CommandBinding(Commands.Search, OnSearch, CanSearch));
         CommandBindings.Add(new CommandBinding(Commands.GetUrl, OnUrl, CanUrl));
+        CommandBindings.Add(new CommandBinding(Commands.GetFile, OnFile, CanFile));
+        CommandBindings.Add(new CommandBinding(Commands.Download, OnDownload));
         DependencyPropertyDescriptor.FromProperty(CurrentProviderProperty, this.GetType()).AddValueChanged(this, CurrentProviderChanged);
         DependencyPropertyDescriptor.FromProperty(CurrentGameProperty, this.GetType()).AddValueChanged(this, CurrentGameChanged);
         this.Providers = [new CaiNiaoGameProvider(), new MuluGameProvider()];
         this.CurrentProvider = this.Providers.First();
+    }
+
+    private void OnDownload(object sender, ExecutedRoutedEventArgs e)
+    {
+        if(e.Parameter is string url && !string.IsNullOrEmpty(url) && UrlRegex().IsMatch(url))
+        {
+            using var p = Process.Start(new ProcessStartInfo
+            {
+                UseShellExecute = true,
+                FileName = url,
+            });
+        }
     }
 
     private CancellationTokenSource NewCts()
@@ -123,7 +156,7 @@ public partial class MainWindow : Window
             try
             {
                 var lines = await getter.Invoke(TellInfo, NewCts().Token);
-                this.Info = string.Join(Environment.NewLine, lines);
+                this.Info = string.Join(Environment.NewLine, lines.Select(e => $"{e.Key}： {e.Value}"));
             }
             catch (Exception ex)
             {
@@ -138,6 +171,7 @@ public partial class MainWindow : Window
 
     private void CurrentProviderChanged(object? sender, EventArgs e)
     {
+        this.GameFiles = null;
         this.CurrentGame = null;
         this.Games = null;
     }
@@ -150,12 +184,13 @@ public partial class MainWindow : Window
     private async void OnUrl(object sender, ExecutedRoutedEventArgs e)
     {
         var getter = this.CurrentGame?.UrlGetter;
+        this.GameFiles = null;
         if (getter is not null)
         {
             try
             {
-                var lines = await getter.Invoke(TellInfo, NewCts().Token);
-                this.Info = string.Join(Environment.NewLine, lines);
+                this.GameFiles = await getter.Invoke(TellInfo, NewCts().Token);
+                this.Info = "获取地址成功！";
             }
             catch (Exception ex)
             {
@@ -167,7 +202,18 @@ public partial class MainWindow : Window
             this.Info = string.Empty;
         }
     }
+    private void CanFile(object sender, CanExecuteRoutedEventArgs e)
+    {
+        e.CanExecute = e.Parameter is System.Collections.IList list && list.Count > 0;
+    }
 
+    private void OnFile(object sender, ExecutedRoutedEventArgs e)
+    {
+        if (e.Parameter is System.Collections.IList list && list.Count > 0)
+        {
+            this.Info = string.Join(Environment.NewLine, list.OfType<GameFileInfo>().Select(e => e.Url));
+        }
+    }
     private void TellInfo(string info)
     {
         if (!CheckAccess())

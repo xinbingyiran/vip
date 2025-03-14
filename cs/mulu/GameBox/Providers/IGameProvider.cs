@@ -10,13 +10,15 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace GameBox.Providers;
+public record struct GameInfo(string Key, string Value);
+public record struct GameFileInfo(string Path, string Name, string Url);
 public class Game
 {
     public string? Id { get; init; }
     public string? Name { get; init; }
     public Dictionary<string, string>? Ext { get; init; }
-    public Func<Action<string>, CancellationToken, Task<string[]>>? InfoGetter { get; init; }
-    public Func<Action<string>, CancellationToken, Task<string[]>>? UrlGetter { get; init; }
+    public Func<Action<string>, CancellationToken, Task<GameInfo[]>>? InfoGetter { get; init; }
+    public Func<Action<string>, CancellationToken, Task<GameFileInfo[]>>? UrlGetter { get; init; }
 }
 public interface IGameProvider
 {
