@@ -13,6 +13,11 @@ internal class HelloServer : IPacketData {
     public bool DropReliableDataIfNewerExists => true;
 
     /// <summary>
+    /// The username of the player.
+    /// </summary>
+    public string Username { get; set; }
+
+    /// <summary>
     /// The name of the current scene of the player. 
     /// </summary>
     public string SceneName { get; set; }
@@ -34,6 +39,7 @@ internal class HelloServer : IPacketData {
 
     /// <inheritdoc />
     public void WriteData(IPacket packet) {
+        packet.Write(Username);
         packet.Write(SceneName);
 
         packet.Write(Position);
@@ -44,6 +50,7 @@ internal class HelloServer : IPacketData {
 
     /// <inheritdoc />
     public void ReadData(IPacket packet) {
+        Username = packet.ReadString();
         SceneName = packet.ReadString();
 
         Position = packet.ReadVector2();

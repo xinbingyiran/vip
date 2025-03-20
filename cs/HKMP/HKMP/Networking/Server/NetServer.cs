@@ -123,7 +123,9 @@ internal class NetServer : INetServer {
         IsStarted = true;
 
         // Initialize the UDP socket
-        _udpSockets = [new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp), new Socket(AddressFamily.InterNetworkV6, SocketType.Dgram, ProtocolType.Udp)];
+        _udpSockets = System.Net.Sockets.Socket.OSSupportsIPv6
+            ? [new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp), new Socket(AddressFamily.InterNetworkV6, SocketType.Dgram, ProtocolType.Udp)]
+               : [new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp)];
 
         // Bind the socket to the given port and allow incoming packets on any address
         Array.ForEach(_udpSockets, s => {

@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
@@ -51,9 +52,15 @@ internal class UdpNetClient {
     public void Connect(string address, int port) {
         try {
             var et = Dns.GetHostAddresses(address);
-            Logger.Info($"{et[0]}\n");
-            UdpSocket = new Socket(et[0].AddressFamily, SocketType.Dgram, ProtocolType.Udp);
-            UdpSocket.Connect(et[0], port);
+            Logger.Info($"{address} 解析结果 => {string.Join(",", (object[]) et)}\n");
+            if (et.Length <= 0) {
+                throw new SocketException();
+            }
+            var defaultAddressFamily = System.Net.Sockets.Socket.OSSupportsIPv6 ? AddressFamily.InterNetworkV6 : AddressFamily.InterNetwork;
+            var addr = et.FirstOrDefault(e => e.AddressFamily == defaultAddressFamily);
+            if (addr is default(IPAddress)) { addr = et.First(); }
+            UdpSocket = new Socket(addr.AddressFamily, SocketType.Dgram, ProtocolType.Udp);
+            UdpSocket.Connect(addr, port);
         } catch (SocketException e) {
             Logger.Error($"Socket exception when connecting UDP socket:\n{e}");
 
