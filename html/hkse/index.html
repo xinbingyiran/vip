@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hollow Knight save editor</title>
+</head>
+
+<body>
+    <div style="margin: 3px; width: 80%; margin: 0 auto; text-align: right;">
+        <textarea style="display: block; width: 100%; height: 60vh;" id="text" spellcheck="false"></textarea>
+        <input type="file" id="open" />
+        <input type="checkbox" id="check" />Switch
+        <input type="button" id="download" value="保存" />
+    </div>
+    <script src="./aes.js"></script>
+    <script>
+        const BASE64_ARRAY = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".split("").map(c => c.charCodeAt(0))
+        const BASE64_ENCODE_TABLE = new Map(BASE64_ARRAY.map((ord, i) => [i, ord]))
+        const BASE64_DECODE_TABLE = new Map(BASE64_ARRAY.map((ord, i) => [ord, i]))
+
+        function base64Encode(buffer) {
+            buffer = new Uint8Array(buffer).slice()
+            var output = new Uint8Array(Math.ceil(Math.ceil(buffer.length * 4 / 3) / 4) * 4)
+            let continuous = Math.floor(buffer.length / 3) * 3
+
+            for (let i = 0; i < continuous; i += 3) {
+                let k = 4 * i / 3
+                output[k] = BASE64_ENCODE_TABLE.get(buffer[i] >> 2)
+                output[k + 1] = BASE64_ENCODE_TABLE.get((buffer[i] & 0x03) << 4 | buffer[i + 1] >> 4)
+                output[k + 2] = BASE64_ENCODE_TABLE.get((buffer[i + 1] & 0x0F) << 2 | buffer[i + 2] >> 6)
+                output[k + 3] = BASE64_ENCODE_TABLE.get(buffer[i + 2] & 0x3F)
+            }
+
+            if (buffer[continuous] != undefined) {
+                let k = 4 * continuous / 3
+                output[k] = BASE64_ENCODE_TABLE.get(buffer[continuous] >> 2)
+                if (buffer[continuous + 1] == undefined) {
+                    output[k + 1] = BASE64_ENCODE_TABLE.get((buffer[continuous] & 0x03) << 4)
+                    output[k + 2] = BASE64_ENCODE_TABLE.get(64)
+                } else {
+                    output[k + 1] = BASE64_ENCODE_TABLE.get((buffer[continuous] & 0x03) << 4 | buffer[continuous + 1] >> 4)
+                    output[k + 2] = BASE64_ENCODE_TABLE.get((buffer[continuous + 1] & 0x0F) << 2)
+                }
+                output[k + 3] = BASE64_ENCODE_TABLE.get(64)
+            }
+
+            return output
+        }
+
+        function base64Decode(buffer) {
+            buffer = new Uint8Array(buffer).slice()
+            buffer = buffer.map(v => BASE64_DECODE_TABLE.get(v))
+            { let p = buffer.indexOf(64); buffer = buffer.subarray(0, p != -1 ? p : buffer.length) }
+            var output = new Uint8Array(3 * buffer.length / 4)
+            let continuous = Math.floor(buffer.length / 4) * 4
+            for (let i = 0; i < continuous; i += 4) {
+                let k = 3 * i / 4
+                output[k] = buffer[i] << 2 | buffer[i + 1] >> 4
+                output[k + 1] = (buffer[i + 1] & 0x0F) << 4 | buffer[i + 2] >> 2
+                output[k + 2] = (buffer[i + 2] & 0x03) << 6 | buffer[i + 3]
+            }
+            if (buffer[continuous] != undefined) {
+                let k = 3 * continuous / 4
+                output[k] = buffer[continuous] << 2 | buffer[continuous + 1] >> 4
+                if (buffer[continuous + 2] != undefined) {
+                    output[k + 1] = (buffer[continuous + 1] & 0x0F) << 4 | buffer[continuous + 2] >> 2
+                }
+            }
+            return output
+        }
+    </script>
+    <script>
+        const cSharpHeader = [0, 1, 0, 0, 0, 255, 255, 255, 255, 1, 0, 0, 0, 0, 0, 0, 0, 6, 1, 0, 0, 0];
+        const key = aesjs.utils.utf8.toBytes('UKu52ePUBwetZ9wNX88o54dnfKRu0T1l');
+        const ecb = new aesjs.ModeOfOperation.ecb(key);
+        const text = document.body.querySelector("#text");
+        const open = document.body.querySelector("#open");
+        const check = document.body.querySelector("#check");
+        const download = document.body.querySelector("#download");
+        const loadFile = (switchMode, result) => {
+            try {
+                let decrypted = ""
+                if (switchMode) {
+                    decrypted = result
+                } else {
+                    decrypted = decodeFile(new Uint8Array(result))
+                }
+                var jsonString = JSON.stringify(JSON.parse(decrypted), undefined, 2)
+                text.value = jsonString;
+            } catch (err) {
+                window.alert("The file could not decrypted.")
+                console.warn(err)
+            }
+        };
+        function DownloadData(data, fileName) {
+            var a = document.createElement("a")
+            a.setAttribute("href", window.URL.createObjectURL(new Blob([data], { type: "octet/stream" })));
+            a.setAttribute('download', fileName)
+            a.setAttribute('style', `position: fixed; opacity: 0; left: 0; top: 0;`)
+            document.body.append(a)
+            a.click()
+            document.body.removeChild(a)
+        }
+        const downloadFile = () => {
+            try {
+                const data = JSON.stringify(JSON.parse(text.value))
+                if (check.checked) {
+                    DownloadData(data, "plain.dat")
+                }
+                else {
+                    const encrypted = encodeFile(data)
+                    DownloadData(encrypted, "user1.dat")
+                }
+            } catch (err) {
+                window.alert("Could not parse valid JSON. Reset or fix.")
+            }
+        }
+        const onFileChange = e => {
+
+            const files = e.target.files;
+            if (files.length == 0) {
+                return
+            }
+            const file = files[0];
+            e.target.value = null;
+            const reader = new FileReader();
+            const switchMode = check.checked;
+
+            reader.addEventListener("load", () => loadFile(switchMode, reader.result));
+
+            if (switchMode) {
+                reader.readAsText(file)
+            } else {
+                reader.readAsArrayBuffer(file)
+            }
+        };
+        function GenerateLengthPrefixedString(length) {
+            var length = Math.min(0x7FFFFFFF, length) // maximum value
+            var bytes = []
+            for (let i = 0; i < 4; i++) {
+                if (length >> 7 != 0) {
+                    bytes.push(length & 0x7F | 0x80)
+                    length >>= 7
+                } else {
+                    bytes.push(length & 0x7F)
+                    length >>= 7
+                    break
+                }
+            }
+            if (length != 0) {
+                bytes.push(length)
+            }
+
+            return bytes
+        }
+        function AddHeader(bytes) {
+            var lengthData = GenerateLengthPrefixedString(bytes.length)
+            var newBytes = new Uint8Array(bytes.length + cSharpHeader.length + lengthData.length + 1)
+            newBytes.set(cSharpHeader) // fixed header 
+            newBytes.subarray(cSharpHeader.length).set(lengthData) // variable LengthPrefixedString header 
+            newBytes.subarray(cSharpHeader.length + lengthData.length).set(bytes) // our data 
+            newBytes.subarray(cSharpHeader.length + lengthData.length + bytes.length).set([11]) // fixed header (11) 
+            return newBytes
+        }
+        function RemoveHeader(bytes) {
+            // remove fixed csharp header, plus the ending byte 11. 
+            bytes = bytes.subarray(cSharpHeader.length, bytes.length - 1)
+
+
+            // remove LengthPrefixedString header 
+            let lengthCount = 0
+            for (let i = 0; i < 5; i++) {
+                lengthCount++
+                if ((bytes[i] & 0x80) == 0) {
+                    break
+                }
+            }
+            bytes = bytes.subarray(lengthCount)
+
+            return bytes
+        }
+        const decodeFile = source => {
+            var bytes = source.slice()
+            bytes = RemoveHeader(bytes)
+            bytes = base64Decode(bytes)
+            bytes = ecb.decrypt(bytes)
+            bytes = bytes.subarray(0, -bytes[bytes.length - 1])
+            return aesjs.utils.utf8.fromBytes(bytes)
+        };
+
+        const encodeFile = source => {
+            var bytes = aesjs.utils.utf8.toBytes(source)
+            const padValue = 16 - bytes.length % 16
+            const padded = new Uint8Array(bytes.length + padValue)
+            padded.fill(padValue)
+            padded.set(bytes)
+            bytes = ecb.encrypt(padded)
+            bytes = base64Encode(bytes)
+            // bytes = bytes.filter(v => v != 10 && v != 13)
+            return AddHeader(bytes)
+        };
+        open.addEventListener("change", onFileChange);
+        download.addEventListener("click", downloadFile);
+    </script>
+</body>
+
+</html>
