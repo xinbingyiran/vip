@@ -3,7 +3,7 @@
 $CONFIG = '{"lang":"en","error_reporting":false,"show_hidden":true,"hide_Cols":false,"theme":"light"}';
 
 /**
- * H3K - Tiny File Manager V2.6
+ * H3K ~ Tiny File Manager V2.6
  * @author CCP Programmers
  * @github https://github.com/prasathmani/tinyfilemanager
  * @link https://tinyfilemanager.github.io
@@ -27,7 +27,7 @@ $use_auth = true;
 // Generate secure password hash - https://tinyfilemanager.github.io/docs/pwd.html or use password_hash('password here', PASSWORD_DEFAULT),
 $auth_users = array(
     'admin' => '$2y$10$z4f7v8vYKaLlIsc1mvEwie8FF/Kq.pXoKTnqYZ0CIR8q3WyzgaGB2', //your password for tiny file manager
-    'user' => password_hash('123', PASSWORD_DEFAULT),
+    'user' => password_hash('user', PASSWORD_DEFAULT),
 );
 
 // Readonly users
@@ -97,7 +97,7 @@ $allowed_upload_extensions = '';
 $favicon_path = '';
 
 // Files and folders to excluded from listing
-// e.g. array('myfile.html', 'personal-folder', '*.php', ...)
+// e.g. array('myfile.html', 'personal-folder', '*.php', '/path/to/folder', ...)
 $exclude_items = array();
 
 // Online office Docs Viewer
@@ -276,6 +276,7 @@ defined('FM_SELF_URL') || define('FM_SELF_URL', ($is_https ? 'https' : 'http') .
 if (isset($_GET['logout'])) {
     unset($_SESSION[FM_SESSION_ID]['logged']);
     unset($_SESSION['token']);
+    $_SESSION[FM_SESSION_ID]['logout'] = 1;
     fm_redirect(FM_SELF_URL);
 }
 
@@ -334,12 +335,23 @@ if ($use_auth) {
             if (isset($auth_users[$_POST['fm_usr']]) && isset($_POST['fm_pwd']) && password_verify($_POST['fm_pwd'], $auth_users[$_POST['fm_usr']]) && verifyToken($_POST['token'])) {
                 $_SESSION[FM_SESSION_ID]['logged'] = $_POST['fm_usr'];
                 fm_set_msg(lng('You are logged in'));
+                unset($_SESSION[FM_SESSION_ID]['logout']);
                 fm_redirect(FM_SELF_URL);
             } else {
                 unset($_SESSION[FM_SESSION_ID]['logged']);
                 fm_set_msg(lng('Login failed. Invalid username or password'), 'error');
                 fm_redirect(FM_SELF_URL);
             }
+        } else {
+            fm_set_msg(lng('password_hash not supported, Upgrade PHP version'), 'error');;
+        }
+    } elseif (!isset($_SESSION[FM_SESSION_ID]['logout'])) {
+        // Logging In
+        sleep(1);
+        if (function_exists('password_verify')) {
+            $_SESSION[FM_SESSION_ID]['logged'] = $readonly_users[0];
+            //fm_set_msg(lng('You are logged in'));
+            unset($_SESSION[FM_SESSION_ID]['logout']);
         } else {
             fm_set_msg(lng('password_hash not supported, Upgrade PHP version'), 'error');;
         }
@@ -372,12 +384,12 @@ if ($use_auth) {
                                     <hr />
                                     <div class="mb-3">
                                         <label for="fm_usr" class="pb-2"><?php echo lng('Username'); ?></label>
-                                        <input type="text" class="form-control" id="fm_usr" name="fm_usr" value="user" required autofocus>
+                                        <input type="text" class="form-control" id="fm_usr" name="fm_usr" value="<?php echo $readonly_users[0]; ?>" required autofocus>
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="fm_pwd" class="pb-2"><?php echo lng('Password'); ?></label>
-                                        <input type="password" class="form-control" id="fm_pwd" name="fm_pwd" value="123" required>
+                                        <input type="password" class="form-control" id="fm_pwd" name="fm_pwd" value="" required>
                                     </div>
 
                                     <div class="mb-3">
@@ -1334,7 +1346,7 @@ $objects = is_readable($path) ? scandir($path) : array();
 $folders = array();
 $files = array();
 $current_path = array_slice(explode("/", $path), -1)[0];
-if (is_array($objects) && fm_is_exclude_items($current_path)) {
+if (is_array($objects) && fm_is_exclude_items($current_path, $path)) {
     foreach ($objects as $file) {
         if ($file == '.' || $file == '..') {
             continue;
@@ -1343,9 +1355,9 @@ if (is_array($objects) && fm_is_exclude_items($current_path)) {
             continue;
         }
         $new_path = $path . '/' . $file;
-        if (@is_file($new_path) && fm_is_exclude_items($file)) {
+        if (@is_file($new_path) && fm_is_exclude_items($file, $new_path)) {
             $files[] = $file;
-        } elseif (@is_dir($new_path) && $file != '.' && $file != '..' && fm_is_exclude_items($file)) {
+        } elseif (@is_dir($new_path) && $file != '.' && $file != '..' && fm_is_exclude_items($file, $new_path)) {
             $folders[] = $file;
         }
     }
@@ -1712,7 +1724,7 @@ if (isset($_GET['view'])) {
     $file = $_GET['view'];
     $file = fm_clean_path($file, false);
     $file = str_replace('/', '', $file);
-    if ($file == '' || !is_file($path . '/' . $file) || !fm_is_exclude_items($file)) {
+    if ($file == '' || !is_file($path . '/' . $file) || !fm_is_exclude_items($file, $path . '/' . $file)) {
         fm_set_msg(lng('File not found'), 'error');
         $FM_PATH = FM_PATH;
         fm_redirect(FM_SELF_URL . '?p=' . urlencode($FM_PATH));
@@ -1769,8 +1781,9 @@ if (isset($_GET['view'])) {
                 <li class="list-group-item active" aria-current="true"><strong><?php echo lng($view_title) ?>:</strong> <?php echo fm_enc(fm_convert_win($file)) ?></li>
                 <?php $display_path = fm_get_display_path($file_path); ?>
                 <li class="list-group-item"><strong><?php echo $display_path['label']; ?>:</strong> <?php echo $display_path['path']; ?></li>
-                <li class="list-group-item"><strong>File size:</strong> <?php echo ($filesize_raw <= 1000) ? "$filesize_raw bytes" : $filesize; ?></li>
-                <li class="list-group-item"><strong>MIME-type:</strong> <?php echo $mime_type ?></li>
+                <li class="list-group-item"><strong><?php echo lng('Date Modified') ?>:</strong> <?php echo date(FM_DATETIME_FORMAT, filemtime($file_path)); ?></li>
+                <li class="list-group-item"><strong><?php echo lng('File size') ?>:</strong> <?php echo ($filesize_raw <= 1000) ? "$filesize_raw bytes" : $filesize; ?></li>
+                <li class="list-group-item"><strong><?php echo lng('MIME-type') ?>:</strong> <?php echo $mime_type ?></li>
                 <?php
                 // ZIP info
                 if (($is_zip || $is_gzip) && $filenames !== false) {
@@ -1917,7 +1930,7 @@ if (isset($_GET['edit']) && !FM_READONLY) {
     $file = $_GET['edit'];
     $file = fm_clean_path($file, false);
     $file = str_replace('/', '', $file);
-    if ($file == '' || !is_file($path . '/' . $file) || !fm_is_exclude_items($file)) {
+    if ($file == '' || !is_file($path . '/' . $file) || !fm_is_exclude_items($file, $path . '/' . $file)) {
         fm_set_msg(lng('File not found'), 'error');
         $FM_PATH = FM_PATH;
         fm_redirect(FM_SELF_URL . '?p=' . urlencode($FM_PATH));
@@ -2153,18 +2166,25 @@ $all_files_size = 0;
                 $filesize_raw = "";
                 $filesize = lng('Folder');
                 $perms = substr(decoct(fileperms($path . '/' . $f)), -4);
+                $owner = array('name' => '?'); 
+                $group = array('name' => '?');
                 if (function_exists('posix_getpwuid') && function_exists('posix_getgrgid')) {
-                    $owner = posix_getpwuid(fileowner($path . '/' . $f));
-                    $group = posix_getgrgid(filegroup($path . '/' . $f));
-                    if ($owner === false) {
-                        $owner = array('name' => '?');
+                    try {
+                        $owner_id = fileowner($path . '/' . $f);
+                        if ($owner_id != 0) {
+                            $owner_info = posix_getpwuid($owner_id);
+                            if ($owner_info) {
+                                $owner =  $owner_info;
+                            }
+                        }
+                        $group_id = filegroup($path . '/' . $f);
+                        $group_info = posix_getgrgid($group_id);
+                        if ($group_info) {
+                            $group =  $group_info;
+                        }
+                    } catch (Exception $e) {
+                        error_log("exception:" . $e->getMessage());
                     }
-                    if ($group === false) {
-                        $group = array('name' => '?');
-                    }
-                } else {
-                    $owner = array('name' => '?');
-                    $group = array('name' => '?');
                 }
             ?>
                 <tr>
@@ -2218,18 +2238,25 @@ $all_files_size = 0;
                 $filelink = '?p=' . urlencode(FM_PATH) . '&amp;view=' . urlencode($f);
                 $all_files_size += $filesize_raw;
                 $perms = substr(decoct(fileperms($path . '/' . $f)), -4);
+                $owner = array('name' => '?'); 
+                $group = array('name' => '?');
                 if (function_exists('posix_getpwuid') && function_exists('posix_getgrgid')) {
-                    $owner = posix_getpwuid(fileowner($path . '/' . $f));
-                    $group = posix_getgrgid(filegroup($path . '/' . $f));
-                    if ($owner === false) {
-                        $owner = array('name' => '?');
+                    try {
+                        $owner_id = fileowner($path . '/' . $f);
+                        if ($owner_id != 0) {
+                            $owner_info = posix_getpwuid($owner_id);
+                            if ($owner_info) {
+                                $owner =  $owner_info;
+                            }
+                        }
+                        $group_id = filegroup($path . '/' . $f);
+                        $group_info = posix_getgrgid($group_id);
+                        if ($group_info) {
+                            $group =  $group_info;
+                        }
+                    } catch (Exception $e) {
+                        error_log("exception:" . $e->getMessage());
                     }
-                    if ($group === false) {
-                        $group = array('name' => '?');
-                    }
-                } else {
-                    $owner = array('name' => '?');
-                    $group = array('name' => '?');
                 }
             ?>
                 <tr>
@@ -2650,12 +2677,13 @@ function fm_get_display_path($file_path)
 
 /**
  * Check file is in exclude list
- * @param string $file
+ * @param string $name The name of the file/folder
+ * @param string $path The full path of the file/folder
  * @return bool
  */
-function fm_is_exclude_items($file)
+function fm_is_exclude_items($name, $path)
 {
-    $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+    $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
     if (isset($exclude_items) and sizeof($exclude_items)) {
         unset($exclude_items);
     }
@@ -2664,7 +2692,7 @@ function fm_is_exclude_items($file)
     if (version_compare(PHP_VERSION, '7.0.0', '<')) {
         $exclude_items = unserialize($exclude_items);
     }
-    if (!in_array($file, $exclude_items) && !in_array("*.$ext", $exclude_items)) {
+    if (!in_array($name, $exclude_items) && !in_array("*.$ext", $exclude_items) && !in_array($path, $exclude_items)) {
         return true;
     }
     return false;
@@ -3747,7 +3775,8 @@ function fm_show_nav_path($path)
                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-5" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-user-circle"></i>
                             </a>
-                            <div class="dropdown-menu text-small shadow" aria-labelledby="navbarDropdownMenuLink-5" data-bs-theme="<?php echo FM_THEME; ?>">
+
+                            <div class="dropdown-menu dropdown-menu-end text-small shadow" aria-labelledby="navbarDropdownMenuLink-5" data-bs-theme="<?php echo FM_THEME; ?>">
                                 <?php if (!FM_READONLY): ?>
                                     <a title="<?php echo lng('Settings') ?>" class="dropdown-item nav-link" href="?p=<?php echo urlencode(FM_PATH) ?>&amp;settings=1"><i class="fa fa-cog" aria-hidden="true"></i> <?php echo lng('Settings') ?></a>
                                 <?php endif ?>
@@ -5570,6 +5599,9 @@ function fm_show_header_login()
         $tr['en']['File or folder with this path already exists']   = 'File or folder with this path already exists';
         $tr['en']['Are you sure want to rename?']                   = 'Are you sure want to rename?';
         $tr['en']['Are you sure want to']                           = 'Are you sure want to';
+        $tr['en']['Date Modified']                                  = 'Date Modified';
+        $tr['en']['File size']                                      = 'File size';
+        $tr['en']['MIME-type']                                      = 'MIME-type';
 
         $i18n = fm_get_translations($tr);
         $tr = $i18n ? $i18n : $tr;
