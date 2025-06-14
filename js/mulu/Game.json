@@ -540,7 +540,7 @@
     "name": "澳洲梦想镇",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Dinkum、金垦小镇",
-    "rLzz": "3GB",
+    "rLzz": "5GB",
     "types": "模拟经营"
   },
   {
@@ -684,7 +684,7 @@
     "name": "安迪和莉莉的棺材",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "The Coffin of Andy and Leyley",
-    "rLzz": "356MB",
+    "rLzz": "1GB",
     "types": "心理.剧情丰富.恐怖"
   },
   {
@@ -830,6 +830,22 @@
     "describe": "Some Some Convenience Store",
     "rLzz": "4GB",
     "types": "视觉小说"
+  },
+  {
+    "code": "A83",
+    "name": "Amerzone 探险家的记忆传承",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Amerzone 探險家的記憶傳承、Amerzone - The Explorer's Legacy",
+    "rLzz": "15GB",
+    "types": "冒险.解谜"
+  },
+  {
+    "code": "A84",
+    "name": "艾尔登法环 黑夜君临",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "ELDEN RING NIGHTREIGN",
+    "rLzz": "21GB",
+    "types": "类魂系列.动作.开放世界"
   },
   {
     "code": "B.DMDY001",
@@ -1056,11 +1072,19 @@
     "types": "探索.解谜.恐怖"
   },
   {
+    "code": "B1010",
+    "name": "彼方的她 Aliya",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Aliya: Timelink",
+    "rLzz": "1GB",
+    "types": "互动小说.文字小说.视觉小说"
+  },
+  {
     "code": "B102",
     "name": "冰汽时代2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Frostpunk 2、寒霜朋克2",
-    "rLzz": "20GB",
+    "rLzz": "21GB",
     "types": "策略.模拟经营.城市营造.资源管理.后末日"
   },
   {
@@ -1084,7 +1108,7 @@
     "name": "百英雄传",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Eiyuden Chronicle: Hundred Heroes",
-    "rLzz": "25GB",
+    "rLzz": "26GB",
     "types": "角色扮演"
   },
   {
@@ -1300,7 +1324,7 @@
     "name": "变态监狱",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "HENPRI",
-    "rLzz": "1GB",
+    "rLzz": "7GB",
     "types": "黑色幽默.视觉小说"
   },
   {
@@ -1310,6 +1334,62 @@
     "describe": "Press X to Not Die",
     "rLzz": "3.4GB",
     "types": "真人互动"
+  },
+  {
+    "code": "B130",
+    "name": "半条命2RTX",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Half-Life 2 RTX",
+    "rLzz": "42GB",
+    "types": "第一人称射击"
+  },
+  {
+    "code": "B131",
+    "name": "崩溃大陆2",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Crashlands2",
+    "rLzz": "400MB",
+    "types": "生存.沙盒"
+  },
+  {
+    "code": "B132",
+    "name": "布斯特拉普岛",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Bootstrap Island",
+    "rLzz": "16GB",
+    "types": "生存.虚拟现实VR.生活模拟"
+  },
+  {
+    "code": "B133",
+    "name": "百日战纪 最终防卫学园",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "The Hundred Line -Last Defense Academy-",
+    "rLzz": "31GB",
+    "types": "冒险"
+  },
+  {
+    "code": "B134",
+    "name": "爆走次元海王星VS巨神史莱犬",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Neptunia Riders VS Dogoos",
+    "rLzz": "6GB",
+    "types": "动作.休闲"
+  },
+  {
+    "code": "B135",
+    "name": "不撞机 FPV无人机模拟器",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Uncrashed : FPV Drone Simulator",
+    "rLzz": "18GB",
+    "types": "模拟.飞行"
+  },
+  {
+    "code": "B136",
+    "name": "巴别塔 混乱的幸存者",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Tower of Babel: Survivors of Chaos",
+    "rLzz": "400MB",
+    "types": "动作.弹幕射击"
   },
   {
     "code": "B14",
@@ -1332,7 +1412,7 @@
     "name": "博德之门3",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Baldur's Gate 3",
-    "rLzz": "143GB",
+    "rLzz": "148GB",
     "types": "角色扮演.同屏多人"
   },
   {
@@ -1564,7 +1644,7 @@
     "name": "碧蓝幻想Versus 崛起",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "碧蓝幻想对战 崛起、Granblue Fantasy Versus: Rising",
-    "rLzz": "19GB",
+    "rLzz": "21GB",
     "types": "格斗游戏.同屏多人"
   },
   {
@@ -1699,8 +1779,8 @@
     "code": "B53",
     "name": "Becastled",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "围攻，被包围，包围城堡",
-    "rLzz": "800MB",
+    "describe": "围攻、被包围、包围城堡",
+    "rLzz": "1GB",
     "types": "策略"
   },
   {
@@ -2228,7 +2308,7 @@
     "name": "城市天际线2/都市天际线2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Cities: Skylines II",
-    "rLzz": "64GB",
+    "rLzz": "69GB",
     "types": "模拟经营.城市营造.建造.沙盒.管理"
   },
   {
@@ -2420,7 +2500,7 @@
     "name": "磁带妖怪",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Cassette Beasts",
-    "rLzz": "1GB",
+    "rLzz": "4GB",
     "types": "模拟.回合.探索.像素.生物收集"
   },
   {
@@ -2660,7 +2740,7 @@
     "name": "超灵秘法社",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "MIND OVER MAGIC",
-    "rLzz": "6GB",
+    "rLzz": "5GB",
     "types": "模拟经营.模拟.殖民模拟.基地建设"
   },
   {
@@ -2676,7 +2756,7 @@
     "name": "船舶墓地模拟器2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Ship Graveyard Simulator 2",
-    "rLzz": "10GB",
+    "rLzz": "13GB",
     "types": "模拟.破坏.探索.管理.拟真"
   },
   {
@@ -2684,7 +2764,7 @@
     "name": "超自然车旅",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Pacific Drive",
-    "rLzz": "19GB",
+    "rLzz": "20GB",
     "types": "剧情丰富.动作.冒险.生存.恐怖"
   },
   {
@@ -2732,7 +2812,7 @@
     "name": "超侦探事件簿 雾雨谜宫Plus",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Master Detective Archives RAIN CODE Plus",
-    "rLzz": "52GB",
+    "rLzz": "53GB",
     "types": "冒险.动作.探索.悬疑.推理"
   },
   {
@@ -2780,7 +2860,7 @@
     "name": "超级键盘侠",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Meme Mayhem",
-    "rLzz": "300MB",
+    "rLzz": "400MB",
     "types": "卡牌.牌组构建.休闲"
   },
   {
@@ -2872,12 +2952,36 @@
     "types": "解谜.超现实"
   },
   {
+    "code": "C139",
+    "name": "苍蝇骑士",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "FlyKnight",
+    "rLzz": "800MB",
+    "types": "迷宫探索"
+  },
+  {
     "code": "C14",
     "name": "超级马里奥制造",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Super Mario Maker",
     "rLzz": "1GB",
     "types": "横向滚屏.模拟器"
+  },
+  {
+    "code": "C140",
+    "name": "传染病",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Contagion",
+    "rLzz": "14GB",
+    "types": "僵尸.后末日.恐怖"
+  },
+  {
+    "code": "C141",
+    "name": "残酷北方 佐敦版",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Bad North: Jotunn Edition",
+    "rLzz": "400MB",
+    "types": "战争游戏.塔防.策略"
   },
   {
     "code": "C14A",
@@ -3052,7 +3156,7 @@
     "name": "沉没之城/沉没之都/沉没都市",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "The Sinking City",
-    "rLzz": "49GB",
+    "rLzz": "20GB",
     "types": "沙盒.克苏鲁"
   },
   {
@@ -3204,7 +3308,7 @@
     "name": "超市模拟器",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Supermarket Simulator",
-    "rLzz": "3GB",
+    "rLzz": "4GB",
     "types": "沉浸式模拟.模拟经营.经济.管理"
   },
   {
@@ -3252,7 +3356,7 @@
     "name": "超级世界盒子 上帝模拟器/超级世界之盒终极上帝模拟器",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "WorldBox - God Simulator",
-    "rLzz": "600MB",
+    "rLzz": "700MB",
     "types": "像素.殖民模拟.模拟经营"
   },
   {
@@ -3788,7 +3892,7 @@
     "name": "帝国时代2：决定版",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Age of Empires II: Definitive Edition",
-    "rLzz": "58GB",
+    "rLzz": "64GB",
     "types": "即时战略"
   },
   {
@@ -3804,7 +3908,7 @@
     "name": "帝国时代4",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Age Of Empires IV",
-    "rLzz": "55GB",
+    "rLzz": "57GB",
     "types": "策略.即时战略.中世纪"
   },
   {
@@ -3827,8 +3931,8 @@
     "code": "D03A",
     "name": "电脑装机模拟器2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "PC Building Simulator 2",
-    "rLzz": "24GB",
+    "describe": "PC装机模拟器2、PC Building Simulator 2",
+    "rLzz": "26GB",
     "types": "模拟经营"
   },
   {
@@ -4112,6 +4216,14 @@
     "types": "冒险.解谜"
   },
   {
+    "code": "D1020",
+    "name": "刀剑江湖路",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Path of Kung Fu",
+    "rLzz": "14GB",
+    "types": "角色扮演.武术.沙盒"
+  },
+  {
     "code": "D103",
     "name": "多罗曼蒂克/浪漫小村/筑梦颂/Dorfromantik",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -4227,7 +4339,7 @@
     "code": "D116",
     "name": "德米欧 地城奇谭",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Demeo PC Edition",
+    "describe": "德米欧 PC版、Demeo PC Edition",
     "rLzz": "3GB",
     "types": "迷宫探索.策略"
   },
@@ -4656,12 +4768,60 @@
     "types": "视觉小说"
   },
   {
+    "code": "D165",
+    "name": "盾墙",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Shieldwall",
+    "rLzz": "9GB",
+    "types": "模拟.中世纪"
+  },
+  {
+    "code": "D166",
+    "name": "动物栏 桌面牧场",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Tiny Pasture",
+    "rLzz": "200MB",
+    "types": "挂机游戏.像素.点击游戏.农场模拟"
+  },
+  {
+    "code": "D167",
+    "name": "达愿福神社",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Promise Mascot Agency",
+    "rLzz": "7GB",
+    "types": "冒险"
+  },
+  {
+    "code": "D168",
+    "name": "都市传说解体中心",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Urban Myth Dissolution Center",
+    "rLzz": "2GB",
+    "types": "视觉小说.像素.心理恐怖"
+  },
+  {
+    "code": "D169",
+    "name": "东方符卡嘉年华",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Touhou Spell Carnival",
+    "rLzz": "3GB",
+    "types": "弹幕射击"
+  },
+  {
     "code": "D17",
     "name": "地铁离去/地铁离乡/地铁逃离",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Metro Exodus",
     "rLzz": "79GB",
     "types": "射击游戏"
+  },
+  {
+    "code": "D170",
+    "name": "DROVA被遗弃的血亲",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Drova - Forsaken Kin",
+    "rLzz": "4GB",
+    "types": "动作角色扮演.像素"
   },
   {
     "code": "D17A",
@@ -4740,7 +4900,7 @@
     "name": "地下蚁国",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Empires of the Undergrowth",
-    "rLzz": "6GB",
+    "rLzz": "8GB",
     "types": "策略.殖民模拟.基地建设"
   },
   {
@@ -4796,7 +4956,7 @@
     "name": "打造世界/创建世界/创造世界",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Craft The World",
-    "rLzz": "2GB",
+    "rLzz": "1GB",
     "types": "沙盒.模拟经营.殖民模拟.建造.生存"
   },
   {
@@ -5068,7 +5228,7 @@
     "name": "地狱边境",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "LIMBO",
-    "rLzz": "100MB",
+    "rLzz": "110MB",
     "types": "横向滚屏.解谜"
   },
   {
@@ -5092,7 +5252,7 @@
     "name": "地下城4",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Dungeons 4 Deluxe Edition",
-    "rLzz": "18GB",
+    "rLzz": "23GB",
     "types": "模拟.策略.即时战略.城市营造"
   },
   {
@@ -5166,14 +5326,6 @@
     "describe": "Dungeon Defenders: Awakened",
     "rLzz": "9.7GB",
     "types": "合作.塔防"
-  },
-  {
-    "code": "D76",
-    "name": "盗贼之海/网络联机",
-    "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Sea of Thieves",
-    "rLzz": "80GB",
-    "types": "冒险.开放世界.海盗.合作"
   },
   {
     "code": "D77",
@@ -5492,7 +5644,7 @@
     "name": "饿殍 明末千里行",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "The Hungry Lamb Traveling in the Late Ming Dynasty",
-    "rLzz": "3GB",
+    "rLzz": "6GB",
     "types": "视觉小说.互动小说.多结局"
   },
   {
@@ -5572,7 +5724,7 @@
     "name": "二手车模拟器2023/汽车销售模拟器2023/二手车买卖模拟器2023/汽车销售模拟器2023",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Car For Sale Simulator 2023",
-    "rLzz": "7GB",
+    "rLzz": "6GB",
     "types": "驾驶.沉浸式模拟.模拟经营"
   },
   {
@@ -5646,6 +5798,22 @@
     "describe": "Russian Life Simulator",
     "rLzz": "250MB",
     "types": "模拟.点击游戏"
+  },
+  {
+    "code": "E30",
+    "name": "俄罗斯方块大师4",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "TETRIS  THE GRAND MASTER 4 -ABSOLUTE EYE-",
+    "rLzz": "300MB",
+    "types": "街机.休闲.同屏多人"
+  },
+  {
+    "code": "E31",
+    "name": "饿狼传说 群狼之城",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "FATAL FURY: City of the Wolves",
+    "rLzz": "34GB",
+    "types": "格斗.同屏多人"
   },
   {
     "code": "E8001",
@@ -5748,7 +5916,7 @@
     "name": "房产达人2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "House Flipper 2",
-    "rLzz": "9GB",
+    "rLzz": "10GB",
     "types": "模拟经营.休闲"
   },
   {
@@ -5798,14 +5966,6 @@
     "describe": "Fu Mo Tian Shi",
     "rLzz": "800MB",
     "types": "策略.卡牌"
-  },
-  {
-    "code": "F1004",
-    "name": "风来之国",
-    "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Eastward",
-    "rLzz": "1.4GB",
-    "types": "像素.动作角色扮演.后末日"
   },
   {
     "code": "F1005",
@@ -5876,7 +6036,7 @@
     "name": "Funko Fusion",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Funko Fusion",
-    "rLzz": "47GB",
+    "rLzz": "48GB",
     "types": "动作.冒险"
   },
   {
@@ -5926,6 +6086,30 @@
     "describe": "The Stone of Madness",
     "rLzz": "9GB",
     "types": "潜行.即时战略"
+  },
+  {
+    "code": "F106",
+    "name": "风暴崛起",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Tempest Rising",
+    "rLzz": "43GB",
+    "types": "即时战略.策略.基地建设"
+  },
+  {
+    "code": "F107",
+    "name": "符文世界 龙之荒野",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "RuneScape: Dragonwilds",
+    "rLzz": "20GB",
+    "types": "生存.开放世界"
+  },
+  {
+    "code": "F108",
+    "name": "符文工房 龙之天地",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Rune Factory: Guardians of Azuma",
+    "rLzz": "13GB",
+    "types": "动作.冒险.角色扮演"
   },
   {
     "code": "F11",
@@ -6801,10 +6985,10 @@
   },
   {
     "code": "G01A",
-    "name": "GTA5纯净版/侠盗飞车5纯净版/侠盗猎车手5纯净版",
+    "name": "GTA5纯净版",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Grand Theft Auto V",
-    "rLzz": "112GB",
+    "describe": "侠盗飞车5纯净版、侠盗猎车手5纯净版、侠盗飞车5传承版、侠盗猎车手5传承版、GTA5传承版、Grand Theft Auto V",
+    "rLzz": "114GB",
     "types": "开放世界.动作"
   },
   {
@@ -7009,9 +7193,9 @@
   },
   {
     "code": "G1001",
-    "name": "归家异途2/1",
+    "name": "归家异途2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "HomeBehind 2/1",
+    "describe": "HomeBehind 2",
     "rLzz": "3GB",
     "types": "策略.生存"
   },
@@ -7104,6 +7288,14 @@
     "types": "角色扮演"
   },
   {
+    "code": "G1012",
+    "name": "光明记忆",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Bright Memory",
+    "rLzz": "5GB",
+    "types": "第一人称射击"
+  },
+  {
     "code": "G102",
     "name": "怪物猎人物语",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -7174,6 +7366,38 @@
     "describe": "Monster Hunter World: Iceborne",
     "rLzz": "99GB",
     "types": "开放世界.合作.狩猎"
+  },
+  {
+    "code": "G110",
+    "name": "归家异途",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Home Behind",
+    "rLzz": "2GB",
+    "types": "冒险.生存.休闲"
+  },
+  {
+    "code": "G111",
+    "name": "怪物能量超级越野赛车25",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Monster Energy Supercross 25 - The Official Video Game",
+    "rLzz": "17GB",
+    "types": "竞速.摩托车"
+  },
+  {
+    "code": "G112",
+    "name": "光与影 33号远征队",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Clair Obscur: Expedition 33",
+    "rLzz": "41GB",
+    "types": "角色扮演.回合"
+  },
+  {
+    "code": "G113",
+    "name": "怪物火车2",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Monster Train 2",
+    "rLzz": "3GB",
+    "types": "卡牌.策略"
   },
   {
     "code": "G11A",
@@ -7964,7 +8188,7 @@
     "name": "高达破坏者4",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "GUNDAM 创坏者4、GUNDAM BREAKER 4",
-    "rLzz": "11GB",
+    "rLzz": "12GB",
     "types": "动作角色扮演.机器人"
   },
   {
@@ -8228,7 +8452,7 @@
     "name": "活侠传/活俠傳",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "LegendOfMortal",
-    "rLzz": "3GB",
+    "rLzz": "2GB",
     "types": "选择取向.角色扮演.策略"
   },
   {
@@ -8772,7 +8996,7 @@
     "name": "幻兽帕鲁",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Palworld",
-    "rLzz": "27GB",
+    "rLzz": "28GB",
     "types": "开放世界.生物收集.生存.制作"
   },
   {
@@ -8891,7 +9115,7 @@
     "code": "H157",
     "name": "黑山 起源",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Black Mesa：Source、黑山基地",
+    "describe": "Black Mesa：Source",
     "rLzz": "75GB",
     "types": "第三人称射击"
   },
@@ -9187,7 +9411,7 @@
     "code": "H189",
     "name": "混乱失序",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "DISORDER",
+    "describe": "DISORDER2025、混乱2025",
     "rLzz": "14GB",
     "types": "动作"
   },
@@ -9212,7 +9436,7 @@
     "name": "海岛大亨6",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Tropico 6",
-    "rLzz": "25GB",
+    "rLzz": "46GB",
     "types": "策略.城市营造.模拟经营"
   },
   {
@@ -9222,6 +9446,62 @@
     "describe": "Backrooms: Escape Together",
     "rLzz": "10GB",
     "types": "恐怖"
+  },
+  {
+    "code": "H193",
+    "name": "黑山研究所",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "黑山基地、Black Mesa Research Facility",
+    "rLzz": "28GB",
+    "types": "第一人称射击"
+  },
+  {
+    "code": "H194",
+    "name": "黑暗世界 因与果",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "KARMA: The Dark World",
+    "rLzz": "26GB",
+    "types": "恐怖"
+  },
+  {
+    "code": "H195",
+    "name": "好莱坞动物",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Hollywood Animal",
+    "rLzz": "4GB",
+    "types": "模拟.策略.城市营造"
+  },
+  {
+    "code": "H196",
+    "name": "花园之间",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "The Gardens Between",
+    "rLzz": "2GB",
+    "types": "解谜.冒险.超现实"
+  },
+  {
+    "code": "H197",
+    "name": "幻想生活ｉ转圈圈的龙和偷取时间的少女",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "FANTASY LIFE i: The Girl Who Steals Time",
+    "rLzz": "13GB",
+    "types": "动作.休闲"
+  },
+  {
+    "code": "H198",
+    "name": "幻境 新维度",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "幻想 新维度、FANTASIAN Neo Dimension",
+    "rLzz": "13GB",
+    "types": "角色扮演"
+  },
+  {
+    "code": "H199",
+    "name": "浣币模拟器",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Cash Cleaner Simulator",
+    "rLzz": "5GB",
+    "types": "模拟"
   },
   {
     "code": "H19A",
@@ -10676,7 +10956,7 @@
     "name": "精神城市 洛菲会议",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Spirit City: Lofi Sessions",
-    "rLzz": "2.3GB",
+    "rLzz": "3GB",
     "types": "休闲.生活模拟"
   },
   {
@@ -10740,7 +11020,7 @@
     "name": "绝命毒师模拟器2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "毒枭模拟器2、Drug Dealer Simulator 2",
-    "rLzz": "28GB",
+    "rLzz": "25GB",
     "types": "开放世界"
   },
   {
@@ -10932,7 +11212,7 @@
     "name": "节奏裂隙",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Rift of the NecroDancer",
-    "rLzz": "3GB",
+    "rLzz": "5GB",
     "types": "节奏.音乐"
   },
   {
@@ -10974,6 +11254,70 @@
     "describe": "极品飞车 复仇、Need for Speed Payback",
     "rLzz": "28GB",
     "types": "赛车竞技"
+  },
+  {
+    "code": "J161",
+    "name": "救命 怎么又塌了",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Haste",
+    "rLzz": "5GB",
+    "types": "跑酷.动作"
+  },
+  {
+    "code": "J162",
+    "name": "警区",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "The Precinct",
+    "rLzz": "8GB",
+    "types": "推理.开放世界"
+  },
+  {
+    "code": "J163",
+    "name": "驾驶地平线",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Drive Beyond Horizons",
+    "rLzz": "9GB",
+    "types": "休闲.驾驶.模拟"
+  },
+  {
+    "code": "J164",
+    "name": "JDM 漂移大师",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "JDM: Japanese Drift Master",
+    "rLzz": "20GB",
+    "types": "竞速.赛车竞技"
+  },
+  {
+    "code": "J165",
+    "name": "机动战士高达SEED激斗命运 复刻版",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "机动战士GUNDAM SEED激斗命运 复刻版、MOBILE SUIT GUNDAM SEED BATTLE DESTINY REMASTERED",
+    "rLzz": "7GB",
+    "types": "动作.机甲"
+  },
+  {
+    "code": "J166",
+    "name": "绝递必达",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Deliver At All Costs",
+    "rLzz": "9GB",
+    "types": "动作.破坏"
+  },
+  {
+    "code": "J167",
+    "name": "九王",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "9 Kings",
+    "rLzz": "200MB",
+    "types": "策略.卡牌.牌组构建.像素"
+  },
+  {
+    "code": "J168",
+    "name": "极地煎蛋",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Arctic Eggs",
+    "rLzz": "600MB",
+    "types": "烹饪.物理"
   },
   {
     "code": "J17",
@@ -11076,7 +11420,7 @@
     "name": "旧世界",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Old World",
-    "rLzz": "8.1GB",
+    "rLzz": "8GB",
     "types": "策略.大战略.历史.战争.战术"
   },
   {
@@ -11236,7 +11580,7 @@
     "name": "机械迷城",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Machinarium",
-    "rLzz": "300MB",
+    "rLzz": "400MB",
     "types": "解谜.蒸汽朋克"
   },
   {
@@ -11244,7 +11588,7 @@
     "name": "加油站大亨",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Gas Station Simulator",
-    "rLzz": "14GB",
+    "rLzz": "15GB",
     "types": "模拟经营.经济.建造.基地建设"
   },
   {
@@ -11366,14 +11710,6 @@
     "describe": "GoblinAttack",
     "rLzz": "200MB",
     "types": "休闲.策略.塔防"
-  },
-  {
-    "code": "J64",
-    "name": "家族传奇：马匹养成竞技",
-    "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Rival Stars Horse Racing: Desktop Edition",
-    "rLzz": "2.4GB",
-    "types": "体育运动"
   },
   {
     "code": "J65",
@@ -11667,16 +12003,16 @@
     "code": "K01",
     "name": "卡普空格斗合集",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Capcom Fighting Collection",
+    "describe": "卡普空对战格斗合集、Capcom Fighting Collection",
     "rLzz": "3.5GB",
     "types": "街机.像素.格斗"
   },
   {
     "code": "K01A",
-    "name": "卡普空街机合集2+1",
+    "name": "卡普空街机合集2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Capcom Arcade 2nd Stadium,Capcom Arcade Stadium",
-    "rLzz": "4GB",
+    "describe": "Capcom Arcade 2nd Stadium",
+    "rLzz": "3GB",
     "types": "街机.像素.格斗.同屏多人"
   },
   {
@@ -11843,7 +12179,7 @@
     "code": "K14",
     "name": "控制",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "掌控、Control Ultimate Edition",
+    "describe": "掌控、控制终极合辑、Control Ultimate Edition",
     "rLzz": "42GB",
     "types": "动作.女性主角.开放世界.射击游戏"
   },
@@ -12068,7 +12404,7 @@
     "name": "恐鬼症/恐相症/恐惧症/幽灵恐怖",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Phasmophobia",
-    "rLzz": "30GB",
+    "rLzz": "31GB",
     "types": "恐怖"
   },
   {
@@ -12408,6 +12744,46 @@
     "types": "模拟经营.像素.开罗游戏"
   },
   {
+    "code": "K81",
+    "name": "卡德洞窟",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Caves of Qud",
+    "rLzz": "3GB",
+    "types": "像素.开放世界.程序生成"
+  },
+  {
+    "code": "K82",
+    "name": "卡普空街机名作合集",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Capcom Arcade Stadium",
+    "rLzz": "2GB",
+    "types": "像素.街机.同屏多人"
+  },
+  {
+    "code": "K83",
+    "name": "狂野星球复仇记",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Revenge of the Savage Planet",
+    "rLzz": "13GB",
+    "types": "冒险.同屏多人"
+  },
+  {
+    "code": "K84",
+    "name": "快餐模拟器",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Fast Food Simulator",
+    "rLzz": "5GB",
+    "types": "模拟"
+  },
+  {
+    "code": "K85",
+    "name": "卡普空格斗合集2",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "卡普空对战格斗合集2、Capcom Fighting Collection 2",
+    "rLzz": "4GB",
+    "types": "动作.街机.像素"
+  },
+  {
     "code": "L.DMLZ001",
     "name": "龙珠超",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -12524,7 +12900,7 @@
     "name": "龙珠：超宇宙2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "DRAGON BALL XENOVERSE 2、七龙珠异战2",
-    "rLzz": "31GB",
+    "rLzz": "34GB",
     "types": "格斗游戏.同屏多人"
   },
   {
@@ -12548,7 +12924,7 @@
     "name": "猎人 荒野的召唤",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "猎人 野性的呼唤、The Hunter: Call of the Wild",
-    "rLzz": "95GB",
+    "rLzz": "94GB",
     "types": "开放世界.射击游戏.狩猎"
   },
   {
@@ -12736,6 +13112,14 @@
     "types": "动作.类魂系列"
   },
   {
+    "code": "L1017",
+    "name": "灵兽江湖",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Beast Saga",
+    "rLzz": "3GB",
+    "types": "角色扮演.开放世界"
+  },
+  {
     "code": "L102",
     "name": "洛蕾莱与激光眼",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -12836,7 +13220,7 @@
     "name": "林间小世界",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Tiny Glade",
-    "rLzz": "3GB",
+    "rLzz": "4GB",
     "types": "设计与插画.沙盒.建造.休闲"
   },
   {
@@ -12932,7 +13316,7 @@
     "name": "落日余晖",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "IfSunSets",
-    "rLzz": "22GB",
+    "rLzz": "19GB",
     "types": "开放世界.生存"
   },
   {
@@ -13012,7 +13396,7 @@
     "name": "林中小女巫",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Little Witch in the Woods",
-    "rLzz": "2.4GB",
+    "rLzz": "3GB",
     "types": "模拟.可爱.休闲.解谜.像素"
   },
   {
@@ -13040,6 +13424,54 @@
     "types": "动作角色扮演"
   },
   {
+    "code": "L133",
+    "name": "恋爱与选举与巧克力",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Love, Elections, and Chocolate",
+    "rLzz": "3GB",
+    "types": "视觉小说.剧情丰富.选择取向"
+  },
+  {
+    "code": "L134",
+    "name": "浪漫沙加2七英雄的复仇",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Romancing SaGa 2: Revenge of the Seven",
+    "rLzz": "20GB",
+    "types": "角色扮演"
+  },
+  {
+    "code": "L135",
+    "name": "露娜重制版合集",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "LUNAR Remastered Collection",
+    "rLzz": "7GB",
+    "types": "角色扮演.像素"
+  },
+  {
+    "code": "L136",
+    "name": "蓝途王子",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Blue Prince",
+    "rLzz": "4GB",
+    "types": "解谜.探索.悬疑"
+  },
+  {
+    "code": "L137",
+    "name": "联合高塔",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Tower Unite",
+    "rLzz": "29GB",
+    "types": "休闲"
+  },
+  {
+    "code": "L138",
+    "name": "烈焰之刃",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Blades of Fire",
+    "rLzz": "50GB",
+    "types": "动作"
+  },
+  {
     "code": "L14",
     "name": "绿色地狱",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -13060,7 +13492,7 @@
     "name": "灵魂石幸存者",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Soulstone Survivors",
-    "rLzz": "3.2GB",
+    "rLzz": "3GB",
     "types": "动作"
   },
   {
@@ -13204,7 +13636,7 @@
     "name": "零 希沃特",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "ZERO Sievert、像素版塔可夫",
-    "rLzz": "400MB",
+    "rLzz": "500MB",
     "types": "生存.动作.射击.撤离射击.后末日"
   },
   {
@@ -14060,7 +14492,7 @@
     "name": "漫漫长夜",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "The Long Dark",
-    "rLzz": "16GB",
+    "rLzz": "15GB",
     "types": "开放世界.生存"
   },
   {
@@ -14340,7 +14772,7 @@
     "name": "牧场模拟器",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Ranch Simulator",
-    "rLzz": "16GB",
+    "rLzz": "21GB",
     "types": "模拟经营"
   },
   {
@@ -14436,7 +14868,7 @@
     "name": "漫威蜘蛛侠2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Marvel's Spider-Man 2",
-    "rLzz": "110GB",
+    "rLzz": "111GB",
     "types": "动作.冒险.开放世界.漫威"
   },
   {
@@ -14900,7 +15332,7 @@
     "name": "美德传奇f Remastered",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "美德传奇f复刻版、Tales of Graces f Remastered",
-    "rLzz": "11GB",
+    "rLzz": "12GB",
     "types": "角色扮演"
   },
   {
@@ -14924,8 +15356,32 @@
     "name": "美国职业摔角联盟2K25",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "WWE 2K25",
-    "rLzz": "91GB",
+    "rLzz": "104GB",
     "types": "体育.摔跤"
+  },
+  {
+    "code": "M177",
+    "name": "盟军敢死队 起源",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Commandos: Origins",
+    "rLzz": "30GB",
+    "types": "策略.即时战术.即时战略"
+  },
+  {
+    "code": "M178",
+    "name": "命运游戏 逆时寻凶",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Game of Fate: Chasing Through Time",
+    "rLzz": "44GB",
+    "types": "真人互动.悬疑"
+  },
+  {
+    "code": "M179",
+    "name": "命运游戏2百年之约",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Game of Fate 2: A Century's Promise",
+    "rLzz": "63GB",
+    "types": "真人互动.悬疑"
   },
   {
     "code": "M17A",
@@ -14942,6 +15398,54 @@
     "describe": "Disgaea 5",
     "rLzz": "8GB",
     "types": "角色扮演"
+  },
+  {
+    "code": "M180",
+    "name": "米斯特里亚牧场",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Fields of Mistria",
+    "rLzz": "700MB",
+    "types": "模拟经营.农场模拟.像素"
+  },
+  {
+    "code": "M181",
+    "name": "秘影曼德拉",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Mandragora: Whispers of the Witch Tree",
+    "rLzz": "16GB",
+    "types": "横版.类魂系列"
+  },
+  {
+    "code": "M182",
+    "name": "摩托GP25",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "MotoGP 25",
+    "rLzz": "25GB",
+    "types": "竞速.摩托.同屏多人"
+  },
+  {
+    "code": "M183",
+    "name": "迷雾审判",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Misty Judgment",
+    "rLzz": "9GB",
+    "types": "真人互动.悬疑.推理"
+  },
+  {
+    "code": "M184",
+    "name": "迷雾求生",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Mist Survival",
+    "rLzz": "27GB",
+    "types": "生存.僵尸.开放世界"
+  },
+  {
+    "code": "M185",
+    "name": "梦恋依心",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Yixin",
+    "rLzz": "11GB",
+    "types": "真人互动.恋爱模拟"
   },
   {
     "code": "M18A",
@@ -15393,10 +15897,10 @@
   },
   {
     "code": "M68",
-    "name": "漫画英雄VS卡普空：无限/漫威VS卡普空无限/单机.同屏多人",
+    "name": "漫画英雄VS卡普空：无限/漫威VS卡普空无限",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Marvel\u00A0vs.\u00A0Capcom:\u00A0Infinite",
-    "rLzz": "59GB",
+    "rLzz": "67GB",
     "types": "格斗游戏"
   },
   {
@@ -15428,7 +15932,7 @@
     "name": "盟军敢死队2高清重置版/盟军敢死队2高清复刻版",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Commandos 2 - HD Remaster",
-    "rLzz": "3.6GB",
+    "rLzz": "4GB",
     "types": "策略.即时战略"
   },
   {
@@ -16172,7 +16676,7 @@
     "name": "拟真车祸模拟器",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "BeamNG.drive",
-    "rLzz": "49GB",
+    "rLzz": "54GB",
     "types": "模拟.驾驶.物理.破坏"
   },
   {
@@ -16356,7 +16860,7 @@
     "name": "诺兰德",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Norland",
-    "rLzz": "900MB",
+    "rLzz": "1GB",
     "types": "策略.模拟经营.中世纪.城市营造.殖民模拟.模拟"
   },
   {
@@ -16422,6 +16926,30 @@
     "describe": "NIMRODS: GunCraft Survivor",
     "rLzz": "1GB",
     "types": "弹幕射击.像素"
+  },
+  {
+    "code": "N66",
+    "name": "诺德要塞",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Nordhold",
+    "rLzz": "2GB",
+    "types": "塔防.城市营造"
+  },
+  {
+    "code": "N67",
+    "name": "女神氪金系统",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Goddess Krypton Gold System",
+    "rLzz": "12GB",
+    "types": "真人互动.恋爱模拟"
+  },
+  {
+    "code": "N68",
+    "name": "逆转命运之光",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Light of Reversing Destiny",
+    "rLzz": "12GB",
+    "types": "真人互动.休闲"
   },
   {
     "code": "O.DMLZ001",
@@ -16704,6 +17232,14 @@
     "types": "类银河战士恶魔城"
   },
   {
+    "code": "P1005",
+    "name": "泡姆泡姆",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "POPUCOM",
+    "rLzz": "10GB",
+    "types": "冒险.同屏多人"
+  },
+  {
     "code": "P11",
     "name": "螃蟹大战/单机.同屏多人.网络联机",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -16796,7 +17332,7 @@
     "name": "漂泊牧歌",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "The Wandering Village",
-    "rLzz": "1.3GB",
+    "rLzz": "1GB",
     "types": "沙盒.后末日.模拟经营"
   },
   {
@@ -16820,7 +17356,7 @@
     "name": "匹诺曹的谎言",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Lies of P",
-    "rLzz": "40GB",
+    "rLzz": "62GB",
     "types": "类魂系列.动作"
   },
   {
@@ -16950,6 +17486,14 @@
     "describe": "Door Kickers 2: Task Force North",
     "rLzz": "3GB",
     "types": "战术.即时战术.俯视"
+  },
+  {
+    "code": "P42",
+    "name": "旁观者 列车长",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Beholder: Conductor",
+    "rLzz": "6GB",
+    "types": "反乌托邦.选择取向.指向点击"
   },
   {
     "code": "Q.MJ001",
@@ -17132,7 +17676,7 @@
     "name": "群星",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Stellaris",
-    "rLzz": "22GB",
+    "rLzz": "25GB",
     "types": "太空.策略.局域网联机"
   },
   {
@@ -17148,7 +17692,7 @@
     "name": "枪火重生",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Gunfire Reborn",
-    "rLzz": "3.5GB",
+    "rLzz": "4GB",
     "types": "射击游戏"
   },
   {
@@ -17244,8 +17788,16 @@
     "name": "切尔诺贝利人2 禁区",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Chernobylite 2: Exclusion Zone",
-    "rLzz": "115GB",
+    "rLzz": "110GB",
     "types": "后末日.角色扮演.探索"
+  },
+  {
+    "code": "Q109",
+    "name": "汽车俱乐部2",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Automobilista 2",
+    "rLzz": "122GB",
+    "types": "竞速.模拟"
   },
   {
     "code": "Q11",
@@ -17254,6 +17806,46 @@
     "describe": "7 Days to Die",
     "rLzz": "20GB",
     "types": "生存.僵尸.后末日.开放世界.射击游戏.局域网联机"
+  },
+  {
+    "code": "Q110",
+    "name": "奇异人生 双重曝光",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Life is Strange: Double Exposure",
+    "rLzz": "23GB",
+    "types": "选择取向.LGBTQ+.女性主角"
+  },
+  {
+    "code": "Q111",
+    "name": "潜行者 切尔诺贝利的阴影 增强版",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "S.T.A.L.K.E.R.: Shadow of Chornobyl - Enhanced Edition",
+    "rLzz": "12GB",
+    "types": "动作.冒险"
+  },
+  {
+    "code": "Q112",
+    "name": "潜行者 晴空 增强版",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "S.T.A.L.K.E.R.: Clear Sky - Enhanced Edition",
+    "rLzz": "9GB",
+    "types": "动作.冒险"
+  },
+  {
+    "code": "Q113",
+    "name": "潜行者 普里皮亚季的召唤 增强版",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "S.T.A.L.K.E.R.: Call of Prypiat - Enhanced Edition",
+    "rLzz": "10GB",
+    "types": "动作.冒险"
+  },
+  {
+    "code": "Q114",
+    "name": "秋末求生",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Survive the Fall",
+    "rLzz": "44GB",
+    "types": "生存.开放世界.基地建设"
   },
   {
     "code": "Q12",
@@ -17316,7 +17908,7 @@
     "name": "穹顶守护者",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Dome Keeper",
-    "rLzz": "1GB",
+    "rLzz": "2GB",
     "types": "管理.后末日.生存.像素"
   },
   {
@@ -17356,7 +17948,7 @@
     "name": "潜水员戴夫",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "DAVE THE DIVER",
-    "rLzz": "3.5GB",
+    "rLzz": "4GB",
     "types": "探索.像素.水底"
   },
   {
@@ -17436,7 +18028,7 @@
     "name": "全面冲突 抵抗",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Total Conflict: Resistance",
-    "rLzz": "28GB",
+    "rLzz": "32GB",
     "types": "第一人称射击.战术.即时战略"
   },
   {
@@ -17500,7 +18092,7 @@
     "name": "潜渊症",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Barotrauma",
-    "rLzz": "1.5GB",
+    "rLzz": "2GB",
     "types": "模拟经营.生存"
   },
   {
@@ -17508,7 +18100,7 @@
     "name": "奇迹时代4",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Age of Wonders 4",
-    "rLzz": "19GB",
+    "rLzz": "25GB",
     "types": "策略.大战略"
   },
   {
@@ -17884,7 +18476,7 @@
     "name": "奇唤士",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "The Thaumaturge",
-    "rLzz": "25GB",
+    "rLzz": "21GB",
     "types": "角色扮演.选择取向.回合"
   },
   {
@@ -17988,7 +18580,7 @@
     "name": "去月球系列海滩特别篇",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Just a To the Moon Series Beach Episode",
-    "rLzz": "400MB",
+    "rLzz": "1GB",
     "types": "剧情丰富.氛围.指向点击.像素"
   },
   {
@@ -18052,7 +18644,7 @@
     "name": "人类：一败涂地",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Human：Fall Flat",
-    "rLzz": "5GB",
+    "rLzz": "6GB",
     "types": "合作.卡通.同屏多人"
   },
   {
@@ -18108,7 +18700,7 @@
     "name": "人渣",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "SCUM",
-    "rLzz": "74GB",
+    "rLzz": "75GB",
     "types": "开放世界.生存"
   },
   {
@@ -18400,14 +18992,6 @@
     "types": "格斗游戏.同屏多人.模拟器"
   },
   {
-    "code": "R36",
-    "name": "Root茂林源记",
-    "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Root",
-    "rLzz": "540MB",
-    "types": "策略.卡牌"
-  },
-  {
     "code": "R37",
     "name": "荣耀死斗",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -18508,7 +19092,7 @@
     "name": "Ratopia/鼠托邦",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Ratopia",
-    "rLzz": "1.4GB",
+    "rLzz": "3GB",
     "types": "城市营造.殖民模拟.基地建设.生存.模拟经营"
   },
   {
@@ -20764,7 +21348,7 @@
     "name": "杀手 暗杀世界",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "杀手3豪华版、Hitman 3、HITMAN World of Assassination",
-    "rLzz": "76GB",
+    "rLzz": "77GB",
     "types": "潜行.暗杀.虚拟现实.第三人称射击"
   },
   {
@@ -20852,7 +21436,7 @@
     "name": "神话时代 重述版",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Age of Mythology: Retold",
-    "rLzz": "31GB",
+    "rLzz": "29GB",
     "types": "策略.即时战略.奇幻"
   },
   {
@@ -21072,6 +21656,78 @@
     "types": "射击游戏.冒险"
   },
   {
+    "code": "S280",
+    "name": "杀戮空间",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Killing Floor",
+    "rLzz": "6GB",
+    "types": "第一人称射击.僵尸.生存"
+  },
+  {
+    "code": "S281",
+    "name": "死神 魂魄觉醒",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "BLEACH Rebirth of Souls、BLEACH 魂魄觉醒",
+    "rLzz": "72GB",
+    "types": "动作.格斗"
+  },
+  {
+    "code": "S282",
+    "name": "死或生 维纳斯璀璨假期",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Venus Vacation PRISM - DEAD OR ALIVE Xtreme -",
+    "rLzz": "14GB",
+    "types": "休闲.恋爱模拟.女性主角"
+  },
+  {
+    "code": "S283",
+    "name": "苏丹的游戏",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Sultan's Game",
+    "rLzz": "3GB",
+    "types": "LGBTQ+.资源管理.卡牌"
+  },
+  {
+    "code": "S284",
+    "name": "上古卷轴4 湮灭重制版",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "老滚4重制版、上古卷轴IV 湮灭重制版、The Elder Scrolls IV: Oblivion Remastered",
+    "rLzz": "124GB",
+    "types": "动作角色扮演.角色扮演.开放世界\n"
+  },
+  {
+    "code": "S285",
+    "name": "死亡与税赋",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Death and Taxes",
+    "rLzz": "3GB",
+    "types": "选择取向.指向点击"
+  },
+  {
+    "code": "S286",
+    "name": "死域Rogue",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Deadzone: Rogue",
+    "rLzz": "7GB",
+    "types": "第一人称射击"
+  },
+  {
+    "code": "S288",
+    "name": "使命召唤 现代战争II 2022",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "使命召唤19：现代战争2、Call of Duty : Modern Warfare  II 2022",
+    "rLzz": "33GB",
+    "types": "第一人称射击"
+  },
+  {
+    "code": "S289",
+    "name": "使命召唤 先锋",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "使命召唤18 先锋、Call of Duty Vanguard",
+    "rLzz": "81GB",
+    "types": "第一人称射击"
+  },
+  {
     "code": "S28A",
     "name": "史莱姆牧场2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -21086,6 +21742,30 @@
     "describe": "Sango Heroes 7",
     "rLzz": "8GB",
     "types": "策略"
+  },
+  {
+    "code": "S290",
+    "name": "使命召唤16 现代战争",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "使命召唤 现代战争、Call of Duty Modern Warfare",
+    "rLzz": "197GB",
+    "types": "第一人称射击"
+  },
+  {
+    "code": "S291",
+    "name": "三角符文",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "DELTARUNE",
+    "rLzz": "1GB",
+    "types": "像素.剧情丰富"
+  },
+  {
+    "code": "S292",
+    "name": "胜利之海 大西洋",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Victory at Sea Atlantic - World War II Naval Warfare",
+    "rLzz": "18GB",
+    "types": "策略.模拟.即时战略.二战"
   },
   {
     "code": "S30",
@@ -21291,7 +21971,7 @@
     "code": "S49",
     "name": "时光之帽",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "A Hat in Tim",
+    "describe": "A Hat in Time",
     "rLzz": "9GB",
     "types": "女性主角.同屏多人"
   },
@@ -21556,7 +22236,7 @@
     "name": "赛道大师/边境制造者/机械制造者",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Trailmakers",
-    "rLzz": "6.4GB",
+    "rLzz": "8GB",
     "types": "模拟.飞行游戏.沙盒"
   },
   {
@@ -22172,7 +22852,7 @@
     "name": "贪婪之秋2 垂死世界",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "GreedFall II: The Dying World",
-    "rLzz": "27GB",
+    "rLzz": "31GB",
     "types": "动作角色扮演.开放世界"
   },
   {
@@ -22276,7 +22956,7 @@
     "name": "天国 拯救2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Kingdom Come: Deliverance II",
-    "rLzz": "112GB",
+    "rLzz": "85GB",
     "types": "角色扮演.中世纪.开放世界"
   },
   {
@@ -22288,12 +22968,44 @@
     "types": "恐怖"
   },
   {
+    "code": "T128",
+    "name": "太空工程师2",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Space Engineers 2",
+    "rLzz": "27GB",
+    "types": "模拟.沙盒.太空"
+  },
+  {
+    "code": "T129",
+    "name": "塔罗斯的法则 再次觉醒",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "塔罗斯法则 重启、The Talos Principle: Reawakened",
+    "rLzz": "47GB",
+    "types": "解谜.探索.氛围"
+  },
+  {
     "code": "T13",
     "name": "泰拉瑞亚",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Terraria",
     "rLzz": "700MB",
     "types": "沙盒.像素.生存.局域网联机"
+  },
+  {
+    "code": "T130",
+    "name": "脱轨的山谷",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Derail Valley",
+    "rLzz": "5GB",
+    "types": "火车.模拟.虚拟现实"
+  },
+  {
+    "code": "T131",
+    "name": "图灵完备",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Turing Complete",
+    "rLzz": "310MB",
+    "types": "解谜"
   },
   {
     "code": "T14",
@@ -22315,8 +23027,8 @@
     "code": "T15A",
     "name": "太阳帝国的原罪2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Sins of a Solar Empire 2",
-    "rLzz": "14GB",
+    "describe": "Sins of a Solar Empire 2、Sins of a Solar Empire II",
+    "rLzz": "16GB",
     "types": "策略"
   },
   {
@@ -22660,7 +23372,7 @@
     "name": "铁路帝国2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Railway Empire 2",
-    "rLzz": "37GB",
+    "rLzz": "57GB",
     "types": "模拟经营.模拟.策略.管理.火车.沙盒"
   },
   {
@@ -23156,7 +23868,7 @@
     "name": "无人深空",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "No Man's Sky",
-    "rLzz": "22GB",
+    "rLzz": "23GB",
     "types": "开放世界.生存.太空.探索"
   },
   {
@@ -23213,7 +23925,7 @@
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Victor Vran",
     "rLzz": "5.6GB",
-    "types": "动作角色扮演"
+    "types": "动作角色扮演.同屏多人"
   },
   {
     "code": "W10",
@@ -23324,7 +24036,7 @@
     "name": "污痕圣杯 阿瓦隆的陨落",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "TAINTED GRAIL THE FALL OF AVALON",
-    "rLzz": "15GB",
+    "rLzz": "31GB",
     "types": "动作角色扮演.开放世界"
   },
   {
@@ -23334,6 +24046,14 @@
     "describe": "The Leviathan's Fantasy",
     "rLzz": "11GB",
     "types": "冒险.模拟.策略.即时战略.模拟经营"
+  },
+  {
+    "code": "W1011",
+    "name": "吾今有世家",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "House of Legacy",
+    "rLzz": "2GB",
+    "types": "沙盒.模拟经营.策略"
   },
   {
     "code": "W1012",
@@ -23460,7 +24180,7 @@
     "name": "雾锁王国",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Enshrouded",
-    "rLzz": "33GB",
+    "rLzz": "36GB",
     "types": "生存.基地建设.开放世界"
   },
   {
@@ -23492,7 +24212,7 @@
     "name": "无感染区",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Infection Free Zone",
-    "rLzz": "6GB",
+    "rLzz": "7GB",
     "types": "后末日.基地建设.城市营造"
   },
   {
@@ -23588,7 +24308,7 @@
     "name": "王国保卫战5联盟",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Kingdom Rush5Alliance、Kingdom Rush Alliance",
-    "rLzz": "1GB",
+    "rLzz": "2GB",
     "types": "策略.塔防.卡通"
   },
   {
@@ -23612,7 +24332,7 @@
     "name": "玩具熊的五夜后宫 陷落球池",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Five Nights at Freddy's: Into the Pit、玩具熊的五夜惊魂",
-    "rLzz": "3.6GB",
+    "rLzz": "4GB",
     "types": "恐怖.像素"
   },
   {
@@ -23784,6 +24504,46 @@
     "types": "动作.砍杀"
   },
   {
+    "code": "W151",
+    "name": "无限机兵",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "AI LIMIT",
+    "rLzz": "17GB",
+    "types": "类魂系列"
+  },
+  {
+    "code": "W152",
+    "name": "午夜以南",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "South of Midnight",
+    "rLzz": "85GB",
+    "types": "动作.冒险.奇幻"
+  },
+  {
+    "code": "W153",
+    "name": "午夜漫步",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "The Midnight Walk",
+    "rLzz": "18GB",
+    "types": "冒险.恐怖.奇幻.虚拟现实VR"
+  },
+  {
+    "code": "W154",
+    "name": "武器之神",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "God Of Weapons",
+    "rLzz": "3GB",
+    "types": "动作"
+  },
+  {
+    "code": "W155",
+    "name": "无尽地牢",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "ENDLESS Dungeon",
+    "rLzz": "13GB",
+    "types": "动作.塔防"
+  },
+  {
     "code": "W16",
     "name": "蔚蓝",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -23804,7 +24564,7 @@
     "name": "武装突袭重铸者/武装重铸者/武装突袭Reforge/武装突袭援德行动",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Arma Reforger",
-    "rLzz": "19GB",
+    "rLzz": "21GB",
     "types": "沙盒.射击游戏"
   },
   {
@@ -23988,7 +24748,7 @@
     "name": "往日不再/往日不在",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Days Gone",
-    "rLzz": "61GB",
+    "rLzz": "63GB",
     "types": "开放世界.后末日.僵尸.生存.恐怖.射击游戏"
   },
   {
@@ -23996,7 +24756,7 @@
     "name": "围攻/围剿",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Besiege",
-    "rLzz": "5GB",
+    "rLzz": "4GB",
     "types": "建造.沙盒.中世纪.局域网联机"
   },
   {
@@ -24428,7 +25188,7 @@
     "name": "瓦尔海姆：英灵神殿/Valheim英灵神殿",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Valheim",
-    "rLzz": "2.1GB",
+    "rLzz": "2GB",
     "types": "开放世界.生存"
   },
   {
@@ -24780,7 +25540,7 @@
     "name": "消逝的光芒 决定版",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Dying Light",
-    "rLzz": "38GB",
+    "rLzz": "46GB",
     "types": "僵尸.恐怖.开放世界.射击游戏.局域网联机"
   },
   {
@@ -24868,7 +25628,7 @@
     "name": "信长之野望新生",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "NOBUNAG'S AMBITION Shinsei、信长之野望16新生、信長之野望新生",
-    "rLzz": "26GB",
+    "rLzz": "27GB",
     "types": "模拟.历史.策略.即时战略"
   },
   {
@@ -24996,7 +25756,7 @@
     "name": "下一站江湖Ⅱ",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "下一站江湖2",
-    "rLzz": "14GB",
+    "rLzz": "17GB",
     "types": "开放世界.角色扮演"
   },
   {
@@ -25052,7 +25812,7 @@
     "name": "雄心壮志",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Big Ambitions",
-    "rLzz": "4GB",
+    "rLzz": "5GB",
     "types": "模拟经营"
   },
   {
@@ -25180,7 +25940,7 @@
     "name": "星之海",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Sea of Stars",
-    "rLzz": "4GB",
+    "rLzz": "17GB",
     "types": "角色扮演.像素.回合"
   },
   {
@@ -25372,7 +26132,7 @@
     "name": "蟹蟹寻宝奇遇",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Another Crab's Treasure",
-    "rLzz": "3.8GB",
+    "rLzz": "8GB",
     "types": "动作角色扮演.卡通"
   },
   {
@@ -25638,6 +26398,54 @@
     "describe": "GTA5增强版、Grand Theft Auto V Enhanced",
     "rLzz": "92GB",
     "types": "动作.开放世界"
+  },
+  {
+    "code": "X173",
+    "name": "心流小筑",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Chill Pulse",
+    "rLzz": "400MB",
+    "types": "休闲.像素.指向点击"
+  },
+  {
+    "code": "X174",
+    "name": "雪人兄弟2Special",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "SNOW BROS 2 SPECIAL",
+    "rLzz": "2GB",
+    "types": "休闲.街机.同屏多人"
+  },
+  {
+    "code": "X175",
+    "name": "消失的航班 还有她她她",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Lost in the secret!",
+    "rLzz": "56GB",
+    "types": "真人互动.悬疑"
+  },
+  {
+    "code": "X176",
+    "name": "消防模拟消防英豪",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "消防模拟器、Firefighting Simulator - The Squad",
+    "rLzz": "5GB",
+    "types": "模拟"
+  },
+  {
+    "code": "X177",
+    "name": "夏目友人帐 叶月之记",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Natsume Yujincho",
+    "rLzz": "4GB",
+    "types": "冒险.动漫.猫.指向点击"
+  },
+  {
+    "code": "X178",
+    "name": "心之眼",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "MindsEye",
+    "rLzz": "50GB",
+    "types": "动作.第三人称射击.冒险"
   },
   {
     "code": "X18",
@@ -25916,7 +26724,7 @@
     "name": "吸血鬼崛起/夜族崛起",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "V Rising",
-    "rLzz": "11GB",
+    "rLzz": "12GB",
     "types": "生存.开放世界.吸血鬼"
   },
   {
@@ -25929,10 +26737,10 @@
   },
   {
     "code": "X53",
-    "name": "小镇惊魂",
+    "name": "小镇惊魂重制版合集",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "DreadOut",
-    "rLzz": "10GB",
+    "describe": "DreadOut Remastered Collection",
+    "rLzz": "5GB",
     "types": "恐怖.女性主角"
   },
   {
@@ -26044,7 +26852,7 @@
     "name": "小兔子",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "TINY BUNNY",
-    "rLzz": "2.5GB",
+    "rLzz": "4GB",
     "types": "视觉小说.恐怖.剧情丰富"
   },
   {
@@ -26140,7 +26948,7 @@
     "name": "X4基石",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "X4: Foundations、X4行星共同体典藏版、Community of Planets Collector's Edition",
-    "rLzz": "35GB",
+    "rLzz": "36GB",
     "types": "探索.沙盒.建造.经济.管理.太空"
   },
   {
@@ -26612,7 +27420,7 @@
     "name": "英雄攻城/攻城英雄",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Hero Siege",
-    "rLzz": "1.6GB",
+    "rLzz": "3GB",
     "types": "角色扮演.像素.Rogue类.砍杀.同屏多人"
   },
   {
@@ -26766,6 +27574,14 @@
     "describe": "Yog-Sothoth's Yard",
     "rLzz": "2.2GB",
     "types": "基地建设.模拟经营"
+  },
+  {
+    "code": "Y1018",
+    "name": "英雄立志传 三国志",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Legend of Heroes Three Kingdoms",
+    "rLzz": "7GB",
+    "types": "模拟.策略.角色扮演"
   },
   {
     "code": "Y102",
@@ -27180,7 +27996,7 @@
     "name": "预先号令",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "WARNO",
-    "rLzz": "32GB",
+    "rLzz": "52GB",
     "types": "即时战术.战争游戏"
   },
   {
@@ -27300,7 +28116,7 @@
     "name": "银河文明4超新星",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "银河文明IV、Galactic Civilizations IV: Supernova",
-    "rLzz": "21GB",
+    "rLzz": "31GB",
     "types": "太空.大战略.模拟.策略.4X.探索"
   },
   {
@@ -27573,7 +28389,7 @@
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "UNDER NIGHT IN-BIRTH II Sys:Celes",
     "rLzz": "17GB",
-    "types": "格斗.同屏多人"
+    "types": "格斗.同屏多人.动漫"
   },
   {
     "code": "Y182",
@@ -27589,7 +28405,7 @@
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "遗产传奇HD复刻版、The Legend of Legacy HD Remastered",
     "rLzz": "6.1GB",
-    "types": "YuZu模拟器.角色扮演"
+    "types": "角色扮演"
   },
   {
     "code": "Y184",
@@ -27612,7 +28428,7 @@
     "name": "远征 泥泞奔驰游戏",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Expeditions: A MudRunner Game",
-    "rLzz": "21GB",
+    "rLzz": "27GB",
     "types": "探索.竞速.驾驶.开放世界"
   },
   {
@@ -27676,7 +28492,7 @@
     "name": "夜莺传说",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Nightingale",
-    "rLzz": "57GB",
+    "rLzz": "55GB",
     "types": "开放世界.生存.建造.探索"
   },
   {
@@ -27979,7 +28795,7 @@
     "code": "Y225",
     "name": "勇者斗恶龙3重置版",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "勇者斗恶龙III HD-2D Remake、勇者斗恶龙III传说的起点",
+    "describe": "勇者斗恶龙III HD-2D Remake、勇者斗恶龙III传说的起点、勇者斗恶龙3 HD-2D重制版",
     "rLzz": "2GB",
     "types": "角色扮演.像素"
   },
@@ -28048,6 +28864,46 @@
     "types": "沙盒.太空.模拟.物理"
   },
   {
+    "code": "Y233",
+    "name": "优米雅的炼金工房 追忆之炼金术士与幻创之地",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Atelier Yumia: The Alchemist of Memories & the Envisioned Land",
+    "rLzz": "17GB",
+    "types": "探索"
+  },
+  {
+    "code": "Y234",
+    "name": "药国",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Schedule I、绝命毒师模拟器",
+    "rLzz": "7GB",
+    "types": "模拟.开放世界"
+  },
+  {
+    "code": "Y235",
+    "name": "云族裔",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "inZOI",
+    "rLzz": "23GB",
+    "types": "模拟经营.生活模拟.模拟"
+  },
+  {
+    "code": "Y236",
+    "name": "勇闯死人谷 暗黑之日",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Into the Dead Our Darkest Days",
+    "rLzz": "6GB",
+    "types": "生存.僵尸.恐怖"
+  },
+  {
+    "code": "Y237",
+    "name": "野狗子 裂头怪",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "野狗子: Slitterhead",
+    "rLzz": "26GB",
+    "types": "动作.冒险"
+  },
+  {
     "code": "Y24",
     "name": "勇网直前",
     "mmss": "左下角更新客户端,邀请码激活游戏",
@@ -28060,7 +28916,7 @@
     "name": "要战便战",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Diplomacy is Not an Option",
-    "rLzz": "12GB",
+    "rLzz": "13GB",
     "types": "城市建造.塔防.策略.沙盒.建造"
   },
   {
@@ -28108,7 +28964,7 @@
     "name": "伊松佐河",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Isonzo",
-    "rLzz": "25GB",
+    "rLzz": "27GB",
     "types": "战术.历史.一战.射击游戏"
   },
   {
@@ -28116,7 +28972,7 @@
     "name": "雨中冒险2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Risk of Rain 2",
-    "rLzz": "2.4GB",
+    "rLzz": "5GB",
     "types": "射击游戏.合作.刷宝.同屏多人"
   },
   {
@@ -28155,8 +29011,8 @@
     "code": "Y35",
     "name": "雨世界",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "雨世界 倾盆大雨、RAIN WORLD DOWNPOUR",
-    "rLzz": "7.5GB",
+    "describe": "RAIN WORLD DOWNPOUR",
+    "rLzz": "11GB",
     "types": "氛围.生存.横版.探索.像素"
   },
   {
@@ -29164,7 +30020,7 @@
     "name": "诸天刷宝录",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Multiverse Loot Hunter",
-    "rLzz": "500MB",
+    "rLzz": "600MB",
     "types": "策略.挂机.模拟经营.回合"
   },
   {
@@ -29180,8 +30036,16 @@
     "name": "中国式相亲",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Chinese Dating",
-    "rLzz": "6GB",
+    "rLzz": "7GB",
     "types": "休闲.恋爱模拟.模拟经营"
+  },
+  {
+    "code": "Z1025",
+    "name": "宗门志",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Ascension",
+    "rLzz": "6GB",
+    "types": "策略.修仙"
   },
   {
     "code": "Z103",
@@ -29508,7 +30372,7 @@
     "name": "战场的赋格曲",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Fuga: Melodies of Steel",
-    "rLzz": "2GB",
+    "rLzz": "3GB",
     "types": "角色扮演"
   },
   {
@@ -29620,7 +30484,7 @@
     "name": "紫色晶石",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Stoneshard、石质碎片",
-    "rLzz": "700MB",
+    "rLzz": "800MB",
     "types": "角色扮演.开放世界.生存.像素"
   },
   {
@@ -29652,7 +30516,7 @@
     "name": "最后纪元/最后的纪元/终末纪元",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Last Epoch",
-    "rLzz": "22GB",
+    "rLzz": "24GB",
     "types": "动作角色扮演.砍杀.暗黑风"
   },
   {
@@ -29700,7 +30564,7 @@
     "name": "战国王朝",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "SENGOKU DYNASTY",
-    "rLzz": "16GB",
+    "rLzz": "19GB",
     "types": "冒险.模拟.生活模拟.探索"
   },
   {
@@ -29812,7 +30676,7 @@
     "name": "战锤40K 行商浪人",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Warhammer 40000: Rogue Trader",
-    "rLzz": "36GB",
+    "rLzz": "37GB",
     "types": "战锤40K.角色扮演.策略"
   },
   {
@@ -29948,7 +30812,7 @@
     "name": "重装前哨",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Outpost: Infinity Siege",
-    "rLzz": "37GB",
+    "rLzz": "38GB",
     "types": "机器人.基地建设.塔防.第一人称射击"
   },
   {
@@ -29980,7 +30844,7 @@
     "name": "指挥部 二战",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Headquarters: World War II",
-    "rLzz": "30GB",
+    "rLzz": "28GB",
     "types": "回合制战术.战术角色扮演.战争游戏.二战"
   },
   {
@@ -30228,7 +31092,7 @@
     "name": "征服之歌",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Songs of Conquest",
-    "rLzz": "2.2GB",
+    "rLzz": "3GB",
     "types": "策略.像素.回合"
   },
   {
@@ -30435,7 +31299,7 @@
     "code": "Z232",
     "name": "主播生活模拟器2",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Streamer Life Simulator 2",
+    "describe": "主播人生模拟器2、Streamer Life Simulator 2",
     "rLzz": "9GB",
     "types": "模拟经营.生活模拟.沉浸式模拟"
   },
@@ -30472,12 +31336,84 @@
     "types": "动作角色扮演.角色扮演"
   },
   {
+    "code": "Z237",
+    "name": "撞车嘉年华2",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Wreckfest 2",
+    "rLzz": "12GB",
+    "types": "竞速"
+  },
+  {
+    "code": "Z238",
+    "name": "最后的生还者2 重制版",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "最后生还者2重制版、美国末日2、The Last of Us Part II Remastered",
+    "rLzz": "115GB",
+    "types": "后末日.第三人称射击.动作"
+  },
+  {
+    "code": "Z239",
+    "name": "咒语旅团",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "The Spell Brigade",
+    "rLzz": "3GB",
+    "types": "弹幕射击"
+  },
+  {
     "code": "Z24",
     "name": "重装机兵4月光歌姬",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Metal Max 4 Gekkou no Diva",
     "rLzz": "2GB",
     "types": "角色扮演.模拟器"
+  },
+  {
+    "code": "Z240",
+    "name": "主播之心",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "The Heart of Influencer",
+    "rLzz": "59GB",
+    "types": "真人互动.恋爱模拟"
+  },
+  {
+    "code": "Z241",
+    "name": "侦探 请守护我的秘密吧",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Detective Please Guard My Secret",
+    "rLzz": "43GB",
+    "types": "真人互动.推理"
+  },
+  {
+    "code": "Z242",
+    "name": "灾后修复师",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "RoadCraft",
+    "rLzz": "34GB",
+    "types": "模拟.驾驶"
+  },
+  {
+    "code": "Z243",
+    "name": "战场的赋格曲3",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Fuga: Melodies of Steel 3",
+    "rLzz": "6GB",
+    "types": "角色扮演"
+  },
+  {
+    "code": "Z244",
+    "name": "战场的赋格曲2",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Fuga Melodies of Steel 2",
+    "rLzz": "5GB",
+    "types": "角色扮演"
+  },
+  {
+    "code": "Z245",
+    "name": "战锤40K 星际战士大师打造版",
+    "mmss": "左下角更新客户端,邀请码激活游戏",
+    "describe": "Warhammer 40,000: Space Marine - Master Crafted Edition",
+    "rLzz": "44GB",
+    "types": "动作.冒险.战锤40K"
   },
   {
     "code": "Z24A",
@@ -30657,10 +31593,10 @@
   },
   {
     "code": "Z43",
-    "name": "战争交响曲：尼非订传奇/战争交响曲拿非利传奇",
+    "name": "战争交响曲 尼菲林传奇",
     "mmss": "左下角更新客户端,邀请码激活游戏",
-    "describe": "Symphony of War: The Nephilim Saga",
-    "rLzz": "1GB",
+    "describe": "战争交响曲 尼非订传奇、战争交响曲拿非利传奇、Symphony of War: The Nephilim Saga",
+    "rLzz": "2GB",
     "types": "角色扮演.奇幻.剧情丰富.像素"
   },
   {
@@ -30692,7 +31628,7 @@
     "name": "战锤40K：格雷迪厄斯 遗迹之战/战锤40K角斗士之战争圣器",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Warhammer 40,000: Gladius - Relics of War",
-    "rLzz": "4GB",
+    "rLzz": "5GB",
     "types": "策略.战锤40K.回合.局域网联机"
   },
   {
@@ -30892,7 +31828,7 @@
     "name": "最后的咒语",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "The Last Spell",
-    "rLzz": "6GB",
+    "rLzz": "7GB",
     "types": "策略.像素.基地建设"
   },
   {
@@ -30932,7 +31868,7 @@
     "name": "战争传说",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Wartales",
-    "rLzz": "43GB",
+    "rLzz": "44GB",
     "types": "角色扮演.开放世界.中世纪"
   },
   {
@@ -31228,7 +32164,7 @@
     "name": "最远的边陲",
     "mmss": "左下角更新客户端,邀请码激活游戏",
     "describe": "Farthest Frontier",
-    "rLzz": "3.2GB",
+    "rLzz": "13GB",
     "types": "模拟经营.生存.城市营造.策略.殖民模拟"
   },
   {
