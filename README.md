@@ -23,6 +23,7 @@
 - [小叽资源](https://steamzg.com/) [`发布页`](http://acgbns.com/)
  [全球游戏交流中心](https://www.gamer520.com/#154.23.188.117) [`发布页`](https://laoquzhang.com/)
  [资源避难所](https://www.flysheep6.com/)[`发布页`](https://gamer520.cn/)
+ [游戏资源](https://link3.cc/guibaohui)
 - [cxy521导航](http://www.cxy521.com/)
 [恰鹿导航](https://hao.qialu999.com)
 [龙轩导航](http://ilxdh.com)
