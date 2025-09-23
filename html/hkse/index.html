@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="cn">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hollow Knight save editor</title>
+    <title>空洞骑士，丝之歌 通用存档修改器</title>
 </head>
 
 <body>
@@ -14,6 +15,29 @@
         <input type="file" id="open" />
         <input type="checkbox" id="check" />Switch
         <input type="button" id="download" value="保存" />
+    </div>    
+    <div style="margin: 3px; width: 80%; margin: 0 auto; text-align: left;">
+        <pre>
+丝之歌修改示例（由【心冰依然】提供）：
+打开 "C:\Users\【用户名】\AppData\LocalLow\Team Cherry\Hollow Knight Silksong\【Steam好友代码】\user【存档编号】.dat"
+搜索Collectables， 往下找，有类似
+    {
+        "Name": "Rosary_Set_Frayed",
+        "Data": {
+        "Amount": 1,
+        "IsSeenMask": 1,
+        "AmountWhileHidden": 0
+        }
+    }
+这样的一组一组的数据；其中：
+"Name"后面是物品名称，
+"Amount"后面是物品数量，
+"Rosary_Set_" 开头的是念珠串，有"Frayed"，"Small"，"Medium"，"Large"几种；
+"Shard Pouch"是碎片包，"Great Shard"是兽甲碎片，"Silk Grub"是噬丝蛆。
+找到后，改后面的"Amount"后面的数字，就能改数量了。
+然后保存文件，覆盖原来的存档（建议先备份）。
+重新打开游戏，读取存档，就可以看到效果了。
+       </pre>
     </div>
     <script src="./aes.js"></script>
     <script>
