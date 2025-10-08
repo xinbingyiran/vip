@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="cn">
 
@@ -7,17 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>空洞骑士，丝之歌 通用存档修改器</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 15px;
+            height: 80vh;
+        }
+
+        textarea {
+            flex: 1;
+            border: 1px solid #ccc;
+            resize: none;
+        }
+
+        #viewer {
+            flex: 1;
+            border: 1px solid #ccc;
+            overflow: auto;
+        }
+
+        .button {
+            padding: 5px 10px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .key {
+            color: #0000FF;
+            font-weight: bold;
+        }
+
+        .string {
+            color: #008000;
+        }
+
+        .number {
+            color: #FF0000;
+        }
+
+        .boolean {
+            color: #800080;
+        }
+
+        .null {
+            color: #808080;
+        }
+
+        .children {
+            margin-left: 20px;
+            border-left: 1px dashed #ccc;
+            padding-left: 10px;
+        }
+
+        .toggle {
+            display: inline-block;
+            width: 16px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .editable {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .edit-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
 </head>
 
-<body>
-    <div style="margin: 3px; width: 80%; margin: 0 auto; text-align: right;">
-        <textarea style="display: block; width: 100%; height: 60vh;" id="text" spellcheck="false"></textarea>
-        <input type="file" id="open" />
-        <input type="checkbox" id="check" />Switch
-        <input type="button" id="download" value="保存" />
-    </div>    
-    <div style="margin: 3px; width: 80%; margin: 0 auto; text-align: left;">
-        <pre>
+<body style="width: 80%; margin: 0 auto;">
+    <div class="container">
+        <textarea style="display: block; width: 100%; " id="text" spellcheck="false"></textarea>
+        <div id="viewer"></div>
+    </div>
+    <div style="text-align: right;">
+        <input class="button" type="checkbox" id="advance" />高级模式&nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="button" type="file" id="open" />
+        <input class="button" type="checkbox" id="check" />Switch&nbsp;
+        <input class="button" type="button" id="download" value="保存" />
+    </div>
+    <pre style="text-align: left;">
 丝之歌修改示例（由【心冰依然】提供）：
 打开 "C:\Users\【用户名】\AppData\LocalLow\Team Cherry\Hollow Knight Silksong\【Steam好友代码】\user【存档编号】.dat"
 搜索Collectables， 往下找，有类似
@@ -38,7 +110,6 @@
 然后保存文件，覆盖原来的存档（建议先备份）。
 重新打开游戏，读取存档，就可以看到效果了。
        </pre>
-    </div>
     <script src="./aes.js"></script>
     <script>
         const BASE64_ARRAY = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".split("").map(c => c.charCodeAt(0))
@@ -101,9 +172,28 @@
         const key = aesjs.utils.utf8.toBytes('UKu52ePUBwetZ9wNX88o54dnfKRu0T1l');
         const ecb = new aesjs.ModeOfOperation.ecb(key);
         const text = document.body.querySelector("#text");
+        const viewer = document.body.querySelector("#viewer");
+        const advance = document.body.querySelector("#advance");
         const open = document.body.querySelector("#open");
         const check = document.body.querySelector("#check");
         const download = document.body.querySelector("#download");
+
+        advance.checked = true;
+        text.style.display = 'none';
+
+        advance.onchange = () => {
+            if (advance.checked) {
+
+                text.style.display = 'none';
+                viewer.style.display = '';
+            }
+            else {
+                text.style.display = '';
+                viewer.style.display = 'none';
+
+            }
+        }
+
         const loadFile = (switchMode, result) => {
             try {
                 let decrypted = ""
@@ -112,8 +202,9 @@
                 } else {
                     decrypted = decodeFile(new Uint8Array(result))
                 }
-                var jsonString = JSON.stringify(JSON.parse(decrypted), undefined, 2)
+                var jsonString = JSON.stringify(JSON.parse(decrypted), null, 2)
                 text.value = jsonString;
+                loadJson();
             } catch (err) {
                 window.alert("The file could not decrypted.")
                 console.warn(err)
@@ -228,6 +319,340 @@
         };
         open.addEventListener("change", onFileChange);
         download.addEventListener("click", downloadFile);
+    </script>
+    <script>
+        let jsonData = null;
+        let editingField = null; // 存储当前编辑的字段信息
+        let jsonStore = null;
+        let jsonStoreID = 0;
+        const jsonViewer = document.querySelector('#viewer');
+        const jsonText = document.querySelector('#text');
+
+        jsonText.onchange = loadJson;
+
+        // 从文本框加载并显示JSON
+        function loadJson() {
+            try {
+                jsonData = JSON.parse(jsonText.value);
+                jsonStore = {};
+                jsonStoreID = 0;
+                jsonViewer.innerHTML = renderJson(jsonData);
+                editingField = null;
+            } catch (e) {
+                jsonViewer.innerHTML = `<span style="color: red;">解析错误: ${e.message}</span>`;
+            }
+        }
+
+        // 渲染JSON节点
+        function renderJson(data, path = [], key = null, isArray = false) {
+            // 处理基础类型
+            if (typeof data !== 'object' || data === null) {
+                return renderValue(data, path, key, isArray);
+            }
+
+            // 处理对象和数组
+            const isArr = Array.isArray(data);
+            const entries = isArr ? data.map((v, i) => [i, v]) : Object.entries(data);
+            const nodeId = 'n' + Math.random().toString(36).slice(2, 10);
+
+            let keyPart = key !== null && !isArray ? `<span class="key">"${key}":</span> ` : '';
+            const brace = isArr ? '[]' : '{}';
+
+            let html = `
+                <div>
+                    <span class="toggle" onclick="toggle('${nodeId}')">-</span>
+                    ${keyPart}${brace[0]} (${entries.length}项)
+                </div>
+                <div id="${nodeId}" class="children">
+            `;
+
+            entries.forEach(([k, v], i) => {
+                const newPath = [...path, k];
+                const isLast = i === entries.length - 1;
+                html += `<div>${renderJson(v, newPath, k, isArr)}${!isLast ? ',' : ''}</div>`;
+            });
+
+            html += `</div>${brace[1]}`;
+            return html;
+        }
+
+        // 渲染可编辑的值
+        function renderValue(value, path, key, isArray) {
+            const type = getType(value);
+            const valueId = 'jsonv_' + (jsonStoreID++);
+
+            // 存储路径信息
+            jsonStore[`data-path-${valueId}`] = JSON.stringify(path);
+            jsonStore[`data-type-${valueId}`] = type;
+            jsonStore[`data-value-${valueId}`] = JSON.stringify(value);
+
+
+            let keyPart = key !== null && !isArray ? `<span class="key">"${key}":</span> ` : '';
+            let displayValue = formatValue(value, type);
+
+            return `${keyPart}<span id="${valueId}" class="${type} editable" onclick="editValue('${valueId}')">${displayValue}</span>`;
+        }
+
+        // 开始编辑值
+        function editValue(valueId) {
+            // 如果正在编辑其他值，先结束
+            if (editingField) {
+                cancelEdit();
+            }
+
+            const element = document.getElementById(valueId);
+            if (!element) return;
+
+            const path = JSON.parse(jsonStore[`data-path-${valueId}`]);
+            const type = jsonStore[`data-type-${valueId}`];
+            const value = JSON.parse(jsonStore[`data-value-${valueId}`]);
+
+            if (type == 'null') {
+                return;
+            }
+
+            // 保存原始元素
+            editingField = {
+                id: valueId,
+                type: type,
+                originalElement: element.cloneNode(true),
+                path: path
+            };
+
+            // 创建编辑控件
+            const editBox = document.createElement('div');
+            editBox.className = 'edit-box';
+            editBox.dataset.id = valueId;
+
+            // 类型选择器
+            const typeSelect = document.createElement('select');
+            typeSelect.innerHTML = `
+                <option value="string">字符串</option>
+                <option value="number">数字</option>
+                <option value="boolean">布尔</option>
+                <option value="null">空值</option>
+            `;
+            typeSelect.value = type;
+            typeSelect.style.display = 'none';
+
+            // 输入框
+            let input = createInput(type, value);
+            input.onchange = () => saveValue(editBox, input, typeSelect.value);
+
+            // 类型变更时更新输入框
+            typeSelect.onchange = function () {
+                const newType = this.value;
+                const oldInput = input;
+                input = createInput(newType, convertValue(value, newType));
+                input.onchange = () => saveValue(editBox, input, typeSelect.value);
+                input.onkeydown = handleKeydown;
+                editBox.replaceChild(input, oldInput);
+            };
+
+            // // 保存按钮
+            // const saveBtn = document.createElement('button');
+            // saveBtn.textContent = '保存';
+            // saveBtn.onclick = function () {
+            //     saveValue(editBox, input, typeSelect.value);
+            // };
+
+
+            // // 取消按钮
+            // const cancelBtn = document.createElement('button');
+            // cancelBtn.textContent = '取消';
+            // cancelBtn.onclick = cancelEdit;
+
+            // 键盘事件
+            input.onkeydown = handleKeydown;
+
+            // 组装编辑框
+            editBox.appendChild(typeSelect);
+            editBox.appendChild(input);
+            //editBox.appendChild(saveBtn);
+            //editBox.appendChild(cancelBtn);
+
+            // 替换原始元素
+            element.parentNode.replaceChild(editBox, element);
+            input.focus();
+        }
+
+        // 处理键盘事件
+        function handleKeydown(e) {
+            if (e.key === 'Enter') {
+                const editBox = e.target.closest('.edit-box');
+                const typeSelect = editBox.querySelector('select');
+                saveValue(editBox, e.target, typeSelect.value);
+            } else if (e.key === 'Escape') {
+                cancelEdit();
+            }
+        }
+
+        // 保存值 - 简化且可靠的实现
+        function saveValue(editBox, input, type) {
+            try {
+                if (!editingField) return;
+
+                // 1. 解析新值
+                let newValue;
+                switch (type) {
+                    case 'string':
+                        newValue = input.value;
+                        break;
+                    case 'number':
+                        newValue = parseFloat(input.value);
+                        if (isNaN(newValue)) throw new Error('请输入有效的数字');
+                        break;
+                    case 'boolean':
+                        newValue = input.value === 'true';
+                        break;
+                    case 'null':
+                        newValue = null;
+                        break;
+                }
+
+                // 2. 更新JSON数据
+                let current = jsonData;
+                const path = editingField.path;
+
+                // 遍历路径找到目标位置
+                for (let i = 0; i < path.length - 1; i++) {
+                    current = current[path[i]];
+                }
+
+                // 更新值
+                current[path[path.length - 1]] = newValue;
+
+                // 3. 更新左侧文本框
+                jsonText.value = JSON.stringify(jsonData, null, 2);
+
+                // 4. 更新视图中的值
+                const valueId = editingField.id;
+                const newElement = document.createElement('span');
+                newElement.id = valueId;
+                newElement.className = `${type} editable`;
+                newElement.onclick = () => editValue(valueId);
+                newElement.textContent = formatValue(newValue, type);
+
+                // 5. 更新元数据
+                jsonStore[`data-type-${valueId}`] = type;
+                jsonStore[`data-value-${valueId}`] = JSON.stringify(newValue);
+
+                // 6. 替换编辑框
+                editBox.parentNode.replaceChild(newElement, editBox);
+
+                // 7. 重置编辑状态
+                editingField = null;
+
+            } catch (e) {
+                alert('保存失败: ' + e.message);
+            }
+        }
+
+        // 取消编辑
+        function cancelEdit() {
+            if (!editingField || !editingField.originalElement) return;
+
+            const editBox = document.querySelector(`.edit-box[data-id="${editingField.id}"]`);
+            if (editBox && editBox.parentNode) {
+                editBox.parentNode.replaceChild(editingField.originalElement, editBox);
+            }
+
+            editingField = null;
+        }
+
+        // 切换节点展开/折叠
+        function toggle(nodeId) {
+            const node = document.getElementById(nodeId);
+            const toggle = node.previousElementSibling.querySelector('.toggle');
+
+            if (node.style.display !== 'none') {
+                node.style.display = 'none';
+                toggle.textContent = '+';
+            } else {
+                node.style.display = 'block';
+                toggle.textContent = '-';
+            }
+        }
+
+        // 全部展开/折叠
+        function toggleAll(expand) {
+            document.querySelectorAll('.toggle').forEach(toggle => {
+                const nodeId = toggle.parentElement.nextElementSibling.id;
+                const node = document.getElementById(nodeId);
+
+                if (expand) {
+                    node.style.display = 'block';
+                    toggle.textContent = '-';
+                } else {
+                    node.style.display = 'none';
+                    toggle.textContent = '+';
+                }
+            });
+        }
+
+        // 辅助函数：获取值类型
+        function getType(value) {
+            if (value === null) return 'null';
+            return typeof value;
+        }
+
+        // 辅助函数：格式化显示值
+        function formatValue(value, type) {
+            switch (type) {
+                case 'string': return `"${value}"`;
+                case 'number': return value;
+                case 'boolean': return value;
+                case 'null': return 'null';
+                default: return value;
+            }
+        }
+
+        // 辅助函数：创建输入控件
+        function createInput(type, value) {
+            switch (type) {
+                case 'string':
+                    const strInput = document.createElement('input');
+                    strInput.type = 'text';
+                    strInput.value = value || '';
+                    return strInput;
+
+                case 'number':
+                    const numInput = document.createElement('input');
+                    numInput.type = 'number';
+                    numInput.value = value;
+                    return numInput;
+
+                case 'boolean':
+                    const boolSelect = document.createElement('select');
+                    boolSelect.innerHTML = `
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                    `;
+                    boolSelect.value = value.toString();
+                    return boolSelect;
+
+                case 'null':
+                    const nullInput = document.createElement('input');
+                    nullInput.type = 'text';
+                    nullInput.value = 'null';
+                    nullInput.readOnly = true;
+                    return nullInput;
+            }
+        }
+
+        // 辅助函数：转换值类型
+        function convertValue(value, newType) {
+            try {
+                switch (newType) {
+                    case 'string': return value?.toString() || '';
+                    case 'number': return Number(value) || 0;
+                    case 'boolean': return ['true', '1'].includes(String(value).toLowerCase());
+                    case 'null': return null;
+                }
+            } catch (e) {
+                return newType === 'string' ? '' : 0;
+            }
+        }
     </script>
 </body>
 
