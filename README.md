@@ -23,6 +23,7 @@
 - [小叽资源](https://steamzg.com/) [`发布页`](http://acgbns.com/)
  [koyso](https://koyso.to/) [`源网址`](https://koyso.com)
  [游戏天堂](https://www.zzzzz688.com/) [`小妖怪分享`](https://www.ixyg688.com/)
+ [离线游戏资源文档](https://www.114game.net/) [`防走丢`](https://114514game.com/)
  [gamefreer](https://www.gamefreer.com/)
  [全球游戏交流中心](https://www.gamer520.com/#154.23.188.117) [`发布页`](https://laoquzhang.com/)
  [资源避难所](https://www.flysheep6.com/)[`发布页`](https://gamer520.cn/)
