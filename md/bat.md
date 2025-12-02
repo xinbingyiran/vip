@@ -12,6 +12,9 @@ setlocal EnableDelayedExpansion
 1参数
 %2 mshta vbscript:CreateObject("Shell.Application").ShellExecute("cmd.exe","/c ""%~f0"" ""%~1"" ::","%cd%","runas",1)(window.close)&&exit
 ```
+```
+(fltmc >nul 2>&1) || powershell -Command "Start-Process -Verb RunAs -FilePath '%~f0' -ArgumentList '%*'" && exit /b
+```
 
 # 运行powershell
 
