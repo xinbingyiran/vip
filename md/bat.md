@@ -33,27 +33,48 @@ set "0=%~f0" &set "1=%~1"&set "2=%~2"& powershell -nop -c iex ([io.file]::ReadAl
 
 ```
 const autoKeyboard = (c) => {
-    let lastTime = [0, 0];
+    const actionTime = {
+        actions: [],
+        next: 0
+    };
     function gameLoop(ts) {
-        if (c.stop) { return; }
-        if (lastTime[1] <= 0) {
-            lastTime[0] = ts + Math.random() * (c.maxDelay - c.minDelay) + c.minDelay;
-            lastTime[1] = lastTime[0] + Math.random() * (c.maxDown - c.minDown) + c.minDown;
+        if (c.stop) {
+            return;
         }
-        else if (lastTime[0] > 0 && ts > lastTime[0]) {
-            document.dispatchEvent(new KeyboardEvent("keydown", c));
-            console.log("keydown");
-            lastTime[0] = 0;
+        if (ts > actionTime.next) {
+            const actions = [];
+            actions.push({ type: 'keydown', ts: ts });
+            const nextTs = ts + c.downMs + Math.random() * c.downMSRand;
+            let currentTs = ts + c.repeatDelay;
+            while (currentTs < nextTs) {
+                actions.push({ type: 'keydown', ts: currentTs });
+                currentTs += c.repeatRate;
+            }
+            actions.push({ type: 'keyup', ts: nextTs });
+            actionTime.actions = actions;
+            actionTime.next = nextTs + c.upMS + Math.random() * c.upMSRand;
         }
-        else if (lastTime[1] > 0 && ts > lastTime[1]) {
-            document.dispatchEvent(new KeyboardEvent("keyup", c));
-            console.log("keyup");
-            lastTime[1] = 0;
+        if (actionTime.actions && actionTime.actions.length && ts > actionTime.actions[0].ts) {
+            const actionItem = actionTime.actions.shift();
+            document.dispatchEvent(new KeyboardEvent(actionItem.type, { key: c.key, code: c.code }));
+            c.log && console.log(`${actionItem.type} key:${c.key} code:${c.code}`);
         }
         requestAnimationFrame(gameLoop);
     }
     requestAnimationFrame(gameLoop);
+    return c;
 };
-var ctrl = { stop: 0, keyCode: 40, minDelay: 3000, maxDelay: 30000, minDown: 100,maxDown: 500 };
+var ctrl = {
+    stop: 0,
+    log: 0,
+    key: "z",
+    code: "KeyZ",
+    repeatDelay: 510,
+    repeatRate: 35,
+    downMs: 2100,
+    downMSRand: 1200,
+    upMS: 1100,
+    upMSRand: 1100
+};
 autoKeyboard(ctrl);
 ```
