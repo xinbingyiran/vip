@@ -1,18 +1,19 @@
 !function () {
     if (globalThis._douyin_) {
-        globalThis._douyin_.stop = false;
+        globalThis._douyin_.stoped = false;
         return;
     }
     const douyin = globalThis._douyin_ = {
-        stop: false,
+        stoped: false,
         log: (message) => console.info(message)
     };
     douyin.start = () => {
-        douyin.stop = false;
+        douyin.stoped = false;
+        douyin.items.forEach(keyItem => delete keyItem.__actionItem__);
         requestAnimationFrame(douyin.gameLoop);
     }
     douyin.stop = () => {
-        douyin.stop = true;
+        douyin.stoped = true;
     }
     douyin.addScript = (url, useCallback) => {
         var script = globalThis.document.createElement('script');
@@ -67,7 +68,7 @@
     }
 
     douyin.gameLoop = (ts) => {
-        if (douyin.stop) {
+        if (douyin.stoped) {
             return;
         }
         douyin.items.forEach(keyItem => douyin.checkAction(keyItem, ts));
