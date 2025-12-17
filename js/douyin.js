@@ -1,67 +1,110 @@
-
-// 按键模拟
-const autoKeyboard = (c) => {
-    const actionTime = {
-        actions: [],
-        next: 0
+!function () {
+    if (globalThis._douyin_) {
+        globalThis._douyin_.stop = false;
+        return;
+    }
+    const douyin = globalThis._douyin_ = {
+        stop: false,
+        log: (message) => console.info(message)
     };
-    function gameLoop(ts) {
-        if (c.stop) {
+    douyin.start = () => {
+        douyin.stop = false;
+        requestAnimationFrame(douyin.gameLoop);
+    }
+    douyin.stop = () => {
+        douyin.stop = true;
+    }
+    douyin.addScript = (url, useCallback) => {
+        var script = globalThis.document.createElement('script');
+        script.setAttribute('type', 'text/javascript'), script.setAttribute('src', url), script.onload = useCallback, globalThis.document.getElementsByTagName('head')[0].appendChild(script);
+    }
+    douyin.checkAction = (keyItem, ts) => {
+        const actionItem = keyItem.__actionItem__ ??= {
+            actions: [],
+            next: ts + keyItem.upMS + Math.random() * keyItem.upMSRand
+        };
+        if (!keyItem.check()) {
+            actionItem.next = ts + keyItem.upMS + Math.random() * keyItem.upMSRand;
             return;
         }
-        if (ts > actionTime.next) {
-            const actions = [];
-            actions.push({ type: 'keydown', ts: ts, repeat: false });
-            const nextTs = ts + c.downMs + Math.random() * c.downMSRand;
-            let currentTs = ts + c.repeatDelay;
+        if (ts > actionItem.next) {
+            const actions = actionItem.actions = [];
+            actions.push({
+                type: 'keydown',
+                ts: ts,
+                repeat: false
+            });
+            const nextTs = ts + keyItem.downMs + Math.random() * keyItem.downMSRand;
+            let currentTs = ts + keyItem.repeatDelay;
             while (currentTs < nextTs) {
-                actions.push({ type: 'keydown', ts: currentTs, repeat: true });
-                currentTs += c.repeatRate;
+                actions.push({
+                    type: 'keydown',
+                    ts: currentTs,
+                    repeat: true
+                });
+                currentTs += keyItem.repeatRate;
             }
-            actions.push({ type: 'keyup', ts: nextTs, repeat: false });
-            actionTime.actions = actions;
-            actionTime.next = nextTs + c.upMS + Math.random() * c.upMSRand;
+            actions.push({
+                type: 'keyup',
+                ts: nextTs,
+                repeat: false
+            });
+            actionItem.next = nextTs + keyItem.upMS + Math.random() * keyItem.upMSRand;
         }
-        if (actionTime.actions && actionTime.actions.length && ts > actionTime.actions[0].ts) {
-            const actionItem = actionTime.actions.shift();
-            document.dispatchEvent(new KeyboardEvent(actionItem.type, { key: c.key, code: c.code, keyCode: c.keyCode, repeat: actionItem.repeat }));
-            c.log && console.log(`${actionItem.type} key:${c.key} code:${c.code}`);
+        if (actionItem.actions && actionItem.actions.length && ts > actionItem.actions[0].ts) {
+            const currentAction = actionItem.actions.shift();
+            const eventInit = {
+                key: keyItem.key,
+                code: keyItem.code,
+                keyCode: keyItem.keyCode,
+                repeat: currentAction.repeat
+            };
+            globalThis.document.dispatchEvent(new KeyboardEvent(currentAction.type, eventInit));
+            if (douyin.log && douyin.log.constructor == Function) {
+                douyin.log(`${currentAction.type} key:${keyItem.key} code:${keyItem.code}`);
+            }
         }
-        requestAnimationFrame(gameLoop);
     }
-    requestAnimationFrame(gameLoop);
-    return c;
-};
 
-//# 间断性点按 ArrowDown
-var d = {
-    stop: 0,
-    log: 0,
-    key: "ArrowDown",
-    code: "ArrowDown",
-    keyCode: 40,
-    repeatDelay: 510,
-    repeatRate: 35,
-    downMs: 200,
-    downMSRand: 200,
-    upMS: 1100,
-    upMSRand: 23000
-};
-autoKeyboard(d);
+    douyin.gameLoop = (ts) => {
+        if (douyin.stop) {
+            return;
+        }
+        douyin.items.forEach(keyItem => douyin.checkAction(keyItem, ts));
+        requestAnimationFrame(douyin.gameLoop);
+    }
 
+    //# 间断性点按 ArrowDown
+    douyin.keyArrowDown = {
+        check: () => !!globalThis.document.querySelector("[data-e2e=slideList]  video[autoplay]"),
+        key: "ArrowDown",
+        code: "ArrowDown",
+        keyCode: 40,
+        repeatDelay: 510,
+        repeatRate: 35,
+        downMs: 200,
+        downMSRand: 200,
+        upMS: 5100,
+        upMSRand: 23000
+    };
 
-// 间断性长按z
-var z = {
-    stop: 0,
-    log: 0,
-    key: "z",
-    code: "KeyZ",
-    keyCode: 90,
-    repeatDelay: 510,
-    repeatRate: 35,
-    downMs: 1000,
-    downMSRand: 500,
-    upMS: 30100,
-    upMSRand: 10300
-};
-autoKeyboard(z);
+    // 间断性长按z
+    douyin.keyZ = {
+        check: () => !!globalThis.document.querySelector("[data-e2e=living-container]  video[autoplay]"),
+        key: "z",
+        code: "KeyZ",
+        keyCode: 90,
+        repeatDelay: 510,
+        repeatRate: 35,
+        downMs: 1000,
+        downMSRand: 500,
+        upMS: 30100,
+        upMSRand: 10300
+    };
+
+    //控制台
+    douyin.items = [douyin.keyArrowDown, douyin.keyZ]
+
+    //执行
+    douyin.start();
+}();
