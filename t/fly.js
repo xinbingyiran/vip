@@ -7,18 +7,18 @@ function game(app, { } = {}) {
 
     let flybody = [[0, 1, 0], [1, 1, 1], [0, 1, 0], [1, 0, 1]];
     let itemBody = [...flybody].reverse();
-    let status, backCell, distance, flyItem;
+    let status, mainCell, distance, flyItem;
     let otherItems;
     let itemDistance = 12;
 
     function updateBoard(ts) {
-        app.mainBoard.forEach((row, r) => row.forEach((cell, c) => row[c] = (c == 0 || c == app.mainCols - 1) && ((distance - r) % 4 + 4) % 4 > 0 ? backCell : app.emptyCell));
+        app.mainBoard.forEach((row, r) => row.forEach((cell, c) => row[c] = (c == 0 || c == app.mainCols - 1) && ((distance - r) % 4 + 4) % 4 > 0 ? mainCell : app.emptyCell));
         flyItem.body.forEach((row, r) => row.forEach((cell, c) => cell && (app.mainBoard[flyItem.y + r][flyItem.x + c] = flyItem.cell)));
         otherItems.forEach(item => {
             item.body.forEach((row, r) => item.y + r >= 0 && item.y + r < app.mainRows && row.forEach((cell, c) => cell && (app.mainBoard[item.y + r][item.x + c] = item.cell)));
         });
         for (let i = 0; i < app.subRows; i++) {
-            app.subBoard[i].fill(status.life > (app.subRows - 1 - i) ? backCell : app.emptyCell);
+            app.subBoard[i].fill(status.life > (app.subRows - 1 - i) ? mainCell : app.emptyCell);
         }
     }
 
@@ -30,7 +30,7 @@ function game(app, { } = {}) {
             x: 2,
             y: app.mainRows - flybody.length - 2,
             body: flybody,
-            cell: backCell
+            cell: mainCell
         }
         otherItems = new Set();
         updateBoard(ts);
@@ -116,12 +116,17 @@ function game(app, { } = {}) {
     };
 
     function randomCell() {
-        return app.cells[~~(Math.random() * app.cells.length)];
+        if(app.cells.length == 1){
+            return app.cells[0];
+        }
+        let retCell = mainCell;
+        while((retCell = app.cells[~~(Math.random() * app.cells.length)]) == mainCell){}
+        return retCell;
     }
 
     const init = (ts, mainStatus) => {
         status = mainStatus;
-        backCell = randomCell();
+        mainCell = randomCell();
         initLevel(ts);
     }
     const update = (ts) => {

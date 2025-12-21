@@ -6,7 +6,7 @@ function game(app, {}={}) {
     let lastTagTime = 0;
 
     let flybody = [[0, 1, 0], [1, 1, 1], [0, 1, 0], [1, 0, 1]];
-    let status, backCell, distance, flyItem;
+    let status, mainCell, distance, flyItem;
     let baseBoard = [];
     let itemBodys = [];
     let itemIndex, itemDistance = 12;
@@ -15,7 +15,7 @@ function game(app, {}={}) {
         app.mainBoard.forEach((row, r) => row.forEach((cell, c) => app.mainBoard[r][c] = baseBoard[r][c]));
         flyItem.body.forEach((row, r) => row.forEach((cell, c) => cell && (app.mainBoard[flyItem.y + r][flyItem.x + c] = flyItem.cell)));
         for (let i = 0; i < app.subRows; i++) {
-            app.subBoard[i].fill(status.life > (app.subRows - 1 - i) ? backCell : app.emptyCell);
+            app.subBoard[i].fill(status.life > (app.subRows - 1 - i) ? mainCell : app.emptyCell);
         }
     }
 
@@ -29,7 +29,7 @@ function game(app, {}={}) {
             x: itemIndex + 2,
             y: app.mainRows - flybody.length - 2,
             body: flybody,
-            cell: backCell
+            cell: mainCell
         }
         updateBoard(ts);
     }
@@ -98,13 +98,18 @@ function game(app, {}={}) {
     };
 
     function randomCell() {        
-        return app.cells[~~(Math.random() * app.cells.length)];
+        if(app.cells.length == 1){
+            return app.cells[0];
+        }
+        let retCell = mainCell;
+        while((retCell = app.cells[~~(Math.random() * app.cells.length)]) == mainCell){}
+        return retCell;
     }
 
     const init = (ts, mainStatus) => {
         status = mainStatus;
         itemBodys = [];
-        backCell = randomCell();
+        mainCell = randomCell();
         let bodyCell = randomCell();
         for (let i = 1; i < app.mainCols - 4; i++) {
             itemBodys.push(app.mainBoard[0].map((cell, c) => (c < i || c > (i + 3)) ? bodyCell : app.emptyCell));

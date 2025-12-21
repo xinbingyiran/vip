@@ -257,7 +257,8 @@
     const updateDownActions = (newAction, add) => add ? downActions.add(newAction) : downActions.delete(newAction);
     function checkGamepads() {
         const actions = new Set();
-        const gamepads = globalThis.location.protocol.startsWith("https:") && navigator.getGamepads ? navigator.getGamepads() : undefined;
+        // globalThis.location.protocol.startsWith("https:") && 
+        const gamepads = navigator.getGamepads ? navigator.getGamepads() : undefined;
         if (!gamepads) {
             return actions;
         }
