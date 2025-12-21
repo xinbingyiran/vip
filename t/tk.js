@@ -39,7 +39,7 @@ function game(app, { tankCount = 25, bossLife = 1 } = {}) {
 
     let tankPosions;
 
-    let status, tankItem, bossItem, tankCell;
+    let status, tankItem, bossItem, mainCell;
     function updateBoard(ts) {
         for (let r = 0; r < app.mainRows; r++) {
             for (let c = 0; c < app.mainCols; c++) {
@@ -68,7 +68,7 @@ function game(app, { tankCount = 25, bossLife = 1 } = {}) {
         });
 
         for (let i = 0; i < app.subRows; i++) {
-            app.subBoard[i].fill(status.life > (app.subRows - 1 - i) ? tankCell : app.emptyCell);
+            app.subBoard[i].fill(status.life > (app.subRows - 1 - i) ? mainCell : app.emptyCell);
         }
     }
 
@@ -85,7 +85,7 @@ function game(app, { tankCount = 25, bossLife = 1 } = {}) {
             y: ~~((app.mainRows - testBody.length) / 2),
             actions: [action_Left, action_Right, action_Up, action_Down],
             action: action_Up,
-            cell: tankCell,
+            cell: mainCell,
             body: tankBodys[action_Up],
             withShot: withShotTank,
             doStep: (ts, tank) => true,
@@ -549,12 +549,17 @@ function game(app, { tankCount = 25, bossLife = 1 } = {}) {
     };
 
     function randomCell() {
-        return app.cells[~~(Math.random() * app.cells.length)];
+        if(app.cells.length == 1){
+            return app.cells[0];
+        }
+        let retCell = mainCell;
+        while((retCell = app.cells[~~(Math.random() * app.cells.length)]) == mainCell){}
+        return retCell;
     }
 
     const init = (ts, mainStatus) => {
         status = mainStatus;
-        tankCell = randomCell();
+        mainCell = randomCell();
         tankPosions = [
             { x: 0, y: 0, ac: [action_Right, action_Down] },
             { x: app.mainCols - testBody[0].length, y: 0, ac: [action_Left, action_Down] },

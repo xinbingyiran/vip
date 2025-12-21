@@ -2,7 +2,7 @@ function game(app, { loop = false } = {}) {
     const maxLevel = 30;
     let lastTagTime = 0;
 
-    let status, food, snake, nstep, headCell;
+    let status, food, snake, nstep, mainCell;
 
     function updateBoard(ts) {
         app.mainBoard.forEach(row => row.fill(app.emptyCell));
@@ -12,7 +12,7 @@ function game(app, { loop = false } = {}) {
         }
 
         for (let i = 0; i < app.subRows; i++) {
-            app.subBoard[i].fill(status.life > (app.subRows - 1 - i) ? headCell : app.emptyCell);
+            app.subBoard[i].fill(status.life > (app.subRows - 1 - i) ? mainCell : app.emptyCell);
         }
     }
     function calcEmptyPositions() {
@@ -41,7 +41,7 @@ function game(app, { loop = false } = {}) {
         const headx = 3;
         const heady = ~~(app.mainRows / 2);
         snake = [
-            { x: headx, y: heady, cell: headCell },
+            { x: headx, y: heady, cell: mainCell },
             { x: headx - 1, y: heady, cell: newCell },
             { x: headx - 2, y: heady, cell: newCell },
             { x: headx - 3, y: heady, cell: newCell }
@@ -119,12 +119,17 @@ function game(app, { loop = false } = {}) {
     };
 
     function randomCell() {        
-        return app.cells[~~(Math.random() * app.cells.length)];
+        if(app.cells.length == 1){
+            return app.cells[0];
+        }
+        let retCell = mainCell;
+        while((retCell = app.cells[~~(Math.random() * app.cells.length)]) == mainCell){}
+        return retCell;
     }
 
     const init = (ts, mainStatus) => {
         status = mainStatus;
-        headCell = randomCell();
+        mainCell = randomCell();
         initLevel(ts);
     }
     const update = (ts) => {

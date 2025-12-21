@@ -10,7 +10,7 @@ function game(app, { isAddtion = false } = {}) {
     let scoreItems;
     let overItems;
 
-    let status, actionItem, baseBoard;
+    let status, mainCell, actionItem, baseBoard;
 
     function createEmptyRow() {
         let emptyRow = [];
@@ -208,7 +208,12 @@ function game(app, { isAddtion = false } = {}) {
     };
 
     function randomCell() {
-        return app.cells[~~(Math.random() * app.cells.length)];
+        if(app.cells.length == 1){
+            return app.cells[0];
+        }
+        let retCell = mainCell;
+        while((retCell = app.cells[~~(Math.random() * app.cells.length)]) == mainCell){}
+        return retCell;
     }
 
     const init = (ts, mainStatus) => {
@@ -218,9 +223,10 @@ function game(app, { isAddtion = false } = {}) {
         for (let r = 0; r < app.mainRows; r++) {
             baseBoard.push(createEmptyRow());
         }
+        mainCell = randomCell();
         actionItem = {
             col: ~~(app.mainCols / 2),
-            cell: randomCell()
+            cell: mainCell
         };
         initLevel(ts);
     }
