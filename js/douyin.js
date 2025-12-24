@@ -7,72 +7,69 @@
         stoped: false,
         log: (message) => console.info(message)
     };
-    douyin.start = () => {
-        douyin.stoped = false;
-        douyin.items.forEach(keyItem => delete keyItem.__actionItem__);
-        requestAnimationFrame(douyin.gameLoop);
-    }
-    douyin.stop = () => {
-        douyin.stoped = true;
-    }
     douyin.addScript = (url, useCallback) => {
         var script = globalThis.document.createElement('script');
         script.setAttribute('type', 'text/javascript'), script.setAttribute('src', url), script.onload = useCallback, globalThis.document.getElementsByTagName('head')[0].appendChild(script);
     }
     douyin.checkAction = (keyItem, ts) => {
-        const actionItem = keyItem.__actionItem__ ??= {
-            actions: [],
-            next: ts + keyItem.upMS + Math.random() * keyItem.upMSRand
-        };
         if (!keyItem.check()) {
-            actionItem.next = ts + keyItem.upMS + Math.random() * keyItem.upMSRand;
+            keyItem._actions = [];
             return;
         }
-        if (ts > actionItem.next) {
-            const actions = actionItem.actions = [];
+        const actions = keyItem._actions ??= [];
+        if (actions.length == 0) {
+            let downTs = ts + keyItem.upMS + Math.random() * keyItem.upMSRand;
             actions.push({
                 type: 'keydown',
-                ts: ts,
+                ts: downTs,
                 repeat: false
             });
-            const nextTs = ts + keyItem.downMs + Math.random() * keyItem.downMSRand;
-            let currentTs = ts + keyItem.repeatDelay;
-            while (currentTs < nextTs) {
+            const upTs = downTs + keyItem.downMs + Math.random() * keyItem.downMSRand;
+            downTs += keyItem.repeatDelay;
+            while (downTs < upTs) {
                 actions.push({
                     type: 'keydown',
-                    ts: currentTs,
+                    ts: downTs,
                     repeat: true
                 });
-                currentTs += keyItem.repeatRate;
+                downTs += keyItem.repeatRate;
             }
             actions.push({
                 type: 'keyup',
-                ts: nextTs,
+                ts: upTs,
                 repeat: false
             });
-            actionItem.next = nextTs + keyItem.upMS + Math.random() * keyItem.upMSRand;
         }
-        if (actionItem.actions && actionItem.actions.length && ts > actionItem.actions[0].ts) {
-            const currentAction = actionItem.actions.shift();
+        else if (ts > actions[0].ts) {
+            const currentAction = actions.shift();
             const eventInit = {
                 key: keyItem.key,
                 code: keyItem.code,
                 keyCode: keyItem.keyCode,
-                repeat: currentAction.repeat
+                repeat: currentAction.repeat,
+                bubbles: true
             };
-            globalThis.document.dispatchEvent(new KeyboardEvent(currentAction.type, eventInit));
-            if (douyin.log && douyin.log.constructor == Function) {
-                douyin.log(`${currentAction.type} key:${keyItem.key} code:${keyItem.code}`);
+            try {
+                globalThis.document.body.dispatchEvent(new KeyboardEvent(currentAction.type, eventInit));
+                if (typeof douyin.log == "function") {
+                    douyin.log(`${currentAction.type} key:${keyItem.key} code:${keyItem.code}`);
+                }
+            }
+            catch (e) {
+                if (typeof douyin.log == "function") {
+                    douyin.log(`${currentAction.type} key:${keyItem.key} code:${keyItem.code} 【Error】${e}`);
+                }
             }
         }
     }
 
-    douyin.gameLoop = (ts) => {
+    douyin.mainLoop = (ts) => {
         if (douyin.stoped) {
+            douyin.items.forEach(keyItem => delete keyItem._actions);
             return;
         }
         douyin.items.forEach(keyItem => douyin.checkAction(keyItem, ts));
-        requestAnimationFrame(douyin.gameLoop);
+        requestAnimationFrame(douyin.mainLoop);
     }
 
     //# 间断性点按 ArrowDown
@@ -85,8 +82,17 @@
         repeatRate: 35,
         downMs: 200,
         downMSRand: 200,
-        upMS: 5100,
-        upMSRand: 23000
+        get upMS() {
+            const e = globalThis.document.querySelector("[data-e2e=slideList]  video[autoplay]").buffered;
+            if (e.length == 0) {
+                return 500 + Math.random() * 3000;
+            }
+            else {
+                const endTs = e.end(0);
+                return Math.min(2000 + Math.random() * 20000, endTs * 500 + Math.random() * endTs * 200);
+            }
+        },
+        upMSRand: 0
     };
 
     // 间断性长按z
@@ -102,6 +108,15 @@
         upMS: 30100,
         upMSRand: 10300
     };
+
+    douyin.start = () => {
+        douyin.stoped = false;
+        requestAnimationFrame(douyin.mainLoop);
+    }
+
+    douyin.stop = () => {
+        douyin.stoped = true;
+    }
 
     //控制台
     douyin.items = [douyin.keyArrowDown, douyin.keyZ]
