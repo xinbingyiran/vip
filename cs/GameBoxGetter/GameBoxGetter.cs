@@ -51,6 +51,11 @@ foreach (var cat in (int[])[527, 5])
     catch (Exception ex)
     {
         Console.WriteLine($"获取发现异常：{ex.Message}");
+        break;
+    }
+    if(items.Count() <= 0)
+    {
+        Console.WriteLine($"未获取到内容：{cat}");
     }
     var filename = Path.Combine(AppContext.BaseDirectory, $"GameBox_{cat}_All.json");
     File.WriteAllText(filename, JsonSerializer.Serialize(items.Values.OrderBy(s => s["post_title"].ToString()).ToArray(), JsonElementContext.Custom.Array));
