@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mulu", "mulu\mulu.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "muluInject", "muluInject\muluInject.csproj", "{C212E667-6383-44EB-BF9A-AE40D7F8F7F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameBox", "GameBox\GameBox.csproj", "{BA505D0F-CA4A-6EF8-C5D5-EC0D03233671}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{C212E667-6383-44EB-BF9A-AE40D7F8F7F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C212E667-6383-44EB-BF9A-AE40D7F8F7F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C212E667-6383-44EB-BF9A-AE40D7F8F7F4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BA505D0F-CA4A-6EF8-C5D5-EC0D03233671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BA505D0F-CA4A-6EF8-C5D5-EC0D03233671}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BA505D0F-CA4A-6EF8-C5D5-EC0D03233671}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BA505D0F-CA4A-6EF8-C5D5-EC0D03233671}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
