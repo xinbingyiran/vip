@@ -663,6 +663,15 @@
     "filesize": "26.49 G",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/3Ib6FbRJJVFz?pwd=4qir",
+        "openpath": "ELDEN RING NIGHTREIGN v1.03.1/Game/nightreign.exe",
+        "filesize": "26.49 G",
+        "link_ctime": "2025.12.19",
+        "filesize_z": 28447434194,
+        "filename": "ELDEN RING NIGHTREIGN v1.03.1",
+        "server": "t"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/UBveIfn2i2Uf?pwd=7lgl",
         "openpath": "ELDEN RING NIGHTREIGN The Forsaken Hollows v1.03/Game/nightreign.exe",
         "filesize": "26.49 G",
@@ -2993,6 +3002,25 @@
     ]
   },
   {
+    "id": 97666,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "尝试 睡眠2/Try 2 Sleep",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3238310/93ce5e0f3180735944c8c09af77edbf353676871/header.jpg?t=1765986568",
+    "filesize": "296.63 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/RVBviimMFj2m?pwd=3fy8",
+        "openpath": "Try 2 Sleep/Try2Sleep.exe",
+        "filesize": "296.63 M",
+        "link_ctime": "2025.12.28",
+        "filesize_z": 311041967,
+        "filename": "Try 2 Sleep",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 61167,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -3045,6 +3073,25 @@
         "link_ctime": "2025.10.28",
         "filesize_z": 299786122,
         "filename": "Super Fantasy Kingdom",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 97224,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "超级浣熊羊/Ultimate Sheep Raccoon",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2923350/56a010e4b8d6afc5be654578ff017bbf5fc7f01d/header.jpg?t=1766511537",
+    "filesize": "847.45 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/67jyymbqE3ai?pwd=fpb2",
+        "openpath": "Ultimate Sheep Raccoon v1.229/UltimateSheepRaccoon.exe",
+        "filesize": "847.45 M",
+        "link_ctime": "2025.12.24",
+        "filesize_z": 888616747,
+        "filename": "Ultimate Sheep Raccoon v1.229",
         "server": "t"
       }
     ]
@@ -7050,6 +7097,25 @@
     ]
   },
   {
+    "id": 97126,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "恶棍英雄/Fury Unleashed",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/465200/header.jpg?t=1748606260",
+    "filesize": "955.42 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qINZBbU3iIzy?pwd=xee8",
+        "openpath": "Fury Unleashed/Fury Unleashed.exe",
+        "filesize": "955.42 M",
+        "link_ctime": "2025.12.22",
+        "filesize_z": 1001825891,
+        "filename": "Fury Unleashed",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 18428,
     "category_parent": 5,
     "categories": "恐怖惊悚",
@@ -7188,8 +7254,17 @@
     "categories": "角色扮演",
     "post_title": "恶意不息/No Rest for the Wicked",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1371980/header.jpg?t=1721764063",
-    "filesize": "19.29 G",
+    "filesize": "12.69 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/aINRr2eqUbmi?pwd=5wok",
+        "openpath": "NoRestForTheWicked v24353/NoRestForTheWicked.exe",
+        "filesize": "12.69 G",
+        "link_ctime": "2025.12.24",
+        "filesize_z": 13630572262,
+        "filename": "NoRestForTheWicked v24353",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/YJfABbAvEbem?pwd=k75j",
         "openpath": "NoRestForTheWicked v24313/NoRestForTheWicked.exe",
@@ -8605,6 +8680,25 @@
     ]
   },
   {
+    "id": 97071,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "符文工厂3：豪华版/Rune Factory 3 Special",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2243710/header.jpg?t=1749767203",
+    "filesize": "2.61 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/vIj6BrfY3QVz?pwd=uj9d",
+        "openpath": "Rune Factory 3 Special v1.0.4/Rune Factory 3 Special.exe",
+        "filesize": "2.61 G",
+        "link_ctime": "2025.12.21",
+        "filesize_z": 2799396026,
+        "filename": "Rune Factory 3 Special v1.0.4",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 76735,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -8619,6 +8713,25 @@
         "link_ctime": "2025.06.07",
         "filesize_z": 13490857366,
         "filename": "Rune Factory Guardians of Azuma v1.0.3",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 96934,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "符文工房5/Rune Factory 5",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1702330/header.jpg?t=1738960230",
+    "filesize": "7.86 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fmyAJ3euUnEb?pwd=5lpl",
+        "openpath": "Rune.Factory.5.Build.20333604/Rune Factory 5.exe",
+        "filesize": "7.86 G",
+        "link_ctime": "2025.12.21",
+        "filesize_z": 8440315914,
+        "filename": "Rune.Factory.5.Build.20333604",
         "server": "t"
       }
     ]
@@ -10120,6 +10233,15 @@
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1903340/b3cb63bf5aa3ffd7790310e4361050c368569314/header_schinese.jpg?t=1745503165",
     "filesize": "42.96 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Vry2uaZJvqie?pwd=2b6j",
+        "openpath": "Expedition 33 v1.5.1/Sandfall/Binaries/Win64/SandFall-Win64-Shipping.exe",
+        "filesize": "42.96 G",
+        "link_ctime": "2025.12.20",
+        "filesize_z": 46131938705,
+        "filename": "Expedition 33 v1.5.1",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/6NnQVrFRNvY3?pwd=dzf6",
         "openpath": "Expedition 33 v61339/Sandfall/Binaries/Win64/SandFall-Win64-Shipping.exe",
@@ -12151,6 +12273,15 @@
     "filesize": "24.44 G",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/vaUBbuQfMzQr?pwd=3h3m",
+        "openpath": "Palworld v0.6.9.82911/Palworld.exe",
+        "filesize": "24.44 G",
+        "link_ctime": "2025.12.17",
+        "filesize_z": 26238532476,
+        "filename": "Palworld v0.6.9.82911",
+        "server": "t"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/RNzMRbym263q?pwd=2pxi",
         "openpath": "Palworld v0.6.9/Palworld.exe",
         "filesize": "24.44 G",
@@ -12741,6 +12872,25 @@
         "link_ctime": "2024.11.19",
         "filesize_z": 21703024054,
         "filename": "Wasteland 3 v1.6.1.307772",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 96978,
+    "category_parent": 5,
+    "categories": "枪战射击",
+    "post_title": "荒原先驱/PIONER",
+    "wp_get_attachment_image_src": "未找到匹配的URL",
+    "filesize": "81.99 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/aI3MB3VzQfuu?pwd=axa8",
+        "openpath": "PIONER/WindowsNoEditor/Pioner.exe",
+        "filesize": "81.99 G",
+        "link_ctime": "2025.12.21",
+        "filesize_z": 88039523727,
+        "filename": "PIONER",
         "server": "t"
       }
     ]
@@ -13681,8 +13831,17 @@
     "categories": "动作冒险",
     "post_title": "机甲战魔：神话之裔 – 数字豪华典藏版/Daemon X Machina Titanic Scion Super Digital Deluxe Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1342490/dc5fd7e61c483622ee093b53b1a0928e4ea90996/header.jpg?t=1757095114",
-    "filesize": "37.26 G",
+    "filesize": "40.19 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JbAF7zmqQbym?pwd=3bqf",
+        "openpath": "Daemon X Machina Titanic Scion v1.2.2/Game.exe",
+        "filesize": "40.19 G",
+        "link_ctime": "2025.12.28",
+        "filesize_z": 43157460440,
+        "filename": "Daemon X Machina Titanic Scion v1.2.2",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/Bn2IZzbUJVjm?pwd=l1ns",
         "openpath": "Daemon X Machina Titanic Scion v1.0.3/Game.exe",
@@ -14315,8 +14474,17 @@
     "categories": "策略战棋",
     "post_title": "寂静之歌/Songs Of Silence",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2195410/header_schinese.jpg?t=1731534051",
-    "filesize": "7.35 G",
+    "filesize": "8.64 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/AfEZFvvqyaYf?pwd=ss7y",
+        "openpath": "Songs of Silence Celestial Church/SongsOfSilence.exe",
+        "filesize": "8.64 G",
+        "link_ctime": "2025.12.17",
+        "filesize_z": 9276352123,
+        "filename": "Songs of Silence Celestial Church",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/ziAvE3I7zEJn?pwd=xfo2",
         "openpath": "Songs Of Silence v1.0.0/SongsOfSilence.exe",
@@ -14742,6 +14910,25 @@
         "link_ctime": "2025.09.05",
         "filesize_z": 8904939208,
         "filename": "Zombie Army Trilogy v1.8.20.01",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 96584,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "僵尸餐厅模拟器/Zombie Diner Simulator",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4048550/a0f55e2cc871fcb23598bb10ea2720dfc68cf3d9/header.jpg?t=1765645209",
+    "filesize": "6.36 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/M7NnUbZBnqay?pwd=d3yh",
+        "openpath": "Zombie Diner Simulator v0.65/ZombieDinerSimulator.exe",
+        "filesize": "6.36 G",
+        "link_ctime": "2025.12.17",
+        "filesize_z": 6827926566,
+        "filename": "Zombie Diner Simulator v0.65",
         "server": "t"
       }
     ]
@@ -16304,6 +16491,25 @@
     ]
   },
   {
+    "id": 96900,
+    "category_parent": 5,
+    "categories": "枪战射击",
+    "post_title": "军事冲突：越南/Military Conflict Vietnam",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1012110/8f27b3db11a8877b9ca04945989e5e72aceb4720/header.jpg?t=1761588793",
+    "filesize": "13.81 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/AvINRjvIbMvm?pwd=yk7d",
+        "openpath": "Military Conflict Vietnam/mcv_x64.exe",
+        "filesize": "13.81 G",
+        "link_ctime": "2025.12.21",
+        "filesize_z": 14824751142,
+        "filename": "Military Conflict Vietnam",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 21814,
     "category_parent": 5,
     "categories": "模拟经营",
@@ -17744,6 +17950,25 @@
     ]
   },
   {
+    "id": 97066,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "莱萨里亚：英雄之歌/Lessaria Fantasy Kingdom Sim",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2461280/e901e2db6f85e05be7b4b8f3d29c50f7801edda4/header_schinese.jpg?t=1764066584",
+    "filesize": "4.59 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/yiYj63IbmEVb?pwd=uag5",
+        "openpath": "Lessaria/Lessaria.exe",
+        "filesize": "4.59 G",
+        "link_ctime": "1970.01.01",
+        "filesize_z": 4927496431,
+        "filename": "Lessaria",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 93263,
     "category_parent": 5,
     "categories": "角色扮演",
@@ -17891,6 +18116,25 @@
         "link_ctime": "2025.10.13",
         "filesize_z": 832554365,
         "filename": "Katanaut",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 97454,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "浪漫满地/Cozyrama",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3133020/adfbf514549768d8aff7772b3bb4dc930a6c198b/header_schinese.jpg?t=1765878706",
+    "filesize": "1.75 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/iq6zAzIJ7zUb?pwd=b5ih",
+        "openpath": "Cozyrama v1.0.2/Cozyrama.exe",
+        "filesize": "1.75 G",
+        "link_ctime": "2025.12.26",
+        "filesize_z": 1884313646,
+        "filename": "Cozyrama v1.0.2",
         "server": "t"
       }
     ]
@@ -20419,6 +20663,25 @@
     ]
   },
   {
+    "id": 97310,
+    "category_parent": 5,
+    "categories": "恐怖惊悚",
+    "post_title": "迷宫探险/Labyrinthine",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1302240/header.jpg?t=1764093777",
+    "filesize": "10.17 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/EnUv2iB7Rraq?pwd=ohe6",
+        "openpath": "Labyrinthine/Labyrinthine.exe",
+        "filesize": "10.17 G",
+        "link_ctime": "2025.12.26",
+        "filesize_z": 10924672447,
+        "filename": "Labyrinthine",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 96036,
     "category_parent": 5,
     "categories": "角色扮演",
@@ -22619,6 +22882,25 @@
     ]
   },
   {
+    "id": 96555,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "女神异闻录5 皇家版/Persona 5 Royal",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1687950/header_schinese.jpg?t=1763530018",
+    "filesize": "41.05 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ZFBbYfV77jaq?pwd=jb89",
+        "openpath": "Persona 5 Royal/P5R.exe",
+        "filesize": "41.05 G",
+        "link_ctime": "2025.12.17",
+        "filesize_z": 44080776146,
+        "filename": "Persona 5 Royal",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 32224,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -23230,6 +23512,25 @@
         "link_ctime": "2025.08.29",
         "filesize_z": 5076408743,
         "filename": "Pizza Bandit v0.8.1653",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 96440,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "皮皮蝠与诅咒悠悠球/Pipistrello and the Cursed Yoyo",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2870350/header.jpg?t=1765823561",
+    "filesize": "2.33 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Y7bYrmYZ7F7b?pwd=9t0x",
+        "openpath": "Pipistrello and the Cursed Yoyo v2.0/Pipistrello.exe",
+        "filesize": "2.33 G",
+        "link_ctime": "2025.12.16",
+        "filesize_z": 2505631674,
+        "filename": "Pipistrello and the Cursed Yoyo v2.0",
         "server": "t"
       }
     ]
@@ -25766,6 +26067,25 @@
     ]
   },
   {
+    "id": 96983,
+    "category_parent": 5,
+    "categories": "恐怖惊悚",
+    "post_title": "日本事故物件监视协会2/Japan Stigmatized Property",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4193270/9c7d0b860d5a7879359da52a9694875e1080c90e/header.jpg?t=1766139092",
+    "filesize": "809.96 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/YzuMneNJfYvq?pwd=jyc2",
+        "openpath": "JSP2_Loxarc v1.01/Steam/jsp2.exe",
+        "filesize": "809.96 M",
+        "link_ctime": "1970.01.01",
+        "filesize_z": 849309506,
+        "filename": "JSP2_Loxarc v1.01",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 33916,
     "category_parent": 5,
     "categories": "策略战棋",
@@ -27513,6 +27833,25 @@
     ]
   },
   {
+    "id": 97336,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "神命：支持者版/Fata Deum The God Sim",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1330360/2043e1bf613884585bdff2554da6cfdc87091432/header.jpg?t=1759080655",
+    "filesize": "9.61 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NFrmQvnyYrui?pwd=so1h",
+        "openpath": "Fata Deum The God Sim/Fata Deum.exe",
+        "filesize": "9.61 G",
+        "link_ctime": "2025.12.26",
+        "filesize_z": 10323871133,
+        "filename": "Fata Deum The God Sim",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 81727,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -27698,6 +28037,44 @@
         "link_ctime": "2025.11.28",
         "filesize_z": 6156723008,
         "filename": "BIO GODDESS v1.6.7",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 97341,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "生化奇兵：无限 – 完整版/Bioshock Infinite",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/8870/header.jpg?t=1728673518",
+    "filesize": "38.51 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7jqQR3amueam?pwd=2jgt",
+        "openpath": "BioShock Infinite/Binaries/Win32/BioShockInfinite.exe",
+        "filesize": "38.51 G",
+        "link_ctime": "2025.12.26",
+        "filesize_z": 41349659599,
+        "filename": "BioShock Infinite",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 97376,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "生化奇兵2：重制版/BioShock 2 Remastered",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/409720/header.jpg?t=1740443705",
+    "filesize": "12.81 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Z32yiqJvquua?pwd=5urb",
+        "openpath": "BioShock 2 Remastered/Build/Final/Bioshock2HD.exe",
+        "filesize": "12.81 G",
+        "link_ctime": "2025.12.26",
+        "filesize_z": 13753366233,
+        "filename": "BioShock 2 Remastered",
         "server": "t"
       }
     ]
@@ -28823,6 +29200,25 @@
     ]
   },
   {
+    "id": 97305,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "世界光环/Aura of Worlds",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/841600/header.jpg?t=1755201467",
+    "filesize": "512.93 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2maAvmnIvaEz?pwd=mm3o",
+        "openpath": "Aura of Worlds/AuraOfWorlds_MonoGame.exe",
+        "filesize": "512.93 M",
+        "link_ctime": "2025.12.26",
+        "filesize_z": 537848484,
+        "filename": "Aura of Worlds",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 41329,
     "category_parent": 5,
     "categories": "体育竞速",
@@ -29572,6 +29968,25 @@
     ]
   },
   {
+    "id": 97564,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "水上乐园模拟器/Waterpark Simulator",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3293260/66455868359ad7e98183852b63539c58dabd1398/header_alt_assets_3.jpg?t=1766080570",
+    "filesize": "3.99 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/jUV7V3aayaAz?pwd=2ohk",
+        "openpath": "WaterPark Simulator v0.3.27/WaterparkSimulator.exe",
+        "filesize": "3.99 G",
+        "link_ctime": "2025.12.28",
+        "filesize_z": 4281117366,
+        "filename": "WaterPark Simulator v0.3.27",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 61995,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -30142,6 +30557,25 @@
     ]
   },
   {
+    "id": 97647,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "四叶草深渊/CLOVERPIT",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3314790/7c06cca026d4904d8850e7cf9695d4ea1a3ee65d/header_alt_assets_0.jpg?t=1765994498",
+    "filesize": "113.41 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/6VBJRbMjqaAv?pwd=qli8",
+        "openpath": "CloverPit v1.3/CloverPit.exe",
+        "filesize": "113.41 M",
+        "link_ctime": "2025.12.28",
+        "filesize_z": 118918542,
+        "filename": "CloverPit v1.3",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 66372,
     "category_parent": 5,
     "categories": "休闲益智",
@@ -30445,6 +30879,25 @@
     ]
   },
   {
+    "id": 97718,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "索尼克缤纷色彩：终极版/Sonic Colors Ultimate",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2055290/header_tchinese.jpg?t=1762761448",
+    "filesize": "16.67 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7nMNzyrYNvYf?pwd=1ni9",
+        "openpath": "Sonic Colors Ultimate/exec/SonicColorsUltimate.exe",
+        "filesize": "16.67 G",
+        "link_ctime": "2025.12.28",
+        "filesize_z": 17896668584,
+        "filename": "Sonic Colors Ultimate",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 70795,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -30611,6 +31064,25 @@
         "link_ctime": "2024.10.28",
         "filesize_z": 21888750121,
         "filename": "Space Engineers v1.204.017",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 96434,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "太空工程师2/Space Engineers 2",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1133870/f5fb2e294898df4d3bf28b195f277d3df3511792/header.jpg?t=1764615043",
+    "filesize": "33.67 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2YbEjeyy2Ir2?pwd=w6da",
+        "openpath": "Space Engineers 2/Game2/SpaceEngineers2.exe",
+        "filesize": "33.67 G",
+        "link_ctime": "2025.12.16",
+        "filesize_z": 36150763968,
+        "filename": "Space Engineers 2",
         "server": "t"
       }
     ]
@@ -33974,6 +34446,25 @@
     ]
   },
   {
+    "id": 96444,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "雾都鬼影/Ghost Town",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2496180/header.jpg?t=1764089384",
+    "filesize": "14.47 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/nERVfu7vaAba?pwd=zvw9",
+        "openpath": "Ghost Town/GhostTown.exe",
+        "filesize": "14.47 G",
+        "link_ctime": "2025.12.16",
+        "filesize_z": 15534102905,
+        "filename": "Ghost Town",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 48414,
     "category_parent": 5,
     "categories": "休闲益智",
@@ -35174,6 +35665,25 @@
     ]
   },
   {
+    "id": 96905,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "心之城堡：重述/Castle of Heart Retold",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3386900/7d5eb1187d89fc04a8fa452488fc23c2b45ca1a9/header.jpg?t=1760967824",
+    "filesize": "3.74 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FNn22aaIvUbq?pwd=4w5e",
+        "openpath": "Castle of Heart Retold/Castle of Heart Retold.exe",
+        "filesize": "3.74 G",
+        "link_ctime": "2025.12.21",
+        "filesize_z": 4018404467,
+        "filename": "Castle of Heart Retold",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 15772,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -36255,6 +36765,25 @@
     ]
   },
   {
+    "id": 96579,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "血姬：双生/Vampiress Eternal Duet",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3660110/2b2296848975bfb3ce4bfbab983bfe85598eee8b/header_schinese.jpg?t=1765884745",
+    "filesize": "17.19 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Ib6FFjbIz6Nj?pwd=gdz7",
+        "openpath": "Vampiress Eternal Duet/blood.exe",
+        "filesize": "17.19 G",
+        "link_ctime": "2025.12.17",
+        "filesize_z": 18454054445,
+        "filename": "Vampiress Eternal Duet",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 78472,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -36938,6 +37467,25 @@
     ]
   },
   {
+    "id": 96683,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "夜勤人2：无尽宝库/Moonlighter 2: The Endless Vault",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2350790/header.jpg?t=1765295930",
+    "filesize": "3.86 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/E3iEBfNrE7be?pwd=fqz8",
+        "openpath": "Moonlighter 2 The Endless Vault v0.17.8.0/Moonlighter 2 The Endless Vault.exe",
+        "filesize": "3.86 G",
+        "link_ctime": "2025.12.18",
+        "filesize_z": 4143420116,
+        "filename": "Moonlighter 2 The Endless Vault v0.17.8.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 31206,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -37075,6 +37623,25 @@
         "link_ctime": "2024.05.01",
         "filesize_z": 3037083284,
         "filename": "One more Gate",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 97529,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "一起划船/Boat Together",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3543890/7fe06ca038f84d0df01870ce32dbcbe14002a281/header.jpg?t=1766080914",
+    "filesize": "1.05 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/j2qMfqNFnIBv?pwd=gid9",
+        "openpath": "Boat Together v1.2.2/BoatProject.exe",
+        "filesize": "1.05 G",
+        "link_ctime": "2025.12.28",
+        "filesize_z": 1124620110,
+        "filename": "Boat Together v1.2.2",
         "server": "t"
       }
     ]
@@ -37303,6 +37870,25 @@
         "link_ctime": "2025.11.13",
         "filesize_z": 5570799161,
         "filename": "JIM",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 97616,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "医疗无法人 大薮死人诊所/Oyabu Clinic Deathcare Corporation",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2227450/header_schinese.jpg?t=1729133282",
+    "filesize": "273.42 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/q2ya6fZFzY3i?pwd=p73q",
+        "openpath": "ooyabu v2.0/Game.exe",
+        "filesize": "273.42 M",
+        "link_ctime": "2025.12.28",
+        "filesize_z": 286702838,
+        "filename": "ooyabu v2.0",
         "server": "t"
       }
     ]
@@ -39729,6 +40315,25 @@
     ]
   },
   {
+    "id": 96449,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "云之国/Cloudheim",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2070270/52db066ec87e84ac0c37e20b028d6b24c57e368e/header_schinese.jpg?t=1765479045",
+    "filesize": "14.77 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NJNbuyYJVf63?pwd=odv7",
+        "openpath": "Cloudheim v88959/CloudheimSteam.exe",
+        "filesize": "14.77 G",
+        "link_ctime": "2025.12.16",
+        "filesize_z": 15857673135,
+        "filename": "Cloudheim v88959",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 72110,
     "category_parent": 5,
     "categories": "模拟经营",
@@ -40042,6 +40647,25 @@
     ]
   },
   {
+    "id": 97231,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "战锤 40K：审判者 – 殉道者 终极版/Warhammer 40,000: Inquisitor - Martyr",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/527430/header.jpg?t=1731442765",
+    "filesize": "42.4 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FB3uaiiimmYn?pwd=2lfc",
+        "openpath": "Warhammer 40000 Inquisitor Martyr/启动游戏.bat",
+        "filesize": "42.4 G",
+        "link_ctime": "2025.12.24",
+        "filesize_z": 45524985941,
+        "filename": "Warhammer 40000 Inquisitor Martyr",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 72312,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -40264,6 +40888,25 @@
         "link_ctime": "2024.04.07",
         "filesize_z": 5482242820,
         "filename": "War.Hospital.v20240403",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 96988,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "战斗天幕：冲突状态/Battlefall State of Conflict",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1031730/header.jpg?t=1756362323",
+    "filesize": "819.49 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/yAJrAnyM3Ivu?pwd=1rq8",
+        "openpath": "Battlefall State of Conflict/Battlefall_State_of_Conflict.exe",
+        "filesize": "819.49 M",
+        "link_ctime": "2025.12.21",
+        "filesize_z": 859298593,
+        "filename": "Battlefall State of Conflict",
         "server": "t"
       }
     ]
@@ -43242,6 +43885,25 @@
         "link_ctime": "2024.04.17",
         "filesize_z": 48590758085,
         "filename": "FIFA 23 v2.2",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 96768,
+    "category_parent": 5,
+    "categories": "体育竞速",
+    "post_title": "F1 2021",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1134570/header.jpg?t=1683125705",
+    "filesize": "71.03 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/AVV3ArFfUf22?pwd=eec6",
+        "openpath": "F1 2021/F1_2021_dx12.exe",
+        "filesize": "71.03 G",
+        "link_ctime": "2025.12.19",
+        "filesize_z": 76263694095,
+        "filename": "F1 2021",
         "server": "t"
       }
     ]
