@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>抽奖系统</title>
+<style>
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.section-title {
+  margin-top: 0;
+  color: #3498db;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+}
+
+.reset{
+  grid-column: span 2;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input, button, select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button.secondary {
+  background-color: #95a5a6;
+}
+
+button.secondary:hover {
+  background-color: #7f8c8d;
+}
+
+.list {
+  max-height: 250px;
+  overflow-y: auto;
+  margin-top: 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background: #fafafa;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: move;
+  transition: background-color 0.2s;
+}
+
+.list-item:hover {
+  background-color: #f8f9fa;
+}
+
+.drag-over {
+  background-color: #e1f5fe;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.delete-btn, .edit-btn {
+  color: #e74c3c;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: auto;
+  padding: 5px 10px;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.edit-btn {
+  color: #3498db;
+}
+
+.rule-group {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background: #f8f9fa;
+}
+
+.rule-group input {
+  width: auto;
+  margin-right: 10px;
+}
+
+.award-title {
+  font-weight: bold;
+  color: #3498db;
+  margin-top: 10px;
+  padding-top: 5px;
+  border-bottom: 1px dashed #eee;
+}
+
+.winner-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.winner-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.winner-list li:last-child {
+  border-bottom: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  width: 450px;
+  max-width: 90%;
+  margin: 100px auto;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  color: #7f8c8d;
+}
+
+.drag-handle {
+  cursor: move;
+  padding: 0 10px;
+  color: #95a5a6;
+}
+
+.actions-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.actions-row button {
+  flex: 1;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- 奖项管理 -->
+  <div class="section">
+    <h2 class="section-title">奖项管理</h2>
+    <button id="add-award">添加奖项</button>
+    <div class="list" id="awards-list">
+      <div class="empty-message">暂无奖项，请添加</div>
+    </div>
+  </div>
+  
+  <!-- 参与者管理 -->
+  <div class="section">
+    <h2 class="section-title">参与者管理</h2>
+    <button id="add-participant">添加参与者</button>
+    <div class="list" id="participants-list">
+      <div class="empty-message">暂无参与者，请添加</div>
+    </div>
+  </div>
+  
+  <!-- 规则设置 -->
+  <div class="section">
+    <h2 class="section-title">规则设置</h2>
+    <div class="rule-group">
+      <input type="checkbox" id="rule-multiple-awards">
+      <label for="rule-multiple-awards">参与者可重复中不同奖项</label>
+    </div>
+    <div class="rule-group">
+      <input type="checkbox" id="rule-same-award">
+      <label for="rule-same-award">参与者可重复中相同奖项</label>
+    </div>
+    
+    <div class="actions-row">
+      <button id="draw-button">开始抽奖</button>
+    </div>
+  </div>
+  
+  <!-- 结果展示 -->
+  <div class="section">
+    <h2 class="section-title">抽奖结果</h2>
+    <ul class="list" id="results-container">
+      <li class="empty-message">暂无抽奖结果，请点击"开始抽奖"按钮</li>
+    </ul>
+  </div>
+  <div class="section reset">
+      <button id="reset-button" class="secondary">重置</button>
+  <div>
+</div>  
+
+<!-- 管理模态框 -->
+<div class="modal" id="edit-modal">
+  <div class="modal-content">
+    <span class="close-btn">×</span>
+    <h3 id="modal-title">编辑</h3>
+    <div class="form-group">
+      <label id="name-label">名称</label>
+      <input type="text" id="edit-name" placeholder="请输入名称">
+    </div>
+    <div class="form-group">
+      <label id="value-label">值</label>
+      <input type="number" id="edit-value" min="1" value="1">
+    </div>
+    <div style="display:flex">
+    <button id="save-btn">保存</button>
+    <button id="cancel-btn" class="secondary">取消</button>
+</div>
+  </div>
+</div>
+
+<script>
+// 数据模型
+const state = {
+  awards: [],
+  participants: [],
+  rules: {
+    multipleAwards: false,
+    sameAward: false
+  },
+  results: {}
+};
+
+// DOM元素
+const elements = {
+  awardsList: document.getElementById('awards-list'),
+  participantsList: document.getElementById('participants-list'),
+  addAwardBtn: document.getElementById('add-award'),
+  addParticipantBtn: document.getElementById('add-participant'),
+  drawButton: document.getElementById('draw-button'),
+  resetButton: document.getElementById('reset-button'),
+  resultsContainer: document.getElementById('results-container'),
+  ruleMultipleAwards: document.getElementById('rule-multiple-awards'),
+  ruleSameAward: document.getElementById('rule-same-award'),
+  editModal: document.getElementById('edit-modal'),
+  modalTitle: document.getElementById('modal-title'),
+  nameLabel: document.getElementById('name-label'),
+  valueLabel: document.getElementById('value-label'),
+  editName: document.getElementById('edit-name'),
+  editValue: document.getElementById('edit-value'),
+  saveBtn: document.getElementById('save-btn'),
+  cancelBtn: document.getElementById('cancel-btn'),
+  closeBtn: document.querySelector('.close-btn')
+};
+
+// 当前编辑状态
+let currentEdit = {
+  type: null, // 'award' 或 'participant'
+  index: -1
+};
+
+// 初始化
+function init() {
+  // 从localStorage加载数据
+  loadFromLocalStorage();
+  
+  // 渲染奖项列表
+  renderAwards();
+  
+  // 渲染参与者列表
+  renderParticipants();
+  
+  // 渲染结果
+  renderResults();
+  
+  // 绑定事件
+  elements.addAwardBtn.addEventListener('click', () => openEditModal('award'));
+  elements.addParticipantBtn.addEventListener('click', () => openEditModal('participant'));
+  elements.drawButton.addEventListener('click', draw);
+  elements.resetButton.addEventListener('click', resetSystem);
+  
+  // 规则变更监听
+  elements.ruleMultipleAwards.addEventListener('change', updateRules);
+  elements.ruleSameAward.addEventListener('change', updateRules);
+  
+  // 模态框事件
+  elements.saveBtn.addEventListener('click', saveEdit);
+  elements.cancelBtn.addEventListener('click', closeEditModal);
+  elements.closeBtn.addEventListener('click', closeEditModal);
+  
+  // 拖放事件
+  setupDragAndDrop();
+}
+
+// 从LocalStorage加载数据
+function loadFromLocalStorage() {
+  const savedData = localStorage.getItem('lotterySystem');
+  if (savedData) {
+    const parsedData = JSON.parse(savedData);
+    state.awards = parsedData.awards || [];
+    state.participants = parsedData.participants || [];
+    state.rules = parsedData.rules || { multipleAwards: false, sameAward: false };
+    state.results = parsedData.results || {};
+    
+    // 更新规则复选框
+    elements.ruleMultipleAwards.checked = state.rules.multipleAwards;
+    elements.ruleSameAward.checked = state.rules.sameAward;
+  }
+}
+
+// 保存到LocalStorage
+function saveToLocalStorage() {
+  localStorage.setItem('lotterySystem', JSON.stringify(state));
+}
+
+// 渲染奖项列表
+function renderAwards() {
+  elements.awardsList.innerHTML = '';
+  
+  if (state.awards.length === 0) {
+    elements.awardsList.innerHTML = '<div class="empty-message">暂无奖项，请添加</div>';
+    return;
+  }
+  
+  state.awards.forEach((award, index) => {
+    const item = document.createElement('div');
+    item.className = 'list-item';
+    item.draggable = true;
+    item.dataset.index = index;
+    item.innerHTML = `
+      <div>
+        <span class="drag-handle">≡</span>
+        <span>${award.name} (${award.quantity})</span>
+      </div>
+      <div>
+        <button class="edit-btn" data-index="${index}" data-type="award">编辑</button>
+        <button class="delete-btn" data-index="${index}" data-type="award">删除</button>
+      </div>
+    `;
+    elements.awardsList.appendChild(item);
+    
+    // 添加编辑和删除事件
+    item.querySelector('.edit-btn').addEventListener('click', (e) => {
+      const index = parseInt(e.target.dataset.index);
+      editItem('award', index);
+    });
+    
+    item.querySelector('.delete-btn').addEventListener('click', (e) => {
+      const index = parseInt(e.target.dataset.index);
+      deleteItem('award', index);
+    });
+  });
+}
+
+// 渲染参与者列表
+function renderParticipants() {
+  elements.participantsList.innerHTML = '';
+  
+  if (state.participants.length === 0) {
+    elements.participantsList.innerHTML = '<div class="empty-message">暂无参与者，请添加</div>';
+    return;
+  }
+  
+  state.participants.forEach((participant, index) => {
+    const item = document.createElement('div');
+    item.className = 'list-item';
+    item.draggable = true;
+    item.dataset.index = index;
+    item.innerHTML = `
+      <div>
+        <span class="drag-handle">≡</span>
+        <span>${participant.name} (权重: ${participant.weight})</span>
+      </div>
+      <div>
+        <button class="edit-btn" data-index="${index}" data-type="participant">编辑</button>
+        <button class="delete-btn" data-index="${index}" data-type="participant">删除</button>
+      </div>
+    `;
+    elements.participantsList.appendChild(item);
+    
+    // 添加编辑和删除事件
+    item.querySelector('.edit-btn').addEventListener('click', (e) => {
+      const index = parseInt(e.target.dataset.index);
+      editItem('participant', index);
+    });
+    
+    item.querySelector('.delete-btn').addEventListener('click', (e) => {
+      const index = parseInt(e.target.dataset.index);
+      deleteItem('participant', index);
+    });
+  });
+}
+
+// 打开编辑模态框
+function openEditModal(type, index = -1) {
+  currentEdit.type = type;
+  currentEdit.index = index;
+  
+  // 设置模态框标题和标签
+  if (type === 'award') {
+    elements.modalTitle.textContent = index >= 0 ? '编辑奖项' : '添加奖项';
+    elements.nameLabel.textContent = '奖项名称';
+    elements.valueLabel.textContent = '数量';
+    elements.editName.placeholder = '例如：一等奖';
+    elements.editValue.value = index >= 0 ? state.awards[index].quantity : 1;
+    elements.editName.value = index >= 0 ? state.awards[index].name : '';
+  } else {
+    elements.modalTitle.textContent = index >= 0 ? '编辑参与者' : '添加参与者';
+    elements.nameLabel.textContent = '参与者名称';
+    elements.valueLabel.textContent = '权重';
+    elements.editName.placeholder = '例如：张三';
+    elements.editValue.value = index >= 0 ? state.participants[index].weight : 1;
+    elements.editName.value = index >= 0 ? state.participants[index].name : '';
+  }
+  
+  elements.editModal.style.display = 'block';
+}
+
+// 关闭编辑模态框
+function closeEditModal() {
+  elements.editModal.style.display = 'none';
+  currentEdit.type = null;
+  currentEdit.index = -1;
+}
+
+// 保存编辑
+function saveEdit() {
+  const name = elements.editName.value.trim();
+  const value = parseInt(elements.editValue.value);
+  
+  if (!name) {
+    alert('名称不能为空');
+    return;
+  }
+  
+  if (isNaN(value) || value <= 0) {
+    alert('请输入有效的值');
+    return;
+  }
+  
+  if (currentEdit.type === 'award') {
+    if (currentEdit.index >= 0) {
+      // 更新奖项
+      state.awards[currentEdit.index] = { name, quantity: value };
+    } else {
+      // 添加奖项
+      state.awards.push({ name, quantity: value });
+    }
+    renderAwards();
+  } else {
+    if (currentEdit.index >= 0) {
+      // 更新参与者
+      state.participants[currentEdit.index] = { name, weight: value };
+    } else {
+      // 添加参与者
+      state.participants.push({ name, weight: value });
+    }
+    renderParticipants();
+  }
+  
+  saveToLocalStorage();
+  closeEditModal();
+}
+
+// 编辑项目
+function editItem(type, index) {
+  openEditModal(type, index);
+}
+
+// 删除项目
+function deleteItem(type, index) {
+  if (confirm('确定要删除此项吗？')) {
+    if (type === 'award') {
+      state.awards.splice(index, 1);
+      renderAwards();
+    } else {
+      state.participants.splice(index, 1);
+      renderParticipants();
+    }
+    saveToLocalStorage();
+  }
+}
+
+// 设置拖放功能
+function setupDragAndDrop() {
+  // 奖项列表拖放
+  setupListDragAndDrop(elements.awardsList, state.awards);
+  
+  // 参与者列表拖放
+  setupListDragAndDrop(elements.participantsList, state.participants);
+}
+
+// 为列表设置拖放功能
+function setupListDragAndDrop(listElement, dataArray) {
+  let dragStartIndex;
+  
+  // 拖拽开始
+  listElement.addEventListener('dragstart', (e) => {
+    if (e.target.classList.contains('list-item')) {
+      dragStartIndex = +e.target.dataset.index;
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/plain', dragStartIndex);
+      setTimeout(() => e.target.classList.add('drag-over'), 0);
+    }
+  });
+  
+  // 拖拽经过
+  listElement.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    const item = e.target.closest('.list-item');
+    if (item) {
+      const dragOverIndex = +item.dataset.index;
+      if (dragStartIndex !== dragOverIndex) {
+        listElement.querySelectorAll('.list-item').forEach(el => {
+          el.classList.remove('drag-over');
+        });
+        item.classList.add('drag-over');
+      }
+    }
+  });
+  
+  // 拖拽离开
+  listElement.addEventListener('dragleave', (e) => {
+    const item = e.target.closest('.list-item');
+    if (item) {
+      item.classList.remove('drag-over');
+    }
+  });
+  
+  // 放置
+  listElement.addEventListener('drop', (e) => {
+    e.preventDefault();
+    const dropTarget = e.target.closest('.list-item');
+    
+    if (dropTarget) {
+      const dropIndex = +dropTarget.dataset.index;
+      
+      if (dropIndex !== undefined && dragStartIndex !== dropIndex) {
+        // 移动数组元素
+        const item = dataArray[dragStartIndex];
+        dataArray.splice(dragStartIndex, 1);
+        dataArray.splice(dropIndex, 0, item);
+        
+        // 保存并重新渲染
+        saveToLocalStorage();
+        if (listElement === elements.awardsList) {
+          renderAwards();
+        } else {
+          renderParticipants();
+        }
+      }
+    }
+    
+    // 移除高亮
+    listElement.querySelectorAll('.list-item').forEach(el => {
+      el.classList.remove('drag-over');
+    });
+  });
+  
+  // 拖拽结束
+  listElement.addEventListener('dragend', (e) => {
+    listElement.querySelectorAll('.list-item').forEach(el => {
+      el.classList.remove('drag-over');
+    });
+  });
+}
+
+// 更新规则
+function updateRules() {
+  state.rules.multipleAwards = elements.ruleMultipleAwards.checked;
+  state.rules.sameAward = elements.ruleSameAward.checked;
+  saveToLocalStorage();
+}
+
+// 抽奖算法
+function draw() {
+  // 检查是否有奖项和参与者
+  if (state.awards.length === 0) {
+    alert('请添加至少一个奖项');
+    return;
+  }
+  
+  if (state.participants.length === 0) {
+    alert('请添加至少一个参与者');
+    return;
+  }
+  
+  // 初始化结果对象
+  state.results = {};
+  state.awards.forEach(award => {
+    state.results[award.name] = {};
+    state.participants.forEach(participant => {
+      state.results[award.name][participant.name] = 0;
+    });
+  });
+  
+  // 复制参与者列表用于抽奖过程
+  const participantsPool = [...state.participants];
+  
+  // 计算总权重
+  let totalWeight = participantsPool.reduce((sum, p) => sum + p.weight, 0);
+  
+  // 抽奖过程
+  state.awards.forEach(award => {
+    let remainingQuantity = award.quantity;
+    // 复制当前奖项的参与者池
+    let awardParticipantsPool = [...participantsPool];
+    let awardTotalWeight = totalWeight;
+    
+    while (remainingQuantity > 0) {
+      // 如果参与者池为空，则重新填充
+      if (awardParticipantsPool.length === 0) {
+        if (state.rules.sameAward) {
+          // 如果允许重复中相同奖，重新填充池
+          awardParticipantsPool = [...participantsPool];
+          awardTotalWeight = totalWeight;
+        } else {
+          // 否则结束当前奖项的抽奖
+          break;
+        }
+      }
+      
+      // 随机选择
+      const random = Math.random() * awardTotalWeight;
+      let currentWeight = 0;
+      let winnerIndex = -1;
+      
+      for (let i = 0; i < awardParticipantsPool.length; i++) {
+        currentWeight += awardParticipantsPool[i].weight;
+        if (random <= currentWeight) {
+          winnerIndex = i;
+          break;
+        }
+      }
+      
+      if (winnerIndex === -1) {
+        // 没有找到获胜者，结束当前奖项的抽奖
+        break;
+      }
+      
+      const winner = awardParticipantsPool[winnerIndex];
+      
+      // 更新结果
+      state.results[award.name][winner.name]++;
+      
+      // 减少剩余数量
+      remainingQuantity--;
+      
+      // 处理参与者池
+      if (!state.rules.sameAward) {
+        // 如果不允许重复中相同奖，从当前奖项的池中移除获胜者
+        awardTotalWeight -= awardParticipantsPool[winnerIndex].weight;
+        awardParticipantsPool.splice(winnerIndex, 1);
+      }
+      
+      if (!state.rules.multipleAwards) {
+        // 如果不允许重复中不同奖，从全局池中移除获胜者
+        const globalIndex = participantsPool.findIndex(p => p.name === winner.name);
+        if (globalIndex !== -1) {
+          totalWeight -= participantsPool[globalIndex].weight;
+          participantsPool.splice(globalIndex, 1);
+        }
+      }
+    }
+  });
+  
+  // 保存结果并渲染
+  saveToLocalStorage();
+  renderResults();
+}
+
+// 渲染结果 - 使用列表形式
+function renderResults() {
+  if (Object.keys(state.results).length === 0) {
+    elements.resultsContainer.innerHTML = '<li class="empty-message">暂无抽奖结果，请点击"开始抽奖"按钮</li>';
+    return;
+  }
+  
+  let html = '';
+  
+  // 对每个奖项生成结果
+  for (const awardName in state.results) {
+    html += `<div class="award-title">${awardName}</div>`;
+    
+    let hasWinners = false;
+    
+    // 对每个参与者显示中奖数量
+    for (const participantName in state.results[awardName]) {
+      const count = state.results[awardName][participantName];
+      if (count > 0) {
+        hasWinners = true;
+        html += ` <span style="margin:0 15px;display:inline-block"><B>${participantName}</B> - <U>${count}</U> 次</span>`;
+      }
+    }
+    
+    if (!hasWinners) {
+      html += '---该奖项无中奖者---';
+    }
+  }
+  
+  elements.resultsContainer.innerHTML = html;
+}
+
+// 重置系统
+function resetSystem() {
+  if (confirm('确定要重置所有数据和抽奖结果吗？')) {
+    state.awards = [];
+    state.participants = [];
+    state.results = {};
+    state.rules = { multipleAwards: false, sameAward: false };
+    
+    elements.ruleMultipleAwards.checked = false;
+    elements.ruleSameAward.checked = false;
+    
+    renderAwards();
+    renderParticipants();
+    renderResults();
+    
+    saveToLocalStorage();
+  }
+}
+
+// 初始化应用
+window.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
