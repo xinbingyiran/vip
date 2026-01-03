@@ -97,7 +97,7 @@
 
     // 间断性长按z
     douyin.keyZ = {
-        check: () => !!globalThis.document.querySelectorAll("main video[autoplay]"),
+        check: () => !!globalThis.document.querySelector("main video[autoplay]"),
         key: "z",
         code: "KeyZ",
         keyCode: 90,
