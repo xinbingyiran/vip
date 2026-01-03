@@ -74,7 +74,7 @@
 
     //# 间断性点按 ArrowDown
     douyin.keyArrowDown = {
-        check: () => !!globalThis.document.querySelector("[data-e2e=slideList]  video[autoplay]"),
+        check: () => !!globalThis.document.querySelector("#slidelist[data-active=true] video[autoplay]"),// || [data-e2e=feed-active-video]  || [data-e2e=live-slider]
         key: "ArrowDown",
         code: "ArrowDown",
         keyCode: 40,
@@ -83,7 +83,7 @@
         downMs: 200,
         downMSRand: 200,
         get upMS() {
-            const e = globalThis.document.querySelector("[data-e2e=slideList]  video[autoplay]").buffered;
+            const e = globalThis.document.querySelector("#slidelist[data-active=true] video[autoplay]").buffered; //  [data-e2e=live-slider]
             if (e.length == 0) {
                 return 500 + Math.random() * 3000;
             }
@@ -97,7 +97,7 @@
 
     // 间断性长按z
     douyin.keyZ = {
-        check: () => !!globalThis.document.querySelector("[data-e2e=living-container]  video[autoplay]"),
+        check: () => !!globalThis.document.querySelectorAll("main video[autoplay]"),
         key: "z",
         code: "KeyZ",
         keyCode: 90,
