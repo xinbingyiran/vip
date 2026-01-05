@@ -1486,6 +1486,25 @@
     ]
   },
   {
+    "id": 97814,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "百重幻境/Centum",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2625550/header.jpg?t=1764867801",
+    "filesize": "484.4 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7BzMFjquIjiu?pwd=a3lf",
+        "openpath": "Centum/Centum.exe",
+        "filesize": "484.4 M",
+        "link_ctime": "2025.12.30",
+        "filesize_z": 507925856,
+        "filename": "Centum",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 94686,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -1709,6 +1728,25 @@
         "link_ctime": "2024.11.28",
         "filesize_z": 3167680334,
         "filename": "Newspaper Day",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 98039,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "爆发：恐怖阴影/Outbreak Shades of Horror",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1932190/51b0fd345ec1292406082dad9a4776f5ba3fa9df/header.jpg?t=1766173397",
+    "filesize": "40.57 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/VzYF7zMzQRNz?pwd=3lwl",
+        "openpath": "Outbreak Shades of Horror/ShadesOfHorror.exe",
+        "filesize": "40.57 G",
+        "link_ctime": "2026.01.02",
+        "filesize_z": 43558044296,
+        "filename": "Outbreak Shades of Horror",
         "server": "t"
       }
     ]
@@ -2513,6 +2551,25 @@
         "link_ctime": "2024.05.14",
         "filesize_z": 5757835168,
         "filename": "De-Exit",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 98034,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "不可逆转/Irreversible",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3215560/bcf1c859b07ab62d052d1f250a83e6289e358a0a/header.jpg?t=1767159155",
+    "filesize": "11.93 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7fyMvuqayema?pwd=5rr7",
+        "openpath": "Irreversible/Irreversible.exe",
+        "filesize": "11.93 G",
+        "link_ctime": "2026.01.02",
+        "filesize_z": 12805453840,
+        "filename": "Irreversible",
         "server": "t"
       }
     ]
@@ -3367,8 +3424,17 @@
     "categories": "动作冒险",
     "post_title": "超英派遣中心：数字豪华版/Dispatch – Digital Deluxe Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3920280/d2fca9b5eee6e91426dd834d861a3aa775dc90e1/header.jpg?t=1761141678",
-    "filesize": "9.93 G",
+    "filesize": "16.74 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/J3MneunYjiQr?pwd=p8xg",
+        "openpath": "Dispatch v1.0.16598/Dispatch.exe",
+        "filesize": "16.74 G",
+        "link_ctime": "2026.01.02",
+        "filesize_z": 17973800672,
+        "filename": "Dispatch v1.0.16598",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/byyUJrRVB7Rf?pwd=8q3v",
         "openpath": "Dispatch v1.0.15487/Dispatch.exe",
@@ -3661,6 +3727,25 @@
         "link_ctime": "2024.05.10",
         "filesize_z": 1036264914,
         "filename": "Gift v1.00",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 97956,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "沉没引擎/Sunken Engine",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3604780/3dda0f4e480901b4758bf1b34acb8cfca09b9134/header.jpg?t=1764781784",
+    "filesize": "1.08 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/e22eQrQNRzUf?pwd=bx3q",
+        "openpath": "Sunken Engine/Sunken Engine.exe",
+        "filesize": "1.08 G",
+        "link_ctime": "2026.01.02",
+        "filesize_z": 1163475244,
+        "filename": "Sunken Engine",
         "server": "t"
       }
     ]
@@ -8898,6 +8983,25 @@
     ]
   },
   {
+    "id": 97952,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "感染摄像头/Infect Cam",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3168930/00df61aa7ba4fb0f5b4efe93a00e55c8417046f6/header.jpg?t=1764197691",
+    "filesize": "7.02 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/eUbIBnvu6Bri?pwd=lu4c",
+        "openpath": "Infect Cam/InfectCam.exe",
+        "filesize": "7.02 G",
+        "link_ctime": "2026.01.02",
+        "filesize_z": 7541904067,
+        "filename": "Infect Cam",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 82652,
     "category_parent": 5,
     "categories": "体育竞速",
@@ -9405,6 +9509,25 @@
         "link_ctime": "2024.04.27",
         "filesize_z": 1394534603,
         "filename": "Captain.of.Industry v0.6.3",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 97910,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "公会传说：遗落的世界/Guild Saga: Vanished Worlds",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2184350/header.jpg?t=1758646704",
+    "filesize": "716.2 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/VBNRzaEjEvay?pwd=c1gf",
+        "openpath": "Guild Saga v0.6.10/GuildSaga.exe",
+        "filesize": "716.2 M",
+        "link_ctime": "2025.12.31",
+        "filesize_z": 750985789,
+        "filename": "Guild Saga v0.6.10",
         "server": "t"
       }
     ]
@@ -14711,8 +14834,17 @@
     "categories": "模拟经营",
     "post_title": "监狱模拟器/Prison Simulator",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/842180/header.jpg?t=1747382846",
-    "filesize": "3.77 G",
+    "filesize": "3.97 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/iaqUjiQziEJj?pwd=ikw3",
+        "openpath": "Prison Simulator v1.4.3.29/Prison Simulator.exe",
+        "filesize": "3.97 G",
+        "link_ctime": "2026.01.03",
+        "filesize_z": 4260698959,
+        "filename": "Prison Simulator v1.4.3.29",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/r6NnmqneeMfu?pwd=2xno",
         "openpath": "Prison Simulator Power Wash v1.4.3.18/Prison Simulator.exe",
@@ -15613,8 +15745,17 @@
     "categories": "模拟经营",
     "post_title": "警察模拟器：巡警/Police Simulator: Patrol Officers",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/997010/header.jpg?t=1720904629",
-    "filesize": "4.06 G",
+    "filesize": "5.61 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/3mqYb2amYRBr?pwd=gwe4",
+        "openpath": "Police Simulator Patrol Officers v22.0.4/Boston/Binaries/Win64/Boston-Win64-Shipping.exe",
+        "filesize": "5.61 G",
+        "link_ctime": "2025.12.29",
+        "filesize_z": 6028010272,
+        "filename": "Police Simulator Patrol Officers v22.0.4",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/RbUbqyARvUVz?pwd=1hpm",
         "openpath": "Police.Simulator.Patrol.Officers.v13.2.6/Boston/Binaries/Win64/Boston-Win64-Shipping.exe",
@@ -18595,6 +18736,25 @@
     ]
   },
   {
+    "id": 97775,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "粒子之心/Particle Hearts",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2074740/e723f6ba0b401f95c6f2feeb3a800f99bd030cb6/header.jpg?t=1758917566",
+    "filesize": "2.14 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7zmINvUbeMJz?pwd=3xv8",
+        "openpath": "Particle Hearts/Particle Hearts.exe",
+        "filesize": "2.14 G",
+        "link_ctime": "2025.12.30",
+        "filesize_z": 2294559646,
+        "filename": "Particle Hearts",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 90720,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -19610,6 +19770,25 @@
     ]
   },
   {
+    "id": 98237,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "掠食：数字豪华版/Prey Digital Deluxe Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/480490/header.jpg?t=1750785331",
+    "filesize": "39.25 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/YjMRF3yAbyQf?pwd=sds0",
+        "openpath": "Prey v12742273/Binaries/Danielle/x64-GOG/Release/Prey.exe",
+        "filesize": "39.25 G",
+        "link_ctime": "2026.01.04",
+        "filesize_z": 42145028449,
+        "filename": "Prey v12742273",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 33088,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -20563,6 +20742,25 @@
         "link_ctime": "2025.10.27",
         "filesize_z": 30046762941,
         "filename": "Onirism",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 97893,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "梦现希洛璞/Dreamy Syrup",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3586280/f9af99e8392948cb61853e14cbed842d4c8d5608/header.jpg?t=1745420415",
+    "filesize": "410.67 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JRNbiaFz2am2?pwd=4i57",
+        "openpath": "Dreamy Syrup/DreamySyrup.exe",
+        "filesize": "410.67 M",
+        "link_ctime": "2025.12.31",
+        "filesize_z": 430619962,
+        "filename": "Dreamy Syrup",
         "server": "t"
       }
     ]
@@ -25251,6 +25449,25 @@
     ]
   },
   {
+    "id": 98123,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "去钓鱼了/GONE Fishing",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3645890/c252196c0f0978d1654a551080a347fe9150136e/header.jpg?t=1766024254",
+    "filesize": "4.7 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2E36Nv7baqqq?pwd=k9pm",
+        "openpath": "GONE Fishing v4.6.8/GONEfishing.exe",
+        "filesize": "4.7 G",
+        "link_ctime": "2026.01.03",
+        "filesize_z": 5043480509,
+        "filename": "GONE Fishing v4.6.8",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 52430,
     "category_parent": 5,
     "categories": "休闲益智",
@@ -26888,6 +27105,25 @@
         "link_ctime": "2024.03.23",
         "filesize_z": 75452825461,
         "filename": "Hitman.3.Deluxe.Edition v3.180.0.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 98320,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "杀手寓言/The Fable Manga Build Roguelike",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3187880/772d770b45a9ec2e8ea9eb12103b3e0a7bd8b78c/header.jpg?t=1763363287",
+    "filesize": "228.57 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/e63iimu22YZj?pwd=hk3y",
+        "openpath": "The Fable Manga Build Roguelike/FableMangaBuildRoguelike.exe",
+        "filesize": "228.57 M",
+        "link_ctime": "2026.01.05",
+        "filesize_z": 239673897,
+        "filename": "The Fable Manga Build Roguelike",
         "server": "t"
       }
     ]
@@ -30291,6 +30527,25 @@
     ]
   },
   {
+    "id": 97947,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "死亡空间：重制版/Dead Space",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1693980/header.jpg?t=1749125590",
+    "filesize": "35.23 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uARnEbU7N7Rz?pwd=bs9z",
+        "openpath": "Dead Space 2023/Dead Space.exe",
+        "filesize": "35.23 G",
+        "link_ctime": "2026.01.02",
+        "filesize_z": 37822831979,
+        "filename": "Dead Space 2023",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 42617,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -32654,6 +32909,25 @@
     ]
   },
   {
+    "id": 97876,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "王冠之心/HEART of CROWN Online",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1883000/0cec7020bd7363569637b60e327fee5ba47f32b4/header.jpg?t=1766565734",
+    "filesize": "536.71 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/iUryAjMZJR7r?pwd=jhm1",
+        "openpath": "HeartOfCrownOnline v2.0.6/HEARTofCROWN.exe",
+        "filesize": "536.71 M",
+        "link_ctime": "1970.01.01",
+        "filesize_z": 562782825,
+        "filename": "HeartOfCrownOnline v2.0.6",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 59725,
     "category_parent": 5,
     "categories": "策略战棋",
@@ -33834,6 +34108,25 @@
         "link_ctime": "2024.04.06",
         "filesize_z": 13029227021,
         "filename": "ENDLESS Space 2 Re Awakening v1.5.60",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 97871,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "无尽之潮/Tides of The Endless",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3015920/2dba5c5a0ba7202c10c20533f6ec4a4c6b366f36/header.jpg?t=1765652794",
+    "filesize": "3.77 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/RJBbQrBJ3mQj?pwd=zsf7",
+        "openpath": "Tides of The Endless v0.4.12.30/Tides of The Endless.exe",
+        "filesize": "3.77 G",
+        "link_ctime": "2025.12.31",
+        "filesize_z": 4045711129,
+        "filename": "Tides of The Endless v0.4.12.30",
         "server": "t"
       }
     ]
@@ -41339,6 +41632,25 @@
     ]
   },
   {
+    "id": 98264,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "长夜之后/After Long Night",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3351650/da8dc1ef5036618543ed2b67dcc00fcf2b76722a/header_schinese.jpg?t=1760193422",
+    "filesize": "658.49 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/vAfeQb6bemQf?pwd=jz2k",
+        "openpath": "After Long Night v12.31/AfterLongNight.exe",
+        "filesize": "658.49 M",
+        "link_ctime": "2026.01.04",
+        "filesize_z": 690476316,
+        "filename": "After Long Night v12.31",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 82312,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -44322,6 +44634,25 @@
         "link_ctime": "2024.04.15",
         "filesize_z": 96290842381,
         "filename": "NBA 2K21",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 98297,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "NES 3D模拟器/3dSen PC",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1147940/abe205c31d4a7863f2bea7a25912cc638ae71b67/header.jpg?t=1763997938",
+    "filesize": "354.32 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2yyqAnfmmMfe?pwd=rkl5",
+        "openpath": "3dSen PC v1.1.2/3dSen.exe",
+        "filesize": "354.32 M",
+        "link_ctime": "2026.01.05",
+        "filesize_z": 371531487,
+        "filename": "3dSen PC v1.1.2",
         "server": "t"
       }
     ]
