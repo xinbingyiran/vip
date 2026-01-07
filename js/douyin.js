@@ -65,16 +65,16 @@
 
     douyin.mainLoop = (ts) => {
         if (douyin.stoped) {
-            douyin.items.forEach(keyItem => delete keyItem._actions);
+            for (const keyItem of douyin.items) { delete keyItem._actions; }
             return;
         }
-        douyin.items.forEach(keyItem => douyin.checkAction(keyItem, ts));
+        for (const keyItem of douyin.items) { douyin.checkAction(keyItem, ts); }
         requestAnimationFrame(douyin.mainLoop);
     }
 
     //# 间断性点按 ArrowDown
     douyin.keyArrowDown = {
-        check: () => !!globalThis.document.querySelector("#slidelist[data-active=true] video[autoplay]"),// || [data-e2e=feed-active-video]  || [data-e2e=live-slider]
+        check: () => !globalThis.document.querySelector("main.live-main video[autoplay]") && !!globalThis.document.querySelector("#slidelist[data-active=true] video[autoplay]"),// || [data-e2e=feed-active-video]  || [data-e2e=live-slider]
         key: "ArrowDown",
         code: "ArrowDown",
         keyCode: 40,
@@ -97,7 +97,7 @@
 
     // 间断性长按z
     douyin.keyZ = {
-        check: () => !!globalThis.document.querySelector("main video[autoplay]"),
+        check: () => !!globalThis.document.querySelector("main.live-main video[autoplay]") && !globalThis.document.querySelector("#slidelist[data-active=true] video[autoplay]"),
         key: "z",
         code: "KeyZ",
         keyCode: 90,
