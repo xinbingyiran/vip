@@ -90,10 +90,11 @@
 [`蓝奏`](https://www.lanzoux.com/b05gumbe#9xum)
 [MAS](https://massgrave.dev/)
 [`github`](https://github.com/massgravel/Microsoft-Activation-Scripts)
-- [密钥检测网页](https://webact.185.hk/mskey.php)
+- [Microsoft 产品激活门户](https://visualsupport.microsoft.com/)
+[密钥检测网页](https://webact.185.hk/mskey.php)
 [密钥分享网页](https://webact.185.hk/sharedkey.php)
 [getcidweb](http://www.lhdlhd.com/getcidweb.php)
-[khoatoantin](http://khoatoantin.com/cidms) `用户名: trogiup24h 密码 : PHO`
+[khoatoantin](https://khoatoantin.com/pidms) [`2`](https://0xc004c008.com) [`3`](https://getconfirmationid.com/) [`4`](http://khoatoantin.com/cidms?n=trogiup24h&p=PHO)
 - [AndroidtvApk](https://www.lanzoux.com/b0f1944aj)
  [好软分享](https://haoruanfenxiang.pages.dev/List) [`github`](https://github.com/yoyodadada/haoruanfenxiang) [`githubPages`](https://yoyodadada.github.io/haoruanfenxiang/)
 - [『Viprt』软件更新合集](http://www.lanzoux.com/u/%E5%BD%AA%E7%85%8Cqq1846055318)

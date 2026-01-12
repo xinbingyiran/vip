@@ -5493,8 +5493,17 @@
     "categories": "策略战棋",
     "post_title": "地球不屈/Terra Invicta",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1176470/header_schinese.jpg?t=1727870966",
-    "filesize": "20.74 G",
+    "filesize": "17.97 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ZZnInaMjaeEf?pwd=ylw2",
+        "openpath": "Terra Invicta v1.0.28/TerraInvicta.exe",
+        "filesize": "17.97 G",
+        "link_ctime": "2026.01.10",
+        "filesize_z": 19290343656,
+        "filename": "Terra Invicta v1.0.28",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/jmiMfuFv2Uny?pwd=wlh4",
         "openpath": "Terra Invicta  v0.4.38/TerraInvicta.exe",
@@ -9348,8 +9357,17 @@
     "categories": "动作冒险",
     "post_title": "哥谭骑士/Gotham Knights",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1496790/header.jpg?t=1708021189",
-    "filesize": "40.37 G",
+    "filesize": "51.4 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qqmEniBBfeMj?pwd=3clp",
+        "openpath": "Gotham Knights Deluxe Edition v6.0.21.0/点击这里启动游戏.bat",
+        "filesize": "51.4 G",
+        "link_ctime": "2026.01.09",
+        "filesize_z": 55186599168,
+        "filename": "Gotham Knights Deluxe Edition v6.0.21.0",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/vYrEBbmEzqUf?pwd=npv9",
         "openpath": "Gotham Knights/Mercury/Binaries/Win64/GothamKnights-Win64-Shipping.exe",
@@ -10003,6 +10021,25 @@
         "link_ctime": "2024.10.27",
         "filesize_z": 1033448466,
         "filename": "skelethronetcoe v1.4.5.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 98620,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "钴芯/Cobalt Core",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2179850/header.jpg?t=1753747411",
+    "filesize": "1.67 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/rUVfi2MFjMja?pwd=5fvx",
+        "openpath": "Cobalt Core v1.2.6/CobaltCore.exe",
+        "filesize": "1.67 G",
+        "link_ctime": "2026.01.09",
+        "filesize_z": 1797090812,
+        "filename": "Cobalt Core v1.2.6",
         "server": "t"
       }
     ]
@@ -16708,6 +16745,25 @@
     ]
   },
   {
+    "id": 98425,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "卡里古拉：过量 – 数字限量版/The Caligula Effect: Overdose",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/889600/header.jpg?t=1732662201",
+    "filesize": "6.02 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JZbmAnvqq2Ev?pwd=790d",
+        "openpath": "The Caligula Effect Overdose/COD.exe",
+        "filesize": "6.02 G",
+        "link_ctime": "2026.01.07",
+        "filesize_z": 6465548651,
+        "filename": "The Caligula Effect Overdose",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 32025,
     "category_parent": 5,
     "categories": "角色扮演",
@@ -18636,6 +18692,25 @@
         "link_ctime": "2024.05.02",
         "filesize_z": 868087518,
         "filename": "Nocturnal",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 98545,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "离奇发现/Unusual Findings",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1605320/header.jpg?t=1729766657",
+    "filesize": "806.83 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/bMRRjuVRvYBf?pwd=vj2d",
+        "openpath": "Unusual Findings v1.0.29/Unusual Findings.exe",
+        "filesize": "806.83 M",
+        "link_ctime": "2026.01.08",
+        "filesize_z": 846022366,
+        "filename": "Unusual Findings v1.0.29",
         "server": "t"
       }
     ]
@@ -22350,6 +22425,25 @@
     ]
   },
   {
+    "id": 98698,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "那由多之轨迹：改/Nayuta No Kiseki Kai",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1732390/header_tchinese.jpg?t=1701195632",
+    "filesize": "4.34 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/vYBnmm7vINNv?pwd=z8vo",
+        "openpath": "NAYUTA NO KISEKI  KAI/nysD11_x64.exe",
+        "filesize": "4.34 G",
+        "link_ctime": "2026.01.09",
+        "filesize_z": 4662493478,
+        "filename": "NAYUTA NO KISEKI  KAI",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 93178,
     "category_parent": 5,
     "categories": "体育竞速",
@@ -23729,6 +23823,25 @@
         "link_ctime": "2025.12.16",
         "filesize_z": 2505631674,
         "filename": "Pipistrello and the Cursed Yoyo v2.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 98501,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "啤酒修道院/Ale Abbey - Monastery Brewery Tycoon",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2789460/3e6d4096982ceead0b20086f59a7425677b0116f/header.jpg?t=1758121887",
+    "filesize": "230.99 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ZFZnAbjA3Ebe?pwd=vy6u",
+        "openpath": "Ale Abbey v1.1.20251202/AleAbbey.exe",
+        "filesize": "230.99 M",
+        "link_ctime": "2026.01.08",
+        "filesize_z": 242212994,
+        "filename": "Ale Abbey v1.1.20251202",
         "server": "t"
       }
     ]
@@ -27228,6 +27341,25 @@
         "link_ctime": "2024.09.28",
         "filesize_z": 82623479,
         "filename": "Shawarma.Legend v1.0.10.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 98377,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "沙蟹/DuneCrawl",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1833200/37965d2ff6a862f5a0eee0ca046a7b92e90bde9c/header.jpg?t=1767636690",
+    "filesize": "767.23 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NZjE7vmmMBJj?pwd=ruk0",
+        "openpath": "DuneCrawl/DuneCrawl.exe",
+        "filesize": "767.23 M",
+        "link_ctime": "2026.01.07",
+        "filesize_z": 804502859,
+        "filename": "DuneCrawl",
         "server": "t"
       }
     ]
@@ -30774,6 +30906,25 @@
     ]
   },
   {
+    "id": 98349,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "死在水中2/Death in the Water 2",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1338840/header.jpg?t=1738842003",
+    "filesize": "3.38 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2YvYja2uArqy?pwd=nt73",
+        "openpath": "Death in the Water 2/Death in the Water 2.exe",
+        "filesize": "3.38 G",
+        "link_ctime": "2026.01.06",
+        "filesize_z": 3633581449,
+        "filename": "Death in the Water 2",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 42081,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -32719,6 +32870,25 @@
     ]
   },
   {
+    "id": 98524,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "外卖配送员模拟器/Food Delivery Simulator",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2986370/header.jpg?t=1738530161",
+    "filesize": "1004.39 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/YvYRZfmMRV3a?pwd=q8v7",
+        "openpath": "Food Delivery Simulator/FoodDeliverySimulator.exe",
+        "filesize": "1004.39 M",
+        "link_ctime": "2026.01.08",
+        "filesize_z": 1053181084,
+        "filename": "Food Delivery Simulator",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 95680,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -33434,6 +33604,44 @@
         "link_ctime": "2024.12.16",
         "filesize_z": 8284257713,
         "filename": "Unknown Tapes",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 98717,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "温馨马车/Cozy Caravan",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2788520/ca675edc5114be56c5737dce46211a786a5cc68c/header.jpg?t=1767858782",
+    "filesize": "1.29 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fiAR7byqYbu2?pwd=3sw9",
+        "openpath": "Cozy Caravan/CozyCaravan.exe",
+        "filesize": "1.29 G",
+        "link_ctime": "2026.01.09",
+        "filesize_z": 1385000330,
+        "filename": "Cozy Caravan",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 98841,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "瘟疫3/Pathologic 3",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3199650/7df86dc0b47a90b34eadf2ae8bbe6c9f7d61b97e/header.jpg?t=1767996046",
+    "filesize": "32.29 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JFRfuqYFjEri?pwd=9hic",
+        "openpath": "Pathologic 3/Pathologic3.exe",
+        "filesize": "32.29 G",
+        "link_ctime": "2026.01.11",
+        "filesize_z": 34675118890,
+        "filename": "Pathologic 3",
         "server": "t"
       }
     ]
@@ -36195,6 +36403,25 @@
     ]
   },
   {
+    "id": 98457,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "星际裂变/StarRupture",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1631270/header_schinese.jpg?t=1767711030",
+    "filesize": "12.21 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/r6V3myfqYRRv?pwd=gm7m",
+        "openpath": "StarRupture/StarRuptureGameSteam.exe",
+        "filesize": "12.21 G",
+        "link_ctime": "2026.01.08",
+        "filesize_z": 13111225115,
+        "filename": "StarRupture",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 63647,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -38092,6 +38319,25 @@
     ]
   },
   {
+    "id": 98670,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "伊苏7/Ys SEVEN",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/587100/header.jpg?t=1732151647",
+    "filesize": "1.39 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7r6fqqMRjiAj?pwd=3wxx",
+        "openpath": "Ys SEVEN/Ys7Launcher.exe",
+        "filesize": "1.39 G",
+        "link_ctime": "2026.01.09",
+        "filesize_z": 1493185660,
+        "filename": "Ys SEVEN",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 40203,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -39273,6 +39519,25 @@
         "link_ctime": "2024.11.19",
         "filesize_z": 432207132,
         "filename": "meblaz v1.0.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 98382,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "永不落败/Every Day We Fight",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1546080/4c81ebaa1fd445cf3bd014d48b2c6221eaace212/header_tchinese.jpg?t=1767640866",
+    "filesize": "7.33 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/YBVVJ3NZ7Vzi?pwd=2dkv",
+        "openpath": "Every Day We Fight/FujiGOG.exe",
+        "filesize": "7.33 G",
+        "link_ctime": "2026.01.07",
+        "filesize_z": 7867714283,
+        "filename": "Every Day We Fight",
         "server": "t"
       }
     ]
@@ -42503,6 +42768,25 @@
     ]
   },
   {
+    "id": 98693,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "致命半径/Into the Radius VR",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1012790/header_schinese.jpg?t=1763558513",
+    "filesize": "15.28 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ZNfMbuaANzmu?pwd=2jih",
+        "openpath": "IntoTheRadius/IntoTheRadius.exe",
+        "filesize": "15.28 G",
+        "link_ctime": "2026.01.09",
+        "filesize_z": 16411950695,
+        "filename": "IntoTheRadius",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 75547,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -44967,8 +45251,17 @@
     "categories": "动作冒险",
     "post_title": "TEVI",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2230650/header.jpg?t=1721114721",
-    "filesize": "949.2 M",
+    "filesize": "3.99 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/3uiMNraayANv?pwd=hd4n",
+        "openpath": "TEVI v1.20e/TEVI.exe",
+        "filesize": "3.99 G",
+        "link_ctime": "2026.01.07",
+        "filesize_z": 4281760684,
+        "filename": "TEVI v1.20e",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/VnueEjAbEray?pwd=7isu",
         "openpath": "TEVI.v20231221-GoldBerg/TEVI.exe",
@@ -45071,6 +45364,25 @@
         "link_ctime": "2025.08.05",
         "filesize_z": 20647115303,
         "filename": "Virtua Fighter 5.R.E.V.O",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 98903,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "VR战士5/Virtua Fighter 5 R.E.V.O. World Stage",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3112260/9501a2ea86226e8620f07dd889e1c365e2d32e66/header.jpg?t=1767909957",
+    "filesize": "42.12 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/vqARJju6Bbue?pwd=hc1z",
+        "openpath": "Virtua Fighter 5 REVO v1.0.7/runtime/media/VFREVO.exe",
+        "filesize": "42.12 G",
+        "link_ctime": "2026.01.11",
+        "filesize_z": 45222930134,
+        "filename": "Virtua Fighter 5 REVO v1.0.7",
         "server": "t"
       }
     ]
