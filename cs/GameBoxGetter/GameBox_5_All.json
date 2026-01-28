@@ -617,6 +617,25 @@
     ]
   },
   {
+    "id": 100240,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "矮人军团自走棋/Dwarves Glory, Death and Loot",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2205850/e29c24fcd309eb12f16f3aefa1cf249c90a3ac07/header_alt_assets_0_schinese.jpg?t=1769233777",
+    "filesize": "219.8 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/6fYVrmBRFFju?pwd=ol69",
+        "openpath": "Dwarves Glory Death and Loot/dwarves.exe",
+        "filesize": "219.8 M",
+        "link_ctime": "2026.01.25",
+        "filesize_z": 230474431,
+        "filename": "Dwarves Glory Death and Loot",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 61072,
     "category_parent": 5,
     "categories": "策略战棋",
@@ -6446,6 +6465,25 @@
     ]
   },
   {
+    "id": 100171,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "电玩人生/Gamer Stop Simulator",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3499220/a4fa186360e140914a9d72d07cd03bf72f18cc13/header.jpg?t=1768398675",
+    "filesize": "3.7 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2InQziuAF773?pwd=itf8",
+        "openpath": "Gamer Stop Simulator v0.0.5/ConsoleGame.exe",
+        "filesize": "3.7 G",
+        "link_ctime": "2026.01.24",
+        "filesize_z": 3974036332,
+        "filename": "Gamer Stop Simulator v0.0.5",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 18058,
     "category_parent": 5,
     "categories": "模拟经营",
@@ -7554,6 +7592,25 @@
         "link_ctime": "2024.04.19",
         "filesize_z": 15809752807,
         "filename": "No.Rest.for.the.Wicked.Early.Access",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 100040,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "饿狼传说：群狼之城 – 传奇版/FATAL FURY City of the Wolves Legend Edition - Special Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2492040/6d9da7fcf3b1e190be4c01c694d268cd6d0f7316/header.jpg?t=1769074332",
+    "filesize": "25.24 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/VZ3a6jZBVjim?pwd=uv8y",
+        "openpath": "CotW v1.7.1/FATAL FURY City of the Wolves.exe",
+        "filesize": "25.24 G",
+        "link_ctime": "2026.01.24",
+        "filesize_z": 27096816774,
+        "filename": "CotW v1.7.1",
         "server": "t"
       }
     ]
@@ -9560,6 +9617,25 @@
     ]
   },
   {
+    "id": 100333,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "格斗力量：合集/Fighting Force Collection",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3504580/6535f2d2a3a28e38d1a7140a52966c2ab90d4228/header.jpg?t=1769179958",
+    "filesize": "928.16 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/RnMrAf26Jnyi?pwd=yy3l",
+        "openpath": "Fighting Force Collection/fighting-force.exe",
+        "filesize": "928.16 M",
+        "link_ctime": "2026.01.25",
+        "filesize_z": 973243581,
+        "filename": "Fighting Force Collection",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 88889,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -9631,6 +9707,25 @@
         "link_ctime": "2024.07.20",
         "filesize_z": 563060920,
         "filename": "Gestalt.Steam.and.Cinder v1.00",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 99983,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "隔离僵尸/Quarantine Zombies",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3964600/6bced085f0f972b53f7c5534aff0d5d2e098017d/header.jpg?t=1768939129",
+    "filesize": "14.62 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/vqAB3aj26rAn?pwd=ch5v",
+        "openpath": "Quarantine Zombies/QuarantineZombie.exe",
+        "filesize": "14.62 G",
+        "link_ctime": "2026.01.23",
+        "filesize_z": 15700017304,
+        "filename": "Quarantine Zombies",
         "server": "t"
       }
     ]
@@ -10883,6 +10978,25 @@
         "link_ctime": "2025.08.13",
         "filesize_z": 619208156,
         "filename": "The Royal Writ",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 100140,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "过去的碎片/Pieces of the Past",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2786650/62b05ef458a2a06a06d4daad5b745670ee8382e7/header_alt_assets_1_schinese.jpg?t=1768810848",
+    "filesize": "808.38 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/IrAjQvQny673?pwd=bwa9",
+        "openpath": "Pieces of the Past v1.1.1/PiecesofthePast.exe",
+        "filesize": "808.38 M",
+        "link_ctime": "2026.01.24",
+        "filesize_z": 847644408,
+        "filename": "Pieces of the Past v1.1.1",
         "server": "t"
       }
     ]
@@ -13392,6 +13506,25 @@
         "link_ctime": "2024.11.14",
         "filesize_z": 2434239592,
         "filename": "The.Rise.of.the.Golden.Idol v1.01",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 100354,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "黄金之河计划/The Gold River Project",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1253220/e01bce2a398fd27fe8e2a68a9e85976df8fa131b/header.jpg?t=1769191984",
+    "filesize": "61.8 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/67VFZrjMBNja?pwd=1lrp",
+        "openpath": "The Gold River Project/GoldRiver_V4.exe",
+        "filesize": "61.8 G",
+        "link_ctime": "2026.01.26",
+        "filesize_z": 66356563383,
+        "filename": "The Gold River Project",
         "server": "t"
       }
     ]
@@ -16710,6 +16843,25 @@
         "link_ctime": "2025.06.19",
         "filesize_z": 3384699207,
         "filename": "Wrap House Simulator v1.05",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 100089,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "决斗公司/Duel Corp",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1804470/13e8617cad7d3392d29e614ff07435f8d72fd837/header.jpg?t=1769011185",
+    "filesize": "581.02 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/UbYRrqeUbeQb?pwd=txz9",
+        "openpath": "Duel Corp/Duel Corp.exe",
+        "filesize": "581.02 M",
+        "link_ctime": "2026.01.24",
+        "filesize_z": 609245425,
+        "filename": "Duel Corp",
         "server": "t"
       }
     ]
@@ -20214,6 +20366,25 @@
     ]
   },
   {
+    "id": 100520,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "轮回保险公司/R.I.P Reincarnation Insurance Program",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3985950/c88717927c2ed40d1d975ecf3c26fb8141a5ed27/header_tchinese.jpg?t=1769482462",
+    "filesize": "7.39 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/nInIFfU73amu?pwd=2xdo",
+        "openpath": "R.I.P Reincarnation Insurance Program v0.8.1.6/AKA_RIP.exe",
+        "filesize": "7.39 G",
+        "link_ctime": "2026.01.28",
+        "filesize_z": 7935953057,
+        "filename": "R.I.P Reincarnation Insurance Program v0.8.1.6",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 33088,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -21631,6 +21802,34 @@
         "link_ctime": "2024.12.07",
         "filesize_z": 925046235,
         "filename": "The Magical Mixture Mill",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 49628,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "咩咩启示录：异教徒包/Cult of the Lamb: Heretic Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2331540/header.jpg?t=1705597016",
+    "filesize": "5.18 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NVvUZzNRRJja?pwd=uh9i",
+        "openpath": "Cult of the Lamb Woolhaven v1.5.15.979/Cult Of The Lamb.exe",
+        "filesize": "5.18 G",
+        "link_ctime": "2026.01.24",
+        "filesize_z": 5563596843,
+        "filename": "Cult of the Lamb Woolhaven v1.5.15.979",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/VniqUzmuuURr?pwd=4uys",
+        "openpath": "Cult of the Lamb v1.4.3.588/Cult Of The Lamb.exe",
+        "filesize": "5.18 G",
+        "link_ctime": "1970.01.01",
+        "filesize_z": 5563596843,
+        "filename": "Cult of the Lamb Woolhaven v1.5.15.979",
         "server": "t"
       }
     ]
@@ -32280,6 +32479,25 @@
     ]
   },
   {
+    "id": 100245,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "逃出从此以后/Escape from Ever After",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1996390/4856f2f6ab79fa8bc384007af8724f1ce7e2013c/header_schinese.jpg?t=1769262989",
+    "filesize": "1.75 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fyE77jFZB7Bz?pwd=pxd4",
+        "openpath": "Escape from Ever After/FlyntBuckler.exe",
+        "filesize": "1.75 G",
+        "link_ctime": "2026.01.25",
+        "filesize_z": 1882636347,
+        "filename": "Escape from Ever After",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 18502,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -32769,6 +32987,25 @@
         "link_ctime": "2025.07.08",
         "filesize_z": 445636732,
         "filename": "UNDER DEFEAT",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 100292,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "跳跃空间/Jump Space",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1757300/f401ae1af25f31fdfed24f56cf98ea4a32d79997/header.jpg?t=1765891554",
+    "filesize": "10 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/yAvimmNNB3ea?pwd=ffb1",
+        "openpath": "JumpSpace v0.5.12.47/Jump Space.exe",
+        "filesize": "10 G",
+        "link_ctime": "2026.01.25",
+        "filesize_z": 10738823201,
+        "filename": "JumpSpace v0.5.12.47",
         "server": "t"
       }
     ]
@@ -35078,6 +35315,25 @@
     ]
   },
   {
+    "id": 100401,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "无限神速斩：勇者斗恶龙 – 达伊的大冒险：数字豪华版/Infinity Strash Dragon Quest – The Adventure of Dai Digital Deluxe Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1895810/header_schinese.jpg?t=1752475130",
+    "filesize": "11.97 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/yqMb2muYvYfu?pwd=az70",
+        "openpath": "Infinity Strash Dragon Quest The Adventure of Dai v1.0.3/strash/Binaries/Win64/IS-DQDai.exe",
+        "filesize": "11.97 G",
+        "link_ctime": "2026.01.26",
+        "filesize_z": 12848389560,
+        "filename": "Infinity Strash Dragon Quest The Adventure of Dai v1.0.3",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 73495,
     "category_parent": 5,
     "categories": "策略战棋",
@@ -37373,6 +37629,25 @@
         "link_ctime": "2024.04.24",
         "filesize_z": 3518190040,
         "filename": "Sea of Stars",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 100451,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "星之海洋6：神圣力量 – 数字豪华版/STAR OCEAN THE DIVINE FORCE",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1776380/header.jpg?t=1724831146",
+    "filesize": "43.83 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/QN7RnuJBrqIr?pwd=go3q",
+        "openpath": "STAR OCEAN THE DIVINE FORCE/SO6.exe",
+        "filesize": "43.83 G",
+        "link_ctime": "2026.01.28",
+        "filesize_z": 47064828088,
+        "filename": "STAR OCEAN THE DIVINE FORCE",
         "server": "t"
       }
     ]
@@ -40025,6 +40300,25 @@
     ]
   },
   {
+    "id": 100210,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "硬币桌：豪华版/Gamblers Table",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3618390/5a1422b3dd2f960cbb638e691740d59240f58703/header_alt_assets_2_schinese.jpg?t=1768774514",
+    "filesize": "62.92 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/z2y6niVz2MNb?pwd=wnw0",
+        "openpath": "Gamblers Table/gamblers-table.exe",
+        "filesize": "62.92 M",
+        "link_ctime": "2026.01.24",
+        "filesize_z": 65979491,
+        "filename": "Gamblers Table",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 60477,
     "category_parent": 5,
     "categories": "策略战棋",
@@ -41516,6 +41810,25 @@
     ]
   },
   {
+    "id": 100045,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "灾厄之石/Blightstone",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2832280/7d66f9ae8413548ba5240982ca645e8240cdba1d/header_schinese.jpg?t=1768910791",
+    "filesize": "336.77 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/E7Fbaue22eeu?pwd=upj4",
+        "openpath": "Blightstone v0.8.00.1510/Blightstone.exe",
+        "filesize": "336.77 M",
+        "link_ctime": "2026.01.24",
+        "filesize_z": 353124778,
+        "filename": "Blightstone v0.8.00.1510",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 75993,
     "category_parent": 5,
     "categories": "模拟经营",
@@ -42075,6 +42388,25 @@
     ]
   },
   {
+    "id": 99945,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "战壕惊魂/Conscript",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1286990/0efcbaa8a8234ab2e4f2dc39e03fffe9360cba31/header_alt_assets_2_schinese.jpg?t=1764865767",
+    "filesize": "891.19 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/yQb6v2AZbuiu?pwd=5lw8",
+        "openpath": "CONSCRIPT v2.1.0.0/CONSCRIPT.exe",
+        "filesize": "891.19 M",
+        "link_ctime": "2026.01.23",
+        "filesize_z": 934481170,
+        "filename": "CONSCRIPT v2.1.0.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 19315,
     "category_parent": 5,
     "categories": "策略战棋",
@@ -42572,10 +42904,19 @@
     "id": 72474,
     "category_parent": 5,
     "categories": "动作冒险",
-    "post_title": "真・三国无双 起源/Dynasty Warriors Origins – Digital Deluxe Edition",
+    "post_title": "真・三国无双 起源：豪华版/Dynasty Warriors Origins – Digital Deluxe Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2384580/header_schinese.jpg?t=1742346930",
-    "filesize": "48.72 G",
+    "filesize": "54.02 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NJ3IF3qaQBZj?pwd=7tcf",
+        "openpath": "DWORIGINS v1.0.1.0/DWORIGINS.exe",
+        "filesize": "54.02 G",
+        "link_ctime": "2026.01.26",
+        "filesize_z": 58002145577,
+        "filename": "DWORIGINS v1.0.1.0",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/YnM3Ebe2aE3u?pwd=ar0q",
         "openpath": "DWORIGINS v1.0.0.7/DWORIGINS.exe",
@@ -44014,8 +44355,17 @@
     "categories": "模拟经营",
     "post_title": "铸造厂/FOUNDRY",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/983870/header.jpg?t=1720717387",
-    "filesize": "2.36 G",
+    "filesize": "3.25 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/AFNv6bNNBBRz?pwd=zsq1",
+        "openpath": "FOUNDRY v0.6.0.24196/Foundry.exe",
+        "filesize": "3.25 G",
+        "link_ctime": "2026.01.23",
+        "filesize_z": 3489525502,
+        "filename": "FOUNDRY v0.6.0.24196",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/3aQj2qzeEjUj?pwd=mdx4",
         "openpath": "FOUNDRY v0.5.2.14492/Foundry.exe",
@@ -44830,6 +45180,25 @@
         "link_ctime": "2024.12.04",
         "filesize_z": 277109593,
         "filename": "Follow.the.meaning",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 99924,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "左左和右右：手拉手",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2122880/2abd7f292fb24e97289a843604e63bad7a93a871/header_tchinese.jpg?t=1768496452",
+    "filesize": "760.81 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/EvEzi2iyymum?pwd=l5gp",
+        "openpath": "All Hands on Deck v1.1.1/All Hands on Deck.exe",
+        "filesize": "760.81 M",
+        "link_ctime": "2026.01.23",
+        "filesize_z": 797763470,
+        "filename": "All Hands on Deck v1.1.1",
         "server": "t"
       }
     ]
