@@ -1676,6 +1676,25 @@
     ]
   },
   {
+    "id": 101041,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "半剑/Half Sword Tech",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2397300/54d7f7be1eb9e289186fab6132dc668c3644f826/header.jpg?t=1769873014",
+    "filesize": "9.73 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NnQVjuQRfQVf?pwd=31yr",
+        "openpath": "Half Sword/HalfSwordUE5.exe",
+        "filesize": "9.73 G",
+        "link_ctime": "2026.02.01",
+        "filesize_z": 10450880854,
+        "filename": "Half Sword",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 45462,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -1842,6 +1861,25 @@
         "link_ctime": "2026.01.20",
         "filesize_z": 33928030030,
         "filename": "HeavyRain",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 102132,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "暴走甜心/Don’t Stop, Girlypop",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2610650/c51ea16bebef6f0f679ac2482559542f1db738a0/header.jpg?t=1769704644",
+    "filesize": "4.94 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FvI7jqJNbi6v?pwd=yg0x",
+        "openpath": "Incolatus v1.0.5/INCOLATUS.exe",
+        "filesize": "4.94 G",
+        "link_ctime": "2026.02.11",
+        "filesize_z": 5305341573,
+        "filename": "Incolatus v1.0.5",
         "server": "t"
       }
     ]
@@ -2529,6 +2567,25 @@
     ]
   },
   {
+    "id": 101420,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "波利塔防/Poly TD",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2871390/9fca3d31d84ec5e5fbb82a27a3fedc7b7ab7b7ae/header_tchinese.jpg?t=1769745504",
+    "filesize": "1.87 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/y63YRnfyaEBv?pwd=vfs1",
+        "openpath": "Poly TD v1.0.1/Poly TD.exe",
+        "filesize": "1.87 G",
+        "link_ctime": "2026.02.03",
+        "filesize_z": 2003473009,
+        "filename": "Poly TD v1.0.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 92955,
     "category_parent": 5,
     "categories": "策略战棋",
@@ -3163,6 +3220,25 @@
     ]
   },
   {
+    "id": 101795,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "豺狼/Jackal",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3124230/953b10dcee407cbb6671efd94d889a63b3746eb7/header.jpg?t=1770321213",
+    "filesize": "1.09 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/iY7n2uuyuYjy?pwd=mg0a",
+        "openpath": "Jackal v0.9.9/jackal.exe",
+        "filesize": "1.09 G",
+        "link_ctime": "2026.02.08",
+        "filesize_z": 1173317749,
+        "filename": "Jackal v0.9.9",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 69831,
     "category_parent": 5,
     "categories": "模拟经营",
@@ -3405,6 +3481,25 @@
         "link_ctime": "2025.10.12",
         "filesize_z": 76880994,
         "filename": "Super Double Dragon v1.00",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101855,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "超级炸弹人合辑/SUPER BOMBERMAN COLLECTION",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3756010/cdb5d4d45a27797897f6052d55bc7316ea9a3e4c/header.jpg?t=1770303607",
+    "filesize": "1.36 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/U7VJbeJ7Vnii?pwd=dy6w",
+        "openpath": "SUPER BOMBERMAN COLLECTION v1.00.09/SUPER BOMBERMAN COLLECTION.exe",
+        "filesize": "1.36 G",
+        "link_ctime": "2026.02.08",
+        "filesize_z": 1459907422,
+        "filename": "SUPER BOMBERMAN COLLECTION v1.00.09",
         "server": "t"
       }
     ]
@@ -5630,6 +5725,25 @@
     ]
   },
   {
+    "id": 100550,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "地球必须死/Earth Must Die",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3639780/05cd63cf06fb23919db674253863f6141af6f505/header_alt_assets_14.jpg?t=1769538597",
+    "filesize": "2.59 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/3e2MRbMNNj6j?pwd=g2kb",
+        "openpath": "Earth Must Die/Earth Must Die.exe",
+        "filesize": "2.59 G",
+        "link_ctime": "2026.01.28",
+        "filesize_z": 2778166926,
+        "filename": "Earth Must Die",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 54661,
     "category_parent": 5,
     "categories": "策略战棋",
@@ -5919,6 +6033,25 @@
         "link_ctime": "2024.12.28",
         "filesize_z": 7602600183,
         "filename": "Underground.Garage.Build.16803569",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 100829,
+    "category_parent": 5,
+    "categories": "恐怖惊悚",
+    "post_title": "地狱超市/HELLMART",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3762550/8d5561f21bb46dd76d7a8b863c901d6a05e19204/header.jpg?t=1769781940",
+    "filesize": "4.35 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NVve6rNZrYZn?pwd=sm6f",
+        "openpath": "HELLMART/Hellmart.exe",
+        "filesize": "4.35 G",
+        "link_ctime": "2026.01.30",
+        "filesize_z": 4672937748,
+        "filename": "HELLMART",
         "server": "t"
       }
     ]
@@ -6365,6 +6498,25 @@
         "link_ctime": "2025.10.07",
         "filesize_z": 273230325,
         "filename": "9th Dawn Remake v1.192",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101686,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "第九圣诗/Anthem#9",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2656490/73158d4bec0f4ae7a292a75ffda80377ee7b3056/header_schinese.jpg?t=1770274465",
+    "filesize": "1.17 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/jeme6zRVZBvq?pwd=2wqw",
+        "openpath": "ANTHEM9/ANTHEM9.exe",
+        "filesize": "1.17 G",
+        "link_ctime": "2026.02.07",
+        "filesize_z": 1260187742,
+        "filename": "ANTHEM9",
         "server": "t"
       }
     ]
@@ -7677,6 +7829,25 @@
         "link_ctime": "2024.07.10",
         "filesize_z": 198300481,
         "filename": "Nightmare.The.Lunatic.Build.14951741",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 102044,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "恩达瑞尔：被遗忘的故事/Enderal: Forgotten Stories",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/933480/header.jpg?t=1732760080",
+    "filesize": "19.42 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qqqIZfeEb6Jb?pwd=b4vo",
+        "openpath": "Enderal Special Edition GOG v2.1.4.2/Enderal Launcher.exe",
+        "filesize": "19.42 G",
+        "link_ctime": "2026.02.10",
+        "filesize_z": 20847898581,
+        "filename": "Enderal Special Edition GOG v2.1.4.2",
         "server": "t"
       }
     ]
@@ -9731,6 +9902,25 @@
     ]
   },
   {
+    "id": 101186,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "根源：收藏版/ROOT",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/965580/header.jpg?t=1767902987",
+    "filesize": "383.44 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/myeMreYjyIRv?pwd=8ywl",
+        "openpath": "Root v2.1.2/Root.exe",
+        "filesize": "383.44 M",
+        "link_ctime": "2026.02.01",
+        "filesize_z": 402066238,
+        "filename": "Root v2.1.2",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 46979,
     "category_parent": 5,
     "categories": "模拟经营",
@@ -10168,6 +10358,25 @@
     ]
   },
   {
+    "id": 100731,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "孤山独影/Cairn",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1588550/header_schinese.jpg?t=1769725647",
+    "filesize": "9.73 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fIze2uRRjmMb?pwd=ysi4",
+        "openpath": "Cairn v1.0.299s/Cairn.exe",
+        "filesize": "9.73 G",
+        "link_ctime": "2026.01.30",
+        "filesize_z": 10446877872,
+        "filename": "Cairn v1.0.299s",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 81849,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -10282,6 +10491,25 @@
     ]
   },
   {
+    "id": 100870,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "古农庄/Ancient Farm",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1933930/1f1ce03802fc7ca3d646fb350d123a8a2ec72977/header_schinese.jpg?t=1769484252",
+    "filesize": "2.6 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NfErYrjqU7Vj?pwd=qnt6",
+        "openpath": "Ancient Farm v1.0.12/Ancient Farm.exe",
+        "filesize": "2.6 G",
+        "link_ctime": "2026.01.31",
+        "filesize_z": 2788379687,
+        "filename": "Ancient Farm v1.0.12",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 56759,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -10382,8 +10610,17 @@
     "categories": "策略战棋",
     "post_title": "怪物火车2/Monster Train 2",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2742830/header.jpg?t=1747843433",
-    "filesize": "2.73 G",
+    "filesize": "2.94 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/N7NJJvUNJ7Zj?pwd=5sks",
+        "openpath": "Monster Train 2 v16171/MonsterTrain2.exe",
+        "filesize": "2.94 G",
+        "link_ctime": "2026.02.05",
+        "filesize_z": 3154218887,
+        "filename": "Monster Train 2 v16171",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/7v2Aj2VnUv2y?pwd=8ldl",
         "openpath": "Monster Train 2/MonsterTrain2.exe",
@@ -10921,6 +11158,25 @@
         "link_ctime": "2025.11.22",
         "filesize_z": 21662053147,
         "filename": "Onimusha 2 Samurais Destiny",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101313,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "国际谍报有限公司/Interstellar Espionage Inc.",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3563480/c6ee404bdf3272276aeeaf09c6fbe27a7e77d3ea/header.jpg?t=1769428193",
+    "filesize": "449.29 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NzMNjiM3QVvi?pwd=2hut",
+        "openpath": "InterEspionage v1.1.0/InterstelEspionage.exe",
+        "filesize": "449.29 M",
+        "link_ctime": "2026.02.02",
+        "filesize_z": 471118894,
+        "filename": "InterEspionage v1.1.0",
         "server": "t"
       }
     ]
@@ -12082,6 +12338,25 @@
     ]
   },
   {
+    "id": 101762,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "黑帆赌局/Pirate's Gambit",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3532360/eb420313cf02b174bcc60355b05afd6cd2ef2110/header_schinese.jpg?t=1770292774",
+    "filesize": "1.72 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/3ARvIzQRru2e?pwd=3jr6",
+        "openpath": "Pirate s Gambit/PiratesGambit.exe",
+        "filesize": "1.72 G",
+        "link_ctime": "2026.02.07",
+        "filesize_z": 1850326382,
+        "filename": "Pirate s Gambit",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 78703,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -12614,6 +12889,25 @@
     ]
   },
   {
+    "id": 101885,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "欢迎回来，指挥官/Welcome Back, Commander",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3015620/header.jpg?t=1763058240",
+    "filesize": "233.95 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/UFbAV3N36ZVj?pwd=n0rw",
+        "openpath": "Welcome Back Commander/CEPSE.exe",
+        "filesize": "233.95 M",
+        "link_ctime": "2026.02.08",
+        "filesize_z": 245312776,
+        "filename": "Welcome Back Commander",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 46052,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -12666,6 +12960,25 @@
         "link_ctime": "2024.07.12",
         "filesize_z": 1092449406,
         "filename": "Circuit Superstars V1.6.2",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101990,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "环形帝国2/Circle Empires 2",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3093020/ac5870871aec61e0b7098074dda0d3d8b0e9fac8/header.jpg?t=1770655052",
+    "filesize": "222.47 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/jUjyIjfe6Vvm?pwd=6ikz",
+        "openpath": "Circle Empires 2 v1.82/Circle Empires 2.exe",
+        "filesize": "222.47 M",
+        "link_ctime": "2026.02.10",
+        "filesize_z": 233279063,
+        "filename": "Circle Empires 2 v1.82",
         "server": "t"
       }
     ]
@@ -13345,8 +13658,17 @@
     "categories": "枪战射击",
     "post_title": "荒原先驱/PIONER",
     "wp_get_attachment_image_src": "未找到匹配的URL",
-    "filesize": "81.99 G",
+    "filesize": "81.43 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FJvuqe2ieUNr?pwd=mli8",
+        "openpath": "PIONER v20260201/WindowsNoEditor/Pioner.exe",
+        "filesize": "81.43 G",
+        "link_ctime": "2026.02.10",
+        "filesize_z": 87431631382,
+        "filename": "PIONER v20260201",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/aI3MB3VzQfuu?pwd=axa8",
         "openpath": "PIONER/WindowsNoEditor/Pioner.exe",
@@ -14876,6 +15198,25 @@
     ]
   },
   {
+    "id": 100623,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "纪元：变异/ANNO Mutationem",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1368030/header_schinese.jpg?t=1769505996",
+    "filesize": "10.12 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2UZRVvIF7zy2?pwd=t8lb",
+        "openpath": "ANNO Mutationem Boss Rogue v1.2.00.00/Anno.exe",
+        "filesize": "10.12 G",
+        "link_ctime": "2026.01.29",
+        "filesize_z": 10868129485,
+        "filename": "ANNO Mutationem Boss Rogue v1.2.00.00",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 15406,
     "category_parent": 5,
     "categories": "策略战棋",
@@ -15609,9 +15950,18 @@
     "category_parent": 5,
     "categories": "动作冒险",
     "post_title": "僵尸世界大战：豪华版/World War Z: Aftermath – Deluxe Edition",
-    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/699130/header.jpg?t=1721234432",
-    "filesize": "47.63 G",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/699130/b35277055fbb7e07c26c5e31e4398684c6461d53/header.jpg?t=1769723835",
+    "filesize": "56.14 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/aq2qY3jm2uIf?pwd=jm98",
+        "openpath": "World War Z x The Walking Dead v20260130/en_us/client/bin/pc/wwzRetail.exe",
+        "filesize": "56.14 G",
+        "link_ctime": "2026.01.30",
+        "filesize_z": 60280982284,
+        "filename": "World War Z x The Walking Dead v20260130",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/ARbiauzERjMb?pwd=9nos",
         "openpath": "WWZ v20231206/en_us/client/bin/pc/wwzRetail.exe",
@@ -15790,6 +16140,25 @@
         "link_ctime": "2024.12.28",
         "filesize_z": 16922775721,
         "filename": "CarX.Street",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101681,
+    "category_parent": 5,
+    "categories": "恐怖惊悚",
+    "post_title": "街区新面孔/New Face On The Block",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3461060/header.jpg?t=1770044408",
+    "filesize": "7.04 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2ayYZbVZreIz?pwd=k8hi",
+        "openpath": "New Face On The Block/NewFaceOnTheBlock.exe",
+        "filesize": "7.04 G",
+        "link_ctime": "2026.02.07",
+        "filesize_z": 7556159941,
+        "filename": "New Face On The Block",
         "server": "t"
       }
     ]
@@ -16084,6 +16453,25 @@
         "link_ctime": "2025.07.30",
         "filesize_z": 18203266465,
         "filename": "Grounded2 v0.1.1.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101557,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "禁忌海猎/UMIGARI",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3772960/c9cef3bb75dc5833214eb4361461712e1bff747a/header.jpg?t=1770254355",
+    "filesize": "4.34 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/F32uAvjQRN7v?pwd=b4ta",
+        "openpath": "UMIGARI/ProjectBoat.exe",
+        "filesize": "4.34 G",
+        "link_ctime": "2026.02.06",
+        "filesize_z": 4656898137,
+        "filename": "UMIGARI",
         "server": "t"
       }
     ]
@@ -18233,6 +18621,25 @@
     ]
   },
   {
+    "id": 101800,
+    "category_parent": 5,
+    "categories": "体育竞速",
+    "post_title": "狂飙飞车：Rogue 变速/Carmageddon",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1712100/74eeb71eb00f1ac0900bc295b1b8dd53b3d9db00/header.jpg?t=1770511692",
+    "filesize": "30.32 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/m2mMRfUJzqqa?pwd=zk6w",
+        "openpath": "Carmageddon Rogue Shift/Carma.exe",
+        "filesize": "30.32 G",
+        "link_ctime": "2026.02.08",
+        "filesize_z": 32560030461,
+        "filename": "Carmageddon Rogue Shift",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 94529,
     "category_parent": 5,
     "categories": "模拟经营",
@@ -19332,6 +19739,44 @@
     ]
   },
   {
+    "id": 102161,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "炼魂之地：神偶剧院/Crisol: Theater of Idols",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1790930/5799bc1838d75053880ab421cb5cbc3f54a7f667/header.jpg?t=1770766635",
+    "filesize": "15.59 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ZzINJ3mIVnYn?pwd=6mn9",
+        "openpath": "Crisol Theater of Idols/CrisolTheaterOfIdols.exe",
+        "filesize": "15.59 G",
+        "link_ctime": "2026.02.11",
+        "filesize_z": 16734618025,
+        "filename": "Crisol Theater of Idols",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101306,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "炼金工厂/Alchemy Factory",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3669570/ac7674aa84040c6895d1a3bd9ec5eca9f99954c3/header_schinese.jpg?t=1769674569",
+    "filesize": "3.09 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FnAVZjf6zeu2?pwd=qqq1",
+        "openpath": "Alchemy Factory v0.4.2.3946/AlchemyFactory.exe",
+        "filesize": "3.09 G",
+        "link_ctime": "2026.02.02",
+        "filesize_z": 3314117683,
+        "filename": "Alchemy Factory v0.4.2.3946",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 92669,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -19365,6 +19810,25 @@
         "link_ctime": "2025.06.17",
         "filesize_z": 6739341734,
         "filename": "HELLBREAK",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101256,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "恋爱0公里/Ren ai 0 Kilometer",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3588960/cc27bb195aa844fc3cbacc9f68f0c99dd9392e4b/header_schinese.jpg?t=1769648719",
+    "filesize": "1.55 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/IJF7zefQF3ya?pwd=7u9j",
+        "openpath": "Ren ai 0 Kilometer/renzero.exe",
+        "filesize": "1.55 G",
+        "link_ctime": "2026.02.02",
+        "filesize_z": 1664911239,
+        "filename": "Ren ai 0 Kilometer",
         "server": "t"
       }
     ]
@@ -19555,6 +20019,25 @@
         "link_ctime": "2025.06.17",
         "filesize_z": 12622961254,
         "filename": "Bayonetta",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101262,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "猎鱼达人/Fish Hunters",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3468330/212f0eb07b59a49cca439c73d46a13801faa3e25/header_schinese.jpg?t=1769791631",
+    "filesize": "2.61 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Njqeea2QnUJf?pwd=9am2",
+        "openpath": "Fish Hunters/FishTmp.exe",
+        "filesize": "2.61 G",
+        "link_ctime": "2026.02.02",
+        "filesize_z": 2805350822,
+        "filename": "Fish Hunters",
         "server": "t"
       }
     ]
@@ -20323,6 +20806,25 @@
         "link_ctime": "2024.05.08",
         "filesize_z": 1073090823,
         "filename": "City.of.Beats.Build.13491866",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101439,
+    "category_parent": 5,
+    "categories": "恐怖惊悚",
+    "post_title": "绿灯/The Green Light",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1962950/f8ad786d058823557a3790dbb967629c56f97ce7/header.jpg?t=1769705955",
+    "filesize": "13.86 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JJJBRjzQrEZf?pwd=j6qf",
+        "openpath": "The Green Light/TheGreenLight.exe",
+        "filesize": "13.86 G",
+        "link_ctime": "2026.02.03",
+        "filesize_z": 14878836078,
+        "filename": "The Green Light",
         "server": "t"
       }
     ]
@@ -21438,6 +21940,25 @@
     ]
   },
   {
+    "id": 101241,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "弥助模拟器/Yasuke Simulator",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3272300/header.jpg?t=1769863620",
+    "filesize": "6.36 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/VvUNN3uqUbQf?pwd=hdq3",
+        "openpath": "Yasuke Simulator/Yasuke Simulator.exe",
+        "filesize": "6.36 G",
+        "link_ctime": "2026.02.01",
+        "filesize_z": 6824065270,
+        "filename": "Yasuke Simulator",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 73657,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -21755,6 +22276,25 @@
         "link_ctime": "2024.12.10",
         "filesize_z": 852439630,
         "filename": "Wild.Woods v0.0.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 102156,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "喵喵的结合/Mewgenics",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/686060/aa8075d11165fef4d4d0d09c156f0da0623b5da1/header.jpg?t=1770734760",
+    "filesize": "4.15 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/mmqIJv63yyUr?pwd=2qyz",
+        "openpath": "Mewgenics v1.0/Mewgenics.exe",
+        "filesize": "4.15 G",
+        "link_ctime": "2026.02.11",
+        "filesize_z": 4458700160,
+        "filename": "Mewgenics v1.0",
         "server": "t"
       }
     ]
@@ -22941,8 +23481,17 @@
     "categories": "模拟经营",
     "post_title": "牧场模拟器/Ranch Simulator - Build, Farm, Hunt",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1119730/header.jpg?t=1721653294",
-    "filesize": "8.34 G",
+    "filesize": "10.85 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/zymyym6VFFjm?pwd=tyy4",
+        "openpath": "Ranch Simulator  v1.182S/Ranch_Simulator/Binaries/Win64/Ranch_Simulator-Win64-Shipping.exe",
+        "filesize": "10.85 G",
+        "link_ctime": "2026.02.10",
+        "filesize_z": 11646873542,
+        "filename": "Ranch Simulator  v1.182S",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/NruABbUBjiQ3?pwd=tl0k",
         "openpath": "Ranch.Simulator.Build.Farm.Hunt v1.033s/Ranch_Simulator/Binaries/Win64/Ranch_Simulator-Win64-Shipping.exe",
@@ -23453,6 +24002,25 @@
         "link_ctime": "2024.04.17",
         "filesize_z": 7309254137,
         "filename": "Hello.Neighbor.2.v1.3.0.19",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 102212,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "你有饼吗/Omelet You Cook",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3205380/e92a46544c752dd2e59cd26bc4825dd8f7804e29/header_alt_assets_2_schinese.jpg?t=1770802203",
+    "filesize": "180.43 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uuUbQjrYb6bi?pwd=hdq7",
+        "openpath": "Omelet You Cook v1.02/Omelet You Cook.exe",
+        "filesize": "180.43 M",
+        "link_ctime": "2026.02.11",
+        "filesize_z": 189195960,
+        "filename": "Omelet You Cook v1.02",
         "server": "t"
       }
     ]
@@ -25487,6 +26055,25 @@
     ]
   },
   {
+    "id": 100962,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "前线任务3：重制版/Front Mission 3 Remake",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3795900/01921aaee0c4a45dbf883023a390f5a5b4ff1577/header.jpg?t=1769785167",
+    "filesize": "9 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uqERzqjA3qaa?pwd=roi6",
+        "openpath": "FRONT MISSION 3 Remake/Front Mission 3 Remake.exe",
+        "filesize": "9 G",
+        "link_ctime": "2026.01.31",
+        "filesize_z": 9661495062,
+        "filename": "FRONT MISSION 3 Remake",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 43554,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -26822,6 +27409,25 @@
     ]
   },
   {
+    "id": 101632,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "仁王3：数字豪华版/Nioh 3 Deluxe Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3681010/a21264e9fd476dcb2901c2432b598107d024c5a8/header.jpg?t=1770368915",
+    "filesize": "86.64 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/yMZ7Zz3q2aae?pwd=1p5m",
+        "openpath": "Nioh3 v1.02.02/Nioh3.exe",
+        "filesize": "86.64 G",
+        "link_ctime": "2026.02.06",
+        "filesize_z": 93031465852,
+        "filename": "Nioh3 v1.02.02",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 75678,
     "category_parent": 5,
     "categories": "策略战棋",
@@ -27263,6 +27869,25 @@
         "link_ctime": "2024.03.31",
         "filesize_z": 53301138718,
         "filename": "Yakuza Like a Dragon",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101466,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "如龙8：无尽财富 究极版 (只支持AMD)/Like a Dragon: Infinite Wealth – Ultimate Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2072450/header_schinese.jpg?t=1763646953",
+    "filesize": "72.78 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/AJzm2qeuQ3Af?pwd=jjw7",
+        "openpath": "LikeADragon8 v1.20/runtime/media/likeadragon8.exe",
+        "filesize": "72.78 G",
+        "link_ctime": "2026.02.03",
+        "filesize_z": 78145294596,
+        "filename": "LikeADragon8 v1.20",
         "server": "t"
       }
     ]
@@ -27871,6 +28496,25 @@
         "link_ctime": "2025.06.18",
         "filesize_z": 2605016439,
         "filename": "SaGaSCARLETGRACE  v1.0.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101222,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "沙龙模拟器/Saloon Simulator: Prologue",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2419710/6dadf4837fd04fa0fa924fc51e7c58f795778ca4/header.jpg?t=1757331420",
+    "filesize": "8.34 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/yyMrienY3Yrm?pwd=6c9w",
+        "openpath": "Saloon Simulator v0.5.5/Windows/SaloonSimulator.exe",
+        "filesize": "8.34 G",
+        "link_ctime": "2026.02.01",
+        "filesize_z": 8956573117,
+        "filename": "Saloon Simulator v0.5.5",
         "server": "t"
       }
     ]
@@ -28721,6 +29365,25 @@
     ]
   },
   {
+    "id": 100790,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "神来之笔：心之奇旅/The Perfect Pencil",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1858810/942dc444829ca80378fe40901bd6ece13ff48417/header_schinese.jpg?t=1769682572",
+    "filesize": "1.71 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FRfABrBjyIvm?pwd=gyd6",
+        "openpath": "The Perfect Pencil v20260130/The Perfect Pencil.exe",
+        "filesize": "1.71 G",
+        "link_ctime": "2026.01.30",
+        "filesize_z": 1832928883,
+        "filename": "The Perfect Pencil v20260130",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 31066,
     "category_parent": 5,
     "categories": "体育竞速",
@@ -29161,10 +29824,19 @@
     "id": 16386,
     "category_parent": 5,
     "categories": "动作冒险",
-    "post_title": "生化危机4：重制版/Resident Evil 4",
+    "post_title": "生化危机4：重制版 – 黄金版/Resident Evil 4 Remake Gold Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2050650/header.jpg?t=1707455805",
-    "filesize": "55.93 G",
+    "filesize": "67.01 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7fe6vuqUVnme?pwd=p4cy",
+        "openpath": "Resident Evil 4 Remake Gold Edition/steamclient_loader_x64.exe",
+        "filesize": "67.01 G",
+        "link_ctime": "2026.02.04",
+        "filesize_z": 71954055497,
+        "filename": "RESIDENT EVIL 4  BIOHAZARD RE4",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/jAZvAvFBbIri?pwd=fo9t",
         "openpath": "Resident Evil 4/re4.exe",
@@ -29324,6 +29996,25 @@
         "link_ctime": "2024.12.15",
         "filesize_z": 16063040647,
         "filename": "Trials of Mana",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101605,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "圣灵家族/Rinato.Arcana Famiglia Rinato",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3532400/47e0f30566ebcf04b1b4fce29d8a7de59dc33b5f/header_schinese.jpg?t=1770342421",
+    "filesize": "2.1 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Fj2QBfE7nUji?pwd=4e56",
+        "openpath": "Arcana_Famiglia_Rinato/Arcana_Famiglia_Rinato.exe",
+        "filesize": "2.1 G",
+        "link_ctime": "2026.02.06",
+        "filesize_z": 2259970264,
+        "filename": "Arcana_Famiglia_Rinato",
         "server": "t"
       }
     ]
@@ -30411,6 +31102,25 @@
     ]
   },
   {
+    "id": 100992,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "嗜血之王：崛起/Vampires: Bloodlord Rising",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2191500/1eaa22fecc6801b29bc0edc5671b0d4a4e997c3d/header_alt_assets_0_schinese.jpg?t=1769810029",
+    "filesize": "17.92 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/jQvANv2YRr22?pwd=50im",
+        "openpath": "Vampires Bloodlord Rising v1.0.1/VBR.exe",
+        "filesize": "17.92 G",
+        "link_ctime": "2026.01.31",
+        "filesize_z": 19242018496,
+        "filename": "Vampires Bloodlord Rising v1.0.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 50791,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -30444,6 +31154,25 @@
         "link_ctime": "2024.04.11",
         "filesize_z": 42866608343,
         "filename": "shr",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 102119,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "手倒立汉克/Handstand Hank",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3308150/bbe11354e778becb1583409fe7bea699e7d9f21b/header.jpg?t=1750490610",
+    "filesize": "7.11 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/zy6RB3nAFVRn?pwd=8zdm",
+        "openpath": "Handstand Hank  v1.2/HandstandHank.exe",
+        "filesize": "7.11 G",
+        "link_ctime": "2026.02.11",
+        "filesize_z": 7629465510,
+        "filename": "Handstand Hank  v1.2",
         "server": "t"
       }
     ]
@@ -31032,8 +31761,17 @@
     "categories": "动作冒险",
     "post_title": "斯盖尔仪式/Sker Ritual",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1492070/header_schinese.jpg?t=1721652029",
-    "filesize": "10.37 G",
+    "filesize": "11.4 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/EZzyAzfUn6b2?pwd=8xel",
+        "openpath": "Sker Ritual v1.3.3.25618/SkerRitual.exe",
+        "filesize": "11.4 G",
+        "link_ctime": "2026.01.29",
+        "filesize_z": 12238221204,
+        "filename": "Sker Ritual v1.3.3.25618",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/uYfAreIFjEZb?pwd=3e02",
         "openpath": "Sker.Ritual.Build.13759238/SkerRitual.exe",
@@ -31919,6 +32657,25 @@
     ]
   },
   {
+    "id": 100685,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "索尼克：未知边境 – 数字豪华版/Sonic Frontiers – Digital Deluxe",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1237320/header_schinese.jpg?t=1763684832",
+    "filesize": "34.4 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/be6RRjJBf2am?pwd=n0t5",
+        "openpath": "Sonic Frontiers v1.42/SonicFrontiers.exe",
+        "filesize": "34.4 G",
+        "link_ctime": "2026.01.29",
+        "filesize_z": 36939114599,
+        "filename": "Sonic Frontiers v1.42",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 97718,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -31933,6 +32690,25 @@
         "link_ctime": "2025.12.28",
         "filesize_z": 17896668584,
         "filename": "Sonic Colors Ultimate",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 102019,
+    "category_parent": 5,
+    "categories": "体育竞速",
+    "post_title": "索尼克赛车：交叉世界 – 数字豪华版/Sonic Racing CrossWorlds – Digital Deluxe Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2486820/header_schinese.jpg?t=1768987935",
+    "filesize": "16.48 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JvuyEzrei6Nr?pwd=4ayc",
+        "openpath": "SonicRacingCrossWorlds/使用教程.docx",
+        "filesize": "16.48 G",
+        "link_ctime": "2026.02.10",
+        "filesize_z": 17694747489,
+        "filename": "SonicRacingCrossWorlds",
         "server": "t"
       }
     ]
@@ -32323,8 +33099,17 @@
     "categories": "休闲益智",
     "post_title": "泰拉瑞亚/Terraria",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/105600/header.jpg?t=1666290860",
-    "filesize": "17.98 M",
+    "filesize": "609.9 M",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/mqyYFnArqeYv?pwd=fj6j",
+        "openpath": "Terraria v1.4.5.3/Terraria.exe",
+        "filesize": "609.9 M",
+        "link_ctime": "2026.02.06",
+        "filesize_z": 639524443,
+        "filename": "Terraria v1.4.5.3",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/u6RzE3zUVbi2?pwd=1kkl",
         "openpath": "Terraria.Build.13650765/Terraria.exe",
@@ -32721,6 +33506,25 @@
         "link_ctime": "2025.08.07",
         "filesize_z": 21974097873,
         "filename": "SWAT Commander v.0.7.7.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101374,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "特斯拉密室/The House of Tesla",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2738230/header.jpg?t=1768909720",
+    "filesize": "7.59 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/aaaQRrvuUrUf?pwd=ecr1",
+        "openpath": "The House of Tesla/The House of Tesla.exe",
+        "filesize": "7.59 G",
+        "link_ctime": "2026.02.02",
+        "filesize_z": 8144699438,
+        "filename": "The House of Tesla",
         "server": "t"
       }
     ]
@@ -33561,6 +34365,25 @@
     ]
   },
   {
+    "id": 102076,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "挖掘岛/Dig Island",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3919360/e6e1d31ece7ef227107103841a83c8ac42d9589a/header.jpg?t=1770645257",
+    "filesize": "4.2 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/YRzMjqrmIZzm?pwd=t903",
+        "openpath": "Dig Island v0.1.6/GraveLayer.exe",
+        "filesize": "4.2 G",
+        "link_ctime": "2026.02.10",
+        "filesize_z": 4510796266,
+        "filename": "Dig Island v0.1.6",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 74309,
     "category_parent": 5,
     "categories": "模拟经营",
@@ -34262,6 +35085,25 @@
     ]
   },
   {
+    "id": 100555,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "维拉克塔尔/Viractal",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2909580/1336ef438213cafcdbf9f62436218321110fa493/header_schinese.jpg?t=1769564493",
+    "filesize": "2.39 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/jyIFr2iIVRby?pwd=0uvf",
+        "openpath": "VIractal v1.0.0/VIractal.exe",
+        "filesize": "2.39 G",
+        "link_ctime": "2026.01.28",
+        "filesize_z": 2567282763,
+        "filename": "VIractal v1.0.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 99801,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -34352,6 +35194,25 @@
         "link_ctime": "2026.01.09",
         "filesize_z": 1385000330,
         "filename": "Cozy Caravan",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101948,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "温馨小木屋/Log Away",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3468400/944d5e5a6a199dff7e6073826b5c0cc5b2ea0e70/header.jpg?t=1765844225",
+    "filesize": "5.31 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/meqQreVzmM7b?pwd=ugg0",
+        "openpath": "Log Away/LogAway.exe",
+        "filesize": "5.31 G",
+        "link_ctime": "2026.02.08",
+        "filesize_z": 5697455477,
+        "filename": "Log Away",
         "server": "t"
       }
     ]
@@ -34950,6 +35811,25 @@
         "link_ctime": "2024.05.10",
         "filesize_z": 2984778670,
         "filename": "Infection.Free.Zone v0.24.4.15",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 100875,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "无尽爱丽丝/Endless Alice",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1425000/header.jpg?t=1768785238",
+    "filesize": "6.72 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FFfe2mrAj6Nn?pwd=ye7v",
+        "openpath": "Endless Alice/EndlessAlice.exe",
+        "filesize": "6.72 G",
+        "link_ctime": "2026.01.31",
+        "filesize_z": 7216395461,
+        "filename": "Endless Alice",
         "server": "t"
       }
     ]
@@ -37132,6 +38012,25 @@
     ]
   },
   {
+    "id": 101530,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "星萼/Calyx",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3211850/0eaafe099b1cfb1df60cc6f5db276ae170517492/header_alt_assets_3_schinese.jpg?t=1769702642",
+    "filesize": "3.35 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/bm2qaqvEz6vi?pwd=lue6",
+        "openpath": "Calyx v0.0.6.3/Calyx.exe",
+        "filesize": "3.35 G",
+        "link_ctime": "2026.02.05",
+        "filesize_z": 3599570396,
+        "filename": "Calyx v0.0.6.3",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 58813,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -37672,6 +38571,25 @@
     ]
   },
   {
+    "id": 100662,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "星之侵略者/Star★Vaders",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2097570/d1b9f942d77a2559030e46d545d9a1c07b505f4e/header_alt_assets_4.jpg?t=1768670760",
+    "filesize": "738.94 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Yz2QrajEBN3q?pwd=ma3g",
+        "openpath": "StarVaders v2.0.3/StarVaders.exe",
+        "filesize": "738.94 M",
+        "link_ctime": "2026.01.29",
+        "filesize_z": 774835337,
+        "filename": "StarVaders v2.0.3",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 42725,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -38014,6 +38932,25 @@
     ]
   },
   {
+    "id": 101507,
+    "category_parent": 5,
+    "categories": "体育竞速",
+    "post_title": "雪地飞驰/Sledders",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2486740/ce9812db112341f1d71cc9a16d2c800c2abb386a/header_alt_assets_1.jpg?t=1766054910",
+    "filesize": "9.45 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/viqe6fjm63Yj?pwd=po9b",
+        "openpath": "Sledders v1.1.4/Sledders.exe",
+        "filesize": "9.45 G",
+        "link_ctime": "2026.02.05",
+        "filesize_z": 10145579390,
+        "filename": "Sledders v1.1.4",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 14272,
     "category_parent": 5,
     "categories": "策略战棋",
@@ -38261,6 +39198,25 @@
     ]
   },
   {
+    "id": 101036,
+    "category_parent": 5,
+    "categories": "恐怖惊悚",
+    "post_title": "循环恐惧/Fear The Timeloop",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2918090/3643a6fdbea6666d967b6cc41c22670358ccf906/header.jpg?t=1769876613",
+    "filesize": "19.2 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fmQfYn26r67b?pwd=37ai",
+        "openpath": "Fear The Timeloop/FearTheTimeloop.exe",
+        "filesize": "19.2 G",
+        "link_ctime": "2026.02.01",
+        "filesize_z": 20616964908,
+        "filename": "Fear The Timeloop",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 17716,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -38293,6 +39249,25 @@
         "link_ctime": "2024.04.29",
         "filesize_z": 820749411,
         "filename": "Ravenswatch",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101757,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "雅皮雅普/Yapyap",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3834090/399b7aa5bd9ea359e6d77cec3032758ea27c597b/header.jpg?t=1770248045",
+    "filesize": "756.18 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JVbmU3ZfeeEj?pwd=w9jo",
+        "openpath": "YAPYAP/yapyap.exe",
+        "filesize": "756.18 M",
+        "link_ctime": "2026.02.07",
+        "filesize_z": 792914441,
+        "filename": "YAPYAP",
         "server": "t"
       }
     ]
@@ -39612,15 +40587,15 @@
     "categories": "动作冒险",
     "post_title": "异形：夺命舰 – 进化 豪华版/Alien: Rogue Incursion Evolved Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3655390/0e501987ea970bd9aab9c2959b37f2e442d2079d/header.jpg?t=1759248016",
-    "filesize": "19.18 G",
+    "filesize": "19.05 G",
     "GetFileInfo": [
       {
-        "DownUrl": "https://cloud.189.cn/t/VvQFzaeAJf6n?pwd=5f17",
-        "openpath": "Alien Rogue Incursion Evolved Edition/",
-        "filesize": "19.18 G",
-        "link_ctime": "2025.10.02",
-        "filesize_z": 20597391437,
-        "filename": "Alien Rogue Incursion Evolved Edition",
+        "DownUrl": "https://cloud.189.cn/t/YFNnuizqamiu?pwd=9wch",
+        "openpath": "Alien Rogue Incursion Evolved Edition v1.1.1/Midnight.exe",
+        "filesize": "19.05 G",
+        "link_ctime": "2026.02.09",
+        "filesize_z": 20458000862,
+        "filename": "Alien Rogue Incursion Evolved Edition v1.1.1",
         "server": "t"
       }
     ]
@@ -41174,6 +42149,34 @@
     ]
   },
   {
+    "id": 35616,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "雨世界：傾盆大雨/Rain World: Downpour",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1933390/header_schinese.jpg?t=1707800144",
+    "filesize": "5.67 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fmaiIfa2QJvi?pwd=9ejd",
+        "openpath": "Rain World v1.11.6/RainWorld.exe",
+        "filesize": "5.67 G",
+        "link_ctime": "2026.02.08",
+        "filesize_z": 6091018061,
+        "filename": "Rain World v1.11.6",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/RbU3An36reAn?pwd=117y",
+        "openpath": "Rain World v1.9.15/RainWorld.exe",
+        "filesize": "5.47 G",
+        "link_ctime": "2024.03.22",
+        "filesize_z": 5871923333,
+        "filename": "Rain World v1.9.15",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 43312,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -41976,6 +42979,25 @@
         "link_ctime": "2024.11.04",
         "filesize_z": 7885119495,
         "filename": "Occupy Mars The Game v0.185.2",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 101092,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "占领火星/Occupy Mars: The Game",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/758690/5e85d26f417cae649f23cf0b422635d9ad24ec14/header_alt_assets_8.jpg?t=1769797632",
+    "filesize": "9.9 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uYjayqJNryue?pwd=q1zv",
+        "openpath": "Occupy Mars The Game v1.0.2/Launcher.exe",
+        "filesize": "9.9 G",
+        "link_ctime": "2026.02.01",
+        "filesize_z": 10631651931,
+        "filename": "Occupy Mars The Game v1.0.2",
         "server": "t"
       }
     ]
@@ -44350,6 +45372,25 @@
     ]
   },
   {
+    "id": 100760,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "筑城记：中世纪/City Tales – Fluffy Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3265070/95c6ba00743d9af7ca7ac8807f1f09d94b4556d4/header_schinese.jpg?t=1769710033",
+    "filesize": "2.07 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fmIZr2yeyaYf?pwd=vq5d",
+        "openpath": "City Tales - Medieval Era v1.0.0.4/City Tales.exe",
+        "filesize": "2.07 G",
+        "link_ctime": "2026.01.30",
+        "filesize_z": 2224506306,
+        "filename": "City Tales - Medieval Era v1.0.0.4",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 41457,
     "category_parent": 5,
     "categories": "模拟经营",
@@ -44876,6 +45917,25 @@
         "link_ctime": "2025.04.27",
         "filesize_z": 157079477455,
         "filename": "FINAL FANTASY XVI  v1.03",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 100856,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "最终幻想4：3D重制版/Final Fantasy IV (3D Remake)",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/312750/header.jpg?t=1769655089",
+    "filesize": "610.6 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/quuquaJ7BVVf?pwd=na5j",
+        "openpath": "Final Fantasy IV/FF4_Launcher.exe",
+        "filesize": "610.6 M",
+        "link_ctime": "2026.01.31",
+        "filesize_z": 640265019,
+        "filename": "Final Fantasy IV",
         "server": "t"
       }
     ]
@@ -45774,6 +46834,25 @@
     ]
   },
   {
+    "id": 101329,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "Million Depth",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2555950/8db98d71aa3de6c10c4fe5160fc2ac03ed1802de/header.jpg?t=1765790440",
+    "filesize": "492.73 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/y6NBnyquA7Fz?pwd=sw3j",
+        "openpath": "Million Depth v1.08.06/MillionDepth.exe",
+        "filesize": "492.73 M",
+        "link_ctime": "2026.02.02",
+        "filesize_z": 516660075,
+        "filename": "Million Depth v1.08.06",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 66579,
     "category_parent": 5,
     "categories": "休闲益智",
@@ -45902,25 +46981,6 @@
         "link_ctime": "2025.07.28",
         "filesize_z": 14221645784,
         "filename": "PGA TOUR 2K23",
-        "server": "t"
-      }
-    ]
-  },
-  {
-    "id": 35616,
-    "category_parent": 5,
-    "categories": "动作冒险",
-    "post_title": "Rain World: Downpour/雨世界：傾盆大雨",
-    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1933390/header_schinese.jpg?t=1707800144",
-    "filesize": "5.47 G",
-    "GetFileInfo": [
-      {
-        "DownUrl": "https://cloud.189.cn/t/RbU3An36reAn?pwd=117y",
-        "openpath": "Rain World v1.9.15/RainWorld.exe",
-        "filesize": "5.47 G",
-        "link_ctime": "2024.03.22",
-        "filesize_z": 5871923333,
-        "filename": "Rain World v1.9.15",
         "server": "t"
       }
     ]
