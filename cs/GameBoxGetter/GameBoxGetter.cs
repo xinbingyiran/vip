@@ -128,7 +128,7 @@ async Task<RetryResult> MainLoopAsync(int urlIndex, CancellationToken token)
             Console.WriteLine($"未获取到内容：{cat}");
             return RetryResult.Failure;
         }
-        await File.WriteAllTextAsync(filename, JsonSerializer.Serialize([.. items.Values.OrderBy(s => s.PostTitle)], JsonElementContext.Custom.GameBoxItemArray), token);
+        await File.WriteAllTextAsync(filename, JsonSerializer.Serialize([.. items.Values.OrderBy(s => s.ID)], JsonElementContext.Custom.GameBoxItemArray), token);
         Console.WriteLine($"结果保存到以下文件：{filename}");
     }
     return RetryResult.Success;
