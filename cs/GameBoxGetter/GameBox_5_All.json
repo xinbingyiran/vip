@@ -13971,7 +13971,7 @@
     "categories": "动作冒险",
     "post_title": "无人深空/No Man's Sky",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/275850/header_alt_assets_24.jpg?t=1721300183",
-    "filesize": "18.57 G",
+    "filesize": "26.12 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/eIZRfamMriaa?pwd=9dz5",
@@ -13998,6 +13998,15 @@
         "link_ctime": "2024.03.29",
         "filesize_z": 15473003041,
         "filename": "No.Mans.Sky.v4.62",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/7viEbmIZnUje?pwd=38iv",
+        "openpath": "No Man s Sky v6.22/Binaries/NMS.exe",
+        "filesize": "26.12 G",
+        "link_ctime": "2026.02.25",
+        "filesize_z": 28046541385,
+        "filename": "No Man s Sky v6.22",
         "server": "t"
       }
     ]
@@ -48156,6 +48165,25 @@
         "link_ctime": "2026.02.24",
         "filesize_z": 22789306542,
         "filename": "Nice City",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 103297,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "王权：巫师/Reigns The Witcher",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1651600/2aa3c244a1464e731723d59510682a0063fb6bac/header.jpg?t=1772038304",
+    "filesize": "135.85 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/3UBrQnnYJz6r?pwd=4jji",
+        "openpath": "Reigns The Witcher/ReignsWitcher.exe",
+        "filesize": "135.85 M",
+        "link_ctime": "2026.02.26",
+        "filesize_z": 142450606,
+        "filename": "Reigns The Witcher",
         "server": "t"
       }
     ]
