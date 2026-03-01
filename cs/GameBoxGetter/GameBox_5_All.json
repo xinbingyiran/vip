@@ -33414,7 +33414,7 @@
     "categories": "模拟经营",
     "post_title": "酒店建筑师/Hotel Architect",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1602000/header_schinese.jpg?t=1747821093",
-    "filesize": "1.2 G",
+    "filesize": "1.1 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/qUvU32fQrYzy?pwd=k7de",
@@ -33423,6 +33423,15 @@
         "link_ctime": "2025.05.25",
         "filesize_z": 1293107567,
         "filename": "Hotel Architect v20250524",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/yqui2yZjyIV3?pwd=3zlj",
+        "openpath": "Hotel Architect v0.9.1.7/HotelArchitect.exe",
+        "filesize": "1.1 G",
+        "link_ctime": "2026.03.01",
+        "filesize_z": 1178667463,
+        "filename": "Hotel Architect v0.9.1.7",
         "server": "t"
       }
     ]
@@ -48184,6 +48193,120 @@
         "link_ctime": "2026.02.26",
         "filesize_z": 142450606,
         "filename": "Reigns The Witcher",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 103327,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "绯夜传奇 重制版/Tales of Berseria Remastered",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2331020/a63fe835f13ab49b51934ef1bfd7f738c0c816a9/header_tchinese.jpg?t=1772147146",
+    "filesize": "13.3 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2aQ3ieYZ3mMn?pwd=nyy7",
+        "openpath": "Tales of Berseria Remastered/Tales of Berseria Remastered.exe",
+        "filesize": "13.3 G",
+        "link_ctime": "2026.02.27",
+        "filesize_z": 14286048949,
+        "filename": "Tales of Berseria Remastered",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 103333,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "勇闯荒野：豪华版/Towerborne",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2458830/0cf778730215400a8dad3a89fbf8787ccf27b33f/header.jpg?t=1772143614",
+    "filesize": "19.53 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/nIn2qa3A36Fj?pwd=ah9r",
+        "openpath": "Towerborne/Belfry.exe",
+        "filesize": "19.53 G",
+        "link_ctime": "2026.02.27",
+        "filesize_z": 20971327184,
+        "filename": "Towerborne",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 103383,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "覆巢之地/Nested Lands",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2553040/244aa1623e5735802850af2adc8cd28b69c887f8/header_schinese.jpg?t=1772038951",
+    "filesize": "6.43 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/rm2QzabIr6Zr?pwd=xgb1",
+        "openpath": "Nested Lands v0.7.8.6/Nested Lands.exe",
+        "filesize": "6.43 G",
+        "link_ctime": "2026.02.28",
+        "filesize_z": 6903053867,
+        "filename": "Nested Lands v0.7.8.6",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 103389,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "心灵杀手：重制版/Alan Wake Remastered",
+    "wp_get_attachment_image_src": "https://img.kelongwo.uk/wp-content/uploads/2026/02/2026022820534667.png",
+    "filesize": "28.77 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/iUBFRn32eYVr?pwd=tda7",
+        "openpath": "Alan Wake Remastered v1.3/Game_f_x64_EOS.exe",
+        "filesize": "28.77 G",
+        "link_ctime": "2026.02.28",
+        "filesize_z": 30894917395,
+        "filename": "Alan Wake Remastered v1.3",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 103415,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "坦克小队/Tank Squad",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1498130/264e2d479c89c8fde4b44662607f59c45d6e8d09/header_schinese.jpg?t=1770383975",
+    "filesize": "11.41 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ANRVny6NRRZb?pwd=wnp8",
+        "openpath": "Tank Squad v1.2.2/TankSquad.exe",
+        "filesize": "11.41 G",
+        "link_ctime": "2026.02.28",
+        "filesize_z": 12246094467,
+        "filename": "Tank Squad v1.2.2",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 103486,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "割草模拟器/Lawn Mowing Simulator",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1480560/header_schinese.jpg?t=1761138497",
+    "filesize": "15.49 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fQRfyyFneEja?pwd=sl2x",
+        "openpath": "Lawn Mowing Simulator/Lawn Mowing Simulator.exe",
+        "filesize": "15.49 G",
+        "link_ctime": "2026.03.01",
+        "filesize_z": 16634547406,
+        "filename": "Lawn Mowing Simulator",
         "server": "t"
       }
     ]

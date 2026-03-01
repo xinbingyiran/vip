@@ -1,4 +1,6 @@
-﻿- [文件浏览](./list.php) 
+﻿## 常用站点导航
+
+- [文件浏览](./list.php) 
 [文件管理](./fm.php) 
 [方块游戏](./t/index.html) 
 [通用请求](./html/getpost.html)
@@ -41,7 +43,6 @@
 - [423down](https://www.423down.com)
 [易破姐](https://www.ypojie.com/)
 [异星软件空间](https://www.yxssp.com/)
-[枫音应用](https://www.fy6b.com/)
 [绿软小站](https://www.gndown.com/)
 [果核剥壳](https://www.ghxi.com/)
 - [蓝点CDN](https://dl.lancdn.com/landian)[`蓝点网`](https://www.landian.vip/)
