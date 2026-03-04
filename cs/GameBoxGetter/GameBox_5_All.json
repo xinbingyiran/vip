@@ -16421,7 +16421,7 @@
     "categories": "模拟经营",
     "post_title": "工业巨头/Captain of Industry",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1594320/header.jpg?t=1721680882",
-    "filesize": "1.3 G",
+    "filesize": "2.54 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/B73EVn67vQZf?pwd=1ua2",
@@ -16430,6 +16430,15 @@
         "link_ctime": "2024.04.27",
         "filesize_z": 1394534603,
         "filename": "Captain.of.Industry v0.6.3",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/aIJFBnJJ7Z7z?pwd=9rt8",
+        "openpath": "Captain of Industry v0.7.9a/steamclient_loader.exe",
+        "filesize": "2.54 G",
+        "link_ctime": "2026.03.02",
+        "filesize_z": 2732597937,
+        "filename": "Captain of Industry v0.7.9a",
         "server": "t"
       }
     ]
@@ -28434,7 +28443,7 @@
     "categories": "模拟经营",
     "post_title": "三维弹球/Pinball FX",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2328760/header.jpg?t=1734082312",
-    "filesize": "39.06 G",
+    "filesize": "44.98 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/mErUrq3Mviiu?pwd=qrd8",
@@ -28443,6 +28452,15 @@
         "link_ctime": "2024.12.14",
         "filesize_z": 41937086554,
         "filename": "Pinball.FX v1.0.23",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/6beEfmfEVfqm?pwd=r0xe",
+        "openpath": "Pinball FX 2023 v1.0.32/PinballFX.exe",
+        "filesize": "44.98 G",
+        "link_ctime": "2026.03.03",
+        "filesize_z": 48296804602,
+        "filename": "Pinball FX 2023 v1.0.32",
         "server": "t"
       }
     ]
@@ -37417,7 +37435,7 @@
     "categories": "动作冒险",
     "post_title": "特警指挥官/SWAT Commander",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1619310/45743195306d79320a5a935504bbb54f0316714e/header.jpg?t=1754426001",
-    "filesize": "20.46 G",
+    "filesize": "23.85 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/vmaQnqZZnARr?pwd=i2ms",
@@ -37426,6 +37444,15 @@
         "link_ctime": "2025.08.07",
         "filesize_z": 21974097873,
         "filename": "SWAT Commander v.0.7.7.1",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/YBfi6nq2EvAz?pwd=1mas",
+        "openpath": "SWAT Commander v.0.7.9.1/SWATCommander.exe",
+        "filesize": "23.85 G",
+        "link_ctime": "2026.03.04",
+        "filesize_z": 25612471979,
+        "filename": "SWAT Commander v.0.7.9.1",
         "server": "t"
       }
     ]
@@ -48307,6 +48334,101 @@
         "link_ctime": "2026.03.01",
         "filesize_z": 16634547406,
         "filename": "Lawn Mowing Simulator",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 103563,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "嘘, 美女拍摄中/Heroines Through My Lens",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4057050/26a27d230f13ea6685078d0b3c64810e4ffaa679/header_tchinese.jpg?t=1769481546",
+    "filesize": "30.64 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/MrEJJjeuaEji?pwd=qk3s",
+        "openpath": "Heroines Through My Lens/Windows/HTML.exe",
+        "filesize": "30.64 G",
+        "link_ctime": "2026.03.02",
+        "filesize_z": 32895439400,
+        "filename": "Heroines Through My Lens",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 103587,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "城市猎人/City Hunter",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3984650/b96287635ee952ce80209f86ee7656c09c4830a5/header_schinese.jpg?t=1772031529",
+    "filesize": "338.34 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uyiuyiMR3aEn?pwd=9vfp",
+        "openpath": "CityHunter/CityHunter.exe",
+        "filesize": "338.34 M",
+        "link_ctime": "2026.03.02",
+        "filesize_z": 354780189,
+        "filename": "CityHunter",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 103614,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "吸血鬼搞事情/Dracu Riot",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1340140/75ba2e2981d612e3afd7f358c0c1801b41efa16d/header.jpg?t=1772188047",
+    "filesize": "4.7 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uA3y2yaUFjQn?pwd=a9ar",
+        "openpath": "Dracu Riot/dracuriot.exe",
+        "filesize": "4.7 G",
+        "link_ctime": "2026.03.03",
+        "filesize_z": 5046647931,
+        "filename": "Dracu Riot",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 103641,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "刺客信条：幻景 – 刺客大师版/Assassin’s Creed Mirage Master Assassin Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3035570/0a5f6e1f3cc4cc9215752fd930a09b89e69d3331/header_schinese.jpg?t=1766087993",
+    "filesize": "62.84 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ju2I7zyURRFb?pwd=b97z",
+        "openpath": "Assassin s Creed Mirage v1.1.1/ACMirage.exe",
+        "filesize": "62.84 G",
+        "link_ctime": "2026.03.03",
+        "filesize_z": 67472202058,
+        "filename": "Assassin s Creed Mirage v1.1.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 103687,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "风马传说/The Legend of Khiimori",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2697000/58512e9ea2f796098e09e6edae8315258259ccc8/header.jpg?t=1772552232",
+    "filesize": "18.56 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7F7R7nNRZnqy?pwd=td8b",
+        "openpath": "The Legend of Khiimori v0.5.0/LegendOfKhiimori.exe",
+        "filesize": "18.56 G",
+        "link_ctime": "2026.03.04",
+        "filesize_z": 19925799799,
+        "filename": "The Legend of Khiimori v0.5.0",
         "server": "t"
       }
     ]
