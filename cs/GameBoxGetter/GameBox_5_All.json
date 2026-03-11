@@ -1225,7 +1225,7 @@
     "categories": "模拟经营",
     "post_title": "城市：天际线/Cities: Skylines",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/255710/header.jpg?t=1720717736",
-    "filesize": "10.42 G",
+    "filesize": "10.38 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/B3IBVvEZFZ3m?pwd=uyn1",
@@ -1234,6 +1234,15 @@
         "link_ctime": "2024.05.29",
         "filesize_z": 11184697768,
         "filename": "Cities Skylines V1.17.1.F4",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/UvM3Mfumee22?pwd=0aqu",
+        "openpath": "Cities Skylines Race Day v1.21.1/Cities.exe",
+        "filesize": "10.38 G",
+        "link_ctime": "2026.03.11",
+        "filesize_z": 11150240075,
+        "filename": "Cities Skylines Race Day v1.21.1",
         "server": "t"
       }
     ]
@@ -4370,6 +4379,15 @@
         "filesize": "8.3 G",
         "link_ctime": "2024.10.17",
         "filesize_z": 8914804504,
+        "filename": "TRIANGLE STRATEGY v1.1.0",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/j2yUryJv2Izu?pwd=zry2",
+        "openpath": "TRIANGLE STRATEGY v1.1.0/TRIANGLE_STRATEGY.exe",
+        "filesize": "8.3 G",
+        "link_ctime": "2026.03.09",
+        "filesize_z": 8914803410,
         "filename": "TRIANGLE STRATEGY v1.1.0",
         "server": "t"
       }
@@ -48714,6 +48732,101 @@
         "link_ctime": "2026.03.08",
         "filesize_z": 783769963,
         "filename": "The Walking Trade",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104310,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "勇者斗恶龙 I &amp; II HD-2D 重制版/DRAGON QUEST I and II HD-2D Remake",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2893570/e4f3f9bfa5dd3cda07574417ff339ca199ddde7a/header_schinese.jpg?t=1773044632",
+    "filesize": "15.01 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/a6nAJ3JFvmaa?pwd=2a67",
+        "openpath": "DRAGON QUEST I and II HD-2D Remake v1.0.2.0/DQIandIIHD2DRemake.exe",
+        "filesize": "15.01 G",
+        "link_ctime": "2026.03.11",
+        "filesize_z": 16117223453,
+        "filename": "DRAGON QUEST I and II HD-2D Remake v1.0.2.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104328,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "冥河：贪婪之刃/Styx: Blades of Greed",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3290690/3178b5fbb17af847cbdb9c12b3e818279c65c77b/header_schinese.jpg?t=1771586961",
+    "filesize": "20.04 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/yYbyimyaiIf2?pwd=th8u",
+        "openpath": "Styx3/Styx3.exe",
+        "filesize": "20.04 G",
+        "link_ctime": "2026.03.11",
+        "filesize_z": 21514486003,
+        "filename": "Styx3",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104334,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "播洛森：星原之种/Blossom The Seed Of Life",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3576870/f4108458c7de41a5e0652fe3da725cf1ced4e253/header_schinese.jpg?t=1773149679",
+    "filesize": "984.98 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/6JvmInRZvMbi?pwd=7sdx",
+        "openpath": "Blossom The Seed Of Life v1.0.8/Blossom The Seed Of Life.exe",
+        "filesize": "984.98 M",
+        "link_ctime": "2026.03.11",
+        "filesize_z": 1032828153,
+        "filename": "Blossom The Seed Of Life v1.0.8",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104339,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "STRANGER SAGA 《流浪者巴奇》与《伊斯基埃尔德的野心》",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3821860/16acbcaf98ec8d1e348c1e78eaee16bf47050bae/header.jpg?t=1756726273",
+    "filesize": "289.61 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JzuY7fyMvyiq?pwd=9uzt",
+        "openpath": "STRANGER SAGA/game.exe",
+        "filesize": "289.61 M",
+        "link_ctime": "2026.03.11",
+        "filesize_z": 303682034,
+        "filename": "STRANGER SAGA",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104396,
+    "category_parent": 5,
+    "categories": "体育竞速",
+    "post_title": "iRacing Arcade",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3226450/be5f3bc2000160583baf146d85f5cba767a8fa67/header.jpg?t=1772584334",
+    "filesize": "2.08 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ze2Q7jJZneU3?pwd=unx5",
+        "openpath": "iRacing Arcade/iracing-arcade.exe",
+        "filesize": "2.08 G",
+        "link_ctime": "2026.03.11",
+        "filesize_z": 2234805757,
+        "filename": "iRacing Arcade",
         "server": "t"
       }
     ]

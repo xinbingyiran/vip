@@ -199,7 +199,7 @@ async Task<RetryResult> AddListi(string url, ConcurrentDictionary<int, GameBoxIt
                         fileInfo = [.. findItem.GetFileInfo.Concat(fileInfo).Distinct()];
                         if (fileInfo.SequenceEqual(findItem.GetFileInfo))
                         {
-                            var tag = fileInfo.MaxBy(info => DateTime.TryParseExact(info.LinkCreateTime, "yyyy.mm.dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var time) ? time : DateTime.MinValue).LinkCreateTime ?? string.Empty;
+                            var tag = fileInfo.MaxBy(info => DateTime.TryParseExact(info.LinkCreateTime, "yyyy.MM.dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var time) ? time : DateTime.MinValue).LinkCreateTime ?? string.Empty;
                             var lastTag = tags.GetOrAdd(newItem.CategoryParent, tag);
                             if (lastTag != tag)
                             {
