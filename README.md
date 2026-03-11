@@ -20,7 +20,7 @@
 - [空洞骑士存档修改](./html/hkse/index.html)
  [91盘它](https://www.91panta.cn/)
  [小刀娱乐网](https://www.x6g.com/) [`地址2`](https://www.xd0.com/) [`发布页`](https://www.xiaodao.biz/)
-- [克隆窝](https://www.uy5.net/) [`备用`](http://103.39.221.38:8885/)
+- [克隆窝](https://www.uy5.net/) [`备用`](https://www.kelongwo.cn/) [`备用`](http://103.39.221.38:8885/)
  [机地](https://jidi520.com/)
  [小叽资源](https://steamzg.com/) [`发布页`](http://acgbns.com/)
  [koyso](https://koyso.to/) [`源网址`](https://koyso.com)
