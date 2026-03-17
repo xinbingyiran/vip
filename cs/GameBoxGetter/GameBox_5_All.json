@@ -52,7 +52,7 @@
     "categories": "休闲益智",
     "post_title": "泰拉瑞亚/Terraria",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/105600/header.jpg?t=1666290860",
-    "filesize": "609.9 M",
+    "filesize": "608.9 M",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/mqyYFnArqeYv?pwd=fj6j",
@@ -70,6 +70,15 @@
         "link_ctime": "2024.04.05",
         "filesize_z": 18849778,
         "filename": "Terraria.Build.13650765",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/maQJnqIVZzIj?pwd=he5j",
+        "openpath": "Terraria v1.4.5.6/Terraria.exe",
+        "filesize": "608.9 M",
+        "link_ctime": "2026.03.16",
+        "filesize_z": 638475349,
+        "filename": "Terraria v1.4.5.6",
         "server": "t"
       }
     ]
@@ -222,6 +231,25 @@
         "link_ctime": "2024.04.24",
         "filesize_z": 1875957274,
         "filename": "Teslagrad 2",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 14154,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "虚空列车/Voidtrain",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1159690/header_schinese.jpg?t=1721399567",
+    "filesize": "19.88 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/AVVvAzJZbiMz?pwd=1ebs",
+        "openpath": "Voidtrain.Build.22198392/VoidTrain/Binaries/Win64/VoidTrain-Win64-Shipping.exe",
+        "filesize": "19.88 G",
+        "link_ctime": "2026.03.16",
+        "filesize_z": 21349236275,
+        "filename": "Voidtrain.Build.22198392",
         "server": "t"
       }
     ]
@@ -33497,7 +33525,7 @@
     "categories": "动作冒险",
     "post_title": "二击必杀/Two Strikes",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1586750/e809eebafecb8d586f987fd5f85b131f8cbeb2ea/header_schinese.jpg?t=1748001627",
-    "filesize": "880.22 M",
+    "filesize": "1.03 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/zUJjmuaiuaE3?pwd=rca0",
@@ -33506,6 +33534,15 @@
         "link_ctime": "2025.05.25",
         "filesize_z": 922981035,
         "filename": "Two Strikes v1.0",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/ZvAJbqjyiE3e?pwd=vz1d",
+        "openpath": "TwoStrikes v20260314/TwoStrikes.exe",
+        "filesize": "1.03 G",
+        "link_ctime": "2026.03.15",
+        "filesize_z": 1100776977,
+        "filename": "TwoStrikes v20260314",
         "server": "t"
       }
     ]
@@ -34168,6 +34205,15 @@
         "filesize": "30.64 G",
         "link_ctime": "2025.06.04",
         "filesize_z": 32900148289,
+        "filename": "The Sinking City Remastered",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/EZB3aqEN3Uvi?pwd=9qzg",
+        "openpath": "The Sinking City Remastered/TheSinkingCityRemastered.exe",
+        "filesize": "30.64 G",
+        "link_ctime": "2026.03.13",
+        "filesize_z": 32900147794,
         "filename": "The Sinking City Remastered",
         "server": "t"
       }
@@ -48581,6 +48627,15 @@
         "filesize_z": 1156879257,
         "filename": "Slay the Spire 2",
         "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/iQbaqiAf6Rvi?pwd=lv6c",
+        "openpath": "Slay the Spire 2 v0.98.3/SlayTheSpire2.exe",
+        "filesize": "1.08 G",
+        "link_ctime": "2026.03.11",
+        "filesize_z": 1156890202,
+        "filename": "Slay the Spire 2 v0.98.3",
+        "server": "t"
       }
     ]
   },
@@ -48647,7 +48702,7 @@
     "categories": "动作冒险",
     "post_title": "零 ～红蝶～ 重制版/REMAKE with Pre-purchase Bonus",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3920610/f587e495374f75a16672dcd2589bafe7d1584a49/header_tchinese.jpg?t=1772765500",
-    "filesize": "14.39 G",
+    "filesize": "33.24 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/Zr2aeiAfURjy?pwd=wa47",
@@ -48656,6 +48711,15 @@
         "link_ctime": "2026.03.07",
         "filesize_z": 15450471395,
         "filename": "FatalFrameII Demo",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/6jUJNnuei2Av?pwd=vfr1",
+        "openpath": "FatalFrameII v1.02.01/FatalFrameII.exe",
+        "filesize": "33.24 G",
+        "link_ctime": "2026.03.12",
+        "filesize_z": 35689120545,
+        "filename": "FatalFrameII v1.02.01",
         "server": "t"
       }
     ]
@@ -48827,6 +48891,348 @@
         "link_ctime": "2026.03.11",
         "filesize_z": 2234805757,
         "filename": "iRacing Arcade",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104429,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "胡闹魔坊/The Artifactory",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3511520/ade6249a3054cc997d69940e480da74c0ef50c65/header.jpg?t=1773158431",
+    "filesize": "873.25 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/yyy6NjaM3uQf?pwd=inn2",
+        "openpath": "The Artifactory v1.0.43/TheArtifactory.exe",
+        "filesize": "873.25 M",
+        "link_ctime": "2026.03.11",
+        "filesize_z": 915673374,
+        "filename": "The Artifactory v1.0.43",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104435,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "贪婪之秋2：垂死世界/GreedFall: The Dying World",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1997660/9b6b3f954b063d533d4578b15fe7a84801244d91/header.jpg?t=1773218311",
+    "filesize": "62.14 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/VRrQRnaQraqi?pwd=0dbr",
+        "openpath": "GreedFall The Dying World/GreedFall2.exe",
+        "filesize": "62.14 G",
+        "link_ctime": "2026.03.11",
+        "filesize_z": 66717669003,
+        "filename": "GreedFall The Dying World",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104492,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "死而符生/Runeborn",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3073990/25e2c04f07c2e274bf89090de2bb8fc63d92ad23/header_schinese.jpg?t=1773151370",
+    "filesize": "1.14 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/jeUjaeVZzA3m?pwd=1gr3",
+        "openpath": "Runeborn v1.0.10/Runeborn.exe",
+        "filesize": "1.14 G",
+        "link_ctime": "2026.03.12",
+        "filesize_z": 1220800371,
+        "filename": "Runeborn v1.0.10",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104520,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "说谎公主与盲眼王子/PrincessAndPrince",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3901910/c5adc537533cdc01d1699c7ff7e3bd20e87b96c7/header_tchinese.jpg?t=1773241217",
+    "filesize": "2.9 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qINnmmFbammi?pwd=eoo0",
+        "openpath": "PrincessAndPrince/PrincessAndPrince.exe",
+        "filesize": "2.9 G",
+        "link_ctime": "2026.03.12",
+        "filesize_z": 3111695157,
+        "filename": "PrincessAndPrince",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104535,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "一点一点/Piece by Piece",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3179050/2b581cbec1ce945d6c84e8a083f5e8a3536fc9e1/header_alt_assets_0.jpg?t=1773258172",
+    "filesize": "620.1 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/b2QbU3jUFVJn?pwd=wnu1",
+        "openpath": "Piece by Piece v1.0.750R/Piece by Piece.exe",
+        "filesize": "620.1 M",
+        "link_ctime": "2026.03.12",
+        "filesize_z": 650217415,
+        "filename": "Piece by Piece v1.0.750R",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104571,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "1348：圣誓 – 豪华版/1348 Ex Voto",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1895900/e2406ff9c7687c9a2a4775092208d8691b04738b/header.jpg?t=1773351034",
+    "filesize": "24.61 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Z7jyayeQ3Eze?pwd=t9pg",
+        "openpath": "1348/1348.exe",
+        "filesize": "24.61 G",
+        "link_ctime": "2026.03.13",
+        "filesize_z": 26428287767,
+        "filename": "1348",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104576,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "典当行模拟器/Pawnbroker Simulator",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3997360/8787f43e79645ec451af268c52b7b35c825f5eaf/header_schinese.jpg?t=1773316255",
+    "filesize": "2.42 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Yzyui2AFnIbq?pwd=1xij",
+        "openpath": "Pawnbroker Simulator v1.0.2/Pawnbroker Simulator.exe",
+        "filesize": "2.42 G",
+        "link_ctime": "2026.03.13",
+        "filesize_z": 2596247427,
+        "filename": "Pawnbroker Simulator v1.0.2",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104642,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "索拉斯塔2/Solasta II",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2975950/header.jpg?t=1773332597",
+    "filesize": "24.95 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/iQZV7nzyQFVb?pwd=kl7t",
+        "openpath": "Solasta 2/Solasta_2.exe",
+        "filesize": "24.95 G",
+        "link_ctime": "2026.03.13",
+        "filesize_z": 26785290666,
+        "filename": "Solasta 2",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104648,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "洛克人EXE：合集2/ROCKMAN EXE",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1798020/header_tchinese.jpg?t=1769126494",
+    "filesize": "2.81 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/RBZ3euMvq2um?pwd=mm5o",
+        "openpath": "Mega Man Battle Network Legacy Collection Vol 2 v1.0.0.4/exe/MMBN_LC2.exe",
+        "filesize": "2.81 G",
+        "link_ctime": "2026.03.13",
+        "filesize_z": 3018169121,
+        "filename": "Mega Man Battle Network Legacy Collection Vol 2 v1.0.0.4",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104695,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "寻宝湾/Collector’s Cove",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2867470/7e0ce8225d250b55a282edc945931454d3a77f79/header_alt_assets_2.jpg?t=1773399128",
+    "filesize": "1.3 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/jAvIbeuyMfUb?pwd=7lcf",
+        "openpath": "Collectors Cove  v1.0.2.7666.1734/CollectorsCove.exe",
+        "filesize": "1.3 G",
+        "link_ctime": "2026.03.13",
+        "filesize_z": 1401099146,
+        "filename": "Collectors Cove  v1.0.2.7666.1734",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104718,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "角斗士血域/Bloodgrounds",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2507820/c5749a60f4f4a4e0de3767e392edd5a7f80cef9d/header_alt_assets_3_schinese.jpg?t=1773334168",
+    "filesize": "348.7 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/YnyeYvjYNz2e?pwd=e5qb",
+        "openpath": "Bloodgrounds v1.0.1/Bloodgrounds.exe",
+        "filesize": "348.7 M",
+        "link_ctime": "2026.03.14",
+        "filesize_z": 365640806,
+        "filename": "Bloodgrounds v1.0.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104723,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "野蛮人时代编年史/Age of Barbarians Chronicles",
+    "wp_get_attachment_image_src": "https://img.kelongwo.uk/wp-content/uploads/2026/03/2026031417092849.png",
+    "filesize": "10.2 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/f2eqQnjiaUfa?pwd=wg0f",
+        "openpath": "Age of Barbarians Chronicles v1.0.2.0/Age of Barbarians Chronicles.exe",
+        "filesize": "10.2 G",
+        "link_ctime": "2026.03.14",
+        "filesize_z": 10953216944,
+        "filename": "Age of Barbarians Chronicles v1.0.2.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104811,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "血祭/CULTIC",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1684930/f5406a57a7d55ed95e81542e2af653b6b8823216/header.jpg?t=1765478494",
+    "filesize": "3.51 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/V3eeEbQrmeii?pwd=6df8",
+        "openpath": "CULTIC Complete Edition v2.02i/CULTIC.exe",
+        "filesize": "3.51 G",
+        "link_ctime": "2026.03.15",
+        "filesize_z": 3763697810,
+        "filename": "CULTIC Complete Edition v2.02i",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104837,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "少林对武当传奇/Shaolin vs Wutang Legends",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3917840/8083f64cd0f6e3fe59c940ea0a540d859fe26454/header.jpg?t=1761407519",
+    "filesize": "8.2 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/MZFJbyA36byi?pwd=ks7p",
+        "openpath": "Shaolin vs Wutang Legends/Shaolin vs Wutang Legends.exe",
+        "filesize": "8.2 G",
+        "link_ctime": "2026.03.15",
+        "filesize_z": 8801782184,
+        "filename": "Shaolin vs Wutang Legends",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104868,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "宇宙探索家/Stellar Wanderer DX",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1401630/6569524227d86d3591936e5577f9a7ea2b65108a/header.jpg?t=1773413089",
+    "filesize": "772.95 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/mamQ3iEJBfY3?pwd=6qba",
+        "openpath": "Stellar Wanderer DX/Bin/gameRoam.exe",
+        "filesize": "772.95 M",
+        "link_ctime": "2026.03.15",
+        "filesize_z": 810501369,
+        "filename": "Stellar Wanderer DX",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104902,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "谢尔曼指挥官/Sherman Commander",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1451050/041cfcb8b9282aa86b9a2a7d44001cc49ed89cd3/header_alt_assets_0_schinese.jpg?t=1773510790",
+    "filesize": "10.26 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/iuUjmeZF7jiq?pwd=3sa8",
+        "openpath": "Sherman Commander v1.0",
+        "filesize": "10.26 G",
+        "link_ctime": "2026.03.16",
+        "filesize_z": 11016262758,
+        "filename": "Sherman Commander v1.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104937,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "杀戮之石/The Killing Stone",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2781470/e5d15297cee546258b0b44bd11608f20103191aa/header_schinese.jpg?t=1772204781",
+    "filesize": "4.74 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/umuA73bqYFfy?pwd=j4bi",
+        "openpath": "The Killing Stone/TheKillingStone.exe",
+        "filesize": "4.74 G",
+        "link_ctime": "2026.03.16",
+        "filesize_z": 5092504328,
+        "filename": "The Killing Stone",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104942,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "节奏次元/Spin Rhythm",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1058830/header.jpg?t=1767653991",
+    "filesize": "1.75 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ArqieqJRRruq?pwd=k2i9",
+        "openpath": "Spin Rhythm/SpinRhythm.exe",
+        "filesize": "1.75 G",
+        "link_ctime": "2026.03.16",
+        "filesize_z": 1879100706,
+        "filename": "Spin Rhythm",
         "server": "t"
       }
     ]
