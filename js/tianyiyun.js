@@ -28,8 +28,8 @@
     };
 
     tianyi.showDownload = async function () {
-        const fileList = tianyi.getSelectedFileList();
-        const accessToken = (localStorage.getItem("accessToken") ?? (await (await fetch(`https://cloud.189.cn/api/open/oauth2/getAccessTokenBySsKey.action?noCache=${Math.random()}&sessionKey=${sessionStorage.getItem("sessionKey")}`, { headers: { "appkey": "600100422" } })).json()).accessToken).replace(/[\"\\]/g, "");
+        const fileList = tianyi.getSelectedFileList(),
+            accessToken = (localStorage.getItem("accessToken") ?? (await (await fetch(`https://cloud.189.cn/api/open/oauth2/getAccessTokenBySsKey.action?noCache=${Math.random()}&sessionKey=${sessionStorage.getItem("sessionKey")}`, { headers: { "appkey": "600100422" } })).json()).accessToken).replace(/[\"\\]/g, "");
         await Promise.all(fileList.map(async item => !item.isFolder && console.info(`文件：[${item.fileName ? item.fileName : item.fileId}] (${item.downloadUrl ?? await tianyi.getFileDownloadUrl(accessToken, item)})`)));
     };
 

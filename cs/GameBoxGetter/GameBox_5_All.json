@@ -12115,7 +12115,7 @@
     "categories": "策略战棋",
     "post_title": "耀斑纪元/New Cycle",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2198510/header_schinese.jpg?t=1720717392",
-    "filesize": "4.09 G",
+    "filesize": "6.11 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/2AZF3iMJVZZn?pwd=0gws",
@@ -12124,6 +12124,15 @@
         "link_ctime": "2024.03.24",
         "filesize_z": 4388183341,
         "filename": "New.Cycle v20240323",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/amaYVjiiIr2y?pwd=s7op",
+        "openpath": "New Cycle v25-490.01/New Cycle.exe",
+        "filesize": "6.11 G",
+        "link_ctime": "2026.03.17",
+        "filesize_z": 6564408316,
+        "filename": "New Cycle v25-490.01",
         "server": "t"
       }
     ]
@@ -49233,6 +49242,272 @@
         "link_ctime": "2026.03.16",
         "filesize_z": 1879100706,
         "filename": "Spin Rhythm",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104984,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "披萨店模拟器/Pizza Slice",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1385290/8076deb904f8e14dfd6d689d65f4c2007b221705/header_alt_assets_1.jpg?t=1773426218",
+    "filesize": "2.76 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/M3eeAviqUNFn?pwd=yq0s",
+        "openpath": "Pizza Slice v0.60.69/PizzaSlice.exe",
+        "filesize": "2.76 G",
+        "link_ctime": "2026.03.17",
+        "filesize_z": 2965693539,
+        "filename": "Pizza Slice v0.60.69",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104989,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "歪小子斯科特 EX/EX Scott Pilgrim EX",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2640950/23b9b9b7ccda6e3afa373ad8df8d61433372738f/header.jpg?t=1772514221",
+    "filesize": "629.01 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/nEBnEr67nqQv?pwd=zz3v",
+        "openpath": "Scott Pilgrim EX v20260304/Game.exe",
+        "filesize": "629.01 M",
+        "link_ctime": "2026.03.17",
+        "filesize_z": 659564296,
+        "filename": "Scott Pilgrim EX v20260304",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 104995,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "无尽猎杀：支持者版/Grind Survivors",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3816930/51e04bd9a702c48f214ae2327f09c429f4dde21e/header_alt_assets_3.jpg?t=1773662415",
+    "filesize": "1.58 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/vAJv2qfMZ3Ur?pwd=udd3",
+        "openpath": "Grind Survivors v3645/GrindSurvivors.exe",
+        "filesize": "1.58 G",
+        "link_ctime": "2026.03.17",
+        "filesize_z": 1701249770,
+        "filename": "Grind Survivors v3645",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 105069,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "绝对征服/Vanquish",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/460810/header.jpg?t=1763675489",
+    "filesize": "16.81 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qyuiyea67NNn?pwd=2zgl",
+        "openpath": "Vanquish/Vanquish.exe",
+        "filesize": "16.81 G",
+        "link_ctime": "2026.03.17",
+        "filesize_z": 18046872134,
+        "filename": "Vanquish",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 105074,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "龙的传人：孤旅/Dragonkin: The Banished",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1863430/b2f47da77467bdc8a37d02897c7e448e50cc26bc/header_alt_assets_4.jpg?t=1773678727",
+    "filesize": "32.99 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/nmUnIjrMfYrm?pwd=8fbg",
+        "openpath": "Dragonkin The Banished v1.0/DragonkinTheBanished.exe",
+        "filesize": "32.99 G",
+        "link_ctime": "2026.03.17",
+        "filesize_z": 35426649239,
+        "filename": "Dragonkin The Banished v1.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 105145,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "星河战队 终焉虫潮/Starship Troopers: Ultimate Bug War!",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2321780/6b29349d6c3b7f05e02914c4a191a3b85fce2521/header_schinese.jpg?t=1773677032",
+    "filesize": "6.87 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ueENV3nIziu2?pwd=9az8",
+        "openpath": "StarshipTroopers_UltimateBugWar v20260317/StarshipTroopers_UBW.exe",
+        "filesize": "6.87 G",
+        "link_ctime": "2026.03.17",
+        "filesize_z": 7374536508,
+        "filename": "StarshipTroopers_UltimateBugWar v20260317",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 105168,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "混沌绿洲/Total Chaos",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2208350/f2086b3eef4ec934190e5faec66b0a21ae734a1a/header.jpg?t=1773665952",
+    "filesize": "14.29 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7JFBBbqeMzqu?pwd=n10y",
+        "openpath": "Total Chaos/Total Chaos.exe",
+        "filesize": "14.29 G",
+        "link_ctime": "2026.03.17",
+        "filesize_z": 15339172494,
+        "filename": "Total Chaos",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 105199,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "加勒比传奇：海盗时代/Caribbean Legend: Age of Pirates",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3549020/7cc8a52026243b5b2a8e9c0b25cf9d88dbec7ff1/header_schinese.jpg?t=1773427025",
+    "filesize": "24.23 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/y2yimyVFzEZn?pwd=rjt8",
+        "openpath": "Caribbean Legend Age of Pirates v1.0.1/Launcher.exe",
+        "filesize": "24.23 G",
+        "link_ctime": "2026.03.18",
+        "filesize_z": 26015286467,
+        "filename": "Caribbean Legend Age of Pirates v1.0.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 105229,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "托马斯和朋友：多多岛奇观/Thomas &amp; Friends™: Wonders of Sodor",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3743790/456d17d1ee31e2c5e72d3905bbdcfed62a7af733/header.jpg?t=1773763219",
+    "filesize": "7.78 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Ebm6ZfZnayam?pwd=3m6v",
+        "openpath": "Thomas and Friends Wonders of Sodor/WindowsNoEditor/WondersOfSodor.exe",
+        "filesize": "7.78 G",
+        "link_ctime": "2026.03.18",
+        "filesize_z": 8355879098,
+        "filename": "Thomas and Friends Wonders of Sodor",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 105265,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "死亡搁浅2：冥滩之上 数字豪华版/DEATH STRANDING 2: ON THE BEACH",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3280350/6270c77b0729e2df0a17d660286eeddfd9169386/header.jpg?t=1772106438",
+    "filesize": "98.29 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/rUbAzyfuqEVv?pwd=0o6a",
+        "openpath": "DEATH STRANDING 2 ON THE BEACH/DS2.exe",
+        "filesize": "98.29 G",
+        "link_ctime": "2026.03.18",
+        "filesize_z": 105540064821,
+        "filename": "DEATH STRANDING 2 ON THE BEACH",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 105315,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "刮个爽/Scritchy Scratchy",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3948120/661c8201d042b35efbab86b564b4dcd24567b546/header_schinese.jpg?t=1773831686",
+    "filesize": "185.68 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fmYzq2MBZRFn?pwd=tk4v",
+        "openpath": "Scritchy Scratchy/ScritchyScratchy.exe",
+        "filesize": "185.68 M",
+        "link_ctime": "2026.03.19",
+        "filesize_z": 194694901,
+        "filename": "Scritchy Scratchy",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 105316,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "风屿奇航/Everwind",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2253100/774914807bd71ce91decb9532752f7538c71aa89/header_schinese.jpg?t=1773865886",
+    "filesize": "2.09 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uyqu6nnaQzam?pwd=6kef",
+        "openpath": "Everwind v0.4.404/Everwind.exe",
+        "filesize": "2.09 G",
+        "link_ctime": "2026.03.19",
+        "filesize_z": 2242507279,
+        "filename": "Everwind v0.4.404",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 105359,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "格里米斯工匠/The Artisan of Glimmith",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4160210/9ee76e41d658980856feaf5b4b9380866c428db5/header.jpg?t=1773766829",
+    "filesize": "1.96 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uuIVJnqy2QFb?pwd=py1g",
+        "openpath": "The Artisan of Glimmith/Geri.exe",
+        "filesize": "1.96 G",
+        "link_ctime": "2026.03.19",
+        "filesize_z": 2099691424,
+        "filename": "The Artisan of Glimmith",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 105364,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "翻转世界/Overthrown",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1133500/50b9647e48b5883ee483dca56a5a5662419c56c9/header_alt_assets_5.jpg?t=1773849669",
+    "filesize": "4.11 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ARFnUnUFfmEj?pwd=pyy2",
+        "openpath": "Overthrown v1.0/Overthrown.exe",
+        "filesize": "4.11 G",
+        "link_ctime": "2026.03.19",
+        "filesize_z": 4416932873,
+        "filename": "Overthrown v1.0",
         "server": "t"
       }
     ]

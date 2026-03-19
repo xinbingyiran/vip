@@ -1741,6 +1741,47 @@
     ]
   },
   {
+    "id": 1010,
+    "category_parent": 16,
+    "categories": "三维建模",
+    "post_title": "ZBrush",
+    "Subtitle": "三维雕刻建模",
+    "list": [
+      {
+        "coSize": "2759211870",
+        "udTime": "202603181918",
+        "coName": "ZBrush-2026.0.0-x64-CN-Portable.zip",
+        "coID": "https://www.uy5.net/download/?path=FuzxHslHWe31sdmFqpoZGza74c5omVm79",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370756x/FuzxHslHWe31sdmFqpoZGza74c5omVm79"
+      },
+      {
+        "coSize": "2402497866",
+        "udTime": "202308090222",
+        "coName": "ZBrush-2023.2.1-x64-CN-Portable.zip",
+        "coID": "https://www.uy5.net/download/?path=DFcQ0KHeAFYA1611iptRY1EL05820230809022259m8w",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370756x/DFcQ0KHeAFYA1611iptRY1EL05820230809022259m8w"
+      },
+      {
+        "coSize": "1589907558",
+        "udTime": "202210220138",
+        "coName": "ZBrush 2021.6.6 Win.zip",
+        "coID": "https://www.uy5.net/download/?path=DFcQ0KHeAFYA1611iptRY1EL05620221022013821x9c",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370756x/DFcQ0KHeAFYA1611iptRY1EL05620221022013821x9c"
+      },
+      {
+        "coSize": "1598774064",
+        "udTime": "202210220138",
+        "coName": "ZBrush 2021.7.1 Win.zip",
+        "coID": "https://www.uy5.net/download/?path=DFcQ0KHeAFYA1611iptRY1EL05620221022013821x9b",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370756x/DFcQ0KHeAFYA1611iptRY1EL05620221022013821x9b"
+      }
+    ]
+  },
+  {
     "id": 1025,
     "category_parent": 538,
     "categories": "系统工具",
@@ -3008,6 +3049,47 @@
         "coID": "https://www.uy5.net/download/?path=FtsVv2ux2ZoOdaRhrz55JUKMBW_Kb9nMD",
         "type": "file",
         "path": "DFcQ0KHeAFYA1611iptRY1EL07820221022013707563/FtsVv2ux2ZoOdaRhrz55JUKMBW_Kb9nMD"
+      }
+    ]
+  },
+  {
+    "id": 3214,
+    "category_parent": 16,
+    "categories": "三维建模",
+    "post_title": "SketchUp",
+    "Subtitle": "三维建模绘图渲染",
+    "list": [
+      {
+        "coSize": "1104343901",
+        "udTime": "202603182117",
+        "coName": "SketchUpPro 2026 v26.1.252.zip",
+        "coID": "https://www.uy5.net/download/?path=FrQNCiBrLgqlgwBGGk_tPxrjHdqBtS5cp",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370751j/FrQNCiBrLgqlgwBGGk_tPxrjHdqBtS5cp"
+      },
+      {
+        "coSize": "420418644",
+        "udTime": "202405171259",
+        "coName": "SketchUpPro 2024 0 553 221.zip",
+        "coID": "https://www.uy5.net/download/?path=DFcQ0KHeAFYA1611iptRY1EL0552024051712595320l",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370751j/DFcQ0KHeAFYA1611iptRY1EL0552024051712595320l"
+      },
+      {
+        "coSize": "424548624",
+        "udTime": "202404081633",
+        "coName": "SketchUpPro 2024 v24.0.484.zip",
+        "coID": "https://www.uy5.net/download/?path=DFcQ0KHeAFYA1611iptRY1EL0552024040816335401r",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370751j/DFcQ0KHeAFYA1611iptRY1EL0552024040816335401r"
+      },
+      {
+        "coSize": "1009981511",
+        "udTime": "202310151611",
+        "coName": "SketchUp Pro 2023 v23.1.340.zip",
+        "coID": "https://www.uy5.net/download/?path=DFcQ0KHeAFYA1611iptRY1EL05820231015161146c60",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370751j/DFcQ0KHeAFYA1611iptRY1EL05820231015161146c60"
       }
     ]
   },
