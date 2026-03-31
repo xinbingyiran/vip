@@ -2713,6 +2713,20 @@
         "coName": "Everdream Valley",
         "coID": "https://cloud.189.cn/t/2aAZbaEbqe2u?pwd=k8uh",
         "openPath": "Everdream Valley/Everdream Valley.exe"
+      },
+      {
+        "coSize": "195.5 K",
+        "udTime": "2026-03-29",
+        "coName": "Everdream Valley",
+        "coID": "1403650",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "3.59 G",
+        "udTime": "2026-03-29",
+        "coName": "Everdream Valley v5.0423.1455",
+        "coID": "https://cloud.189.cn/t/aIZvYb3iY7Fn?pwd=emg8",
+        "openPath": "Everdream Valley v5.0423.1455/Everdream Valley.exe"
       }
     ]
   },
@@ -12187,6 +12201,20 @@
         "udTime": "2024-04-02",
         "coName": "War Mongrels v46979",
         "coID": "https://cloud.189.cn/t/3ui6fiRFVnue?pwd=ru4k",
+        "openPath": "War Mongrels v46979/WM/Binaries/Win64/WM-Win64-SHIPPING.exe"
+      },
+      {
+        "coSize": "694.18 K",
+        "udTime": "2025-10-01",
+        "coName": "War Mongrels",
+        "coID": "1101790",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "13.86 G",
+        "udTime": "2026-03-30",
+        "coName": "War Mongrels v46979",
+        "coID": "https://cloud.189.cn/t/Vr2QjeBn6fie?pwd=3aah",
         "openPath": "War Mongrels v46979/WM/Binaries/Win64/WM-Win64-SHIPPING.exe"
       }
     ]
@@ -44856,6 +44884,20 @@
         "coName": "SonicRacingCrossWorlds",
         "coID": "https://cloud.189.cn/t/JvuyEzrei6Nr?pwd=4ayc",
         "openPath": "SonicRacingCrossWorlds/使用教程.docx"
+      },
+      {
+        "coSize": "583.56 K",
+        "udTime": "2026-03-26",
+        "coName": "Sonic Racing: CrossWorlds",
+        "coID": "2486820",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "16.84 G",
+        "udTime": "2026-03-29",
+        "coName": "SonicRacingCrossWorlds v1.3.1",
+        "coID": "https://cloud.189.cn/t/UzENBfMbA3M3?pwd=9iey",
+        "openPath": "SonicRacingCrossWorlds v1.3.1/UNION/Binaries/Win64/steamclient_loader_x64.exe"
       }
     ]
   },
@@ -47748,6 +47790,574 @@
         "coName": "WolfQuest Anniversary Edition",
         "coID": "https://cloud.189.cn/t/UzInmiyuuiEz?pwd=sh5m",
         "openPath": "WolfQuest Anniversary Edition v3.0.1/WolfQuestAE.exe"
+      }
+    ]
+  },
+  {
+    "id": 106046,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "生化危机9：安魂曲/Resident Evil Requiem",
+    "Subtitle": "予生者恐惧,给尸者安魂",
+    "list": [
+      {
+        "coSize": "2.48 M",
+        "udTime": "2026-03-26",
+        "coName": "Resident Evil Requiem",
+        "coID": "3764200",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "75.1 G",
+        "udTime": "2026-03-27",
+        "coName": "RESIDENT EVIL requiem BIOHAZARD requiem",
+        "coID": "https://cloud.189.cn/t/Y7Z3EziMbY3q?pwd=ln3m",
+        "openPath": "RESIDENT EVIL requiem BIOHAZARD requiem/steamclient_loader_x64.exe"
+      }
+    ]
+  },
+  {
+    "id": 106081,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "漫威终极合集/MARVEL MaXimum Collection",
+    "Subtitle": "体验漫威早期游戏",
+    "list": [
+      {
+        "coSize": "107.75 K",
+        "udTime": "2026-03-27",
+        "coName": "MARVEL MaXimum Collection",
+        "coID": "3931060",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "2.78 G",
+        "udTime": "2026-03-29",
+        "coName": "MARVEL MaXimum Collection",
+        "coID": "https://cloud.189.cn/t/N3qeiijiARZr?pwd=9yo7",
+        "openPath": "MARVEL MaXimum Collection/Marvel.exe"
+      }
+    ]
+  },
+  {
+    "id": 106099,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "双点博物馆：馆长典藏版/Two Point Museum",
+    "Subtitle": "打造令人惊叹的博物馆",
+    "list": [
+      {
+        "coSize": "629.59 K",
+        "udTime": "2026-03-19",
+        "coName": "Two Point Museum",
+        "coID": "2185060",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "4.38 G",
+        "udTime": "2026-03-29",
+        "coName": "Two Point Museum v8.0.216267",
+        "coID": "https://cloud.189.cn/t/eie2MjuaY7Zf?pwd=kt8t",
+        "openPath": "Two Point Museum v8.0.216267/hypervisor-launcher.exe"
+      }
+    ]
+  },
+  {
+    "id": 106128,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "奇异人生：重逢/Life is Strange: Reunion",
+    "Subtitle": "麦珂茜与歌露儿的故事",
+    "list": [
+      {
+        "coSize": "899.22 K",
+        "udTime": "2026-03-26",
+        "coName": "Life is Strange: Reunion",
+        "coID": "2624870",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "22.52 G",
+        "udTime": "2026-03-29",
+        "coName": "Life is Strange Reunion",
+        "coID": "https://cloud.189.cn/t/uya6zummqaiq?pwd=tbs3",
+        "openPath": "Life is Strange Reunion/Iris/Binaries/Win64/steamclient_loader_x64.exe"
+      }
+    ]
+  },
+  {
+    "id": 106165,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "灾殃/The Scourge",
+    "Subtitle": "越南的都市传说",
+    "list": [
+      {
+        "coSize": "500.29 K",
+        "udTime": "2026-03-29",
+        "coName": "The Scourge | Tai ng",
+        "coID": "2456350",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "10.85 G",
+        "udTime": "2026-03-30",
+        "coName": "The Scourge v1.00",
+        "coID": "https://cloud.189.cn/t/maMRNrmiMfeu?pwd=34ff",
+        "openPath": "The Scourge v1.00/TheScourge.exe"
+      }
+    ]
+  },
+  {
+    "id": 106170,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "歧路旅人0：数字豪华版/OCTOPATH TRAVELER 0",
+    "Subtitle": "神明之戒引发的复仇",
+    "list": [
+      {
+        "coSize": "4.59 G",
+        "udTime": "2026-03-30",
+        "coName": "Octopath_Traveler0 v1.0.7.0",
+        "coID": "https://cloud.189.cn/t/ENn2UriAv2e2?pwd=ez9u",
+        "openPath": "Octopath_Traveler0 v1.0.7.0/Octopath_Traveler0/Binaries/Win64/hypervisor-launcher.exe"
+      }
+    ]
+  },
+  {
+    "id": 106219,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "原子陨落：豪华版/Atomfall",
+    "Subtitle": "末世灾难中活下去",
+    "list": [
+      {
+        "coSize": "2.61 M",
+        "udTime": "2025-10-30",
+        "coName": "Atomfall",
+        "coID": "801800",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "58.86 G",
+        "udTime": "2026-03-30",
+        "coName": "Atomfall v1.22",
+        "coID": "https://cloud.189.cn/t/J3EFbyeuuyAn?pwd=eky9",
+        "openPath": "Atomfall v1.22/bin/steamclient_loader_x64.exe"
+      }
+    ]
+  },
+  {
+    "id": 106245,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "心之岛/PIsland of Hearts",
+    "Subtitle": "一场痛彻心扉的分手",
+    "list": [
+      {
+        "coSize": "1.38 M",
+        "udTime": "2026-03-31",
+        "coName": "Island of Hearts",
+        "coID": "3794770",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "42.57 G",
+        "udTime": "2026-03-30",
+        "coName": "PIsland of Hearts",
+        "coID": "https://cloud.189.cn/t/2Ifqy2eYR3qe?pwd=sr5x",
+        "openPath": "PIsland of Hearts/Island of Hearts.exe"
+      }
+    ]
+  },
+  {
+    "id": 106262,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "鲸中小镇/A Completely Fictional Story About a City Inside a Whale",
+    "Subtitle": "在小镇鲸维尔完成任务",
+    "list": [
+      {
+        "coSize": "148.64 K",
+        "udTime": "2026-03-29",
+        "coName": "A Completely Fictional Story About a City Inside a Whale",
+        "coID": "2445590",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "411.03 M",
+        "udTime": "2026-03-30",
+        "coName": "A Completely Fictional Story About a City Inside a Whale",
+        "coID": "https://cloud.189.cn/t/BzIR3ybmMBj2?pwd=6zn8",
+        "openPath": "A Completely Fictional Story About a City Inside a Whale/A Completely Fictional Story About a City Inside a Whale.exe"
+      }
+    ]
+  },
+  {
+    "id": 106298,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "流星洛克人：完美合集/MegaMan StarForce LegacyCollection",
+    "Subtitle": "在激情曲子中完成战斗",
+    "list": [
+      {
+        "coSize": "169.58 K",
+        "udTime": "2026-03-29",
+        "coName": "Mega Man Star Force Legacy Collection",
+        "coID": "3500390",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "4.97 G",
+        "udTime": "2026-03-30",
+        "coName": "MegaMan StarForce LegacyCollection",
+        "coID": "https://cloud.189.cn/t/iyeMBvnyy2Mr?pwd=w68x",
+        "openPath": "MegaMan StarForce LegacyCollection/MEGAMAN_STARFORCE_Legacy_Collection.exe"
+      }
+    ]
+  },
+  {
+    "id": 106302,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "黑水/Darkwater",
+    "Subtitle": "逃脱型恐怖冒险",
+    "list": [
+      {
+        "coSize": "333.32 K",
+        "udTime": "2026-03-27",
+        "coName": "Darkwater",
+        "coID": "619540",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "2.87 G",
+        "udTime": "2026-03-30",
+        "coName": "Darkwater v1.0.00",
+        "coID": "https://cloud.189.cn/t/fiuayajIRzQn?pwd=8dig",
+        "openPath": "Darkwater v1.0.00/Darkwater.exe"
+      }
+    ]
+  },
+  {
+    "id": 106366,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "炸弹兔/Bombun",
+    "Subtitle": "扔炸弹的兔子守卫",
+    "list": [
+      {
+        "coSize": "51.6 K",
+        "udTime": "2026-03-30",
+        "coName": "Bombun",
+        "coID": "3609320",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "805.14 M",
+        "udTime": "2026-03-30",
+        "coName": "Bombun v1.5.9",
+        "coID": "https://cloud.189.cn/t/y6zeIfbaQbIj?pwd=0fbo",
+        "openPath": "Bombun v1.5.9/Bombun.exe"
+      }
+    ]
+  },
+  {
+    "id": 106389,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "不寐之境：女巫与魔咒/Never Grave The Witch and The Curse",
+    "Subtitle": "银河战士恶魔城",
+    "list": [
+      {
+        "coSize": "83.96 K",
+        "udTime": "2026-03-29",
+        "coName": "Never Grave",
+        "coID": "2395770",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "1.18 G",
+        "udTime": "2026-03-30",
+        "coName": "Never Grave The Witch and The Curse v1.3.5C",
+        "coID": "https://cloud.189.cn/t/RjEVBfb2Ubi2?pwd=8ykq",
+        "openPath": "Never Grave The Witch and The Curse v1.3.5C/NeverGrave.exe"
+      }
+    ]
+  },
+  {
+    "id": 106394,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "罗马之城/Nova Roma",
+    "Subtitle": "建设属于你的罗马荣耀",
+    "list": [
+      {
+        "coSize": "110.12 K",
+        "udTime": "2026-03-31",
+        "coName": "Nova Roma",
+        "coID": "2426530",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "355.87 M",
+        "udTime": "2026-03-30",
+        "coName": "Nova Roma v0.7.1781",
+        "coID": "https://cloud.189.cn/t/aUZ7RfzMNj2e?pwd=0lpz",
+        "openPath": "Nova Roma v0.7.1781/NovaRoma.exe"
+      }
+    ]
+  },
+  {
+    "id": 106448,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "女神异闻录5：战略版 – 数字豪华版/Persona 5 Tactica",
+    "Subtitle": "来一场淋漓的决策",
+    "list": [
+      {
+        "coSize": "1.53 M",
+        "udTime": "2025-11-25",
+        "coName": "Persona 5 Tactica",
+        "coID": "2254740",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "15.04 G",
+        "udTime": "2026-03-30",
+        "coName": "Persona 5 Tactica v20251103",
+        "coID": "https://cloud.189.cn/t/jaq2IriqIfma?pwd=2ugb",
+        "openPath": "Persona 5 Tactica v20251103/hypervisor-launcher.exe"
+      }
+    ]
+  },
+  {
+    "id": 106483,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "赤血沙漠 ：豪华版|红色沙漠/crimson desert",
+    "Subtitle": "在大陆中活出你的本色",
+    "list": [
+      {
+        "coSize": "8.72 M",
+        "udTime": "2026-03-30",
+        "coName": "Crimson Desert",
+        "coID": "3321460",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "94.67 G",
+        "udTime": "2026-03-30",
+        "coName": "Crimson Desert v1.00.03",
+        "coID": "https://cloud.189.cn/t/Ef6J7rFfuquy?pwd=cm8d",
+        "openPath": "Crimson Desert v1.00.03/bin64/steamclient_loader_x64.exe"
+      }
+    ]
+  },
+  {
+    "id": 106538,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "数码宝贝物语：时空异客 – 数字终极版/Digimon Story Time Stranger",
+    "Subtitle": "开启数码宝贝之旅",
+    "list": [
+      {
+        "coSize": "1.02 M",
+        "udTime": "2026-03-11",
+        "coName": "Digimon Story Time Stranger",
+        "coID": "1984270",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "27.16 G",
+        "udTime": "2026-03-30",
+        "coName": "Digimon Story Time Stranger",
+        "coID": "https://cloud.189.cn/t/Q3YzeuJjEfMn?pwd=y2hu",
+        "openPath": "Digimon Story Time Stranger/steamclient_loader_x64.exe"
+      }
+    ]
+  },
+  {
+    "id": 106573,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "消逝的光芒：困兽 失地复苏 决定版/Dying Light: The Beast - Restored Land",
+    "Subtitle": "开放恐怖世界活下去",
+    "list": [
+      {
+        "coSize": "2.74 M",
+        "udTime": "2026-03-27",
+        "coName": "Dying Light: The Beast",
+        "coID": "3008130",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "53.4 G",
+        "udTime": "2026-03-31",
+        "coName": "Dying Light The Beast v1.6.0",
+        "coID": "https://cloud.189.cn/t/nye2yazaIBra?pwd=7sbu",
+        "openPath": "Dying Light The Beast v1.6.0/Launcher.exe"
+      }
+    ]
+  },
+  {
+    "id": 106578,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "勇气默示录：飞翔的妖精 – 高清复刻版/Bravely Default: Flying Fairy - HD Remaster",
+    "Subtitle": "光与影就此重获新生",
+    "list": [
+      {
+        "coSize": "1.54 M",
+        "udTime": "2026-03-12",
+        "coName": "BRAVELY DEFAULT FLYING FAIRY HD Remaster",
+        "coID": "2833580",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "8.35 G",
+        "udTime": "2026-03-31",
+        "coName": "BDFFHD",
+        "coID": "https://cloud.189.cn/t/Nniia2vyEbmi?pwd=n2cg",
+        "openPath": "BDFFHD/hypervisor-launcher.exe"
+      }
+    ]
+  },
+  {
+    "id": 106592,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "超级忍：反攻的斩击 – 豪华版/Shinobi Art of Vengeance – Digital Deluxe Edition",
+    "Subtitle": "极具爽快感的战斗",
+    "list": [
+      {
+        "coSize": "398.92 K",
+        "udTime": "2025-10-10",
+        "coName": "SHINOBI: Art of Vengeance",
+        "coID": "2361770",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "8.98 G",
+        "udTime": "2026-03-31",
+        "coName": "SHINOBI_AOV",
+        "coID": "https://cloud.189.cn/t/rYfeQbnuARfi?pwd=6fpr",
+        "openPath": "SHINOBI_AOV/hypervisor-launcher.exe"
+      }
+    ]
+  },
+  {
+    "id": 106597,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "人中之龙8：外传 – 夏威夷海盗 豪华版/Like a Dragon: Pirate Yakuza in Hawaii",
+    "Subtitle": "在汪洋大海开展大冒险",
+    "list": [
+      {
+        "coSize": "1.95 M",
+        "udTime": "2025-09-29",
+        "coName": "Like a Dragon: Pirate Yakuza in Hawaii",
+        "coID": "3061810",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "52.73 G",
+        "udTime": "2026-03-31",
+        "coName": "LikeADragonPirates v1.14",
+        "coID": "https://cloud.189.cn/t/7F7Rruiaya6b?pwd=2pvt",
+        "openPath": "LikeADragonPirates v1.14/runtime/media/hypervisor-launcher.exe"
+      }
+    ]
+  },
+  {
+    "id": 106678,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "深 四目朝生-阴阳之巫女/SHIN SHINONOME Shrine Maiden of Yin and Yang",
+    "Subtitle": "充满妖魔的鬼屋中",
+    "list": [
+      {
+        "coSize": "151.12 K",
+        "udTime": "2026-03-25",
+        "coName": "SHINONOME ABYSS The Maiden Exorcist",
+        "coID": "2948080",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "497.53 M",
+        "udTime": "2026-03-31",
+        "coName": "SHINONOME ABYSS The Maiden Exorcist V1.1.1",
+        "coID": "https://cloud.189.cn/t/nMVryiNvq2ia?pwd=2ovb",
+        "openPath": "SHINONOME ABYSS The Maiden Exorcist V1.1.1/ShinShinonome.exe"
+      }
+    ]
+  },
+  {
+    "id": 106692,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "星际战术/Stellar Tactics",
+    "Subtitle": "在庞大生命宇宙战斗",
+    "list": [
+      {
+        "coSize": "566.2 K",
+        "udTime": "2026-03-30",
+        "coName": "Stellar Tactics",
+        "coID": "465490",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "9.18 G",
+        "udTime": "2026-03-31",
+        "coName": "Stellar Tactics  v1.00",
+        "coID": "https://cloud.189.cn/t/mQNNNrUNNbaa?pwd=c4ko",
+        "openPath": "Stellar Tactics  v1.00/_启动游戏.bat"
+      }
+    ]
+  },
+  {
+    "id": 106721,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "永恒围城：无尽纪元/EverSiege: Untold Ages",
+    "Subtitle": "守卫巴斯顿对抗邪恶军团",
+    "list": [
+      {
+        "coSize": "372 K",
+        "udTime": "2026-03-27",
+        "coName": "EverSiege: Untold Ages",
+        "coID": "3363680",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "10.24 G",
+        "udTime": "2026-03-31",
+        "coName": "EverSiege Untold Ages v0.2.134369",
+        "coID": "https://cloud.189.cn/t/nyIbYvq2AJ7f?pwd=flg5",
+        "openPath": "EverSiege Untold Ages v0.2.134369/EversiegeSteam-Win64-Shipping.exe"
+      }
+    ]
+  },
+  {
+    "id": 106748,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "四海兄弟：故乡 – 豪华版/Mafia The Old Country",
+    "Subtitle": "揭开有组织犯罪的起源",
+    "list": [
+      {
+        "coSize": "1.49 M",
+        "udTime": "2025-12-04",
+        "coName": "Mafia: The Old Country",
+        "coID": "1941540",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "39.35 G",
+        "udTime": "2026-03-31",
+        "coName": "Mafia The Old Country",
+        "coID": "https://cloud.189.cn/t/BfaYjiyaYVre?pwd=v7l4",
+        "openPath": "Mafia The Old Country/MafiaTheOldCountry/Binaries/Win64/steamclient_loader_x64.exe"
       }
     ]
   }
