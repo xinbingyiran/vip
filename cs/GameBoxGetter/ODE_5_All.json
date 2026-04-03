@@ -3891,6 +3891,20 @@
         "coName": "Resident Evil 4",
         "coID": "https://cloud.189.cn/t/jAZvAvFBbIri?pwd=fo9t",
         "openPath": "Resident Evil 4/re4.exe"
+      },
+      {
+        "coSize": "2.32 M",
+        "udTime": "2026-03-30",
+        "coName": "Resident Evil 4",
+        "coID": "2050650",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "68.4 G",
+        "udTime": "2026-04-03",
+        "coName": "RESIDENT EVIL 4 v1.5.9.0",
+        "coID": "https://cloud.189.cn/t/FZv2QvIr6zu2?pwd=ro56",
+        "openPath": "RESIDENT EVIL 4 v1.5.9.0/re4.exe"
       }
     ]
   },
@@ -28610,6 +28624,20 @@
         "coName": "Core.Keeper.Build.16677714",
         "coID": "https://cloud.189.cn/t/uYj6bizAzMRf?pwd=4pnx",
         "openPath": "Core.Keeper.Build.16677714/CoreKeeper.exe"
+      },
+      {
+        "coSize": "288.51 K",
+        "udTime": "2026-04-01",
+        "coName": "Core Keeper",
+        "coID": "1621690",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "493.5 M",
+        "udTime": "2026-04-03",
+        "coName": "Core Keeper v1.2.0.7",
+        "coID": "https://cloud.189.cn/t/vUF7NrjUj2If?pwd=bmf3",
+        "openPath": "Core Keeper v1.2.0.7/CoreKeeper.exe"
       }
     ]
   },
@@ -48105,6 +48133,13 @@
         "coName": "Nova Roma v0.7.1781",
         "coID": "https://cloud.189.cn/t/aUZ7RfzMNj2e?pwd=0lpz",
         "openPath": "Nova Roma v0.7.1781/NovaRoma.exe"
+      },
+      {
+        "coSize": "110.17 K",
+        "udTime": "2026-03-31",
+        "coName": "Nova Roma",
+        "coID": "2426530",
+        "type": "warehousing"
       }
     ]
   },
@@ -48358,6 +48393,512 @@
         "coName": "Mafia The Old Country",
         "coID": "https://cloud.189.cn/t/BfaYjiyaYVre?pwd=v7l4",
         "openPath": "Mafia The Old Country/MafiaTheOldCountry/Binaries/Win64/steamclient_loader_x64.exe"
+      }
+    ]
+  },
+  {
+    "id": 106776,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "噬血代码II：终极版/CODE VEIN II",
+    "Subtitle": "探索末日后幻想世界",
+    "list": [
+      {
+        "coSize": "1.93 M",
+        "udTime": "2026-03-16",
+        "coName": "CODE VEIN II",
+        "coID": "2362060",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "61.39 G",
+        "udTime": "2026-03-31",
+        "coName": "CodeVein2 v1.0.6.0",
+        "coID": "https://cloud.189.cn/t/3AJF73MvEj22?pwd=3dft",
+        "openPath": "CodeVein2 v1.0.6.0/CodeVein2/Binaries/Win64/steamclient_loader_x64.exe"
+      }
+    ]
+  },
+  {
+    "id": 106800,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "浣熊推币机/RACCOIN Coin Pusher Roguelike",
+    "Subtitle": "欲罢不能的萌系推币",
+    "list": [
+      {
+        "coSize": "25.73 K",
+        "udTime": "2026-03-31",
+        "coName": "RACCOIN: Coin Pusher Roguelike",
+        "coID": "3784030",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "167.87 M",
+        "udTime": "2026-03-31",
+        "coName": "RACCOIN Coin Pusher Roguelike v1.0.8",
+        "coID": "https://cloud.189.cn/t/yIzuUvamiuea?pwd=5wnd",
+        "openPath": "RACCOIN Coin Pusher Roguelike v1.0.8/RACCOIN.exe"
+      }
+    ]
+  },
+  {
+    "id": 106826,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "虚拟小屋2/Virtual Cottage",
+    "Subtitle": "定制的小屋中一起学习",
+    "list": [
+      {
+        "coSize": "106.53 K",
+        "udTime": "2026-03-31",
+        "coName": "Virtual Cottage 2",
+        "coID": "2943180",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "926.22 M",
+        "udTime": "2026-03-31",
+        "coName": "Virtual Cottage 2 v20260330",
+        "coID": "https://cloud.189.cn/t/nUBj6jz6JZfi?pwd=q9lk",
+        "openPath": "Virtual Cottage 2 v20260330/VirtualCottage2.exe"
+      }
+    ]
+  },
+  {
+    "id": 106850,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "焕家物语/Hozy",
+    "Subtitle": "被遗忘的街区重获新生",
+    "list": [
+      {
+        "coSize": "385.61 K",
+        "udTime": "2026-03-31",
+        "coName": "Hozy",
+        "coID": "3326230",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "4.93 G",
+        "udTime": "2026-03-31",
+        "coName": "Hozy",
+        "coID": "https://cloud.189.cn/t/iy2u6vR7vUVz?pwd=nyq9",
+        "openPath": "Hozy/CozyGame.exe"
+      }
+    ]
+  },
+  {
+    "id": 106885,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "勇者斗恶龙7：重制版 – 数字豪华版/DRAGON QUEST VII Reimagined Digital Deluxe Edition",
+    "Subtitle": "踏上壮阔的冒险之旅",
+    "list": [
+      {
+        "coSize": "286.73 K",
+        "udTime": "2026-02-15",
+        "coName": "DRAGON QUEST VII Reimagined",
+        "coID": "2499860",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "6.46 G",
+        "udTime": "2026-04-01",
+        "coName": "DQ7R",
+        "coID": "https://cloud.189.cn/t/UjeeiiuaEJRz?pwd=7uyb",
+        "openPath": "DQ7R/DQ7R/Binaries/Win64/hypervisor-launcher.exe"
+      }
+    ]
+  },
+  {
+    "id": 106903,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "如龙：维新！极：豪华版/Like a Dragon: Ishin",
+    "Subtitle": "维新重制龙马传奇再现",
+    "list": [
+      {
+        "coSize": "1.93 M",
+        "udTime": "2025-09-29",
+        "coName": "Like a Dragon: Ishin!",
+        "coID": "1805480",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "57.24 G",
+        "udTime": "2026-04-01",
+        "coName": "LikeADragonIshin v1.06",
+        "coID": "https://cloud.189.cn/t/VZ7rQ3YJbaIn?pwd=wh70",
+        "openPath": "LikeADragonIshin v1.06/LikeaDragonIshin/Binaries/Win64/hypervisor-launcher.exe"
+      }
+    ]
+  },
+  {
+    "id": 106924,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "剑星：完整版/Stellar Blade Complete Edition",
+    "Subtitle": "末日冒险揭开地球真相",
+    "list": [
+      {
+        "coSize": "2 M",
+        "udTime": "2025-11-05",
+        "coName": "Stellar Blade™",
+        "coID": "3489700",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "59.06 G",
+        "udTime": "2026-04-01",
+        "coName": "StellarBlade v1.4.1",
+        "coID": "https://cloud.189.cn/t/qEzaEfEfeQfi?pwd=7qxy",
+        "openPath": "StellarBlade v1.4.1/SB/Binaries/Win64/hypervisor-launcher.exe"
+      }
+    ]
+  },
+  {
+    "id": 106949,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "超级肉肉男孩 3D/Super Meat Boy 3D",
+    "Subtitle": "高难平台挑战升级再来",
+    "list": [
+      {
+        "coSize": "131.56 K",
+        "udTime": "2026-03-31",
+        "coName": "Super Meat Boy 3D",
+        "coID": "3288210",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "3.19 G",
+        "udTime": "2026-04-01",
+        "coName": "Super Meat Boy 3D v20260401",
+        "coID": "https://cloud.189.cn/t/eQfI3evUVVRb?pwd=t52p",
+        "openPath": "Super Meat Boy 3D v20260401/SMB.exe"
+      }
+    ]
+  },
+  {
+    "id": 106967,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "尘埃异变2/GRIME II",
+    "Subtitle": "探索痴迷艺术的奇异世界",
+    "list": [
+      {
+        "coSize": "732.49 K",
+        "udTime": "2026-03-31",
+        "coName": "GRIME II",
+        "coID": "2529790",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "19.16 G",
+        "udTime": "2026-04-01",
+        "coName": "GRIME II v1.0.17360c",
+        "coID": "https://cloud.189.cn/t/rYzMBfJRbaQv?pwd=o7jy",
+        "openPath": "GRIME II v1.0.17360c/GRIME II.exe"
+      }
+    ]
+  },
+  {
+    "id": 106980,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "以太与铁/Aether and Iron",
+    "Subtitle": "揭开浮空都市背后的黑暗",
+    "list": [
+      {
+        "coSize": "461.75 K",
+        "udTime": "2026-03-30",
+        "coName": "Aether & Iron",
+        "coID": "1836560",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "5.34 G",
+        "udTime": "2026-04-01",
+        "coName": "Aether and Iron v1.0.56",
+        "coID": "https://cloud.189.cn/t/RFZJvaauMV3u?pwd=jp32",
+        "openPath": "Aether and Iron v1.0.56/AetherAndIron.exe"
+      }
+    ]
+  },
+  {
+    "id": 107012,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "过山车之星2：白金版/Planet Coaster 2 Premium Edition",
+    "Subtitle": "妥善管理终极主题乐园",
+    "list": [
+      {
+        "coSize": "1.15 M",
+        "udTime": "2025-12-11",
+        "coName": "Planet Coaster 2",
+        "coID": "2688950",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "15.59 G",
+        "udTime": "2026-04-01",
+        "coName": "Planet Coaster 2 v1.8.2",
+        "coID": "https://cloud.189.cn/t/NjEnEvqy6Br2?pwd=hq5k",
+        "openPath": "Planet Coaster 2 v1.8.2/hypervisor-launcher.exe"
+      }
+    ]
+  },
+  {
+    "id": 107018,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "贪婪之冠：豪华版/Crown of Greed",
+    "Subtitle": "罗多维亚建立王国",
+    "list": [
+      {
+        "coSize": "506.98 K",
+        "udTime": "2026-03-31",
+        "coName": "Crown of Greed",
+        "coID": "1697870",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "5.59 G",
+        "udTime": "2026-04-01",
+        "coName": "Crown of Greed v1.0.05f",
+        "coID": "https://cloud.189.cn/t/2EzIBvraERZ3?pwd=baw0",
+        "openPath": "Crown of Greed v1.0.05f/Crown Of Greed.exe"
+      }
+    ]
+  },
+  {
+    "id": 107084,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "辐射4：周年版/Fallout 4",
+    "Subtitle": "迎向被核战化为灰烬的世界",
+    "list": [
+      {
+        "coSize": "4.68 M",
+        "udTime": "2025-12-16",
+        "coName": "Fallout 4",
+        "coID": "377160",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "91.04 G",
+        "udTime": "2026-04-02",
+        "coName": "Fallout 4",
+        "coID": "https://cloud.189.cn/t/iammiyviaAje?pwd=sk2a",
+        "openPath": "Fallout 4/Fallout4Launcher.exe"
+      }
+    ]
+  },
+  {
+    "id": 107138,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "漫漫长夜：生存版/The Long Dark Survival Edition",
+    "Subtitle": "极寒荒野孤独求生之旅",
+    "list": [
+      {
+        "coSize": "4.53 M",
+        "udTime": "2026-03-31",
+        "coName": "The Long Dark",
+        "coID": "305620",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "16.1 G",
+        "udTime": "2026-04-02",
+        "coName": "The Long Dark Wintermute Episode 5 v2.5.2",
+        "coID": "https://cloud.189.cn/t/uIV3ArRRZJfi?pwd=1egn",
+        "openPath": "The Long Dark Wintermute Episode 5 v2.5.2/tld.exe"
+      }
+    ]
+  },
+  {
+    "id": 107144,
+    "category_parent": 5,
+    "categories": "枪战射击",
+    "post_title": "乌克兰战争：戈斯托梅尔英雄/Ukrainian Warfare Gostomel Heroes",
+    "Subtitle": "战役重现基辅之战",
+    "list": [
+      {
+        "coSize": "585.65 K",
+        "udTime": "2026-03-31",
+        "coName": "Ukrainian Warfare: Gostomel Heroes",
+        "coID": "3902520",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "19.07 G",
+        "udTime": "2026-04-02",
+        "coName": "Ukrainian Warfare Gostomel Heroes v1.01.508",
+        "coID": "https://cloud.189.cn/t/EZz6VfMnEjEz?pwd=wzm7",
+        "openPath": "Ukrainian Warfare Gostomel Heroes v1.01.508/bin/Gostomel.exe"
+      }
+    ]
+  },
+  {
+    "id": 107231,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "鬼灭之刃：火之神血风谭2 – 豪华版/Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2 Deluxe Edition",
+    "Subtitle": "无有效返回内容",
+    "list": [
+      {
+        "coSize": "839.35 K",
+        "udTime": "2026-03-11",
+        "coName": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2",
+        "coID": "2928600",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "22.99 G",
+        "udTime": "2026-04-02",
+        "coName": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2",
+        "coID": "https://cloud.189.cn/t/nuQrquY3I3Un?pwd=8ttt",
+        "openPath": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2/APK2/Binaries/Win64/steamclient_loader_x64.exe"
+      }
+    ]
+  },
+  {
+    "id": 107236,
+    "category_parent": 5,
+    "categories": "体育竞速",
+    "post_title": "极品飞车22：不羁/Need for Speed Unbound",
+    "Subtitle": "街头竞速对抗警察挑战",
+    "list": [
+      {
+        "coSize": "1.59 M",
+        "udTime": "2026-03-20",
+        "coName": "Need for Speed Unbound",
+        "coID": "1846380",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "32.71 G",
+        "udTime": "2026-04-02",
+        "coName": "Need for Speed Unbound",
+        "coID": "https://cloud.189.cn/t/fMVfEvuiyUjm?pwd=rp46",
+        "openPath": "Need for Speed Unbound/NeedForSpeedUnbound.exe"
+      }
+    ]
+  },
+  {
+    "id": 107264,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "葛叶雷道 复刻版：超力兵团奇谭 – 数字豪华版/Raidou TMOTSA",
+    "Subtitle": "雷道复刻驱魔解谜战斗",
+    "list": [
+      {
+        "coSize": "847.77 K",
+        "udTime": "2025-10-23",
+        "coName": "RAIDOU Remastered: The Mystery of the Soulless Army",
+        "coID": "2288350",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "14.6 G",
+        "udTime": "2026-04-02",
+        "coName": "Raidou TMOTSA v1.12",
+        "coID": "https://cloud.189.cn/t/jqMbMnnQZjAr?pwd=ef62",
+        "openPath": "Raidou TMOTSA v1.12/Raidou TMOTSA.exe"
+      }
+    ]
+  },
+  {
+    "id": 107311,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "狙击精英：抵抗 – 豪华版/Sniper Elite Resistance Deluxe Edition",
+    "Subtitle": "主角带领展开任务",
+    "list": [
+      {
+        "coSize": "4.05 M",
+        "udTime": "2025-09-30",
+        "coName": "Sniper Elite: Resistance",
+        "coID": "2169200",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "97.55 G",
+        "udTime": "2026-04-03",
+        "coName": "Sniper Elite Resistance",
+        "coID": "https://cloud.189.cn/t/VBJ3UrauMj6r?pwd=az4z",
+        "openPath": "Sniper Elite Resistance/bin/launcher.exe"
+      }
+    ]
+  },
+  {
+    "id": 107357,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "达尔文悖论!/Darwin's Paradox!",
+    "Subtitle": "章鱼冒险智闯工业陷阱",
+    "list": [
+      {
+        "coSize": "275.48 K",
+        "udTime": "2026-04-02",
+        "coName": "Darwin's Paradox",
+        "coID": "2989180",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "7.43 G",
+        "udTime": "2026-04-03",
+        "coName": "Darwins Paradox v1.0.1",
+        "coID": "https://cloud.189.cn/t/JVnY7fQNRFBf?pwd=6jy7",
+        "openPath": "Darwins Paradox v1.0.1/Darwin's Paradox.exe"
+      }
+    ]
+  },
+  {
+    "id": 107389,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "腾兽岛：蜂群/Temtem: Swarm",
+    "Subtitle": "腾兽弹幕策略进化挑战",
+    "list": [
+      {
+        "coSize": "954.36 K",
+        "udTime": "2026-04-02",
+        "coName": "Temtem: Swarm",
+        "coID": "2510960",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "2.44 G",
+        "udTime": "2026-04-03",
+        "coName": "Temtem Swarm v1.0.0",
+        "coID": "https://cloud.189.cn/t/BBRbIzyMfARb?pwd=qhx4",
+        "openPath": "Temtem Swarm v1.0.0/TemtemSwarm.exe"
+      }
+    ]
+  },
+  {
+    "id": 107430,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "我是耶稣基督/I am Jesus Christ",
+    "Subtitle": "沉浸叙事体验弥赛亚人生",
+    "list": [
+      {
+        "coSize": "449.75 K",
+        "udTime": "2026-04-02",
+        "coName": "I Am Jesus Christ",
+        "coID": "1198970",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "11.85 G",
+        "udTime": "2026-04-03",
+        "coName": "I Am Jesus Christ v1.1.8",
+        "coID": "https://cloud.189.cn/t/Vreuqq3m26zm?pwd=6uvs",
+        "openPath": "I Am Jesus Christ v1.1.8/IMJCH/Binaries/Win64/IMJCH.exe"
       }
     ]
   }

@@ -3602,7 +3602,7 @@
     "categories": "动作冒险",
     "post_title": "生化危机4：重制版 – 黄金版/Resident Evil 4 Remake Gold Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2050650/header.jpg?t=1707455805",
-    "filesize": "67.01 G",
+    "filesize": "68.4 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/7fe6vuqUVnme?pwd=p4cy",
@@ -3620,6 +3620,15 @@
         "link_ctime": "2024.03.23",
         "filesize_z": 60050667436,
         "filename": "Resident Evil 4",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/FZv2QvIr6zu2?pwd=ro56",
+        "openpath": "RESIDENT EVIL 4 v1.5.9.0/re4.exe",
+        "filesize": "68.4 G",
+        "link_ctime": "2026.04.03",
+        "filesize_z": 73448763486,
+        "filename": "RESIDENT EVIL 4 v1.5.9.0",
         "server": "t"
       }
     ]
@@ -29444,7 +29453,7 @@
     "categories": "动作冒险",
     "post_title": "核心守护者/地心护核者/Core Keeper",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1621690/header_schinese.jpg?t=1733757050",
-    "filesize": "387.57 M",
+    "filesize": "493.5 M",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/uYj6bizAzMRf?pwd=4pnx",
@@ -29453,6 +29462,15 @@
         "link_ctime": "2024.12.22",
         "filesize_z": 406392548,
         "filename": "Core.Keeper.Build.16677714",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/vUF7NrjUj2If?pwd=bmf3",
+        "openpath": "Core Keeper v1.2.0.7/CoreKeeper.exe",
+        "filesize": "493.5 M",
+        "link_ctime": "2026.04.03",
+        "filesize_z": 517468517,
+        "filename": "Core Keeper v1.2.0.7",
         "server": "t"
       }
     ]
@@ -50387,6 +50405,424 @@
         "link_ctime": "2026.03.31",
         "filesize_z": 42247299974,
         "filename": "Mafia The Old Country",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 106776,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "噬血代码II：终极版/CODE VEIN II",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2362060/04f7610de0712c383de9d67b117ad079afb3337c/header_tchinese.jpg?t=1770242240",
+    "filesize": "61.39 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/3AJF73MvEj22?pwd=3dft",
+        "openpath": "CodeVein2 v1.0.6.0/CodeVein2/Binaries/Win64/steamclient_loader_x64.exe",
+        "filesize": "61.39 G",
+        "link_ctime": "2026.03.31",
+        "filesize_z": 65914093142,
+        "filename": "CodeVein2 v1.0.6.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 106800,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "浣熊推币机/RACCOIN Coin Pusher Roguelike",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3784030/602cffe86823bb1507da694218a005d2473d5ef8/header_schinese.jpg?t=1774951073",
+    "filesize": "167.87 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/yIzuUvamiuea?pwd=5wnd",
+        "openpath": "RACCOIN Coin Pusher Roguelike v1.0.8/RACCOIN.exe",
+        "filesize": "167.87 M",
+        "link_ctime": "2026.03.31",
+        "filesize_z": 176029421,
+        "filename": "RACCOIN Coin Pusher Roguelike v1.0.8",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 106826,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "虚拟小屋2/Virtual Cottage",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2943180/7676dc665eb0f64b90b0d045b3163ba8abdc8ffc/header.jpg?t=1774629529",
+    "filesize": "926.22 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/nUBj6jz6JZfi?pwd=q9lk",
+        "openpath": "Virtual Cottage 2 v20260330/VirtualCottage2.exe",
+        "filesize": "926.22 M",
+        "link_ctime": "2026.03.31",
+        "filesize_z": 971213830,
+        "filename": "Virtual Cottage 2 v20260330",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 106850,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "焕家物语/Hozy",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3326230/45ed25488d882fb1213f7ad70c6c3240e2c0a5b8/header_schinese.jpg?t=1774899989",
+    "filesize": "4.93 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/iy2u6vR7vUVz?pwd=nyq9",
+        "openpath": "Hozy/CozyGame.exe",
+        "filesize": "4.93 G",
+        "link_ctime": "2026.03.31",
+        "filesize_z": 5288534740,
+        "filename": "Hozy",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 106885,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "勇者斗恶龙7：重制版 – 数字豪华版/DRAGON QUEST VII Reimagined Digital Deluxe Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2499860/e127acb741d302886fb63dd16df6d430abb5863e/header_schinese.jpg?t=1772804835",
+    "filesize": "6.46 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/UjeeiiuaEJRz?pwd=7uyb",
+        "openpath": "DQ7R/DQ7R/Binaries/Win64/hypervisor-launcher.exe",
+        "filesize": "6.46 G",
+        "link_ctime": "2026.04.01",
+        "filesize_z": 6936988455,
+        "filename": "DQ7R",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 106903,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "如龙：维新！极：豪华版/Like a Dragon: Ishin",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1805480/header_schinese.jpg?t=1763648406",
+    "filesize": "57.24 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/VZ7rQ3YJbaIn?pwd=wh70",
+        "openpath": "LikeADragonIshin v1.06/LikeaDragonIshin/Binaries/Win64/hypervisor-launcher.exe",
+        "filesize": "57.24 G",
+        "link_ctime": "2026.04.01",
+        "filesize_z": 61459375913,
+        "filename": "LikeADragonIshin v1.06",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 106924,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "剑星：完整版/Stellar Blade Complete Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3489700/header.jpg?t=1773886328",
+    "filesize": "59.06 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qEzaEfEfeQfi?pwd=7qxy",
+        "openpath": "StellarBlade v1.4.1/SB/Binaries/Win64/hypervisor-launcher.exe",
+        "filesize": "59.06 G",
+        "link_ctime": "2026.04.01",
+        "filesize_z": 63411761987,
+        "filename": "StellarBlade v1.4.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 106949,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "超级肉肉男孩 3D/Super Meat Boy 3D",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3288210/f7e3ca14830bd58b69d20ccd6da9bb00b3471ec6/header_schinese.jpg?t=1774969750",
+    "filesize": "3.19 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/eQfI3evUVVRb?pwd=t52p",
+        "openpath": "Super Meat Boy 3D v20260401/SMB.exe",
+        "filesize": "3.19 G",
+        "link_ctime": "2026.04.01",
+        "filesize_z": 3427005454,
+        "filename": "Super Meat Boy 3D v20260401",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 106967,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "尘埃异变2/GRIME II",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2529790/5bf707f80269c434755227da6c2a96df9e7c2d85/header.jpg?t=1774974400",
+    "filesize": "19.16 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/rYzMBfJRbaQv?pwd=o7jy",
+        "openpath": "GRIME II v1.0.17360c/GRIME II.exe",
+        "filesize": "19.16 G",
+        "link_ctime": "2026.04.01",
+        "filesize_z": 20573947391,
+        "filename": "GRIME II v1.0.17360c",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 106980,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "以太与铁/Aether and Iron",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1836560/24b1c2b08c5221e5c5aa436f9511f6ba5949ed04/header_schinese.jpg?t=1774977075",
+    "filesize": "5.34 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/RFZJvaauMV3u?pwd=jp32",
+        "openpath": "Aether and Iron v1.0.56/AetherAndIron.exe",
+        "filesize": "5.34 G",
+        "link_ctime": "2026.04.01",
+        "filesize_z": 5728511082,
+        "filename": "Aether and Iron v1.0.56",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 107012,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "过山车之星2：白金版/Planet Coaster 2 Premium Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2688950/header_schinese.jpg?t=1770120190",
+    "filesize": "15.59 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NjEnEvqy6Br2?pwd=hq5k",
+        "openpath": "Planet Coaster 2 v1.8.2/hypervisor-launcher.exe",
+        "filesize": "15.59 G",
+        "link_ctime": "2026.04.01",
+        "filesize_z": 16736932901,
+        "filename": "Planet Coaster 2 v1.8.2",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 107018,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "贪婪之冠：豪华版/Crown of Greed",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1697870/c08ed000127283e3f14fc236af679c7f32c0ac9e/header.jpg?t=1775028626",
+    "filesize": "5.59 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2EzIBvraERZ3?pwd=baw0",
+        "openpath": "Crown of Greed v1.0.05f/Crown Of Greed.exe",
+        "filesize": "5.59 G",
+        "link_ctime": "2026.04.01",
+        "filesize_z": 6001934343,
+        "filename": "Crown of Greed v1.0.05f",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 107084,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "辐射4：周年版/Fallout 4",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/377160/header.jpg?t=1764687456",
+    "filesize": "91.04 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/iammiyviaAje?pwd=sk2a",
+        "openpath": "Fallout 4/Fallout4Launcher.exe",
+        "filesize": "91.04 G",
+        "link_ctime": "2026.04.02",
+        "filesize_z": 97748160619,
+        "filename": "Fallout 4",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 107138,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "漫漫长夜：生存版/The Long Dark Survival Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/305620/header.jpg?t=1775092706",
+    "filesize": "16.1 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uIV3ArRRZJfi?pwd=1egn",
+        "openpath": "The Long Dark Wintermute Episode 5 v2.5.2/tld.exe",
+        "filesize": "16.1 G",
+        "link_ctime": "2026.04.02",
+        "filesize_z": 17288628220,
+        "filename": "The Long Dark Wintermute Episode 5 v2.5.2",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 107144,
+    "category_parent": 5,
+    "categories": "枪战射击",
+    "post_title": "乌克兰战争：戈斯托梅尔英雄/Ukrainian Warfare Gostomel Heroes",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3902520/ebc704ad48ec2f8c6a6b90d93fe6a4cf3ab4ba63/header.jpg?t=1774953057",
+    "filesize": "19.07 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/EZz6VfMnEjEz?pwd=wzm7",
+        "openpath": "Ukrainian Warfare Gostomel Heroes v1.01.508/bin/Gostomel.exe",
+        "filesize": "19.07 G",
+        "link_ctime": "2026.04.02",
+        "filesize_z": 20478121394,
+        "filename": "Ukrainian Warfare Gostomel Heroes v1.01.508",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 107231,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "鬼灭之刃：火之神血风谭2 – 豪华版/Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2 Deluxe Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2928600/aa821fd4b54766db603903ed9083a5110d04bbce/header_tchinese.jpg?t=1773273746",
+    "filesize": "22.99 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/nuQrquY3I3Un?pwd=8ttt",
+        "openpath": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2/APK2/Binaries/Win64/steamclient_loader_x64.exe",
+        "filesize": "22.99 G",
+        "link_ctime": "2026.04.02",
+        "filesize_z": 24682456378,
+        "filename": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 107236,
+    "category_parent": 5,
+    "categories": "体育竞速",
+    "post_title": "极品飞车22：不羁/Need for Speed Unbound",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1846380/eacea0635efb7af9054f6b299060fee32404ace7/header.jpg?t=1761146151",
+    "filesize": "32.71 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fMVfEvuiyUjm?pwd=rp46",
+        "openpath": "Need for Speed Unbound/NeedForSpeedUnbound.exe",
+        "filesize": "32.71 G",
+        "link_ctime": "2026.04.02",
+        "filesize_z": 35126341288,
+        "filename": "Need for Speed Unbound",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 107264,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "葛叶雷道 复刻版：超力兵团奇谭 – 数字豪华版/Raidou TMOTSA",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2288350/header_schinese.jpg?t=1762275663",
+    "filesize": "14.6 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/jqMbMnnQZjAr?pwd=ef62",
+        "openpath": "Raidou TMOTSA v1.12/Raidou TMOTSA.exe",
+        "filesize": "14.6 G",
+        "link_ctime": "2026.04.02",
+        "filesize_z": 15675987158,
+        "filename": "Raidou TMOTSA v1.12",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 107311,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "狙击精英：抵抗 – 豪华版/Sniper Elite Resistance Deluxe Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2169200/header.jpg?t=1765448187",
+    "filesize": "97.55 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/VBJ3UrauMj6r?pwd=az4z",
+        "openpath": "Sniper Elite Resistance/bin/launcher.exe",
+        "filesize": "97.55 G",
+        "link_ctime": "2026.04.03",
+        "filesize_z": 104739652396,
+        "filename": "Sniper Elite Resistance",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 107357,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "达尔文悖论!/Darwin's Paradox!",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2989180/header.jpg?t=1775154340",
+    "filesize": "7.43 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JVnY7fQNRFBf?pwd=6jy7",
+        "openpath": "Darwins Paradox v1.0.1/Darwin's Paradox.exe",
+        "filesize": "7.43 G",
+        "link_ctime": "2026.04.03",
+        "filesize_z": 7974796905,
+        "filename": "Darwins Paradox v1.0.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 107389,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "腾兽岛：蜂群/Temtem: Swarm",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2510960/9eed19ba2e454b3a0a00dde88966dcd2e5decc04/header.jpg?t=1775150983",
+    "filesize": "2.44 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/BBRbIzyMfARb?pwd=qhx4",
+        "openpath": "Temtem Swarm v1.0.0/TemtemSwarm.exe",
+        "filesize": "2.44 G",
+        "link_ctime": "2026.04.03",
+        "filesize_z": 2620548063,
+        "filename": "Temtem Swarm v1.0.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 107430,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "我是耶稣基督/I am Jesus Christ",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1198970/header.jpg?t=1775178574",
+    "filesize": "11.85 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Vreuqq3m26zm?pwd=6uvs",
+        "openpath": "I Am Jesus Christ v1.1.8/IMJCH/Binaries/Win64/IMJCH.exe",
+        "filesize": "11.85 G",
+        "link_ctime": "2026.04.03",
+        "filesize_z": 12724663864,
+        "filename": "I Am Jesus Christ v1.1.8",
         "server": "t"
       }
     ]
