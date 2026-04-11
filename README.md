@@ -22,6 +22,7 @@
  [小刀娱乐网](https://www.x6g.com/) [`地址2`](https://www.xd0.com/) [`发布页`](https://www.xiaodao.biz/)
 - [克隆窝](https://www.uy5.net/) [`备用`](https://www.kelongwo.cn/) [`备用`](http://103.39.221.38:8885/)
  [机地](https://jidi520.com/)
+ [单机派](https://www.danjipai.com/)
  [小叽资源](https://steamzg.com/) [`发布页`](http://acgbns.com/)
  [koyso](https://koyso.to/) [`源网址`](https://koyso.com)
  [小妖怪分享](https://www.xyg688.com/) [`小妖怪分享`](https://www.ixyg688.com/)
