@@ -21908,7 +21908,7 @@
     "categories": "策略战棋",
     "post_title": "神话时代：重述 – 白金版/Age of Mythology: Retold",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1934680/header.jpg?t=1724855897",
-    "filesize": "12.03 G",
+    "filesize": "15.93 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/QJ3ymyeayMz2?pwd=6iql",
@@ -21917,6 +21917,15 @@
         "link_ctime": "2024.08.29",
         "filesize_z": 12922474735,
         "filename": "Age of Mythology Retold v1.00.17.18697.0.B15444160",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/Q7N3u236NrYn?pwd=h7pg",
+        "openpath": "Age of Mythology Retold v100.19.10195.0/AoMRT_s.exe",
+        "filesize": "15.93 G",
+        "link_ctime": "2026.04.22",
+        "filesize_z": 17104238366,
+        "filename": "Age of Mythology Retold v100.19.10195.0",
         "server": "t"
       }
     ]
@@ -41994,7 +42003,7 @@
     "categories": "策略战棋",
     "post_title": "王国风云3：皇家版/Crusader Kings III Royal Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1158310/17e3f0e61e3c1e6e0e810a4149c878292d9993db/header_alt_assets_11_schinese.jpg?t=1761742926",
-    "filesize": "8.51 G",
+    "filesize": "8.83 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/V36ZFvYbERJv?pwd=wyo3",
@@ -42003,6 +42012,15 @@
         "link_ctime": "2025.10.29",
         "filesize_z": 9139351458,
         "filename": "Crusader Kings III All Under Heaven",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/IV3Mbq6RZRZv?pwd=vhg8",
+        "openpath": "Crusader Kings III All Under Heaven v1.19.3/binaries/ck3.exe",
+        "filesize": "8.83 G",
+        "link_ctime": "2026.04.21",
+        "filesize_z": 9481375152,
+        "filename": "Crusader Kings III All Under Heaven v1.19.3",
         "server": "t"
       }
     ]
@@ -52273,6 +52291,158 @@
         "link_ctime": "2026.04.21",
         "filesize_z": 17644237802,
         "filename": "Bylina v20260421",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109404,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "超级机器人大战Y：终极版/Super Robot Wars Y Ultimate Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1909950/77e52ab7ceab48f5b76dd0bb650bfd8a72244c08/header_schinese.jpg?t=1770334390",
+    "filesize": "17.48 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FZJzIrFneYZf?pwd=6nc2",
+        "openpath": "SRWY v1.3.0/SUPER ROBOT WARS Y.exe",
+        "filesize": "17.48 G",
+        "link_ctime": "2026.04.21",
+        "filesize_z": 18766981749,
+        "filename": "SRWY v1.3.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109427,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "我家有矿/Fracture Field",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3946110/c0ca48860c68bec3f855f401e3252e259273e68b/header_tchinese.jpg?t=1776670424",
+    "filesize": "73.43 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/QrqueqZ3Qfyq?pwd=imw9",
+        "openpath": "Fracture Field v20260421/Fracture Field.exe",
+        "filesize": "73.43 M",
+        "link_ctime": "2026.04.21",
+        "filesize_z": 76999360,
+        "filename": "Fracture Field v20260421",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109470,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "克苏鲁：恐怖深渊 – 豪华版/Cthulhu: The Cosmic Abyss",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2760560/1211a01280977ae98a94c455ca61b2244ed5bc2e/header_alt_assets_2.jpg?t=1776773437",
+    "filesize": "12.97 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NbieQrfma2aq?pwd=8zxu",
+        "openpath": "CthulhuTCA v20260422/CthulhuTCA.exe",
+        "filesize": "12.97 G",
+        "link_ctime": "2026.04.23",
+        "filesize_z": 13925481405,
+        "filename": "CthulhuTCA v20260422",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109501,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "明日潮汐/Tides of Tomorrow",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2678080/210f2ca7da145c02bb41118b87280a3b8b777d40/header_tchinese.jpg?t=1776862754",
+    "filesize": "10.57 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/zIr6jijYbIrq?pwd=lvi1",
+        "openpath": "Tides of Tomorrow v1425/TidesOfTomorrow.exe",
+        "filesize": "10.57 G",
+        "link_ctime": "2026.04.23",
+        "filesize_z": 11344579110,
+        "filename": "Tides of Tomorrow v1425",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109526,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "猎人之路2/Way of the Hunter 2",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2543830/f1bc78a90febe74e6462e8940a215928d09a9d9a/header_alt_assets_0.jpg?t=1776695184",
+    "filesize": "15.88 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2ERbIf2UZjqu?pwd=iy5k",
+        "openpath": "Way of the Hunter 2 v0.0.1.188484/WOTH2.exe",
+        "filesize": "15.88 G",
+        "link_ctime": "2026.04.23",
+        "filesize_z": 17052499849,
+        "filename": "Way of the Hunter 2 v0.0.1.188484",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109556,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "吸血鬼爬行者/Vampire Crawlers The Turbo Wildcard from Vampire Survivors",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3265700/5590e42cab09dacabee973dd2c3e27ef12ed4950/header.jpg?t=1776789234",
+    "filesize": "586.8 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/baEBF3a6vM7j?pwd=t8h2",
+        "openpath": "Vampire Crawlers v1.4.0/Vampire Crawlers.exe",
+        "filesize": "586.8 M",
+        "link_ctime": "2026.04.23",
+        "filesize_z": 615306109,
+        "filename": "Vampire Crawlers v1.4.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109582,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "掘地求狗：支持者版/Pratfall",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4244510/42943a2891d8b7c8fa495bac983e31a8bf95a0b2/header_schinese.jpg?t=1776803939",
+    "filesize": "270.84 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/auqEFvni6vUn?pwd=4sb1",
+        "openpath": "Pratfall v1.0.0R2502/Pratfall.exe",
+        "filesize": "270.84 M",
+        "link_ctime": "2026.04.23",
+        "filesize_z": 283993398,
+        "filename": "Pratfall v1.0.0R2502",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109609,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "月影杀：终极版/Kristala",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1206410/587c5ce29dd10ed1ded8a9124d8234122a60b116/header_tchinese.jpg?t=1776972006",
+    "filesize": "11.46 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fuaAvi2EJ3eq?pwd=gxv6",
+        "openpath": "Kristala v1.0.2/Kristala.exe",
+        "filesize": "11.46 G",
+        "link_ctime": "2026.04.24",
+        "filesize_z": 12300922175,
+        "filename": "Kristala v1.0.2",
         "server": "t"
       }
     ]

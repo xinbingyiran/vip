@@ -21965,6 +21965,20 @@
         "coName": "Age of Mythology Retold v1.00.17.18697.0.B15444160",
         "coID": "https://cloud.189.cn/t/QJ3ymyeayMz2?pwd=6iql",
         "openPath": "Age of Mythology Retold v1.00.17.18697.0.B15444160/AoMRT_s.exe"
+      },
+      {
+        "coSize": "1.24 M",
+        "udTime": "2026-04-21",
+        "coName": "Age of Mythology: Retold",
+        "coID": "1934680",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "15.93 G",
+        "udTime": "2026-04-22",
+        "coName": "Age of Mythology Retold v100.19.10195.0",
+        "coID": "https://cloud.189.cn/t/Q7N3u236NrYn?pwd=h7pg",
+        "openPath": "Age of Mythology Retold v100.19.10195.0/AoMRT_s.exe"
       }
     ]
   },
@@ -40080,6 +40094,20 @@
         "coName": "Crusader Kings III All Under Heaven",
         "coID": "https://cloud.189.cn/t/V36ZFvYbERJv?pwd=wyo3",
         "openPath": "Crusader Kings III All Under Heaven/ck3.exe"
+      },
+      {
+        "coSize": "4.1 M",
+        "udTime": "2026-04-20",
+        "coName": "Crusader Kings III",
+        "coID": "1158310",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "8.83 G",
+        "udTime": "2026-04-21",
+        "coName": "Crusader Kings III All Under Heaven v1.19.3",
+        "coID": "https://cloud.189.cn/t/IV3Mbq6RZRZv?pwd=vhg8",
+        "openPath": "Crusader Kings III All Under Heaven v1.19.3/binaries/ck3.exe"
       }
     ]
   },
@@ -51473,6 +51501,13 @@
         "coName": "Airborne Empire v1.0.0",
         "coID": "https://cloud.189.cn/t/jEfMrayuYNVz?pwd=gm4n",
         "openPath": "Airborne Empire v1.0.0/AirborneEmpire.exe"
+      },
+      {
+        "coSize": "272.42 K",
+        "udTime": "2026-04-22",
+        "coName": "Airborne Empire",
+        "coID": "2438680",
+        "type": "warehousing"
       }
     ]
   },
@@ -51496,6 +51531,13 @@
         "coName": "ShantyTown v1.0.003",
         "coID": "https://cloud.189.cn/t/3eQ7zqMNrQva?pwd=nf1m",
         "openPath": "ShantyTown v1.0.003/ShantyTown.exe"
+      },
+      {
+        "coSize": "107.74 K",
+        "udTime": "2026-04-18",
+        "coName": "ShantyTown",
+        "coID": "2434600",
+        "type": "warehousing"
       }
     ]
   },
@@ -51519,6 +51561,13 @@
         "coName": "The Ember Guardian v1.0.1.7",
         "coID": "https://cloud.189.cn/t/Zbyeye7B7f2y?pwd=2exo",
         "openPath": "The Ember Guardian v1.0.1.7/The Ember Guardian.exe"
+      },
+      {
+        "coSize": "216.04 K",
+        "udTime": "2026-04-19",
+        "coName": "The Ember Guardian: First Flames",
+        "coID": "3628930",
+        "type": "warehousing"
       }
     ]
   },
@@ -51634,6 +51683,13 @@
         "coName": "All Hail the Orb v20260421",
         "coID": "https://cloud.189.cn/t/2Q32E3ZJFZZ3?pwd=51dy",
         "openPath": "All Hail the Orb v20260421/All Hail the Orb.exe"
+      },
+      {
+        "coSize": "13.79 K",
+        "udTime": "2026-04-22",
+        "coName": " All Hail the Orb",
+        "coID": "4262310",
+        "type": "warehousing"
       }
     ]
   },
@@ -51657,6 +51713,197 @@
         "coName": "Bylina v20260421",
         "coID": "https://cloud.189.cn/t/qMFz22fQ3Aje?pwd=a7fn",
         "openPath": "Bylina v20260421/TheEpicProject.exe"
+      },
+      {
+        "coSize": "568.75 K",
+        "udTime": "2026-04-22",
+        "coName": "Bylina",
+        "coID": "2461440",
+        "type": "warehousing"
+      }
+    ]
+  },
+  {
+    "id": 109404,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "超级机器人大战Y：终极版/Super Robot Wars Y Ultimate Edition",
+    "Subtitle": "机战集结突破命运之战",
+    "list": [
+      {
+        "coSize": "2.57 M",
+        "udTime": "2026-04-22",
+        "coName": "SUPER ROBOT WARS Y",
+        "coID": "1909950",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "17.48 G",
+        "udTime": "2026-04-21",
+        "coName": "SRWY v1.3.0",
+        "coID": "https://cloud.189.cn/t/FZJzIrFneYZf?pwd=6nc2",
+        "openPath": "SRWY v1.3.0/SUPER ROBOT WARS Y.exe"
+      }
+    ]
+  },
+  {
+    "id": 109427,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "我家有矿/Fracture Field",
+    "Subtitle": "节奏采矿自动化帝国崛起",
+    "list": [
+      {
+        "coSize": "13.95 K",
+        "udTime": "2026-04-22",
+        "coName": "Fracture Field",
+        "coID": "3946110",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "73.43 M",
+        "udTime": "2026-04-21",
+        "coName": "Fracture Field v20260421",
+        "coID": "https://cloud.189.cn/t/QrqueqZ3Qfyq?pwd=imw9",
+        "openPath": "Fracture Field v20260421/Fracture Field.exe"
+      }
+    ]
+  },
+  {
+    "id": 109470,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "克苏鲁：恐怖深渊 – 豪华版/Cthulhu: The Cosmic Abyss",
+    "Subtitle": "深海调查揭开诡秘真相",
+    "list": [
+      {
+        "coSize": "586.39 K",
+        "udTime": "2026-04-21",
+        "coName": "Cthulhu: The Cosmic Abyss",
+        "coID": "2760560",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "12.97 G",
+        "udTime": "2026-04-23",
+        "coName": "CthulhuTCA v20260422",
+        "coID": "https://cloud.189.cn/t/NbieQrfma2aq?pwd=8zxu",
+        "openPath": "CthulhuTCA v20260422/CthulhuTCA.exe"
+      }
+    ]
+  },
+  {
+    "id": 109501,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "明日潮汐/Tides of Tomorrow",
+    "Subtitle": "多线抉择联动命运世界",
+    "list": [
+      {
+        "coSize": "381.27 K",
+        "udTime": "2026-04-22",
+        "coName": "Tides of Tomorrow",
+        "coID": "2678080",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "10.57 G",
+        "udTime": "2026-04-23",
+        "coName": "Tides of Tomorrow v1425",
+        "coID": "https://cloud.189.cn/t/zIr6jijYbIrq?pwd=lvi1",
+        "openPath": "Tides of Tomorrow v1425/TidesOfTomorrow.exe"
+      }
+    ]
+  },
+  {
+    "id": 109526,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "猎人之路2/Way of the Hunter 2",
+    "Subtitle": "感受狩猎的极致快感",
+    "list": [
+      {
+        "coSize": "540.41 K",
+        "udTime": "2026-04-15",
+        "coName": "Way of the Hunter 2",
+        "coID": "2543830",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "15.88 G",
+        "udTime": "2026-04-23",
+        "coName": "Way of the Hunter 2 v0.0.1.188484",
+        "coID": "https://cloud.189.cn/t/2ERbIf2UZjqu?pwd=iy5k",
+        "openPath": "Way of the Hunter 2 v0.0.1.188484/WOTH2.exe"
+      }
+    ]
+  },
+  {
+    "id": 109556,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "吸血鬼爬行者/Vampire Crawlers The Turbo Wildcard from Vampire Survivors",
+    "Subtitle": "卡组连击横扫地城怪潮",
+    "list": [
+      {
+        "coSize": "89.66 K",
+        "udTime": "2026-04-22",
+        "coName": "Vampire Crawlers",
+        "coID": "3265700",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "586.8 M",
+        "udTime": "2026-04-23",
+        "coName": "Vampire Crawlers v1.4.0",
+        "coID": "https://cloud.189.cn/t/baEBF3a6vM7j?pwd=t8h2",
+        "openPath": "Vampire Crawlers v1.4.0/Vampire Crawlers.exe"
+      }
+    ]
+  },
+  {
+    "id": 109582,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "掘地求狗：支持者版/Pratfall",
+    "Subtitle": "合作挖洞冒险拯救狗狗",
+    "list": [
+      {
+        "coSize": "39.9 K",
+        "udTime": "2026-04-22",
+        "coName": "Pratfall",
+        "coID": "4244510",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "270.84 M",
+        "udTime": "2026-04-23",
+        "coName": "Pratfall v1.0.0R2502",
+        "coID": "https://cloud.189.cn/t/auqEFvni6vUn?pwd=4sb1",
+        "openPath": "Pratfall v1.0.0R2502/Pratfall.exe"
+      }
+    ]
+  },
+  {
+    "id": 109609,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "月影杀：终极版/Kristala",
+    "Subtitle": "暗黑跑酷战斗破解诅咒",
+    "list": [
+      {
+        "coSize": "433.58 K",
+        "udTime": "2026-04-23",
+        "coName": "Kristala",
+        "coID": "1206410",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "11.46 G",
+        "udTime": "2026-04-24",
+        "coName": "Kristala v1.0.2",
+        "coID": "https://cloud.189.cn/t/fuaAvi2EJ3eq?pwd=gxv6",
+        "openPath": "Kristala v1.0.2/Kristala.exe"
       }
     ]
   }

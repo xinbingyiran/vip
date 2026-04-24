@@ -387,6 +387,14 @@
         "coID": "https://www.uy5.net/download/?path=DFcQ0KHeAFYA1611iptRY1EL078202210220138336i8",
         "type": "file",
         "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370753w/DFcQ0KHeAFYA1611iptRY1EL078202210220138336i8"
+      },
+      {
+        "coSize": "5509986778",
+        "udTime": "202604222136",
+        "coName": "Adobe-AfterEffects-2026-26.2.0.49-m0nkrus.zip",
+        "coID": "https://www.uy5.net/download/?path=FtmlhcMXW-07TRIOiQbNJvqOtVViyVu7O",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370753w/FtmlhcMXW-07TRIOiQbNJvqOtVViyVu7O"
       }
     ]
   },
@@ -1067,6 +1075,14 @@
         "coID": "https://www.uy5.net/download/?path=Fu6aVa7bniWEiPN6VsyNDe65ioUPBZ5zh",
         "type": "file",
         "path": "DFcQ0KHeAFYA1611iptRY1EL07820221022013707530/Fu6aVa7bniWEiPN6VsyNDe65ioUPBZ5zh"
+      },
+      {
+        "coSize": "3411610103",
+        "udTime": "202604222152",
+        "coName": "Adobe-Lightroom-Classic-2026-15.3.0.11-m0nkrus.zip",
+        "coID": "https://www.uy5.net/download/?path=Friu6fs-4zccs-Wdn1CZIgbvvjla4ONhH",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL07820221022013707530/Friu6fs-4zccs-Wdn1CZIgbvvjla4ONhH"
       }
     ]
   },
@@ -1179,6 +1195,22 @@
         "coID": "https://www.uy5.net/download/?path=DFcQ0KHeAFYA1611iptRY1EL05620221022013821x8m",
         "type": "file",
         "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370753n/DFcQ0KHeAFYA1611iptRY1EL05620221022013821x8m"
+      },
+      {
+        "coSize": "2895824806",
+        "udTime": "202604222200",
+        "coName": "Adobe-MediaEncoder-2026-26.2.0.52-m0nkrus.zip",
+        "coID": "https://www.uy5.net/download/?path=Fn4bjmvyFiMq5IPuMBq1M7opC17KLBZ1K",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370753n/Fn4bjmvyFiMq5IPuMBq1M7opC17KLBZ1K"
+      },
+      {
+        "coSize": "2709415207",
+        "udTime": "202603122113",
+        "coName": "Adobe-MediaEncoder-2026-26.0.2.2-m0nkrus.zip",
+        "coID": "https://www.uy5.net/download/?path=FrRByIi5Pqqp9RhFA4KNN07jURgpZz78q",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370753n/FrRByIi5Pqqp9RhFA4KNN07jURgpZz78q"
       }
     ]
   },
@@ -1306,6 +1338,22 @@
         "coID": "https://www.uy5.net/download/?path=DFcQ0KHeAFYA1611iptRY1EL05620221022013758x1a",
         "type": "file",
         "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370753d/DFcQ0KHeAFYA1611iptRY1EL05620221022013758x1a"
+      },
+      {
+        "coSize": "4428348977",
+        "udTime": "202604222208",
+        "coName": "Adobe-Premiere-Pro-2026-26.2.0.65-m0nkrus.zip",
+        "coID": "https://www.uy5.net/download/?path=Fo2yAqoZ_-N0_Scl7h4RGk7aotILx_-1d",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370753d/Fo2yAqoZ_-N0_Scl7h4RGk7aotILx_-1d"
+      },
+      {
+        "coSize": "4124965570",
+        "udTime": "202603122051",
+        "coName": "Adobe-Premiere-Pro-2026-26.0.2.2-m0nkrus.zip",
+        "coID": "https://www.uy5.net/download/?path=FisA31GPJhg1H6zZghOJIEZ8EA_wUSZON",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370753d/FisA31GPJhg1H6zZghOJIEZ8EA_wUSZON"
       }
     ]
   },
@@ -5672,6 +5720,31 @@
     ]
   },
   {
+    "id": 64800,
+    "category_parent": 538,
+    "categories": "录屏",
+    "post_title": "OBS Studio",
+    "Subtitle": "直播辅助工具",
+    "list": [
+      {
+        "coSize": "189390358",
+        "udTime": "202604222314",
+        "coName": "OBS-Studio-32.1.2-Windows-x64.zip",
+        "coID": "https://www.uy5.net/download/?path=Fr4LuNxns2BYow-99w35HObpG2h9ubM2W",
+        "type": "file",
+        "path": "FucJFryv4VueNZSSi8z9BQqwGcYdceENn/Fr4LuNxns2BYow-99w35HObpG2h9ubM2W"
+      },
+      {
+        "coSize": "157809480",
+        "udTime": "202604222314",
+        "coName": "OBS-Studio-32.1.2-Windows-x64-Installer.exe",
+        "coID": "https://www.uy5.net/download/?path=FuPKpVqdjI8WyDAW_4jJMsa02nX7Q4zZF",
+        "type": "file",
+        "path": "FucJFryv4VueNZSSi8z9BQqwGcYdceENn/FuPKpVqdjI8WyDAW_4jJMsa02nX7Q4zZF"
+      }
+    ]
+  },
+  {
     "id": 70089,
     "category_parent": 538,
     "categories": "下载器",
@@ -8201,6 +8274,57 @@
         "coID": "https://www.uy5.net/download/?path=FmdAGWywBjX4hkrL49YhL5IwUMnNbgZj-",
         "type": "file",
         "path": "FmFpI0KpaluQo1eIQ_otNIY2efPjd2oNk/FmdAGWywBjX4hkrL49YhL5IwUMnNbgZj-"
+      }
+    ]
+  },
+  {
+    "id": 109450,
+    "category_parent": 538,
+    "categories": "系统工具",
+    "post_title": "Acronis True Image",
+    "Subtitle": "系统备份与恢复",
+    "list": [
+      {
+        "coSize": "36089629",
+        "udTime": "202604221717",
+        "coName": "ATI2026_v30.2.1.42902_x64.exe",
+        "coID": "https://www.uy5.net/download/?path=FouMyO-lwzN6TBcS2rzBGJ7cnBhOe8Nle",
+        "type": "file",
+        "path": "Fuu3VVj73ZagPY0B-rHhFQ68p4X5Jd3Ao/FouMyO-lwzN6TBcS2rzBGJ7cnBhOe8Nle"
+      }
+    ]
+  },
+  {
+    "id": 109462,
+    "category_parent": 538,
+    "categories": "三维建模",
+    "post_title": "Agisoft Metashape",
+    "Subtitle": "3D建模和摄影测量",
+    "list": [
+      {
+        "coSize": "220382693",
+        "udTime": "202604222322",
+        "coName": "agisoft_metashape_pro_2.3.1.22398-Portable.zip",
+        "coID": "https://www.uy5.net/download/?path=FvWo0lUPbcY-oYyomw9tPrqiuAL00W2QP",
+        "type": "file",
+        "path": "FhNGU5hkKJPWfiTXpoRpOMpEVoM5uijF1/FvWo0lUPbcY-oYyomw9tPrqiuAL00W2QP"
+      }
+    ]
+  },
+  {
+    "id": 109494,
+    "category_parent": 538,
+    "categories": "媒体音频",
+    "post_title": "Fast Video Cutter Joiner",
+    "Subtitle": "视频剪切与合并功能",
+    "list": [
+      {
+        "coSize": "31333451",
+        "udTime": "202604231001",
+        "coName": "fast_video_cutter_joiner_7.0.7.0-Portable.zip",
+        "coID": "https://www.uy5.net/download/?path=FivLiCTllclWS9fsSpZJE1p821iFO5WfV",
+        "type": "file",
+        "path": "FvfcamEgEVprUYjuIi7xCCqgzLrA_hEMa/FivLiCTllclWS9fsSpZJE1p821iFO5WfV"
       }
     ]
   }
