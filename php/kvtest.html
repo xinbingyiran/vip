@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>KV工具</title>
+<style>
+    *{box-sizing:border-box;font-family:Arial}
+    body{max-width:1080px;margin:30px auto;padding:0 20px;background:#f6f8fa}
+    .box{background:#fff;border-radius:12px;padding:20px;box-shadow:0 1px 4px #00000010}
+    textarea,button{width:100%;margin:8px 0;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px}
+    button{background:#007bff;color:#fff;border:none;cursor:pointer}
+    .result{background:#f8f9fa;padding:12px;border-radius:6px;margin-top:10px;max-height:220px;overflow:auto;white-space:pre}
+</style>
+
+<div class="box">
+    <h3>请求内容</h3>
+    <textarea id="content" rows="10">{
+    "action": "get",
+    "data": {"type":"","name":""}
+}</textarea>
+    <button onclick="send()">提交请求</button>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+async function send() {
+    const resDom = document.getElementById('result');
+    try {
+        const text = document.getElementById('content').value.trim();
+        const json = JSON.parse(text);
+
+        const res = await fetch('kvapi.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(json)
+        });
+
+        const result = await res.json();
+        resDom.textContent = JSON.stringify(result, null, 2);
+    } catch (e) {
+        resDom.textContent = '错误：' + e.message;
+    }
+}
+</script>
