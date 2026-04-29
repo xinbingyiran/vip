@@ -21979,6 +21979,13 @@
         "coName": "Age of Mythology Retold v100.19.10195.0",
         "coID": "https://cloud.189.cn/t/Q7N3u236NrYn?pwd=h7pg",
         "openPath": "Age of Mythology Retold v100.19.10195.0/AoMRT_s.exe"
+      },
+      {
+        "coSize": "1.25 M",
+        "udTime": "2026-04-23",
+        "coName": "Age of Mythology: Retold",
+        "coID": "1934680",
+        "type": "warehousing"
       }
     ]
   },
@@ -31456,6 +31463,20 @@
         "coName": "Jotunnslayer.Hordes.of.Hel v0.2.2",
         "coID": "https://cloud.189.cn/t/AJvuQbInm2Iv?pwd=pq3q",
         "openPath": "Jotunnslayer.Hordes.of.Hel v0.2.2/Jotunnslayer.exe"
+      },
+      {
+        "coSize": "745.25 K",
+        "udTime": "2026-04-23",
+        "coName": "Jotunnslayer: Hordes of Hel",
+        "coID": "2820820",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "15.11 G",
+        "udTime": "2026-04-27",
+        "coName": "Jotunnslayer Hordes of Hel v1.2.2",
+        "coID": "https://cloud.189.cn/t/UV3UN3iM7rYf?pwd=1vuo",
+        "openPath": "Jotunnslayer Hordes of Hel v1.2.2/Jotunnslayer.exe"
       }
     ]
   },
@@ -33511,6 +33532,20 @@
         "coName": "Rune Factory Guardians of Azuma v1.0.3",
         "coID": "https://cloud.189.cn/t/JBJ3Ez2MFRna?pwd=olw0",
         "openPath": "Rune Factory Guardians of Azuma v1.0.3/Game.exe"
+      },
+      {
+        "coSize": "483.77 K",
+        "udTime": "2026-04-25",
+        "coName": "Rune Factory: Guardians of Azuma",
+        "coID": "2864560",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "12.58 G",
+        "udTime": "2026-04-26",
+        "coName": "Rune Factory Guardians of Azuma v1.1.4",
+        "coID": "https://cloud.189.cn/t/IvUrYrU3a6ru?pwd=k8fm",
+        "openPath": "Rune Factory Guardians of Azuma v1.1.4/Game.exe"
       }
     ]
   },
@@ -40108,6 +40143,13 @@
         "coName": "Crusader Kings III All Under Heaven v1.19.3",
         "coID": "https://cloud.189.cn/t/IV3Mbq6RZRZv?pwd=vhg8",
         "openPath": "Crusader Kings III All Under Heaven v1.19.3/binaries/ck3.exe"
+      },
+      {
+        "coSize": "4.1 M",
+        "udTime": "2026-04-23",
+        "coName": "Crusader Kings III",
+        "coID": "1158310",
+        "type": "warehousing"
       }
     ]
   },
@@ -51690,6 +51732,13 @@
         "coName": " All Hail the Orb",
         "coID": "4262310",
         "type": "warehousing"
+      },
+      {
+        "coSize": "13.9 K",
+        "udTime": "2026-04-26",
+        "coName": " All Hail the Orb",
+        "coID": "4262310",
+        "type": "warehousing"
       }
     ]
   },
@@ -51717,6 +51766,13 @@
       {
         "coSize": "568.75 K",
         "udTime": "2026-04-22",
+        "coName": "Bylina",
+        "coID": "2461440",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "606.03 K",
+        "udTime": "2026-04-24",
         "coName": "Bylina",
         "coID": "2461440",
         "type": "warehousing"
@@ -51789,6 +51845,13 @@
         "coName": "CthulhuTCA v20260422",
         "coID": "https://cloud.189.cn/t/NbieQrfma2aq?pwd=8zxu",
         "openPath": "CthulhuTCA v20260422/CthulhuTCA.exe"
+      },
+      {
+        "coSize": "586.51 K",
+        "udTime": "2026-04-24",
+        "coName": "Cthulhu: The Cosmic Abyss",
+        "coID": "2760560",
+        "type": "warehousing"
       }
     ]
   },
@@ -51812,6 +51875,13 @@
         "coName": "Tides of Tomorrow v1425",
         "coID": "https://cloud.189.cn/t/zIr6jijYbIrq?pwd=lvi1",
         "openPath": "Tides of Tomorrow v1425/TidesOfTomorrow.exe"
+      },
+      {
+        "coSize": "390.66 K",
+        "udTime": "2026-04-24",
+        "coName": "Tides of Tomorrow",
+        "coID": "2678080",
+        "type": "warehousing"
       }
     ]
   },
@@ -51904,6 +51974,351 @@
         "coName": "Kristala v1.0.2",
         "coID": "https://cloud.189.cn/t/fuaAvi2EJ3eq?pwd=gxv6",
         "openPath": "Kristala v1.0.2/Kristala.exe"
+      },
+      {
+        "coSize": "440.49 K",
+        "udTime": "2026-04-25",
+        "coName": "Kristala",
+        "coID": "1206410",
+        "type": "warehousing"
+      }
+    ]
+  },
+  {
+    "id": 109647,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "战争传说：雇佣兵版/Wartales Fires in the Capital",
+    "Subtitle": "佣兵探索中世纪赏金冒险",
+    "list": [
+      {
+        "coSize": "20.45 G",
+        "udTime": "2026-04-25",
+        "coName": "Wartales Fires in the Capital v1.0.46851",
+        "coID": "https://cloud.189.cn/t/NnYj22zAJbMz?pwd=08pu",
+        "openPath": "Wartales Fires in the Capital v1.0.46851/Wartales.exe"
+      }
+    ]
+  },
+  {
+    "id": 109675,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "覆雪之上/Above the Snow",
+    "Subtitle": "雪山酒店经营救援登山",
+    "list": [
+      {
+        "coSize": "171.06 K",
+        "udTime": "2026-04-25",
+        "coName": "Above the Snow",
+        "coID": "2423760",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "2.51 G",
+        "udTime": "2026-04-25",
+        "coName": "Above the Snow v1.0.0",
+        "coID": "https://cloud.189.cn/t/Jbu2mqIfiERz?pwd=mn2l",
+        "openPath": "Above the Snow v1.0.0/Above The Snow.exe"
+      }
+    ]
+  },
+  {
+    "id": 109706,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "益智泡泡龙:一起泡泡战/Puzzle Bobble Everybubble",
+    "Subtitle": "泡泡消除爽快射击益智",
+    "list": [
+      {
+        "coSize": "301 K",
+        "udTime": "2026-04-23",
+        "coName": "Puzzle Bobble Everybubble!",
+        "coID": "3990960",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "1.67 G",
+        "udTime": "2026-04-25",
+        "coName": "PBEB v1.0",
+        "coID": "https://cloud.189.cn/t/BZnMja2mUZve?pwd=9jkr",
+        "openPath": "PBEB v1.0/PuzzleBobble EveryBubble.exe"
+      }
+    ]
+  },
+  {
+    "id": 109723,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "幽影/Rumbral",
+    "Subtitle": "失忆探索荒芜解谜逃生",
+    "list": [
+      {
+        "coSize": "42.32 K",
+        "udTime": "2026-04-23",
+        "coName": "Rumbral",
+        "coID": "3565040",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "619.79 M",
+        "udTime": "2026-04-26",
+        "coName": "Rumbral v1.0.0",
+        "coID": "https://cloud.189.cn/t/32Mb2qfAny6b?pwd=4kxe",
+        "openPath": "Rumbral v1.0.0/Windows/Rumbral.exe"
+      }
+    ]
+  },
+  {
+    "id": 109752,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "我们的王国：蚀时果实与远古魔物/Kingdom’s Return: Time-Eating Fruit and the Ancient Monster",
+    "Subtitle": "横版冒险复兴破败王国",
+    "list": [
+      {
+        "coSize": "92.97 K",
+        "udTime": "2026-04-25",
+        "coName": "Kingdom's Return: Time-Eating Fruit and the Ancient Monster",
+        "coID": "3882650",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "865.89 M",
+        "udTime": "2026-04-26",
+        "coName": "Kingdom s Return v1.0.4",
+        "coID": "https://cloud.189.cn/t/VvUbimBBZfeq?pwd=7ne4",
+        "openPath": "Kingdom s Return v1.0.4/game.exe"
+      }
+    ]
+  },
+  {
+    "id": 109770,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "小小梦魇VR 异境回响/Little Nightmares VR Altered Echoes",
+    "Subtitle": "黑暗解谜逃离巨型恐怖",
+    "list": [
+      {
+        "coSize": "396.44 K",
+        "udTime": "2026-04-23",
+        "coName": "Little Nightmares VR: Altered Echoes",
+        "coID": "2482940",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "8.47 G",
+        "udTime": "2026-04-26",
+        "coName": "LittleNightmaresVRAlteredEchoes v20260425",
+        "coID": "https://cloud.189.cn/t/AJF3ErMfmuAv?pwd=nlo2",
+        "openPath": "LittleNightmaresVRAlteredEchoes v20260425/Little Nightmares VR.exe"
+      }
+    ]
+  },
+  {
+    "id": 109792,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "星际钻探站/Space Drilling Station",
+    "Subtitle": "星际钻探管理资源竞争",
+    "list": [
+      {
+        "coSize": "70.35 K",
+        "udTime": "2026-04-22",
+        "coName": "Space Drilling Station",
+        "coID": "2134850",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "777.46 M",
+        "udTime": "2026-04-26",
+        "coName": "Space Drilling Station  v0.3108",
+        "coID": "https://cloud.189.cn/t/Rvay2q3quENf?pwd=r5b5",
+        "openPath": "Space Drilling Station  v0.3108/Space Drilling Station.exe"
+      }
+    ]
+  },
+  {
+    "id": 109825,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "中世纪工匠：铁匠/Medieval Crafter Blacksmith",
+    "Subtitle": "铁匠锻造中世纪英雄之路",
+    "list": [
+      {
+        "coSize": "244.15 K",
+        "udTime": "2026-04-15",
+        "coName": "Ironsmith Medieval Simulator",
+        "coID": "978700",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "3.48 G",
+        "udTime": "2026-04-26",
+        "coName": "Medieval Crafter Blacksmith v1.01",
+        "coID": "https://cloud.189.cn/t/3Y3ANvaQnYza?pwd=ic4r",
+        "openPath": "Medieval Crafter Blacksmith v1.01/MedievalCrafterBlacksmith.exe"
+      }
+    ]
+  },
+  {
+    "id": 109906,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "捕捉2/CAPTURED 2",
+    "Subtitle": "拍摄异常逃离循环公寓",
+    "list": [
+      {
+        "coSize": "543.42 K",
+        "udTime": "2026-04-25",
+        "coName": "CAPTURED 2",
+        "coID": "3390880",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "13.71 G",
+        "udTime": "2026-04-27",
+        "coName": "CAPTURED 2 v2.1.1.0",
+        "coID": "https://cloud.189.cn/t/ze2iIvmQ77Jv?pwd=2qlc",
+        "openPath": "CAPTURED 2 v2.1.1.0/CAPTURED2.exe"
+      }
+    ]
+  },
+  {
+    "id": 109911,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "自动售货机模拟器/Vending Machine Co",
+    "Subtitle": "经营零食街区打造自动贩卖",
+    "list": [
+      {
+        "coSize": "516.09 K",
+        "udTime": "2026-04-26",
+        "coName": "Vending Machine Co.",
+        "coID": "3622640",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "683.13 M",
+        "udTime": "2026-04-27",
+        "coName": "Vending Machine Co v1.0.2",
+        "coID": "https://cloud.189.cn/t/nuQvaaY7bYrq?pwd=zhp6",
+        "openPath": "Vending Machine Co v1.0.2/Vending Machine Co.exe"
+      }
+    ]
+  },
+  {
+    "id": 110092,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "晕晕电波症候群/Yunyun Syndrome",
+    "Subtitle": "电波少女节奏冒险狂欢",
+    "list": [
+      {
+        "coSize": "111.82 K",
+        "udTime": "2026-04-25",
+        "coName": "Yunyun Syndrome!? Rhythm Psychosis",
+        "coID": "2914150",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "4.65 G",
+        "udTime": "2026-04-27",
+        "coName": "Yunyun Syndrome v1.0.6",
+        "coID": "https://cloud.189.cn/t/6ZbIjqRNb6V3?pwd=skv5",
+        "openPath": "Yunyun Syndrome v1.0.6/Yunyun_Syndrome.exe"
+      }
+    ]
+  },
+  {
+    "id": 110097,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "北境酒馆/Tidehaven Ale Trade",
+    "Subtitle": "中世纪酒馆经营传奇之路",
+    "list": [
+      {
+        "coSize": "20.82 K",
+        "udTime": "2026-04-26",
+        "coName": "Tidehaven: Ale & Trade",
+        "coID": "3691420",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "166.79 M",
+        "udTime": "2026-04-27",
+        "coName": "Tidehaven Ale Trade v20260426",
+        "coID": "https://cloud.189.cn/t/FvINfiJZj6va?pwd=wzb2",
+        "openPath": "Tidehaven Ale Trade v20260426/Tidehaven_Ale_Trade.exe"
+      }
+    ]
+  },
+  {
+    "id": 110125,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "佣兵猎手/Rogue Point",
+    "Subtitle": "四人合作射击策略求生",
+    "list": [
+      {
+        "coSize": "333.08 K",
+        "udTime": "2026-04-26",
+        "coName": "Rogue Point",
+        "coID": "1843840",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "8.14 G",
+        "udTime": "2026-04-27",
+        "coName": "Rogue Point v0.5.0",
+        "coID": "https://cloud.189.cn/t/bE7n6vUR3ARn?pwd=wh6n",
+        "openPath": "Rogue Point v0.5.0/Tango.exe"
+      }
+    ]
+  },
+  {
+    "id": 110209,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "晦暗神祗2/黑暗神灵2/Dark Deity 2",
+    "Subtitle": "帝国入侵回合战术抗争",
+    "list": [
+      {
+        "coSize": "32.51 K",
+        "udTime": "2026-04-15",
+        "coName": "Dark Deity 2",
+        "coID": "2446600",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "841.03 M",
+        "udTime": "2026-04-28",
+        "coName": "Dark Deity 2 v1.16",
+        "coID": "https://cloud.189.cn/t/rAjm2yzIF3yu?pwd=g7sy",
+        "openPath": "Dark Deity 2 v1.16/DarkDeity2.exe"
+      }
+    ]
+  },
+  {
+    "id": 110242,
+    "category_parent": 5,
+    "categories": "恐怖惊悚",
+    "post_title": "迷失于声音中/Lost in Voice",
+    "Subtitle": "心理恐怖现实崩塌探索",
+    "list": [
+      {
+        "coSize": "753.04 K",
+        "udTime": "2026-04-26",
+        "coName": "Lost in Voice",
+        "coID": "4182770",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "22.78 G",
+        "udTime": "2026-04-29",
+        "coName": "Lost in Voice v20260427",
+        "coID": "https://cloud.189.cn/t/QjArAbaUr2mm?pwd=9umj",
+        "openPath": "Lost in Voice v20260427/InLostVoice.exe"
       }
     ]
   }

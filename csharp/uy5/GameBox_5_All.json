@@ -32482,7 +32482,7 @@
     "categories": "动作冒险",
     "post_title": "巨人杀手：暗黑之潮 – 创始版/Jotunnslayer: Hordes of Hel - Founders Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2820820/header_schinese.jpg?t=1744373729",
-    "filesize": "7.95 G",
+    "filesize": "15.11 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/J77nEb6v6V7r?pwd=umw7",
@@ -32500,6 +32500,15 @@
         "link_ctime": "2025.04.29",
         "filesize_z": 6964784725,
         "filename": "Jotunnslayer.Hordes.of.Hel v0.2.2",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/UV3UN3iM7rYf?pwd=1vuo",
+        "openpath": "Jotunnslayer Hordes of Hel v1.2.2/Jotunnslayer.exe",
+        "filesize": "15.11 G",
+        "link_ctime": "2026.04.27",
+        "filesize_z": 16227837325,
+        "filename": "Jotunnslayer Hordes of Hel v1.2.2",
         "server": "t"
       }
     ]
@@ -34528,7 +34537,7 @@
     "categories": "动作冒险",
     "post_title": "符文工房：龙之天地 – 数字豪华典藏版/Rune Factory Guardians of Azuma – Super Digital Deluxe Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2864560/header_schinese.jpg?t=1749238872",
-    "filesize": "12.56 G",
+    "filesize": "12.58 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/JBJ3Ez2MFRna?pwd=olw0",
@@ -34537,6 +34546,15 @@
         "link_ctime": "2025.06.07",
         "filesize_z": 13490857366,
         "filename": "Rune Factory Guardians of Azuma v1.0.3",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/IvUrYrU3a6ru?pwd=k8fm",
+        "openpath": "Rune Factory Guardians of Azuma v1.1.4/Game.exe",
+        "filesize": "12.58 G",
+        "link_ctime": "2026.04.26",
+        "filesize_z": 13505848533,
+        "filename": "Rune Factory Guardians of Azuma v1.1.4",
         "server": "t"
       }
     ]
@@ -52443,6 +52461,291 @@
         "link_ctime": "2026.04.24",
         "filesize_z": 12300922175,
         "filename": "Kristala v1.0.2",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109647,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "战争传说：雇佣兵版/Wartales Fires in the Capital",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4490120/fea4d6e32f20ef18428d79c4c846d74eadbcd71f/header.jpg?t=1776953080",
+    "filesize": "20.45 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NnYj22zAJbMz?pwd=08pu",
+        "openpath": "Wartales Fires in the Capital v1.0.46851/Wartales.exe",
+        "filesize": "20.45 G",
+        "link_ctime": "2026.04.25",
+        "filesize_z": 21956796677,
+        "filename": "Wartales Fires in the Capital v1.0.46851",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109675,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "覆雪之上/Above the Snow",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2423760/4499772f65f0042c24d760f22a589017d04aed36/header.jpg?t=1777040072",
+    "filesize": "2.51 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Jbu2mqIfiERz?pwd=mn2l",
+        "openpath": "Above the Snow v1.0.0/Above The Snow.exe",
+        "filesize": "2.51 G",
+        "link_ctime": "2026.04.25",
+        "filesize_z": 2699403695,
+        "filename": "Above the Snow v1.0.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109706,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "益智泡泡龙:一起泡泡战/Puzzle Bobble Everybubble",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3990960/1c61fe14db98940ff937ac38886dafff6c83956e/header_schinese.jpg?t=1776909637",
+    "filesize": "1.67 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/BZnMja2mUZve?pwd=9jkr",
+        "openpath": "PBEB v1.0/PuzzleBobble EveryBubble.exe",
+        "filesize": "1.67 G",
+        "link_ctime": "2026.04.25",
+        "filesize_z": 1789848930,
+        "filename": "PBEB v1.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109723,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "幽影/Rumbral",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3565040/d93635af7aa9345df064986b4b0ada39af3e4aa3/header.jpg?t=1776895217",
+    "filesize": "619.79 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/32Mb2qfAny6b?pwd=4kxe",
+        "openpath": "Rumbral v1.0.0/Windows/Rumbral.exe",
+        "filesize": "619.79 M",
+        "link_ctime": "2026.04.26",
+        "filesize_z": 649897820,
+        "filename": "Rumbral v1.0.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109752,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "我们的王国：蚀时果实与远古魔物/Kingdom’s Return: Time-Eating Fruit and the Ancient Monster",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3882650/5c1cdd15a878dd64ed39220162801b6587c1e5d5/header_schinese.jpg?t=1776992907",
+    "filesize": "865.89 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/VvUbimBBZfeq?pwd=7ne4",
+        "openpath": "Kingdom s Return v1.0.4/game.exe",
+        "filesize": "865.89 M",
+        "link_ctime": "2026.04.26",
+        "filesize_z": 907954985,
+        "filename": "Kingdom s Return v1.0.4",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109770,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "小小梦魇VR 异境回响/Little Nightmares VR Altered Echoes",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2482940/a137fc50e2c74545c077c8532688d45f52334917/header_schinese.jpg?t=1777031885",
+    "filesize": "8.47 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/AJF3ErMfmuAv?pwd=nlo2",
+        "openpath": "LittleNightmaresVRAlteredEchoes v20260425/Little Nightmares VR.exe",
+        "filesize": "8.47 G",
+        "link_ctime": "2026.04.26",
+        "filesize_z": 9098130428,
+        "filename": "LittleNightmaresVRAlteredEchoes v20260425",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109792,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "星际钻探站/Space Drilling Station",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2134850/8965edf9acdfd7303a56658a8ba1d62cf775b2a6/header.jpg?t=1777126454",
+    "filesize": "777.46 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Rvay2q3quENf?pwd=r5b5",
+        "openpath": "Space Drilling Station  v0.3108/Space Drilling Station.exe",
+        "filesize": "777.46 M",
+        "link_ctime": "2026.04.26",
+        "filesize_z": 815230984,
+        "filename": "Space Drilling Station  v0.3108",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109825,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "中世纪工匠：铁匠/Medieval Crafter Blacksmith",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/978700/header.jpg?t=1724958115",
+    "filesize": "3.48 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/3Y3ANvaQnYza?pwd=ic4r",
+        "openpath": "Medieval Crafter Blacksmith v1.01/MedievalCrafterBlacksmith.exe",
+        "filesize": "3.48 G",
+        "link_ctime": "2026.04.26",
+        "filesize_z": 3736891731,
+        "filename": "Medieval Crafter Blacksmith v1.01",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109906,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "捕捉2/CAPTURED 2",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3390880/55885b7a91cbb88ce9356d3bdd2d8cd52ad0fa50/header_tchinese.jpg?t=1777015046",
+    "filesize": "13.71 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ze2iIvmQ77Jv?pwd=2qlc",
+        "openpath": "CAPTURED 2 v2.1.1.0/CAPTURED2.exe",
+        "filesize": "13.71 G",
+        "link_ctime": "2026.04.27",
+        "filesize_z": 14718422668,
+        "filename": "CAPTURED 2 v2.1.1.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 109911,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "自动售货机模拟器/Vending Machine Co",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3622640/6029ef377ffd13315942df70ac09e9e1d5096b2b/header_alt_assets_0_tchinese.jpg?t=1777269513",
+    "filesize": "683.13 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/nuQvaaY7bYrq?pwd=zhp6",
+        "openpath": "Vending Machine Co v1.0.2/Vending Machine Co.exe",
+        "filesize": "683.13 M",
+        "link_ctime": "2026.04.27",
+        "filesize_z": 716318382,
+        "filename": "Vending Machine Co v1.0.2",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110092,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "晕晕电波症候群/Yunyun Syndrome",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2914150/92773c236ab9a566fbd68ddb3cc08ed6412fb4af/header_schinese.jpg?t=1777264751",
+    "filesize": "4.65 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/6ZbIjqRNb6V3?pwd=skv5",
+        "openpath": "Yunyun Syndrome v1.0.6/Yunyun_Syndrome.exe",
+        "filesize": "4.65 G",
+        "link_ctime": "2026.04.27",
+        "filesize_z": 4989138343,
+        "filename": "Yunyun Syndrome v1.0.6",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110097,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "北境酒馆/Tidehaven Ale Trade",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3691420/32db519c16c0707c49ff666fd4de63f2966d389b/header_tchinese.jpg?t=1776841082",
+    "filesize": "166.79 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FvINfiJZj6va?pwd=wzb2",
+        "openpath": "Tidehaven Ale Trade v20260426/Tidehaven_Ale_Trade.exe",
+        "filesize": "166.79 M",
+        "link_ctime": "2026.04.27",
+        "filesize_z": 174893934,
+        "filename": "Tidehaven Ale Trade v20260426",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110125,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "佣兵猎手/Rogue Point",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1843840/f7813cb09da234430a30c090906b9796f659ebea/header.jpg?t=1773208865",
+    "filesize": "8.14 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/bE7n6vUR3ARn?pwd=wh6n",
+        "openpath": "Rogue Point v0.5.0/Tango.exe",
+        "filesize": "8.14 G",
+        "link_ctime": "2026.04.27",
+        "filesize_z": 8741655480,
+        "filename": "Rogue Point v0.5.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110209,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "晦暗神祗2/黑暗神灵2/Dark Deity 2",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2446600/97cf0c0126dc062bb056b7140dbf711d3d58a8f0/header_alt_assets_2_tchinese.jpg?t=1775241439",
+    "filesize": "841.03 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/rAjm2yzIF3yu?pwd=g7sy",
+        "openpath": "Dark Deity 2 v1.16/DarkDeity2.exe",
+        "filesize": "841.03 M",
+        "link_ctime": "2026.04.28",
+        "filesize_z": 881883249,
+        "filename": "Dark Deity 2 v1.16",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110242,
+    "category_parent": 5,
+    "categories": "恐怖惊悚",
+    "post_title": "迷失于声音中/Lost in Voice",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4182770/6c88361c27eae88c40bb6afcb2d030df39f4ee08/header.jpg?t=1777046455",
+    "filesize": "22.78 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/QjArAbaUr2mm?pwd=9umj",
+        "openpath": "Lost in Voice v20260427/InLostVoice.exe",
+        "filesize": "22.78 G",
+        "link_ctime": "2026.04.29",
+        "filesize_z": 24457135752,
+        "filename": "Lost in Voice v20260427",
         "server": "t"
       }
     ]
