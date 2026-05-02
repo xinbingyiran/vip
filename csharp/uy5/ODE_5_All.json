@@ -6165,6 +6165,29 @@
     ]
   },
   {
+    "id": 18241,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "石质碎片/紫色晶石/Stoneshard",
+    "Subtitle": "流浪求生，商队崛起",
+    "list": [
+      {
+        "coSize": "53.79 K",
+        "udTime": "2026-04-19",
+        "coName": "Stoneshard",
+        "coID": "625960",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "570.53 M",
+        "udTime": "2026-05-02",
+        "coName": "Stoneshard v0.9.4.20",
+        "coID": "https://cloud.189.cn/t/ieUB73VryIfu?pwd=ug8r",
+        "openPath": "Stoneshard v0.9.4.20/StoneShard.exe"
+      }
+    ]
+  },
+  {
     "id": 18272,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -33628,6 +33651,20 @@
         "coName": "The Spell Brigade v0.10.2.4044",
         "coID": "https://cloud.189.cn/t/z6nIZrJz6Nne?pwd=oe8s",
         "openPath": "The Spell Brigade v0.10.2.4044/TheSpellBrigade.exe"
+      },
+      {
+        "coSize": "126.2 K",
+        "udTime": "2026-04-29",
+        "coName": "The Spell Brigade",
+        "coID": "2904000",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "979.4 M",
+        "udTime": "2026-04-30",
+        "coName": "The Spell Brigade v1.0",
+        "coID": "https://cloud.189.cn/t/jiu2qmiIbQba?pwd=nf5d",
+        "openPath": "The Spell Brigade v1.0/TheSpellBrigade.exe"
       }
     ]
   },
@@ -42226,6 +42263,20 @@
         "coName": "Apes Warfare v0.9.91",
         "coID": "https://cloud.189.cn/t/zaUnYb2E7n6n?pwd=1mcm",
         "openPath": "Apes Warfare v0.9.91/ApesWarfare.exe"
+      },
+      {
+        "coSize": "122.15 K",
+        "udTime": "2026-04-28",
+        "coName": "Apes Warfare",
+        "coID": "3266580",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "726.29 M",
+        "udTime": "2026-04-30",
+        "coName": "Apes Warfare v1.0.0",
+        "coID": "https://cloud.189.cn/t/M3yie2MJrAnm?pwd=7ssi",
+        "openPath": "Apes Warfare v1.0.0/ApesWarfare.exe"
       }
     ]
   },
@@ -52227,6 +52278,13 @@
         "coName": "Yunyun Syndrome v1.0.6",
         "coID": "https://cloud.189.cn/t/6ZbIjqRNb6V3?pwd=skv5",
         "openPath": "Yunyun Syndrome v1.0.6/Yunyun_Syndrome.exe"
+      },
+      {
+        "coSize": "111.84 K",
+        "udTime": "2026-04-27",
+        "coName": "Yunyun Syndrome!? Rhythm Psychosis",
+        "coID": "2914150",
+        "type": "warehousing"
       }
     ]
   },
@@ -52319,6 +52377,337 @@
         "coName": "Lost in Voice v20260427",
         "coID": "https://cloud.189.cn/t/QjArAbaUr2mm?pwd=9umj",
         "openPath": "Lost in Voice v20260427/InLostVoice.exe"
+      }
+    ]
+  },
+  {
+    "id": 110286,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "远日点/Aphelion",
+    "Subtitle": "冰星逃亡潜行救援同伴",
+    "list": [
+      {
+        "coSize": "874.62 K",
+        "udTime": "2026-04-28",
+        "coName": "Aphelion",
+        "coID": "1966410",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "24.6 G",
+        "udTime": "2026-04-29",
+        "coName": "Aphelion v1.0.3",
+        "coID": "https://cloud.189.cn/t/QV7fEzENFVZf?pwd=uaq8",
+        "openPath": "Aphelion v1.0.3/PIO-WinGDK-Shipping.exe"
+      }
+    ]
+  },
+  {
+    "id": 110292,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "维多利亚3：终极版/Victoria 3 The Great Wave",
+    "Subtitle": "十九世纪经营社会称霸世界",
+    "list": [
+      {
+        "coSize": "11.01 G",
+        "udTime": "2026-04-29",
+        "coName": "Victoria 3 The Great Wave v1.13.0",
+        "coID": "https://cloud.189.cn/t/YJzuyqQziuAz?pwd=cum0",
+        "openPath": "Victoria 3 The Great Wave v1.13.0/binaries/victoria3.exe"
+      }
+    ]
+  },
+  {
+    "id": 110345,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "夢幻魔法公主/Magical Princess",
+    "Subtitle": "养成公主抉择多结局",
+    "list": [
+      {
+        "coSize": "2.1 M",
+        "udTime": "2026-04-28",
+        "coName": "Magical Princess",
+        "coID": "3562120",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "6.04 G",
+        "udTime": "2026-04-29",
+        "coName": "Magical Princess v1.0.1",
+        "coID": "https://cloud.189.cn/t/JvE3auru6Zr2?pwd=6rrc",
+        "openPath": "Magical Princess v1.0.1/MagicalPrincess.exe"
+      }
+    ]
+  },
+  {
+    "id": 110350,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "巫妖之门：幸存塔/Lichgate: Tower Survivor",
+    "Subtitle": "幸存塔防抵御无尽魔潮",
+    "list": [
+      {
+        "coSize": "36.87 K",
+        "udTime": "2026-04-25",
+        "coName": "Lichgate: Tower Survivor",
+        "coID": "3458500",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "172.77 M",
+        "udTime": "2026-04-29",
+        "coName": "Lichgate.Tower.Survivor.Build.22954151",
+        "coID": "https://cloud.189.cn/t/y22E3aIjEree?pwd=0fvn",
+        "openPath": "Lichgate.Tower.Survivor.Build.22954151/TS.exe"
+      }
+    ]
+  },
+  {
+    "id": 110387,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "寄生体/The Parasites",
+    "Subtitle": "陨石末日对抗寄生求生",
+    "list": [
+      {
+        "coSize": "24.29 G",
+        "udTime": "2026-04-30",
+        "coName": "The Parasites v0.1.5.0.0",
+        "coID": "https://cloud.189.cn/t/a6nMzyERbYRb?pwd=4rcb",
+        "openPath": "The Parasites v0.1.5.0.0/TheParasites.exe"
+      }
+    ]
+  },
+  {
+    "id": 110392,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "Industria II",
+    "Subtitle": "异界求生对抗吞噬智能",
+    "list": [
+      {
+        "coSize": "584.76 K",
+        "udTime": "2026-04-29",
+        "coName": "INDUSTRIA 2",
+        "coID": "2154070",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "16.76 G",
+        "udTime": "2026-04-30",
+        "coName": "Industria II",
+        "coID": "https://cloud.189.cn/t/FNzmMbyEbEfq?pwd=0vys",
+        "openPath": "Industria II/Industria_2.exe"
+      }
+    ]
+  },
+  {
+    "id": 110472,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "苍穹浩瀚：奥西里斯重生/The Expanse Osiris Reborn",
+    "Subtitle": "佣兵组队闯荡太阳系阴谋",
+    "list": [
+      {
+        "coSize": "21.46 G",
+        "udTime": "2026-05-01",
+        "coName": "The Expanse Osiris Reborn v0.9.0.2433",
+        "coID": "https://cloud.189.cn/t/baEVfy6vyEZ3?pwd=v80q",
+        "openPath": "The Expanse Osiris Reborn v0.9.0.2433/TEORBeta.exe"
+      }
+    ]
+  },
+  {
+    "id": 110538,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "牛马三百六十行/Walk of Life",
+    "Subtitle": "爆笑内卷生活模拟对抗",
+    "list": [
+      {
+        "coSize": "118.67 K",
+        "udTime": "2026-04-30",
+        "coName": "Walk of Life",
+        "coID": "1910150",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "689.67 M",
+        "udTime": "2026-05-01",
+        "coName": "Walk of Life v1.0",
+        "coID": "https://cloud.189.cn/t/FbMBreiUBZru?pwd=5v94",
+        "openPath": "Walk of Life v1.0/Walk of Life.exe"
+      }
+    ]
+  },
+  {
+    "id": 110543,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "魔法门之英雄无敌：上古纪元/Heroes of Might and Magic Olden Era",
+    "Subtitle": "英雄无敌前传策略征战",
+    "list": [
+      {
+        "coSize": "258.57 K",
+        "udTime": "2026-04-30",
+        "coName": "Heroes of Might and Magic: Olden Era",
+        "coID": "3105440",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "2.6 G",
+        "udTime": "2026-05-02",
+        "coName": "Heroes of Might and Magic Olden Era v0.80.09",
+        "coID": "https://cloud.189.cn/t/7B3EN3vArUBr?pwd=5i8r",
+        "openPath": "Heroes of Might and Magic Olden Era v0.80.09/HeroesOldenEra.exe"
+      },
+      {
+        "coSize": "2.61 G",
+        "udTime": "2026-05-01",
+        "coName": "Heroes of Might and Magic Olden Era v0.80.07",
+        "coID": "https://cloud.189.cn/t/yEJVneiQvqQf?pwd=lnw5",
+        "openPath": "Heroes of Might and Magic Olden Era v0.80.07/HeroesOldenEra.exe"
+      }
+    ]
+  },
+  {
+    "id": 110564,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "昏迷3：血脈/The Coma 3: Bloodlines",
+    "Subtitle": "都市传说成真恐怖逃生",
+    "list": [
+      {
+        "coSize": "276.02 K",
+        "udTime": "2026-04-30",
+        "coName": "The Coma 3: Bloodlines",
+        "coID": "3885590",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "3.78 G",
+        "udTime": "2026-05-01",
+        "coName": "The Coma 3 Bloodlines v1.1.1",
+        "coID": "https://cloud.189.cn/t/NnUbquu2ay6v?pwd=zrj9",
+        "openPath": "The Coma 3 Bloodlines v1.1.1/TheComa3.exe"
+      }
+    ]
+  },
+  {
+    "id": 110597,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "巴士之旅：豪华版/Bus Bound",
+    "Subtitle": "驾驶巴士建设宜居城市",
+    "list": [
+      {
+        "coSize": "1.42 M",
+        "udTime": "2026-04-30",
+        "coName": "Bus Bound",
+        "coID": "2095420",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "46.08 G",
+        "udTime": "2026-05-01",
+        "coName": "Bus Bound v152",
+        "coID": "https://cloud.189.cn/t/RRfyqmvAFZBr?pwd=1dxp",
+        "openPath": "Bus Bound v152/BusGame.exe"
+      }
+    ]
+  },
+  {
+    "id": 110602,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "可爱冒险记/Adorable Adventures",
+    "Subtitle": "小猪寻亲森林治愈冒险",
+    "list": [
+      {
+        "coSize": "166.46 K",
+        "udTime": "2026-04-30",
+        "coName": "Adorable Adventures",
+        "coID": "3840230",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "3.27 G",
+        "udTime": "2026-05-01",
+        "coName": "Adorable Adventures v1.0.3",
+        "coID": "https://cloud.189.cn/t/BzmYNnnqyUJj?pwd=ugt1",
+        "openPath": "Adorable Adventures v1.0.3/Windows/Adorable.exe"
+      }
+    ]
+  },
+  {
+    "id": 110704,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "遥遥西土/Far Far West",
+    "Subtitle": "西部合作射击赏金冒险",
+    "list": [
+      {
+        "coSize": "194.36 K",
+        "udTime": "2026-05-01",
+        "coName": "Far Far West",
+        "coID": "3124540",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "4.66 G",
+        "udTime": "2026-05-02",
+        "coName": "Far Far West v572",
+        "coID": "https://cloud.189.cn/t/MvIfYziqqiEf?pwd=bk7k",
+        "openPath": "Far Far West v572/FarFarWest.exe"
+      }
+    ]
+  },
+  {
+    "id": 110729,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "千棋百计/Gambonanza",
+    "Subtitle": "棋盘肉鸽策略对弈创新",
+    "list": [
+      {
+        "coSize": "82.08 K",
+        "udTime": "2026-05-01",
+        "coName": "Gambonanza",
+        "coID": "3509230",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "167.92 M",
+        "udTime": "2026-05-02",
+        "coName": "Gambonanza v1.0.0S",
+        "coID": "https://cloud.189.cn/t/aayuAzzaIFfu?pwd=i3hz",
+        "openPath": "Gambonanza v1.0.0S/Gambonanza/Gambonanza.exe"
+      }
+    ]
+  },
+  {
+    "id": 110745,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "骰死地牢/Die in the Dungeon",
+    "Subtitle": "骰子构筑地牢冒险对战",
+    "list": [
+      {
+        "coSize": "99.42 K",
+        "udTime": "2026-05-01",
+        "coName": "Die in the Dungeon",
+        "coID": "2026820",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "877.91 M",
+        "udTime": "2026-05-02",
+        "coName": "Die in the Dungeon v5.0.0",
+        "coID": "https://cloud.189.cn/t/r63MrmJNjmEv?pwd=ugw8",
+        "openPath": "Die in the Dungeon v5.0.0/Die in the Dungeon.exe"
       }
     ]
   }

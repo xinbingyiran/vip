@@ -291,6 +291,14 @@
         "coID": "https://www.uy5.net/download/?path=Fhq2VDkAkN-Mwhxx3KgtMpZNpoSY3pCJj",
         "type": "file",
         "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370753p/Fhq2VDkAkN-Mwhxx3KgtMpZNpoSY3pCJj"
+      },
+      {
+        "coSize": "6126388754",
+        "udTime": "202604300638",
+        "coName": "Adobe-Photoshop-2026-27.6.0.11-m0nkrus.zip",
+        "coID": "https://www.uy5.net/download/?path=FmZ5xS2QUYGIIIDx7XLNKXoxaRWMTlHXi",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL0782022102201370753p/FmZ5xS2QUYGIIIDx7XLNKXoxaRWMTlHXi"
       }
     ]
   },
@@ -2553,6 +2561,38 @@
     ]
   },
   {
+    "id": 1766,
+    "category_parent": 538,
+    "categories": "垃圾清理",
+    "post_title": "CCleaner",
+    "Subtitle": "系统优化和隐私保护",
+    "list": [
+      {
+        "udTime": "202403132208",
+        "coName": "历史版本",
+        "coID": "https://www.uy5.net/download/list/?path=DFcQ0KHeAFYA1611iptRY1EL05520240313220801kpd",
+        "type": "folder",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL078202210220137074zv/DFcQ0KHeAFYA1611iptRY1EL05520240313220801kpd"
+      },
+      {
+        "coSize": "21127753",
+        "udTime": "202605011214",
+        "coName": "CCleaner-Pro-6.40.11562-x64-Plus.zip",
+        "coID": "https://www.uy5.net/download/?path=Fn8erYs6B264TwthuCiBDqYoDn0q5Ac4u",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL078202210220137074zv/Fn8erYs6B264TwthuCiBDqYoDn0q5Ac4u"
+      },
+      {
+        "coSize": "20193150",
+        "udTime": "202403132207",
+        "coName": "CCleaner-Pro-6.20.10897-x64-Plus.zip",
+        "coID": "https://www.uy5.net/download/?path=DFcQ0KHeAFYA1611iptRY1EL054202403132207547xb",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL078202210220137074zv/DFcQ0KHeAFYA1611iptRY1EL054202403132207547xb"
+      }
+    ]
+  },
+  {
     "id": 1798,
     "category_parent": 16,
     "categories": "系统工具",
@@ -4451,6 +4491,23 @@
         "coID": "https://www.uy5.net/download/?path=DFcQ0KHeAFYA1611iptRY1EL05520230801023947d58",
         "type": "file",
         "path": "DFcQ0KHeAFYA1611iptRY1EL05720230801023802kha/DFcQ0KHeAFYA1611iptRY1EL05520230801023947d58"
+      }
+    ]
+  },
+  {
+    "id": 19006,
+    "category_parent": 16,
+    "categories": "系统工具",
+    "post_title": "HyperSnap",
+    "Subtitle": "老牌屏幕截图软件",
+    "list": [
+      {
+        "coSize": "14970216",
+        "udTime": "202308121335",
+        "coName": "HyperSnap_v8.24.03_x64_Chs.zip",
+        "coID": "https://www.uy5.net/download/?path=DFcQ0KHeAFYA1611iptRY1EL077202308121335200s2",
+        "type": "file",
+        "path": "DFcQ0KHeAFYA1611iptRY1EL05820230812133323t05/DFcQ0KHeAFYA1611iptRY1EL077202308121335200s2"
       }
     ]
   },
