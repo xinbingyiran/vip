@@ -5812,6 +5812,25 @@
     ]
   },
   {
+    "id": 18241,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "石质碎片/紫色晶石/Stoneshard",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/625960/header_schinese.jpg?t=1706278859",
+    "filesize": "570.53 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ieUB73VryIfu?pwd=ug8r",
+        "openpath": "Stoneshard v0.9.4.20/StoneShard.exe",
+        "filesize": "570.53 M",
+        "link_ctime": "2026.05.02",
+        "filesize_z": 598242825,
+        "filename": "Stoneshard v0.9.4.20",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 18272,
     "category_parent": 5,
     "categories": "动作冒险",
@@ -34622,7 +34641,7 @@
     "categories": "动作冒险",
     "post_title": "咒语旅团/法术小队/The Spell Brigade",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2904000/4b419b9bd4bccdd1e4bfca7d0acea762b28756ad/header_schinese.jpg?t=1748960873",
-    "filesize": "653.31 M",
+    "filesize": "979.4 M",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/z6nIZrJz6Nne?pwd=oe8s",
@@ -34631,6 +34650,15 @@
         "link_ctime": "2025.06.12",
         "filesize_z": 685045340,
         "filename": "The Spell Brigade v0.10.2.4044",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/jiu2qmiIbQba?pwd=nf5d",
+        "openpath": "The Spell Brigade v1.0/TheSpellBrigade.exe",
+        "filesize": "979.4 M",
+        "link_ctime": "2026.04.30",
+        "filesize_z": 1026975424,
+        "filename": "The Spell Brigade v1.0",
         "server": "t"
       }
     ]
@@ -44261,7 +44289,7 @@
     "categories": "策略战棋",
     "post_title": "猿猴战争/Apes Warfare",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3266580/a31b7ecb8d0fabd7c209a294edf33711bf5726e7/header.jpg?t=1764054244",
-    "filesize": "564.92 M",
+    "filesize": "726.29 M",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/zaUnYb2E7n6n?pwd=1mcm",
@@ -44270,6 +44298,15 @@
         "link_ctime": "2025.12.01",
         "filesize_z": 592363830,
         "filename": "Apes Warfare v0.9.91",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/M3yie2MJrAnm?pwd=7ssi",
+        "openpath": "Apes Warfare v1.0.0/ApesWarfare.exe",
+        "filesize": "726.29 M",
+        "link_ctime": "2026.04.30",
+        "filesize_z": 761567385,
+        "filename": "Apes Warfare v1.0.0",
         "server": "t"
       }
     ]
@@ -52746,6 +52783,319 @@
         "link_ctime": "2026.04.29",
         "filesize_z": 24457135752,
         "filename": "Lost in Voice v20260427",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110286,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "远日点/Aphelion",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1966410/9c9058d6e3baa986ca5d3ac94a2d55c6c47f692e/header.jpg?t=1777362540",
+    "filesize": "24.6 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/QV7fEzENFVZf?pwd=uaq8",
+        "openpath": "Aphelion v1.0.3/PIO-WinGDK-Shipping.exe",
+        "filesize": "24.6 G",
+        "link_ctime": "2026.04.29",
+        "filesize_z": 26409034213,
+        "filename": "Aphelion v1.0.3",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110292,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "维多利亚3：终极版/Victoria 3 The Great Wave",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4314650/14f50e53a85f0a1a2b0e3a74b71d79daafdcc72e/header.jpg?t=1777370424",
+    "filesize": "11.01 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/YJzuyqQziuAz?pwd=cum0",
+        "openpath": "Victoria 3 The Great Wave v1.13.0/binaries/victoria3.exe",
+        "filesize": "11.01 G",
+        "link_ctime": "2026.04.29",
+        "filesize_z": 11818672699,
+        "filename": "Victoria 3 The Great Wave v1.13.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110345,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "夢幻魔法公主/Magical Princess",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3562120/c25b8aa1d5a34d848254adbbe2cab6d3b02105f5/header_tchinese.jpg?t=1777348229",
+    "filesize": "6.04 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JvE3auru6Zr2?pwd=6rrc",
+        "openpath": "Magical Princess v1.0.1/MagicalPrincess.exe",
+        "filesize": "6.04 G",
+        "link_ctime": "2026.04.29",
+        "filesize_z": 6490018970,
+        "filename": "Magical Princess v1.0.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110350,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "巫妖之门：幸存塔/Lichgate: Tower Survivor",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3458500/b8288ccd503764b6ca3c2d00efa77c66013e5202/header.jpg?t=1777055526",
+    "filesize": "172.77 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/y22E3aIjEree?pwd=0fvn",
+        "openpath": "Lichgate.Tower.Survivor.Build.22954151/TS.exe",
+        "filesize": "172.77 M",
+        "link_ctime": "2026.04.29",
+        "filesize_z": 181157630,
+        "filename": "Lichgate.Tower.Survivor.Build.22954151",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110387,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "寄生体/The Parasites",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1723610/header.jpg?t=1732171721",
+    "filesize": "24.29 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/a6nMzyERbYRb?pwd=4rcb",
+        "openpath": "The Parasites v0.1.5.0.0/TheParasites.exe",
+        "filesize": "24.29 G",
+        "link_ctime": "2026.04.30",
+        "filesize_z": 26077510095,
+        "filename": "The Parasites v0.1.5.0.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110392,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "Industria II",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2154070/ebde1098a0e4ae2ddeee6fd59927eaecee60f98b/header.jpg?t=1777481710",
+    "filesize": "16.76 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FNzmMbyEbEfq?pwd=0vys",
+        "openpath": "Industria II/Industria_2.exe",
+        "filesize": "16.76 G",
+        "link_ctime": "2026.04.30",
+        "filesize_z": 17991991854,
+        "filename": "Industria II",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110411,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "姆明：暖心冬日/Moomintrol",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3256150/239c3923a74ad0f057dd0aa43684b08d34f870f1/header_schinese.jpg?t=1777392443",
+    "filesize": "4.41 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qQjQBn2iYzQb?pwd=6o7z",
+        "openpath": "Moomintrol v20260429/WintersWarmth.exe",
+        "filesize": "4.41 G",
+        "link_ctime": "2026.04.30",
+        "filesize_z": 4738557177,
+        "filename": "Moomintrol v20260429",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110472,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "苍穹浩瀚：奥西里斯重生/The Expanse Osiris Reborn",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3727390/29369846b5ba94b2b1620eb8dd5aa8488f058d90/header.jpg?t=1777035417",
+    "filesize": "21.46 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/baEVfy6vyEZ3?pwd=v80q",
+        "openpath": "The Expanse Osiris Reborn v0.9.0.2433/TEORBeta.exe",
+        "filesize": "21.46 G",
+        "link_ctime": "2026.05.01",
+        "filesize_z": 23046785030,
+        "filename": "The Expanse Osiris Reborn v0.9.0.2433",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110538,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "牛马三百六十行/Walk of Life",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1910150/0b83feef770ece369fe67f77ab050e25987fdc7f/header_alt_assets_0_schinese.jpg?t=1777571016",
+    "filesize": "689.67 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FbMBreiUBZru?pwd=5v94",
+        "openpath": "Walk of Life v1.0/Walk of Life.exe",
+        "filesize": "689.67 M",
+        "link_ctime": "2026.05.01",
+        "filesize_z": 723174311,
+        "filename": "Walk of Life v1.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110543,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "魔法门之英雄无敌：上古纪元/Heroes of Might and Magic Olden Era",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3105440/42c1117d97f61cb09b856bd1f7db362a160cd0d2/header_schinese.jpg?t=1777620201",
+    "filesize": "2.6 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7B3EN3vArUBr?pwd=5i8r",
+        "openpath": "Heroes of Might and Magic Olden Era v0.80.09/HeroesOldenEra.exe",
+        "filesize": "2.6 G",
+        "link_ctime": "2026.05.02",
+        "filesize_z": 2787345419,
+        "filename": "Heroes of Might and Magic Olden Era v0.80.09",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/yEJVneiQvqQf?pwd=lnw5",
+        "openpath": "Heroes of Might and Magic Olden Era v0.80.07/HeroesOldenEra.exe",
+        "filesize": "2.61 G",
+        "link_ctime": "2026.05.01",
+        "filesize_z": 2798221784,
+        "filename": "Heroes of Might and Magic Olden Era v0.80.07",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110564,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "昏迷3：血脈/The Coma 3: Bloodlines",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3885590/332d8e6d853eb6b0cd237312aab259c99a932bcb/header_schinese.jpg?t=1777561791",
+    "filesize": "3.78 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NnUbquu2ay6v?pwd=zrj9",
+        "openpath": "The Coma 3 Bloodlines v1.1.1/TheComa3.exe",
+        "filesize": "3.78 G",
+        "link_ctime": "2026.05.01",
+        "filesize_z": 4060450005,
+        "filename": "The Coma 3 Bloodlines v1.1.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110597,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "巴士之旅：豪华版/Bus Bound",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2095420/9803e0013dffba0e3e2577691ec09196046bce99/header.jpg?t=1777556824",
+    "filesize": "46.08 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/RRfyqmvAFZBr?pwd=1dxp",
+        "openpath": "Bus Bound v152/BusGame.exe",
+        "filesize": "46.08 G",
+        "link_ctime": "2026.05.01",
+        "filesize_z": 49475174563,
+        "filename": "Bus Bound v152",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110602,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "可爱冒险记/Adorable Adventures",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3840230/05cd9dccb83c50220698b255968644005bdf99d5/header.jpg?t=1777641148",
+    "filesize": "3.27 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/BzmYNnnqyUJj?pwd=ugt1",
+        "openpath": "Adorable Adventures v1.0.3/Windows/Adorable.exe",
+        "filesize": "3.27 G",
+        "link_ctime": "2026.05.01",
+        "filesize_z": 3507065493,
+        "filename": "Adorable Adventures v1.0.3",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110704,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "遥遥西土/Far Far West",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3124540/49eb729d1f67d63c80e022a902af421d0f97b4d7/header_alt_assets_3_schinese.jpg?t=1777478432",
+    "filesize": "4.66 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/MvIfYziqqiEf?pwd=bk7k",
+        "openpath": "Far Far West v572/FarFarWest.exe",
+        "filesize": "4.66 G",
+        "link_ctime": "2026.05.02",
+        "filesize_z": 5004823650,
+        "filename": "Far Far West v572",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110729,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "千棋百计/Gambonanza",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3509230/header.jpg?t=1777641170",
+    "filesize": "167.92 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/aayuAzzaIFfu?pwd=i3hz",
+        "openpath": "Gambonanza v1.0.0S/Gambonanza/Gambonanza.exe",
+        "filesize": "167.92 M",
+        "link_ctime": "2026.05.02",
+        "filesize_z": 176080212,
+        "filename": "Gambonanza v1.0.0S",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 110745,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "骰死地牢/Die in the Dungeon",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2026820/fb36e10fb29c20aa19ff3cbed0deba4d063273a4/header_alt_assets_2.jpg?t=1777658929",
+    "filesize": "877.91 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/r63MrmJNjmEv?pwd=ugw8",
+        "openpath": "Die in the Dungeon v5.0.0/Die in the Dungeon.exe",
+        "filesize": "877.91 M",
+        "link_ctime": "2026.05.02",
+        "filesize_z": 920552546,
+        "filename": "Die in the Dungeon v5.0.0",
         "server": "t"
       }
     ]
