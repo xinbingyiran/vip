@@ -30791,6 +30791,20 @@
         "coName": "Sultan s Game",
         "coID": "https://cloud.189.cn/t/eAJVZ3j6JRfy?pwd=o834",
         "openPath": "Sultan s Game/Sultan's Game.exe"
+      },
+      {
+        "coSize": "996.29 K",
+        "udTime": "2026-05-09",
+        "coName": "Sultan's Game",
+        "coID": "3117820",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "1.17 G",
+        "udTime": "2026-05-25",
+        "coName": "Sultan s Game v1.0.17115",
+        "coID": "https://cloud.189.cn/t/RRvaUrI3y22e?pwd=l1bs",
+        "openPath": "Sultan s Game v1.0.17115/Sultan s Game.exe"
       }
     ]
   },
@@ -49673,6 +49687,13 @@
         "coName": "Mafia: The Old Country",
         "coID": "1941540",
         "type": "warehousing"
+      },
+      {
+        "coSize": "39.49 G",
+        "udTime": "2026-05-23",
+        "coName": "Mafia The Old Country",
+        "coID": "https://cloud.189.cn/t/UvEfuy2uAFbi?pwd=jxz9",
+        "openPath": "Mafia The Old Country/MafiaTheOldCountry/Binaries/Win64/MafiaTheOldCountry.exe"
       }
     ]
   },
@@ -53857,6 +53878,20 @@
         "coName": "Subnautica 2 v0.10.0",
         "coID": "https://cloud.189.cn/t/BZrIBzYNfaEj?pwd=1qkq",
         "openPath": "Subnautica 2 v0.10.0/Subnautica2.exe"
+      },
+      {
+        "coSize": "503.1 K",
+        "udTime": "2026-05-22",
+        "coName": "Subnautica 2",
+        "coID": "1962700",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "12.93 G",
+        "udTime": "2026-05-25",
+        "coName": "Subnautica2 v0.10.1",
+        "coID": "https://cloud.189.cn/t/NRrYVjZnUZBf?pwd=5pl5",
+        "openPath": "Subnautica2 v0.10.1/Subnautica2.exe"
       }
     ]
   },
@@ -54195,6 +54230,443 @@
         "coName": "Payday 2 v20260520",
         "coID": "https://cloud.189.cn/t/n2m2umn6VVZf?pwd=e2kw",
         "openPath": "Payday 2 v20260520/payday2_win32_release.exe"
+      }
+    ]
+  },
+  {
+    "id": 113152,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "新仙剑奇侠传/New Legend of Sword and Fairy",
+    "Subtitle": "经典仙侠重温感人情缘",
+    "list": [
+      {
+        "coSize": "121.13 K",
+        "udTime": "2026-04-15",
+        "coName": "Chinese PaladinSword and Fairy",
+        "coID": "695630",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "1.4 G",
+        "udTime": "2026-05-23",
+        "coName": "NewPAL v2.1.7",
+        "coID": "https://cloud.189.cn/t/67rmArNbuyAn?pwd=zsi5",
+        "openPath": "NewPAL v2.1.7/NewPAL_Release.exe"
+      }
+    ]
+  },
+  {
+    "id": 113363,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "月之深渊/Luna Abyss",
+    "Subtitle": "月球冒险弹幕跳跃逃亡",
+    "list": [
+      {
+        "coSize": "320.22 K",
+        "udTime": "2026-05-23",
+        "coName": "Luna Abyss",
+        "coID": "1933000",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "8.37 G",
+        "udTime": "2026-05-23",
+        "coName": "Luna Abyss v1292",
+        "coID": "https://cloud.189.cn/t/AvUr223Ar2ee?pwd=nh9e",
+        "openPath": "Luna Abyss v1292/LunaAbyss/Binaries/WinGDK/LunaAbyss-WinGDK-Shipping.exe"
+      }
+    ]
+  },
+  {
+    "id": 113403,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "归零巡礼：亡谍镇魂曲/ZERO PARADES For Dead Spies",
+    "Subtitle": "间谍博弈破解阴谋迷局",
+    "list": [
+      {
+        "coSize": "373.49 K",
+        "udTime": "2026-05-25",
+        "coName": "ZERO PARADES: For Dead Spies",
+        "coID": "2863680",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "10.38 G",
+        "udTime": "2026-05-23",
+        "coName": "ZERO PARADES For Dead Spies v1.0.36599",
+        "coID": "https://cloud.189.cn/t/U77BFvyqy6Bf?pwd=0nkq",
+        "openPath": "ZERO PARADES For Dead Spies v1.0.36599/ZeroParades.exe"
+      }
+    ]
+  },
+  {
+    "id": 113457,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "层层恐惧：完全重制版/Layers of Fear",
+    "Subtitle": "心理恐怖坠入疯狂深渊",
+    "list": [
+      {
+        "coSize": "1.41 M",
+        "udTime": "2026-04-15",
+        "coName": "Layers of Fear",
+        "coID": "1946700",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "18.27 G",
+        "udTime": "2026-05-24",
+        "coName": "Layers of Fear v1.2.3",
+        "coID": "https://cloud.189.cn/t/JvyAjqVJVfAf?pwd=mm0t",
+        "openPath": "Layers of Fear v1.2.3/LayersOfFear.exe"
+      }
+    ]
+  },
+  {
+    "id": 113478,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "乐高蝙蝠侠：黑暗骑士之遗 – 豪华版/LEGO Batman Legacy of the Dark Knight",
+    "Subtitle": "乐高蝙蝠侠守护哥谭冒险",
+    "list": [
+      {
+        "coSize": "1.38 M",
+        "udTime": "2026-05-22",
+        "coName": "LEGO® Batman™: Legacy of the Dark Knight",
+        "coID": "2215200",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "37.97 G",
+        "udTime": "2026-05-24",
+        "coName": "LEGO Batman Legacy of the Dark Knight",
+        "coID": "https://cloud.189.cn/t/nmUj6zAn2MBf?pwd=fgx8",
+        "openPath": "LEGO Batman Legacy of the Dark Knight/LEGOBatmanLotDK.exe"
+      }
+    ]
+  },
+  {
+    "id": 113525,
+    "category_parent": 5,
+    "categories": "体育竞速",
+    "post_title": "纯粹台球/Pure Pool Pro",
+    "Subtitle": "真实台球竞技沉浸对战",
+    "list": [
+      {
+        "coSize": "492.22 K",
+        "udTime": "2026-05-22",
+        "coName": "Pure Pool Pro",
+        "coID": "3456930",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "14.29 G",
+        "udTime": "2026-05-24",
+        "coName": "Pure Pool Pro v20260523",
+        "coID": "https://cloud.189.cn/t/FZBzUvMJBRvu?pwd=pax4",
+        "openPath": "Pure Pool Pro v20260523/PurePool.exe"
+      }
+    ]
+  },
+  {
+    "id": 113530,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "元素：重铸/Elemental: Reforged",
+    "Subtitle": "奇幻文明回合策略征服",
+    "list": [
+      {
+        "coSize": "2.07 M",
+        "udTime": "2026-05-21",
+        "coName": "Elemental: Reforged",
+        "coID": "3796960",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "9.77 G",
+        "udTime": "2026-05-24",
+        "coName": "Elemental Reforged Treasures of the Magi v1.1",
+        "coID": "https://cloud.189.cn/t/736Z7rY3Eb6z?pwd=5atg",
+        "openPath": "Elemental Reforged Treasures of the Magi v1.1/Elemental.exe"
+      }
+    ]
+  },
+  {
+    "id": 113579,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "暗黑血统：战神版/Darksiders Warmastered Edition",
+    "Subtitle": "天启骑士复仇末日战争",
+    "list": [
+      {
+        "coSize": "752 K",
+        "udTime": "2026-05-21",
+        "coName": "Darksiders Warmastered Edition",
+        "coID": "462780",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "21.45 G",
+        "udTime": "2026-05-25",
+        "coName": "Darksiders Warmastered Edition cs4297",
+        "coID": "https://cloud.189.cn/t/ZnA7VjRZRBFj?pwd=hi85",
+        "openPath": "Darksiders Warmastered Edition cs4297/darksiders1.exe"
+      }
+    ]
+  },
+  {
+    "id": 113625,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "无敌少侠VS：豪华版/Invincible VS – Deluxe Edition",
+    "Subtitle": "超级英雄组队激斗对决",
+    "list": [
+      {
+        "coSize": "401.97 K",
+        "udTime": "2026-05-05",
+        "coName": "Invincible VS",
+        "coID": "2353060",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "9.04 G",
+        "udTime": "2026-05-26",
+        "coName": "Invincible VS v20260503",
+        "coID": "https://cloud.189.cn/t/JNr6J3aYFR3e?pwd=j1gg",
+        "openPath": "Invincible VS v20260503/InvincibleVS.exe"
+      }
+    ]
+  },
+  {
+    "id": 113657,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "黑暗之光：幸存者/Dark Light: Survivor",
+    "Subtitle": "赛博列车穿梭末日战斗",
+    "list": [
+      {
+        "coSize": "468.84 K",
+        "udTime": "2026-05-25",
+        "coName": "Dark Light: Survivor",
+        "coID": "3088070",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "8.7 G",
+        "udTime": "2026-05-26",
+        "coName": "Dark Light Survivor v1.1.05212009",
+        "coID": "https://cloud.189.cn/t/FjeEVvzyInYz?pwd=ynt5",
+        "openPath": "Dark Light Survivor v1.1.05212009/DLS/DLS.exe"
+      }
+    ]
+  },
+  {
+    "id": 113795,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "巴布西4D/Bubsy 4D",
+    "Subtitle": "山猫冒险闯关搞怪平台",
+    "list": [
+      {
+        "coSize": "87.89 K",
+        "udTime": "2026-05-23",
+        "coName": "Bubsy 4D",
+        "coID": "3237970",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "1.17 G",
+        "udTime": "2026-05-26",
+        "coName": "Bubsy 4D v1.12",
+        "coID": "https://cloud.189.cn/t/qAb6n2eY3Aje?pwd=3un6",
+        "openPath": "Bubsy 4D v1.12/Bubsy 4D.exe"
+      }
+    ]
+  },
+  {
+    "id": 113837,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "黄金矿工：经典款/Gold Miner：Classic Edition",
+    "Subtitle": "经典的街机采矿游戏",
+    "list": [
+      {
+        "coSize": "50.55 K",
+        "udTime": "2026-05-14",
+        "coName": "Gold Miner:Classic Edition",
+        "coID": "3777060",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "406.38 M",
+        "udTime": "2026-05-26",
+        "coName": "Gold Miner Classic Edition v1.10ra",
+        "coID": "https://cloud.189.cn/t/2uMVvuzaeI3q?pwd=sxa8",
+        "openPath": "Gold Miner Classic Edition v1.10ra/GoldMiner.exe"
+      }
+    ]
+  },
+  {
+    "id": 113855,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "恶果之地/Juicy Realm",
+    "Subtitle": "水果异变激战植物怪潮",
+    "list": [
+      {
+        "coSize": "45 K",
+        "udTime": "2026-04-15",
+        "coName": "Juicy Realm",
+        "coID": "732370",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "209.34 M",
+        "udTime": "2026-05-26",
+        "coName": "Juicy Realm v3.1.8",
+        "coID": "https://cloud.189.cn/t/36buq2ja6Nze?pwd=5qei",
+        "openPath": "Juicy Realm v3.1.8/JuicyRealm.exe"
+      }
+    ]
+  },
+  {
+    "id": 113870,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "星火燎原/Spark Ignites",
+    "Subtitle": "朝圣逃亡逆神改写命运",
+    "list": [
+      {
+        "coSize": "604.14 K",
+        "udTime": "2026-05-23",
+        "coName": "SPARK IGNITES",
+        "coID": "3864890",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "11.48 G",
+        "udTime": "2026-05-27",
+        "coName": "SPARK IGNITES v0.3.0.3",
+        "coID": "https://cloud.189.cn/t/FB3ERf3IR3uy?pwd=e64h",
+        "openPath": "SPARK IGNITES v0.3.0.3/Emberstorm.exe"
+      }
+    ]
+  },
+  {
+    "id": 113891,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "浮空岛/Aloft",
+    "Subtitle": "浮空群岛生存建造冒险",
+    "list": [
+      {
+        "coSize": "648.21 K",
+        "udTime": "2026-04-15",
+        "coName": "Aloft",
+        "coID": "1660080",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "8.11 G",
+        "udTime": "2026-05-27",
+        "coName": "Aloft v0.3.5.18",
+        "coID": "https://cloud.189.cn/t/ieqEnevYfmyi?pwd=8qa3",
+        "openPath": "Aloft v0.3.5.18/Aloft.exe"
+      }
+    ]
+  },
+  {
+    "id": 113896,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "平行人生/Paralives",
+    "Subtitle": "人生模拟书写羁绊命运",
+    "list": [
+      {
+        "coSize": "8.73 M",
+        "udTime": "2026-05-26",
+        "coName": "Paralives",
+        "coID": "1118520",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "5.13 G",
+        "udTime": "2026-05-27",
+        "coName": "Paralives v0.1.1.19867",
+        "coID": "https://cloud.189.cn/t/JjyaUvzE7rMn?pwd=ph5n",
+        "openPath": "Paralives v0.1.1.19867/Paralives.exe"
+      }
+    ]
+  },
+  {
+    "id": 113993,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "流明物语：特雷的回忆 – 流明版/LumenTale: Memories of Trey",
+    "Subtitle": "怪物收集冒险追寻记忆",
+    "list": [
+      {
+        "coSize": "872.93 K",
+        "udTime": "2026-05-26",
+        "coName": "LumenTale: Memories of Trey",
+        "coID": "2261430",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "2.74 G",
+        "udTime": "2026-05-27",
+        "coName": "LumenTale Memories of Trey v1.0.0.0",
+        "coID": "https://cloud.189.cn/t/ea6BfeM3IBzm?pwd=li8a",
+        "openPath": "LumenTale Memories of Trey v1.0.0.0/LumenTale Memories of Trey.exe"
+      }
+    ]
+  },
+  {
+    "id": 113998,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "轮回战纪/Mad King Redemption",
+    "Subtitle": "肉鸽闯关赎罪拯救王国",
+    "list": [
+      {
+        "coSize": "149.6 K",
+        "udTime": "2026-05-20",
+        "coName": "Mad King Redemption",
+        "coID": "2369580",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "1.13 G",
+        "udTime": "2026-05-27",
+        "coName": "Mad King Redemption v1.01",
+        "coID": "https://cloud.189.cn/t/7ZVvia7za2im?pwd=xcd7",
+        "openPath": "Mad King Redemption v1.01/Mad King Redemption.exe"
+      }
+    ]
+  },
+  {
+    "id": 114020,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "07：初露锋芒/007 First Light",
+    "Subtitle": "邦德崛起执行间谍任务",
+    "list": [
+      {
+        "coSize": "1.73 M",
+        "udTime": "2026-05-26",
+        "coName": "007 First Light",
+        "coID": "3768760",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "50.24 G",
+        "udTime": "2026-05-27",
+        "coName": "007 First Light v1.0.0",
+        "coID": "https://cloud.189.cn/t/a2Mva2Fr2Mna?pwd=1fdy",
+        "openPath": "007 First Light v1.0.0/Retail/007FirstLight.exe"
       }
     ]
   }
