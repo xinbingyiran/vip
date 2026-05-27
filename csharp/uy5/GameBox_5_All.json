@@ -31684,7 +31684,7 @@
     "categories": "策略战棋",
     "post_title": "苏丹的游戏/Sultan s Game",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3117820/62aeb9d2133ec7b70ad76bb10c27870f76f9a11f/header_schinese.jpg?t=1744992089",
-    "filesize": "651.4 M",
+    "filesize": "1.17 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/eAJVZ3j6JRfy?pwd=o834",
@@ -31693,6 +31693,15 @@
         "link_ctime": "2025.04.23",
         "filesize_z": 683046575,
         "filename": "Sultan s Game",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/RRvaUrI3y22e?pwd=l1bs",
+        "openpath": "Sultan s Game v1.0.17115/Sultan s Game.exe",
+        "filesize": "1.17 G",
+        "link_ctime": "2026.05.25",
+        "filesize_z": 1258364917,
+        "filename": "Sultan s Game v1.0.17115",
         "server": "t"
       }
     ]
@@ -50814,7 +50823,7 @@
     "categories": "动作冒险",
     "post_title": "四海兄弟：故乡 – 豪华版/Mafia The Old Country",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1941540/d06980bb8f41737ca68da8eed40079347db09c84/header.jpg?t=1764177372",
-    "filesize": "39.35 G",
+    "filesize": "39.49 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/BfaYjiyaYVre?pwd=v7l4",
@@ -50822,6 +50831,15 @@
         "filesize": "39.35 G",
         "link_ctime": "2026.03.31",
         "filesize_z": 42247299974,
+        "filename": "Mafia The Old Country",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/UvEfuy2uAFbi?pwd=jxz9",
+        "openpath": "Mafia The Old Country/MafiaTheOldCountry/Binaries/Win64/MafiaTheOldCountry.exe",
+        "filesize": "39.49 G",
+        "link_ctime": "2026.05.23",
+        "filesize_z": 42406690654,
         "filename": "Mafia The Old Country",
         "server": "t"
       }
@@ -53927,6 +53945,15 @@
         "filesize_z": 13888802711,
         "filename": "Subnautica 2 v0.10.0",
         "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/NRrYVjZnUZBf?pwd=5pl5",
+        "openpath": "Subnautica2 v0.10.1/Subnautica2.exe",
+        "filesize": "12.93 G",
+        "link_ctime": "2026.05.25",
+        "filesize_z": 13888736670,
+        "filename": "Subnautica2 v0.10.1",
+        "server": "t"
       }
     ]
   },
@@ -54211,6 +54238,367 @@
         "link_ctime": "2026.05.23",
         "filesize_z": 54757479216,
         "filename": "Payday 2 v20260520",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113152,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "新仙剑奇侠传/New Legend of Sword and Fairy",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/695630/header.jpg?t=1627366016",
+    "filesize": "1.4 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/67rmArNbuyAn?pwd=zsi5",
+        "openpath": "NewPAL v2.1.7/NewPAL_Release.exe",
+        "filesize": "1.4 G",
+        "link_ctime": "2026.05.23",
+        "filesize_z": 1500695035,
+        "filename": "NewPAL v2.1.7",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113363,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "月之深渊/Luna Abyss",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1933000/a4fb308d6088a6736bb27ef5b0b1076fab47cd1b/header_schinese.jpg?t=1779397182",
+    "filesize": "8.37 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/AvUr223Ar2ee?pwd=nh9e",
+        "openpath": "Luna Abyss v1292/LunaAbyss/Binaries/WinGDK/LunaAbyss-WinGDK-Shipping.exe",
+        "filesize": "8.37 G",
+        "link_ctime": "2026.05.23",
+        "filesize_z": 8982340990,
+        "filename": "Luna Abyss v1292",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113403,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "归零巡礼：亡谍镇魂曲/ZERO PARADES For Dead Spies",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2863680/267ca0c8d31e17a8eb9512efce3ff771b1fbb569/header_schinese.jpg?t=1779455965",
+    "filesize": "10.38 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/U77BFvyqy6Bf?pwd=0nkq",
+        "openpath": "ZERO PARADES For Dead Spies v1.0.36599/ZeroParades.exe",
+        "filesize": "10.38 G",
+        "link_ctime": "2026.05.23",
+        "filesize_z": 11147561077,
+        "filename": "ZERO PARADES For Dead Spies v1.0.36599",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113457,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "层层恐惧：完全重制版/Layers of Fear",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1946700/ef7fe3781df901152466637907c583426c5ff473/header.jpg?t=1773944498",
+    "filesize": "18.27 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JvyAjqVJVfAf?pwd=mm0t",
+        "openpath": "Layers of Fear v1.2.3/LayersOfFear.exe",
+        "filesize": "18.27 G",
+        "link_ctime": "2026.05.24",
+        "filesize_z": 19614525998,
+        "filename": "Layers of Fear v1.2.3",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113478,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "乐高蝙蝠侠：黑暗骑士之遗 – 豪华版/LEGO Batman Legacy of the Dark Knight",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2215200/a07a9a6c0c9c1225f5b260b4f29fe40e6f099f6b/header.jpg?t=1779499107",
+    "filesize": "37.97 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/nmUj6zAn2MBf?pwd=fgx8",
+        "openpath": "LEGO Batman Legacy of the Dark Knight/LEGOBatmanLotDK.exe",
+        "filesize": "37.97 G",
+        "link_ctime": "2026.05.24",
+        "filesize_z": 40767936412,
+        "filename": "LEGO Batman Legacy of the Dark Knight",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113525,
+    "category_parent": 5,
+    "categories": "体育竞速",
+    "post_title": "纯粹台球/Pure Pool Pro",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3456930/76816eaf4db544d10a2a411b3545173a4dc5d806/header.jpg?t=1779357399",
+    "filesize": "14.29 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FZBzUvMJBRvu?pwd=pax4",
+        "openpath": "Pure Pool Pro v20260523/PurePool.exe",
+        "filesize": "14.29 G",
+        "link_ctime": "2026.05.24",
+        "filesize_z": 15348236291,
+        "filename": "Pure Pool Pro v20260523",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113530,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "元素：重铸/Elemental: Reforged",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3796960/62abfa1774ab15e83b7526cf4d814b9fe44dbdcb/header.jpg?t=1779386769",
+    "filesize": "9.77 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/736Z7rY3Eb6z?pwd=5atg",
+        "openpath": "Elemental Reforged Treasures of the Magi v1.1/Elemental.exe",
+        "filesize": "9.77 G",
+        "link_ctime": "2026.05.24",
+        "filesize_z": 10488940903,
+        "filename": "Elemental Reforged Treasures of the Magi v1.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113579,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "暗黑血统：战神版/Darksiders Warmastered Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/462780/header.jpg?t=1754079044",
+    "filesize": "21.45 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ZnA7VjRZRBFj?pwd=hi85",
+        "openpath": "Darksiders Warmastered Edition cs4297/darksiders1.exe",
+        "filesize": "21.45 G",
+        "link_ctime": "2026.05.25",
+        "filesize_z": 23030026978,
+        "filename": "Darksiders Warmastered Edition cs4297",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113625,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "无敌少侠VS：豪华版/Invincible VS – Deluxe Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2353060/8cd8eff0576c0503650c611cd0ef76faf905d13d/header.jpg?t=1778289865",
+    "filesize": "9.04 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JNr6J3aYFR3e?pwd=j1gg",
+        "openpath": "Invincible VS v20260503/InvincibleVS.exe",
+        "filesize": "9.04 G",
+        "link_ctime": "2026.05.26",
+        "filesize_z": 9708175288,
+        "filename": "Invincible VS v20260503",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113657,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "黑暗之光：幸存者/Dark Light: Survivor",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3088070/67fac2154cb1277ad161f57425efe8585bfd85ce/header.jpg?t=1778795968",
+    "filesize": "8.7 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FjeEVvzyInYz?pwd=ynt5",
+        "openpath": "Dark Light Survivor v1.1.05212009/DLS/DLS.exe",
+        "filesize": "8.7 G",
+        "link_ctime": "2026.05.26",
+        "filesize_z": 9344561406,
+        "filename": "Dark Light Survivor v1.1.05212009",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113795,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "巴布西4D/Bubsy 4D",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3237970/d0f8c0a5ea46208b50827bfd31325f68a2983b1e/header.jpg?t=1779477564",
+    "filesize": "1.17 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qAb6n2eY3Aje?pwd=3un6",
+        "openpath": "Bubsy 4D v1.12/Bubsy 4D.exe",
+        "filesize": "1.17 G",
+        "link_ctime": "2026.05.26",
+        "filesize_z": 1258212330,
+        "filename": "Bubsy 4D v1.12",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113837,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "黄金矿工：经典款/Gold Miner：Classic Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3777060/744bc5808b7c8fe7ac2775628964d1ad938801cc/header_schinese.jpg?t=1776079348",
+    "filesize": "406.38 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2uMVvuzaeI3q?pwd=sxa8",
+        "openpath": "Gold Miner Classic Edition v1.10ra/GoldMiner.exe",
+        "filesize": "406.38 M",
+        "link_ctime": "2026.05.26",
+        "filesize_z": 426122942,
+        "filename": "Gold Miner Classic Edition v1.10ra",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113855,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "恶果之地/Juicy Realm",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/732370/header_schinese.jpg?t=1644166479",
+    "filesize": "209.34 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/36buq2ja6Nze?pwd=5qei",
+        "openpath": "Juicy Realm v3.1.8/JuicyRealm.exe",
+        "filesize": "209.34 M",
+        "link_ctime": "2026.05.26",
+        "filesize_z": 219509855,
+        "filename": "Juicy Realm v3.1.8",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113870,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "星火燎原/Spark Ignites",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3864890/a6211a9c6ce35b79bd0e13b1e604f5bfa0a082d9/header_schinese.jpg?t=1776738398",
+    "filesize": "11.48 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FB3ERf3IR3uy?pwd=e64h",
+        "openpath": "SPARK IGNITES v0.3.0.3/Emberstorm.exe",
+        "filesize": "11.48 G",
+        "link_ctime": "2026.05.27",
+        "filesize_z": 12330766654,
+        "filename": "SPARK IGNITES v0.3.0.3",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113891,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "浮空岛/Aloft",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1660080/header_schinese.jpg?t=1776163995",
+    "filesize": "8.11 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ieqEnevYfmyi?pwd=8qa3",
+        "openpath": "Aloft v0.3.5.18/Aloft.exe",
+        "filesize": "8.11 G",
+        "link_ctime": "2026.05.27",
+        "filesize_z": 8704925644,
+        "filename": "Aloft v0.3.5.18",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113896,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "平行人生/Paralives",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1118520/277ab7a2ad1bbce0f4837bb37a3c86d109bd5258/header.jpg?t=1779721278",
+    "filesize": "5.13 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JjyaUvzE7rMn?pwd=ph5n",
+        "openpath": "Paralives v0.1.1.19867/Paralives.exe",
+        "filesize": "5.13 G",
+        "link_ctime": "2026.05.27",
+        "filesize_z": 5513223748,
+        "filename": "Paralives v0.1.1.19867",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113993,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "流明物语：特雷的回忆 – 流明版/LumenTale: Memories of Trey",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2261430/920e71b3b9e6bfa13de49647fd5c3ddbdc72a351/header_schinese.jpg?t=1779813982",
+    "filesize": "2.74 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ea6BfeM3IBzm?pwd=li8a",
+        "openpath": "LumenTale Memories of Trey v1.0.0.0/LumenTale Memories of Trey.exe",
+        "filesize": "2.74 G",
+        "link_ctime": "2026.05.27",
+        "filesize_z": 2941720138,
+        "filename": "LumenTale Memories of Trey v1.0.0.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 113998,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "轮回战纪/Mad King Redemption",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2369580/92375bf020ac68c375fe475ae57ced152ecdb45c/header_schinese.jpg?t=1779437421",
+    "filesize": "1.13 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7ZVvia7za2im?pwd=xcd7",
+        "openpath": "Mad King Redemption v1.01/Mad King Redemption.exe",
+        "filesize": "1.13 G",
+        "link_ctime": "2026.05.27",
+        "filesize_z": 1218311980,
+        "filename": "Mad King Redemption v1.01",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 114020,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "07：初露锋芒/007 First Light",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3768760/bc081141b67be2f7e3bb1488d85a0d52569e2de7/header_alt_assets_1_schinese.jpg?t=1779804342",
+    "filesize": "50.24 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/a2Mva2Fr2Mna?pwd=1fdy",
+        "openpath": "007 First Light v1.0.0/Retail/007FirstLight.exe",
+        "filesize": "50.24 G",
+        "link_ctime": "2026.05.27",
+        "filesize_z": 53943147994,
+        "filename": "007 First Light v1.0.0",
         "server": "t"
       }
     ]
