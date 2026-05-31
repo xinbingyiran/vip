@@ -9530,6 +9530,20 @@
         "coName": "SnowRunner V28.2",
         "coID": "https://cloud.189.cn/t/qY7jaqNJ3MVj?pwd=8vvl",
         "openPath": "SnowRunner V28.2/Sources/Bin/SnowRunner.exe"
+      },
+      {
+        "coSize": "4.07 M",
+        "udTime": "2026-04-15",
+        "coName": "SnowRunner",
+        "coID": "1465360",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "49.52 G",
+        "udTime": "2026-05-31",
+        "coName": "SnowRunner 5 Year Anniversary Edition v41",
+        "coID": "https://cloud.189.cn/t/RvU3M3MbAZRn?pwd=qt1y",
+        "openPath": "SnowRunner 5 Year Anniversary Edition v41/Sources/Bin/SnowRunner.exe"
       }
     ]
   },
@@ -49110,6 +49124,20 @@
         "coName": "OCTOPATH TRAVELER 0",
         "coID": "3014320",
         "type": "warehousing"
+      },
+      {
+        "coSize": "256.46 K",
+        "udTime": "2026-05-26",
+        "coName": "OCTOPATH TRAVELER 0",
+        "coID": "3014320",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "4.89 G",
+        "udTime": "2026-05-28",
+        "coName": "OCTOPATH TRAVELER 0 v1.0.7.0",
+        "coID": "https://cloud.189.cn/t/7nuArez63equ?pwd=4uay",
+        "openPath": "OCTOPATH TRAVELER 0 v1.0.7.0/Octopath_Traveler0/Binaries/Win64/Octopath_Traveler0-Win64-Shipping.exe"
       }
     ]
   },
@@ -50754,6 +50782,20 @@
         "coName": "The Occultist",
         "coID": "2092840",
         "type": "warehousing"
+      },
+      {
+        "coSize": "1.14 M",
+        "udTime": "2026-05-27",
+        "coName": "The Occultist",
+        "coID": "2092840",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "19.82 G",
+        "udTime": "2026-05-31",
+        "coName": "The Occultist v1.0.2.6",
+        "coID": "https://cloud.189.cn/t/zEZrAvAra2ua?pwd=nc1e",
+        "openPath": "The Occultist v1.0.2.6/The_Occultist.exe"
       }
     ]
   },
@@ -53779,6 +53821,20 @@
         "coName": "Directive 8020 v20260511",
         "coID": "https://cloud.189.cn/t/buiIrm7BN3ei?pwd=acm0",
         "openPath": "Directive 8020 v20260511/Directive8020.exe"
+      },
+      {
+        "coSize": "1.11 M",
+        "udTime": "2026-05-26",
+        "coName": "Directive 8020",
+        "coID": "2255370",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "34.66 G",
+        "udTime": "2026-05-28",
+        "coName": "Directive 8020 v20260526",
+        "coID": "https://cloud.189.cn/t/Ybeei277VrMj?pwd=wdv3",
+        "openPath": "Directive 8020 v20260526/Directive8020.exe"
       }
     ]
   },
@@ -53809,6 +53865,20 @@
         "coName": "Forza Horizon 6 v353.145",
         "coID": "https://cloud.189.cn/t/ueEJfq77bqIr?pwd=qnj4",
         "openPath": "Forza Horizon 6 v353.145/forzahorizon6.exe"
+      },
+      {
+        "coSize": "6.17 M",
+        "udTime": "2026-05-30",
+        "coName": "Forza Horizon 6",
+        "coID": "2483190",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "145.47 G",
+        "udTime": "2026-05-30",
+        "coName": "ForzaHorizon6 v364.933",
+        "coID": "https://cloud.189.cn/t/F7b6bybI3Uzu?pwd=oy95",
+        "openPath": "ForzaHorizon6 v364.933/forzahorizon6.exe"
       }
     ]
   },
@@ -54345,6 +54415,13 @@
         "coName": "LEGO Batman Legacy of the Dark Knight",
         "coID": "https://cloud.189.cn/t/nmUj6zAn2MBf?pwd=fgx8",
         "openPath": "LEGO Batman Legacy of the Dark Knight/LEGOBatmanLotDK.exe"
+      },
+      {
+        "coSize": "1.38 M",
+        "udTime": "2026-05-25",
+        "coName": "LEGO® Batman™: Legacy of the Dark Knight",
+        "coID": "2215200",
+        "type": "warehousing"
       }
     ]
   },
@@ -54414,6 +54491,13 @@
         "coName": "Darksiders Warmastered Edition cs4297",
         "coID": "https://cloud.189.cn/t/ZnA7VjRZRBFj?pwd=hi85",
         "openPath": "Darksiders Warmastered Edition cs4297/darksiders1.exe"
+      },
+      {
+        "coSize": "752.01 K",
+        "udTime": "2026-05-24",
+        "coName": "Darksiders Warmastered Edition",
+        "coID": "462780",
+        "type": "warehousing"
       }
     ]
   },
@@ -54437,6 +54521,13 @@
         "coName": "Invincible VS v20260503",
         "coID": "https://cloud.189.cn/t/JNr6J3aYFR3e?pwd=j1gg",
         "openPath": "Invincible VS v20260503/InvincibleVS.exe"
+      },
+      {
+        "coSize": "320.96 K",
+        "udTime": "2026-05-26",
+        "coName": "Invincible VS",
+        "coID": "2353060",
+        "type": "warehousing"
       }
     ]
   },
@@ -54460,6 +54551,13 @@
         "coName": "Dark Light Survivor v1.1.05212009",
         "coID": "https://cloud.189.cn/t/FjeEVvzyInYz?pwd=ynt5",
         "openPath": "Dark Light Survivor v1.1.05212009/DLS/DLS.exe"
+      },
+      {
+        "coSize": "468.56 K",
+        "udTime": "2026-05-28",
+        "coName": "Dark Light: Survivor",
+        "coID": "3088070",
+        "type": "warehousing"
       }
     ]
   },
@@ -54483,6 +54581,13 @@
         "coName": "Bubsy 4D v1.12",
         "coID": "https://cloud.189.cn/t/qAb6n2eY3Aje?pwd=3un6",
         "openPath": "Bubsy 4D v1.12/Bubsy 4D.exe"
+      },
+      {
+        "coSize": "87.35 K",
+        "udTime": "2026-05-29",
+        "coName": "Bubsy 4D",
+        "coID": "3237970",
+        "type": "warehousing"
       }
     ]
   },
@@ -54506,6 +54611,13 @@
         "coName": "Gold Miner Classic Edition v1.10ra",
         "coID": "https://cloud.189.cn/t/2uMVvuzaeI3q?pwd=sxa8",
         "openPath": "Gold Miner Classic Edition v1.10ra/GoldMiner.exe"
+      },
+      {
+        "coSize": "78.86 K",
+        "udTime": "2026-05-26",
+        "coName": "Gold Miner:Classic Edition",
+        "coID": "3777060",
+        "type": "warehousing"
       }
     ]
   },
@@ -54552,6 +54664,13 @@
         "coName": "SPARK IGNITES v0.3.0.3",
         "coID": "https://cloud.189.cn/t/FB3ERf3IR3uy?pwd=e64h",
         "openPath": "SPARK IGNITES v0.3.0.3/Emberstorm.exe"
+      },
+      {
+        "coSize": "607.45 K",
+        "udTime": "2026-05-30",
+        "coName": "SPARK IGNITES",
+        "coID": "3864890",
+        "type": "warehousing"
       }
     ]
   },
@@ -54598,6 +54717,13 @@
         "coName": "Paralives v0.1.1.19867",
         "coID": "https://cloud.189.cn/t/JjyaUvzE7rMn?pwd=ph5n",
         "openPath": "Paralives v0.1.1.19867/Paralives.exe"
+      },
+      {
+        "coSize": "8.74 M",
+        "udTime": "2026-05-29",
+        "coName": "Paralives",
+        "coID": "1118520",
+        "type": "warehousing"
       }
     ]
   },
@@ -54621,6 +54747,13 @@
         "coName": "LumenTale Memories of Trey v1.0.0.0",
         "coID": "https://cloud.189.cn/t/ea6BfeM3IBzm?pwd=li8a",
         "openPath": "LumenTale Memories of Trey v1.0.0.0/LumenTale Memories of Trey.exe"
+      },
+      {
+        "coSize": "874.84 K",
+        "udTime": "2026-05-27",
+        "coName": "LumenTale: Memories of Trey",
+        "coID": "2261430",
+        "type": "warehousing"
       }
     ]
   },
@@ -54667,6 +54800,309 @@
         "coName": "007 First Light v1.0.0",
         "coID": "https://cloud.189.cn/t/a2Mva2Fr2Mna?pwd=1fdy",
         "openPath": "007 First Light v1.0.0/Retail/007FirstLight.exe"
+      },
+      {
+        "coSize": "1.74 M",
+        "udTime": "2026-05-28",
+        "coName": "007 First Light",
+        "coID": "3768760",
+        "type": "warehousing"
+      }
+    ]
+  },
+  {
+    "id": 114087,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "伊尔2捍卫雄鹰：多佛白崖 – 闪击版/IL-2 Sturmovik Cliffs of Dover Blitz",
+    "Subtitle": "空战对决决战不列颠",
+    "list": [
+      {
+        "coSize": "1.7 M",
+        "udTime": "2026-05-26",
+        "coName": "IL-2 Sturmovik: Cliffs of Dover Blitz",
+        "coID": "754530",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "15.74 G",
+        "udTime": "2026-05-27",
+        "coName": "IL-2 Sturmovik Cliffs of Dover Blitz v5.047.1",
+        "coID": "https://cloud.189.cn/t/2YJNr22IN77v?pwd=5gsf",
+        "openPath": "IL-2 Sturmovik Cliffs of Dover Blitz v5.047.1/Launcher64.exe"
+      }
+    ]
+  },
+  {
+    "id": 114092,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "帝国幻想乡/TOHOTOPIA",
+    "Subtitle": "幻想乡争霸策略帝国对战",
+    "list": [
+      {
+        "coSize": "65.73 K",
+        "udTime": "2026-05-27",
+        "coName": "TOHOTOPIA",
+        "coID": "3774440",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "235.77 M",
+        "udTime": "2026-05-27",
+        "coName": "TOHOTOPIA v0.7.1m2",
+        "coID": "https://cloud.189.cn/t/2aiaieUVFVbm?pwd=jj99",
+        "openPath": "TOHOTOPIA v0.7.1m2/TOHOTOPIA.exe"
+      }
+    ]
+  },
+  {
+    "id": 114246,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "薛定谔的电话/Schrödinger’s Call",
+    "Subtitle": "体验人与人之间的伤痛",
+    "list": [
+      {
+        "coSize": "939.57 K",
+        "udTime": "2026-05-31",
+        "coName": "Schrödinger's Call",
+        "coID": "2090390",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "5.39 G",
+        "udTime": "2026-05-30",
+        "coName": "SchrodingersCallAdv v20260528",
+        "coID": "https://cloud.189.cn/t/NnMRjmuIVfIn?pwd=lb8z",
+        "openPath": "SchrodingersCallAdv v20260528/SchrodingersCallAdv.exe"
+      }
+    ]
+  },
+  {
+    "id": 114268,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "ARIE：月咏/Arie Moonprayer",
+    "Subtitle": "唯美末日世界短篇探索",
+    "list": [
+      {
+        "coSize": "322.39 K",
+        "udTime": "2026-05-29",
+        "coName": "ARIE: Moonprayer",
+        "coID": "2476690",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "1.52 G",
+        "udTime": "2026-05-30",
+        "coName": "ARIE Moonprayer",
+        "coID": "https://cloud.189.cn/t/Fjei2yFrEnM3?pwd=4xbg",
+        "openPath": "ARIE Moonprayer/ARIE Moonprayer.exe"
+      }
+    ]
+  },
+  {
+    "id": 114320,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "鬼魂大师：复苏/Ghost Master: Resurrection",
+    "Subtitle": "幽灵军团袭镇解谜策略冒险",
+    "list": [
+      {
+        "coSize": "460.21 K",
+        "udTime": "2026-05-30",
+        "coName": "Ghost Master: Resurrection",
+        "coID": "3289090",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "12.5 G",
+        "udTime": "2026-05-30",
+        "coName": "Ghost Master Resurrection Walls of Judgment  v20260528",
+        "coID": "https://cloud.189.cn/t/BfUf6nviyqQr?pwd=6qzi",
+        "openPath": "Ghost Master Resurrection Walls of Judgment  v20260528/GhostMasterRemake.exe"
+      }
+    ]
+  },
+  {
+    "id": 114374,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "冥朽/Necrophosis",
+    "Subtitle": "诡异梦魇探索恐怖秘境",
+    "list": [
+      {
+        "coSize": "476.31 K",
+        "udTime": "2026-05-26",
+        "coName": "Necrophosis",
+        "coID": "2019760",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "14.38 G",
+        "udTime": "2026-05-30",
+        "coName": "Necrophosis v20260526",
+        "coID": "https://cloud.189.cn/t/n22iYrYVJRjy?pwd=4zvr",
+        "openPath": "Necrophosis v20260526/NECROPHOSIS.exe"
+      }
+    ]
+  },
+  {
+    "id": 114401,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "深海刮刮乐/Scale the Depths",
+    "Subtitle": "探索各大神秘的钓鱼圣地",
+    "list": [
+      {
+        "coSize": "190.57 K",
+        "udTime": "2026-05-31",
+        "coName": "Scale the Depths",
+        "coID": "3198890",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "222.16 M",
+        "udTime": "2026-05-31",
+        "coName": "Scale the Depths v1.0.0",
+        "coID": "https://cloud.189.cn/t/VJjURjEjEjIb?pwd=eb4z",
+        "openPath": "Scale the Depths v1.0.0/Scale The Depths.exe"
+      }
+    ]
+  },
+  {
+    "id": 114483,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "崩溃小队/Crashout Crew",
+    "Subtitle": "快来尼罗快递打卡上班吧",
+    "list": [
+      {
+        "coSize": "68.32 K",
+        "udTime": "2026-05-31",
+        "coName": "Crashout Crew",
+        "coID": "3583210",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "597.14 M",
+        "udTime": "2026-05-31",
+        "coName": "Crashout Crew v20260529",
+        "coID": "https://cloud.189.cn/t/r2UNraRBBVBn?pwd=w2pu",
+        "openPath": "Crashout Crew v20260529/CrashoutCrew.exe"
+      }
+    ]
+  },
+  {
+    "id": 114507,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "挖掘者米娜/Mina the Hollower",
+    "Subtitle": "踏上拯救被诅咒岛屿",
+    "list": [
+      {
+        "coSize": "74.62 K",
+        "udTime": "2026-05-31",
+        "coName": "Mina the Hollower",
+        "coID": "1875580",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "749.52 M",
+        "udTime": "2026-05-31",
+        "coName": "Mina the Hollower v1.0.5",
+        "coID": "https://cloud.189.cn/t/nQBnEnFzQVVn?pwd=0kyv",
+        "openPath": "Mina the Hollower v1.0.5/MinaTheHollower.exe"
+      }
+    ]
+  },
+  {
+    "id": 114545,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "神奇四叶镇/Ova Magica",
+    "Subtitle": "在四叶镇开启崭新生活吧",
+    "list": [
+      {
+        "coSize": "159.11 K",
+        "udTime": "2026-05-28",
+        "coName": "Ova Magica",
+        "coID": "1299170",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "1.4 G",
+        "udTime": "2026-05-31",
+        "coName": "Ova Magica v1.0.0",
+        "coID": "https://cloud.189.cn/t/B3umQnuMf67r?pwd=pvg5",
+        "openPath": "Ova Magica v1.0.0/Ova Magica.exe"
+      }
+    ]
+  },
+  {
+    "id": 114579,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "传颂之物：循白之证 – 白金版/Utawarerumono Past and Present Rediscovered",
+    "Subtitle": "大和危机命运交织新篇",
+    "list": [
+      {
+        "coSize": "4.58 M",
+        "udTime": "2026-05-29",
+        "coName": "Utawarerumono: Past and Present Rediscovered",
+        "coID": "4264260",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "51.35 G",
+        "udTime": "2026-05-31",
+        "coName": "Utawarerumono Past and Present Rediscovered v1.0.4",
+        "coID": "https://cloud.189.cn/t/N7vERrveUzEv?pwd=oi0g",
+        "openPath": "Utawarerumono Past and Present Rediscovered v1.0.4/Utawarerumono Past and Present Rediscovered.exe"
+      }
+    ]
+  },
+  {
+    "id": 114640,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "赏金乱斗：头号通缉/Bounty Brawl Most Wanted",
+    "Subtitle": "星际赏金联机乱斗射击",
+    "list": [
+      {
+        "coSize": "221.34 K",
+        "udTime": "2026-05-31",
+        "coName": "Bounty Brawl: Most Wanted",
+        "coID": "3097510",
+        "type": "warehousing"
+      },
+      {
+        "coID": "https://cloud.189.cn/t/yAb2mmMZ3yyq?pwd=jlp0",
+        "openPath": "Bounty Brawl Most Wanted v1.0.1.8/Bounty Brawl Most Wanted.exe"
+      }
+    ]
+  },
+  {
+    "id": 114669,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "星尘轨迹：魔女之愿/Stardust Wish of Witch",
+    "Subtitle": "像素战棋追寻愿星秘密",
+    "list": [
+      {
+        "coSize": "38.04 K",
+        "udTime": "2026-05-31",
+        "coName": "STARDUST: Wish of Witch",
+        "coID": "3936730",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "1.9 G",
+        "udTime": "2026-05-31",
+        "coName": "Stardust v20260531",
+        "coID": "https://cloud.189.cn/t/ayE3ymZBnAnm?pwd=r6cm",
+        "openPath": "Stardust v20260531/StarDust_Steam.exe"
       }
     ]
   }
