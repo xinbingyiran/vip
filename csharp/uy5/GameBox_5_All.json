@@ -5256,7 +5256,7 @@
     "categories": "即时战略",
     "post_title": "预先号令/WARNO",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1611600/header.jpg?t=1720524249",
-    "filesize": "25.8 G",
+    "filesize": "61.99 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/myQRbyni63iu?pwd=8rpm",
@@ -5265,6 +5265,15 @@
         "link_ctime": "2024.05.02",
         "filesize_z": 27699985004,
         "filename": "WARNO",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/qeUZRvmMJnuu?pwd=5z1c",
+        "openpath": "WARNO v193438/WARNO.exe",
+        "filesize": "61.99 G",
+        "link_ctime": "2026.06.08",
+        "filesize_z": 66564202944,
+        "filename": "WARNO v193438",
         "server": "t"
       }
     ]
@@ -5844,6 +5853,25 @@
         "link_ctime": "2026.05.02",
         "filesize_z": 598242825,
         "filename": "Stoneshard v0.9.4.20",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 18252,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "机械制造者/赛道大师/Trailmakers",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/585420/header.jpg?t=1716299675",
+    "filesize": "6.32 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/RvANR3yauqae?pwd=tjd3",
+        "openpath": "Trailmakers v2.4/Trailmakers.exe",
+        "filesize": "6.32 G",
+        "link_ctime": "2026.06.08",
+        "filesize_z": 6788165470,
+        "filename": "Trailmakers v2.4",
         "server": "t"
       }
     ]
@@ -11290,7 +11318,7 @@
     "categories": "动作冒险",
     "post_title": "僵尸毁灭工程/Project Zomboid",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/108600/header.jpg?t=1691508011",
-    "filesize": "2.57 G",
+    "filesize": "3.97 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/FzeUzyyUjqqa?pwd=l2mz",
@@ -11299,6 +11327,15 @@
         "link_ctime": "2024.04.24",
         "filesize_z": 2756920958,
         "filename": "Project Zomboid",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/Y3uEVbMvmUze?pwd=agf5",
+        "openpath": "Where the forest ends v42.19.0/ZombieShooter.exe",
+        "filesize": "3.97 G",
+        "link_ctime": "2026.06.04",
+        "filesize_z": 4264265963,
+        "filename": "Where the forest ends v42.19.0",
         "server": "t"
       }
     ]
@@ -16260,7 +16297,7 @@
     "categories": "动作冒险",
     "post_title": "七日杀/7 Days to Die",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/251570/header.jpg?t=1721925235",
-    "filesize": "12.16 G",
+    "filesize": "15.95 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/y2Iz2yvQzeA3?pwd=y9ab",
@@ -16269,6 +16306,15 @@
         "link_ctime": "2024.04.21",
         "filesize_z": 13060416844,
         "filename": "7.Days.to.Die v21.2.B37",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/UvmqiqiiIjYj?pwd=6uop",
+        "openpath": "7 Days To Die v2.6/7DaysToDie.exe",
+        "filesize": "15.95 G",
+        "link_ctime": "2026.06.02",
+        "filesize_z": 17121572058,
+        "filename": "7 Days To Die v2.6",
         "server": "t"
       }
     ]
@@ -30526,7 +30572,7 @@
     "categories": "动作冒险",
     "post_title": "太空殖民地/Astro Colony",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1614550/header.jpg?t=1733818336",
-    "filesize": "3.24 G",
+    "filesize": "3.5 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/7nQZnmryuINv?pwd=nuy4",
@@ -30535,6 +30581,15 @@
         "link_ctime": "2024.12.26",
         "filesize_z": 3482066953,
         "filename": "Astro.Colony.Build.16707596",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/qArAB3Nf6ZVj?pwd=63fw",
+        "openpath": "Astro Colony v1.0.62/AstroColony.exe",
+        "filesize": "3.5 G",
+        "link_ctime": "2026.06.05",
+        "filesize_z": 3754400141,
+        "filename": "Astro Colony v1.0.62",
         "server": "t"
       }
     ]
@@ -49798,7 +49853,7 @@
     "categories": "动作冒险",
     "post_title": "无尽猎杀：支持者版/Grind Survivors",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3816930/51e04bd9a702c48f214ae2327f09c429f4dde21e/header_alt_assets_3.jpg?t=1773662415",
-    "filesize": "1.58 G",
+    "filesize": "1.63 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/vAJv2qfMZ3Ur?pwd=udd3",
@@ -49807,6 +49862,15 @@
         "link_ctime": "2026.03.17",
         "filesize_z": 1701249770,
         "filename": "Grind Survivors v3645",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/YFzA7r7NjEri?pwd=gmk2",
+        "openpath": "Grind Survivors v4146/GrindSurvivors.exe",
+        "filesize": "1.63 G",
+        "link_ctime": "2026.06.04",
+        "filesize_z": 1753839449,
+        "filename": "Grind Survivors v4146",
         "server": "t"
       }
     ]
@@ -54858,6 +54922,25 @@
     ]
   },
   {
+    "id": 114640,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "赏金乱斗：头号通缉/Bounty Brawl Most Wanted",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3097510/9fa84d2ecc107a719e6c5f9ceea9b60a30f7a2ff/header_schinese.jpg?t=1780213424",
+    "filesize": "2.81 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/yAb2mmMZ3yyq?pwd=jlp0",
+        "openpath": "Bounty Brawl Most Wanted v1.0.1.8/Bounty Brawl Most Wanted.exe",
+        "filesize": "2.81 G",
+        "link_ctime": "2026.05.31",
+        "filesize_z": 3016767270,
+        "filename": "Bounty Brawl Most Wanted v1.0.1.8",
+        "server": "t"
+      }
+    ]
+  },
+  {
     "id": 114669,
     "category_parent": 5,
     "categories": "角色扮演",
@@ -54872,6 +54955,348 @@
         "link_ctime": "2026.05.31",
         "filesize_z": 2036929243,
         "filename": "Stardust v20260531",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 114745,
+    "category_parent": 5,
+    "categories": "体育竞速",
+    "post_title": "XF 极限方程式/XF Extreme Formula",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2539910/792b9753275850071cef0bcff98feb3e5d07200d/header.jpg?t=1779852437",
+    "filesize": "7.62 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NJZZbmeMZNvq?pwd=tbu7",
+        "openpath": "XF Extreme Formula v20260528/XF ExtremeFormula.exe",
+        "filesize": "7.62 G",
+        "link_ctime": "2026.06.02",
+        "filesize_z": 8180828193,
+        "filename": "XF Extreme Formula v20260528",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 114787,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "命运守护者/Fatekeeper",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2186990/4a98bac064656da89ddf8dedee1acd39405cac14/header_alt_assets_0.jpg?t=1780424266",
+    "filesize": "36.86 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/QNVVjeNjQN7j?pwd=5qzq",
+        "openpath": "Fatekeeper v23487/SLASHER.exe",
+        "filesize": "36.86 G",
+        "link_ctime": "2026.06.04",
+        "filesize_z": 39579348663,
+        "filename": "Fatekeeper v23487",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 114828,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "TBH 塔斯克巴·英雄/TBH Task Bar Hero",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3678970/be640d1ea4db8d9139069e3799d8d4553f0c2131/header.jpg?t=1780512075",
+    "filesize": "184.62 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/veuqEjyiiMvq?pwd=kkv0",
+        "openpath": "TBH Task Bar Hero v1.00.08/TaskBarHero.exe",
+        "filesize": "184.62 M",
+        "link_ctime": "2026.06.04",
+        "filesize_z": 193589190,
+        "filename": "TBH Task Bar Hero v1.00.08",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 114834,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "热血西游记：天竺奇谭/RiverCitySagaJTTW",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4164020/0104fdb03d434f26905280154f3e77185c423aec/header_schinese.jpg?t=1780498857",
+    "filesize": "1.05 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Iz2iI3yi6jMz?pwd=axi3",
+        "openpath": "RiverCitySagaJTTW v1.0.2/RcsJTTW.exe",
+        "filesize": "1.05 G",
+        "link_ctime": "2026.06.04",
+        "filesize_z": 1122943914,
+        "filename": "RiverCitySagaJTTW v1.0.2",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 114864,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "破碎怪谈：恶意关注/FOLLOW",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2846530/header_schinese.jpg?t=1780411294",
+    "filesize": "8.78 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2yUbeaVf6vU3?pwd=xa8s",
+        "openpath": "FOLLOW v20260603/Follow.exe",
+        "filesize": "8.78 G",
+        "link_ctime": "2026.06.04",
+        "filesize_z": 9430636318,
+        "filename": "FOLLOW v20260603",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 114908,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "漫威金刚狼/Marvel’s Wolverine",
+    "wp_get_attachment_image_src": "https://img.kelongwo.uk/wp-content/uploads/2026/06/2026060501292994.png",
+    "filesize": "56.8 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/rm6VjemE77Bb?pwd=bj4j",
+        "openpath": "Wolverine M13 v1.0.1/",
+        "filesize": "56.8 G",
+        "link_ctime": "2026.06.05",
+        "filesize_z": 60988283529,
+        "filename": "Wolverine M13 v1.0.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 114916,
+    "category_parent": 5,
+    "categories": "恐怖惊悚",
+    "post_title": "悔恨：豪华版/Remorses",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2292160/header.jpg?t=1780416036",
+    "filesize": "30.75 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Ifa22qYZ7vqe?pwd=8xcr",
+        "openpath": "Remorses v20260604/RemorsesFull.exe",
+        "filesize": "30.75 G",
+        "link_ctime": "2026.06.05",
+        "filesize_z": 33022437185,
+        "filename": "Remorses v20260604",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 114945,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "第七位访客：重制版/The 7th Guest Remake",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4491360/ba4e68cf5d709de4d3c4971850548d66321c6110/header.jpg?t=1780559355",
+    "filesize": "23 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/QFvYZvYZNfUb?pwd=0svs",
+        "openpath": "The 7th Guest Remake v1.2/The7thGuestVR.exe",
+        "filesize": "23 G",
+        "link_ctime": "2026.06.05",
+        "filesize_z": 24693050392,
+        "filename": "The 7th Guest Remake v1.2",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 114967,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "德米欧 x 龙与地下城：战痕/Demeo x Dungeons and Dragons Battlemarked A Golden Opportunity",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3124340/4c345cf5542760cf5c7e46f80213777ca440cade/header.jpg?t=1779801851",
+    "filesize": "5.33 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/z2IRnaeIVRZv?pwd=f8yy",
+        "openpath": "Demeo x Dungeons and Dragons Battlemarked A Golden Opportunity v5.1.35228/battlemarked.exe",
+        "filesize": "5.33 G",
+        "link_ctime": "2026.06.05",
+        "filesize_z": 5727921022,
+        "filename": "Demeo x Dungeons and Dragons Battlemarked A Golden Opportunity v5.1.35228",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115023,
+    "category_parent": 5,
+    "categories": "体育竞速",
+    "post_title": "2026年环法自行车赛：豪华版/Tour de France 2026",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3936520/768fdd83ab20a7327dd6e21de5b0ce01d2ba4140/header.jpg?t=1780560168",
+    "filesize": "28.11 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JBv26fVNnE3m?pwd=oa8t",
+        "openpath": "Tour de France 2026 v20260605/TDF.exe",
+        "filesize": "28.11 G",
+        "link_ctime": "2026.06.05",
+        "filesize_z": 30180679742,
+        "filename": "Tour de France 2026 v20260605",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115048,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "房产达人：重制收藏版/House Flipper Remastered Collection",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3710840/ae87c307d7baa9b80c977fab7f331689bbe7eb9f/header.jpg?t=1780591455",
+    "filesize": "12.25 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/EBFrQvf6ZN73?pwd=q2pd",
+        "openpath": "House Flipper Remastered Collection v1.26155/HouseFlipper.exe",
+        "filesize": "12.25 G",
+        "link_ctime": "2026.06.05",
+        "filesize_z": 13151732697,
+        "filename": "House Flipper Remastered Collection v1.26155",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115076,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "自动梭哈/Slots &amp; Diapers",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4409870/91e6a87b7601e66eb93f4114700a9fca9d425d38/header_schinese.jpg?t=1780611707",
+    "filesize": "484.79 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/VryqiaVFnqEv?pwd=srk5",
+        "openpath": "Slots & Diapers v1.0.0/Slots & Diapers.exe",
+        "filesize": "484.79 M",
+        "link_ctime": "2026.06.05",
+        "filesize_z": 508342693,
+        "filename": "Slots & Diapers v1.0.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115101,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "禁忌森林/PROHIBEAST",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3503790/dc9b4b24554f276600a69b6ab54e289c96437d95/header.jpg?t=1780495285",
+    "filesize": "9.2 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/BbMNBvnQBZ3m?pwd=n8c2",
+        "openpath": "PROHIBEAST v0.9.075/ProhiBeast.exe",
+        "filesize": "9.2 G",
+        "link_ctime": "2026.06.05",
+        "filesize_z": 9881609549,
+        "filename": "PROHIBEAST v0.9.075",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115127,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "哥特王朝：重制版/Gothic 1 Remake",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1297900/6bc8c205a107e552f14631524f25cdf88743515a/header.jpg?t=1780742418",
+    "filesize": "31.38 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ZreMBrzqUniy?pwd=gqe4",
+        "openpath": "Gothic 1 Remake v168089/G1R-Win64-Shipping.exe",
+        "filesize": "31.38 G",
+        "link_ctime": "2026.06.07",
+        "filesize_z": 33694081521,
+        "filename": "Gothic 1 Remake v168089",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115217,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "战锤40K 机械神教2/Warhammer 40,000: Mechanicus II",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2532480/4b9ea5b45f304a841fc68520cc729307629fa9bd/header.jpg?t=1779444541",
+    "filesize": "15.63 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/QrquiivaAnYr?pwd=3jyg",
+        "openpath": "Warhammer 40000 Mechanicus II v1.0.0.25/Mechanicus2.exe",
+        "filesize": "15.63 G",
+        "link_ctime": "2026.06.07",
+        "filesize_z": 16783134046,
+        "filename": "Warhammer 40000 Mechanicus II v1.0.0.25",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115374,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "方舟时代/Arken Age",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2274200/header.jpg?t=1764175255",
+    "filesize": "13.01 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ArEbqiaumyeu?pwd=2soa",
+        "openpath": "Arken Age/Arken Age.exe",
+        "filesize": "13.01 G",
+        "link_ctime": "2026.06.07",
+        "filesize_z": 13974225596,
+        "filename": "Arken Age",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115410,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "鱼与徒步/Fish &amp; Hike",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4143100/401a4188358814aa4356f11234b0c9216b0fbd10/header.jpg?t=1780584406",
+    "filesize": "1.57 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/z2eYFraQvIJb?pwd=c3jm",
+        "openpath": "Fish and Hike v20260606/FishAndHike.exe",
+        "filesize": "1.57 G",
+        "link_ctime": "2026.06.07",
+        "filesize_z": 1685783803,
+        "filename": "Fish and Hike v20260606",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115430,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "神秘商人/Arcane Merchant",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4086760/dc0e22953aa5e431ed6103afaf020c5a7d7809f1/header.jpg?t=1780345651",
+    "filesize": "2.91 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/nyQbmmrAV36n?pwd=no7z",
+        "openpath": "Arcane Merchant v20260602/Arcane Merchant.exe",
+        "filesize": "2.91 G",
+        "link_ctime": "2026.06.08",
+        "filesize_z": 3122103718,
+        "filename": "Arcane Merchant v20260602",
         "server": "t"
       }
     ]
