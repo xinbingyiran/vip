@@ -5943,6 +5943,20 @@
         "coName": "DEATHLOOP 1.769.0.5",
         "coID": "https://cloud.189.cn/t/nI3U7jzeQ7ry?pwd=lw7i",
         "openPath": "DEATHLOOP 1.769.0.5/Deathloop.exe"
+      },
+      {
+        "coSize": "1.16 M",
+        "udTime": "2026-04-15",
+        "coName": "DEATHLOOP",
+        "coID": "1252330",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "29.78 G",
+        "udTime": "2026-06-09",
+        "coName": "DEATHLOOP v1.769.0.5",
+        "coID": "https://cloud.189.cn/t/fA3MrmJjqiei?pwd=tw4b",
+        "openPath": "DEATHLOOP v1.769.0.5/Deathloop.exe"
       }
     ]
   },
@@ -25724,6 +25738,20 @@
         "coName": "Blasphemous 2 Mea Culpa v2.0.0",
         "coID": "https://cloud.189.cn/t/yU3MviVBbQba?pwd=gda0",
         "openPath": "Blasphemous 2 Mea Culpa v2.0.0/Blasphemous 2.exe"
+      },
+      {
+        "coSize": "220.21 K",
+        "udTime": "2026-06-06",
+        "coName": "Blasphemous 2",
+        "coID": "2114740",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "3.68 G",
+        "udTime": "2026-06-10",
+        "coName": "Blasphemous 2 v3.0.0",
+        "coID": "https://cloud.189.cn/t/Iry2AvUzmaEb?pwd=64p8",
+        "openPath": "Blasphemous 2 v3.0.0/Blasphemous 2.exe"
       }
     ]
   },
@@ -26912,6 +26940,20 @@
         "coName": "FINAL.FANTASY.VII.REMAKE.INTERGRADE.v1.003",
         "coID": "https://cloud.189.cn/t/VrmANvqeq6Bj?pwd=5ksm",
         "openPath": "FINAL.FANTASY.VII.REMAKE.INTERGRADE.v1.003/ff7remake.exe"
+      },
+      {
+        "coSize": "3.1 M",
+        "udTime": "2026-04-15",
+        "coName": "FINAL FANTASY VII REMAKE INTERGRADE",
+        "coID": "1462040",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "93.17 G",
+        "udTime": "2026-06-09",
+        "coName": "Final Fantasy VI Remake Intergrade v1.007",
+        "coID": "https://cloud.189.cn/t/Yb6JzaUNfUB3?pwd=ny0n",
+        "openPath": "Final Fantasy VI Remake Intergrade v1.007/ff7remake.exe"
       }
     ]
   },
@@ -54907,6 +54949,27 @@
         "coName": "007 First Light",
         "coID": "3768760",
         "type": "warehousing"
+      },
+      {
+        "coSize": "1.75 M",
+        "udTime": "2026-06-04",
+        "coName": "007 First Light",
+        "coID": "3768760",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "50.27 G",
+        "udTime": "2026-06-10",
+        "coName": "007 First Light v1.0.0",
+        "coID": "https://cloud.189.cn/t/2EBbQzeUz22e?pwd=3ang",
+        "openPath": "007 First Light v1.0.0/Retail/007FirstLight.exe"
+      },
+      {
+        "coSize": "50.24 G",
+        "udTime": "2026-06-08",
+        "coName": "007 First Light v1.0.3",
+        "coID": "https://cloud.189.cn/t/ja6vemNZNFnu?pwd=3dsc",
+        "openPath": "007 First Light v1.0.3/Retail/007FirstLight.exe"
       }
     ]
   },
@@ -55491,6 +55554,13 @@
         "coName": "House Flipper Remastered Collection v1.26155",
         "coID": "https://cloud.189.cn/t/EBFrQvf6ZN73?pwd=q2pd",
         "openPath": "House Flipper Remastered Collection v1.26155/HouseFlipper.exe"
+      },
+      {
+        "coSize": "6.56 M",
+        "udTime": "2026-06-08",
+        "coName": "House Flipper Remastered Collection",
+        "coID": "3710840",
+        "type": "warehousing"
       }
     ]
   },
@@ -55514,6 +55584,13 @@
         "coName": "Slots & Diapers v1.0.0",
         "coID": "https://cloud.189.cn/t/VryqiaVFnqEv?pwd=srk5",
         "openPath": "Slots & Diapers v1.0.0/Slots & Diapers.exe"
+      },
+      {
+        "coSize": "119.41 K",
+        "udTime": "2026-06-08",
+        "coName": "Slots & Diapers",
+        "coID": "4409870",
+        "type": "warehousing"
       }
     ]
   },
@@ -55652,6 +55729,220 @@
         "coName": "Arcane Merchant v20260602",
         "coID": "https://cloud.189.cn/t/nyQbmmrAV36n?pwd=no7z",
         "openPath": "Arcane Merchant v20260602/Arcane Merchant.exe"
+      },
+      {
+        "coSize": "277.02 K",
+        "udTime": "2026-06-08",
+        "coName": "Arcane Merchant",
+        "coID": "4086760",
+        "type": "warehousing"
+      }
+    ]
+  },
+  {
+    "id": 115470,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "太阳朋克：浮岛家园/Solarpunk",
+    "Subtitle": "浮岛生存建造自动化探索",
+    "list": [
+      {
+        "coSize": "98.88 K",
+        "udTime": "2026-06-08",
+        "coName": "Solarpunk",
+        "coID": "1805110",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "932.93 M",
+        "udTime": "2026-06-09",
+        "coName": "Solarpunk v1.0.0",
+        "coID": "https://cloud.189.cn/t/zYfQjiEfyi6v?pwd=426r",
+        "openPath": "Solarpunk v1.0.0/Solarpunk.exe"
+      }
+    ]
+  },
+  {
+    "id": 115510,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "深入绝地 黑暗传奇/Terrinoth Heroes of Descent",
+    "Subtitle": "奇幻战棋组队挑战史诗魔王",
+    "list": [
+      {
+        "coSize": "579.77 K",
+        "udTime": "2026-06-07",
+        "coName": "Terrinoth®: Heroes of Descent",
+        "coID": "3929630",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "7.21 G",
+        "udTime": "2026-06-09",
+        "coName": "Terrinoth Heroes of Descent v1.0",
+        "coID": "https://cloud.189.cn/t/eUnQ3eYZz2eu?pwd=1lk1",
+        "openPath": "Terrinoth Heroes of Descent v1.0/Terrinoth Heroes of Descent.exe"
+      }
+    ]
+  },
+  {
+    "id": 115515,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "神之军火/Arms of God",
+    "Subtitle": "地狱割草融合武器闯关救世",
+    "list": [
+      {
+        "coSize": "308.2 K",
+        "udTime": "2026-06-08",
+        "coName": "Arms of God",
+        "coID": "3100310",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "8.62 G",
+        "udTime": "2026-06-09",
+        "coName": "Arms of God v20260609",
+        "coID": "https://cloud.189.cn/t/fEFr6v2y2qym?pwd=0xxr",
+        "openPath": "Arms of God v20260609/ArmsOfGod.exe"
+      }
+    ]
+  },
+  {
+    "id": 115577,
+    "category_parent": 5,
+    "categories": "体育竞速",
+    "post_title": "真格拳击：冠军版/Undisputed The Championship Edition",
+    "Subtitle": "真实拳击竞技争夺冠军",
+    "list": [
+      {
+        "coSize": "1.87 M",
+        "udTime": "2026-04-15",
+        "coName": "Undisputed",
+        "coID": "1451190",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "15.45 G",
+        "udTime": "2026-06-10",
+        "coName": "Undisputed",
+        "coID": "https://cloud.189.cn/t/32QfInYraY3q?pwd=0xjx",
+        "openPath": "Undisputed/Undisputed.exe"
+      }
+    ]
+  },
+  {
+    "id": 115607,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "阿兹特克：最后的太阳/Aztecs The Last Sun",
+    "Subtitle": "统治古城对抗神祇生存建造",
+    "list": [
+      {
+        "coSize": "275.06 K",
+        "udTime": "2026-06-01",
+        "coName": "Aztecs: The Last Sun",
+        "coID": "1409840",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "4.98 G",
+        "udTime": "2026-06-10",
+        "coName": "Aztecs The Last Sun v1.0.0",
+        "coID": "https://cloud.189.cn/t/Ab6NBnRzMRzy?pwd=kre2",
+        "openPath": "Aztecs The Last Sun v1.0.0/ATLS.exe"
+      }
+    ]
+  },
+  {
+    "id": 115660,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "回忆房间/Momento",
+    "Subtitle": "布置空间书写人生故事",
+    "list": [
+      {
+        "coSize": "198.46 K",
+        "udTime": "2026-06-09",
+        "coName": "Momento",
+        "coID": "2474770",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "912.25 M",
+        "udTime": "2026-06-10",
+        "coName": "Momento v1.0.23",
+        "coID": "https://cloud.189.cn/t/nY7vEzqMbm2i?pwd=rr1z",
+        "openPath": "Momento v1.0.23/Momento.exe"
+      }
+    ]
+  },
+  {
+    "id": 115693,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "失眠：第一章/Insomnia: Chapter One",
+    "Subtitle": "北极失控技术员破局",
+    "list": [
+      {
+        "coSize": "113.5 K",
+        "udTime": "2026-06-09",
+        "coName": "Insomnia: Chapter One",
+        "coID": "3939100",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "2.48 G",
+        "udTime": "2026-06-11",
+        "coName": "Insomnia v1.0",
+        "coID": "https://cloud.189.cn/t/vEzAzejEzaae?pwd=udi3",
+        "openPath": "Insomnia v1.0/InsomniaP1.exe"
+      }
+    ]
+  },
+  {
+    "id": 115698,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "沃德灵：共生/Voidling Bound",
+    "Subtitle": "太空生物学家配种战怪",
+    "list": [
+      {
+        "coSize": "541.96 K",
+        "udTime": "2026-06-09",
+        "coName": "Voidling Bound",
+        "coID": "2004680",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "13.89 G",
+        "udTime": "2026-06-11",
+        "coName": "Voidling Bound v76030",
+        "coID": "https://cloud.189.cn/t/ERNZbmnmmEry?pwd=lmb6",
+        "openPath": "Voidling Bound v76030/VoidlingWrangler.exe"
+      }
+    ]
+  },
+  {
+    "id": 115754,
+    "category_parent": 5,
+    "categories": "恐怖惊悚",
+    "post_title": "驱魔模拟器：恶灵退散/Unpossess: Exorcism Simulator",
+    "Subtitle": "扮演驱魔师处理附身案件",
+    "list": [
+      {
+        "coSize": "368.92 K",
+        "udTime": "2026-04-15",
+        "coName": "Unpossess",
+        "coID": "2976900",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "9.63 G",
+        "udTime": "2026-06-12",
+        "coName": "Unpossess Exorcism Simulator v20260610",
+        "coID": "https://cloud.189.cn/t/aimQ7nBnI3eq?pwd=7enb",
+        "openPath": "Unpossess Exorcism Simulator v20260610/Steam_Unpossess.exe"
       }
     ]
   }

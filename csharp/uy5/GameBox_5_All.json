@@ -5569,6 +5569,15 @@
         "filesize_z": 31977268734,
         "filename": "DEATHLOOP 1.769.0.5",
         "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/fA3MrmJjqiei?pwd=tw4b",
+        "openpath": "DEATHLOOP v1.769.0.5/Deathloop.exe",
+        "filesize": "29.78 G",
+        "link_ctime": "2026.06.09",
+        "filesize_z": 31977270966,
+        "filename": "DEATHLOOP v1.769.0.5",
+        "server": "t"
       }
     ]
   },
@@ -26151,7 +26160,7 @@
     "categories": "动作冒险",
     "post_title": "神之亵渎2：完整的圣礼版/Blasphemous 2 Complete Sacrament Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2114740/header_schinese.jpg?t=1730399996",
-    "filesize": "6.12 G",
+    "filesize": "3.68 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/yU3MviVBbQba?pwd=gda0",
@@ -26160,6 +26169,15 @@
         "link_ctime": "2024.11.17",
         "filesize_z": 6571896253,
         "filename": "Blasphemous 2 Mea Culpa v2.0.0",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/Iry2AvUzmaEb?pwd=64p8",
+        "openpath": "Blasphemous 2 v3.0.0/Blasphemous 2.exe",
+        "filesize": "3.68 G",
+        "link_ctime": "2026.06.10",
+        "filesize_z": 3946466572,
+        "filename": "Blasphemous 2 v3.0.0",
         "server": "t"
       }
     ]
@@ -27205,7 +27223,7 @@
     "categories": "角色扮演",
     "post_title": "最终幻想7 重制版/FINAL FANTASY VII REMAKE INTERGRADE",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1462040/header.jpg?t=1732013233",
-    "filesize": "93.11 G",
+    "filesize": "93.17 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/VrmANvqeq6Bj?pwd=5ksm",
@@ -27214,6 +27232,15 @@
         "link_ctime": "2024.11.28",
         "filesize_z": 99977012305,
         "filename": "FINAL.FANTASY.VII.REMAKE.INTERGRADE.v1.003",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/Yb6JzaUNfUB3?pwd=ny0n",
+        "openpath": "Final Fantasy VI Remake Intergrade v1.007/ff7remake.exe",
+        "filesize": "93.17 G",
+        "link_ctime": "2026.06.09",
+        "filesize_z": 100036674422,
+        "filename": "Final Fantasy VI Remake Intergrade v1.007",
         "server": "t"
       }
     ]
@@ -54699,7 +54726,7 @@
     "categories": "动作冒险",
     "post_title": "07：初露锋芒/007 First Light",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3768760/bc081141b67be2f7e3bb1488d85a0d52569e2de7/header_alt_assets_1_schinese.jpg?t=1779804342",
-    "filesize": "50.24 G",
+    "filesize": "50.27 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/a2Mva2Fr2Mna?pwd=1fdy",
@@ -54708,6 +54735,24 @@
         "link_ctime": "2026.05.27",
         "filesize_z": 53943147994,
         "filename": "007 First Light v1.0.0",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/2EBbQzeUz22e?pwd=3ang",
+        "openpath": "007 First Light v1.0.0/Retail/007FirstLight.exe",
+        "filesize": "50.27 G",
+        "link_ctime": "2026.06.10",
+        "filesize_z": 53981092309,
+        "filename": "007 First Light v1.0.0",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/ja6vemNZNFnu?pwd=3dsc",
+        "openpath": "007 First Light v1.0.3/Retail/007FirstLight.exe",
+        "filesize": "50.24 G",
+        "link_ctime": "2026.06.08",
+        "filesize_z": 53949767431,
+        "filename": "007 First Light v1.0.3",
         "server": "t"
       }
     ]
@@ -55297,6 +55342,177 @@
         "link_ctime": "2026.06.08",
         "filesize_z": 3122103718,
         "filename": "Arcane Merchant v20260602",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115470,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "太阳朋克：浮岛家园/Solarpunk",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1805110/d70ac947ca77bdf9b5a1a3ca2bb03737471c9d1e/header_schinese.jpg?t=1780935129",
+    "filesize": "932.93 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/zYfQjiEfyi6v?pwd=426r",
+        "openpath": "Solarpunk v1.0.0/Solarpunk.exe",
+        "filesize": "932.93 M",
+        "link_ctime": "2026.06.09",
+        "filesize_z": 978244616,
+        "filename": "Solarpunk v1.0.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115510,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "深入绝地 黑暗传奇/Terrinoth Heroes of Descent",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3929630/3791ee560bb2b4702ece93f8ee2dec1b76c69ee5/header.jpg?t=1780864600",
+    "filesize": "7.21 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/eUnQ3eYZz2eu?pwd=1lk1",
+        "openpath": "Terrinoth Heroes of Descent v1.0/Terrinoth Heroes of Descent.exe",
+        "filesize": "7.21 G",
+        "link_ctime": "2026.06.09",
+        "filesize_z": 7739582329,
+        "filename": "Terrinoth Heroes of Descent v1.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115515,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "神之军火/Arms of God",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3100310/6491154c93c9874f9ca5ec4cf76db6660f05f65d/header_schinese.jpg?t=1780949158",
+    "filesize": "8.62 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fEFr6v2y2qym?pwd=0xxr",
+        "openpath": "Arms of God v20260609/ArmsOfGod.exe",
+        "filesize": "8.62 G",
+        "link_ctime": "2026.06.09",
+        "filesize_z": 9254231354,
+        "filename": "Arms of God v20260609",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115577,
+    "category_parent": 5,
+    "categories": "体育竞速",
+    "post_title": "真格拳击：冠军版/Undisputed The Championship Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1451190/header.jpg?t=1766067946",
+    "filesize": "15.45 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/32QfInYraY3q?pwd=0xjx",
+        "openpath": "Undisputed/Undisputed.exe",
+        "filesize": "15.45 G",
+        "link_ctime": "2026.06.10",
+        "filesize_z": 16588118871,
+        "filename": "Undisputed",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115607,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "阿兹特克：最后的太阳/Aztecs The Last Sun",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1409840/59fead52dfdfc20007250bb7435c13ca9869df2c/header_schinese.jpg?t=1779514079",
+    "filesize": "4.98 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Ab6NBnRzMRzy?pwd=kre2",
+        "openpath": "Aztecs The Last Sun v1.0.0/ATLS.exe",
+        "filesize": "4.98 G",
+        "link_ctime": "2026.06.10",
+        "filesize_z": 5343155177,
+        "filename": "Aztecs The Last Sun v1.0.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115660,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "回忆房间/Momento",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2474770/cd703a3d72e2f6d086a3d227236bc3853fc98d57/header.jpg?t=1780961956",
+    "filesize": "912.25 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/nY7vEzqMbm2i?pwd=rr1z",
+        "openpath": "Momento v1.0.23/Momento.exe",
+        "filesize": "912.25 M",
+        "link_ctime": "2026.06.10",
+        "filesize_z": 956559768,
+        "filename": "Momento v1.0.23",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115693,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "失眠：第一章/Insomnia: Chapter One",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3939100/38a5d618ac59d7631c3491bdfab1c80e4ac4cdfa/header.jpg?t=1780987538",
+    "filesize": "2.48 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/vEzAzejEzaae?pwd=udi3",
+        "openpath": "Insomnia v1.0/InsomniaP1.exe",
+        "filesize": "2.48 G",
+        "link_ctime": "2026.06.11",
+        "filesize_z": 2667607542,
+        "filename": "Insomnia v1.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115698,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "沃德灵：共生/Voidling Bound",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2004680/78f0bcda22c6d49b81831aa41e4831ed52893c19/header_alt_assets_0.jpg?t=1781112548",
+    "filesize": "13.89 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ERNZbmnmmEry?pwd=lmb6",
+        "openpath": "Voidling Bound v76030/VoidlingWrangler.exe",
+        "filesize": "13.89 G",
+        "link_ctime": "2026.06.11",
+        "filesize_z": 14919139273,
+        "filename": "Voidling Bound v76030",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 115754,
+    "category_parent": 5,
+    "categories": "恐怖惊悚",
+    "post_title": "驱魔模拟器：恶灵退散/Unpossess: Exorcism Simulator",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2976900/d99acc2e1e66fe78356a2a16d38f45b8e940c93f/header.jpg?t=1766479207",
+    "filesize": "9.63 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/aimQ7nBnI3eq?pwd=7enb",
+        "openpath": "Unpossess Exorcism Simulator v20260610/Steam_Unpossess.exe",
+        "filesize": "9.63 G",
+        "link_ctime": "2026.06.12",
+        "filesize_z": 10340607587,
+        "filename": "Unpossess Exorcism Simulator v20260610",
         "server": "t"
       }
     ]
