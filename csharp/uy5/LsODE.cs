@@ -8,6 +8,8 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
+//( *\{(?:[^\{\}]*)warehousing"\n *\})([^\]]*)(,\n *\{(?:[^\{\}]*)warehousing"\n *\})
+
 var cd = Environment.CurrentDirectory;
 string[] urls = ["https://www.uy5.net", "http://103.39.221.38:8885"];
 var client = new HttpClient() { Timeout = TimeSpan.FromSeconds(5) };
