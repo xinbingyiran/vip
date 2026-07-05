@@ -856,9 +856,9 @@
     "id": 14619,
     "category_parent": 5,
     "categories": "动作冒险",
-    "post_title": "拳皇15/THE KING OF FIGHTERS XV",
+    "post_title": "拳皇15 豪华版/THE KING OF FIGHTERS XV",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1498570/header.jpg?t=1718092594",
-    "filesize": "45.96 G",
+    "filesize": "46.5 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/nA7R7v6fAjae?pwd=8kp6",
@@ -867,6 +867,15 @@
         "link_ctime": "2024.12.03",
         "filesize_z": 49349026431,
         "filename": "THE KING OF FIGHTERS XV",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/zYbuu2mequem?pwd=aml2",
+        "openpath": "THE KING OF FIGHTERS XV v2.50/Binaries/Win64/KOFXV-Win64-Shipping.exe",
+        "filesize": "46.5 G",
+        "link_ctime": "2026.07.04",
+        "filesize_z": 49925575032,
+        "filename": "THE KING OF FIGHTERS XV v2.50",
         "server": "t"
       }
     ]
@@ -4622,7 +4631,7 @@
     "categories": "动作冒险",
     "post_title": "僵尸世界大战：豪华版/World War Z: Aftermath – Deluxe Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/699130/b35277055fbb7e07c26c5e31e4398684c6461d53/header.jpg?t=1769723835",
-    "filesize": "56.14 G",
+    "filesize": "56.33 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/aq2qY3jm2uIf?pwd=jm98",
@@ -4640,6 +4649,15 @@
         "link_ctime": "2024.03.25",
         "filesize_z": 51140354879,
         "filename": "WWZ v20231206",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/bAZb2ij6fY7v?pwd=kf8p",
+        "openpath": "WWZ  v20260704/en_us/client/bin/pc/wwzRetail.exe",
+        "filesize": "56.33 G",
+        "link_ctime": "2026.07.04",
+        "filesize_z": 60489134030,
+        "filename": "WWZ  v20260704",
         "server": "t"
       }
     ]
@@ -6796,6 +6814,15 @@
         "link_ctime": "2024.04.08",
         "filesize_z": 34162296596,
         "filename": "Judgment",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/V7vmIfNjaqIz?pwd=7bac",
+        "openpath": "Judgment v1.12/media/Judgment.exe",
+        "filesize": "31.82 G",
+        "link_ctime": "2026.06.28",
+        "filesize_z": 34162341685,
+        "filename": "Judgment v1.12",
         "server": "t"
       }
     ]
@@ -9437,7 +9464,7 @@
     "categories": "模拟经营",
     "post_title": "城市：天际线2/Cities: Skylines II",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/949230/header.jpg?t=1716480028",
-    "filesize": "85.05 G",
+    "filesize": "85.18 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/Vz6RbuIFRb2u?pwd=ij5k",
@@ -9464,6 +9491,15 @@
         "link_ctime": "2024.03.26",
         "filesize_z": 55553151604,
         "filename": "Cities Skylines II v1.0.19",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/Mfy6Fj7vuIze?pwd=0dtw",
+        "openpath": "Cities Skylines II v1.6.0/Cities2.exe",
+        "filesize": "85.18 G",
+        "link_ctime": "2026.06.30",
+        "filesize_z": 91462594864,
+        "filename": "Cities Skylines II v1.6.0",
         "server": "t"
       }
     ]
@@ -10460,7 +10496,7 @@
     "categories": "模拟经营",
     "post_title": "史前王国/Prehistoric Kingdom",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/666150/header.jpg?t=1719507885",
-    "filesize": "6.01 G",
+    "filesize": "10.59 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/mYFVfiiuauMj?pwd=rq0f",
@@ -10469,6 +10505,15 @@
         "link_ctime": "2024.04.07",
         "filesize_z": 6458482566,
         "filename": "Prehistoric.Kingdom v1.7",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/naaYFfUrYNr2?pwd=sdm7",
+        "openpath": "Prehistoric Kingdom v1.17.101/Prehistoric Kingdom.exe",
+        "filesize": "10.59 G",
+        "link_ctime": "2026.07.03",
+        "filesize_z": 11375613715,
+        "filename": "Prehistoric Kingdom v1.17.101",
         "server": "t"
       }
     ]
@@ -13210,7 +13255,7 @@
     "categories": "枪战射击",
     "post_title": "求生之路2/Left 4 Dead 2",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/550/header.jpg?t=1719426448",
-    "filesize": "11.47 G",
+    "filesize": "15.22 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/fMvUvqEjMNre?pwd=v1xd",
@@ -13219,6 +13264,15 @@
         "link_ctime": "2024.04.19",
         "filesize_z": 12314655191,
         "filename": "Left.4.Dead.2  v2.2.3.3",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/AfYvYnaIRFbu?pwd=vn2e",
+        "openpath": "Left 4 Dead 2 v20260703/left4dead2.exe",
+        "filesize": "15.22 G",
+        "link_ctime": "2026.07.04",
+        "filesize_z": 16339332612,
+        "filename": "Left 4 Dead 2 v20260703",
         "server": "t"
       }
     ]
@@ -13853,7 +13907,7 @@
     "categories": "动作冒险",
     "post_title": "觉醒者 遗忘之誓/The Awakener: Forgotten Oath",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2527660/header_schinese.jpg?t=1699357741",
-    "filesize": "8.72 G",
+    "filesize": "14.92 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/jmyyQzRNBziq?pwd=xkv3",
@@ -13862,6 +13916,15 @@
         "link_ctime": "2024.04.19",
         "filesize_z": 9357726957,
         "filename": "The Awakener Forgortten Oath V2.1",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/e6NVF3Yv2AZv?pwd=opm8",
+        "openpath": "The Awakener Forgortten Oath v20260701/The Awakener Forgotten Oath.exe",
+        "filesize": "14.92 G",
+        "link_ctime": "2026.07.01",
+        "filesize_z": 16021232765,
+        "filename": "The Awakener Forgortten Oath v20260701",
         "server": "t"
       }
     ]
@@ -16113,7 +16176,7 @@
     "categories": "动作冒险",
     "post_title": "消逝的光芒2: 重装上阵版/Dying Light 2: Reloaded Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/534380/header_schinese.jpg?t=1721233881",
-    "filesize": "55.03 G",
+    "filesize": "60.11 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/bq6rAbNnuqQ3?pwd=0mfq",
@@ -16140,6 +16203,15 @@
         "link_ctime": "2024.04.20",
         "filesize_z": 57124120758,
         "filename": "Dying Light 2 V1.16.0",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/7r2QZ3QVJBJz?pwd=h9ir",
+        "openpath": "Dying Light 2 v1.28.2/Launcher.exe",
+        "filesize": "60.11 G",
+        "link_ctime": "2026.07.04",
+        "filesize_z": 64544392197,
+        "filename": "Dying Light 2 v1.28.2",
         "server": "t"
       }
     ]
@@ -24561,7 +24633,7 @@
     "categories": "模拟经营",
     "post_title": "垃圾场模拟器/Junkyard Simulator",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/671970/header.jpg?t=1729843991",
-    "filesize": "12.92 G",
+    "filesize": "13.1 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/yE3MjqURb6ny?pwd=4o3k",
@@ -24570,6 +24642,15 @@
         "link_ctime": "2024.10.28",
         "filesize_z": 13874412054,
         "filename": "Junkyard.Simulator v3.2.14",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/ANr2iyzUz6ru?pwd=56is",
+        "openpath": "Junkyard Simulator v4.2.1/JunkYard.exe",
+        "filesize": "13.1 G",
+        "link_ctime": "2026.06.27",
+        "filesize_z": 14064513282,
+        "filename": "Junkyard Simulator v4.2.1",
         "server": "t"
       }
     ]
@@ -32033,7 +32114,7 @@
     "categories": "角色扮演",
     "post_title": "光与影：33号远征队 数字豪华版/Clair Obscur Expedition 33 – Deluxe Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1903340/b3cb63bf5aa3ffd7790310e4361050c368569314/header_schinese.jpg?t=1745503165",
-    "filesize": "42.96 G",
+    "filesize": "43 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/Vry2uaZJvqie?pwd=2b6j",
@@ -32060,6 +32141,15 @@
         "link_ctime": "2025.04.24",
         "filesize_z": 43234204026,
         "filename": "Expedition 33 v56180",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/AN7VVf7bmmqu?pwd=8dkv",
+        "openpath": "Expedition 33 v1.5.6/Sandfall/Binaries/Win64/SandFall-Win64-Shipping.exe",
+        "filesize": "43 G",
+        "link_ctime": "2026.07.02",
+        "filesize_z": 46173408502,
+        "filename": "Expedition 33 v1.5.6",
         "server": "t"
       }
     ]
@@ -32212,7 +32302,7 @@
     "categories": "角色扮演",
     "post_title": "天国：拯救2 黄金版/Kingdom Come: Deliverance II Gold Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1771300/header.jpg?t=1743170749",
-    "filesize": "78.15 G",
+    "filesize": "86.3 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/jeIz6njqeymm?pwd=3mpe",
@@ -32221,6 +32311,15 @@
         "link_ctime": "2025.04.26",
         "filesize_z": 83914711818,
         "filename": "KingdomComeDeliverance2 v1.2.4",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/JNnuYvauYR3q?pwd=94tu",
+        "openpath": "KingdomComeDeliverance2 v1.5.6/Bin/Win64MasterMasterSteamPGO/KingdomCome.exe",
+        "filesize": "86.3 G",
+        "link_ctime": "2026.06.28",
+        "filesize_z": 92659120305,
+        "filename": "KingdomComeDeliverance2 v1.5.6",
         "server": "t"
       }
     ]
@@ -37840,7 +37939,7 @@
     "categories": "角色扮演",
     "post_title": "泰坦之旅2/Titan Quest II",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1154030/670afa06a336567dad235bdef373d58c918b538e/header_alt_assets_0.jpg?t=1754133385",
-    "filesize": "22.44 G",
+    "filesize": "24.36 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/A7r26vbqAbi2?pwd=vso7",
@@ -37858,6 +37957,15 @@
         "link_ctime": "2025.08.02",
         "filesize_z": 42255049097,
         "filename": "Titan Quest II v0.1.0",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/36f22ijUNv63?pwd=u9q0",
+        "openpath": "Titan Quest II v0.6.0/TQ2.exe",
+        "filesize": "24.36 G",
+        "link_ctime": "2026.06.29",
+        "filesize_z": 26160239461,
+        "filename": "Titan Quest II v0.6.0",
         "server": "t"
       }
     ]
@@ -40324,7 +40432,7 @@
     "categories": "动作冒险",
     "post_title": "寂静岭F：豪华版/SILENT HILL f",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2947440/7e5d923ac622bd1775ebc9b5d4b5b0a24bf5ed40/header.jpg?t=1758558348",
-    "filesize": "41.61 G",
+    "filesize": "43.7 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/7Vzmq2Q7Fz2a?pwd=i1kg",
@@ -40342,6 +40450,15 @@
         "link_ctime": "2025.09.23",
         "filesize_z": 44676819314,
         "filename": "SILENT HILL f v1.1.378320",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/IFZfeuMnMb22?pwd=gn4d",
+        "openpath": "SILENT HILL f  v1.3.388004/SHf.exe",
+        "filesize": "43.7 G",
+        "link_ctime": "2026.06.27",
+        "filesize_z": 46927605927,
+        "filename": "SILENT HILL f  v1.3.388004",
         "server": "t"
       }
     ]
@@ -47128,7 +47245,7 @@
     "categories": "动作冒险",
     "post_title": "饿狼传说：群狼之城 – 传奇版/FATAL FURY City of the Wolves Legend Edition - Special Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2492040/6d9da7fcf3b1e190be4c01c694d268cd6d0f7316/header.jpg?t=1769074332",
-    "filesize": "25.24 G",
+    "filesize": "31.07 G",
     "GetFileInfo": [
       {
         "DownUrl": "https://cloud.189.cn/t/VZ3a6jZBVjim?pwd=uv8y",
@@ -47137,6 +47254,15 @@
         "link_ctime": "2026.01.24",
         "filesize_z": 27096816774,
         "filename": "CotW v1.7.1",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/JJjmm2EfuIne?pwd=vjh2",
+        "openpath": "FATAL FURY City of the Wolves v2.2.2/FATAL FURY City of the Wolves.exe",
+        "filesize": "31.07 G",
+        "link_ctime": "2026.07.01",
+        "filesize_z": 33365492157,
+        "filename": "FATAL FURY City of the Wolves v2.2.2",
         "server": "t"
       }
     ]
@@ -56413,6 +56539,177 @@
         "link_ctime": "2026.06.26",
         "filesize_z": 87717999544,
         "filename": "DEAD OR ALIVE 6 Last Round",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 117316,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "南夢宮傳奇群山/Namco Legendary Mountains",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4459850/1072308d8e6a4ca6ec2d4de98a820553beb23e4b/header.jpg?t=1782379907",
+    "filesize": "252.62 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Mj26ZfrqEJNb?pwd=yaw1",
+        "openpath": "NAMCO LEGENDARY Mountains v1.1.1/NAMCOLEGENDARYMountains.exe",
+        "filesize": "252.62 M",
+        "link_ctime": "2026.06.27",
+        "filesize_z": 264894635,
+        "filename": "NAMCO LEGENDARY Mountains v1.1.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 117357,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "斯科普里83 湮灭前夕/Skopje83",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1211980/d78b96baaf60a5d58167fa881fb718144cf6ad30/header_schinese.jpg?t=1762524557",
+    "filesize": "3.99 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/jUnMneuIj2mu?pwd=you2",
+        "openpath": "Skopje83 v1.1.0020/Skopje.exe",
+        "filesize": "3.99 G",
+        "link_ctime": "2026.06.28",
+        "filesize_z": 4280862408,
+        "filename": "Skopje83 v1.1.0020",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 117407,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "钢铁苍穹：入侵 – 导演剪辑版/Iron Sky: Invasion",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/224900/025b8208531587dcf2571ab43b66a400cf98e319/header.jpg?t=1781693041",
+    "filesize": "30.26 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/eaaQBjJR3aAb?pwd=8cp3",
+        "openpath": "Iron Sky Invasion UHD Directors Cut/ISI_DX11.exe",
+        "filesize": "30.26 G",
+        "link_ctime": "2026.06.29",
+        "filesize_z": 32488820409,
+        "filename": "Iron Sky Invasion UHD Directors Cut",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 117435,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "恋因天赐/Present From Angel",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4567710/c98f2875b4209e755a04ed9d60d85c85745198fa/header_schinese.jpg?t=1782678708",
+    "filesize": "3.71 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/yA32eaeq22aa?pwd=k1fc",
+        "openpath": "Template An Angels Gift v1.0.0/Tenpure.exe",
+        "filesize": "3.71 G",
+        "link_ctime": "2026.06.30",
+        "filesize_z": 3988512873,
+        "filename": "Template An Angels Gift v1.0.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 117459,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "公众恐惧：乔治的农场/Public Fears - George's Farm",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4564770/02a4d206ae1e12deb6b58edc32f52b60517b46b5/header.jpg?t=1782238463",
+    "filesize": "1.36 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/I73EJjzEjAzy?pwd=7eyo",
+        "openpath": "Public Fears Georges Farm v20260629/Public Fears - George's Farm.exe",
+        "filesize": "1.36 G",
+        "link_ctime": "2026.06.30",
+        "filesize_z": 1461404711,
+        "filename": "Public Fears Georges Farm v20260629",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 117487,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "私酿达人模拟器/Moonshiner Simulator",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4179280/dbda7a8cd5e45288fc6e9f0ebf2bbbf4a1d4c42c/header.jpg?t=1782306033",
+    "filesize": "7.16 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/quUfeyyqYzUz?pwd=z97w",
+        "openpath": "Moonshiner Simulator v0.7.1/MoonshinerSimulator.exe",
+        "filesize": "7.16 G",
+        "link_ctime": "2026.06.30",
+        "filesize_z": 7687595300,
+        "filename": "Moonshiner Simulator v0.7.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 117514,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "暗港：失落之源/Dimhaven The Lost Source",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2458980/06d5c493e7d088a11372622a0689869126966c19/header.jpg?t=1782479584",
+    "filesize": "1.25 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/aQRfymVbqURj?pwd=vo8j",
+        "openpath": "Dimhaven The Lost Source v1.04/Dimhaven - The Lost Source.exe",
+        "filesize": "1.25 G",
+        "link_ctime": "2026.06.30",
+        "filesize_z": 1340241490,
+        "filename": "Dimhaven The Lost Source v1.04",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 117620,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "风暴女仆/Maids of Storm",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4020880/2814d6128dc77d5c62906203d8ae2364b6f08350/header_schinese.jpg?t=1780378746",
+    "filesize": "262.11 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/b6JjArQfyEJv?pwd=8doj",
+        "openpath": "Maids of Storm v1.0.7/Maids Of Storm.exe",
+        "filesize": "262.11 M",
+        "link_ctime": "2026.07.04",
+        "filesize_z": 274846464,
+        "filename": "Maids of Storm v1.0.7",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 117634,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "核纪元/Nuclear Epoch",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4049910/f959f0236c9c4e2af316c9464ac418aea9ed8ff0/header.jpg?t=1782800794",
+    "filesize": "23.25 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qaQVbyi6RnEb?pwd=t9dd",
+        "openpath": "Nuclear Epoch v1.0.0.5/ProjectC.exe",
+        "filesize": "23.25 G",
+        "link_ctime": "2026.07.04",
+        "filesize_z": 24959492089,
+        "filename": "Nuclear Epoch v1.0.0.5",
         "server": "t"
       }
     ]

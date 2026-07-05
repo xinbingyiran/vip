@@ -949,12 +949,12 @@
     "id": 14619,
     "category_parent": 5,
     "categories": "动作冒险",
-    "post_title": "拳皇15/THE KING OF FIGHTERS XV",
+    "post_title": "拳皇15 豪华版/THE KING OF FIGHTERS XV",
     "Subtitle": "拳定乾坤，魂燃天下",
     "list": [
       {
-        "coSize": "1.61 M",
-        "udTime": "2026-04-15",
+        "coSize": "1.49 M",
+        "udTime": "2026-07-02",
         "coName": "THE KING OF FIGHTERS XV",
         "coID": "1498570",
         "type": "warehousing"
@@ -965,6 +965,13 @@
         "coName": "THE KING OF FIGHTERS XV",
         "coID": "https://cloud.189.cn/t/nA7R7v6fAjae?pwd=8kp6",
         "openPath": "THE KING OF FIGHTERS XV/KOFXV/Binaries/Win64/KOFXV-Win64-Shipping.exe"
+      },
+      {
+        "coSize": "46.5 G",
+        "udTime": "2026-07-04",
+        "coName": "THE KING OF FIGHTERS XV v2.50",
+        "coID": "https://cloud.189.cn/t/zYbuu2mequem?pwd=aml2",
+        "openPath": "THE KING OF FIGHTERS XV v2.50/Binaries/Win64/KOFXV-Win64-Shipping.exe"
       }
     ]
   },
@@ -5986,8 +5993,8 @@
     "Subtitle": "尸潮求生，全球反击",
     "list": [
       {
-        "coSize": "2.5 M",
-        "udTime": "2026-04-15",
+        "coSize": "2.51 M",
+        "udTime": "2026-06-30",
         "coName": "World War Z",
         "coID": "699130",
         "type": "warehousing"
@@ -6005,6 +6012,13 @@
         "coName": "WWZ v20231206",
         "coID": "https://cloud.189.cn/t/ARbiauzERjMb?pwd=9nos",
         "openPath": "WWZ v20231206/en_us/client/bin/pc/wwzRetail.exe"
+      },
+      {
+        "coSize": "56.33 G",
+        "udTime": "2026-07-04",
+        "coName": "WWZ  v20260704",
+        "coID": "https://cloud.189.cn/t/bAZb2ij6fY7v?pwd=kf8p",
+        "openPath": "WWZ  v20260704/en_us/client/bin/pc/wwzRetail.exe"
       }
     ]
   },
@@ -8788,6 +8802,13 @@
         "coName": "Judgment",
         "coID": "https://cloud.189.cn/t/auaMZ3RRvqIj?pwd=1bqe",
         "openPath": "Judgment/Judgment.exe"
+      },
+      {
+        "coSize": "31.82 G",
+        "udTime": "2026-06-28",
+        "coName": "Judgment v1.12",
+        "coID": "https://cloud.189.cn/t/V7vmIfNjaqIz?pwd=7bac",
+        "openPath": "Judgment v1.12/media/Judgment.exe"
       }
     ]
   },
@@ -12791,8 +12812,8 @@
     "Subtitle": "城市由你，无限创造",
     "list": [
       {
-        "coSize": "3.44 M",
-        "udTime": "2026-06-01",
+        "coSize": "3.45 M",
+        "udTime": "2026-06-22",
         "coName": "Cities: Skylines II",
         "coID": "949230",
         "type": "warehousing"
@@ -12817,6 +12838,13 @@
         "coName": "Cities Skylines II v1.0.19",
         "coID": "https://cloud.189.cn/t/M32EVbb2INRj?pwd=16rw",
         "openPath": "Cities Skylines II v1.0.19/Cities2.exe"
+      },
+      {
+        "coSize": "85.18 G",
+        "udTime": "2026-06-30",
+        "coName": "Cities Skylines II v1.6.0",
+        "coID": "https://cloud.189.cn/t/Mfy6Fj7vuIze?pwd=0dtw",
+        "openPath": "Cities Skylines II v1.6.0/Cities2.exe"
       }
     ]
   },
@@ -14139,8 +14167,8 @@
     "Subtitle": "重返史前，驯龙造园",
     "list": [
       {
-        "coSize": "881.62 K",
-        "udTime": "2026-04-15",
+        "coSize": "901.91 K",
+        "udTime": "2026-06-25",
         "coName": "Prehistoric Kingdom",
         "coID": "666150",
         "type": "warehousing"
@@ -14151,6 +14179,13 @@
         "coName": "Prehistoric.Kingdom v1.7",
         "coID": "https://cloud.189.cn/t/mYFVfiiuauMj?pwd=rq0f",
         "openPath": "Prehistoric.Kingdom v1.7/Prehistoric Kingdom.exe"
+      },
+      {
+        "coSize": "10.59 G",
+        "udTime": "2026-07-03",
+        "coName": "Prehistoric Kingdom v1.17.101",
+        "coID": "https://cloud.189.cn/t/naaYFfUrYNr2?pwd=sdm7",
+        "openPath": "Prehistoric Kingdom v1.17.101/Prehistoric Kingdom.exe"
       }
     ]
   },
@@ -17481,6 +17516,13 @@
         "coName": "Left.4.Dead.2  v2.2.3.3",
         "coID": "https://cloud.189.cn/t/fMvUvqEjMNre?pwd=v1xd",
         "openPath": "Left.4.Dead.2  v2.2.3.3/left4dead2.exe"
+      },
+      {
+        "coSize": "15.22 G",
+        "udTime": "2026-07-04",
+        "coName": "Left 4 Dead 2 v20260703",
+        "coID": "https://cloud.189.cn/t/AfYvYnaIRFbu?pwd=vn2e",
+        "openPath": "Left 4 Dead 2 v20260703/left4dead2.exe"
       }
     ]
   },
@@ -18166,6 +18208,20 @@
         "coName": "The Awakener Forgortten Oath V2.1",
         "coID": "https://cloud.189.cn/t/jmyyQzRNBziq?pwd=xkv3",
         "openPath": "The Awakener Forgortten Oath V2.1/TheAwakener_FO/Binaries/Win64/TheAwakener_FO-Win64-Shipping.exe"
+      },
+      {
+        "coSize": "539.57 K",
+        "udTime": "2026-04-15",
+        "coName": "The Awakener: Forgotten Oath",
+        "coID": "2527660",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "14.92 G",
+        "udTime": "2026-07-01",
+        "coName": "The Awakener Forgortten Oath v20260701",
+        "coID": "https://cloud.189.cn/t/e6NVF3Yv2AZv?pwd=opm8",
+        "openPath": "The Awakener Forgortten Oath v20260701/The Awakener Forgotten Oath.exe"
       }
     ]
   },
@@ -20674,8 +20730,8 @@
     "Subtitle": "枪火求生，坚守人性",
     "list": [
       {
-        "coSize": "4.12 M",
-        "udTime": "2026-05-05",
+        "coSize": "4.25 M",
+        "udTime": "2026-07-02",
         "coName": "Dying Light 2: Reloaded Edition",
         "coID": "534380",
         "type": "warehousing"
@@ -20700,6 +20756,13 @@
         "coName": "Dying Light 2 V1.16.0",
         "coID": "https://cloud.189.cn/t/jm2YBr22Y3au?pwd=0jlr",
         "openPath": "Dying Light 2 V1.16.0/Launcher.exe"
+      },
+      {
+        "coSize": "60.11 G",
+        "udTime": "2026-07-04",
+        "coName": "Dying Light 2 v1.28.2",
+        "coID": "https://cloud.189.cn/t/7r2QZ3QVJBJz?pwd=h9ir",
+        "openPath": "Dying Light 2 v1.28.2/Launcher.exe"
       }
     ]
   },
@@ -29843,8 +29906,8 @@
     "Subtitle": "废土淘金，再造辉煌",
     "list": [
       {
-        "coSize": "524.97 K",
-        "udTime": "2026-05-21",
+        "coSize": "523.07 K",
+        "udTime": "2026-06-24",
         "coName": "Junkyard Simulator",
         "coID": "671970",
         "type": "warehousing"
@@ -29855,6 +29918,13 @@
         "coName": "Junkyard.Simulator v3.2.14",
         "coID": "https://cloud.189.cn/t/yE3MjqURb6ny?pwd=4o3k",
         "openPath": "Junkyard.Simulator v3.2.14/JunkYard.exe"
+      },
+      {
+        "coSize": "13.1 G",
+        "udTime": "2026-06-27",
+        "coName": "Junkyard Simulator v4.2.1",
+        "coID": "https://cloud.189.cn/t/ANr2iyzUz6ru?pwd=56is",
+        "openPath": "Junkyard Simulator v4.2.1/JunkYard.exe"
       }
     ]
   },
@@ -37910,7 +37980,7 @@
     "list": [
       {
         "coSize": "1.52 M",
-        "udTime": "2026-04-24",
+        "udTime": "2026-06-30",
         "coName": "Clair Obscur: Expedition 33",
         "coID": "1903340",
         "type": "warehousing"
@@ -37935,6 +38005,13 @@
         "coName": "Expedition 33 v56180",
         "coID": "https://cloud.189.cn/t/rAfU32UjeAZj?pwd=qyc4",
         "openPath": "Expedition 33 v56180/Sandfall/Binaries/Win64/SandFall-Win64-Shipping.exe"
+      },
+      {
+        "coSize": "43 G",
+        "udTime": "2026-07-02",
+        "coName": "Expedition 33 v1.5.6",
+        "coID": "https://cloud.189.cn/t/AN7VVf7bmmqu?pwd=8dkv",
+        "openPath": "Expedition 33 v1.5.6/Sandfall/Binaries/Win64/SandFall-Win64-Shipping.exe"
       }
     ]
   },
@@ -38115,7 +38192,7 @@
     "list": [
       {
         "coSize": "4.79 M",
-        "udTime": "2026-04-20",
+        "udTime": "2026-06-25",
         "coName": "Kingdom Come: Deliverance II",
         "coID": "1771300",
         "type": "warehousing"
@@ -38126,6 +38203,13 @@
         "coName": "KingdomComeDeliverance2 v1.2.4",
         "coID": "https://cloud.189.cn/t/jeIz6njqeymm?pwd=3mpe",
         "openPath": "KingdomComeDeliverance2 v1.2.4/Bin/Win64MasterMasterSteamPGO/KingdomCome.exe"
+      },
+      {
+        "coSize": "86.3 G",
+        "udTime": "2026-06-28",
+        "coName": "KingdomComeDeliverance2 v1.5.6",
+        "coID": "https://cloud.189.cn/t/JNnuYvauYR3q?pwd=94tu",
+        "openPath": "KingdomComeDeliverance2 v1.5.6/Bin/Win64MasterMasterSteamPGO/KingdomCome.exe"
       }
     ]
   },
@@ -44411,8 +44495,8 @@
     "Subtitle": "弑神改命，刃破宿命",
     "list": [
       {
-        "coSize": "886.59 K",
-        "udTime": "2026-04-30",
+        "coSize": "972.15 K",
+        "udTime": "2026-06-26",
         "coName": "Titan Quest II",
         "coID": "1154030",
         "type": "warehousing"
@@ -44430,6 +44514,13 @@
         "coName": "Titan Quest II v0.1.0",
         "coID": "https://cloud.189.cn/t/MVVB7f6bEBva?pwd=a2up",
         "openPath": "Titan Quest II v0.1.0/TQ2.exe"
+      },
+      {
+        "coSize": "24.36 G",
+        "udTime": "2026-06-29",
+        "coName": "Titan Quest II v0.6.0",
+        "coID": "https://cloud.189.cn/t/36f22ijUNv63?pwd=u9q0",
+        "openPath": "Titan Quest II v0.6.0/TQ2.exe"
       }
     ]
   },
@@ -47120,8 +47211,8 @@
     "Subtitle": "斩白怪，寻真相",
     "list": [
       {
-        "coSize": "1.52 M",
-        "udTime": "2026-04-15",
+        "coSize": "1.55 M",
+        "udTime": "2026-06-26",
         "coName": "SILENT HILL f",
         "coID": "2947440",
         "type": "warehousing"
@@ -47139,6 +47230,13 @@
         "coName": "SILENT HILL f v1.1.378320",
         "coID": "https://cloud.189.cn/t/QvaU7bjeIZb2?pwd=0xsd",
         "openPath": "SILENT HILL f v1.1.378320/启动游戏.bat"
+      },
+      {
+        "coSize": "43.7 G",
+        "udTime": "2026-06-27",
+        "coName": "SILENT HILL f  v1.3.388004",
+        "coID": "https://cloud.189.cn/t/IFZfeuMnMb22?pwd=gn4d",
+        "openPath": "SILENT HILL f  v1.3.388004/SHf.exe"
       }
     ]
   },
@@ -54962,8 +55060,8 @@
     "Subtitle": "狼魂再燃，欲望南镇",
     "list": [
       {
-        "coSize": "1.05 M",
-        "udTime": "2026-05-27",
+        "coSize": "1.07 M",
+        "udTime": "2026-06-29",
         "coName": "FATAL FURY: City of the Wolves",
         "coID": "2492040",
         "type": "warehousing"
@@ -54974,6 +55072,13 @@
         "coName": "CotW v1.7.1",
         "coID": "https://cloud.189.cn/t/VZ3a6jZBVjim?pwd=uv8y",
         "openPath": "CotW v1.7.1/FATAL FURY City of the Wolves.exe"
+      },
+      {
+        "coSize": "31.07 G",
+        "udTime": "2026-07-01",
+        "coName": "FATAL FURY City of the Wolves v2.2.2",
+        "coID": "https://cloud.189.cn/t/JJjmm2EfuIne?pwd=vjh2",
+        "openPath": "FATAL FURY City of the Wolves v2.2.2/FATAL FURY City of the Wolves.exe"
       }
     ]
   },
@@ -65853,8 +65958,8 @@
     "Subtitle": "少年与鹿诗意治愈冒险",
     "list": [
       {
-        "coSize": "354.49 K",
-        "udTime": "2026-06-23",
+        "coSize": "358.5 K",
+        "udTime": "2026-07-01",
         "coName": "Deer & Boy",
         "coID": "1803140",
         "type": "warehousing"
@@ -65876,8 +65981,8 @@
     "Subtitle": "高压清洁大战发霉污渍",
     "list": [
       {
-        "coSize": "34.53 K",
-        "udTime": "2026-06-23",
+        "coSize": "61.34 K",
+        "udTime": "2026-06-30",
         "coName": "Moldwasher",
         "coID": "3688130",
         "type": "warehousing"
@@ -65968,8 +66073,8 @@
     "Subtitle": "轮盘构筑组合赢取巨额筹码",
     "list": [
       {
-        "coSize": "149.32 K",
-        "udTime": "2026-06-24",
+        "coSize": "149.31 K",
+        "udTime": "2026-06-26",
         "coName": "Bingle Bingle",
         "coID": "2789810",
         "type": "warehousing"
@@ -65992,7 +66097,7 @@
     "list": [
       {
         "coSize": "1.17 M",
-        "udTime": "2026-06-24",
+        "udTime": "2026-07-01",
         "coName": "RuneScape: Dragonwilds",
         "coID": "1374490",
         "type": "warehousing"
@@ -66014,8 +66119,8 @@
     "Subtitle": "联机塔防死守圣火信标",
     "list": [
       {
-        "coSize": "70.84 K",
-        "udTime": "2026-06-24",
+        "coSize": "70.74 K",
+        "udTime": "2026-07-01",
         "coName": "Sineus Arena Survivors",
         "coID": "4227400",
         "type": "warehousing"
@@ -66037,8 +66142,8 @@
     "Subtitle": "华丽格斗激战魅力群星",
     "list": [
       {
-        "coSize": "2.45 M",
-        "udTime": "2026-06-25",
+        "coSize": "2.46 M",
+        "udTime": "2026-07-01",
         "coName": "DEAD OR ALIVE 6 Last Round",
         "coID": "4144680",
         "type": "warehousing"
@@ -66049,6 +66154,213 @@
         "coName": "DEAD OR ALIVE 6 Last Round",
         "coID": "https://cloud.189.cn/t/u6r6jyiYJZVj?pwd=1dy1",
         "openPath": "DEAD OR ALIVE 6 Last Round/DOA6LR.exe"
+      }
+    ]
+  },
+  {
+    "id": 117316,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "南夢宮傳奇群山/Namco Legendary Mountains",
+    "Subtitle": "经典街机重生三维益智闯关",
+    "list": [
+      {
+        "coSize": "56.49 K",
+        "udTime": "2026-06-27",
+        "coName": "NAMCO LEGENDARY Mountains",
+        "coID": "4459850",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "252.62 M",
+        "udTime": "2026-06-27",
+        "coName": "NAMCO LEGENDARY Mountains v1.1.1",
+        "coID": "https://cloud.189.cn/t/Mj26ZfrqEJNb?pwd=yaw1",
+        "openPath": "NAMCO LEGENDARY Mountains v1.1.1/NAMCOLEGENDARYMountains.exe"
+      }
+    ]
+  },
+  {
+    "id": 117357,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "斯科普里83 湮灭前夕/Skopje83",
+    "Subtitle": "废土射击探索解除穹顶封锁",
+    "list": [
+      {
+        "coSize": "214.84 K",
+        "udTime": "2026-06-27",
+        "coName": "Skopje '83",
+        "coID": "1211980",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "3.99 G",
+        "udTime": "2026-06-28",
+        "coName": "Skopje83 v1.1.0020",
+        "coID": "https://cloud.189.cn/t/jUnMneuIj2mu?pwd=you2",
+        "openPath": "Skopje83 v1.1.0020/Skopje.exe"
+      }
+    ]
+  },
+  {
+    "id": 117407,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "钢铁苍穹：入侵 – 导演剪辑版/Iron Sky: Invasion",
+    "Subtitle": "太空空战阻止历史重演",
+    "list": [
+      {
+        "coSize": "1.28 M",
+        "udTime": "2026-06-27",
+        "coName": "Iron Sky Invasion",
+        "coID": "224900",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "30.26 G",
+        "udTime": "2026-06-29",
+        "coName": "Iron Sky Invasion UHD Directors Cut",
+        "coID": "https://cloud.189.cn/t/eaaQBjJR3aAb?pwd=8cp3",
+        "openPath": "Iron Sky Invasion UHD Directors Cut/ISI_DX11.exe"
+      }
+    ]
+  },
+  {
+    "id": 117435,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "恋因天赐/Present From Angel",
+    "Subtitle": "王道恋爱校园爆笑喜剧",
+    "list": [
+      {
+        "coSize": "376.31 K",
+        "udTime": "2026-06-26",
+        "coName": "Template!! An Angel's Gift",
+        "coID": "4567710",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "3.71 G",
+        "udTime": "2026-06-30",
+        "coName": "Template An Angels Gift v1.0.0",
+        "coID": "https://cloud.189.cn/t/yA32eaeq22aa?pwd=k1fc",
+        "openPath": "Template An Angels Gift v1.0.0/Tenpure.exe"
+      }
+    ]
+  },
+  {
+    "id": 117459,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "公众恐惧：乔治的农场/Public Fears - George's Farm",
+    "Subtitle": "农场避难揭开神秘真相",
+    "list": [
+      {
+        "coSize": "114.48 K",
+        "udTime": "2026-06-24",
+        "coName": "Public Fears - George's Farm",
+        "coID": "4564770",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "1.36 G",
+        "udTime": "2026-06-30",
+        "coName": "Public Fears Georges Farm v20260629",
+        "coID": "https://cloud.189.cn/t/I73EJjzEjAzy?pwd=7eyo",
+        "openPath": "Public Fears Georges Farm v20260629/Public Fears - George's Farm.exe"
+      }
+    ]
+  },
+  {
+    "id": 117487,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "私酿达人模拟器/Moonshiner Simulator",
+    "Subtitle": "酿酒经营打造商业帝国",
+    "list": [
+      {
+        "coSize": "286.43 K",
+        "udTime": "2026-07-01",
+        "coName": "Moonshiner Simulator",
+        "coID": "4179280",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "7.16 G",
+        "udTime": "2026-06-30",
+        "coName": "Moonshiner Simulator v0.7.1",
+        "coID": "https://cloud.189.cn/t/quUfeyyqYzUz?pwd=z97w",
+        "openPath": "Moonshiner Simulator v0.7.1/MoonshinerSimulator.exe"
+      }
+    ]
+  },
+  {
+    "id": 117514,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "暗港：失落之源/Dimhaven The Lost Source",
+    "Subtitle": "悬疑解谜探索未知真相",
+    "list": [
+      {
+        "coSize": "193.2 K",
+        "udTime": "2026-07-02",
+        "coName": "Dimhaven - The Lost Source",
+        "coID": "2458980",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "1.25 G",
+        "udTime": "2026-06-30",
+        "coName": "Dimhaven The Lost Source v1.04",
+        "coID": "https://cloud.189.cn/t/aQRfymVbqURj?pwd=vo8j",
+        "openPath": "Dimhaven The Lost Source v1.04/Dimhaven - The Lost Source.exe"
+      }
+    ]
+  },
+  {
+    "id": 117620,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "风暴女仆/Maids of Storm",
+    "Subtitle": "女仆咖啡经营欢乐养成",
+    "list": [
+      {
+        "coSize": "90.26 K",
+        "udTime": "2026-07-01",
+        "coName": "Maids of Storm",
+        "coID": "4020880",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "262.11 M",
+        "udTime": "2026-07-04",
+        "coName": "Maids of Storm v1.0.7",
+        "coID": "https://cloud.189.cn/t/b6JjArQfyEJv?pwd=8doj",
+        "openPath": "Maids of Storm v1.0.7/Maids Of Storm.exe"
+      }
+    ]
+  },
+  {
+    "id": 117634,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "核纪元/Nuclear Epoch",
+    "Subtitle": "废土建造撤离生存射击",
+    "list": [
+      {
+        "coSize": "846.95 K",
+        "udTime": "2026-07-02",
+        "coName": "Nuclear Epoch",
+        "coID": "4049910",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "23.25 G",
+        "udTime": "2026-07-04",
+        "coName": "Nuclear Epoch v1.0.0.5",
+        "coID": "https://cloud.189.cn/t/qaQVbyi6RnEb?pwd=t9dd",
+        "openPath": "Nuclear Epoch v1.0.0.5/ProjectC.exe"
       }
     ]
   }

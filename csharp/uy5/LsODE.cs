@@ -8,7 +8,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-//( *\{(?:[^\{\}]*)warehousing"\n *\})([^\]]*)(,\n *\{(?:[^\{\}]*)warehousing"\n *\})
+//( *\{(?:[^\{\}]*)warehousing"\n *\})(,[^\]]*),\n( *\{(?:[^\{\}]*)warehousing"\n *\})(,?)  $3$2$4
 
 var cd = Environment.CurrentDirectory;
 string[] urls = ["https://www.uy5.net", "http://103.39.221.38:8885"];
