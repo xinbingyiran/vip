@@ -124,7 +124,7 @@ async Task<RetryResult> AddListi(ConcurrentDictionary<int, ODEItem> items, ODEIt
                     }
                     if (findItem.List is not null)
                     {
-                        list = [.. findItem.List.Concat(list).Distinct()];
+                        //list = [.. findItem.List.Concat(list).Distinct()];
                         if (JsonSerializer.Serialize(list, JsonElementContext.Request.ODEFileArray) == JsonSerializer.Serialize(findItem.List, JsonElementContext.Request.ODEFileArray))
                         {
                             var tag = list.MaxBy(info => DateTime.TryParseExact(info.UdTime, timeFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out var time) ? time : DateTime.MinValue).UdTime ?? string.Empty;
@@ -190,52 +190,52 @@ async Task FillListIfNeedAsync(ODEFile[] list, CancellationToken token)
     }
 }
 
-async Task<JsonElement> SaveDownFileSetting(string fileID, bool isPackageInstallable, string fileOpenExePath, CancellationToken token = default)
-{
-    var postdata = $"action=saveDownFileSetting&fileID={fileID}&isPackageInstallable={isPackageInstallable}&fileOpenExePath={fileOpenExePath}";
+// async Task<JsonElement> SaveDownFileSetting(string fileID, bool isPackageInstallable, string fileOpenExePath, CancellationToken token = default)
+// {
+//     var postdata = $"action=saveDownFileSetting&fileID={fileID}&isPackageInstallable={isPackageInstallable}&fileOpenExePath={fileOpenExePath}";
 
-    return await GetResourceAsync<JsonElement>(postdata, token);
-}
-async Task<JsonElement> GetDownFileSetting(string fileID, CancellationToken token = default)
-{
-    var postdata = $"action=getDownFileSetting&fileID={fileID}";
-    return await GetResourceAsync<JsonElement>(postdata, token);
-}
-async Task<JsonElement> IdentifyLogin(string code, CancellationToken token = default)
-{
-    var postdata = $"action=identifyLogin&code={code}";
-    return await GetResourceAsync<JsonElement>(postdata, token);
-}
-async Task<JsonElement> HandleCommentLike(string id, CancellationToken token = default)
-{
-    var postdata = $"action=handleCommentLike&id={id}";
-    return await GetResourceAsync<JsonElement>(postdata, token);
-}
-async Task<JsonElement> SubmitComment(string content, string id, string replyId, CancellationToken token = default)
-{
-    var postdata = $"action=submitComment&content={content}&id={id}&ReplyId={replyId}";
-    return await GetResourceAsync<JsonElement>(postdata, token);
-}
-async Task<JsonElement> IfLogin(CancellationToken token = default)
-{
-    var postdata = $"action=IfLogin";
-    return await GetResourceAsync<JsonElement>(postdata, token);
-}
-async Task<JsonElement> GetPostArticle(string id, CancellationToken token = default)
-{
-    var postdata = $"action=getPostArticle&id={id}";
-    return await GetResourceAsync<JsonElement>(postdata, token);
-}
-async Task<JsonElement> GetResourceDownload(string path, string route, CancellationToken token = default)
-{
-    var postdata = $"action=getResourceDownload&path={path}&route={route}";
-    return await GetResourceAsync<JsonElement>(postdata, token);
-}
-async Task<JsonElement> GetResourceComment(string id, string fileID, CancellationToken token = default)
-{
-    var postdata = $"action=getResourceComment&id={id}&fileID={fileID}";
-    return await GetResourceAsync<JsonElement>(postdata, token);
-}
+//     return await GetResourceAsync<JsonElement>(postdata, token);
+// }
+// async Task<JsonElement> GetDownFileSetting(string fileID, CancellationToken token = default)
+// {
+//     var postdata = $"action=getDownFileSetting&fileID={fileID}";
+//     return await GetResourceAsync<JsonElement>(postdata, token);
+// }
+// async Task<JsonElement> IdentifyLogin(string code, CancellationToken token = default)
+// {
+//     var postdata = $"action=identifyLogin&code={code}";
+//     return await GetResourceAsync<JsonElement>(postdata, token);
+// }
+// async Task<JsonElement> HandleCommentLike(string id, CancellationToken token = default)
+// {
+//     var postdata = $"action=handleCommentLike&id={id}";
+//     return await GetResourceAsync<JsonElement>(postdata, token);
+// }
+// async Task<JsonElement> SubmitComment(string content, string id, string replyId, CancellationToken token = default)
+// {
+//     var postdata = $"action=submitComment&content={content}&id={id}&ReplyId={replyId}";
+//     return await GetResourceAsync<JsonElement>(postdata, token);
+// }
+// async Task<JsonElement> IfLogin(CancellationToken token = default)
+// {
+//     var postdata = $"action=IfLogin";
+//     return await GetResourceAsync<JsonElement>(postdata, token);
+// }
+// async Task<JsonElement> GetPostArticle(string id, CancellationToken token = default)
+// {
+//     var postdata = $"action=getPostArticle&id={id}";
+//     return await GetResourceAsync<JsonElement>(postdata, token);
+// }
+// async Task<JsonElement> GetResourceDownload(string path, string route, CancellationToken token = default)
+// {
+//     var postdata = $"action=getResourceDownload&path={path}&route={route}";
+//     return await GetResourceAsync<JsonElement>(postdata, token);
+// }
+// async Task<JsonElement> GetResourceComment(string id, string fileID, CancellationToken token = default)
+// {
+//     var postdata = $"action=getResourceComment&id={id}&fileID={fileID}";
+//     return await GetResourceAsync<JsonElement>(postdata, token);
+// }
 async Task<ODEDownList> GetAppDownList(string? id, string? path, CancellationToken token = default)
 {
     var postdata = $"action=getAppDownList&id={id ?? "null"}&path={path ?? "null"}&version=1";
@@ -246,11 +246,11 @@ async Task<ODEList> GetAppList(string cat, int newPage, string s = "", string ra
     var postdata = $"action=getAppList&cat={cat}&newPage={newPage}&ranking={ranking}&s={s}&numberposts={numberposts}&topicsId={cat}";
     return await GetResourceAsync<ODEList>(postdata, token);
 }
-async Task<JsonElement> GetHomeAppList(string homeSearchContent, CancellationToken token = default)
-{
-    var postdata = $"action=getHomeAppList&search={homeSearchContent}";
-    return await GetResourceAsync<JsonElement>(postdata, token);
-}
+// async Task<JsonElement> GetHomeAppList(string homeSearchContent, CancellationToken token = default)
+// {
+//     var postdata = $"action=getHomeAppList&search={homeSearchContent}";
+//     return await GetResourceAsync<JsonElement>(postdata, token);
+// }
 async Task<T> GetResourceAsync<T>(string postdata, CancellationToken token = default)
 {
     var data = new PostEData { EData = EncryptData(postdata, 3) };
