@@ -8,11 +8,11 @@
         log: (msg) => console.info(`%c %s`, 'color: green; font-size: 2em;', msg),
         get liveRoom() {
 
-            //[data-e2e=feed-active-video]
+            /*[data-e2e=feed-active-video]*/
             return globalThis.document.querySelector("main.live-main video[autoplay]");
         },
         get slideVideo() {
-            //[data-e2e=live-slider]
+            /*[data-e2e=live-slider]*/
             return globalThis.document.querySelector("#slidelist[data-active=true] video[autoplay]");
         }
     };
@@ -22,7 +22,7 @@
         script.setAttribute('src', url);
         script.onload = useCallback;
         globalThis.document.getElementsByTagName('head')[0].appendChild(script);
-    }
+    };
     douyin.checkAction = (keyItem, ts) => {
         const ci = keyItem.check;
         if (ci != keyItem._actionCI) {
@@ -81,7 +81,7 @@
                 }
             }
         }
-    }
+    };
 
     douyin.mainLoop = (ts) => {
         if (douyin.stoped) {
@@ -94,9 +94,9 @@
             douyin.checkAction(keyItem, ts);
         }
         requestAnimationFrame(douyin.mainLoop);
-    }
+    };
 
-    //# 间断性点按 ArrowDown
+    /*# 间断性点按 ArrowDown*/
     douyin.keyArrowDown = {
         get check() {
             return douyin.liveRoom ? null : douyin.slideVideo;
@@ -114,7 +114,7 @@
                 return 100;
             }
             const e = v.duration;
-            if (isFinite(e)) { // Infinity is live
+            if (isFinite(e)) { /* Infinity is live*/
                 return Math.min(2000 + Math.random() * 20000, e * (Math.random() * 200 + 500));
             }
             else {
@@ -124,7 +124,7 @@
         upMSRand: 0
     };
 
-    // 间断性长按z
+    /* 间断性长按z*/
     douyin.keyZ = {
         get check() {
             return douyin.slideVideo ? null : douyin.liveRoom;
@@ -143,18 +143,18 @@
     douyin.start = () => {
         douyin.stoped = false;
         requestAnimationFrame(douyin.mainLoop);
-    }
+    };
 
     douyin.stop = () => {
         douyin.stoped = true;
-    }
+    };
 
-    //控制台
+    /* 控制台*/
     douyin.items = [
         douyin.keyArrowDown,
         douyin.keyZ
     ];
 
-    //执行
+    /* 执行*/
     douyin.start();
 }();
