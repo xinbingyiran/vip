@@ -1041,11 +1041,18 @@
     "Subtitle": "蛛网荡城，英雄担当",
     "list": [
       {
-        "coSize": "2.59 M",
-        "udTime": "2026-04-15",
+        "coSize": "2.6 M",
+        "udTime": "2026-07-08",
         "coName": "Marvels Spider-Man Remastered",
         "coID": "1817070",
         "type": "warehousing"
+      },
+      {
+        "coSize": "57.2 G",
+        "udTime": "2026-07-12",
+        "coName": "Marvels Spider-Man Remastered v4.630.0.0",
+        "coID": "https://cloud.189.cn/t/UZ7fEjrQRjAj?pwd=6hq7",
+        "openPath": "Marvels Spider-Man Remastered v4.630.0.0/Spider-Man.exe"
       },
       {
         "coSize": "56.04 G",
@@ -1548,10 +1555,17 @@
     "list": [
       {
         "coSize": "1.97 M",
-        "udTime": "2026-04-15",
+        "udTime": "2026-07-08",
         "coName": "Marvel's Spider-Man: Miles Morales",
         "coID": "1817190",
         "type": "warehousing"
+      },
+      {
+        "coSize": "41.14 G",
+        "udTime": "2026-07-12",
+        "coName": "Marvels Spider-Man Miles Morales v4.630.0.0",
+        "coID": "https://cloud.189.cn/t/euUjY3rMZZzq?pwd=sp3b",
+        "openPath": "Marvels Spider-Man Miles Morales v4.630.0.0/MilesMorales.exe"
       },
       {
         "coSize": "41.13 G",
@@ -3391,6 +3405,13 @@
         "coName": "Atomic Heart",
         "coID": "668580",
         "type": "warehousing"
+      },
+      {
+        "coSize": "88.68 G",
+        "udTime": "2026-07-11",
+        "coName": "Atomic Heart Ultimate Edition",
+        "coID": "https://cloud.189.cn/t/mmaUre6NFRNb?pwd=df5o",
+        "openPath": "Atomic Heart Ultimate Edition/AtomicHeart/Binaries/Win64/AtomicHeart-Win64-Shipping.exe"
       },
       {
         "coSize": "45.5 G",
@@ -7452,10 +7473,17 @@
     "list": [
       {
         "coSize": "1.57 M",
-        "udTime": "2026-04-15",
+        "udTime": "2026-07-08",
         "coName": "Ratchet & Clank: Rift Apart",
         "coID": "1895880",
         "type": "warehousing"
+      },
+      {
+        "coSize": "36.21 G",
+        "udTime": "2026-07-14",
+        "coName": "Ratchet & Clank Rift Apart part v3.630.1.0",
+        "coID": "https://cloud.189.cn/t/YzARn2Efemea?pwd=7ojr",
+        "openPath": "Ratchet & Clank Rift Apart part v3.630.1.0/RiftApart.exe"
       },
       {
         "coSize": "36.34 G",
@@ -10866,11 +10894,18 @@
     "Subtitle": "巨兽争霸，毁天灭地",
     "list": [
       {
-        "coSize": "515.4 K",
-        "udTime": "2026-05-19",
+        "coSize": "526.39 K",
+        "udTime": "2026-07-09",
         "coName": "GigaBash",
         "coID": "1546400",
         "type": "warehousing"
+      },
+      {
+        "coSize": "13.85 G",
+        "udTime": "2026-07-11",
+        "coName": "GigaBash Ultraman Zero v1.9.0",
+        "coID": "https://cloud.189.cn/t/jAjqiaq2eIfa?pwd=h2yj",
+        "openPath": "GigaBash Ultraman Zero v1.9.0/GigaBash.exe"
       },
       {
         "coSize": "9.55 G",
@@ -14146,11 +14181,18 @@
     "Subtitle": "收帕鲁，建世界！",
     "list": [
       {
-        "coSize": "1.02 M",
-        "udTime": "2026-04-15",
+        "coSize": "1.28 M",
+        "udTime": "2026-07-15",
         "coName": "Palworld",
         "coID": "1623730",
         "type": "warehousing"
+      },
+      {
+        "coSize": "31.56 G",
+        "udTime": "2026-07-11",
+        "coName": "Palworld v1.0.0",
+        "coID": "https://cloud.189.cn/t/y6rAJ3iQNnUz?pwd=5vdn",
+        "openPath": "Palworld v1.0.0/Palworld.exe"
       },
       {
         "coSize": "24.92 G",
@@ -15534,6 +15576,20 @@
     "post_title": "漫威蜘蛛侠2/Marvel's Spider-Man 2",
     "Subtitle": "双蛛侠战，猎陷纽约",
     "list": [
+      {
+        "coSize": "4.52 M",
+        "udTime": "2026-07-08",
+        "coName": "Marvel's Spider-Man 2",
+        "coID": "2651280",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "99.75 G",
+        "udTime": "2026-07-12",
+        "coName": "Marvels Spider-Man 2 v2.629.0.0",
+        "coID": "https://cloud.189.cn/t/vIRfIjfyY7jm?pwd=2jx9",
+        "openPath": "Marvels Spider-Man 2 v2.629.0.0/Spider-Man2.exe"
+      },
       {
         "coSize": "113.68 G",
         "udTime": "2024-05-19",
@@ -21033,10 +21089,17 @@
     "list": [
       {
         "coSize": "2.16 M",
-        "udTime": "2026-04-15",
+        "udTime": "2026-07-08",
         "coName": "Ghost of Tsushima DIRECTOR'S CUT",
         "coID": "2215430",
         "type": "warehousing"
+      },
+      {
+        "coSize": "50.71 G",
+        "udTime": "2026-07-11",
+        "coName": "Ghost of Tsushima DIRECTORS CUT v1053.9.0623.1807",
+        "coID": "https://cloud.189.cn/t/f26nQnvI7zY3?pwd=wli6",
+        "openPath": "Ghost of Tsushima DIRECTORS CUT v1053.9.0623.1807/GhostOfTsushima.exe"
       },
       {
         "coSize": "49.2 G",
@@ -29270,6 +29333,13 @@
         "coName": "Streets of Rage 4",
         "coID": "985890",
         "type": "warehousing"
+      },
+      {
+        "coSize": "6.02 G",
+        "udTime": "2026-07-12",
+        "coName": "Streets of Rage 4",
+        "coID": "https://cloud.189.cn/t/u2iYraaaMrey?pwd=0lum",
+        "openPath": "Streets of Rage 4/x64.gog/SOR4.exe"
       },
       {
         "coSize": "6.02 G",
@@ -38197,6 +38267,20 @@
     "Subtitle": "克隆求生，异星突围",
     "list": [
       {
+        "coSize": "2.03 M",
+        "udTime": "2026-07-14",
+        "coName": "The Alters",
+        "coID": "1601570",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "54.87 G",
+        "udTime": "2026-07-15",
+        "coName": "The Alters v1.4.1.2",
+        "coID": "https://cloud.189.cn/t/6NvyIjmM3AZj?pwd=wq77",
+        "openPath": "The Alters v1.4.1.2/TheAlters.exe"
+      },
+      {
         "coSize": "47.35 G",
         "udTime": "2025-06-14",
         "coName": "The Alters v1.0.1.46",
@@ -43313,11 +43397,18 @@
     "Subtitle": "重制启程，轨迹再临",
     "list": [
       {
-        "coSize": "948.85 K",
-        "udTime": "2026-04-26",
+        "coSize": "950.88 K",
+        "udTime": "2026-07-10",
         "coName": "Sora no Kiseki the 1st",
         "coID": "3447040",
         "type": "warehousing"
+      },
+      {
+        "coSize": "17.64 G",
+        "udTime": "2026-07-13",
+        "coName": "Sora No Kiseki the 1st v1.06.4",
+        "coID": "https://cloud.189.cn/t/QRJrmyr6vEBj?pwd=yd07",
+        "openPath": "Sora No Kiseki the 1st v1.06.4/sora_1st.exe"
       },
       {
         "coSize": "17.61 G",
@@ -45933,11 +46024,18 @@
     "Subtitle": "缔造你的帝国时代",
     "list": [
       {
-        "coSize": "3.97 M",
-        "udTime": "2026-05-27",
+        "coSize": "4 M",
+        "udTime": "2026-07-09",
         "coName": "Europa Universalis V",
         "coID": "3450310",
         "type": "warehousing"
+      },
+      {
+        "coSize": "8.22 G",
+        "udTime": "2026-07-13",
+        "coName": "Europa Universalis V v1.3.11",
+        "coID": "https://cloud.189.cn/t/mUZJ7buU7B7f?pwd=a7ml",
+        "openPath": "Europa Universalis V v1.3.11/binaries/eu5.exe"
       },
       {
         "coSize": "7.81 G",
@@ -53971,6 +54069,13 @@
       },
       {
         "coSize": "75.08 G",
+        "udTime": "2026-07-11",
+        "coName": "Resident Evil Requiem v1.200.000",
+        "coID": "https://cloud.189.cn/t/V3qiaaequIz2?pwd=fg17",
+        "openPath": "Resident Evil Requiem v1.200.000/re9.exe"
+      },
+      {
+        "coSize": "75.08 G",
         "udTime": "2026-04-11",
         "coName": "Resident Evil Requiem v1.200.000",
         "coID": "https://cloud.189.cn/t/niyQzaMN736v?pwd=c8hn",
@@ -54346,10 +54451,17 @@
     "list": [
       {
         "coSize": "1.02 M",
-        "udTime": "2026-04-15",
+        "udTime": "2026-07-08",
         "coName": "Digimon Story Time Stranger",
         "coID": "1984270",
         "type": "warehousing"
+      },
+      {
+        "coSize": "27.29 G",
+        "udTime": "2026-07-11",
+        "coName": "Digimon Story Time Stranger",
+        "coID": "https://cloud.189.cn/t/ERBBjijQvuum?pwd=0fdq",
+        "openPath": "Digimon Story Time Stranger/Digimon Story Time Stranger.exe"
       },
       {
         "coSize": "27.16 G",
@@ -57937,11 +58049,18 @@
     "Subtitle": "日本竞速驰骋开放世界",
     "list": [
       {
-        "coSize": "6.18 M",
-        "udTime": "2026-07-03",
+        "coSize": "6.2 M",
+        "udTime": "2026-07-15",
         "coName": "Forza Horizon 6",
         "coID": "2483190",
         "type": "warehousing"
+      },
+      {
+        "coSize": "145.55 G",
+        "udTime": "2026-07-15",
+        "coName": "ForzaHorizon6 v398.092",
+        "coID": "https://cloud.189.cn/t/eIBRj2zINNNn?pwd=oof1",
+        "openPath": "ForzaHorizon6 v398.092/forzahorizon6.exe"
       },
       {
         "coSize": "145.47 G",
@@ -60778,8 +60897,8 @@
     "Subtitle": "废土建造撤离生存射击",
     "list": [
       {
-        "coSize": "845.65 K",
-        "udTime": "2026-07-05",
+        "coSize": "845.42 K",
+        "udTime": "2026-07-08",
         "coName": "Nuclear Epoch",
         "coID": "4049910",
         "type": "warehousing"
@@ -60824,8 +60943,8 @@
     "Subtitle": "时间守护剑斩逆流",
     "list": [
       {
-        "coSize": "80.2 K",
-        "udTime": "2026-07-05",
+        "coSize": "80.41 K",
+        "udTime": "2026-07-13",
         "coName": "Chrono Gear: Warden of Time",
         "coID": "3081840",
         "type": "warehousing"
@@ -60916,8 +61035,8 @@
     "Subtitle": "吸血农场魔法恋曲",
     "list": [
       {
-        "coSize": "303.64 K",
-        "udTime": "2026-07-07",
+        "coSize": "608.93 K",
+        "udTime": "2026-07-13",
         "coName": "Moonlight Peaks",
         "coID": "2209900",
         "type": "warehousing"
@@ -60928,6 +61047,236 @@
         "coName": "Moonlight Peaks v20260707",
         "coID": "https://cloud.189.cn/t/EFZNBzQn6Nny?pwd=6go4",
         "openPath": "Moonlight Peaks v20260707/Moonlight Peaks.exe"
+      }
+    ]
+  },
+  {
+    "id": 117936,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "刺客信条 黑旗 记忆重置/Assassin s Creed Black Flag Resynced",
+    "Subtitle": "海盗重制扬帆冒险",
+    "list": [
+      {
+        "coSize": "2.2 M",
+        "udTime": "2026-07-09",
+        "coName": "Assassin's Creed Black Flag Resynced",
+        "coID": "3751950",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "53.26 G",
+        "udTime": "2026-07-11",
+        "coName": "Assassin s Creed Black Flag Resynced v20260708",
+        "coID": "https://cloud.189.cn/t/yIvuauz2uANn?pwd=2owb",
+        "openPath": "Assassin s Creed Black Flag Resynced v20260708/ACBlackFlag.exe"
+      }
+    ]
+  },
+  {
+    "id": 117975,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "银白钢铁X：1+2双重收藏辑/Luminous Avenger Double Pack",
+    "Subtitle": "银白钢铁极限战斗",
+    "list": [
+      {
+        "coSize": "661.45 K",
+        "udTime": "2026-07-09",
+        "coName": "Gunvolt Chronicles: Luminous Avenger iX 1+2 Dual Collection",
+        "coID": "4282450",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "4.61 G",
+        "udTime": "2026-07-11",
+        "coName": "Luminous Avenger Double Pack v1.0.2",
+        "coID": "https://cloud.189.cn/t/BNZFbqqiiuqi?pwd=8q1x",
+        "openPath": "Luminous Avenger Double Pack v1.0.2/game.exe"
+      }
+    ]
+  },
+  {
+    "id": 117995,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "孽尘海的沉沦之歌/Drowning Song of the Stagnant Sea",
+    "Subtitle": "深海人鱼暗黑恋曲",
+    "list": [
+      {
+        "coSize": "35.46 K",
+        "udTime": "2026-07-09",
+        "coName": "Drowning Song of the Stagnant Sea",
+        "coID": "3966180",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "671.2 M",
+        "udTime": "2026-07-11",
+        "coName": "Drowning Song of the Stagnant Sea v1.2",
+        "coID": "https://cloud.189.cn/t/VJzUzaVZvMZr?pwd=6ev6",
+        "openPath": "Drowning Song of the Stagnant Sea v1.2/yodoumi.exe"
+      }
+    ]
+  },
+  {
+    "id": 118038,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "银河旅店/Hotel Galactic",
+    "Subtitle": "云端酒店经营友情",
+    "list": [
+      {
+        "coSize": "319.72 K",
+        "udTime": "2026-07-11",
+        "coName": "Hotel Galactic",
+        "coID": "2183670",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "5.52 G",
+        "udTime": "2026-07-11",
+        "coName": "Hotel Galactic v0.6.8",
+        "coID": "https://cloud.189.cn/t/mqqmemE7ziAb?pwd=oiz6",
+        "openPath": "Hotel Galactic v0.6.8/Hotel Galactic.exe"
+      }
+    ]
+  },
+  {
+    "id": 118106,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "战地风云1/Battlefield™ 1",
+    "Subtitle": "体验全面战争的黎明",
+    "list": [
+      {
+        "coSize": "2.8 M",
+        "udTime": "2026-07-02",
+        "coName": "Battlefield 1",
+        "coID": "1238840",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "25.93 G",
+        "udTime": "2026-07-12",
+        "coName": "Battlefield 1 build 3110715",
+        "coID": "https://cloud.189.cn/t/fYjmEr3Anuu2?pwd=2ary",
+        "openPath": "Battlefield 1 build 3110715/bf1.exe"
+      }
+    ]
+  },
+  {
+    "id": 118161,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "东京女武神/Tokyo Valkyries",
+    "Subtitle": "卡组构筑守护东京",
+    "list": [
+      {
+        "coSize": "83.31 K",
+        "udTime": "2026-07-09",
+        "coName": "Tokyo Valkyries",
+        "coID": "4093240",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "730.18 M",
+        "udTime": "2026-07-13",
+        "coName": "Tokyo Valkyries v1.0.0",
+        "coID": "https://cloud.189.cn/t/yy2YZnMbYVfi?pwd=2fdy",
+        "openPath": "Tokyo Valkyries v1.0.0/Tokyo Valkyries.exe"
+      }
+    ]
+  },
+  {
+    "id": 118225,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "终极杂货店对决 多人商铺模拟器/Store Wars: Multiplayer Shop Simulator",
+    "Subtitle": "管理发展竞争商店",
+    "list": [
+      {
+        "coSize": "160.02 K",
+        "udTime": "2026-04-15",
+        "coName": "Store Wars",
+        "coID": "3213600",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "4.06 G",
+        "udTime": "2026-07-13",
+        "coName": "Store Wars Multiplayer Shop Simulator v20260712",
+        "coID": "https://cloud.189.cn/t/vyMziafAZjAv?pwd=2bba",
+        "openPath": "Store Wars Multiplayer Shop Simulator v20260712/StoreWars.exe"
+      }
+    ]
+  },
+  {
+    "id": 118251,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "零秒：时光的归途/Ascend to Zero",
+    "Subtitle": "时间策略类的Roguelike",
+    "list": [
+      {
+        "coSize": "76.71 K",
+        "udTime": "2026-07-15",
+        "coName": "Ascend to ZERO",
+        "coID": "2697940",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "1.51 G",
+        "udTime": "2026-07-14",
+        "coName": "Ascend to ZERO v1.0.4.0",
+        "coID": "https://cloud.189.cn/t/ZNBzqaAz6vY3?pwd=s2ca",
+        "openPath": "Ascend to ZERO v1.0.4.0/AscendtoZERO.exe"
+      }
+    ]
+  },
+  {
+    "id": 118270,
+    "category_parent": 5,
+    "categories": "体育竞速",
+    "post_title": "极速穿梭/LANESPLIT",
+    "Subtitle": "摩托竞速称霸公路",
+    "list": [
+      {
+        "coSize": "394.2 K",
+        "udTime": "2026-06-23",
+        "coName": "LANESPLIT",
+        "coID": "3278310",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "10.38 G",
+        "udTime": "2026-07-14",
+        "coName": "LANESPLIT v20260712",
+        "coID": "https://cloud.189.cn/t/7VRzUrfQ3Yrq?pwd=vep9",
+        "openPath": "LANESPLIT v20260712/LANESPLIT.exe"
+      }
+    ]
+  },
+  {
+    "id": 118337,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "加利宅邸悬案/The Incident at Galley House",
+    "Subtitle": "揭开惨案背后尘封已久的真相",
+    "list": [
+      {
+        "coSize": "215.38 K",
+        "udTime": "2026-07-15",
+        "coName": "The Incident at Galley House",
+        "coID": "3641000",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "1.06 G",
+        "udTime": "2026-07-15",
+        "coName": "The Incident at Galley House v20260715",
+        "coID": "https://cloud.189.cn/t/UVvEjqMnYVjq?pwd=dpj3",
+        "openPath": "The Incident at Galley House v20260715/galleyhouse.exe"
       }
     ]
   }
