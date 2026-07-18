@@ -6659,11 +6659,18 @@
     "Subtitle": "重塑星球，星际拓荒",
     "list": [
       {
-        "coSize": "131.04 K",
-        "udTime": "2026-06-10",
+        "coSize": "131.25 K",
+        "udTime": "2026-07-15",
         "coName": "ASTRONEER",
         "coID": "361420",
         "type": "warehousing"
+      },
+      {
+        "coSize": "2.86 G",
+        "udTime": "2026-07-17",
+        "coName": "Astroneer v1.42.3.0",
+        "coID": "https://cloud.189.cn/t/z2mEvqJF3uey?pwd=6osf",
+        "openPath": "Astroneer v1.42.3.0/Astro.exe"
       },
       {
         "coSize": "2.81 G",
@@ -8176,6 +8183,13 @@
         "coName": "Ori and the Will of the Wisps",
         "coID": "1057090",
         "type": "warehousing"
+      },
+      {
+        "coSize": "4.37 G",
+        "udTime": "2026-07-17",
+        "coName": "Ori.and.the.Will.of.the.Wisps v3.1",
+        "coID": "https://cloud.189.cn/t/nAvymiyMv67v?pwd=mgd9",
+        "openPath": "Ori.and.the.Will.of.the.Wisps v3.1/oriwotw.exe"
       },
       {
         "coSize": "4.34 G",
@@ -11975,11 +11989,18 @@
     "Subtitle": "战火小队，真实二战",
     "list": [
       {
-        "coSize": "2.04 M",
-        "udTime": "2026-06-17",
+        "coSize": "2.09 M",
+        "udTime": "2026-07-16",
         "coName": "Easy Red 2",
         "coID": "1324780",
         "type": "warehousing"
+      },
+      {
+        "coSize": "9.6 G",
+        "udTime": "2026-07-17",
+        "coName": "Easy Red 2 v2.0.7",
+        "coID": "https://cloud.189.cn/t/qE7ZnanyiInm?pwd=ry5l",
+        "openPath": "Easy Red 2 v2.0.7/Easy Red 2.exe"
       },
       {
         "coSize": "6.88 G",
@@ -14186,6 +14207,13 @@
         "coName": "Palworld",
         "coID": "1623730",
         "type": "warehousing"
+      },
+      {
+        "coSize": "31.55 G",
+        "udTime": "2026-07-16",
+        "coName": "Palworld v1.0.1",
+        "coID": "https://cloud.189.cn/t/uQzmEjZF7nye?pwd=2tkw",
+        "openPath": "Palworld v1.0.1/Palworld.exe"
       },
       {
         "coSize": "31.56 G",
@@ -25701,6 +25729,13 @@
         "coName": "Frostpunk 2",
         "coID": "1601580",
         "type": "warehousing"
+      },
+      {
+        "coSize": "24.22 G",
+        "udTime": "2026-07-15",
+        "coName": "Frostpunk 2 Breach of Trust v1.6.0",
+        "coID": "https://cloud.189.cn/t/v6RNbmjmAr6z?pwd=d40e",
+        "openPath": "Frostpunk 2 Breach of Trust v1.6.0/Frostpunk2.exe"
       },
       {
         "coSize": "11.12 G",
@@ -38703,11 +38738,18 @@
     "Subtitle": "洛城风云，罪恶重生",
     "list": [
       {
-        "coSize": "3.07 M",
-        "udTime": "2026-06-22",
+        "coSize": "3.09 M",
+        "udTime": "2026-07-14",
         "coName": "Grand Theft Auto V Enhanced",
         "coID": "3240220",
         "type": "warehousing"
+      },
+      {
+        "coSize": "94.73 G",
+        "udTime": "2026-07-17",
+        "coName": "Grand Theft Auto V Enhanced V1.0.1158.13",
+        "coID": "https://cloud.189.cn/t/6ZjQzazMbae2?pwd=rk74",
+        "openPath": "Grand Theft Auto V Enhanced V1.0.1158.13/GTA5_Enhanced.exe"
       },
       {
         "coSize": "92.03 G",
@@ -44321,11 +44363,18 @@
     "Subtitle": "双人寻路，逃出梦魇",
     "list": [
       {
-        "coSize": "680.25 K",
-        "udTime": "2026-06-11",
+        "coSize": "679.46 K",
+        "udTime": "2026-07-15",
         "coName": "Little Nightmares III",
         "coID": "1392860",
         "type": "warehousing"
+      },
+      {
+        "coSize": "14.13 G",
+        "udTime": "2026-07-18",
+        "coName": "Little Nightmares III v20260715",
+        "coID": "https://cloud.189.cn/t/bIB3aiVVJNfi?pwd=v3tj",
+        "openPath": "Little Nightmares III v20260715/LittleNightmaresIII.exe"
       },
       {
         "coSize": "14.53 G",
@@ -46025,7 +46074,7 @@
     "list": [
       {
         "coSize": "4 M",
-        "udTime": "2026-07-09",
+        "udTime": "2026-07-16",
         "coName": "Europa Universalis V",
         "coID": "3450310",
         "type": "warehousing"
@@ -61219,8 +61268,8 @@
     "Subtitle": "时间策略类的Roguelike",
     "list": [
       {
-        "coSize": "76.71 K",
-        "udTime": "2026-07-15",
+        "coSize": "77.02 K",
+        "udTime": "2026-07-16",
         "coName": "Ascend to ZERO",
         "coID": "2697940",
         "type": "warehousing"
@@ -61265,7 +61314,7 @@
     "Subtitle": "揭开惨案背后尘封已久的真相",
     "list": [
       {
-        "coSize": "215.38 K",
+        "coSize": "215.26 K",
         "udTime": "2026-07-15",
         "coName": "The Incident at Galley House",
         "coID": "3641000",
@@ -61277,6 +61326,190 @@
         "coName": "The Incident at Galley House v20260715",
         "coID": "https://cloud.189.cn/t/UVvEjqMnYVjq?pwd=dpj3",
         "openPath": "The Incident at Galley House v20260715/galleyhouse.exe"
+      }
+    ]
+  },
+  {
+    "id": 118362,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "国际象棋猫/Cat Chess",
+    "Subtitle": "猫咪棋局智慧对决",
+    "list": [
+      {
+        "coSize": "65.65 K",
+        "udTime": "2026-07-16",
+        "coName": "Cat Chess",
+        "coID": "4163030",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "1.22 G",
+        "udTime": "2026-07-15",
+        "coName": "Cat Chess v1.0.0",
+        "coID": "https://cloud.189.cn/t/EnE7v27NBfyi?pwd=px0r",
+        "openPath": "Cat Chess v1.0.0/CatChess.exe"
+      }
+    ]
+  },
+  {
+    "id": 118382,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "城市纷争/Urban Strife",
+    "Subtitle": "末世民兵策略求生",
+    "list": [
+      {
+        "coSize": "254.07 K",
+        "udTime": "2026-07-15",
+        "coName": "Urban Strife",
+        "coID": "710230",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "6.65 G",
+        "udTime": "2026-07-16",
+        "coName": "Urban Strife v1.0.0",
+        "coID": "https://cloud.189.cn/t/JJRnYrFzUvUj?pwd=h8so",
+        "openPath": "Urban Strife v1.0.0/WindowsNoEditor/USG.exe"
+      }
+    ]
+  },
+  {
+    "id": 118481,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "古冢：克苏鲁凶兆/The Mound Omen of Cthulhu",
+    "Subtitle": "丛林探宝合作求生",
+    "list": [
+      {
+        "coSize": "843.29 K",
+        "udTime": "2026-07-15",
+        "coName": "The Mound: Omen of Cthulhu",
+        "coID": "2569760",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "23.35 G",
+        "udTime": "2026-07-16",
+        "coName": "The Mound Omen of Cthulhu v20260715",
+        "coID": "https://cloud.189.cn/t/Nbqa2qNNnA3i?pwd=0ha0",
+        "openPath": "The Mound Omen of Cthulhu v20260715/TheMound.exe"
+      }
+    ]
+  },
+  {
+    "id": 118504,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "电车炫客/Denshattack!",
+    "Subtitle": "电车炫技夺回轨道",
+    "list": [
+      {
+        "coSize": "258.02 K",
+        "udTime": "2026-07-16",
+        "coName": "Denshattack!",
+        "coID": "2524850",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "7.52 G",
+        "udTime": "2026-07-17",
+        "coName": "Denshattack v1.2.1.6",
+        "coID": "https://cloud.189.cn/t/InEzueZNBZV3?pwd=q8hm",
+        "openPath": "Denshattack v1.2.1.6/Denshattack_Proto.exe"
+      }
+    ]
+  },
+  {
+    "id": 118537,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "一挖到底/Rock Bottom",
+    "Subtitle": "每一次挥镐都让你更强大",
+    "list": [
+      {
+        "coSize": "25.06 K",
+        "udTime": "2026-07-16",
+        "coName": "Rock Bottom",
+        "coID": "4297840",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "269.18 M",
+        "udTime": "2026-07-17",
+        "coName": "Rock Bottom v1.0",
+        "coID": "https://cloud.189.cn/t/mIFFNnAn2Yre?pwd=0esb",
+        "openPath": "Rock Bottom v1.0/RockBottom.exe"
+      }
+    ]
+  },
+  {
+    "id": 118557,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "京都幻都 – 樱花幻舞/Kyoto Xanadu The Blooming Phantom",
+    "Subtitle": "现代青春异界冒险",
+    "list": [
+      {
+        "coSize": "852.01 K",
+        "udTime": "2026-07-16",
+        "coName": "KYOTO XANADU -the Blooming Phantom-",
+        "coID": "4449410",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "13.19 G",
+        "udTime": "2026-07-17",
+        "coName": "KYOTO XANADU the Blooming Phantom v1.03.1",
+        "coID": "https://cloud.189.cn/t/VJ32Arj6BRNf?pwd=5hrt",
+        "openPath": "KYOTO XANADU the Blooming Phantom v1.03.1/kyoto_xanadu.exe"
+      }
+    ]
+  },
+  {
+    "id": 118562,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "突袭5/Sudden Strike 5",
+    "Subtitle": "二战战术指挥征战",
+    "list": [
+      {
+        "coSize": "570.73 K",
+        "udTime": "2026-07-15",
+        "coName": "Sudden Strike 5",
+        "coID": "2808550",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "14.69 G",
+        "udTime": "2026-07-17",
+        "coName": "Sudden Strike 5 v1.05.29347",
+        "coID": "https://cloud.189.cn/t/euQJVrJjQnIr?pwd=qdh5",
+        "openPath": "Sudden Strike 5 v1.05.29347/Sudden Strike 5.exe"
+      }
+    ]
+  },
+  {
+    "id": 118609,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "死重/Dead Weight",
+    "Subtitle": "蒸汽飞船战术冒险",
+    "list": [
+      {
+        "coSize": "30.85 K",
+        "udTime": "2026-07-16",
+        "coName": "Dead Weight",
+        "coID": "2646720",
+        "type": "warehousing"
+      },
+      {
+        "coSize": "740.33 M",
+        "udTime": "2026-07-17",
+        "coName": "Dead Weight v1.0.1.10",
+        "coID": "https://cloud.189.cn/t/n6FNbyaYVvqi?pwd=bsc5",
+        "openPath": "Dead Weight v1.0.1.10/Dead_weight.exe"
       }
     ]
   }
