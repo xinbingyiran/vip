@@ -238,7 +238,7 @@ async Task FillListIfNeedAsync(ODEFile[] list, CancellationToken token)
 // }
 async Task<ODEDownList> GetAppDownList(string? id, string? path, CancellationToken token = default)
 {
-    var postdata = $"action=getAppDownList&id={id ?? "null"}&path={path ?? "null"}&version=1";
+    var postdata = $"action=getAppDownList&id={id ?? "null"}&path={path ?? "null"}&version=2";
     return await GetResourceAsync<ODEDownList>(postdata, token);
 }
 async Task<ODEList> GetAppList(string cat, int newPage, string s = "", string ranking = "", int numberposts = 12, CancellationToken token = default)
