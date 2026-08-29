@@ -12,16 +12,18 @@ using System.Runtime.InteropServices;
 
 // =====================================================================
 // 用法:
-//   dotnet run scan_gamedata.cs -- <文件或目录...>
+//   dotnet run <本脚本>.cs -- <文件或目录...>
 // 可混合传入 .dll 文件或目录;目录会扫描其中所有 *.dll(浅层)。
 // 例:
-//   dotnet run scan_gamedata.cs -- D:\X\Downloads
-//   dotnet run scan_gamedata.cs -- D:\X\Downloads\W0198\...\KaiShiYouXi.dll D:\X\Downloads\C0042
+//   dotnet run <本脚本>.cs -- D:\X\Downloads
+//   dotnet run <本脚本>.cs -- D:\X\Downloads\W0198\...\KaiShiYouXi.dll D:\X\Downloads\C0042
 // =====================================================================
 
 if (args.Length == 0)
 {
-    Console.Error.WriteLine("用法: dotnet run scan_gamedata.cs -- <dll文件或目录...>");
+    // 从当前运行的程序获取脚本名(不硬编码,脚本改名/复制后提示仍准确)
+    var progName = Path.GetFileNameWithoutExtension(Environment.ProcessPath ?? "本脚本");
+    Console.Error.WriteLine($"用法: dotnet run {progName}.cs -- <dll文件或目录...>");
     return;
 }
 var targets = args.Select(Path.GetFullPath).ToArray();
