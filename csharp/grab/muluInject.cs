@@ -39,6 +39,7 @@ if (args.Length == 1 && args[0].EndsWith(".exe", StringComparison.OrdinalIgnoreC
     }
     Thread.Sleep(1000);
     Injector.InjectManaged((uint)p.Id, dllFile, "Trigger", "Inject", string.Empty, out _);
+    Console.WriteLine("injected: " + dllFile);
 }
 else
 {
