@@ -6,9 +6,7 @@
 #:property TargetFramework=net48
 #:property PlatformTarget=x86
 #:property LangVersion=latest
-#:property OutputType=Exe
 #:property PublishAot=false
-#:property Nullable=disable
 #:package Microsoft.NETFramework.ReferenceAssemblies@1.0.3
 
 using System;
@@ -108,7 +106,6 @@ Console.WriteLine("总计 " + total + " 条，带密码 " + withPw + " 条，无
 Console.WriteLine("结果文件: " + outPath);
 return 0;
 
-#if NETFRAMEWORK
 public class KeyGrabber : AppDomainManager
 {
     private int _try = 0;
@@ -143,7 +140,7 @@ public class KeyGrabber : AppDomainManager
 
     bool RunAll()
     {
-        object app = null;
+        object? app = null;
         try
         {
             var pf = Assembly.Load("PresentationFramework");
@@ -153,13 +150,13 @@ public class KeyGrabber : AppDomainManager
         catch { }
         if (app == null) return false;
 
-        object vm = null;
+        object? vm = null;
         try { vm = app.GetType().GetProperty("MainViewModel", BindingFlags.Public | BindingFlags.Instance).GetValue(app); } catch { }
         if (vm == null) return false;
 
         // 获取 Dispatcher/Invoke（UI 线程执行）
-        object disp = null;
-        MethodInfo invoke = null;
+        object? disp = null;
+        MethodInfo? invoke = null;
         try
         {
             disp = app.GetType().GetProperty("Dispatcher", BindingFlags.Public | BindingFlags.Instance).GetValue(app);
@@ -180,7 +177,7 @@ public class KeyGrabber : AppDomainManager
                     var m = api.GetType().GetMethod("FetchPasswordsWithStatusAsync", BindingFlags.Public | BindingFlags.Instance);
                     if (m != null)
                     {
-                        object ptask = null;
+                        object? ptask = null;
                         Action pact = () => { ptask = m.Invoke(api, null); };
                         invoke.Invoke(disp, new object[] { pact });
                         if (ptask != null)
@@ -194,7 +191,7 @@ public class KeyGrabber : AppDomainManager
             catch { }
         }
 
-        object task = null;
+        object? task = null;
         try
         {
             var m = vm.GetType().GetMethod("GetAllGamesForExportAsync", BindingFlags.Public | BindingFlags.Instance);
@@ -255,7 +252,7 @@ public class KeyGrabber : AppDomainManager
         foreach (var pi in o.GetType().GetProperties())
         {
             if (Array.IndexOf(KeepFields, pi.Name) < 0) continue;
-            object v;
+            object? v;
             try { v = pi.GetValue(o); } catch { v = null; }
             if (i > 0) sb.Append(",\n");
             sb.Append(new string(' ', indent * 2)).Append('"').Append(Esc(pi.Name)).Append("\": ");
@@ -266,7 +263,7 @@ public class KeyGrabber : AppDomainManager
         return sb.ToString();
     }
 
-    static string Scalar(object v)
+    static string Scalar(object? v)
     {
         if (v == null) return "null";
         if (v is bool b) return b ? "true" : "false";
@@ -277,10 +274,9 @@ public class KeyGrabber : AppDomainManager
         return v.ToString().Replace(",", ".");
     }
 
-    static string Esc(string s)
+    static string Esc(string? s)
     {
         if (s == null) return "";
         return s.Replace("\\", "\\\\").Replace("\"", "\\\"").Replace("\r", "").Replace("\n", "\\n");
     }
 }
-#endif

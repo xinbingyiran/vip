@@ -2,10 +2,10 @@
 
 - [文件浏览](./list.php) 
 [文件管理](./fm.php) 
-[方块游戏](./game/index.html) 
+[方块游戏](./page/fk/index.html) 
 [通用请求](./html/getpost.html)
-[开源镜像](./index.html?src=./md/mirror.md)
-[BAT命令](./index.html?src=./md/bat.md)
+[开源镜像](./index.html?src=./page/mirror.md)
+[BAT命令](./index.html?src=./page/bat.md)
 [阿里云盘资源分享](./html/wpgxnas.html)[`源`](https://wp.gxnas.com/11785.html)
 - [infinityfree](https://www.infinityfree.com/)
 [cloudns](https://www.cloudns.net/)
