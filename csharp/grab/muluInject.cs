@@ -32,12 +32,13 @@ if (args.Length == 1 && args[0].EndsWith(".exe", StringComparison.OrdinalIgnoreC
         if (p.HasExited) return;
         if (p.MainWindowHandle == IntPtr.Zero)
         {
-            p.WaitForInputIdle(100);
+            p.WaitForInputIdle(1000);
             p.Refresh();
             continue;
         }
         break;
     }
+    p.WaitForInputIdle(3000);
     Injector.InjectManaged((uint)p.Id, dllFile, "Trigger", "Inject", string.Empty, out _);
 }
 else
@@ -52,24 +53,24 @@ public static class Trigger
     {
         try
         {
-            Thread.Sleep(3000);
-            return (int)Application.Current.Dispatcher.Invoke(() =>
-            {
-                foreach (Window win in Application.Current.Windows)
-                    foreach (var item in Find(win))
-                        foreach (var f in item.GetType().GetFields(BindingFlags.Instance | BindingFlags.NonPublic))
-                        {
-                            var v = f.GetValue(item);
-                            if (v is null) continue;
-                            var m = v.GetType().GetMethod("JieYaGuoCheng", BindingFlags.NonPublic | BindingFlags.Instance);
-                            if (m is null) continue;
-                            m.Invoke(v, null);
-                            return 1;
-                        }
-                return 0;
-            });
+            return (int)Application.Current.Dispatcher.Invoke(InjectOnUiThread);
         }
         catch { return -1; }
+    }
+
+    // 在 UI 线程上执行: 遍历视觉树定位并触发 JieYaGuoCheng
+    private static int InjectOnUiThread()
+    {
+        var hit = Application.Current.Windows
+            .Cast<Window>()
+            .SelectMany(Find)
+            .SelectMany(o => o.GetType().GetFields(BindingFlags.Instance | BindingFlags.NonPublic).Select(f => f.GetValue(o)))
+            .Where(v => v != null)
+            .Select(v => (v, m: v.GetType().GetMethod("JieYaGuoCheng", BindingFlags.NonPublic | BindingFlags.Instance)))
+            .FirstOrDefault(x => x.m != null);
+        if (hit.m == null) return 0;
+        hit.m.Invoke(hit.v, null);
+        return 1;
     }
 
     private static IEnumerable<UserControl> Find(DependencyObject root)
