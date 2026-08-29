@@ -33,7 +33,7 @@ if (args.Length == 1 && args[0].EndsWith(".exe", StringComparison.OrdinalIgnoreC
         p.Refresh();
         if (p.HasExited) return;
         if (p.MainWindowHandle != IntPtr.Zero) break;
-        p.WaitForInputIdle(1000);
+        Thread.Sleep(100);
     }
 
     Thread.Sleep(1000);

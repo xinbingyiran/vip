@@ -29,16 +29,15 @@ if (args.Length == 1 && args[0].EndsWith(".exe", StringComparison.OrdinalIgnoreC
     var time = DateTime.Now;
     while ((DateTime.Now - time).TotalSeconds < 10)
     {
+        p.Refresh();
         if (p.HasExited) return;
-        if (p.MainWindowHandle == IntPtr.Zero)
+        if (p.MainWindowHandle != IntPtr.Zero)
         {
-            p.WaitForInputIdle(1000);
-            p.Refresh();
-            continue;
+            break;
         }
-        break;
+        Thread.Sleep(100);
     }
-    p.WaitForInputIdle(3000);
+    Thread.Sleep(1000);
     Injector.InjectManaged((uint)p.Id, dllFile, "Trigger", "Inject", string.Empty, out _);
 }
 else
