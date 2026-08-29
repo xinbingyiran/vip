@@ -85,7 +85,6 @@
 [github镜像](https://5github.com)
 [Alvin9999](https://github.com/Alvin9999-newpac/fanqiang/wiki)
 [备用](https://gitlab.com/zhifan999/fq/-/wikis/home)
-[Free Air镜像](https://s3.us-east-8.cloudfrontad.net/)
 [Free Air镜像](https://s3.dualstack.us-east-1.amazonaws.com/zhifan/wiki.html)
 [Free Air镜像](https://jj5.xyz)
 [freefq](https://github.com/freefq/free)

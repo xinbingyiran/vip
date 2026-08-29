@@ -34,8 +34,17 @@ string asmFullName = Assembly.GetEntryAssembly().GetName().FullName; // 完整�
 string dest = Path.Combine(clientDir, Path.GetFileName(selfExe));
 
 // 1) 复制自身为注入器（不清理旧目录）
-try { File.Copy(selfExe, dest, true); Console.WriteLine("部署注入器: " + dest); }
-catch (Exception ex) { Console.Error.WriteLine("部署失败(目标可能仍在占用本注入器,请先关闭它): " + ex.Message); return 1; }
+// 兼容：当注入器 exe 与目标 exe 位于同一目录时（selfExe == dest），复制自身到自身会因占用而失败，
+// 此时无需复制——自身已处于目标目录，直接复用当前进程文件作为注入器。
+if (string.Equals(Path.GetFullPath(selfExe), Path.GetFullPath(dest), StringComparison.OrdinalIgnoreCase))
+{
+    Console.WriteLine("注入器已位于目标目录，跳过自我复制: " + dest);
+}
+else
+{
+    try { File.Copy(selfExe, dest, true); Console.WriteLine("部署注入器: " + dest); }
+    catch (Exception ex) { Console.Error.WriteLine("部署失败(目标可能仍在占用本注入器,请先关闭它): " + ex.Message); return 1; }
+}
 
 // 2) 通过环境变量注入 AppDomainManager（完全不碰目标 config）
 string oldAsm = Environment.GetEnvironmentVariable("APPDOMAIN_MANAGER_ASM");
@@ -204,10 +213,19 @@ public class KeyGrabber : AppDomainManager
             var list = result as System.Collections.IEnumerable;
             if (list == null) return false;
 
+            // 提取 GameCode 用于排序（缺失/异常按空串处理）
+            Func<object, string> gameCode = o =>
+            {
+                try { return o.GetType().GetProperty("GameCode", BindingFlags.Public | BindingFlags.Instance)?.GetValue(o)?.ToString() ?? ""; }
+                catch { return ""; }
+            };
+            // 按 GameCode 字典序排序，保证每次导出顺序一致，便于对比
+            var ordered = list.Cast<object>().OrderBy(gameCode);
+
             var sb = new StringBuilder();
             sb.Append("[\n");
             int n = 0;
-            foreach (var item in list)
+            foreach (var item in ordered)
             {
                 if (n > 0) sb.Append(",\n");
                 sb.Append(SerializeObj(item, 1));
