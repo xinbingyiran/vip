@@ -43,6 +43,7 @@ if (args.Length == 1 && args[0].EndsWith(".exe", StringComparison.OrdinalIgnoreC
     var addr = rt.Heap.EnumerateObjects().FirstOrDefault(o => o.Type?.Name == "JiHuoA.JiHuo").Address;
 
     Injector.InjectManaged((uint)p.Id, dllFile, "Trigger", "Inject", addr.ToString(CultureInfo.InvariantCulture));
+    Console.WriteLine("injected: " + dllFile);
 }
 else
 {
