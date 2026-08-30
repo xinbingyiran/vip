@@ -308,6 +308,13 @@
     "Subtitle": "火神创世格斗新生",
     "list": [
       {
+        "coSize": "6.59 MB",
+        "udTime": "2026-04-15",
+        "coName": "Mortal Kombat 1",
+        "coID": "1971870",
+        "type": "warehousing"
+      },
+      {
         "coSize": "5.88 GB",
         "udTime": "2024-03-28",
         "coName": "Mortal Kombat 1 [01006560184E6000][v0]",
@@ -711,13 +718,6 @@
     "Subtitle": "女神转生五决定版",
     "list": [
       {
-        "coSize": "1016.18 KB",
-        "udTime": "2026-04-15",
-        "coName": "Shin Megami Tensei V: Vengeance",
-        "coID": "1875830",
-        "type": "warehousing"
-      },
-      {
         "coSize": "13.74 GB",
         "udTime": "2024-06-22",
         "coName": "Shin Megami Tensei 5 Vengeance [0100FD401AB0E000] [v65536] (1G+1U+6D)",
@@ -750,13 +750,6 @@
     "Subtitle": "索尼克夏特世代重启",
     "list": [
       {
-        "coSize": "1.51 MB",
-        "udTime": "2026-04-15",
-        "coName": "SONIC X SHADOW GENERATIONS",
-        "coID": "2513280",
-        "type": "warehousing"
-      },
-      {
         "coSize": "13.05 GB",
         "udTime": "2024-10-20",
         "coName": "SONIC X SHADOW GENERATIONS [01005EA01C0FC000][v0]",
@@ -788,6 +781,13 @@
     "post_title": "勇敢的心：世界大战+光之子/Valiant Hearts: The Great War™ / Soldats Inconnus : Mémoires de la Grande Guerre™",
     "Subtitle": "战火忠犬寻爱求生",
     "list": [
+      {
+        "coSize": "117.96 KB",
+        "udTime": "2026-08-27",
+        "coName": "Valiant Hearts: The Great War / Soldats Inconnus : Mmoires de la Grande Guerre",
+        "coID": "260230",
+        "type": "warehousing"
+      },
       {
         "coSize": "3.53 GB",
         "udTime": "2024-12-16",
