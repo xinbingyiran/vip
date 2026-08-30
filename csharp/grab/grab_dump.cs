@@ -15,7 +15,7 @@ using Microsoft.Diagnostics.Runtime;
 
 if (args.Length == 0)
 {
-    Console.Error.WriteLine("用法: dotnet run grab_dump.cs -- --pid <pid> | <exe路径> [等待毫秒]");
+    Console.Error.WriteLine("用法: dotnet run grab_dump.cs -- --pid <pid> | <exe路径>");
     return;
 }
 
@@ -28,19 +28,26 @@ else
 {
     var exe = Path.GetFullPath(args[0]);
     if (!File.Exists(exe)) { Console.Error.WriteLine($"文件不存在: {exe}"); return; }
-    int waitMs = args.Length > 1 ? int.Parse(args[1]) : 6000;
     Console.WriteLine($"[启动] {exe}");
     var psi = new ProcessStartInfo(exe)
     {
         WorkingDirectory = Path.GetDirectoryName(exe)!,
         UseShellExecute = false,
     };
-    var p = Process.Start(psi);
-    if (p == null) { Console.Error.WriteLine("启动失败"); return; }
-    pid = p.Id;
-    Console.WriteLine($"[PID] {pid}, 等待 {waitMs}ms 初始化...");
-    Thread.Sleep(waitMs);
+    var pro = Process.Start(psi);
+    if (pro == null) { Console.Error.WriteLine("启动失败"); return; }
+    pid = pro.Id;
 }
+var p = Process.GetProcessById(pid);
+Console.WriteLine($"[PID] {pid}, 等待初始化...");
+while (true)
+{
+    p.Refresh();
+    if (p.HasExited) return;
+    if (p.MainWindowHandle != IntPtr.Zero) break;
+    Thread.Sleep(100);
+}
+Thread.Sleep(1000);
 
 try
 {
