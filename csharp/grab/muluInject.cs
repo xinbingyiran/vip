@@ -3,7 +3,6 @@
 #:include FastWin32.cs
 #:property TargetFramework=net48
 #:property UseWPF=true
-#:property PlatformTarget=AnyCPU
 #:property LangVersion=latest
 #:property PublishAot=false
 #:property AllowUnsafeBlocks=true
@@ -75,12 +74,13 @@ public static class Trigger
 
     private static IEnumerable<UserControl> Find(DependencyObject root)
     {
-        var count = VisualTreeHelper.GetChildrenCount(root);
-        for (var i = 0; i < count; i++)
+        foreach (var child in LogicalTreeHelper.GetChildren(root))
         {
-            var child = VisualTreeHelper.GetChild(root, i);
             if (child is UserControl t) yield return t;
-            foreach (var e in Find(child)) yield return e;
+            if (child is DependencyObject d)
+            {
+                foreach (var e in Find(d)) yield return e;
+            }
         }
     }
 }

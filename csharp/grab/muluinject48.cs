@@ -3,7 +3,6 @@
 #:include FastWin32.cs
 #:property TargetFramework=net48
 #:property UseWPF=true
-#:property PlatformTarget=x64
 #:property LangVersion=latest
 #:property PublishAot=false
 #:property AllowUnsafeBlocks=true
