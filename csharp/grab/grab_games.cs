@@ -4,7 +4,6 @@
 // 流程: 复制自身为注入器 -> 设置环境变量 APPDOMAIN_MANAGER_ASM/APPDOMAIN_MANAGER_TYPE(+GRAB_SYNC_PW) -> 启动目标(不碰exe.config) -> 注入完成在客户端目录生成 grab_games.json -> 结束
 // 说明: 不杀进程、不清理旧目录；程序集完整名(Version/Culture/PublicKeyToken)从程序集自身获取；完全不修改目标 config
 #:property TargetFramework=net48
-#:property PlatformTarget=x86
 #:property LangVersion=latest
 #:property PublishAot=false
 #:package Microsoft.NETFramework.ReferenceAssemblies@1.0.3
