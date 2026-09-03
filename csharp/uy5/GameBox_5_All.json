@@ -19113,10 +19113,19 @@
     "id": 43525,
     "category_parent": 5,
     "categories": "动作冒险",
-    "post_title": "龙珠 超宇宙2/DRAGON BALL XENOVERSE 2",
+    "post_title": "龙珠 超宇宙2 特别版/DRAGON BALL XENOVERSE 2 Special Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/454650/header.jpg?t=1720409020",
-    "filesize": "26.95 G",
+    "filesize": "34.73 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/bQRVZznuMVRr?pwd=rbk6",
+        "openpath": "Dragon Ball Xenoverse 2 v1.26.1/bin/DBXV2.exe",
+        "filesize": "34.73 G",
+        "link_ctime": "2026.09.01",
+        "filesize_z": 37290117571,
+        "filename": "Dragon Ball Xenoverse 2 v1.26.1",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/VBNjYjBrIZny?pwd=2qu7",
         "openpath": "Dragon.Ball.Xenoverse.2.Deluxe.Edition.v1.22.00/bin/DBXV2.exe",
@@ -35450,8 +35459,17 @@
     "categories": "策略战棋",
     "post_title": "盟军敢死队：起源 – 豪华版/Commandos: Origins",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1479730/header.jpg?t=1747031720",
-    "filesize": "13.27 G",
+    "filesize": "18.38 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/YZNZVriABBVb?pwd=oq0v",
+        "openpath": "Commandos Origins v1.7.0.10051/Commandos.exe",
+        "filesize": "18.38 G",
+        "link_ctime": "2026.09.01",
+        "filesize_z": 19738067229,
+        "filename": "Commandos Origins v1.7.0.10051",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/iQbAJvz2uuUb?pwd=qey0",
         "openpath": "Commandos Origins v1.2.0.77059/Commandos.exe",
@@ -61154,6 +61172,44 @@
         "link_ctime": "2026.09.01",
         "filesize_z": 14834880139,
         "filename": "TARO IS BACK v1.0.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 124510,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "砍伐与销售/Fell &amp; Sell",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4627110/b47a56668edcbd1e66a212907aa627d10259de97/header.jpg?t=1788184564",
+    "filesize": "703.85 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qYraYvaeemIb?pwd=d8ro",
+        "openpath": "Fell and Sell v1.1.3/Fell & Sell.exe",
+        "filesize": "703.85 M",
+        "link_ctime": "2026.09.02",
+        "filesize_z": 738041002,
+        "filename": "Fell and Sell v1.1.3",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 124534,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "血色之月/Crimson Moon",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4317690/43f965890a8f4e64917f20befc50a077036cc015/header.jpg?t=1788309232",
+    "filesize": "30.96 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/IF3eUbYz6j2a?pwd=3xyq",
+        "openpath": "Crimson Moon v1.0.0/CrimsonMoonNG.exe",
+        "filesize": "30.96 G",
+        "link_ctime": "2026.09.03",
+        "filesize_z": 33244763889,
+        "filename": "Crimson Moon v1.0.0",
         "server": "t"
       }
     ]

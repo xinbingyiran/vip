@@ -797,10 +797,10 @@
   "ChineseName": "ASKA",
   "EnglishName": "ASKA",
   "Size": "6GB",
-  "GameVersion": "v1.32.2004261926",
+  "GameVersion": "v20260901",
   "DownloadUrl1": "https://pan.baidu.com/s/1i8OiWFmRKd_wwCPj89x96w",
   "DownloadUrl2": "https://cloud.189.cn/t/fAzQbyvYfyqm",
-  "UpdateDateTooltip": "更新日期: 2026年04月23日 / 发行日期: 2024年06月20日"
+  "UpdateDateTooltip": "更新日期: 2026年09月01日 / 发行日期: 2024年06月20日"
 },
 {
   "GameCode": "A0072",
@@ -8617,11 +8617,11 @@
   "Password": "486287",
   "ChineseName": "钓鱼哥的奇妙冒险",
   "EnglishName": "Nice Day for Fishing",
-  "Size": "560 MB",
-  "GameVersion": "Build23008790",
+  "Size": "1.7 GB",
+  "GameVersion": "v1.2.15_dinobytes",
   "DownloadUrl1": "https://pan.baidu.com/s/1A5r8aVGF0gDA96e3pi7s0Q",
   "DownloadUrl2": "https://cloud.189.cn/t/JZJ3MjiAni6n",
-  "UpdateDateTooltip": "更新日期: 2026年05月26日 / 发行日期: 2025年05月29日"
+  "UpdateDateTooltip": "更新日期: 2026年09月01日 / 发行日期: 2025年05月29日"
 },
 {
   "GameCode": "D0193",
@@ -14844,10 +14844,10 @@
   "ChineseName": "红眼露比",
   "EnglishName": "Rubinite",
   "Size": "4.7 GB",
-  "GameVersion": "Build24369995",
+  "GameVersion": "Build24740490",
   "DownloadUrl1": "https://pan.baidu.com/s/1ZK0x43Fkcahse2GpHveyrA",
   "DownloadUrl2": "https://cloud.189.cn/t/3AvMzyM7r632",
-  "UpdateDateTooltip": "更新日期: 2026年08月01日 / 发行日期: 2026年07月22日"
+  "UpdateDateTooltip": "更新日期: 2026年09月01日 / 发行日期: 2026年07月22日"
 },
 {
   "GameCode": "H0064",
@@ -19701,6 +19701,17 @@
   "UpdateDateTooltip": "更新日期: 2026年08月29日 / 发行日期: 2025年03月24日"
 },
 {
+  "GameCode": "J0203",
+  "Password": "450677",
+  "ChineseName": "The Jackbox Party Pack 2",
+  "EnglishName": "The Jackbox Party Pack 2",
+  "Size": "611 MB",
+  "GameVersion": "Build23645352",
+  "DownloadUrl1": "https://pan.baidu.com/s/1ZvwB581HKYzRpY505iDAJQ",
+  "DownloadUrl2": "https://cloud.189.cn/t/I7vQvq2QVRV3",
+  "UpdateDateTooltip": "更新日期: 2026年09月01日 / 发行日期: 2015年10月13日"
+},
+{
   "GameCode": "J3001",
   "Password": "2154662",
   "ChineseName": "纪元 变异",
@@ -22720,10 +22731,10 @@
   "ChineseName": "灵魂面甲",
   "EnglishName": "Soulmask",
   "Size": "25GB",
-  "GameVersion": "Build23925927",
+  "GameVersion": "v1.1.0",
   "DownloadUrl1": "https://pan.baidu.com/s/1okWnckcxEyHrptmi_9jTUA",
   "DownloadUrl2": "https://cloud.189.cn/t/VfEJz2IZFrEn",
-  "UpdateDateTooltip": "更新日期: 2026年07月03日 / 发行日期: 2026年04月09日"
+  "UpdateDateTooltip": "更新日期: 2026年09月01日 / 发行日期: 2026年04月09日"
 },
 {
   "GameCode": "L0104",
@@ -22940,10 +22951,10 @@
   "ChineseName": "龙之信条2",
   "EnglishName": "Dragon's Dogma 2",
   "Size": "67GB",
-  "GameVersion": "v20250409",
+  "GameVersion": "v20260902",
   "DownloadUrl1": "https://pan.baidu.com/s/1li1JivqMfUJa4kmF_v9--Q",
   "DownloadUrl2": "https://cloud.189.cn/t/IvuyaiFj6j6r",
-  "UpdateDateTooltip": "更新日期: 2026年05月01日 / 发行日期: 2024年03月21日"
+  "UpdateDateTooltip": "更新日期: 2026年09月02日 / 发行日期: 2024年03月21日"
 },
 {
   "GameCode": "L0124",
@@ -23461,6 +23472,17 @@
   "DownloadUrl1": "https://pan.baidu.com/s/1MQOTg42jtOKXWTJLwZiqkQ",
   "DownloadUrl2": "https://cloud.189.cn/t/ra26neAneEfu",
   "UpdateDateTooltip": "更新日期: 2026年08月29日 / 发行日期: 2021年08月26日"
+},
+{
+  "GameCode": "L0173",
+  "Password": "084647",
+  "ChineseName": "丽萨 痛苦之旅",
+  "EnglishName": "LISA: The Painful",
+  "Size": "4.8 GB",
+  "GameVersion": "Build19490150",
+  "DownloadUrl1": "https://pan.baidu.com/s/1nSSxjrJgd_8ZMA7ha613sg",
+  "DownloadUrl2": "https://cloud.189.cn/t/jQBvYrmeUB3u",
+  "UpdateDateTooltip": "更新日期: 2026年09月01日 / 发行日期: 2014年12月15日"
 },
 {
   "GameCode": "L3001",
@@ -24029,10 +24051,10 @@
   "ChineseName": "狼人：内在之兽",
   "EnglishName": "Werewolf: The Inner Beast",
   "Size": "12 GB",
-  "GameVersion": "v20260612",
+  "GameVersion": "v20260831",
   "DownloadUrl1": "https://pan.baidu.com/s/1PwOkoeaYnVqKaUU57jEXxw",
   "DownloadUrl2": "https://cloud.189.cn/t/Vzi6jaFVfmi2",
-  "UpdateDateTooltip": "更新日期: 2026年06月19日 / 发行日期: 2026年05月06日"
+  "UpdateDateTooltip": "更新日期: 2026年09月01日 / 发行日期: 2026年05月06日"
 },
 {
   "GameCode": "L5043",
@@ -24051,10 +24073,10 @@
   "ChineseName": "狼人计划",
   "EnglishName": "Project Werewulf",
   "Size": "13 GB",
-  "GameVersion": "v20260612",
+  "GameVersion": "v20260831",
   "DownloadUrl1": "https://pan.baidu.com/s/1zO8bMntdjz2wME-Tzyahfw",
   "DownloadUrl2": "https://cloud.189.cn/t/BrmUjuF7FVBb",
-  "UpdateDateTooltip": "更新日期: 2026年07月01日 / 发行日期: 2025年05月06日"
+  "UpdateDateTooltip": "更新日期: 2026年09月01日 / 发行日期: 2025年05月06日"
 },
 {
   "GameCode": "L5045",
@@ -24077,6 +24099,17 @@
   "DownloadUrl1": "https://pan.baidu.com/s/1-sUmcM6xNq9BbgGSxXSr2Q",
   "DownloadUrl2": "https://cloud.189.cn/t/MFRfIvzUr6Jr",
   "UpdateDateTooltip": "更新日期: 2026年08月17日 / 发行日期: 2026年08月11日"
+},
+{
+  "GameCode": "L5047",
+  "Password": "198425",
+  "ChineseName": "Lewd Dungeon Manager",
+  "EnglishName": "Lewd Dungeon Manager 🔞",
+  "Size": "2 GB",
+  "GameVersion": "Build24929218",
+  "DownloadUrl1": "https://pan.baidu.com/s/1kkSuNHBDVU2bjLvd2H0cSw",
+  "DownloadUrl2": "https://cloud.189.cn/t/Qr2A73VveaAb",
+  "UpdateDateTooltip": "更新日期: 2026年09月01日 / 发行日期: 2026年08月29日"
 },
 {
   "GameCode": "M.KHDY001",
@@ -26823,10 +26856,10 @@
   "ChineseName": "喵斯快跑",
   "EnglishName": "Muse Dash",
   "Size": "5GB",
-  "GameVersion": "v6.5.0",
+  "GameVersion": "v6.6.0",
   "DownloadUrl1": "https://pan.baidu.com/s/1iu5CU1w7i2jkIEVrvIUKtg",
   "DownloadUrl2": "https://cloud.189.cn/t/MFRVJnbIf2um",
-  "UpdateDateTooltip": "更新日期: 2026年08月03日 / 发行日期: 2019年06月19日"
+  "UpdateDateTooltip": "更新日期: 2026年09月01日 / 发行日期: 2019年06月19日"
 },
 {
   "GameCode": "M3002",
@@ -35942,10 +35975,10 @@
   "ChineseName": "颂钟长鸣",
   "EnglishName": "Bellwright",
   "Size": "24GB",
-  "GameVersion": "v0.0.50879",
+  "GameVersion": "v0.0.52204",
   "DownloadUrl1": "https://pan.baidu.com/s/13vlDqpMIRwtBJt-U9uBY-g",
   "DownloadUrl2": "https://cloud.189.cn/t/E3mAZbJZZjqu",
-  "UpdateDateTooltip": "更新日期: 2026年06月20日 / 发行日期: 2024年04月23日"
+  "UpdateDateTooltip": "更新日期: 2026年09月02日 / 发行日期: 2024年04月23日"
 },
 {
   "GameCode": "S0239",
@@ -36312,14 +36345,14 @@
 },
 {
   "GameCode": "S0272",
-  "Password": "6582215",
+  "Password": "180555",
   "ChineseName": "随身摄像机",
   "EnglishName": "Bodycam",
-  "Size": "45GB",
-  "GameVersion": "v0.1.3.3",
+  "Size": "56.6 GB",
+  "GameVersion": "Build25019301",
   "DownloadUrl1": "https://pan.baidu.com/s/1Z68vDhzqcHns28NODcyoHw",
   "DownloadUrl2": "https://cloud.189.cn/t/bUBf6vjMbuau",
-  "UpdateDateTooltip": "更新日期: 2025年01月28日 / 发行日期: 2024年06月08日"
+  "UpdateDateTooltip": "更新日期: 2026年09月01日 / 发行日期: 2024年06月07日"
 },
 {
   "GameCode": "S0273",
@@ -39612,14 +39645,14 @@
 },
 {
   "GameCode": "T0131",
-  "Password": "9580211",
+  "Password": "647304",
   "ChineseName": "图灵完备",
   "EnglishName": "Turing Complete",
   "Size": "310MB",
-  "GameVersion": "v2.0.16",
+  "GameVersion": "Build24685975",
   "DownloadUrl1": "https://pan.baidu.com/s/1MlFbtJU7mv0JFpgMGljZrg",
   "DownloadUrl2": "https://cloud.189.cn/t/Nfi2eqYJVBRv",
-  "UpdateDateTooltip": "更新日期: 2025年05月17日 / 发行日期: 2021年10月02日"
+  "UpdateDateTooltip": "更新日期: 2026年09月01日 / 发行日期: 2021年10月02日"
 },
 {
   "GameCode": "T0132",
@@ -42997,6 +43030,17 @@
   "DownloadUrl1": "https://pan.baidu.com/s/1A1ZwuWCIpR-wI0EBVeSFsw",
   "DownloadUrl2": "https://cloud.189.cn/t/fm2yyyyIF36v",
   "UpdateDateTooltip": "更新日期: 2026年08月28日 / 发行日期: 2025年09月26日"
+},
+{
+  "GameCode": "W0204",
+  "Password": "375006",
+  "ChineseName": "巫塔战记",
+  "EnglishName": "Witchspire",
+  "Size": "7.1 GB",
+  "GameVersion": "Build24127279",
+  "DownloadUrl1": "https://pan.baidu.com/s/1wfgxo38fZE7aRXAAkTwAqA",
+  "DownloadUrl2": "https://cloud.189.cn/t/Q7rEveBRjEzq",
+  "UpdateDateTooltip": "更新日期: 2026年09月01日 / 发行日期: 2026年06月10日"
 },
 {
   "GameCode": "W3001",
@@ -50116,6 +50160,17 @@
   "UpdateDateTooltip": "更新日期: 2026年08月31日 / 发行日期: 2024年02月23日"
 },
 {
+  "GameCode": "Y0297",
+  "Password": "845147",
+  "ChineseName": "伊苏VS空之轨迹",
+  "EnglishName": "Ys vs. Trails in the Sky: Alternative Saga",
+  "Size": "7.7 GB",
+  "GameVersion": "Build24880822",
+  "DownloadUrl1": "https://pan.baidu.com/s/1zTyB96Me1GoeYbcrjG8Nrw",
+  "DownloadUrl2": "https://cloud.189.cn/t/bq2mMbaMruiu",
+  "UpdateDateTooltip": "更新日期: 2026年09月01日 / 发行日期: 2025年10月10日"
+},
+{
   "GameCode": "Y3001",
   "Password": "632333",
   "ChineseName": "硬核机甲",
@@ -53641,10 +53696,10 @@
   "ChineseName": "灾变前夜",
   "EnglishName": "Dread Dawn",
   "Size": "28GB",
-  "GameVersion": "Build23961771",
+  "GameVersion": "v2026.8.30.1084",
   "DownloadUrl1": "https://pan.baidu.com/s/1rduRyxrQDjaPKqL9TK-A2A",
   "DownloadUrl2": "https://cloud.189.cn/t/BF3qArZfa2iu",
-  "UpdateDateTooltip": "更新日期: 2026年08月03日 / 发行日期: 2024年09月30日"
+  "UpdateDateTooltip": "更新日期: 2026年09月01日 / 发行日期: 2024年09月30日"
 },
 {
   "GameCode": "Z0211",
@@ -54301,10 +54356,10 @@
   "ChineseName": "最后一位守护者",
   "EnglishName": "The Last Caretaker",
   "Size": "16.6 GB",
-  "GameVersion": "v20260625",
+  "GameVersion": "v20260901",
   "DownloadUrl1": "https://pan.baidu.com/s/1WQIOhE4N00eCgM42Xx1KPQ",
   "DownloadUrl2": "https://cloud.189.cn/t/zi2QBvUfQRnu",
-  "UpdateDateTooltip": "更新日期: 2026年06月25日 / 发行日期: 2025年11月06日"
+  "UpdateDateTooltip": "更新日期: 2026年09月01日 / 发行日期: 2025年11月06日"
 },
 {
   "GameCode": "Z0271",
