@@ -88,6 +88,7 @@
 [Free Air镜像](https://s3.dualstack.us-east-1.amazonaws.com/zhifan/wiki.html)
 [Free Air镜像](https://jj5.xyz)
 [freefq](https://github.com/freefq/free)
+[github中文版](https://bdnb.cn/)
 - [uupdump](https://www.uupdump.cn)
 [rg-adguard](https://rg-adguard.net/)
 [`store`](https://store.rg-adguard.net)
