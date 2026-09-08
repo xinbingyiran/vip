@@ -10131,8 +10131,17 @@
     "categories": "模拟经营",
     "post_title": "雄心壮志/Big Ambitions",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1331550/header.jpg?t=1699965768",
-    "filesize": "2.04 G",
+    "filesize": "3.04 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fUVR7fVrErau?pwd=hx5f",
+        "openpath": "Big Ambitions v1.0/Big Ambitions.exe",
+        "filesize": "3.04 G",
+        "link_ctime": "2026.09.06",
+        "filesize_z": 3259028393,
+        "filename": "Big Ambitions v1.0",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/JZ73yy2iANFj?pwd=83ms",
         "openpath": "Big.Ambitions.Build.12948879/Big Ambitions.exe",
@@ -13510,8 +13519,17 @@
     "categories": "动作冒险",
     "post_title": "方舟：生存飞升/ARK: Survival Ascended",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2399830/header.jpg?t=1719330565",
-    "filesize": "75.63 G",
+    "filesize": "320.31 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7fmiAzmeQrue?pwd=tt8u",
+        "openpath": "ARK Survival Ascended Build 25016392/ShooterGame/Binaries/Win64/ArkAscended.exe",
+        "filesize": "320.31 G",
+        "link_ctime": "2026.09.03",
+        "filesize_z": 343928561756,
+        "filename": "ARK Survival Ascended Build 25016392",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/iQ32YvNfaM32?pwd=5jdr",
         "openpath": "ARK.Survival.Ascended v34.82/ShooterGame/Binaries/Win64/ArkAscended.exe",
@@ -22098,8 +22116,17 @@
     "categories": "动作冒险",
     "post_title": "ASKA",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1898300/header.jpg?t=1718950488",
-    "filesize": "3.05 G",
+    "filesize": "3.85 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2UrIJjFjuiAj?pwd=x3tn",
+        "openpath": "ASKA v1.40.3108261758/Aska.exe",
+        "filesize": "3.85 G",
+        "link_ctime": "2026.09.05",
+        "filesize_z": 4129898899,
+        "filename": "ASKA v1.40.3108261758",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/yIBVr2UJreMr?pwd=0tsg",
         "openpath": "ASKA v1.0.0108241808/Aska.exe",
@@ -22221,8 +22248,17 @@
     "categories": "策略战棋",
     "post_title": "太阳帝国的原罪2/Sins of a Solar Empire®: Rebellion",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/204880/header.jpg?t=1723736718",
-    "filesize": "7 G",
+    "filesize": "18.28 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/zeAz6bYneqqq?pwd=4m6n",
+        "openpath": "Sins of a Solar Empire II Harbinger v2.0.2/sins2.exe",
+        "filesize": "18.28 G",
+        "link_ctime": "2026.09.04",
+        "filesize_z": 19624212098,
+        "filename": "Sins of a Solar Empire II Harbinger v2.0.2",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/RNV3AjaiQJfy?pwd=bgs7",
         "openpath": "Sins of a Solar Empire II/sins2.exe",
@@ -22893,8 +22929,17 @@
     "categories": "动作冒险",
     "post_title": "弗兰克·斯通的阴影：豪华版/The Casting of Frank Stone™",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2223840/header.jpg?t=1725478955",
-    "filesize": "45.23 G",
+    "filesize": "45.27 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/I732QzZJbmIj?pwd=6c2c",
+        "openpath": "The Casting of Frank Stone v20240917/CastingFrankStone.exe",
+        "filesize": "45.27 G",
+        "link_ctime": "2026.09.07",
+        "filesize_z": 48609643462,
+        "filename": "The Casting of Frank Stone v20240917",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/zQJRzq3yy6n2?pwd=bsg9",
         "openpath": "The Casting of Frank Stone/CastingFrankStone.exe",
@@ -26896,10 +26941,19 @@
     "id": 60191,
     "category_parent": 5,
     "categories": "角色扮演",
-    "post_title": "龙之信条2/Dragon's Dogma 2",
+    "post_title": "龙之信条2：豪华版/Dragon's Dogma 2",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2054970/header.jpg?t=1727767895",
-    "filesize": "62.53 G",
+    "filesize": "61.7 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fM7RviyMBz6f?pwd=3ob9",
+        "openpath": "Dragons Dogma 2 v3.2.0.0/DD2.exe",
+        "filesize": "61.7 G",
+        "link_ctime": "2026.09.04",
+        "filesize_z": 66244644507,
+        "filename": "Dragons Dogma 2 v3.2.0.0",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/m26VJr6NbQzm?pwd=ria3",
         "openpath": "Dragons Dogma 2 v1.0.0.1/runtime_il2cpp.exe",
@@ -29504,8 +29558,17 @@
     "categories": "动作冒险",
     "post_title": "潜行者2：切尔诺贝利之心 – 终极版/S.T.A.L.K.E.R. 2 Heart of Chornobyl – Ultimate Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1643320/header.jpg?t=1733317733",
-    "filesize": "159.93 G",
+    "filesize": "177.33 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/vyIBvefUZ3ma?pwd=jt2u",
+        "openpath": "S.T.A.L.K.E.R. 2 Heart of Chornobyl v2.0.4/Stalker2/Binaries/Win64/Stalker2-Win64-Shipping.exe",
+        "filesize": "177.33 G",
+        "link_ctime": "2026.09.07",
+        "filesize_z": 190404296249,
+        "filename": "S.T.A.L.K.E.R. 2 Heart of Chornobyl v2.0.4",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/ayai2mFjE3Qj?pwd=dj8d",
         "openpath": "S.T.A.L.K.E.R. 2 Heart of Chornobyl v2.0.0/Stalker2/Binaries/Win64/Stalker2-Win64-Shipping.exe",
@@ -40781,8 +40844,17 @@
     "categories": "休闲益智",
     "post_title": "乐高旅行者/LEGO® Voyagers",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1538550/db718ae2be60558df2ef9fcd65302ad87a6045d4/header.jpg?t=1757941197",
-    "filesize": "2.48 G",
+    "filesize": "2.49 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/QbI7reEnEFFz?pwd=rdf2",
+        "openpath": "LEGO Voyagers v20251208*u_user=3&path=FrCRo1S8ZO6KbT6KUyHFDPbfCUu3KmR0i/FtXFT8V6W5aP-Oj1I1lNJb66Xacm7FsMj/LEGO Voyagers.exe",
+        "filesize": "2.49 G",
+        "link_ctime": "2026.09.06",
+        "filesize_z": 2672924279,
+        "filename": "LEGO Voyagers v20251208",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/ie2E3yiy6vYf?pwd=lm9o",
         "openpath": "LEGO Voyagers/LEGO Voyagers.exe",
@@ -50468,8 +50540,17 @@
     "categories": "策略战棋",
     "post_title": "杀戮尖塔2/Slay the Spire 2",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2868840/b0958d387dc366211e0f353443710cfcf9fdb020/header.jpg?t=1772736015",
-    "filesize": "1.24 G",
+    "filesize": "1.28 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/6NjEZrqMjayu?pwd=vdq8",
+        "openpath": "Slay the Spire 2 v0.107.1/SlayTheSpire2.exe",
+        "filesize": "1.28 G",
+        "link_ctime": "2026.09.06",
+        "filesize_z": 1374716569,
+        "filename": "Slay the Spire 2 v0.107.1",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/3IfyQry2I3yq?pwd=5v9y",
         "openpath": "Slay the Spire 2 v0.99.1/SlayTheSpire2.exe",
@@ -60764,8 +60845,17 @@
     "categories": "体育竞速",
     "post_title": "美国职业篮球2K27：巅峰版/NBA 2K27 Ultra Edition",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4356430/9152438fde7de9f4c20b4fd9072ba69f844dacab/header.jpg?t=1787855111",
-    "filesize": "101.58 G",
+    "filesize": "101.55 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JZZBra7Vju6f?pwd=tu9o",
+        "openpath": "NBA 2K27 v1.4/NBA2K27.exe",
+        "filesize": "101.55 G",
+        "link_ctime": "2026.09.06",
+        "filesize_z": 109042535270,
+        "filename": "NBA 2K27 v1.4",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/AfmMFbNFrIJr?pwd=co77",
         "openpath": "NBA 2K27/NBA2K27.exe",
@@ -60804,6 +60894,15 @@
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2492670/458033bb7aad4e6b8a61af0f7798d23db2683864/header.jpg?t=1787835863",
     "filesize": "20.69 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/emIVfqYj2Ura?pwd=0km8",
+        "openpath": "METAL GEAR SOLID 4 v1.40/Launcher/launcher.exe",
+        "filesize": "20.69 G",
+        "link_ctime": "2026.09.07",
+        "filesize_z": 22213062692,
+        "filename": "METAL GEAR SOLID 4 v1.40",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/2i2y2enmAFbm?pwd=ohu4",
         "openpath": "METAL GEAR SOLID 4/Launcher/launcher.exe",
@@ -61210,6 +61309,262 @@
         "link_ctime": "2026.09.03",
         "filesize_z": 33244763889,
         "filename": "Crimson Moon v1.0.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 124562,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "黎明行者之血 日蚀版/The Blood of Dawnwalker",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/4417550/689d0982e717fe03b980e1d794821146bdfea24e/header_tchinese.jpg?t=1788444179",
+    "filesize": "49.36 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/bi6b6rIVfQ7j?pwd=n8dw",
+        "openpath": "The Blood of Dawnwalker v1.0.3/Dawnwalker/Binaries/Win64/Dawnwalker.exe",
+        "filesize": "49.36 G",
+        "link_ctime": "2026.09.06",
+        "filesize_z": 52997958905,
+        "filename": "The Blood of Dawnwalker v1.0.3",
+        "server": "t"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/mueQziE7FRra?pwd=vua8",
+        "openpath": "The Blood of Dawnwalker v1.0.1/Dawnwalker/Binaries/Win64/Dawnwalker.exe",
+        "filesize": "49.36 G",
+        "link_ctime": "2026.09.04",
+        "filesize_z": 52998031073,
+        "filename": "The Blood of Dawnwalker v1.0.1",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 124567,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "让它去死/LET IT DIE",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/794600/header.jpg?t=1788320624",
+    "filesize": "32.79 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/yyyeEfVfA7by?pwd=6yaw",
+        "openpath": "LET IT DIE v5.0.1.0/_启动游戏.exe",
+        "filesize": "32.79 G",
+        "link_ctime": "2026.09.04",
+        "filesize_z": 35207202956,
+        "filename": "LET IT DIE v5.0.1.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 124620,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "救赎：战争回响/Salvation: Echoes of War",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3741170/81bb28b7d56dad25c61477b2a4594414c55bf194/header.jpg?t=1788408052",
+    "filesize": "28.63 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2yAb6zQRRFNj?pwd=4wfy",
+        "openpath": "Salvation Echoes of War v1.2.5878/Salvation.exe",
+        "filesize": "28.63 G",
+        "link_ctime": "2026.09.04",
+        "filesize_z": 30742160748,
+        "filename": "Salvation Echoes of War v1.2.5878",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 124626,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "创生伊甸/BioEden",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3265840/6e495b17f9926382d414be86ecb01f7b375dd6a4/header_schinese.jpg?t=1788451436",
+    "filesize": "2.15 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/YZ7zE3NNbMby?pwd=k8n4",
+        "openpath": "BioEden v1.2.0.0/BioEden.exe",
+        "filesize": "2.15 G",
+        "link_ctime": "2026.09.04",
+        "filesize_z": 2311840792,
+        "filename": "BioEden v1.2.0.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 124675,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "混沌兵团/Chaos Front",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2770330/1f7eff019c763e812feb612c1925d89db5776446/header_schinese.jpg?t=1788504036",
+    "filesize": "87.49 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ZNneqinIVJNn?pwd=4f08",
+        "openpath": "Chaos Front v2026090/Chaos Front.exe",
+        "filesize": "87.49 M",
+        "link_ctime": "2026.09.05",
+        "filesize_z": 91737707,
+        "filename": "Chaos Front v2026090",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 124698,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "长尾豹马修2：帕隆比亚萨尔萨/Marsupilami 2 - Salsa Palombia",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3650170/a19c8f25ba08f13fc2088f6106365189fb0158e8/header.jpg?t=1788447716",
+    "filesize": "6.6 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/IzaYjeuuIZNn?pwd=7hgc",
+        "openpath": "Marsupilami 2 Salsa Palombia/Marsu2Steam.exe",
+        "filesize": "6.6 G",
+        "link_ctime": "2026.09.05",
+        "filesize_z": 7082643095,
+        "filename": "Marsupilami 2 Salsa Palombia",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 124716,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "鬼武者：剑之道 – 高级豪华版/Onimusha: Way of the Sword – Premium Deluxe Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2638890/ce31174fea86d0bafa21b26e853dcd0b7326e36f/header.jpg?t=1788494549",
+    "filesize": "55.05 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/rIfa6rMRBR7f?pwd=kl7e",
+        "openpath": "OnimushaWotS v01.000.001/OnimushaWotS.exe",
+        "filesize": "55.05 G",
+        "link_ctime": "2026.09.05",
+        "filesize_z": 59112854273,
+        "filename": "OnimushaWotS v01.000.001",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 124748,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "恐怖万圣夜/Halloween The Game",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3219630/153ed105c4b409fe689783e4f9b6aad72c152646/header.jpg?t=1788531517",
+    "filesize": "28.55 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ZFna6nmENRbm?pwd=0b7s",
+        "openpath": "Halloween The Game v20260904/Ravage/Binaries/Win64/Halloween.exe",
+        "filesize": "28.55 G",
+        "link_ctime": "2026.09.05",
+        "filesize_z": 30651851739,
+        "filename": "Halloween The Game v20260904",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 124786,
+    "category_parent": 5,
+    "categories": "休闲益智",
+    "post_title": "神经鹅/Tingus Goose",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3629780/cbab0cd00e72010e54c638e1d60588c1b20e2816/header_schinese.jpg?t=1783729683",
+    "filesize": "459.11 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/bYZfea26fmea?pwd=ftn2",
+        "openpath": "Tingus Goose v1.0.4/Tingus.exe",
+        "filesize": "459.11 M",
+        "link_ctime": "2026.09.05",
+        "filesize_z": 481408368,
+        "filename": "Tingus Goose v1.0.4",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 124816,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "英雄传说 界之轨迹 -告别塞姆利亚- 数字终极版/The Legend of Heroes Kai no Kiseki -Farewell, O Zemuria- Digital Ultimate Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3319980/header_schinese.jpg?t=1739507056",
+    "filesize": "26.12 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/32MFbiv6nieq?pwd=a6on",
+        "openpath": "The.Legend.of.Heroes.Kai.no.Kiseki.Farewell.O.Zemuria v1.02/ed9.exe",
+        "filesize": "26.12 G",
+        "link_ctime": "2026.09.06",
+        "filesize_z": 28046314488,
+        "filename": "The.Legend.of.Heroes.Kai.no.Kiseki.Farewell.O.Zemuria v1.02",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 124845,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "英雄传说 黎之轨迹 数字豪华版/The Legend of Heroes Kuro no Kiseki – Deluxe Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1811950/header.jpg?t=1738816939",
+    "filesize": "10.84 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ANVreqNBBFBn?pwd=8vms",
+        "openpath": "The Legend of Heroes Kuro no Kiseki v1.1.0/ed9.exe",
+        "filesize": "10.84 G",
+        "link_ctime": "2026.09.06",
+        "filesize_z": 11643506230,
+        "filename": "The Legend of Heroes Kuro no Kiseki v1.1.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 124925,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "美人魚面具/The Mermaid Mask",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1696770/7fb7b905c4004e882bc7671e55507acadc5cd5bb/header.jpg?t=1784233084",
+    "filesize": "1 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qmmyua7F3qMb?pwd=2uw1",
+        "openpath": "The Mermaid Mask/The Mermaid Mask.exe",
+        "filesize": "1 G",
+        "link_ctime": "2026.09.06",
+        "filesize_z": 1078638888,
+        "filename": "The Mermaid Mask",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 124960,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "我的海岛庄园/Island Market Simulator",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3391510/2f274ec1c2d9b144c5dbf4140626498996c420ee/header_alt_assets_2_schinese.jpg?t=1788537563",
+    "filesize": "2.46 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/zmAnI3a2yque?pwd=ov8p",
+        "openpath": "Island Market Simulator v1.0/Island Market Simulator.exe",
+        "filesize": "2.46 G",
+        "link_ctime": "2026.09.06",
+        "filesize_z": 2638994530,
+        "filename": "Island Market Simulator v1.0",
         "server": "t"
       }
     ]
