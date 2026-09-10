@@ -4327,10 +4327,19 @@
     "id": 16784,
     "category_parent": 5,
     "categories": "枪战射击",
-    "post_title": "孤岛惊魂5/Far Cry 5",
+    "post_title": "孤岛惊魂5：黄金版/Far Cry 5",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/552520/header.jpg?t=1694554810",
-    "filesize": "76.93 G",
+    "filesize": "62.73 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JRFFv2VnYFBj?pwd=wgd5",
+        "openpath": "FarCry5 v1.016/bin/FarCry5.exe",
+        "filesize": "62.73 G",
+        "link_ctime": "2026.09.08",
+        "filesize_z": 67360313066,
+        "filename": "FarCry5 v1.016",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/vYRzMv3Y3Aje?pwd=lq0w",
         "openpath": "GUDAOJINGHUN5 v1.011/bin/FarCry5.exe",
@@ -23450,6 +23459,15 @@
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1579390/header.jpg?t=1726843593",
     "filesize": "7.9 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/b26ZvuAzMRjq?pwd=0gty",
+        "openpath": "Spiral/Spiral.exe",
+        "filesize": "7.9 G",
+        "link_ctime": "2026.09.09",
+        "filesize_z": 8486624245,
+        "filename": "Spiral",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/NnMfamzMZra2?pwd=j6dk",
         "openpath": "Spiral/Spiral.exe",
@@ -52232,8 +52250,17 @@
     "categories": "角色扮演",
     "post_title": "勇气默示录：飞翔的妖精 – 高清复刻版/Bravely Default: Flying Fairy - HD Remaster",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2833580/560d12106258dde9bc4ac258cbe8e71d540eb8f5/header.jpg?t=1774544767",
-    "filesize": "8.35 G",
+    "filesize": "8.16 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/nY7ra2vQ3Q7f?pwd=sd82",
+        "openpath": "BDFFHD/BDFFHD.exe",
+        "filesize": "8.16 G",
+        "link_ctime": "2026.09.09",
+        "filesize_z": 8757551517,
+        "filename": "BDFFHD",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/Nniia2vyEbmi?pwd=n2cg",
         "openpath": "BDFFHD/hypervisor-launcher.exe",
@@ -52383,8 +52410,17 @@
     "categories": "角色扮演",
     "post_title": "噬血代码II：终极版/CODE VEIN II",
     "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2362060/04f7610de0712c383de9d67b117ad079afb3337c/header_tchinese.jpg?t=1770242240",
-    "filesize": "61.39 G",
+    "filesize": "73.54 G",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/IBNjeeVfuiqa?pwd=kt0v",
+        "openpath": "CODE VEIN II v2.0.1.0/CodeVein2/Binaries/Win64/CodeVein2-Win64-Shipping.exe",
+        "filesize": "73.54 G",
+        "link_ctime": "2026.09.10",
+        "filesize_z": 78959166707,
+        "filename": "CODE VEIN II v2.0.1.0",
+        "server": "t"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/3AJF73MvEj22?pwd=3dft",
         "openpath": "CodeVein2 v1.0.6.0/CodeVein2/Binaries/Win64/steamclient_loader_x64.exe",
@@ -61565,6 +61601,234 @@
         "link_ctime": "2026.09.06",
         "filesize_z": 2638994530,
         "filename": "Island Market Simulator v1.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 125035,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "乐高：积木传说/LEGO Bricktales",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1898290/header.jpg?t=1759330526",
+    "filesize": "366.85 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/YrmYnuNJ7Znu?pwd=w3cr",
+        "openpath": "LEGO Bricktales v2.0/LEGO_Bricktales.exe",
+        "filesize": "366.85 M",
+        "link_ctime": "2026.09.08",
+        "filesize_z": 384669653,
+        "filename": "LEGO Bricktales v2.0",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 125074,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "LEGO建造者之旅/LEGO Builder’s Journey",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1544360/header.jpg?t=1768472865",
+    "filesize": "1.09 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/VJfaAbnmI7Bb?pwd=0l3c",
+        "openpath": "LEGO Builders Journey v20230924/Builder's Journey.exe",
+        "filesize": "1.09 G",
+        "link_ctime": "2026.09.08",
+        "filesize_z": 1169398196,
+        "filename": "LEGO Builders Journey v20230924",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 125079,
+    "category_parent": 5,
+    "categories": "策略战棋",
+    "post_title": "远古纪元/Veterum",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1864690/90ba94c54ee10c9fce4fc71aafdb0b5ef094528e/header.jpg?t=1788796867",
+    "filesize": "351.06 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Qra6NnV3uEva?pwd=0haz",
+        "openpath": "Veterum v0.9.6.3/veterum.exe",
+        "filesize": "351.06 M",
+        "link_ctime": "2026.09.08",
+        "filesize_z": 368110027,
+        "filename": "Veterum v0.9.6.3",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 125134,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "幻灵镇魂曲/Phantom PHANTOM OF INFERNO NITRO ARCHIVE",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3639590/051a9587d9ad7ff74d7e29ef000f2072cfe92b56/header.jpg?t=1788753884",
+    "filesize": "3.73 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/B7VZRnQBBbiy?pwd=o86d",
+        "openpath": "Phantom PHANTOM OF INFERNO NITRO ARCHIVE/phantom.exe",
+        "filesize": "3.73 G",
+        "link_ctime": "2026.09.08",
+        "filesize_z": 4000334475,
+        "filename": "Phantom PHANTOM OF INFERNO NITRO ARCHIVE",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 125154,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "星球大战 亡命之徒  终极版/Star Wars Outlaws",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2842040/header.jpg?t=1773407100",
+    "filesize": "80.52 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/B7nyYjF322yi?pwd=gdx6",
+        "openpath": "Star Wars Outlaws/Outlaws.exe",
+        "filesize": "80.52 G",
+        "link_ctime": "2026.09.08",
+        "filesize_z": 86455051621,
+        "filename": "Star Wars Outlaws",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 125176,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "波斯王子 失落王冠 豪华版/Prince of Persia The Lost Crown Standard Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2751000/header.jpg?t=1777993930",
+    "filesize": "26.41 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/6jmIrivuuMne?pwd=7jvi",
+        "openpath": "Prince of Persia The Lost Crown v1.4.3/TheLostCrown.exe",
+        "filesize": "26.41 G",
+        "link_ctime": "2026.09.08",
+        "filesize_z": 28355886987,
+        "filename": "Prince of Persia The Lost Crown v1.4.3",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 125194,
+    "category_parent": 5,
+    "categories": "角色扮演",
+    "post_title": "疫病侵袭/Rogue Blight",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1890310/6400a0a119c1a33013877d53ee340000f4e06994/header.jpg?t=1788451526",
+    "filesize": "2 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/URfMfq6nua6n?pwd=et2p",
+        "openpath": "Rogue Blight v1.00.06/RogueBlight.exe",
+        "filesize": "2 G",
+        "link_ctime": "2026.09.08",
+        "filesize_z": 2150942956,
+        "filename": "Rogue Blight v1.00.06",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 125218,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "真人快打1：高级版/Mortal Kombat 1: Premium Edition",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/1971870/header.jpg?t=1778795130",
+    "filesize": "146.66 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/F3imEjMFRbUf?pwd=rw6y",
+        "openpath": "Mortal Kombat 1/MK12.exe",
+        "filesize": "146.66 G",
+        "link_ctime": "2026.09.09",
+        "filesize_z": 157472949336,
+        "filename": "Mortal Kombat 1",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 125298,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "架空地图模拟器/Fantasy Map Simulator",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3035500/54ae159925a45e22e16dd410a1087318a146f81b/header_schinese.jpg?t=1770973543",
+    "filesize": "215.87 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/bYfi6jfaMBNn?pwd=ni4h",
+        "openpath": "Fantasy.Map.Simulator v20240907/FantasyMapSimulator.exe",
+        "filesize": "215.87 M",
+        "link_ctime": "2026.09.09",
+        "filesize_z": 226350995,
+        "filename": "Fantasy.Map.Simulator v20240907",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 125323,
+    "category_parent": 5,
+    "categories": "模拟经营",
+    "post_title": "巴士模拟器27/Bus Simulator 27",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2397320/da4a57428bac72569d83afcd0b7f5878c97a17f5/header.jpg?t=1788881472",
+    "filesize": "16.9 G",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/rY3qIbBnA7Vb?pwd=21p6",
+        "openpath": "Bus Simulator 27 v1.06.52637/BusSimulator27.exe",
+        "filesize": "16.9 G",
+        "link_ctime": "2026.09.09",
+        "filesize_z": 18147022392,
+        "filename": "Bus Simulator 27 v1.06.52637",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 125394,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "吞吞堡垒/Wanderburg",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/3624140/69063bb273d4939a206869cb21d3415fbe8088a5/header_alt_assets_2_schinese.jpg?t=1788934272",
+    "filesize": "536.5 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/beEriyYBrQ73?pwd=jl11",
+        "openpath": "Wanderburg v0.9.5/Wanderburg.exe",
+        "filesize": "536.5 M",
+        "link_ctime": "2026.09.09",
+        "filesize_z": 562556611,
+        "filename": "Wanderburg v0.9.5",
+        "server": "t"
+      }
+    ]
+  },
+  {
+    "id": 125425,
+    "category_parent": 5,
+    "categories": "动作冒险",
+    "post_title": "幻珠奇港/Port of Jumanah",
+    "wp_get_attachment_image_src": "https://shared.st.dl.eccdnx.com/store_item_assets/steam/apps/2998920/2f835a2836f8628b9593ce7d94b114ced3b13dc4/header_schinese.jpg?t=1788795781",
+    "filesize": "719.36 M",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/RvqQRnuYrqyi?pwd=k1p0",
+        "openpath": "Port of Jumanah v1.0.0/Port Of Jumanah.exe",
+        "filesize": "719.36 M",
+        "link_ctime": "2026.09.10",
+        "filesize_z": 754301657,
+        "filename": "Port of Jumanah v1.0.0",
         "server": "t"
       }
     ]

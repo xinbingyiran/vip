@@ -36,8 +36,6 @@ var client = new HttpClient()
 
 var full = args.Length > 0;
 
-var tags = new ConcurrentDictionary<int, string>();
-
 var check = await WithRetry(MainLoopAsync, urls.Length, default);
 
 Console.WriteLine($"输出目录：{cd}");
@@ -109,7 +107,7 @@ async Task<RetryResult> MainLoopAsync(int urlIndex, CancellationToken token)
                     Console.WriteLine($"当前页：----------------[{len}] {index}  / {total}  {cat}----------------");
                     var tasks = list!.Select(listi => AddListi(url, items, listi));
                     var rarray = await Task.WhenAll(tasks);
-                    return rarray.Max();
+                    return rarray.Any(s => s is RetryResult.Success) ? RetryResult.Success : rarray.Any(s=>s is RetryResult.Failure) ? RetryResult.Failure : RetryResult.Break;
                 }
                 catch (Exception ex)
                 {
@@ -199,15 +197,8 @@ async Task<RetryResult> AddListi(string url, ConcurrentDictionary<int, GameBoxIt
                         //fileInfo = [.. findItem.GetFileInfo.Concat(fileInfo).Distinct()];
                         if (fileInfo.SequenceEqual(findItem.GetFileInfo))
                         {
-                            var tag = fileInfo.MaxBy(info => DateTime.TryParseExact(info.LinkCreateTime, "yyyy.MM.dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var time) ? time : DateTime.MinValue).LinkCreateTime ?? string.Empty;
-                            var lastTag = tags.GetOrAdd(newItem.CategoryParent, tag);
-                            if (lastTag != tag)
-                            {
-                                Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【数据已获取！】");
-                                return full ? RetryResult.Success : RetryResult.Break;
-                            }
                             Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【数据一致！】");
-                            return RetryResult.Success;
+                            return full ? RetryResult.Success : RetryResult.Break;
                         }
                     }
                     newItem.GetFileInfo = fileInfo;

@@ -17,7 +17,6 @@ string prestr = "ODE?????";
 string poststr = "ODE11111";
 string userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ODE?????/1.4.0 Chrome/91.0.4472.164 Electron/13.6.9 Safari/537.36".Replace(prestr, poststr);
 var full = args.Length > 0;
-var tags = new ConcurrentDictionary<int, string>();
 string[] cats = ["538", "527", "5"];
 var check = await WithRetry(MainLoopAsync, urls.Length, default);
 Console.WriteLine($"输出目录：{cd}");
@@ -81,7 +80,7 @@ async Task<RetryResult> MainLoopAsync(int urlIndex, CancellationToken token)
                     Console.WriteLine($"当前页：----------------[{len}] {index}  / {total}  {cat}----------------");
                     var tasks = list!.Select(listi => AddListi(items, listi, format));
                     var rarray = await Task.WhenAll(tasks);
-                    return rarray.Max();
+                    return rarray.Any(s => s is RetryResult.Success) ? RetryResult.Success : rarray.Any(s=>s is RetryResult.Failure) ? RetryResult.Failure : RetryResult.Break;
                 }
                 catch (Exception ex)
                 {
@@ -124,18 +123,10 @@ async Task<RetryResult> AddListi(ConcurrentDictionary<int, ODEItem> items, ODEIt
                     }
                     if (findItem.List is not null)
                     {
-                        //list = [.. findItem.List.Concat(list).Distinct()];
                         if (JsonSerializer.Serialize(list, JsonElementContext.Request.ODEFileArray) == JsonSerializer.Serialize(findItem.List, JsonElementContext.Request.ODEFileArray))
                         {
-                            var tag = list.MaxBy(info => DateTime.TryParseExact(info.UdTime, timeFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out var time) ? time : DateTime.MinValue).UdTime ?? string.Empty;
-                            var lastTag = tags.GetOrAdd(newItem.CategoryParent, tag);
-                            if (lastTag != tag)
-                            {
-                                Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【数据已获取！】");
-                                return full ? RetryResult.Success : RetryResult.Break;
-                            }
                             Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【数据一致！】");
-                            return RetryResult.Success;
+                            return full ? RetryResult.Success : RetryResult.Break;
                         }
                     }
                     newItem.List = list;
