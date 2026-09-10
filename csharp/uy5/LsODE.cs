@@ -44,7 +44,6 @@ async Task<RetryResult> MainLoopAsync(int urlIndex, CancellationToken token)
     for (var ci = 0; ci < cats.Length; ci++)
     {
         var cat = cats[ci];
-        var (page, format) = cat == "538" ? (24, "yyyyMMddHHmm") : (12, "yyyy-MM-dd");
         Console.WriteLine($"当前类目： --------------------{cat}--------------------");
         var filename = Path.Combine(cd, $"ODE_{cat}_All.json");
         var items = new ConcurrentDictionary<int, ODEItem>();
@@ -69,18 +68,47 @@ async Task<RetryResult> MainLoopAsync(int urlIndex, CancellationToken token)
             {
                 try
                 {
-                    var resultItem = await GetAppList(cat, index, numberposts: page, token: token);
+                    var resultItem = await GetAppList(cat, index, numberposts: 240, token: token);
                     var list = resultItem.List;
                     var len = list?.Length ?? 0;
-                    if (len <= 0)
+                    if (list is null || len <= 0)
                     {
                         return RetryResult.Success;
                     }
                     total = (resultItem.Numberofarticlescount + resultItem.PageSize - 1) / resultItem.PageSize;
                     Console.WriteLine($"当前页：----------------[{len}] {index}  / {total}  {cat}----------------");
-                    var tasks = list!.Select(listi => AddListi(items, listi, format));
-                    var rarray = await Task.WhenAll(tasks);
-                    return rarray.Any(s => s is RetryResult.Success) ? RetryResult.Success : rarray.Any(s=>s is RetryResult.Failure) ? RetryResult.Failure : RetryResult.Break;
+                    var per = 30;
+                    var sr = RetryResult.Success;
+                    var bcount = 0;
+                    using var cts = new CancellationTokenSource();
+                    await Parallel.ForEachAsync(list, new ParallelOptions
+                    {
+                        MaxDegreeOfParallelism = per,
+                        CancellationToken = cts.Token
+                    }, async (listi, token) =>
+                    {
+                        var r = await AddListi(items, listi);
+                        if(cts.IsCancellationRequested)
+                        {
+                            return;
+                        }
+                        if (r is RetryResult.Break)
+                        {
+                            if (Interlocked.Increment(ref bcount) >= per)
+                            {
+                                cts.Cancel();
+                            }
+                        }
+                        else if(sr < r)
+                        {
+                            sr = r;
+                        }
+                    });
+                    if(bcount >= per)
+                    {
+                        return RetryResult.Break;
+                    }
+                    return sr;
                 }
                 catch (Exception ex)
                 {
@@ -104,7 +132,7 @@ async Task<RetryResult> MainLoopAsync(int urlIndex, CancellationToken token)
     }
     return RetryResult.Success;
 }
-async Task<RetryResult> AddListi(ConcurrentDictionary<int, ODEItem> items, ODEItem newItem, string timeFormat)
+async Task<RetryResult> AddListi(ConcurrentDictionary<int, ODEItem> items, ODEItem newItem)
 {
     items.TryGetValue(newItem.ID, out var findItem);
     async Task<RetryResult> AddListSubAsync(int i, CancellationToken token)
