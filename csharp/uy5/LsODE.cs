@@ -17,7 +17,7 @@ string prestr = "ODE?????";
 string poststr = "ODE11111";
 string userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ODE?????/1.4.0 Chrome/91.0.4472.164 Electron/13.6.9 Safari/537.36".Replace(prestr, poststr);
 var full = args.Length > 0;
-string[] cats = ["538", "527", "5"];
+string[] cats = ["527", "538", "5"];
 var check = await WithRetry(MainLoopAsync, urls.Length, default);
 Console.WriteLine($"输出目录：{cd}");
 var apiUrl = urls[0];
@@ -53,22 +53,24 @@ async Task<RetryResult> MainLoopAsync(int urlIndex, CancellationToken token)
             var readItems = JsonSerializer.Deserialize(text, JsonElementContext.Custom.ODEItemArray)!;
             foreach (var readItem in readItems)
             {
-                if (readItem.List?.Length > 0)
+                var list = readItem.List?.Where(s => !String.IsNullOrEmpty(s.CoID) && s.Type != "warehousing").ToArray();
+                if (list?.Length > 0)
                 {
-                    items.TryAdd(readItem.ID, readItem);
+                    items.TryAdd(readItem.ID, readItem with { List = list });
                 }
             }
 
         }
         var index = 0;
         var total = 1;
+        var per = 20;
         while (index++ < total)
         {
             async Task<RetryResult> SubLoopAsync(int urlIndex, CancellationToken token)
             {
                 try
                 {
-                    var resultItem = await GetAppList(cat, index, numberposts: 240, token: token);
+                    var resultItem = await GetAppList(cat, index, numberposts: 120, token: token);
                     var list = resultItem.List;
                     var len = list?.Length ?? 0;
                     if (list is null || len <= 0)
@@ -77,36 +79,50 @@ async Task<RetryResult> MainLoopAsync(int urlIndex, CancellationToken token)
                     }
                     total = (resultItem.Numberofarticlescount + resultItem.PageSize - 1) / resultItem.PageSize;
                     Console.WriteLine($"当前页：----------------[{len}] {index}  / {total}  {cat}----------------");
-                    var per = 30;
                     var sr = RetryResult.Success;
                     var bcount = 0;
                     using var cts = new CancellationTokenSource();
-                    await Parallel.ForEachAsync(list, new ParallelOptions
+                    try
                     {
-                        MaxDegreeOfParallelism = per,
-                        CancellationToken = cts.Token
-                    }, async (listi, token) =>
-                    {
-                        var r = await AddListi(items, listi);
-                        if(cts.IsCancellationRequested)
+                        await Parallel.ForEachAsync(list, new ParallelOptions
                         {
-                            return;
-                        }
-                        if (r is RetryResult.Break)
+                            MaxDegreeOfParallelism = per,
+                            CancellationToken = cts.Token
+                        }, async (listi, token) =>
                         {
-                            if (Interlocked.Increment(ref bcount) >= per)
+                            var r = await AddListi(items, listi);
+                            if (cts.IsCancellationRequested)
                             {
-                                cts.Cancel();
+                                return;
                             }
-                        }
-                        else if(sr < r)
-                        {
-                            sr = r;
-                        }
-                    });
-                    if(bcount >= per)
+                            if (r is RetryResult.Break)
+                            {
+                                if (Interlocked.Increment(ref bcount) >= per)
+                                {
+                                    cts.Cancel();
+                                }
+                            }
+                            else
+                            {
+                                Interlocked.Exchange(ref bcount, 0);
+                                if (sr < r)
+                                {
+                                    sr = r;
+                                }
+                            }
+                        });
+                    }
+                    catch (TaskCanceledException tce)
                     {
-                        return RetryResult.Break;
+                        if (bcount >= per)
+                        {
+                            Console.WriteLine($"任务提前结束：{index}  / {total}  {cat}【找到{per}个数据一致项！】");
+                            return RetryResult.Break;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"任务提前结束：{index}  / {total}  {cat}【异常：{tce.Message}】");
+                        }
                     }
                     return sr;
                 }
@@ -143,6 +159,7 @@ async Task<RetryResult> AddListi(ConcurrentDictionary<int, ODEItem> items, ODEIt
             var list = element.List;
             if (list is not null)
             {
+                list = [.. list.Where(s => !string.IsNullOrEmpty(s.CoID) && s.Type != "warehousing")];
                 if (list.Length > 0)
                 {
                     if (element.Type != "game")
@@ -151,7 +168,7 @@ async Task<RetryResult> AddListi(ConcurrentDictionary<int, ODEItem> items, ODEIt
                     }
                     if (findItem.List is not null)
                     {
-                        if (JsonSerializer.Serialize(list, JsonElementContext.Request.ODEFileArray) == JsonSerializer.Serialize(findItem.List, JsonElementContext.Request.ODEFileArray))
+                        if (list.Select(s => s with { CoID = null }).SequenceEqual(findItem.List.Select(s => s with { CoID = null })))
                         {
                             Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【数据一致！】");
                             return full ? RetryResult.Success : RetryResult.Break;
@@ -188,7 +205,7 @@ async Task<RetryResult> AddListi(ConcurrentDictionary<int, ODEItem> items, ODEIt
 
 async Task FillListIfNeedAsync(ODEFile[] list, CancellationToken token)
 {
-    for (var i = 0;i < list.Length;i ++)
+    for (var i = 0; i < list.Length; i++)
     {
         var item = list[i];
         if (item.Type is "file")
