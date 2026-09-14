@@ -21,7 +21,6 @@ string[] cats = ["527", "538", "5"];
 var check = await WithRetry(MainLoopAsync, urls.Length, default);
 Console.WriteLine($"输出目录：{cd}");
 var apiUrl = urls[0];
-
 async Task<RetryResult> MainLoopAsync(int urlIndex, CancellationToken token)
 {
     apiUrl = urls[urlIndex];
@@ -53,7 +52,7 @@ async Task<RetryResult> MainLoopAsync(int urlIndex, CancellationToken token)
             var readItems = JsonSerializer.Deserialize(text, JsonElementContext.Custom.ODEItemArray)!;
             foreach (var readItem in readItems)
             {
-                var list = readItem.List?.Where(s => !String.IsNullOrEmpty(s.CoID) && s.Type != "warehousing").ToArray();
+                var list = readItem.List?.Where(s => s.CoID?.StartsWith("https://") ?? false).ToArray();
                 if (list?.Length > 0)
                 {
                     items.TryAdd(readItem.ID, readItem with { List = list });
@@ -157,37 +156,29 @@ async Task<RetryResult> AddListi(ConcurrentDictionary<int, ODEItem> items, ODEIt
         {
             var element = await GetAppDownList(newItem.ID.ToString(), null, token)!;
             var list = element.List;
-            if (list is not null)
-            {
-                list = [.. list.Where(s => !string.IsNullOrEmpty(s.CoID) && s.Type != "warehousing")];
-                if (list.Length > 0)
-                {
-                    if (element.Type != "game")
-                    {
-                        await FillListIfNeedAsync(list, token);
-                    }
-                    if (findItem.List is not null)
-                    {
-                        if (list.Select(s => s with { CoID = null }).SequenceEqual(findItem.List.Select(s => s with { CoID = null })))
-                        {
-                            Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【数据一致！】");
-                            return full ? RetryResult.Success : RetryResult.Break;
-                        }
-                    }
-                    newItem.List = list;
-                    Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【{list.Length}已添加！】");
-                }
-                else
-                {
-                    Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【空数据！】");
-                }
-                return RetryResult.Success;
-            }
-            else
+            if (list is null || list.Length is 0)
             {
                 Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【无数据！】");
                 return RetryResult.Success;
             }
+            if (element.Type != "game")
+            {
+                await FillListIfNeedAsync(list, token);
+            }
+            list = [.. list.Where(s => s.CoID?.StartsWith("https://") ?? false)];
+            if (list.Length is 0)
+            {
+                Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【空数据！】");
+                return RetryResult.Success;
+            }
+            if (findItem.List is not null && list.Select(s => s with { CoID = null }).SequenceEqual(findItem.List.Select(s => s with { CoID = null })))
+            {
+                Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【数据一致！】");
+                return full ? RetryResult.Success : RetryResult.Break;
+            }
+            newItem.List = list;
+            Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【{list.Length}已添加！】");
+            return RetryResult.Success;
         }
         catch (Exception ex)
         {
@@ -208,11 +199,7 @@ async Task FillListIfNeedAsync(ODEFile[] list, CancellationToken token)
     for (var i = 0; i < list.Length; i++)
     {
         var item = list[i];
-        if (item.Type is "file")
-        {
-            item.CoID = $"{apiUrl}/download/?path={item.CoID}";
-        }
-        else
+        if (string.IsNullOrWhiteSpace(item.CoSize))
         {
             item.CoID = $"{apiUrl}/download/list/?path={item.CoID}";
             //var subList = await GetAppDownList(null, item.CoID, token)!;
@@ -221,6 +208,10 @@ async Task FillListIfNeedAsync(ODEFile[] list, CancellationToken token)
             //    item.List = subList.List;
             //    await FillListIfNeedAsync(item.List, token);
             //}
+        }
+        else
+        {
+            item.CoID = $"{apiUrl}/download/?path={item.CoID}";
         }
         list[i] = item;
     }
@@ -403,14 +394,14 @@ record struct ODEItem
 {
     [JsonPropertyName("id")]
     public int ID { get; set; }
-    [JsonPropertyName("category_parent")]
-    public int CategoryParent { get; set; }
-    [JsonPropertyName("categories")]
-    public string? Categories { get; set; }
+    // [JsonPropertyName("category_parent")]
+    // public int CategoryParent { get; set; }
+    // [JsonPropertyName("categories")]
+    // public string? Categories { get; set; }
     [JsonPropertyName("post_title")]
     public string? PostTitle { get; set; }
-    [JsonPropertyName("Subtitle")]
-    public string? Subtitle { get; set; }
+    // [JsonPropertyName("Subtitle")]
+    // public string? Subtitle { get; set; }
     [JsonPropertyName("list")]
     public ODEFile[]? List { get; set; }
 }
@@ -434,15 +425,12 @@ record struct ODEFile
     public string? CoName { get; set; }
     [JsonPropertyName("coID")]
     public string? CoID { get; set; }
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
-    [JsonPropertyName("path")]
-    public string? Path { get; set; }
-    [JsonPropertyName("openPath")]
-    public string? OpenPath { get; set; }
-    [JsonPropertyName("list")]
-
-    public ODEFile[]? List { get; set; }
+    //[JsonPropertyName("type")]
+    //public string? Type { get; set; }
+    // [JsonPropertyName("path")]
+    // public string? Path { get; set; }
+    // [JsonPropertyName("openPath")]
+    // public string? OpenPath { get; set; }
 }
 
 // 优化后的转换器：直接用ValueSpan转字符串，极简且通用
