@@ -1,5 +1,6 @@
 ﻿using System.Collections.Concurrent;
 using System.Globalization;
+using System.Runtime.ConstrainedExecution;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
@@ -100,14 +101,58 @@ async Task<RetryResult> MainLoopAsync(int urlIndex, CancellationToken token)
                     var list = resultItem.List;
                     total = resultItem.AllPage;
                     var len = list?.Length ?? 0;
-                    if (len <= 0)
+                    if (list is null || len <= 0)
                     {
                         return RetryResult.Success;
                     }
+                    var per = len;
                     Console.WriteLine($"当前页：----------------[{len}] {index}  / {total}  {cat}----------------");
-                    var tasks = list!.Select(listi => AddListi(url, items, listi));
-                    var rarray = await Task.WhenAll(tasks);
-                    return rarray.Any(s => s is RetryResult.Success) ? RetryResult.Success : rarray.Any(s=>s is RetryResult.Failure) ? RetryResult.Failure : RetryResult.Break;
+                    var sr = RetryResult.Success;
+                    var bcount = 0;
+                    using var cts = new CancellationTokenSource();
+                    try
+                    {
+                        await Parallel.ForEachAsync(list, new ParallelOptions
+                        {
+                            MaxDegreeOfParallelism = per,
+                            CancellationToken = cts.Token
+                        }, async (listi, token) =>
+                        {
+                            var r = await AddListi(url, items, listi);
+                            if (cts.IsCancellationRequested)
+                            {
+                                return;
+                            }
+                            if (r is RetryResult.Break)
+                            {
+                                if (Interlocked.Increment(ref bcount) >= per)
+                                {
+                                    cts.Cancel();
+                                }
+                            }
+                            else
+                            {
+                                Interlocked.Exchange(ref bcount, 0);
+                                if (sr < r)
+                                {
+                                    sr = r;
+                                }
+                            }
+                        });
+                    }
+                    catch (TaskCanceledException tce)
+                    {
+                        if (bcount >= per)
+                        {
+                            Console.WriteLine($"任务提前结束：{index}  / {total}  {cat}【找到{per}个数据一致项！】");
+                            return RetryResult.Break;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"任务提前结束：{index}  / {total}  {cat}【异常：{tce.Message}】");
+                        }
+                    }
+                    return sr;
                 }
                 catch (Exception ex)
                 {
@@ -170,7 +215,7 @@ async Task<RetryResult> WithRetry(Func<int, CancellationToken, Task<RetryResult>
 
 async Task<RetryResult> AddListi(string url, ConcurrentDictionary<int, GameBoxItem> items, GameBoxItem newItem)
 {
-    items.TryGetValue(newItem.ID,out var findItem);
+    items.TryGetValue(newItem.ID, out var findItem);
     async Task<RetryResult> AddListSubAsync(int i, CancellationToken token)
     {
         try
@@ -188,33 +233,28 @@ async Task<RetryResult> AddListi(string url, ConcurrentDictionary<int, GameBoxIt
             var str = await result.Content.ReadAsStringAsync(default);
             var element = JsonSerializer.Deserialize(str, JsonElementContext.Custom.GameBoxItem)!;
             var fileInfo = element.GetFileInfo;
-            if (fileInfo is not null)
-            {
-                if (fileInfo.Length > 0)
-                {
-                    if (findItem.GetFileInfo is not null)
-                    {
-                        //fileInfo = [.. findItem.GetFileInfo.Concat(fileInfo).Distinct()];
-                        if (fileInfo.SequenceEqual(findItem.GetFileInfo))
-                        {
-                            Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【数据一致！】");
-                            return full ? RetryResult.Success : RetryResult.Break;
-                        }
-                    }
-                    newItem.GetFileInfo = fileInfo;
-                    Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【{fileInfo.Length}已添加！】");
-                }
-                else
-                {
-                    Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【空数据！】");
-                }
-                return RetryResult.Success;
-            }
-            else
+            if (fileInfo is null)
             {
                 Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【无数据！】");
                 return RetryResult.Success;
             }
+            if (fileInfo.Length == 0)
+            {
+                Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【空数据！】");
+                return RetryResult.Success;
+            }
+            if (findItem.GetFileInfo is not null)
+            {
+                //fileInfo = [.. findItem.GetFileInfo.Concat(fileInfo).Distinct()];
+                if (fileInfo.SequenceEqual(findItem.GetFileInfo))
+                {
+                    Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【数据一致！】");
+                    return full ? RetryResult.Success : RetryResult.Break;
+                }
+            }
+            newItem.GetFileInfo = fileInfo;
+            Console.WriteLine($"{newItem.ID} - {newItem.PostTitle}【{fileInfo.Length}已添加！】");
+            return RetryResult.Success;
         }
         catch (Exception ex)
         {
@@ -223,7 +263,7 @@ async Task<RetryResult> AddListi(string url, ConcurrentDictionary<int, GameBoxIt
         }
     }
     var result = await WithRetry(AddListSubAsync, 3, default);
-    if(result is RetryResult.Success && newItem.GetFileInfo is not null)
+    if (result is RetryResult.Success && newItem.GetFileInfo is not null)
     {
         items[newItem.ID] = newItem;
     }
@@ -291,16 +331,16 @@ record struct GameBoxItem
 {
     [JsonPropertyName("id")]
     public int ID { get; set; }
-    [JsonPropertyName("category_parent")]
-    public int CategoryParent { get; set; }
-    [JsonPropertyName("categories")]
-    public string? Categories { get; set; }
+    // [JsonPropertyName("category_parent")]
+    // public int CategoryParent { get; set; }
+    // [JsonPropertyName("categories")]
+    // public string? Categories { get; set; }
     [JsonPropertyName("post_title")]
     public string? PostTitle { get; set; }
-    [JsonPropertyName("wp_get_attachment_image_src")]
-    public string? WpGetAttachmentImageSrc { get; set; }
-    [JsonPropertyName("filesize")]
-    public string? FileSize { get; set; }
+    // [JsonPropertyName("wp_get_attachment_image_src")]
+    // public string? WpGetAttachmentImageSrc { get; set; }
+    // [JsonPropertyName("filesize")]
+    // public string? FileSize { get; set; }
     [JsonPropertyName("GetFileInfo")]
     public GameBoxFile[]? GetFileInfo { get; set; }
 }
@@ -309,18 +349,18 @@ record struct GameBoxFile
 {
     [JsonPropertyName("DownUrl")]
     public string? DownUrl { get; set; }
-    [JsonPropertyName("openpath")]
-    public string? OpenPath { get; set; }
+    // [JsonPropertyName("openpath")]
+    // public string? OpenPath { get; set; }
     [JsonPropertyName("filesize")]
     public string? FileSize { get; set; }
     [JsonPropertyName("link_ctime")]
     public string? LinkCreateTime { get; set; }
-    [JsonPropertyName("filesize_z")]
-    public long FileSizeZone { get; set; }
+    // [JsonPropertyName("filesize_z")]
+    // public long FileSizeZone { get; set; }
     [JsonPropertyName("filename")]
     public string? FileName { get; set; }
-    [JsonPropertyName("server")]
-    public string? Server { get; set; }
+    // [JsonPropertyName("server")]
+    // public string? Server { get; set; }
 }
 
 // 优化后的转换器：直接用ValueSpan转字符串，极简且通用
