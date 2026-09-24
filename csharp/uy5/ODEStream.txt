@@ -1,2 +1,2 @@
-http://14.103.247.142:8883/?steamId=${id}
-https://store.kelongwo.uk/steam/${id}.zip
+http://103.39.221.38:8883/?steamId={steamId}
+http://103.39.221.38:8883/steamFile/{steamId}.zip

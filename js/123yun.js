@@ -89,32 +89,71 @@
         return { valid: true };
     };
 
-    _123.getFileDownloadData = async function (s, a, t) {
+    _123.allProps = function* (selector) {
+        const el = document.querySelector(selector);
+        if (!el) return null;
+        const entry = Object.entries(el).find(function (kv) { return kv[0].indexOf("__reactFiber$") === 0 || kv[0].indexOf("__reactInternalInstance$") === 0; });
+        let fiber = entry ? entry[1] : null;
+        while (fiber) { yield fiber.memoizedProps; fiber = fiber.return; }
+    };
+
+    _123.getProps = function (selector, propsChecker) {
+        const i = kuake.allProps(selector);
+        return i.find(propsChecker);
+    };
+
+    _123.getFileDownloadData = async function (s, t) {
         const content = JSON.stringify({ ShareKey: s, FileId: t.FileId, S3KeyFlag: t.S3KeyFlag, Size: t.Size, Etag: t.Etag }),
             path = "/b/api/v2/share/download/info",
             signData = _123.sign(path, "web", "3"),
             fullUrl = `${globalThis.location.origin}${path}?${signData[0]}=${signData[1]}`,
-            opt = { method: "POST", body: content, headers: { Authorization: a, "Content-Type": "application/json;charset=UTF-8"} };
-
-        return (await (await fetch(fullUrl, opt)).json()).data;
+            headers = { "Content-Type": "application/json;charset=UTF-8" };
+        const j = await (await fetch(fullUrl, { method: "POST", body: content, headers })).json();
+        if (j.code !== 0) throw new Error("code=" + j.code + " " + (j.message || ""));
+        return j.data;
     };
 
-    _123.getReact = function (selector) {
-        return Object.entries(document.querySelector(selector)).find(([key]) => key.startsWith("__reactFiber$") || key.startsWith("__reactInternalInstance$"))[1];
-    }
+    _123.getHomeDownloadData = async function (authorization, item) {
+        const body = JSON.stringify({ driveId: 0, etag: item.Etag, fileId: item.FileId, s3keyFlag: item.S3KeyFlag, type: 0, fileName: item.FileName || item.name, size: item.Size || item.size });
+        const j = await (await fetch(`${location.origin}/b/api/v2/file/download_info`, {
+            method: "POST", body,
+            headers: { Authorization: authorization, "Content-Type": "application/json;charset=UTF-8" }
+        })).json();
+        if (j.code !== 0) throw new Error("code=" + j.code + " " + (j.message || ""));
+        return j.data;
+    };
 
     _123.showDownload = async function () {
-        const props = _123.getReact(".file-list-container").return.pendingProps;
-        shareKey = props.info.ShareKey;
-        fileList = props.isSingleFile ? props.serverFileList : _123.getReact(".file-list-container>div>div[class$=wrapper]").return.pendingProps.dataSource,
-            authorToken = localStorage.getItem("authorToken").replace(/[\"\\]/g, ""),
-            authorization = `Bearer ${authorToken}`;
-        await Promise.all([fileList[0]].map(async item => {
-            if (item.Etag) {
-                var data = await _123.getFileDownloadData(shareKey, authorization, item);
-                console.info(`文件：[${item.FileName ? item.FileName : item.FileId}] (${data.dispatchList[0].prefix}${data.downloadPath})`);
-            }
-        }));
+        if (document.querySelector(".homeClass")) {
+            const authorToken = sessionStorage.getItem("authorToken") || localStorage.getItem("authorToken");
+            const authorization = authorToken ? `Bearer ${authorToken}` : "";
+            if (!authorization) { return; }
+            const props = _123.getProps(".homeClass", s => s?.value?.homeState);
+            const fileList = props?.value?.homeState?.selectedRows;
+            fileList && fileList.length && await Promise.all(fileList.filter(s => s.Etag).map(async item => {
+                try {
+                    const data = await _123.getHomeDownloadData(authorization, item);
+                    const url = data.dispatchList[0].prefix + data.downloadPath;
+                    console.info(`文件：[${item.FileName ? item.FileName : item.FileId}] (${url})`);
+                } catch (e) {
+                    console.warn(`文件：[${item.FileName ? item.FileName : item.FileId}] 获取下载链接失败: ${e.message}`);
+                }
+            }));
+        } else {
+            const props = _123.getProps(".content-wrapper-root", t => t?.value?.selectedFileList);
+            const shareKey = props?.value?.shareKey;
+            const fileList = props?.value?.selectedFileList;
+            shareKey && fileList && fileList.length && await Promise.all(fileList.filter(s => s.Etag).map(async item => {
+                try {
+                    const data = await _123.getFileDownloadData(shareKey, item);
+                    const url = data.dispatchList[0].prefix + data.downloadPath;
+                    console.info(`文件：[${item.FileName ? item.FileName : item.FileId}] (${url})`);
+                }
+                catch (e) {
+                    console.warn(`文件：[${item.FileName ? item.FileName : item.FileId}] 获取下载链接失败: ${e.message}`);
+                }
+            }));
+        }
     };
 
     _123.showDownload();
