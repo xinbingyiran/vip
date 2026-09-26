@@ -24,7 +24,7 @@ var apiUrl = urls[0];
 async Task<RetryResult> MainLoopAsync(int urlIndex, CancellationToken token)
 {
     apiUrl = urls[urlIndex];
-    Console.WriteLine($"当前地址：{apiUrl} - 绑定版本: 1.4.1");
+    Console.WriteLine($"当前地址：{apiUrl} - 绑定版本: 1.5.6");
     try
     {
         var message = new HttpRequestMessage(HttpMethod.Get, $"{apiUrl}/wodown/update.php");

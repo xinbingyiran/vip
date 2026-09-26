@@ -202,22 +202,43 @@ public static partial class ProgramHelper
         Console.WriteLine(wjurl);
         var wjtext = await _client.GetStringAsync(wjurl);
         var ct = JsonSerializer.Deserialize(wjtext, _sys.Sys_content_version)!;
+        Dictionary<string, Game>? oldDatas = null;
+        try
+        {
+            var fdata = await File.ReadAllTextAsync("GameAll.json");
+            oldDatas = JsonSerializer.Deserialize(fdata, _sys.GameArray)?.DistinctBy(s => s.Code ?? "").ToDictionary(s => s.Code ?? "");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"读取旧文件失败：{ex.Message}");
+        }
         var datas = ct.Content!.Select(p =>
-            new Game
+        {
+            var code = DESDecrypt(p.BH);
+            var newmm = DESDecrypt(p.MM);
+            if (string.IsNullOrWhiteSpace(NonNumberRegex().Replace(newmm ?? "", "")) && oldDatas is not null && oldDatas.TryGetValue(code ?? "", out var oldItem))
             {
-                Code = DESDecrypt(p.BH),
-                MMSS = DESDecrypt(p.MM),
+                newmm = oldItem.MMSS;
+            }
+            return new Game
+            {
+                Code = code,
+                MMSS = newmm,
                 Describe = DESDecrypt(p.Name2),
                 Name = DESDecrypt(p.Name1),
                 RLzz = DESDecrypt(p.RongL),
                 Types = DESDecrypt(p.BiaoQ)
-            }).OrderBy(s => s.Code).ToArray();
+            };
+        }).OrderBy(s => s.Code).ToArray();
         var l = datas.Length;
         var i = 0;
         var time = DateTime.Now;
         var suc = 0;
         var fai = 0;
-        await Parallel.ForEachAsync(datas, async (g, t) =>
+        await Parallel.ForEachAsync(datas, new ParallelOptions
+        {
+            MaxDegreeOfParallelism = 30
+        }, async (g, t) =>
         {
             var retry = 0;
             var c = Interlocked.Increment(ref i);
@@ -260,10 +281,13 @@ public class Game
 {
     public string? Code { get; set; }
     public string? Name { get; set; }
-    public string? MMSS { get; set; }
     public string? Describe { get; set; }
+    public string? MMSS { get; set; }
+    [JsonIgnore]
     public string? RLzz { get; set; }
+    [JsonIgnore]
     public string? Types { get; set; }
+    [JsonIgnore]
     public string? YXBB { get; set; }
     public string? Addr1 { get; set; }
     public string? Addr2 { get; set; }
