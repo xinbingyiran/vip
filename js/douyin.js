@@ -5,7 +5,7 @@
     }
     const douyin = globalThis._douyin_ = {
         stoped: false,
-        log: (msg) => console.info(`%c %s`, 'color: green; font-size: 2em;', msg),
+        log: (msg) => console.info(`%c %s`, 'color: green;', msg),
         get liveRoom() {
 
             /*[data-e2e=feed-active-video]*/
@@ -27,9 +27,9 @@
         const ci = keyItem.check;
         if (ci != keyItem._actionCI) {
             keyItem._actionCI = ci;
-            if (keyItem._actions?.length && typeof douyin.log == "function") {
-                douyin.log(`【取消】${keyItem._actions[0].type} ${keyItem.key}【${keyItem.code}】`);
-            }
+            // if (keyItem._actions?.length && typeof douyin.log == "function") {
+            //     douyin.log(`【取消】${keyItem._actions[0].type} ${keyItem.key}【${keyItem.code}】`);
+            // }
             keyItem._actions = [];
         }
         if (!keyItem._actionCI) {
@@ -44,10 +44,10 @@
                 repeat: false
             };
             actions.push(fa);
-            if (typeof douyin.log == "function") {
-                douyin.log(`【部署】${fa.type} ${keyItem.key}【${keyItem.code}】 延迟: ${~~(downTs - ts)}`);
-            }
             const upTs = downTs + keyItem.downMs + Math.random() * keyItem.downMSRand;
+            if (typeof douyin.log == "function") {
+                douyin.log(`【部署】 ${keyItem.key}【${keyItem.code}】 延迟: ${~~(downTs - ts)} 持续: ${~~(upTs - downTs)}`);
+            }
             downTs += keyItem.repeatDelay;
             while (downTs < upTs) {
                 actions.push({
@@ -71,9 +71,9 @@
             try {
                 const dv = new KeyboardEvent(currentAction.type, eventInit);
                 globalThis.document.body.dispatchEvent(dv);
-                if (typeof douyin.log == "function") {
-                    douyin.log(`【触发】${currentAction.type} ${keyItem.key}【${keyItem.code}】`);
-                }
+                // if (typeof douyin.log == "function" && !currentAction.repeat) {
+                //     douyin.log(`【触发】${currentAction.type} ${keyItem.key}【${keyItem.code}】`);
+                // }
             }
             catch (e) {
                 if (typeof douyin.log == "function") {
