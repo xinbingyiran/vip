@@ -54,14 +54,6 @@
         return url ? { url } : { error: "无 download_url" };
     };
 
-    kuake.walk = async function (items, path, stoken, pwdId, mode) {
-        for (const item of items) {
-            if (item.dir) {
-                continue;
-            }
-        }
-    };
-
     kuake.showDownload = async function () {
         if (document.querySelector(".section-main")) {
             const props = kuake.getProps(".ant-table-default", s => s?.rowSelection);

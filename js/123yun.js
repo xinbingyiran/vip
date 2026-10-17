@@ -98,7 +98,7 @@
     };
 
     _123.getProps = function (selector, propsChecker) {
-        const i = kuake.allProps(selector);
+        const i = _123.allProps(selector);
         return i.find(propsChecker);
     };
 
@@ -113,6 +113,35 @@
         return j.data;
     };
 
+    _123.getShareDownloadUrl = async function (f, authorization) {
+        // const body = {
+        //     driveId: 0,
+        //     etag: f.Etag,
+        //     fileId: f.FileId,
+        //     s3keyFlag: f.S3KeyFlag,
+        //     type: f.Type,
+        //     fileName: f.FileName,
+        //     size: f.Size
+        // };
+        const body = { ...f, driveId: 0 };
+        const resp = await fetch(`${location.origin}/b/api/file/download_info`, {
+            method: 'POST',
+            credentials: 'include',
+            headers: {
+                'App-Version': '61',
+                'Authorization': authorization,
+                'Platform': 'android',
+                'X-App-Version': '2.4.0',
+                'Accept': 'application/json;charset=UTF-8',
+                'Content-Type': 'application/json;charset=UTF-8'
+            },
+            body: JSON.stringify(body)
+        });
+        const data = await resp.json();
+        if (data.code !== 0) throw new Error(`download_info 失败: code=${data.code} ${data.message || ''}`);
+        return data.data.DownloadUrl;
+    }
+
     _123.getHomeDownloadData = async function (authorization, item) {
         const body = JSON.stringify({ driveId: 0, etag: item.Etag, fileId: item.FileId, s3keyFlag: item.S3KeyFlag, type: 0, fileName: item.FileName || item.name, size: item.Size || item.size });
         const j = await (await fetch(`${location.origin}/b/api/v2/file/download_info`, {
@@ -124,16 +153,17 @@
     };
 
     _123.showDownload = async function () {
+        const authorToken = (sessionStorage.getItem("authorToken") || localStorage.getItem("authorToken"))?.replace(/[\"\\]/g, "");
+        const authorization = authorToken ? `Bearer ${authorToken}` : "";
+        if (!authorization) { return; }
         if (document.querySelector(".homeClass")) {
-            const authorToken = sessionStorage.getItem("authorToken") || localStorage.getItem("authorToken");
-            const authorization = authorToken ? `Bearer ${authorToken}` : "";
-            if (!authorization) { return; }
             const props = _123.getProps(".homeClass", s => s?.value?.homeState);
             const fileList = props?.value?.homeState?.selectedRows;
             fileList && fileList.length && await Promise.all(fileList.filter(s => s.Etag).map(async item => {
                 try {
-                    const data = await _123.getHomeDownloadData(authorization, item);
-                    const url = data.dispatchList[0].prefix + data.downloadPath;
+                    // const data = await _123.getHomeDownloadData(authorization, item);
+                    // const url = data.dispatchList[0].prefix + data.downloadPath;
+                    const url = await _123.getShareDownloadUrl(item, authorization);
                     console.info(`文件：[${item.FileName ? item.FileName : item.FileId}] (${url})`);
                 } catch (e) {
                     console.warn(`文件：[${item.FileName ? item.FileName : item.FileId}] 获取下载链接失败: ${e.message}`);
@@ -145,8 +175,9 @@
             const fileList = props?.value?.selectedFileList;
             shareKey && fileList && fileList.length && await Promise.all(fileList.filter(s => s.Etag).map(async item => {
                 try {
-                    const data = await _123.getFileDownloadData(shareKey, item);
-                    const url = data.dispatchList[0].prefix + data.downloadPath;
+                    // const data = await _123.getFileDownloadData(shareKey, item);
+                    // const url = data.dispatchList[0].prefix + data.downloadPath;
+                    const url = await _123.getShareDownloadUrl(item, authorization);
                     console.info(`文件：[${item.FileName ? item.FileName : item.FileId}] (${url})`);
                 }
                 catch (e) {
