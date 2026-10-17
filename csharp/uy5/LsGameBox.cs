@@ -59,7 +59,7 @@ async Task<RetryResult> MainLoopAsync(int urlIndex, CancellationToken token)
         Console.WriteLine($"[{url}]检测升级失败了：{ex.Message}");
         return RetryResult.Failure;
     }
-    int[] cats = [527, 5];
+    int[] cats = [0]; // [527, 5];
     for (var ci = 0; ci < cats.Length; ci++)
     {
         var cat = cats[ci];

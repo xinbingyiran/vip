@@ -136,6 +136,12 @@
     "post_title": "双人成行/It Takes Two",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/N7vA3uJ7nmI3?pwd=ie0r",
+        "filesize": "44.21 G",
+        "link_ctime": "2026.10.07",
+        "filename": "ItTakesTwo v1.0.0.4"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/F32i6bf2qeiq?pwd=n4rc",
         "filesize": "44.1 G",
         "link_ctime": "2024.03.22",
@@ -435,6 +441,12 @@
     "id": 14474,
     "post_title": "埃尔登法环/艾尔登法环/豪华版/Elden Ring Deluxe Edition",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/vArY7v2aiui2?pwd=jxn4",
+        "filesize": "49.37 G",
+        "link_ctime": "2026.08.08",
+        "filename": "ELDEN RING v1.10.1"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/J3uqA3vqEnii?pwd=hk5w",
         "filesize": "49.37 G",
@@ -1005,6 +1017,12 @@
     "id": 14982,
     "post_title": "罪恶装备：STRIVE/GUILTY GEAR -STRIVE",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/maQNNjIJzqim?pwd=bz9f",
+        "filesize": "32.64 G",
+        "link_ctime": "2026.09.30",
+        "filename": "GUILTY GEAR STRIVE v2.03"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/bqIv2eZ7rmMf?pwd=6hb4",
         "filesize": "22.3 G",
@@ -2910,6 +2928,18 @@
     ]
   },
   {
+    "id": 17019,
+    "post_title": "疯狂游戏大亨2/Mad Games Tycoon 2",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/QbI36jyqmEFr?pwd=1has",
+        "filesize": "469.78 M",
+        "link_ctime": "2026.10.05",
+        "filename": "Mad Games Tycoon 2 Build.20855306"
+      }
+    ]
+  },
+  {
     "id": 17035,
     "post_title": "层层恐惧3/Layers of Fear 2023",
     "GetFileInfo": [
@@ -3622,6 +3652,12 @@
     "post_title": "群星 银河版/Stellaris",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/Fj2QB37jquqi?pwd=4q4e",
+        "filesize": "17.39 G",
+        "link_ctime": "2026.09.27",
+        "filename": "Stellaris v4.5.1"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/NZZvm2AR7nYf?pwd=b8p0",
         "filesize": "15.66 G",
         "link_ctime": "2024.05.09",
@@ -3760,10 +3796,10 @@
     "post_title": "英雄传说：创之轨迹/The Legend of Heroes: Trails into Reverie",
     "GetFileInfo": [
       {
-        "DownUrl": "https://cloud.189.cn/t/IZ36Z3mYfmUr?pwd=h8cl",
-        "filesize": "22.78 G",
-        "link_ctime": "2024.04.11",
-        "filename": "TheLegendofHeroes"
+        "DownUrl": "https://cloud.189.cn/t/YZNjii7zMFZn?pwd=9jsp",
+        "filesize": "25.27 G",
+        "link_ctime": "2026.10.11",
+        "filename": "The Legend of Heroes Trails into Reverie Build.16668732"
       }
     ]
   },
@@ -4023,6 +4059,12 @@
     "id": 18469,
     "post_title": "迪士尼梦幻星谷/Disney Dreamlight Valley",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/v2aQr2JVBbEb?pwd=0zrw",
+        "filesize": "23.81 G",
+        "link_ctime": "2026.09.30",
+        "filename": "Disney Dreamlight Valley v1.25.0.8687"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/nUfEVvbe2yqm?pwd=8qkx",
         "filesize": "8.16 G",
@@ -8104,6 +8146,12 @@
     "post_title": "雾锁王国/Enshrouded",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/IfeEfeNFbMFr?pwd=q03k",
+        "filesize": "32.62 G",
+        "link_ctime": "2026.10.17",
+        "filename": "Enshrouded v1.0"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/jYriIznYremu?pwd=ap3c",
         "filesize": "13.65 G",
         "link_ctime": "2024.03.24",
@@ -8898,6 +8946,18 @@
     ]
   },
   {
+    "id": 33591,
+    "post_title": "波斯王子：失落王冠/Prince of Persia: The Lost Crown",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/BVNjY3qeE3Mj?pwd=2wp7",
+        "filesize": "6.37 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Prince of Persia The Lost Crown v327680"
+      }
+    ]
+  },
+  {
     "id": 33600,
     "post_title": "奇唤士/The Thaumaturge",
     "GetFileInfo": [
@@ -8928,6 +8988,78 @@
     ]
   },
   {
+    "id": 33672,
+    "post_title": "植物大战僵尸™: 和睦小镇保卫战/Plants vs. Zombies: Battle for Neighborville™ Deluxe Edition",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FnQvumqUzIna?pwd=2yrr",
+        "filesize": "6.41 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Plants vs. Zombies Battle for Neighborville Complete Edition[0100C56010FD8000][v196608](1G+1U+1D)[XCI]"
+      }
+    ]
+  },
+  {
+    "id": 33693,
+    "post_title": "暗黑破坏神 III/Diablo III: Eternal Collection",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/EvUNBbEzeuae?pwd=s8ih",
+        "filesize": "13.3 G",
+        "link_ctime": "2024.03.27",
+        "filename": "Diablo III Eternal Collection[01001B300B9BE000][v0][NSP]"
+      }
+    ]
+  },
+  {
+    "id": 33716,
+    "post_title": "JUMP大乱斗/JUMP FORCE",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Y3Y7zaUNZ7Fn?pwd=of2f",
+        "filesize": "11.35 G",
+        "link_ctime": "2024.03.27",
+        "filename": "JUMP FORCE Deluxe Edition[01008CD01187E000][v327680](1G+1U+11D)[XCI]"
+      }
+    ]
+  },
+  {
+    "id": 33742,
+    "post_title": "沙滩排球3/Dead or Alive Xtreme 3 Scarlet",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/RVV3QfiYFZNr?pwd=6esd",
+        "filesize": "4.42 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Dead or Alive Xtreme 3 Scarlet[01009CC00C97C000][v0][NSP]"
+      }
+    ]
+  },
+  {
+    "id": 33753,
+    "post_title": "渡神纪 芬尼斯崛起/Immortals Fenyx Rising",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/M7jE3iAziQbu?pwd=wbq5",
+        "filesize": "24.95 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Immortals Fenyx Rising[01006E60131B6000][v720896](1G+1U+5D)[XCI]"
+      }
+    ]
+  },
+  {
+    "id": 33768,
+    "post_title": "龙珠：超宇宙2/DRAGON BALL XENOVERSE 2",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7beEni3qQVbq?pwd=6hzh",
+        "filesize": "6.42 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Dragon Ball Xenoverse 2[010078d000f88000][v0][NSP]"
+      }
+    ]
+  },
+  {
     "id": 33787,
     "post_title": "退潮/Jusant",
     "GetFileInfo": [
@@ -8940,6 +9072,66 @@
     ]
   },
   {
+    "id": 33791,
+    "post_title": "火炬之光 3/Torchlight III",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/YVfmQznEb2Af?pwd=jtv7",
+        "filesize": "10.4 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Torchlight III[010075400DDB8000][v589824](1G+1U)[XCI]"
+      }
+    ]
+  },
+  {
+    "id": 33834,
+    "post_title": "纬度分隔/Degrees of Separation",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2QfuEfMn6Nbq?pwd=dp7t",
+        "filesize": "477.24 M",
+        "link_ctime": "2024.03.28",
+        "filename": "Degrees of Separation[010067900B9C4000][v0][NSP]"
+      }
+    ]
+  },
+  {
+    "id": 33854,
+    "post_title": "三角战略/TRIANGLE STRATEGY",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2EFzQzF7ZRza?pwd=x5xh",
+        "filesize": "5.8 G",
+        "link_ctime": "2024.03.28",
+        "filename": "TRIANGLE STRATEGY[0100CC80140F8000][v0][XCI]"
+      }
+    ]
+  },
+  {
+    "id": 33879,
+    "post_title": "鬼灭之刃: 火之神血风谭/Demon Slayer: Kimetsu no Yaiba - The Hinokami Chronicles",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Nb6namz2Qnyi?pwd=tmd4",
+        "filesize": "8.74 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles[0100309016E7A000][v0][NSP]"
+      }
+    ]
+  },
+  {
+    "id": 33899,
+    "post_title": "SD GUNDAM G世代 火线纵横/SD GUNDAM G GENERATION CROSS RAYS",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/IfEZVbFfIZvy?pwd=dg6s",
+        "filesize": "21.36 G",
+        "link_ctime": "2024.03.28",
+        "filename": "SD GUNDAM G GENERATION CROSS RAYS[010055700CEA8000][v720896]"
+      }
+    ]
+  },
+  {
     "id": 33916,
     "post_title": "荣耀死斗2/Mortal Glory 2",
     "GetFileInfo": [
@@ -8948,6 +9140,30 @@
         "filesize": "371.64 M",
         "link_ctime": "2024.04.05",
         "filename": "Mortal.Glory.2 v1.1.0"
+      }
+    ]
+  },
+  {
+    "id": 33958,
+    "post_title": "玩具熊的午夜后宫：安全漏洞/Five Nights at Freddy's: Security Breach",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/aMvyM3YjUjia?pwd=6lnv",
+        "filesize": "7.76 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Five Nights at Freddy's Security Breach [01009060193C4000][v0]"
+      }
+    ]
+  },
+  {
+    "id": 33972,
+    "post_title": "怪物猎人崛起：曙光/MONSTER HUNTER RISE",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/juyYfiBZ3Y7n?pwd=i6ca",
+        "filesize": "6.02 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Monster Hunter Rise [0100559011740000][v0]"
       }
     ]
   },
@@ -8990,6 +9206,66 @@
         "filesize": "22.58 G",
         "link_ctime": "2024.04.03",
         "filename": "LastTrainHome v13592369-1.0.0.32413"
+      }
+    ]
+  },
+  {
+    "id": 34081,
+    "post_title": "真人快打 1/Mortal Kombat 1",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uaie6bMRbIfa?pwd=xy6c",
+        "filesize": "5.88 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Mortal Kombat 1 [01006560184E6000][v0]"
+      }
+    ]
+  },
+  {
+    "id": 34112,
+    "post_title": "枕头大战/Bulanci",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/N7buMbVNzqqu?pwd=om7s",
+        "filesize": "1.34 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Bulanci [01000490163B8000][v0]"
+      }
+    ]
+  },
+  {
+    "id": 34138,
+    "post_title": "怒之铁拳4/Streets of Rage 4",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/IjiIBzRBbyAv?pwd=8c8t",
+        "filesize": "3.17 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Streets of Rage 4 [010045E0112D0000][v0]"
+      }
+    ]
+  },
+  {
+    "id": 34156,
+    "post_title": "十三机兵防卫圈/13 Sentinels: Aegis Rim",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/BjAf6nN77vEv?pwd=mjs4",
+        "filesize": "4.11 G",
+        "link_ctime": "2024.03.28",
+        "filename": "13 Sentinels Aegis Rim[01008D7016438000][v0][XCI]"
+      }
+    ]
+  },
+  {
+    "id": 34177,
+    "post_title": "精灵与萤火意志/Ori and the Will of the Wisps",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/v26zUbQF3mi2?pwd=bs47",
+        "filesize": "2.9 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Ori and the Will of the Wisps[01008DD013200000][v0][NSP]"
       }
     ]
   },
@@ -9056,6 +9332,30 @@
         "filesize": "3.81 G",
         "link_ctime": "2024.05.09",
         "filename": "Taxi Life - A City Driving Simulator v1.0.0"
+      }
+    ]
+  },
+  {
+    "id": 34313,
+    "post_title": "饥荒/Don't Starve",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/N7JjqaMveuM3?pwd=lvl6",
+        "filesize": "2.73 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Dont Starve Together[010090100E334000][v0][NSP]"
+      }
+    ]
+  },
+  {
+    "id": 34345,
+    "post_title": "马里奥赛车8/Mario Kart 8",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/j2aqqmzaEBrm?pwd=nrs0",
+        "filesize": "6.88 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Mario Kart 8 Deluxe [0100152000022000]+[v1.7.2]"
       }
     ]
   },
@@ -9132,6 +9432,78 @@
     ]
   },
   {
+    "id": 34557,
+    "post_title": "任天堂明星大乱斗 特别版/Super Smash Bros. Ultimate",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7reaMfMbIzUb?pwd=6n9e",
+        "filesize": "17.31 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Super Smash Bros. Ultimate [01006A800016E000] [v1835008] (1G+1U+99D)"
+      }
+    ]
+  },
+  {
+    "id": 34570,
+    "post_title": "塞尔达传说：王国之泪/The Legend of Zelda: Tears of the Kingdom",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qMZb2qqYbY3m?pwd=gt2y",
+        "filesize": "16.29 G",
+        "link_ctime": "2024.03.28",
+        "filename": "The Legend of Zelda Tears of the Kingdom [0100F2C0115B6000][v0]"
+      }
+    ]
+  },
+  {
+    "id": 34582,
+    "post_title": "喷射战士/Splatoon 3",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/VFFNnajQ3iY3?pwd=1clt",
+        "filesize": "4.7 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Splatoon 3 [0100C2500FC20000][v0]"
+      }
+    ]
+  },
+  {
+    "id": 34596,
+    "post_title": "皮克敏3 豪华版/Pikmin３",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/RFfY7nVRruUr?pwd=a1hu",
+        "filesize": "6.5 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Pikmin 3 Deluxe [0100F4C009322000][v0]"
+      }
+    ]
+  },
+  {
+    "id": 34620,
+    "post_title": "宝可梦传说：阿尔宙斯/Pokemon Legends: Arceus",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/m63QZzbYNbIf?pwd=xs3b",
+        "filesize": "6.1 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Pokemon Legends Arceus[01001F5010DFA000][v262144](1G+1U)[XCI]"
+      }
+    ]
+  },
+  {
+    "id": 34650,
+    "post_title": "异度神剑3/Xenoblade Chronicles 3",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/beMJbiyyyIje?pwd=up3x",
+        "filesize": "12.63 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Xenoblade Chronicles 3 [010074F013262000][v0]"
+      }
+    ]
+  },
+  {
     "id": 34666,
     "post_title": "先祖：人类奥德赛/Ancestors: The Humankind Odyssey",
     "GetFileInfo": [
@@ -9158,6 +9530,66 @@
         "filesize": "937.66 M",
         "link_ctime": "2024.04.02",
         "filename": "United.Penguin.Kingdom 1.0.0"
+      }
+    ]
+  },
+  {
+    "id": 34729,
+    "post_title": "星之卡比 探索发现/Kirby and the Forgotten Land",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/3mqmiya2yqq2?pwd=2yul",
+        "filesize": "5.75 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Kirby and the Forgotten Land[01004D300C5AE000][v0][NSP]"
+      }
+    ]
+  },
+  {
+    "id": 34740,
+    "post_title": "塞尔达传说：荒野之息/The Legend of Zelda: Breath of the Wild",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/3m6jInaARzEv?pwd=wsm7",
+        "filesize": "15.71 G",
+        "link_ctime": "2024.03.28",
+        "filename": "The Legend of Zelda Breath of the Wild[01007EF00011E000][v786432](1G+1U+2D)[XCI]"
+      }
+    ]
+  },
+  {
+    "id": 34751,
+    "post_title": "路易吉洋馆3/Luigi's Mansion 3",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/mqmymu7bERJf?pwd=c4ht",
+        "filesize": "6.35 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Luigi's Mansion 3[0100DCA0064A6000][v0]"
+      }
+    ]
+  },
+  {
+    "id": 34769,
+    "post_title": "超级玛利欧派对/Super Mario Party",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/rUbyaeUbUrAr?pwd=6hu7",
+        "filesize": "2.89 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Super Mario Party [010036B0034E4000] [v131072] (1G+1U) [XCI]"
+      }
+    ]
+  },
+  {
+    "id": 34780,
+    "post_title": "超级玛利欧 奥德赛/Super Mario Odyssey",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uAFrIf3uYree?pwd=6ltt",
+        "filesize": "5.23 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Super Mario Odyssey[0100000000010000][v0][NSP]"
       }
     ]
   },
@@ -9234,9 +9666,63 @@
     ]
   },
   {
+    "id": 34964,
+    "post_title": "集合啦！ 动物森友会/Animal Crossing: New Horizons",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/RfYb6bV3EVju?pwd=i7ri",
+        "filesize": "6.54 G",
+        "link_ctime": "2024.07.06",
+        "filename": "Animal Crossing New Horizons [01006F8002326000][v0]"
+      }
+    ]
+  },
+  {
+    "id": 34978,
+    "post_title": "宝可梦：剑/Pokémon Sword & Shield",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/iIfayyIZZNry?pwd=ge8m",
+        "filesize": "12.4 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Pokemon Sword [0100ABF008968000] [v458752] (1G+1U+2D) [XCI]"
+      }
+    ]
+  },
+  {
+    "id": 34988,
+    "post_title": "宝可梦：晶灿钻石/Pokemon Brilliant Diamond",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FvQFnaQfI3Yn?pwd=wg62",
+        "filesize": "6.85 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Pokemon Brilliant Diamond[0100000011D90000][v393216](1G+1U)[XCI]"
+      }
+    ]
+  },
+  {
+    "id": 35002,
+    "post_title": "宝可梦：紫/Pokémon Scarlet & Violet",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7Nfeiim22EBj?pwd=iy4q",
+        "filesize": "6.59 G",
+        "link_ctime": "2024.03.28",
+        "filename": "Pokemon Violet [01008F6008C5E000][v0]"
+      }
+    ]
+  },
+  {
     "id": 35037,
     "post_title": "海狸浮生记/Timberborn",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/IRfaEnz2Q3En?pwd=u4vf",
+        "filesize": "1.21 G",
+        "link_ctime": "2026.10.07",
+        "filename": "Timberborn v1.1.2.7"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/iAZNfi2aYV3u?pwd=9rur",
         "filesize": "1.21 G",
@@ -10136,6 +10622,18 @@
         "filesize": "4.39 G",
         "link_ctime": "2024.04.13",
         "filename": "The Planet Crafter v1.0.0"
+      }
+    ]
+  },
+  {
+    "id": 38288,
+    "post_title": "超级马里奥兄弟：惊奇/Super Mario Bros. Wonder",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/6VJfUzRNZF7r?pwd=k4sb",
+        "filesize": "3.51 G",
+        "link_ctime": "2024.04.14",
+        "filename": "Super Mario Bros. Wonder [010015100B514000][v0]"
       }
     ]
   },
@@ -12840,6 +13338,18 @@
     ]
   },
   {
+    "id": 45047,
+    "post_title": "真·女神转生Ⅴ/Vengeance",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Mz6fueqqInma?pwd=nyq8",
+        "filesize": "13.74 G",
+        "link_ctime": "2024.06.22",
+        "filename": "Shin Megami Tensei 5 Vengeance [0100FD401AB0E000] [v65536] (1G+1U+6D)"
+      }
+    ]
+  },
+  {
     "id": 45064,
     "post_title": "妖精的尾巴：魔导少年 – 豪华版/FAIRY TAIL Digital Deluxe",
     "GetFileInfo": [
@@ -13617,6 +14127,12 @@
     "id": 47552,
     "post_title": "王国保卫战5:联盟/Kingdom Rush 5: Alliance TD",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ArIjQfJzy2a2?pwd=o40g",
+        "filesize": "1.51 G",
+        "link_ctime": "2026.09.29",
+        "filename": "Kingdom.Rush.5.Alliance.TD.v7.00.62"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/bER32yUFnY7b?pwd=bjx4",
         "filesize": "662.65 M",
@@ -14962,6 +15478,12 @@
     "post_title": "战神：诸神黄昏/God of War Ragnarök",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/rUZzMzQBJJvu?pwd=2q67",
+        "filesize": "117.17 G",
+        "link_ctime": "2026.10.05",
+        "filename": "GW5 v1.0.668.5700"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/2YrU7zv2Yvyq?pwd=cs8u",
         "filesize": "117.09 G",
         "link_ctime": "2024.09.21",
@@ -15842,6 +16364,30 @@
         "filesize": "4.31 G",
         "link_ctime": "2024.10.20",
         "filename": "BAKERU v1.0.3"
+      }
+    ]
+  },
+  {
+    "id": 55724,
+    "post_title": "浪漫沙加2 七英雄的复仇/Romancing SaGa 2 Revenge of the Seven",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/V3Uvmuzq6Jrq?pwd=5whg",
+        "filesize": "4.15 G",
+        "link_ctime": "2024.10.20",
+        "filename": "Romancing SaGa 2 Revenge of the Seven [010083D01E720000][v0]"
+      }
+    ]
+  },
+  {
+    "id": 55765,
+    "post_title": "索尼克×夏特 世代重启/Sonic X Shadow Generations",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uuYfMjMRNz6f?pwd=54ms",
+        "filesize": "13.05 G",
+        "link_ctime": "2024.10.20",
+        "filename": "SONIC X SHADOW GENERATIONS [01005EA01C0FC000][v0]"
       }
     ]
   },
@@ -19140,6 +19686,42 @@
     ]
   },
   {
+    "id": 65861,
+    "post_title": "桃太郎电铁：昭和平成令和定番/Momotaro Dentetsu Showa Heisei Reiwa mo Teiban",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/iIjIfeQF3ABj?pwd=6pwy",
+        "filesize": "2.76 G",
+        "link_ctime": "2024.12.16",
+        "filename": "Momotaro Dentetsu Showa Heisei Reiwa mo Teiban [010021801DD26000][v0]"
+      }
+    ]
+  },
+  {
+    "id": 65880,
+    "post_title": "勇敢的心：世界大战+光之子/Valiant Hearts: The Great War™ / Soldats Inconnus : Mémoires de la Grande Guerre™",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/MFbMfmbeIFvu?pwd=xwl7",
+        "filesize": "3.53 G",
+        "link_ctime": "2024.12.16",
+        "filename": "Child of Light Ultimate Edition + Valiant Hearts The Great War [01006C70146A2000][v0]"
+      }
+    ]
+  },
+  {
+    "id": 65904,
+    "post_title": "舞力全开 2024/Just Dance 2024",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/rMBZRzJR3Yzy?pwd=tpp5",
+        "filesize": "20.88 G",
+        "link_ctime": "2024.12.16",
+        "filename": "JUST DANCE STAR[0100EE2199BB8000][v231204]"
+      }
+    ]
+  },
+  {
     "id": 65971,
     "post_title": "如龙：极2/Yakuza Kiwami 2",
     "GetFileInfo": [
@@ -20781,6 +21363,12 @@
     "id": 71996,
     "post_title": "勇闯死人谷：暗黑之日/Into the Dead Our Darkest Days",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/M7NnamyMbe2i?pwd=7jta",
+        "filesize": "5.41 G",
+        "link_ctime": "2026.10.13",
+        "filename": "Into the Dead：Our Darkest Days v0.18.1.21958"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/q6RZfiFZNBNz?pwd=qih9",
         "filesize": "6.87 G",
@@ -24159,6 +24747,12 @@
     "id": 81023,
     "post_title": "龙与地下城：无冬之夜2 – 增强版/Dungeons &amp; Dragons Neverwinter Nights 2: Enhanced Edition",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/BJvaU3mI3iqm?pwd=6bk0",
+        "filesize": "32.37 G",
+        "link_ctime": "2026.10.08",
+        "filename": "Dungeons Dragons Neverwinter Nights 2：Enhanced Edition v1.130"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/FzuiAz3Y3Ivq?pwd=2qwd",
         "filesize": "32.12 G",
@@ -31894,6 +32488,12 @@
     "post_title": "星际迷航：航海家号 - 穿越未知/Star Trek: Voyager - Across the Unknown",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/NfiY3qmAjYb2?pwd=85kg",
+        "filesize": "9.56 G",
+        "link_ctime": "2026.10.07",
+        "filename": "Star Trek Voyager Across the Unknown v2.1.27832"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/BfA7zejyE7Jb?pwd=o3xe",
         "filesize": "8.64 G",
         "link_ctime": "2026.02.20",
@@ -34249,8 +34849,14 @@
   },
   {
     "id": 108753,
-    "post_title": "战争命令：地狱之门 – 家园保卫战/Call to Arms Gates of Hell Ostfront",
+    "post_title": "战争命令：地狱之门 – 家园保卫战/战争召唤/Call to Arms Gates of Hell Ostfront",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uYJJfyz2uQBf?pwd=2w5z",
+        "filesize": "71.87 G",
+        "link_ctime": "2026.09.30",
+        "filename": "Call to Arms Gates of Hell Ostfront v1.067.0"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/fUj2m2VFz6Bv?pwd=7x8n",
         "filesize": "71.98 G",
@@ -35926,6 +36532,12 @@
     "post_title": "07：初露锋芒/007 First Light",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/YfQvQzNbQ7Jr?pwd=2qu5",
+        "filesize": "50.23 G",
+        "link_ctime": "2026.09.29",
+        "filename": "007 First Light v1.2.2"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/2iumIbFfYz6r?pwd=cyi2",
         "filesize": "50.2 G",
         "link_ctime": "2026.09.17",
@@ -36159,6 +36771,12 @@
     "id": 114834,
     "post_title": "热血西游记：天竺奇谭/RiverCitySagaJTTW",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/n6fmqeaqiEVn?pwd=7pbi",
+        "filesize": "937.21 M",
+        "link_ctime": "2026.07.08",
+        "filename": "RiverCitySagaJTTW v1.0.3"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/Iz2iI3yi6jMz?pwd=axi3",
         "filesize": "1.05 G",
@@ -38170,6 +38788,12 @@
     "post_title": "生存日志/Survival Log",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/VNRruuNrmei2?pwd=0rkg",
+        "filesize": "4.63 G",
+        "link_ctime": "2026.10.11",
+        "filename": "Survival Log v1.1.18317"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/JNRNr2e6nEza?pwd=p2vv",
         "filesize": "3.57 G",
         "link_ctime": "2026.08.26",
@@ -39892,6 +40516,12 @@
     "post_title": "守墓人2/Graveyard Keeper 2",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/Vz6nmey6Jjyi?pwd=3xeu",
+        "filesize": "1.09 G",
+        "link_ctime": "2026.09.28",
+        "filename": "Graveyard Keeper 2 v1.006"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/7BNjeyVbIBzi?pwd=ps5q",
         "filesize": "1.08 G",
         "link_ctime": "2026.09.23",
@@ -39975,6 +40605,12 @@
     "id": 126996,
     "post_title": "控制 共振/CONTROL Resonant",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ze2uMnRvUvqe?pwd=nvl9",
+        "filesize": "94.89 G",
+        "link_ctime": "2026.10.08",
+        "filename": "CONTROL Resonant v20261002"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/ZNZjAraqEjqi?pwd=l5hm",
         "filesize": "92.86 G",
@@ -40076,6 +40712,858 @@
         "filesize": "4.71 G",
         "link_ctime": "2026.09.25",
         "filename": "Bugsnax v2.0.70638"
+      }
+    ]
+  },
+  {
+    "id": 127312,
+    "post_title": "废弃游戏店/Abandoned Gameshop",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7n6NFjYfMRje?pwd=ylq8",
+        "filesize": "1.04 G",
+        "link_ctime": "2026.09.28",
+        "filename": "Abandoned Gameshop Build.25514896"
+      }
+    ]
+  },
+  {
+    "id": 127372,
+    "post_title": "魔鸡马奇克2/Machick 2",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/rYZBNjURFVBb?pwd=wwg1",
+        "filesize": "779.51 M",
+        "link_ctime": "2026.09.28",
+        "filename": "Machick 2 v1.2.1"
+      }
+    ]
+  },
+  {
+    "id": 127399,
+    "post_title": "我只是想让她们都幸福/I Just Want Them All to Be Happy",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/mmUVnqrqEnii?pwd=0lhx",
+        "filesize": "42.63 G",
+        "link_ctime": "2026.09.28",
+        "filename": "I Just Want Them All to Be Happy Build.23633719"
+      }
+    ]
+  },
+  {
+    "id": 127449,
+    "post_title": "农夫王朝2/Farmer's Dynasty 2",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/rQjey2iQ73Uz?pwd=kve1",
+        "filesize": "14.29 G",
+        "link_ctime": "2026.09.28",
+        "filename": "Farmer’s Dynasty 2 Build.25458863"
+      }
+    ]
+  },
+  {
+    "id": 127479,
+    "post_title": "牧场主：新生活/Rancher: A new life",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/YviINzVZFJNn?pwd=xs9m",
+        "filesize": "4.88 G",
+        "link_ctime": "2026.09.29",
+        "filename": "Rancher：A new life Build.25475839"
+      }
+    ]
+  },
+  {
+    "id": 127530,
+    "post_title": "银河系除虫公司/Galaxy Critter Co.",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7nAFjq3q6NVb?pwd=5hi1",
+        "filesize": "328.96 M",
+        "link_ctime": "2026.09.30",
+        "filename": "Galaxy Critter Co Build.25570783"
+      }
+    ]
+  },
+  {
+    "id": 127559,
+    "post_title": "巫师3：狂猎 — 重制版/The Witcher 3 Wild Hunt GOTY",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/i2q26n2YZrQz?pwd=vqj8",
+        "filesize": "62.03 G",
+        "link_ctime": "2026.09.30",
+        "filename": "The Witcher 3 Wild Hunt GOTY v5.00b"
+      }
+    ]
+  },
+  {
+    "id": 127604,
+    "post_title": "心驰神往/Keep Driving",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NZzEFviyQFjq?pwd=q9fg",
+        "filesize": "501.59 M",
+        "link_ctime": "2026.10.01",
+        "filename": "Keep Driving v1.4.3.1b"
+      }
+    ]
+  },
+  {
+    "id": 127636,
+    "post_title": "骰之侵略者/Dicevaders",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/3uMN7nueAB7n?pwd=gma4",
+        "filesize": "595.1 M",
+        "link_ctime": "2026.10.01",
+        "filename": "Dicevaders Build.25222570"
+      }
+    ]
+  },
+  {
+    "id": 127660,
+    "post_title": "我的世界：地下城2/Minecraft Dungeons II",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/QRjyYfeQRZ7n?pwd=4vpv",
+        "filesize": "8.68 G",
+        "link_ctime": "2026.10.05",
+        "filename": "Minecraft Dungeons II Build.25041023"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/ABjie2mUvq6f?pwd=ws3t",
+        "filesize": "8.69 G",
+        "link_ctime": "2026.10.01",
+        "filename": "Minecraft Dungeons II v1.1.1.0"
+      }
+    ]
+  },
+  {
+    "id": 127683,
+    "post_title": "死亡独轮车/Happy Wheels",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2QfYb2eaANRf?pwd=6jmn",
+        "filesize": "239.44 M",
+        "link_ctime": "2026.10.01",
+        "filename": "Happy Wheels Build.25437839"
+      }
+    ]
+  },
+  {
+    "id": 127715,
+    "post_title": "鬼泣HD合集/Devil May Cry HD Collection",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/3QZva26JBbUz?pwd=7u6z",
+        "filesize": "9.01 G",
+        "link_ctime": "2026.10.01",
+        "filename": "Devil May Cry HD Collection v1.0.2.0"
+      }
+    ]
+  },
+  {
+    "id": 127743,
+    "post_title": "梦幻魔法公主/Magical Princess",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/UjUJvaZJVbUz?pwd=mt7y",
+        "filesize": "5.71 G",
+        "link_ctime": "2026.10.01",
+        "filename": "Magical Princess v1.5.1"
+      }
+    ]
+  },
+  {
+    "id": 127771,
+    "post_title": "真三国无双２/Dynasty Warriors 2 with Xtreme Legends Remastered",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/z6jAviIB3Ib2?pwd=s3my",
+        "filesize": "33.27 G",
+        "link_ctime": "2026.10.03",
+        "filename": "DW3CE_RE"
+      }
+    ]
+  },
+  {
+    "id": 127803,
+    "post_title": "赛博骑士：闪点行动/Cyber Knights: Flashpoint",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fYzmArUZR7Fv?pwd=4nx6",
+        "filesize": "9.73 G",
+        "link_ctime": "2026.10.02",
+        "filename": "Cyber Knights：Flashpoint Build.25583034"
+      }
+    ]
+  },
+  {
+    "id": 127839,
+    "post_title": "云境/Cloudbuilt",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/b6vquueMJj6n?pwd=qi5g",
+        "filesize": "957.23 M",
+        "link_ctime": "2026.10.03",
+        "filename": "Cloudbuilt Build.25454858"
+      }
+    ]
+  },
+  {
+    "id": 127878,
+    "post_title": "抬走伯爵/Carry the Count",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/VZFby2FRJvum?pwd=l7re",
+        "filesize": "4.94 G",
+        "link_ctime": "2026.10.03",
+        "filename": "Carry The Count Build.25651106"
+      }
+    ]
+  },
+  {
+    "id": 127926,
+    "post_title": "绝境边缘/Isolation Edge",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/3Y7b2mBvEjee?pwd=ypk8",
+        "filesize": "23.59 G",
+        "link_ctime": "2026.10.03",
+        "filename": "Isolation Edge Build.25607462"
+      }
+    ]
+  },
+  {
+    "id": 127931,
+    "post_title": "全面战争：罗马2 - 帝皇版/Total War：ROME II Emperor Edition",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2UZVJrYNZFny?pwd=4pma",
+        "filesize": "18.94 G",
+        "link_ctime": "2026.10.03",
+        "filename": "Total War：ROME II Emperor Edition Build.25370349"
+      }
+    ]
+  },
+  {
+    "id": 128038,
+    "post_title": "不问凡尘/World Apart",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qy6JFv2qeE3u?pwd=6xkf",
+        "filesize": "28.09 G",
+        "link_ctime": "2026.10.03",
+        "filename": "World Apart Build.25506666"
+      }
+    ]
+  },
+  {
+    "id": 128044,
+    "post_title": "入侵幸存者/Invasion Survivors",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/i6n2EvIbABJ3?pwd=s3zk",
+        "filesize": "1022.1 M",
+        "link_ctime": "2026.10.03",
+        "filename": "Invasion Survivors v0.0.1102"
+      }
+    ]
+  },
+  {
+    "id": 128085,
+    "post_title": "短信归来/SMS Returns",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/m2IJVnrmamyy?pwd=syc5",
+        "filesize": "24.6 G",
+        "link_ctime": "2026.10.04",
+        "filename": "SMS.Returns v1.0.0"
+      }
+    ]
+  },
+  {
+    "id": 128120,
+    "post_title": "风暴怕死队/Pass the Fear",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uY7vInjquQbi?pwd=eo9h",
+        "filesize": "3.08 G",
+        "link_ctime": "2026.10.05",
+        "filename": "Pass the Fear Build.24834812"
+      }
+    ]
+  },
+  {
+    "id": 128163,
+    "post_title": "生命效应/LIFE EFFECT Survival",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/zemyiaQRrMf2?pwd=ll86",
+        "filesize": "20.25 G",
+        "link_ctime": "2026.10.05",
+        "filename": "LIFE EFFECT Survival v0.50.8"
+      }
+    ]
+  },
+  {
+    "id": 128264,
+    "post_title": "无限机兵/AI LIMIT",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fIjM32q2ErIn?pwd=lx62",
+        "filesize": "19.09 G",
+        "link_ctime": "2026.10.05",
+        "filename": "AI LIMIT Build.25457783"
+      }
+    ]
+  },
+  {
+    "id": 128298,
+    "post_title": "游戏店管家：谁把我的店搞乱了/Game Keeper: Somebody Messed Up My Shop!",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uQ7rayqQR3Uz?pwd=osp4",
+        "filesize": "1.73 G",
+        "link_ctime": "2026.10.05",
+        "filename": "Game Keeper Somebody Messed Up My Shop v1.4.0"
+      }
+    ]
+  },
+  {
+    "id": 128334,
+    "post_title": "魔女：终末旅途/Witch s Apocalyptic Journey",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/QFfEJjEbM7b2?pwd=zo7a",
+        "filesize": "992.26 M",
+        "link_ctime": "2026.10.06",
+        "filename": "Witch s Apocalyptic Journey Build.25641160"
+      }
+    ]
+  },
+  {
+    "id": 128339,
+    "post_title": "最后的营地 曙光/The Last Camp Dawn",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/eaaeUbVnyyUf?pwd=zx3c",
+        "filesize": "5.96 G",
+        "link_ctime": "2026.10.07",
+        "filename": "The Last Camp Dawn Build.22969437"
+      }
+    ]
+  },
+  {
+    "id": 128361,
+    "post_title": "阴暗森林/Darkwood",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JJ77zqRVbUNr?pwd=fvz8",
+        "filesize": "2.22 G",
+        "link_ctime": "2026.10.06",
+        "filename": "Darkwood v1.4.2"
+      }
+    ]
+  },
+  {
+    "id": 128410,
+    "post_title": "排水模拟器/DrainSim",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/RRN7naEfIfmi?pwd=pqu5",
+        "filesize": "16.29 G",
+        "link_ctime": "2026.10.07",
+        "filename": "DrainSim Build.25526381"
+      }
+    ]
+  },
+  {
+    "id": 128462,
+    "post_title": "拯救小曼/SAVE AMANI",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/AJVN7bRVFnAr?pwd=wsh4",
+        "filesize": "4.9 G",
+        "link_ctime": "2026.10.07",
+        "filename": "SAVE AMANI Build.25671528"
+      }
+    ]
+  },
+  {
+    "id": 128520,
+    "post_title": "叛逆神魂/GODSOUL",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ZRFJ3izQ7fYb?pwd=igz6",
+        "filesize": "6.58 G",
+        "link_ctime": "2026.10.07",
+        "filename": "GODSOUL Build.25163435"
+      }
+    ]
+  },
+  {
+    "id": 128657,
+    "post_title": "动漫商店模拟器/Anime Shop Simulator",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/vymAvunyuqym?pwd=7tpc",
+        "filesize": "1.09 G",
+        "link_ctime": "2026.10.07",
+        "filename": "Anime Shop Simulator v1.0.7.1"
+      }
+    ]
+  },
+  {
+    "id": 128680,
+    "post_title": "风暴工程：建造和救援/Stormworks: Build and Rescue",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/jeYvU3yQvyyy?pwd=v2nb",
+        "filesize": "522.74 M",
+        "link_ctime": "2026.10.07",
+        "filename": "Stormworks：Build and Rescue v1.15.23"
+      }
+    ]
+  },
+  {
+    "id": 128704,
+    "post_title": "最终幻想10 XX-2 HD 重制版/FINAL FANTASY X/X-2 HD Remaster",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JZnAfaEji6Nn?pwd=9fbt",
+        "filesize": "36.33 G",
+        "link_ctime": "2026.10.07",
+        "filename": "FINAL FANTASY XX-2 HD Remaster Build.25501027"
+      }
+    ]
+  },
+  {
+    "id": 128753,
+    "post_title": "奥科 流放者/Okko The Exiled",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/aU3IBzuE7zq2?pwd=mq1a",
+        "filesize": "556.23 M",
+        "link_ctime": "2026.10.08",
+        "filename": "Okko The Exiled Build.25667991"
+      }
+    ]
+  },
+  {
+    "id": 128802,
+    "post_title": "格林默威克之歌/Songs of Glimmerwick",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/RF77JvIBfQFf?pwd=6pzc",
+        "filesize": "1.42 G",
+        "link_ctime": "2026.10.08",
+        "filename": "Songs of Glimmerwick Build.25712990"
+      }
+    ]
+  },
+  {
+    "id": 128843,
+    "post_title": "腐败墓穴/GUTTED: Infested Crypts",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Aj6JreiyUN3a?pwd=jeq9",
+        "filesize": "5.31 G",
+        "link_ctime": "2026.10.08",
+        "filename": "GUTTED：Infested Crypts v01.10.2026"
+      }
+    ]
+  },
+  {
+    "id": 128868,
+    "post_title": "气球塔防6/Bloons TD 6",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qyY3iqE7ni2q?pwd=2f7o",
+        "filesize": "2.17 G",
+        "link_ctime": "2026.10.08",
+        "filename": "Bloons TD 6 Build.25664134"
+      }
+    ]
+  },
+  {
+    "id": 128892,
+    "post_title": "永铃回响/The Bell Echoes",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FzeyIvqeQbye?pwd=2jrq",
+        "filesize": "3.52 G",
+        "link_ctime": "2026.10.08",
+        "filename": "The Bell Echoes Build.25601994"
+      }
+    ]
+  },
+  {
+    "id": 128920,
+    "post_title": "超时空地牢/Enter the Chronosphere",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/raIf2qu2aaAf?pwd=1ha6",
+        "filesize": "565.36 M",
+        "link_ctime": "2026.10.09",
+        "filename": "Enter the Chronosphere Build.25667883"
+      }
+    ]
+  },
+  {
+    "id": 128937,
+    "post_title": "猩红狩猎/The Crimson Hunt",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/yEfmuamIfeqe?pwd=c23a",
+        "filesize": "8.2 G",
+        "link_ctime": "2026.10.09",
+        "filename": "The Crimson Hunt Build.25770471"
+      }
+    ]
+  },
+  {
+    "id": 128973,
+    "post_title": "吟游诗人传奇：圣殿骑士/The Ballad Singer：Knights Templar",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JBfInaqMFRFv?pwd=qz7v",
+        "filesize": "4.05 G",
+        "link_ctime": "2026.10.09",
+        "filename": "The Ballad Singer：Knights Templar Build.25749996"
+      }
+    ]
+  },
+  {
+    "id": 129014,
+    "post_title": "星之海洋2 第二次故事 国语配音版R/STAR OCEAN THE SECOND STORY R",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2MN3ee77ziiu?pwd=c8qb",
+        "filesize": "16.48 G",
+        "link_ctime": "2026.10.09",
+        "filename": "STAR OCEAN THE SECOND STORY R Build.23135961"
+      }
+    ]
+  },
+  {
+    "id": 129034,
+    "post_title": "铸剑纳贡/ForgeTax",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uqUnuiUr6bYf?pwd=xy5s",
+        "filesize": "163.47 M",
+        "link_ctime": "2026.10.12",
+        "filename": "ForgeTax v26.10.12"
+      },
+      {
+        "DownUrl": "https://cloud.189.cn/t/qiYfueQrMbQn?pwd=9dev",
+        "filesize": "164.34 M",
+        "link_ctime": "2026.10.09",
+        "filename": "ForgeTax Build.25771041"
+      }
+    ]
+  },
+  {
+    "id": 129055,
+    "post_title": "沉星之序/Order of the Sinking Star",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uMjMN3MNrqee?pwd=7jfl",
+        "filesize": "10.39 G",
+        "link_ctime": "2026.10.09",
+        "filename": "Order of the Sinking Star v20261009"
+      }
+    ]
+  },
+  {
+    "id": 129112,
+    "post_title": "远星物语/CrossCode",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/MJJ7Z3JJJrma?pwd=ebb1",
+        "filesize": "540.13 M",
+        "link_ctime": "2026.10.09",
+        "filename": "CrossCode Build.11438847"
+      }
+    ]
+  },
+  {
+    "id": 129158,
+    "post_title": "克里夫·巴克猛鬼追魂：复苏豪华版/Clive Barker's Hellraiser: Revival",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/MZbaimj6Znii?pwd=rsb6",
+        "filesize": "66.34 G",
+        "link_ctime": "2026.10.09",
+        "filename": "Clive Barker s Hellraiser Revival v1.0.1.227219"
+      }
+    ]
+  },
+  {
+    "id": 129204,
+    "post_title": "回声编织者/Echo Weaver",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Fnemqifi6ZBz?pwd=6o60",
+        "filesize": "879.99 M",
+        "link_ctime": "2026.10.09",
+        "filename": "Echo Weaver Build.25809290"
+      }
+    ]
+  },
+  {
+    "id": 129234,
+    "post_title": "整理水豚玩具店/Sort The Capybaras",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ErMfy26nyiee?pwd=ub8x",
+        "filesize": "2.38 G",
+        "link_ctime": "2026.10.10",
+        "filename": "Sort The Capybaras Build.25804632"
+      }
+    ]
+  },
+  {
+    "id": 129239,
+    "post_title": "盐与献祭/Salt and Sanctuary",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/6byiaiFVjmUn?pwd=hhu2",
+        "filesize": "1.73 G",
+        "link_ctime": "2026.10.10",
+        "filename": "Salt and Sanctuary Build.12907658"
+      }
+    ]
+  },
+  {
+    "id": 129321,
+    "post_title": "孟婆靓汤/Memory Brew：Tales of Underworld",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/MrymyuYvUJNr?pwd=zs4h",
+        "filesize": "928.45 M",
+        "link_ctime": "2026.10.10",
+        "filename": "Memory Brew：Tales of Underworld Build.25542266"
+      }
+    ]
+  },
+  {
+    "id": 129353,
+    "post_title": "银松镇/Silver Pines",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/R7Vv6fNniuIb?pwd=f6cr",
+        "filesize": "5.32 G",
+        "link_ctime": "2026.10.10",
+        "filename": "Silver Pines Build.25806663"
+      }
+    ]
+  },
+  {
+    "id": 129387,
+    "post_title": "狂热运输3/Transport Fever 3",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7RZNRfEfmEvu?pwd=1rqr",
+        "filesize": "68.42 G",
+        "link_ctime": "2026.10.11",
+        "filename": "Transport Fever 3 v40420"
+      }
+    ]
+  },
+  {
+    "id": 129435,
+    "post_title": "零食入侵者/Snack Invaders",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2MRJBvVBfEF3?pwd=y0j1",
+        "filesize": "8.83 G",
+        "link_ctime": "2026.10.11",
+        "filename": "Snack Invaders Build.25798560"
+      }
+    ]
+  },
+  {
+    "id": 129471,
+    "post_title": "血源诅咒/bloodborne",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/zA3M3i7zM7Fn?pwd=a785",
+        "filesize": "29.58 G",
+        "link_ctime": "2026.10.12",
+        "filename": "bloodborne_pc-win"
+      }
+    ]
+  },
+  {
+    "id": 129487,
+    "post_title": "让帝国再次伟大/Make the Empire Great Again",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/vA7ZniB3mAja?pwd=9f4k",
+        "filesize": "567.57 M",
+        "link_ctime": "2026.10.12",
+        "filename": "Make the Empire Great Again Build.25842909"
+      }
+    ]
+  },
+  {
+    "id": 129504,
+    "post_title": "不小心远征队/Away Team",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/FBNnqaNziQ7j?pwd=3vw1",
+        "filesize": "368.2 M",
+        "link_ctime": "2026.10.13",
+        "filename": "Away Team v721618"
+      }
+    ]
+  },
+  {
+    "id": 129521,
+    "post_title": "战争机器:事变日/Gears of War: E-Day",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Fn6fyyveuQre?pwd=rq4d",
+        "filesize": "112.71 G",
+        "link_ctime": "2026.10.13",
+        "filename": "Gears of War E Day v1.1.3.0"
+      }
+    ]
+  },
+  {
+    "id": 129588,
+    "post_title": "动物厨房/Tasty Chef",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/VbeAniemUBn2?pwd=x7xj",
+        "filesize": "1.74 G",
+        "link_ctime": "2026.10.13",
+        "filename": "Tasty Chef Build.25848651"
+      }
+    ]
+  },
+  {
+    "id": 129610,
+    "post_title": "纸头/PAPERHEAD",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/iEZNneJj6nM3?pwd=oot6",
+        "filesize": "4.73 G",
+        "link_ctime": "2026.10.13",
+        "filename": "PAPERHEAD Build.25829881"
+      }
+    ]
+  },
+  {
+    "id": 129646,
+    "post_title": "西奥小镇/TheoTown",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/mAZzeu6JZnqy?pwd=yj7a",
+        "filesize": "163.29 M",
+        "link_ctime": "2026.10.13",
+        "filename": "TheoTown v1.12.91p"
+      }
+    ]
+  },
+  {
+    "id": 129704,
+    "post_title": "多洛可小镇/Doloc Town v",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NVN3Uj6BbYvu?pwd=nhp8",
+        "filesize": "2.04 G",
+        "link_ctime": "2026.10.15",
+        "filename": "Doloc Town v1.00.09"
+      }
+    ]
+  },
+  {
+    "id": 129733,
+    "post_title": "英雄传说 黎之轨迹Ⅱ -绯红原罪-/THE LEGEND OF HEROES KURO NO KISEKI2",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ruyyYjzuUvAn?pwd=cw62",
+        "filesize": "15.56 G",
+        "link_ctime": "2026.10.15",
+        "filename": "THE LEGEND OF HEROES KURO NO KISEKI2"
+      }
+    ]
+  },
+  {
+    "id": 129756,
+    "post_title": "战锤40K：星际战士2/Warhammer 40000 Space Marine 2",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/uAvqiqzYZVFz?pwd=iz5b",
+        "filesize": "73.43 G",
+        "link_ctime": "2026.10.15",
+        "filename": "Warhammer 40000 Space Marine 2"
+      }
+    ]
+  },
+  {
+    "id": 129791,
+    "post_title": "全面战争 幕府将军2/Shogun 2 Complete Edition",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/eUzMziENbaqu?pwd=6bg9",
+        "filesize": "48.32 G",
+        "link_ctime": "2026.10.16",
+        "filename": "Shogun 2 Complete Edition Build.25810990"
+      }
+    ]
+  },
+  {
+    "id": 129820,
+    "post_title": "快递商店模拟器2037/Shipping Store Simulator 2037",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/EjqMZbZby6Vr?pwd=ys1a",
+        "filesize": "3.24 G",
+        "link_ctime": "2026.10.16",
+        "filename": "Shipping Store Simulator 2037 Build.25933521"
+      }
+    ]
+  },
+  {
+    "id": 129850,
+    "post_title": "谢谢你，光/THANKS, LIGHT.",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/aaMnYjm6bAVn?pwd=gxe2",
+        "filesize": "7.5 G",
+        "link_ctime": "2026.10.17",
+        "filename": "Thanks Light Build.25944881"
+      }
+    ]
+  },
+  {
+    "id": 129855,
+    "post_title": "玩具总动员3/Disney/Pixar Toy Story 3 Complete Edition",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/EFbIzeUrm2Y3?pwd=7edi",
+        "filesize": "7.53 G",
+        "link_ctime": "2026.10.17",
+        "filename": "DisneyPixar Toy Story 3 Complete Edition Build.25668953"
+      }
+    ]
+  },
+  {
+    "id": 129913,
+    "post_title": "符文之骰/Rune Dice",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/6VZreyFfmAR3?pwd=g8bj",
+        "filesize": "140.81 M",
+        "link_ctime": "2026.10.17",
+        "filename": "Rune Dice Build.25813776"
       }
     ]
   }

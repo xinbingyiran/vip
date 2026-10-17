@@ -1,2 +1,3 @@
 http://103.39.221.38:8883/?steamId={steamId}
 http://103.39.221.38:8883/steamFile/{steamId}.zip
+https://store.kelongwo.uk/opensteam/oepnsteam.zip

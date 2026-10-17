@@ -1,34 +1,47 @@
 ﻿using System.Buffers;
 using System.Collections.Concurrent;
 using System.Data;
-using System.Globalization;
 using System.Net.Http.Headers;
-using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
 //( *\{(?:[^\{\}]*)warehousing"\n *\})(,[^\]]*),\n( *\{(?:[^\{\}]*)warehousing"\n *\})(,?)  $3$2$4
 
+
 var cd = Environment.CurrentDirectory;
 string[] urls = ["https://www.uy5.net", "http://103.39.221.38:8885"];
 var client = new HttpClient() { Timeout = TimeSpan.FromSeconds(5) };
-string prestr = "ODE?????";
-string poststr = "ODE11111";
-string userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ODE?????/1.4.0 Chrome/91.0.4472.164 Electron/13.6.9 Safari/537.36".Replace(prestr, poststr);
+// string prestr = "ODE?????";
+// string poststr = "ODE11111";
+// string userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ODE?????/1.4.0 Chrome/91.0.4472.164 Electron/13.6.9 Safari/537.36".Replace(prestr, poststr);
 var full = args.Length > 0;
-string[] cats = ["527", "538", "5"];
+// var catMap = new Dictionary<int, string>
+// {
+//     [0] = "未分类(无父级)",
+//     [1] = "所有克隆",
+//     [5] = "Windows(游戏专区)",
+//     [16] = "Windows应用",
+//     [26] = "电脑系统",
+//     [33] = "手机软件",
+//     [426] = "mac应用",
+//     [527] = "Switch",
+//     [528] = "软件应用",
+//     [538] = "应用大全(软件专区)",
+//     [555] = "文章"
+// };
+string[] cats = ["0"];//["527", "538", "5"];
 var check = await WithRetry(MainLoopAsync, urls.Length, default);
 Console.WriteLine($"输出目录：{cd}");
 var apiUrl = urls[0];
 async Task<RetryResult> MainLoopAsync(int urlIndex, CancellationToken token)
 {
     apiUrl = urls[urlIndex];
-    Console.WriteLine($"当前地址：{apiUrl} - 绑定版本: 1.5.6");
+    Console.WriteLine($"当前地址：{apiUrl} - 绑定版本: 1.6.1");
     try
     {
         var message = new HttpRequestMessage(HttpMethod.Get, $"{apiUrl}/wodown/update.php");
-        message.Headers.UserAgent.TryParseAdd(userAgent);
+        //message.Headers.UserAgent.TryParseAdd(userAgent);
         using var result = await client.SendAsync(message, token);
         var updateinfo = await result.Content.ReadAsStringAsync(token);
         Console.WriteLine(updateinfo);
@@ -285,7 +298,7 @@ async Task<T> GetResourceAsync<T>(string postdata, CancellationToken token = def
     content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
     await content.LoadIntoBufferAsync(token);
     var message = new HttpRequestMessage(HttpMethod.Post, $"{apiUrl}/wodown/resources/") { Content = content };
-    message.Headers.UserAgent.TryParseAdd(userAgent);
+    //message.Headers.UserAgent.TryParseAdd(userAgent);
     //var p = message.Headers.UserAgent.FirstOrDefault(a => a.Product is ProductHeaderValue v && v.Name == poststr)?.Product;
     //if (p is not null)
     //{
@@ -294,6 +307,7 @@ async Task<T> GetResourceAsync<T>(string postdata, CancellationToken token = def
     //}
     using var result = await client.SendAsync(message, token);
     var str = await result.Content.ReadAsStringAsync(token);
+    //Console.WriteLine(str);
     return (T?)JsonSerializer.Deserialize(str, JsonElementContext.Custom.GetTypeInfo(typeof(T))!) ?? throw new NullReferenceException();
 }
 
@@ -378,7 +392,7 @@ record struct ODEList
     [JsonPropertyName("Numberofarticlescount")]
     public int Numberofarticlescount { get; set; }
     [JsonPropertyName("erron")]
-    public int? erron { get; set; }
+    public int? Erron { get; set; }
 
 }
 
