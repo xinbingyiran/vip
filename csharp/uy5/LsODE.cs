@@ -82,7 +82,7 @@ async Task<RetryResult> MainLoopAsync(int urlIndex, CancellationToken token)
             {
                 try
                 {
-                    var resultItem = await GetAppList(cat, index, numberposts: 120, token: token);
+                    var resultItem = await GetAppList(cat, index, numberposts: 20, token: token);
                     var list = resultItem.List;
                     var len = list?.Length ?? 0;
                     if (list is null || len <= 0)

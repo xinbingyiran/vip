@@ -10258,6 +10258,12 @@
     "post_title": "使命召唤4：现代战争 重制版/Call of Duty®: Modern Warfare® Remastered",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/2yuEF377NrAr?pwd=2upw",
+        "filesize": "71.09 G",
+        "link_ctime": "2026.10.19",
+        "filename": "CoD HQ v13.1.29465156"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/iqUrqi36NJny?pwd=7ut1",
         "filesize": "57.17 G",
         "link_ctime": "2026.09.13",
@@ -27766,6 +27772,12 @@
     "post_title": "再见，甜美的卡萝尔/Bye Sweet Carole",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/ErInqumU7bU3?pwd=6rze",
+        "filesize": "14.25 G",
+        "link_ctime": "2026.10.18",
+        "filename": "Bye Sweet Carole Build.24296161"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/jaiYJvAnEj2q?pwd=nxw3",
         "filesize": "13.95 G",
         "link_ctime": "2025.10.16",
@@ -37966,6 +37978,12 @@
     "post_title": "穿雾列车/Fogpiercer",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/rEnu2aMRVJz2?pwd=oa16",
+        "filesize": "992.16 M",
+        "link_ctime": "2026.10.18",
+        "filename": "Fogpiercer Build.25988519"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/rMZvYnqQJN7j?pwd=0lga",
         "filesize": "1.1 G",
         "link_ctime": "2026.07.19",
@@ -41564,6 +41582,102 @@
         "filesize": "140.81 M",
         "link_ctime": "2026.10.17",
         "filename": "Rune Dice Build.25813776"
+      }
+    ]
+  },
+  {
+    "id": 129938,
+    "post_title": "一砖一瓦 重建小镇/Brick by Brick Tidy Up the Small Town",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Z3aim27FJ7Bv?pwd=etk8",
+        "filesize": "1.19 G",
+        "link_ctime": "2026.10.17",
+        "filename": "Brick by Brick Tidy Up the Small Town Build.25964658"
+      }
+    ]
+  },
+  {
+    "id": 129962,
+    "post_title": "宇宙沙盘/Universe Sandbox",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NVry6niaIJfy?pwd=gry1",
+        "filesize": "1.78 G",
+        "link_ctime": "2026.10.17",
+        "filename": "Universe Sandbox Build.24914905"
+      }
+    ]
+  },
+  {
+    "id": 130001,
+    "post_title": "永恒传奇 重制版/Tales of Eternia Remastered",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/6Z3yauZ3Evae?pwd=6daw",
+        "filesize": "7.93 G",
+        "link_ctime": "2026.10.17",
+        "filename": "Tales of Eternia Remastered Build.25190541"
+      }
+    ]
+  },
+  {
+    "id": 130039,
+    "post_title": "永冻纪元/Permafrost",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/QVfu2qInaA3m?pwd=9dra",
+        "filesize": "17.16 G",
+        "link_ctime": "2026.10.18",
+        "filename": "Permafrost Build.25866410"
+      }
+    ]
+  },
+  {
+    "id": 130071,
+    "post_title": "猎杀我/HUNT ME",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7VfQ7v36VNne?pwd=vq7s",
+        "filesize": "5.62 G",
+        "link_ctime": "2026.10.18",
+        "filename": "Hunt me Build.25861701"
+      }
+    ]
+  },
+  {
+    "id": 130103,
+    "post_title": "烈火与灰烬/FIRE AND ASHES",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/myiMRnIbMNbi?pwd=nu7s",
+        "filesize": "26.38 G",
+        "link_ctime": "2026.10.18",
+        "filename": "Fire And Ashes Build.25647585"
+      }
+    ]
+  },
+  {
+    "id": 130132,
+    "post_title": "色彩羁绊/Color Guardians",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/MjaQF3uYVfUz?pwd=vg6r",
+        "filesize": "206.18 M",
+        "link_ctime": "2026.10.18",
+        "filename": "Colorbound Build.25943090"
+      }
+    ]
+  },
+  {
+    "id": 130176,
+    "post_title": "JD-核爆RPG 末日余生/ATOM RPG: Post-apocalyptic indie game",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NBbIria2AJje?pwd=s888",
+        "filesize": "8.05 G",
+        "link_ctime": "2026.10.18",
+        "filename": "ATOM RPG Build.25992282"
       }
     ]
   }
