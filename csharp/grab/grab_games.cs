@@ -222,15 +222,15 @@ public class KeyGrabber : AppDomainManager
             var ordered = list.Cast<object>().OrderBy(gameCode);
 
             var sb = new StringBuilder();
-            sb.Append("[\n");
+            sb.Append("[\r\n").Append(new string(' ', 2));
             int n = 0;
             foreach (var item in ordered)
             {
-                if (n > 0) sb.Append(",\n");
-                sb.Append(SerializeObj(item, 1));
+                if (n > 0) sb.Append(",\r\n").Append(new string(' ', 2));
+                sb.Append(SerializeObj(item, 2));
                 n++;
             }
-            sb.Append("\n]\n");
+            sb.Append("\r\n]");
             WriteResult(sb.ToString());
 
             // 注入完成、生成结果后结束进程
@@ -249,19 +249,19 @@ public class KeyGrabber : AppDomainManager
     static string SerializeObj(object o, int indent)
     {
         var sb = new StringBuilder();
-        sb.Append("{\n");
+        sb.Append("{\r\n");
         int i = 0;
         foreach (var pi in o.GetType().GetProperties())
         {
             if (Array.IndexOf(KeepFields, pi.Name) < 0) continue;
             object? v;
             try { v = pi.GetValue(o); } catch { v = null; }
-            if (i > 0) sb.Append(",\n");
+            if (i > 0) sb.Append(",\r\n");
             sb.Append(new string(' ', indent * 2)).Append('"').Append(Esc(pi.Name)).Append("\": ");
             sb.Append(Scalar(v));
             i++;
         }
-        sb.Append("\n").Append(new string(' ', (indent - 1) * 2)).Append('}');
+        sb.Append("\r\n").Append(new string(' ', (indent - 1) * 2)).Append('}');
         return sb.ToString();
     }
 

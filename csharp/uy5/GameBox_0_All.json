@@ -3688,6 +3688,12 @@
     "post_title": "太空谍影2/SpaceBourne 2",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/veENvi7fAVf2?pwd=5xfh",
+        "filesize": "12.4 G",
+        "link_ctime": "2026.10.19",
+        "filename": "SpaceBourne 2 v2.0.8"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/EF3MRzUZFzui?pwd=2zc4",
         "filesize": "10.52 G",
         "link_ctime": "2024.04.29",
@@ -5499,6 +5505,12 @@
     "id": 21355,
     "post_title": "北欧之烬：诸神黄昏幸存者/Nordic Ashes: Survivors of Ragnarok",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/AJFJjqzaYjAn?pwd=8nuk",
+        "filesize": "805.11 M",
+        "link_ctime": "2026.10.19",
+        "filename": "Nordic Ashes Survivors of Ragnarok v3.2.1"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/7vMNJv2yARJf?pwd=lza9",
         "filesize": "445.28 M",
@@ -10257,12 +10269,6 @@
     "id": 37129,
     "post_title": "使命召唤4：现代战争 重制版/Call of Duty®: Modern Warfare® Remastered",
     "GetFileInfo": [
-      {
-        "DownUrl": "https://cloud.189.cn/t/2yuEF377NrAr?pwd=2upw",
-        "filesize": "71.09 G",
-        "link_ctime": "2026.10.19",
-        "filename": "CoD HQ v13.1.29465156"
-      },
       {
         "DownUrl": "https://cloud.189.cn/t/iqUrqi36NJny?pwd=7ut1",
         "filesize": "57.17 G",
@@ -41678,6 +41684,66 @@
         "filesize": "8.05 G",
         "link_ctime": "2026.10.18",
         "filename": "ATOM RPG Build.25992282"
+      }
+    ]
+  },
+  {
+    "id": 130239,
+    "post_title": "平行人生/Paralives",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ZjAFB3baaqai?pwd=n8pq",
+        "filesize": "5.3 G",
+        "link_ctime": "2026.10.19",
+        "filename": "Paralives Build.25958869"
+      }
+    ]
+  },
+  {
+    "id": 130257,
+    "post_title": "不朽遗志/Valor Mortis",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fuYbA3qmymau?pwd=xqj0",
+        "filesize": "39.15 G",
+        "link_ctime": "2026.10.19",
+        "filename": "Valor Mortis Build.25994266"
+      }
+    ]
+  },
+  {
+    "id": 130296,
+    "post_title": "使命召唤®：现代战争® 4/Pre-purchase Call of Duty®: Modern Warfare® 4",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2yuEF377NrAr?pwd=2upw",
+        "filesize": "71.09 G",
+        "link_ctime": "2026.10.19",
+        "filename": "CoD HQ v13.1.29465156"
+      }
+    ]
+  },
+  {
+    "id": 130330,
+    "post_title": "尼瓦利斯之夜/Nivalis Nights",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/7JvEjumuMRfa?pwd=oew6",
+        "filesize": "16.54 G",
+        "link_ctime": "2026.10.19",
+        "filename": "Nivalis Nights Build.25984046"
+      }
+    ]
+  },
+  {
+    "id": 130367,
+    "post_title": "异形：隔离/Alien: Isolation",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/UZRvEfMJzAFv?pwd=3rrz",
+        "filesize": "15.2 G",
+        "link_ctime": "2026.10.19",
+        "filename": "Alien Isolation"
       }
     ]
   }
