@@ -4,7 +4,7 @@
 //  2) ensure 拿 token → GET /api/client/download/data-snapshot/mini 下载 zip 到内存
 //  3) 内存解压 games.dat → 用 games_dat_decrypt.cs 方法静态解密（AES-CBC + HMAC 校验）→ 全量游戏列表
 //  4) GET /api/client/games/passwords 拿密码 → 按 GameCode 拼接 → 合成输出并保存
-// 运行：dotnet run FullGrabMini.cs [--host <scheme://host[:port]>] [--out <path>]
+// 运行：dotnet run FullGrabMini.cs [-host <index>] [-out <path>] [-f]
 
 using System;
 using System.Collections.Generic;
@@ -20,21 +20,26 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 
-string forcedHost = "";
+string forcedHost = "0";
 string outPath = "grab_games.json";
+bool force = false;
 var cmdArgs = Environment.GetCommandLineArgs();
 for (int i = 1; i < cmdArgs.Length; i++)
 {
-    if (cmdArgs[i] == "--host" && i + 1 < cmdArgs.Length) forcedHost = cmdArgs[++i];
-    else if (cmdArgs[i] == "--out" && i + 1 < cmdArgs.Length) outPath = cmdArgs[++i];
+    if (cmdArgs[i] == "-host" && i + 1 < cmdArgs.Length) forcedHost = cmdArgs[++i];
+    else if (cmdArgs[i] == "-out" && i + 1 < cmdArgs.Length) outPath = cmdArgs[++i];
+    else if (cmdArgs[i] == "-f") force = true;
 }
 
 using var client = Api.NewClient();
 
 // ===== 1) hosts = bootstrap / fallback =====
-var hosts = !string.IsNullOrEmpty(forcedHost)
-    ? new List<string> { forcedHost }
-    : await Api.FetchBootstrapRoutesAsync(client);
+var hosts = await Api.FetchBootstrapRoutesAsync(client);
+if (int.TryParse(forcedHost, out var fh) && fh >= 0 && fh < hosts.Count)
+{
+    hosts = [hosts[fh]];
+
+}
 Console.WriteLine($"[init] hosts={string.Join(", ", hosts)}");
 
 // ===== 2) 遍历 startup，成功即停止 =====
@@ -53,79 +58,93 @@ foreach (var host in hosts)
 }
 if (hostUsed == "") { Console.WriteLine("所有节点 startup 均失败。"); return; }
 
+
 // ===== 3) ensure token =====
 var (token, _, ok) = await Api.EnsureAsync(client, hostUsed);
 if (!ok || string.IsNullOrEmpty(token)) { Console.WriteLine("[ensure] 未获取到 token，退出。"); return; }
 Console.WriteLine($"[ensure] tokenLen={token.Length}");
 
-// ===== 4) 快照 zip 下载到内存 =====
-byte[]? zipBytes = await Api.GetSnapshotZipAsync(client, hostUsed, token);
-Console.WriteLine($"[snapshot] zipBytes={zipBytes?.Length ?? 0}");
-if (zipBytes == null || zipBytes.Length == 0) { Console.WriteLine("[snapshot] 快照为空，退出。"); return; }
-
-// ===== 5) 内存解压 games.dat =====
-byte[] gamesData;
 long lastSyncTicks = 0;
-using (var ms = new MemoryStream(zipBytes))
-using (var zip = new ZipArchive(ms, ZipArchiveMode.Read))
+var merged = new Dictionary<string, JsonObject>(StringComparer.OrdinalIgnoreCase);
+if (!force)
 {
-    var entry = zip.GetEntry("games.dat");
-    if (entry == null) { Console.WriteLine("[zip] 缺少 games.dat 条目"); return; }
-    using var es = entry.Open();
-    using var os = new MemoryStream();
-    es.CopyTo(os);
-    gamesData = os.ToArray();
-
-    var syncEntry = zip.GetEntry("sync_state_mini.json");
-    if (syncEntry != null)
+    if (File.Exists(outPath))
     {
-        using var ss = syncEntry.Open();
-        using var sr = new StreamReader(ss);
-        string syncJson = sr.ReadToEnd();
         try
         {
-            using var sdoc = JsonDocument.Parse(syncJson);
-            if (sdoc.RootElement.TryGetProperty("LastSyncTicks", out var t) && t.ValueKind == JsonValueKind.Number)
-                lastSyncTicks = t.GetInt64();
+            var fileBytes = File.ReadAllBytes(outPath);
+            using (var doc = JsonDocument.Parse(fileBytes))
+            {
+                var gameCount = doc.RootElement.ValueKind == JsonValueKind.Array ? doc.RootElement.GetArrayLength() : -1;
+                Console.WriteLine($"[file] games 条数={gameCount}");
+                foreach (var item in doc.RootElement.EnumerateArray())
+                {
+                    string code = GetProp(item, "gameCode", "GameCode") ?? "";
+                    if (!string.IsNullOrEmpty(code)) merged[code] = MakeEntry(item);
+                }
+            }
         }
-        catch { }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[file] 读取失败 {ex.Message}");
+            force = true;
+        }
     }
 }
-Console.WriteLine($"[zip] games.dat bytes={gamesData.Length} lastSyncTicks={lastSyncTicks}");
-
-// ===== 6) 内存静态解密（games_dat_decrypt.cs 方法） =====
-byte[] plainBytes = GamesDat.DecryptToBytes(gamesData);
-string gamesJson = Encoding.UTF8.GetString(plainBytes);
-Console.WriteLine($"[decrypt] plainJsonBytes={plainBytes.Length}");
-int gameCount = -1;
-using (var doc = JsonDocument.Parse(gamesJson))
-    gameCount = doc.RootElement.ValueKind == JsonValueKind.Array ? doc.RootElement.GetArrayLength() : -1;
-Console.WriteLine($"[decrypt] games 条数={gameCount}");
-
-// ===== 6.5) GetGamesAsync 获取最新游戏列表，与快照合并（接口数据覆盖/新增） =====
-static JsonObject MakeEntry(JsonElement item)
+Console.WriteLine($"[force game dat] = {force}");
+if (force)
 {
-    var obj = new JsonObject();
-    obj["GameCode"] = GetProp(item, "gameCode", "GameCode") ?? "";
-    obj["ChineseName"] = GetProp(item, "chineseName", "ChineseName") ?? "";
-    obj["EnglishName"] = GetProp(item, "englishName", "EnglishName") ?? "";
-    obj["Size"] = GetProp(item, "size", "Size") ?? "";
-    obj["GameVersion"] = GetProp(item, "gameVersion", "GameVersion") ?? "";
-    obj["DownloadUrl1"] = GetProp(item, "downloadUrl1", "DownloadUrl1") ?? "";
-    obj["DownloadUrl2"] = GetProp(item, "downloadUrl2", "DownloadUrl2") ?? "";
-    obj["UpdateDateTooltip"] = BuildTooltip(GetProp(item, "updateDate", "UpdateDate"), GetProp(item, "releaseDate", "ReleaseDate"));
-    return obj;
-}
+    // ===== 4) 快照 zip 下载到内存 =====
+    byte[]? zipBytes = await Api.GetSnapshotZipAsync(client, hostUsed, token);
+    Console.WriteLine($"[snapshot] zipBytes={zipBytes?.Length ?? 0}");
+    if (zipBytes == null || zipBytes.Length == 0) { Console.WriteLine("[snapshot] 快照为空，退出。"); return; }
 
-var merged = new Dictionary<string, JsonObject>(StringComparer.OrdinalIgnoreCase);
-using (var gdoc = JsonDocument.Parse(gamesJson))
-{
-    foreach (var item in gdoc.RootElement.EnumerateArray())
+    // ===== 5) 内存解压 games.dat =====
+    byte[] gamesData;
+    using (var ms = new MemoryStream(zipBytes))
+    using (var zip = new ZipArchive(ms, ZipArchiveMode.Read))
     {
-        string code = GetProp(item, "gameCode", "GameCode") ?? "";
-        if (!string.IsNullOrEmpty(code)) merged[code] = MakeEntry(item);
+        var entry = zip.GetEntry("games.dat");
+        if (entry == null) { Console.WriteLine("[zip] 缺少 games.dat 条目"); return; }
+        using var es = entry.Open();
+        using var os = new MemoryStream();
+        es.CopyTo(os);
+        gamesData = os.ToArray();
+
+        var syncEntry = zip.GetEntry("sync_state_mini.json");
+        if (syncEntry != null)
+        {
+            using var ss = syncEntry.Open();
+            using var sr = new StreamReader(ss);
+            string syncJson = sr.ReadToEnd();
+            try
+            {
+                using var sdoc = JsonDocument.Parse(syncJson);
+                if (sdoc.RootElement.TryGetProperty("LastSyncTicks", out var t) && t.ValueKind == JsonValueKind.Number)
+                    lastSyncTicks = t.GetInt64();
+            }
+            catch { }
+        }
+    }
+    Console.WriteLine($"[zip] games.dat bytes={gamesData.Length} lastSyncTicks={lastSyncTicks}");
+
+    // ===== 6) 内存静态解密（games_dat_decrypt.cs 方法） =====
+    byte[] plainBytes = GamesDat.DecryptToBytes(gamesData);
+    string gamesJson = Encoding.UTF8.GetString(plainBytes);
+    Console.WriteLine($"[decrypt] plainJsonBytes={plainBytes.Length}");
+
+    using (var doc = JsonDocument.Parse(gamesJson))
+    {
+        var gameCount = doc.RootElement.ValueKind == JsonValueKind.Array ? doc.RootElement.GetArrayLength() : -1;
+        Console.WriteLine($"[decrypt] games 条数={gameCount}");
+        foreach (var item in doc.RootElement.EnumerateArray())
+        {
+            string code = GetProp(item, "gameCode", "GameCode") ?? "";
+            if (!string.IsNullOrEmpty(code)) merged[code] = MakeEntry(item);
+        }
     }
 }
+// ===== 6.5) GetGamesAsync 获取最新游戏列表，与快照合并（接口数据覆盖/新增） =====
 string latestGamesJson = await Api.GetGamesAsync(client, hostUsed, token, lastSyncTicks);
 int covered = 0, added = 0, latestCount = 0;
 using (var ldoc = JsonDocument.Parse(latestGamesJson))
@@ -170,7 +189,7 @@ var outArr = new JsonArray();
 int matched = 0;
 foreach (var code in merged.Keys.OrderBy(k => k, StringComparer.Ordinal))
 {
-    var obj = new JsonObject();
+    JsonNode obj = new JsonObject();
     string pwd = pwdMap.TryGetValue(code, out var v) ? v : "";
     if (pwdMap.ContainsKey(code)) matched++;
     var src = merged[code];
@@ -195,6 +214,21 @@ var outOptions = new JsonSerializerOptions
 string outJson = DecodeUnicodeEscapes(outArr.ToJsonString(outOptions));
 File.WriteAllText(outPath, outJson, new UTF8Encoding(false));
 Console.WriteLine($"[out] 保存 {outPath} bytes={outJson.Length} 条数={outArr.Count} 密码匹配={matched}");
+
+
+static JsonObject MakeEntry(JsonElement item)
+{
+    var obj = new JsonObject();
+    obj["GameCode"] = GetProp(item, "gameCode", "GameCode") ?? "";
+    obj["ChineseName"] = GetProp(item, "chineseName", "ChineseName") ?? "";
+    obj["EnglishName"] = GetProp(item, "englishName", "EnglishName") ?? "";
+    obj["Size"] = GetProp(item, "size", "Size") ?? "";
+    obj["GameVersion"] = GetProp(item, "gameVersion", "GameVersion") ?? "";
+    obj["DownloadUrl1"] = GetProp(item, "downloadUrl1", "DownloadUrl1") ?? "";
+    obj["DownloadUrl2"] = GetProp(item, "downloadUrl2", "DownloadUrl2") ?? "";
+    obj["UpdateDateTooltip"] = GetProp(item, "UpdateDateTooltip", "updateDateTooltip") ?? BuildTooltip(GetProp(item, "updateDate", "UpdateDate"), GetProp(item, "releaseDate", "ReleaseDate"));
+    return obj;
+}
 
 static string? GetProp(JsonElement e, params string[] names)
 {
