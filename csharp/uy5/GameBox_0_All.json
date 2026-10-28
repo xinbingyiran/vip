@@ -21640,6 +21640,12 @@
     "post_title": "真・三国无双 起源：豪华版/Dynasty Warriors Origins – Digital Deluxe Edition",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/nEZbeyRziMFr?pwd=b0ci",
+        "filesize": "54.05 G",
+        "link_ctime": "2026.10.27",
+        "filename": "DYNASTY WARRIORS：ORIGINS v1.0.1.2"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/NJ3IF3qaQBZj?pwd=7tcf",
         "filesize": "54.02 G",
         "link_ctime": "2026.01.26",
@@ -23757,6 +23763,12 @@
     "id": 77919,
     "post_title": "断箭：先锋版/Broken Arrow Vanguard Edition",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/3aQF7fIJzqIv?pwd=h80v",
+        "filesize": "56.34 G",
+        "link_ctime": "2026.10.26",
+        "filename": "Broken Arrow Build.26052592"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/ZNjauqiAVbmi?pwd=12ru",
         "filesize": "82.01 G",
@@ -42086,6 +42098,126 @@
         "filesize": "8.59 G",
         "link_ctime": "2026.10.25",
         "filename": "Azure Striker Gunvolt Trilogy Enhanced Build.25929139"
+      }
+    ]
+  },
+  {
+    "id": 131242,
+    "post_title": "菇域幽城/Shroom and Gloom",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/mUNVNvfYZZja?pwd=5gld",
+        "filesize": "1.12 G",
+        "link_ctime": "2026.10.25",
+        "filename": "Shroom and Gloom Build.25442225"
+      }
+    ]
+  },
+  {
+    "id": 131269,
+    "post_title": "地铁2033 重制版/Metro 2033 Redux",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ANnaQbYZVNvu?pwd=7jgx",
+        "filesize": "14.62 G",
+        "link_ctime": "2026.10.26",
+        "filename": "METRO 2033 Redux v1.0.0.4"
+      }
+    ]
+  },
+  {
+    "id": 131287,
+    "post_title": "星际漂流者/Ostranauts",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/iURj6zUvimMb?pwd=scw3",
+        "filesize": "908.09 M",
+        "link_ctime": "2026.10.26",
+        "filename": "Ostranauts v1.0.1.4"
+      }
+    ]
+  },
+  {
+    "id": 131293,
+    "post_title": "静脉/VEIN",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/UbuiqmfMNvMb?pwd=0pqu",
+        "filesize": "40.63 G",
+        "link_ctime": "2026.10.26",
+        "filename": "VEIN v0.025"
+      }
+    ]
+  },
+  {
+    "id": 131364,
+    "post_title": "休伯特/Hubert",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/jYzeMvf2UFZ3?pwd=8l1s",
+        "filesize": "12.01 G",
+        "link_ctime": "2026.10.26",
+        "filename": "Hubert Build.25983666"
+      }
+    ]
+  },
+  {
+    "id": 131395,
+    "post_title": "致病本源/Pathogenic",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NziAv2M3QRB3?pwd=20yj",
+        "filesize": "2.03 G",
+        "link_ctime": "2026.10.27",
+        "filename": "Pathogenic v1.3.16"
+      }
+    ]
+  },
+  {
+    "id": 131429,
+    "post_title": "战神3 重制版/God of War III Remastered",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/bmymEreiANBj?pwd=tkf7",
+        "filesize": "35.26 G",
+        "link_ctime": "2026.10.27",
+        "filename": "gow3-windows v2.2.0"
+      }
+    ]
+  },
+  {
+    "id": 131440,
+    "post_title": "放置之路：古神复苏/Path of Idle Old Gods Rising",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/6byuUvnArINj?pwd=1zpy",
+        "filesize": "282.57 M",
+        "link_ctime": "2026.10.27",
+        "filename": "Path of Idle Old Gods Rising Build.24695524"
+      }
+    ]
+  },
+  {
+    "id": 131472,
+    "post_title": "喇叭之城/Phonopolis",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qeQvAbq2iU7j?pwd=k95m",
+        "filesize": "9.65 G",
+        "link_ctime": "2026.10.28",
+        "filename": "Phonopolis v1.0.6"
+      }
+    ]
+  },
+  {
+    "id": 131477,
+    "post_title": "月球清洁工/Moon Sweepers",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/nuINziJ3AjAr?pwd=1vxv",
+        "filesize": "474.61 M",
+        "link_ctime": "2026.10.28",
+        "filename": "Moon Sweepers Build.26166121"
       }
     ]
   }
