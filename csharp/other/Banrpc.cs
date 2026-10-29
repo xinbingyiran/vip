@@ -88,10 +88,13 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
         _listener.Start();
 
         sshWatcher.Enabled = true;
-        WriteLog("监听已启动");
+        WriteLog("APP start");
         await Task.WhenAny(CheckBanExpire(stoppingToken), CheckListener(stoppingToken));
+        fw.EnableRaisingEvents = false;
+        sshWatcher.Enabled = false;
+        securityWatcher.Enabled = false;
         ClearAllBanRules();
-        WriteLog("程序退出");
+        WriteLog("APP exit");
         _slim.Dispose();
         (_listener as IDisposable)?.Dispose();
     }
@@ -218,7 +221,7 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
             catch { }
         }
 
-        WriteLog($"Load Config[{reason}]: listen={string.Join(",", _listener.Prefixes)} mins={mins} fails={fails} ports={ports} whites={string.Join(',', list)}");
+        WriteLog($"Config load: [{reason}] listen={string.Join(",", _listener.Prefixes)} mins={mins} fails={fails} ports={ports} whites={string.Join(',', list)}");
         await _slim.WaitAsync();
         try
         {
@@ -274,14 +277,14 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
     {
         string cmd = $"advfirewall firewall add rule name=\"{ruleName}\" dir=in action=block remoteip={ip} protocol={protocol} localport={ports} enable=yes profile=any";
         RunNetsh(cmd);
-        WriteLog($"✅ 封禁 IP:{ip}，防火墙规则【{ruleName}】，{Mins}分钟后自动解除");
+        WriteLog($"Firewall add: {ruleName} | {Mins}");
     }
 
     void UnbanIp(string ruleName)
     {
         string cmd = $"advfirewall firewall delete rule name=\"{ruleName}\"";
         RunNetsh(cmd);
-        WriteLog($"⏱️ 自动解封，移除防火墙规则【{ruleName}】");
+        WriteLog($"Firewall delete: {ruleName} | {Mins}");
     }
 
     async void OnSecurityEvent(object? sender, EventRecordWrittenEventArgs e)
@@ -295,36 +298,23 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
             int eventId = e.EventRecord.Id;
             string ip = Get(dataDict, "IpAddress");
             string user = Get(dataDict, "TargetUserName");
-            string domain = Get(dataDict, "TargetDomainName");
-            string logonType = Get(dataDict, "LogonType");
             string subStatus = Get(dataDict, "SubStatus");
 
-            bool isInternalNoise =
-                (!string.IsNullOrWhiteSpace(ip) && ip != "-") ||
-                !(logonType == "5" && (
-                    user.Equals("SYSTEM", StringComparison.OrdinalIgnoreCase)
-                    || user.StartsWith("sshd_", StringComparison.OrdinalIgnoreCase)
-                    || domain.Contains("IIS APPPOOL")));
-            if (!isInternalNoise) return;
+            if (string.IsNullOrWhiteSpace(ip) || ip is "-") return;
 
-            string time = DateTime.Now.ToString("HH:mm:ss");
             if (eventId == 4625)
             {
-                string desc = ExplainSubStatus(subStatus);
-                string line = $"{time} RDP FAIL | {user} | {ip} | {desc}";
-                WriteLog(line);
+                WriteLog($"RDP fail: {ip} | {user} | {ExplainSubStatus(subStatus)}");
                 await AddFail(ip, "RDP");
             }
             else if (eventId == 4624)
             {
-                string line = $"{time} RDP OK  | {user} | {ip}";
-                WriteLog(line);
+                WriteLog($"RDP success: {ip} | {user}");
             }
         }
         catch (Exception ex)
         {
-            var err = $"[SecurityErr] {ex.Message}";
-            WriteLog(err);
+            WriteLog($"RDP error: {ex.Message}");
         }
     }
 
@@ -349,50 +339,52 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
             {
                 user = mInvalid.Groups["user"].Value;
                 ip = mInvalid.Groups["ip"].Value;
-                reason = "Invalid user";
+                reason = "无效用户名";
             }
             else
             {
-                Match mFailPw = SshFailedPwRegex.Match(payload);
+                var mFailPw = SshFailedPwRegex.Match(payload);
                 if (mFailPw.Success)
                 {
                     user = mFailPw.Groups["user"].Value;
                     ip = mFailPw.Groups["ip"].Value;
-                    reason = "Failed password for invalid user";
+                    reason = "无效用户名密码";
                 }
             }
 
-            if (ip != "-")
+            if (string.IsNullOrWhiteSpace(ip) || ip is "-")
             {
-                string time = DateTime.Now.ToString("HH:mm:ss");
-                string line = $"{time} SSH FAIL | {user} | {ip} | {reason}";
-                WriteLog(line);
-                await AddFail(ip, "SSH");
-                return;
+                var mAccept = SshAcceptedRegex.Match(payload);
+                if (mAccept.Success)
+                {
+                    WriteLog($"SSH success: {mAccept.Groups["ip"].Value} | {mAccept.Groups["user"].Value}");
+                }
             }
-
-            Match mAccept = SshAcceptedRegex.Match(payload);
-            if (mAccept.Success)
+            else
             {
-                user = mAccept.Groups["user"].Value;
-                ip = mAccept.Groups["ip"].Value;
-                string time = DateTime.Now.ToString("HH:mm:ss");
-                string line = $"{time} SSH OK  | {user} | {ip}";
-                WriteLog(line);
+                WriteLog($"SSH fail: {ip} | {user} | {reason}");
+                await AddFail(ip, "SSH");
             }
         }
         catch (Exception ex)
         {
-            var err = $"[SSHErr] {ex.Message}";
-            WriteLog(err);
+            WriteLog($"SSH error: {ex.Message}");
         }
     }
 
     async Task AddFail(string ip, string type, CancellationToken token = default)
     {
-        if (string.IsNullOrWhiteSpace(ip) || ip == "-" || !IPAddress.TryParse(ip, out var ipvalue)) return;
+        if (string.IsNullOrWhiteSpace(ip) || ip == "-" || !IPAddress.TryParse(ip, out var ipvalue))
+        {
+            Console.WriteLine($"不统计无效IP {ip}");
+            return;
+        }
         ip = ipvalue.ToString();
-        if (Whites.Contains(ip)) return;
+        if (Whites.Contains(ip))
+        {
+            Console.WriteLine($"不统计白名单IP {ip}");
+            return;
+        }
         BanItem? ban;
         await _slim.WaitAsync(token);
         try
@@ -408,12 +400,13 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
         }
         var now = DateTime.Now;
         var checkFailTime = now.AddMinutes(-Mins);
+        var oldCount = 0;
         while (ban.List.TryPeek(out var p) && p.FailTime < checkFailTime && ban.List.TryDequeue(out p))
         {
+            oldCount++;
         }
         ban.List.Enqueue((type, now));
-
-        WriteLog($"计数更新 IP:{ip} {ban.List.Count}/{Fails}");
+        WriteLog($"Count IP: {ip} {ban.List.Count}/{Fails} -{oldCount}+1");
         if (ban.Name is null && ban.List.Count >= Fails)
         {
             ban.Name = $"{BanRulePrefix}_{ip}";
@@ -425,7 +418,7 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
 
     void ClearAllBanRules()
     {
-        WriteLog("理所有IPBAN_防火墙规则");
+        WriteLog("Firewall delete batch");
         try
         {
             var p = new ProcessStartInfo
@@ -452,13 +445,13 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
                 if (kv is ["Rule Name" or "规则名称", var rn] && rn.StartsWith(BanRulePrefix, StringComparison.OrdinalIgnoreCase))
                 {
                     RunNetsh($"advfirewall firewall delete rule name=\"{rn}\"");
-                    WriteLog($"清理旧规则: {rn}");
+                    WriteLog($"Firewall delete: {rn}");
                 }
             }
         }
         catch (Exception ex)
         {
-            WriteLog($"清理规则异常：{ex.Message}");
+            WriteLog($"Firewall error: {ex.Message}");
         }
     }
 
@@ -480,12 +473,12 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
             if (pr.ExitCode != 0)
             {
                 var err = pr.StandardError.ReadToEnd();
-                WriteLog($"netsh命令失败：{args} | {err}");
+                WriteLog($"Run netsh fail: {args} | {err}");
             }
         }
         catch (Exception ex)
         {
-            WriteLog($"调用netsh异常：{ex.Message}");
+            WriteLog($"Run netsh error: {ex.Message}");
         }
     }
 
@@ -512,7 +505,7 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
         {
             var nameAttr = dataNode.Attribute("Name");
             string name = nameAttr?.Value ?? "";
-            dict[name] = dataNode.Value ?? "";
+            dict[name] = dataNode.Value?.Trim() ?? "";
         }
         return dict;
     }
