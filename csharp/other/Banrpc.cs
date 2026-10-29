@@ -16,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Hosting.WindowsServices;
 using Microsoft.Extensions.Logging;
+using Microsoft.VisualBasic;
 
 Environment.CurrentDirectory = AppContext.BaseDirectory;
 var builder = Host.CreateApplicationBuilder(new HostApplicationBuilderSettings
@@ -258,8 +259,8 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
         {
             if (info.Name is not null && now >= info.UnBanTime)
             {
-                UnbanIp($"{info.Name}_tcp");
-                UnbanIp($"{info.Name}_udp");
+                var tcp = UnbanIp($"{info.Name}_tcp", out var tcpe);
+                var udp = UnbanIp($"{info.Name}_udp", out var udpe);
                 await _slim.WaitAsync(token);
                 try
                 {
@@ -269,22 +270,9 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
                 {
                     _slim.Release();
                 }
+                WriteLog($"Ban Delete: {ip} [{info.Name}_tcp[{tcp}|{tcpe}]/{info.Name}_udp[{udp}|{udpe}]]");
             }
         }
-    }
-
-    void BanIp(string ip, string ruleName, string protocol, string ports)
-    {
-        string cmd = $"advfirewall firewall add rule name=\"{ruleName}\" dir=in action=block remoteip={ip} protocol={protocol} localport={ports} enable=yes profile=any";
-        RunNetsh(cmd);
-        WriteLog($"Firewall add: {ruleName} | {Mins}");
-    }
-
-    void UnbanIp(string ruleName)
-    {
-        string cmd = $"advfirewall firewall delete rule name=\"{ruleName}\"";
-        RunNetsh(cmd);
-        WriteLog($"Firewall delete: {ruleName} | {Mins}");
     }
 
     async void OnSecurityEvent(object? sender, EventRecordWrittenEventArgs e)
@@ -304,8 +292,8 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
 
             if (eventId == 4625)
             {
-                WriteLog($"RDP fail: {ip} | {user} | {ExplainSubStatus(subStatus)}");
-                await AddFail(ip, "RDP");
+                var result = await AddFail(ip, "RDP");
+                WriteLog($"RDP fail: {ip} | {user} | {ExplainSubStatus(subStatus)} | {result}");
             }
             else if (eventId == 4624)
             {
@@ -362,8 +350,8 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
             }
             else
             {
-                WriteLog($"SSH fail: {ip} | {user} | {reason}");
-                await AddFail(ip, "SSH");
+                var result = await AddFail(ip, "SSH");
+                WriteLog($"SSH fail: {ip} | {user} | {reason} | {result}");
             }
         }
         catch (Exception ex)
@@ -372,18 +360,16 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
         }
     }
 
-    async Task AddFail(string ip, string type, CancellationToken token = default)
+    async Task<string> AddFail(string ip, string type, CancellationToken token = default)
     {
         if (string.IsNullOrWhiteSpace(ip) || ip == "-" || !IPAddress.TryParse(ip, out var ipvalue))
         {
-            Console.WriteLine($"不统计无效IP {ip}");
-            return;
+            return $"invalid IP";
         }
         ip = ipvalue.ToString();
         if (Whites.Contains(ip))
         {
-            Console.WriteLine($"不统计白名单IP {ip}");
-            return;
+            return $"white IP";
         }
         BanItem? ban;
         await _slim.WaitAsync(token);
@@ -406,35 +392,27 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
             oldCount++;
         }
         ban.List.Enqueue((type, now));
-        WriteLog($"Count IP: {ip} {ban.List.Count}/{Fails} -{oldCount}+1");
         if (ban.Name is null && ban.List.Count >= Fails)
         {
             ban.Name = $"{BanRulePrefix}_{ip}";
             ban.UnBanTime = now.AddMinutes(Mins);
-            BanIp(ip, $"{ban.Name}_tcp", "tcp", Ports); ;
-            BanIp(ip, $"{ban.Name}_udp", "udp", Ports);
+            var tcp = BanIp(ip, $"{ban.Name}_tcp", "tcp", Ports, out var tcpe);
+            var udp = BanIp(ip, $"{ban.Name}_udp", "udp", Ports, out var udpe);
+            return $"Ban IP: {ip} {ban.List.Count}/{Fails} -{oldCount}+1 [{ban.Name}_tcp[{tcp}|{tcpe}]/{ban.Name}_udp[{udp}|{udpe}]]";
+        }
+        else
+        {
+            return $"Count IP: {ip} {ban.List.Count}/{Fails} -{oldCount}+1";
         }
     }
 
     void ClearAllBanRules()
     {
-        WriteLog("Firewall delete batch");
+        WriteLog("Ban delete batch");
         try
         {
-            var p = new ProcessStartInfo
-            {
-                FileName = "cmd",
-                Arguments = "/c chcp 65001 >nul && netsh advfirewall firewall show rule name=all",
-                RedirectStandardOutput = true,
-                UseShellExecute = false,
-                CreateNoWindow = true,
-                StandardOutputEncoding = Encoding.UTF8
-            };
-            var proc = Process.Start(p);
-            if (proc == null) return;
-            string output = proc.StandardOutput.ReadToEnd();
-            proc.WaitForExit();
-            var lines = output.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+            string output = Firewall("show rule name=all", out var err);
+            var lines = output.Split(Environment.NewLine.Replace("\r", "\\r").Replace("\n", "\\n"), StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
             foreach (var line in lines)
             {
                 if (string.IsNullOrEmpty(line) || line.IndexOf(':') < 0)
@@ -444,42 +422,54 @@ partial class Program(ILogger<Program> Logger) : BackgroundService
                 var kv = line.Split(':', 2, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
                 if (kv is ["Rule Name" or "规则名称", var rn] && rn.StartsWith(BanRulePrefix, StringComparison.OrdinalIgnoreCase))
                 {
-                    RunNetsh($"advfirewall firewall delete rule name=\"{rn}\"");
-                    WriteLog($"Firewall delete: {rn}");
+                    var r = UnbanIp(rn, out var re);
+                    WriteLog($"Ban delete: {rn}[{r}|{re}]");
                 }
             }
         }
         catch (Exception ex)
         {
-            WriteLog($"Firewall error: {ex.Message}");
+            WriteLog($"Ban delete error: {ex.Message}");
         }
     }
 
-    void RunNetsh(string args)
+    string BanIp(string ip, string ruleName, string protocol, string ports, out string error)
     {
+        return Firewall($"add rule name=\"{ruleName}\" dir=in action=block remoteip={ip} protocol={protocol} localport={ports} enable=yes profile=any", out error);
+    }
+
+    string UnbanIp(string ruleName, out string error)
+    {
+        return Firewall($"delete rule name=\"{ruleName}\"", out error);
+    }
+    string Firewall(string args, out string err)
+    {
+        err = string.Empty;
+        string result = string.Empty;
         try
         {
             var psi = new ProcessStartInfo
             {
                 FileName = "cmd",
-                Arguments = $"/c chcp 65001 >nul && netsh {args}",
+                Arguments = $"/c chcp 65001 >nul && netsh advfirewall firewall {args}",
                 UseShellExecute = false,
                 CreateNoWindow = true,
-                RedirectStandardError = true
+                RedirectStandardError = true,
+                RedirectStandardOutput = true,
+                StandardOutputEncoding = Encoding.UTF8,
+                StandardErrorEncoding = Encoding.UTF8,
             };
             var pr = Process.Start(psi);
-            if (pr == null) return;
+            if (pr == null) return result;
+            result = pr.StandardOutput.ReadToEnd().Replace("\r", "\\r").Replace("\n", "\\n");
+            err = pr.StandardError.ReadToEnd().Replace("\r", "\\r").Replace("\n", "\\n");
             pr.WaitForExit();
-            if (pr.ExitCode != 0)
-            {
-                var err = pr.StandardError.ReadToEnd();
-                WriteLog($"Run netsh fail: {args} | {err}");
-            }
         }
         catch (Exception ex)
         {
             WriteLog($"Run netsh error: {ex.Message}");
         }
+        return result;
     }
 
     void WriteLog(string text)
