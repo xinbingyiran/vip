@@ -1642,6 +1642,12 @@
     "post_title": "杀手3豪华版/Hitman 3 Deluxe Edition",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/eYzey2YnUzQv?pwd=zn0i",
+        "filesize": "76.34 G",
+        "link_ctime": "2026.11.05",
+        "filename": "Hitman 3 v3.290.1.0"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/YZJjMfaQn6fi?pwd=5uty",
         "filesize": "76.31 G",
         "link_ctime": "2026.08.31",
@@ -2595,6 +2601,12 @@
     "id": 16522,
     "post_title": "极限竞速：地平线4终极版/Forza Horizon 4 Ultimate Edition",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qUzuMvUvANBn?pwd=kh4g",
+        "filesize": "91.94 G",
+        "link_ctime": "2026.11.04",
+        "filename": "ForzaHorizon4 v1.478.564.0"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/uAfuE3VJZ7Bf?pwd=4omy",
         "filesize": "91.94 G",
@@ -12441,6 +12453,12 @@
     "id": 42725,
     "post_title": "行尸走肉：Telltale – 最终系列/The Walking Dead: The Telltale Definitive Series",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/vEZ32mN7nyQr?pwd=7tn2",
+        "filesize": "45.37 G",
+        "link_ctime": "2026.11.01",
+        "filename": "WDC v1.6"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/fURv6vnayqUf?pwd=gv2l",
         "filesize": "45.36 G",
@@ -39922,6 +39940,12 @@
     "post_title": "鬼武者：剑之道 – 高级豪华版/Onimusha: Way of the Sword – Premium Deluxe Edition",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/Uni6bmnUVRR3?pwd=4dla",
+        "filesize": "55.24 G",
+        "link_ctime": "2026.11.02",
+        "filename": "Onimusha Way of the Sword v01.000.001"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/rIfa6rMRBR7f?pwd=kl7e",
         "filesize": "55.05 G",
         "link_ctime": "2026.09.05",
@@ -42262,6 +42286,12 @@
     "post_title": "深空当铺：可能是偷的 支持者版/Probably Stolen",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/bQ7zAzVnMnY3?pwd=lqm6",
+        "filesize": "687.62 M",
+        "link_ctime": "2026.11.04",
+        "filename": "Probably Stolen v100 REV9"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/NJNzuqa26bay?pwd=2s2p",
         "filesize": "993 M",
         "link_ctime": "2026.10.29",
@@ -42398,6 +42428,90 @@
         "filesize": "1.6 G",
         "link_ctime": "2026.10.31",
         "filename": "Milling machine 3D v1.75"
+      }
+    ]
+  },
+  {
+    "id": 131960,
+    "post_title": "美德与重锤/Virtue and a Sledgehammer",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/nAj2q2mIFrQz?pwd=3qqp",
+        "filesize": "3.8 G",
+        "link_ctime": "2026.11.01",
+        "filename": "Virtue and a Sledgehammer Build.26242019"
+      }
+    ]
+  },
+  {
+    "id": 132014,
+    "post_title": "宇宙机器人/ASTRO BOT",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/zABFFfyMBvy2?pwd=4qys",
+        "filesize": "43.34 G",
+        "link_ctime": "2026.11.01",
+        "filename": "ASTRO BOT v1.019"
+      }
+    ]
+  },
+  {
+    "id": 132030,
+    "post_title": "永恒之柱/Pillars of Eternity",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/6bYzeuyYZF3m?pwd=j0jm",
+        "filesize": "21.05 G",
+        "link_ctime": "2026.11.02",
+        "filename": "Pillars.of.Eternity v3.9.4.89183"
+      }
+    ]
+  },
+  {
+    "id": 132084,
+    "post_title": "孤岛惊魂 新曙光/Far Cry® New Dawn",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/ABbABbAz2uem?pwd=0lfh",
+        "filesize": "31.89 G",
+        "link_ctime": "2026.11.02",
+        "filename": "FarCryNewDawn v1.0.5"
+      }
+    ]
+  },
+  {
+    "id": 132101,
+    "post_title": "无主之地4/Borderlands 4",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/RjueyyzuUrAn?pwd=0fwb",
+        "filesize": "185.47 G",
+        "link_ctime": "2026.11.03",
+        "filename": "Borderlands 4 v1.11"
+      }
+    ]
+  },
+  {
+    "id": 132155,
+    "post_title": "超级变色龙/Meccha Chameleon",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/MraeIjy6FnQf?pwd=14cj",
+        "filesize": "3.33 G",
+        "link_ctime": "2026.11.04",
+        "filename": "MECCHA CHAMELEON v4.2.0"
+      }
+    ]
+  },
+  {
+    "id": 132198,
+    "post_title": "编程农场/The Farmer Was Replaced",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/rIR7faZNBzma?pwd=5zs0",
+        "filesize": "126.42 M",
+        "link_ctime": "2026.11.04",
+        "filename": "The Farmer Was Replaced v26385848"
       }
     ]
   }

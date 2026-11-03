@@ -1,0 +1,39 @@
+﻿<Window x:Class="JinZhiZhuanHuan.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JinZhiZhuanHuan"
+        mc:Ignorable="d"
+        Title="心冰依然进制转换器" Height="450" Width="800"   DataContext="{Binding RelativeSource={RelativeSource self}}">
+    <Grid TextBlock.FontSize="24">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <local:ValueConverter2 x:Key="C2"></local:ValueConverter2>
+            <local:ValueConverter8 x:Key="C8"></local:ValueConverter8>
+            <local:ValueConverter10 x:Key="C10"></local:ValueConverter10>
+            <local:ValueConverterL x:Key="CL"></local:ValueConverterL>
+            <local:ValueConverter16 x:Key="C16"></local:ValueConverter16>
+        </Grid.Resources>
+        <TextBlock Text="二进制" Grid.Row="0" Grid.Column="0" Margin="3" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="八进制" Grid.Row="1" Grid.Column="0" Margin="3" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="无符号" Grid.Row="2" Grid.Column="0" Margin="3" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="有符号" Grid.Row="3" Grid.Column="0" Margin="3" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="十六进制" Grid.Row="4" Grid.Column="0" Margin="3" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+        <TextBox Text="{Binding Value,Converter={StaticResource C2},UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" Grid.Column="1" Margin="3" HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalAlignment="Center"></TextBox>
+        <TextBox Text="{Binding Value,Converter={StaticResource C8},UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" Margin="3" HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalAlignment="Center"></TextBox>
+        <TextBox Text="{Binding Value,Converter={StaticResource C10},UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1" Margin="3" HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalAlignment="Center"></TextBox>
+        <TextBox Text="{Binding Value,Converter={StaticResource CL},UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Grid.Column="1" Margin="3" HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalAlignment="Center"></TextBox>
+        <TextBox Text="{Binding Value,Converter={StaticResource C16},UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Grid.Column="1" Margin="3" HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalAlignment="Center"></TextBox>
+    </Grid>
+</Window>

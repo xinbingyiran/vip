@@ -1,0 +1,36 @@
+﻿<Window x:Class="CaiShuZi2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CaiShuZi2"
+        mc:Ignorable="d"
+        Title="心冰依然猜数字游戏 V 1.0" Height="450" Width="800" DataContext="{Binding RelativeSource={RelativeSource self}}">
+    <DockPanel LastChildFill="true">
+        <TextBlock DockPanel.Dock="Top" Margin="10" Text="心冰依然猜数字游戏" FontSize="64" HorizontalAlignment="Center" Foreground="Blue"></TextBlock>
+        <TextBlock Text="{Binding Status}" FontSize="24" Foreground="Red" DockPanel.Dock="Bottom"></TextBlock>
+        <Grid TextBlock.FontSize="48" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="数字下限：" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="数字上限：" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="你的猜测：" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding MinValue}" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding MaxValue}" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+            <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding GuessValue}" Width="180" HorizontalContentAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBox>
+            <StackPanel TextBlock.FontSize="36" Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Margin="5" Content="开始" Command="{x:Static local:MainWindow.Start}"></Button>
+                <Button Margin="5" Content="重置" Command="{x:Static local:MainWindow.Reset}"></Button>
+                <Button Margin="5" Content="猜测" Command="{x:Static local:App.Guess}"></Button>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>

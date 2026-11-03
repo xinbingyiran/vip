@@ -1,0 +1,13 @@
+﻿<Window x:Class="PcStatus.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PcStatus"
+        mc:Ignorable="d"
+        Title="电脑关机检测工具" Height="450" Width="800" DataContext="{Binding RelativeSource={RelativeSource self}}">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" TextBlock.FontSize="40">
+        <TextBlock Text="{Binding Status}"></TextBlock>
+        <Button Width="200" Content="{Binding CheckText}" Margin="10" Command="{x:Static local:MainWindow.Check}"></Button>
+    </StackPanel>
+</Window>
