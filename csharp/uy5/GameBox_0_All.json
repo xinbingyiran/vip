@@ -3280,6 +3280,12 @@
     "post_title": "腐烂国度2:主宰巨霸版/State of Decay 2: Juggernaut Edition",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/77R3AbNraQri?pwd=3wd5",
+        "filesize": "18.19 G",
+        "link_ctime": "2026.11.05",
+        "filename": "StateOfDecay2 v38.2"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/eIFR3mzieiYz?pwd=3fpi",
         "filesize": "18.32 G",
         "link_ctime": "2024.12.16",
@@ -42512,6 +42518,30 @@
         "filesize": "126.42 M",
         "link_ctime": "2026.11.04",
         "filename": "The Farmer Was Replaced v26385848"
+      }
+    ]
+  },
+  {
+    "id": 132227,
+    "post_title": "虚空破坏者/VOID/BREAKER",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/RBBBBz7Bf67r?pwd=4jid",
+        "filesize": "12.84 G",
+        "link_ctime": "2026.11.05",
+        "filename": "VOIDBREAKER v1.0"
+      }
+    ]
+  },
+  {
+    "id": 132296,
+    "post_title": "流浪房车/Nomad Drive",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/IFZnie6fMJRb?pwd=f4w3",
+        "filesize": "2.32 G",
+        "link_ctime": "2026.11.07",
+        "filename": "Nomad.Drive Build.26365271"
       }
     ]
   }
