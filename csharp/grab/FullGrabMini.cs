@@ -20,7 +20,7 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 
-string forcedHost = "0";
+string forcedHost = "-1";
 string outPath = "grab_games.json";
 bool force = false;
 var cmdArgs = Environment.GetCommandLineArgs();
@@ -38,33 +38,25 @@ var hosts = await Api.FetchBootstrapRoutesAsync(client);
 if (int.TryParse(forcedHost, out var fh) && fh >= 0 && fh < hosts.Count)
 {
     hosts = [hosts[fh]];
-
+    Console.WriteLine($"[forcehost] hosts={string.Join(", ", hosts)}");
 }
-Console.WriteLine($"[init] hosts={string.Join(", ", hosts)}");
 
 // ===== 2) 遍历 startup，成功即停止 =====
 string hostUsed = "";
+Api.StartupInfo? info = null;
 foreach (var host in hosts)
 {
-    var st = await Api.ProbeStartupAsync(client, host);
-    if (st == null) { Console.WriteLine($"[startup] {host} 失败，尝试下一节点"); continue; }
+    info = await Api.ProbeStartupAsync(client, host);
+    if (info == null) { Console.WriteLine($"[startup] {host} 失败，尝试下一节点"); continue; }
+    //Console.WriteLine($"[startup] toolkitMiniLatestVersion={st.MiniLatestVersion}");
+    Console.WriteLine($"[startup] {host} OK clientDownloadUrls={string.Join(" | ", info.ClientDownloadUrls)}");
+    // if (st.MiniMirrorPath != null)
+    //     Console.WriteLine($"[startup] miniUpdateFile={st.MiniUpdateFileName} hash={st.MiniUpdateHash} mirror={host}{st.MiniMirrorPath}");
     hostUsed = host;
-    Console.WriteLine($"[startup] {host} OK");
-    Console.WriteLine($"[startup] toolkitMiniLatestVersion={st.MiniLatestVersion}");
-    Console.WriteLine($"[startup] clientDownloadUrls={string.Join(" | ", st.ClientDownloadUrls)}");
-    if (st.MiniMirrorPath != null)
-        Console.WriteLine($"[startup] miniUpdateFile={st.MiniUpdateFileName} hash={st.MiniUpdateHash} mirror={host}{st.MiniMirrorPath}");
     break;
 }
-if (hostUsed == "") { Console.WriteLine("所有节点 startup 均失败。"); return; }
+if (info is null || hostUsed == "") { Console.WriteLine("所有节点 startup 均失败。"); return; }
 
-
-// ===== 3) ensure token =====
-var (token, _, ok) = await Api.EnsureAsync(client, hostUsed);
-if (!ok || string.IsNullOrEmpty(token)) { Console.WriteLine("[ensure] 未获取到 token，退出。"); return; }
-Console.WriteLine($"[ensure] tokenLen={token.Length}");
-
-long lastSyncTicks = 0;
 var merged = new Dictionary<string, JsonObject>(StringComparer.OrdinalIgnoreCase);
 if (!force)
 {
@@ -73,15 +65,13 @@ if (!force)
         try
         {
             var fileBytes = File.ReadAllBytes(outPath);
-            using (var doc = JsonDocument.Parse(fileBytes))
+            using var doc = JsonDocument.Parse(fileBytes);
+            var gameCount = doc.RootElement.ValueKind == JsonValueKind.Array ? doc.RootElement.GetArrayLength() : -1;
+            Console.WriteLine($"[file] games 条数={gameCount}");
+            foreach (var item in doc.RootElement.EnumerateArray())
             {
-                var gameCount = doc.RootElement.ValueKind == JsonValueKind.Array ? doc.RootElement.GetArrayLength() : -1;
-                Console.WriteLine($"[file] games 条数={gameCount}");
-                foreach (var item in doc.RootElement.EnumerateArray())
-                {
-                    string code = GetProp(item, "gameCode", "GameCode") ?? "";
-                    if (!string.IsNullOrEmpty(code)) merged[code] = MakeEntry(item);
-                }
+                string code = GetProp(item, "gameCode", "GameCode") ?? "";
+                if (!string.IsNullOrEmpty(code)) merged[code] = MakeEntry(item);
             }
         }
         catch (Exception ex)
@@ -91,12 +81,12 @@ if (!force)
         }
     }
 }
-Console.WriteLine($"[force game dat] = {force}");
+//Console.WriteLine($"[force game dat] = {force}");
 if (force)
 {
     // ===== 4) 快照 zip 下载到内存 =====
-    byte[]? zipBytes = await Api.GetSnapshotZipAsync(client, hostUsed, token);
-    Console.WriteLine($"[snapshot] zipBytes={zipBytes?.Length ?? 0}");
+    byte[]? zipBytes = await Api.GetSnapshotZipAsync(hostUsed, info.MiniDataSnapshot_DownloadPath);//Consts.RouteSnapshot
+    //Console.WriteLine($"[snapshot] zipBytes={zipBytes?.Length ?? 0}");
     if (zipBytes == null || zipBytes.Length == 0) { Console.WriteLine("[snapshot] 快照为空，退出。"); return; }
 
     // ===== 5) 内存解压 games.dat =====
@@ -111,41 +101,41 @@ if (force)
         es.CopyTo(os);
         gamesData = os.ToArray();
 
-        var syncEntry = zip.GetEntry("sync_state_mini.json");
-        if (syncEntry != null)
-        {
-            using var ss = syncEntry.Open();
-            using var sr = new StreamReader(ss);
-            string syncJson = sr.ReadToEnd();
-            try
-            {
-                using var sdoc = JsonDocument.Parse(syncJson);
-                if (sdoc.RootElement.TryGetProperty("LastSyncTicks", out var t) && t.ValueKind == JsonValueKind.Number)
-                    lastSyncTicks = t.GetInt64();
-            }
-            catch { }
-        }
+        // var syncEntry = zip.GetEntry("sync_state_mini.json");
+        // if (syncEntry != null)
+        // {
+        //     using var ss = syncEntry.Open();
+        //     using var sr = new StreamReader(ss);
+        //     string syncJson = sr.ReadToEnd();
+        //     try
+        //     {
+        //         using var sdoc = JsonDocument.Parse(syncJson);
+        //         if (sdoc.RootElement.TryGetProperty("LastSyncTicks", out var t) && t.ValueKind == JsonValueKind.Number)
+        //             lastSyncTicks = t.GetInt64();
+        //     }
+        //     catch { }
+        // }
     }
-    Console.WriteLine($"[zip] games.dat bytes={gamesData.Length} lastSyncTicks={lastSyncTicks}");
+    //Console.WriteLine($"[zip] games.dat bytes={gamesData.Length} lastSyncTicks={lastSyncTicks}");
 
     // ===== 6) 内存静态解密（games_dat_decrypt.cs 方法） =====
     byte[] plainBytes = GamesDat.DecryptToBytes(gamesData);
     string gamesJson = Encoding.UTF8.GetString(plainBytes);
-    Console.WriteLine($"[decrypt] plainJsonBytes={plainBytes.Length}");
+    //Console.WriteLine($"[down] plainJsonBytes={plainBytes.Length}");
 
-    using (var doc = JsonDocument.Parse(gamesJson))
+    using var doc = JsonDocument.Parse(gamesJson);
+    var gameCount = doc.RootElement.ValueKind == JsonValueKind.Array ? doc.RootElement.GetArrayLength() : -1;
+    Console.WriteLine($"[down] games 条数={gameCount}");
+    foreach (var item in doc.RootElement.EnumerateArray())
     {
-        var gameCount = doc.RootElement.ValueKind == JsonValueKind.Array ? doc.RootElement.GetArrayLength() : -1;
-        Console.WriteLine($"[decrypt] games 条数={gameCount}");
-        foreach (var item in doc.RootElement.EnumerateArray())
-        {
-            string code = GetProp(item, "gameCode", "GameCode") ?? "";
-            if (!string.IsNullOrEmpty(code)) merged[code] = MakeEntry(item);
-        }
+        string code = GetProp(item, "gameCode", "GameCode") ?? "";
+        if (!string.IsNullOrEmpty(code)) merged[code] = MakeEntry(item);
     }
 }
+
 // ===== 6.5) GetGamesAsync 获取最新游戏列表，与快照合并（接口数据覆盖/新增） =====
-string latestGamesJson = await Api.GetGamesAsync(client, hostUsed, token, lastSyncTicks);
+
+string latestGamesJson = await Api.GetGamesAsync(client, hostUsed, info.MiniDataSnapshot_LastSyncTicks);
 int covered = 0, added = 0, latestCount = 0;
 using (var ldoc = JsonDocument.Parse(latestGamesJson))
 {
@@ -164,6 +154,11 @@ using (var ldoc = JsonDocument.Parse(latestGamesJson))
     }
 }
 Console.WriteLine($"[merge] 接口最新条数={latestCount} 覆盖={covered} 新增={added} 合并后总条数={merged.Count}");
+
+// ===== 3) ensure token =====
+var (token, _, ok) = await Api.EnsureAsync(client, hostUsed);
+if (!ok || string.IsNullOrEmpty(token)) { Console.WriteLine("[ensure] 未获取到 token，退出。"); return; }
+Console.WriteLine($"[ensure] token.Length = {token.Length}");
 
 // ===== 7) passwords 接口 =====
 string passwordsJson = await Api.GetPasswordsAsync(client, hostUsed, token);
@@ -281,7 +276,7 @@ static string DecodeUnicodeEscapes(string input)
     return sb.ToString();
 }
 
-Console.WriteLine("[done]");
+//Console.WriteLine("[done]");
 
 // ============ 常量区 ============
 static class Consts
@@ -297,11 +292,13 @@ static class Consts
         ["client-api-response-v1"] = ResponseAESKey,  // ResponseAESKey
     };
     public const string BootstrapUrl = "https://lkfv.oss-cn-shanghai.aliyuncs.com/bootstrap-routes-v1.json";
+    public const string BOOTSTRAP_B = "https://lkfv.oss-accelerate.aliyuncs.com/bootstrap-routes-v1.json";
     public static readonly string[] FallbackHosts =
     {
         "http://42.240.170.167:28531", "http://156.225.28.133",
         "http://38.76.194.86", "http://39.109.63.108", "http://39.109.63.45",
-        "http://ad5fkruhhd.uk",
+        "http://ad5fkruhhd.uk", "http://corvanda.com", "http://javelto.com",
+        "http://jentrol.com", "http://varlemo.com"
     };
     public const string RouteStartup = "/api/client/startup";
     public const string RouteEnsure = "/api/client/activation/auto/ensure";
@@ -464,12 +461,10 @@ static class GamesDat
             using var dec = aes.CreateDecryptor();
             plain = dec.TransformFinalBlock(ciphertext, 0, ciphertext.Length);
         }
-        using (var gz = new GZipStream(new MemoryStream(plain), CompressionMode.Decompress))
-        using (var ms = new MemoryStream())
-        {
-            gz.CopyTo(ms);
-            return ms.ToArray();
-        }
+        using var gz = new GZipStream(new MemoryStream(plain), CompressionMode.Decompress);
+        using var ms = new MemoryStream();
+        gz.CopyTo(ms);
+        return ms.ToArray();
     }
 }
 
@@ -493,65 +488,80 @@ static class Api
             resp.EnsureSuccessStatusCode();
             string json = await resp.Content.ReadAsStringAsync();
             var routes = Util.DecryptBootstrapEnvelope(json);
+            Console.WriteLine($"[bootstrap]: {string.Join(", ", routes)}");
             for (int i = 0; i < routes.Count; i++)
                 if (!routes[i].StartsWith("http")) routes[i] = "http://" + routes[i];
             if (routes.Count > 0) return routes;
         }
         catch (Exception ex) { Console.WriteLine($"[bootstrap] 失败: {ex.Message}"); }
-        return new List<string>(Consts.FallbackHosts);
+        return [.. Consts.FallbackHosts];
     }
 
     public sealed class StartupInfo
     {
         public string MiniLatestVersion = "";
-        public List<string> ClientDownloadUrls = new();
+        public List<string> ClientDownloadUrls = [];
         public string MiniUpdateFileName = "";
         public string MiniUpdateHash = "";
         public string MiniMirrorPath = "";
+        public string MiniDataSnapshot_DownloadPath = "";
+        public long MiniDataSnapshot_LastSyncTicks = 0L;
     }
 
     public static async Task<StartupInfo?> ProbeStartupAsync(HttpClient c, string host)
     {
-        string path = Consts.RouteStartup;
-        long ts = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-        var req = new HttpRequestMessage(HttpMethod.Get, host + path);
-        req.Headers.TryAddWithoutValidation(Consts.HdrDistribution, "Normal");
-        req.Headers.TryAddWithoutValidation(Consts.HdrEnc, "2");
-        req.Headers.TryAddWithoutValidation(Consts.HdrHmacTs, ts.ToString());
-        req.Headers.TryAddWithoutValidation(Consts.HdrHmacSig, Util.HmacSign("GET", path, ts, ""));
-        using var resp = await c.SendAsync(req);
-        byte[] raw = await resp.Content.ReadAsByteArrayAsync();
-        string encKeyHint = "";
-        if (resp.Headers.TryGetValues(Consts.HdrEncKey, out var ev)) encKeyHint = string.Join(",", ev);
-        Console.WriteLine($"[startup] {resp.StatusCode} bodyLen={raw.Length} encKey={encKeyHint}");
-        if (!resp.IsSuccessStatusCode) return null;
+        try
+        {
+            string path = Consts.RouteStartup;
+            //long ts = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+            var req = new HttpRequestMessage(HttpMethod.Get, host + path);
+            //req.Headers.TryAddWithoutValidation(Consts.HdrDistribution, "Normal");
+            req.Headers.TryAddWithoutValidation(Consts.HdrEnc, "2");
+            //req.Headers.TryAddWithoutValidation(Consts.HdrHmacTs, ts.ToString());
+            //req.Headers.TryAddWithoutValidation(Consts.HdrHmacSig, Util.HmacSign("GET", path, ts, ""));
+            using var resp = await c.SendAsync(req);
+            byte[] raw = await resp.Content.ReadAsByteArrayAsync();
+            // string encKeyHint = "startup-bootstrap-v1";
+            // if (resp.Headers.TryGetValues(Consts.HdrEncKey, out var ev)) encKeyHint = string.Join(",", ev);
+            //Console.WriteLine($"[startup] {resp.StatusCode} bodyLen={raw.Length} encKey={encKeyHint}");
+            if (!resp.IsSuccessStatusCode) return null;
 
-        // 响应解密：gzip → JSON | base64 → AES-CBC(startup-bootstrap-v1 key) → gzip
-        byte[] step1 = Util.TryGzip(raw);
-        string s1 = Encoding.UTF8.GetString(step1);
-        JsonDocument doc;
-        if (!s1.TrimStart().StartsWith("{"))
-        {
-            string b64 = Encoding.ASCII.GetString(step1).Trim();
-            var ct = Convert.FromBase64String(b64);
-            var key = Consts.StartupAESKey;
-            var plain = Util.TryGzip(Util.AesCbcDecrypt(key, ct));
-            s1 = Encoding.UTF8.GetString(plain);
+            // 响应解密：gzip → JSON | base64 → AES-CBC(startup-bootstrap-v1 key) → gzip
+            byte[] step1 = Util.TryGzip(raw);
+            string s1 = Encoding.UTF8.GetString(step1);
+            JsonDocument doc;
+            if (!s1.TrimStart().StartsWith("{"))
+            {
+                string b64 = Encoding.ASCII.GetString(step1).Trim();
+                var ct = Convert.FromBase64String(b64);
+                var key = Consts.StartupAESKey; //Consts.Keys[encKeyHint];
+                var plain = Util.TryGzip(Util.AesCbcDecrypt(key, ct));
+                s1 = Encoding.UTF8.GetString(plain);
+            }
+            doc = JsonDocument.Parse(s1);
+            var info = new StartupInfo();
+            using (doc)
+            {
+                var data = doc.RootElement;
+                if (data.TryGetProperty("data", out var d)) data = d;
+                if (data.TryGetProperty("toolkitMiniLatestVersion", out var v)) info.MiniLatestVersion = v.GetString() ?? "";
+                if (data.TryGetProperty("clientDownloadUrls", out var urls) && urls.ValueKind == JsonValueKind.Array)
+                    foreach (var u in urls.EnumerateArray()) info.ClientDownloadUrls.Add(u.GetString() ?? "");
+                if (data.TryGetProperty("miniUpdateFileName", out var f)) info.MiniUpdateFileName = f.GetString() ?? "";
+                if (data.TryGetProperty("miniUpdateHash", out var hh)) info.MiniUpdateHash = hh.GetString() ?? "";
+                if (data.TryGetProperty("miniMirrorDownloadPath", out var mp)) info.MiniMirrorPath = mp.GetString() ?? "";
+                if (data.TryGetProperty("miniDataSnapshot", out var mds) && mds.ValueKind == JsonValueKind.Object)
+                {
+                    if (mds.TryGetProperty("downloadPath", out var ddp)) info.MiniDataSnapshot_DownloadPath = ddp.GetString() ?? "";
+                    if (mds.TryGetProperty("lastSyncTicks", out var dls)) info.MiniDataSnapshot_LastSyncTicks = dls.GetInt64();
+                }
+            }
+            return info;
         }
-        doc = JsonDocument.Parse(s1);
-        var info = new StartupInfo();
-        using (doc)
+        catch
         {
-            var data = doc.RootElement;
-            if (data.TryGetProperty("data", out var d)) data = d;
-            if (data.TryGetProperty("toolkitMiniLatestVersion", out var v)) info.MiniLatestVersion = v.GetString() ?? "";
-            if (data.TryGetProperty("clientDownloadUrls", out var urls) && urls.ValueKind == JsonValueKind.Array)
-                foreach (var u in urls.EnumerateArray()) info.ClientDownloadUrls.Add(u.GetString() ?? "");
-            if (data.TryGetProperty("miniUpdateFileName", out var f)) info.MiniUpdateFileName = f.GetString() ?? "";
-            if (data.TryGetProperty("miniUpdateHash", out var hh)) info.MiniUpdateHash = hh.GetString() ?? "";
-            if (data.TryGetProperty("miniMirrorDownloadPath", out var mp)) info.MiniMirrorPath = mp.GetString() ?? "";
+            return null;
         }
-        return info;
     }
 
     public static async Task<(string token, string raw, bool ok)> EnsureAsync(HttpClient c, string host)
@@ -565,19 +575,21 @@ static class Api
         var bodyObj = new JsonObject
         {
             ["ProtocolVersion"] = 2,
-            ["InstallationIdHash"] = Util.Sha256Hex(Convert.ToBase64String(InstallationIdBytes)),
+            ["InstallationIdHash"] = Convert.ToHexString(InstallationIdBytes),
             ["HardwareIdHash"] = Convert.ToHexString(HardwareIdHashBytes),
             ["ClientKind"] = "mini",
             ["ClientVersion"] = "1.0.250.0",
             ["Distribution"] = "Normal",
         };
         string body = bodyObj.ToJsonString();
-        Console.WriteLine(body);
+        //Console.WriteLine(body);
         string bodyHash = Util.Sha256Hex(body);
 
-        var req = new HttpRequestMessage(HttpMethod.Post, host + Consts.RouteEnsure);
-        req.Content = new StringContent(body, Encoding.UTF8, "application/json");
-        req.Headers.TryAddWithoutValidation(Consts.HdrDistribution, "Normal");
+        var req = new HttpRequestMessage(HttpMethod.Post, host + Consts.RouteEnsure)
+        {
+            Content = new StringContent(body, Encoding.UTF8, "application/json")
+        };
+        //req.Headers.TryAddWithoutValidation(Consts.HdrDistribution, "Normal");
         req.Headers.TryAddWithoutValidation(Consts.HdrEnc, "2");
         req.Headers.TryAddWithoutValidation(Consts.HdrHmacTs, ts.ToString());
         req.Headers.TryAddWithoutValidation(Consts.HdrHmacSig, Util.HmacSign("POST", Consts.RouteEnsure, ts, bodyHash));
@@ -586,7 +598,7 @@ static class Api
 
         using var resp = await c.SendAsync(req);
         byte[] raw = await resp.Content.ReadAsByteArrayAsync();
-        Console.WriteLine($"[ensure] {resp.StatusCode} host={host}");
+        //Console.WriteLine($"[ensure] {resp.StatusCode} host={host}");
         string plain;
         try { plain = Util.DecryptResponseBody(raw); }
         catch { plain = Encoding.UTF8.GetString(Util.TryGzip(raw)); }
@@ -597,17 +609,8 @@ static class Api
         return (token, plain, success);
     }
 
-    public static async Task<byte[]?> GetSnapshotZipAsync(HttpClient c, string host, string token)
+    public static async Task<byte[]?> GetSnapshotZipAsync(string host, string path)
     {
-        long ts = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-        string path = Consts.RouteSnapshot; // 签名路径不含 query
-        var req = new HttpRequestMessage(HttpMethod.Get, host + path);
-        req.Headers.TryAddWithoutValidation(Consts.HdrEntitlement, token);
-        req.Headers.TryAddWithoutValidation(Consts.HdrDistribution, "Normal");
-        req.Headers.TryAddWithoutValidation(Consts.HdrEnc, "2");
-        req.Headers.TryAddWithoutValidation(Consts.HdrHmacTs, ts.ToString());
-        req.Headers.TryAddWithoutValidation(Consts.HdrHmacSig, Util.HmacSign("GET", path, ts, ""));
-
         byte[]? raw = null;
         for (int attempt = 1; attempt <= 3; attempt++)
         {
@@ -619,14 +622,9 @@ static class Api
                 };
                 long ts2 = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
                 var req2 = new HttpRequestMessage(HttpMethod.Get, host + path);
-                req2.Headers.TryAddWithoutValidation(Consts.HdrEntitlement, token);
-                req2.Headers.TryAddWithoutValidation(Consts.HdrDistribution, "Normal");
-                req2.Headers.TryAddWithoutValidation(Consts.HdrEnc, "2");
-                req2.Headers.TryAddWithoutValidation(Consts.HdrHmacTs, ts2.ToString());
-                req2.Headers.TryAddWithoutValidation(Consts.HdrHmacSig, Util.HmacSign("GET", path, ts2, ""));
                 using var resp = await slow.SendAsync(req2);
                 raw = await resp.Content.ReadAsByteArrayAsync();
-                Console.WriteLine($"[snapshot] 尝试{attempt} {resp.StatusCode} bodyLen={raw.Length}");
+                //Console.WriteLine($"[snapshot] 尝试{attempt} {resp.StatusCode} bodyLen={raw.Length}");
                 if (!resp.IsSuccessStatusCode)
                 {
                     Console.WriteLine($"[snapshot] bodyHead={Encoding.UTF8.GetString(Util.TryGzip(raw), 0, Math.Min(300, Util.TryGzip(raw).Length))}");
@@ -646,20 +644,18 @@ static class Api
         return raw;
     }
 
-    public static async Task<string> GetGamesAsync(HttpClient c, string host, string token, long since)
+    public static async Task<string> GetGamesAsync(HttpClient c, string host, long since)
     {
         long ts = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
         string path = Consts.RouteGames; // 签名路径不含 query
         var req = new HttpRequestMessage(HttpMethod.Get, host + path + $"?since={since}");
-        req.Headers.TryAddWithoutValidation(Consts.HdrEntitlement, token);
-        req.Headers.TryAddWithoutValidation(Consts.HdrDistribution, "Normal");
         req.Headers.TryAddWithoutValidation(Consts.HdrEnc, "2");
         req.Headers.TryAddWithoutValidation(Consts.HdrHmacTs, ts.ToString());
         req.Headers.TryAddWithoutValidation(Consts.HdrHmacSig, Util.HmacSign("GET", path, ts, ""));
 
         using var resp = await c.SendAsync(req);
         byte[] raw = await resp.Content.ReadAsByteArrayAsync();
-        Console.WriteLine($"[games] {resp.StatusCode} bodyLen={raw.Length}");
+        //Console.WriteLine($"[new games] {resp.StatusCode} bodyLen={raw.Length}");
         if (!resp.IsSuccessStatusCode)
         {
             try { Console.WriteLine($"[games] rawBody={Encoding.UTF8.GetString(Util.TryGzip(raw))}"); }
@@ -681,7 +677,7 @@ static class Api
 
         using var resp = await c.SendAsync(req);
         byte[] raw = await resp.Content.ReadAsByteArrayAsync();
-        Console.WriteLine($"[passwords] {resp.StatusCode} bodyLen={raw.Length}");
+        //Console.WriteLine($"[passwords] {resp.StatusCode} bodyLen={raw.Length}");
         return Util.DecryptResponseBody(raw);
     }
 }
