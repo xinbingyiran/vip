@@ -1,3 +1,6 @@
+#:property TargetFramework=net8.0
+#:property PublishAot=true
+
 // FullGrabMini.cs
 // 完整功能：
 //  1) bootstrap 拉 host 列表，遍历 GET /api/client/startup，成功即停止，打印最新版本号与下载地址
@@ -6,19 +9,12 @@
 //  4) GET /api/client/games/passwords 拿密码 → 按 GameCode 拼接 → 合成输出并保存
 // 运行：dotnet run FullGrabMini.cs [-host <index>] [-out <path>] [-f]
 
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
 using System.IO.Compression;
-using System.Linq;
-using System.Net.Http;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Nodes;
-using System.Threading.Tasks;
 
 string forcedHost = "-1";
 string outPath = "grab_games.json";
@@ -57,7 +53,10 @@ foreach (var host in hosts)
 }
 if (info is null || hostUsed == "") { Console.WriteLine("所有节点 startup 均失败。"); return; }
 
-var merged = new Dictionary<string, JsonObject>(StringComparer.OrdinalIgnoreCase);
+string keyField = "GameCode";
+string[] keepFields = [keyField, "Password", "ChineseName", "EnglishName", "Size", "GameVersion", "DownloadUrl1", "DownloadUrl2", "UpdateDate"];
+var opt = new JsonNodeOptions { PropertyNameCaseInsensitive = true };
+var merged = new Dictionary<string, JsonNode>(StringComparer.OrdinalIgnoreCase);
 if (!force)
 {
     if (File.Exists(outPath))
@@ -65,13 +64,12 @@ if (!force)
         try
         {
             var fileBytes = File.ReadAllBytes(outPath);
-            using var doc = JsonDocument.Parse(fileBytes);
-            var gameCount = doc.RootElement.ValueKind == JsonValueKind.Array ? doc.RootElement.GetArrayLength() : -1;
+            var doc = JsonNode.Parse(fileBytes, opt)!.AsArray();
+            var gameCount = doc.Count;
             Console.WriteLine($"[file] games 条数={gameCount}");
-            foreach (var item in doc.RootElement.EnumerateArray())
+            foreach (var item in doc)
             {
-                string code = GetProp(item, "gameCode", "GameCode") ?? "";
-                if (!string.IsNullOrEmpty(code)) merged[code] = MakeEntry(item);
+                merged[(string)item![keyField]!] = item!;
             }
         }
         catch (Exception ex)
@@ -82,6 +80,9 @@ if (!force)
     }
 }
 //Console.WriteLine($"[force game dat] = {force}");
+
+
+var lastSyncTicks = info.MiniDataSnapshot_LastSyncTicks;
 if (force)
 {
     // ===== 4) 快照 zip 下载到内存 =====
@@ -101,57 +102,48 @@ if (force)
         es.CopyTo(os);
         gamesData = os.ToArray();
 
-        // var syncEntry = zip.GetEntry("sync_state_mini.json");
-        // if (syncEntry != null)
-        // {
-        //     using var ss = syncEntry.Open();
-        //     using var sr = new StreamReader(ss);
-        //     string syncJson = sr.ReadToEnd();
-        //     try
-        //     {
-        //         using var sdoc = JsonDocument.Parse(syncJson);
-        //         if (sdoc.RootElement.TryGetProperty("LastSyncTicks", out var t) && t.ValueKind == JsonValueKind.Number)
-        //             lastSyncTicks = t.GetInt64();
-        //     }
-        //     catch { }
-        // }
+        var syncEntry = zip.GetEntry("sync_state_mini.json");
+        if (syncEntry != null)
+        {
+            using var ss = syncEntry.Open();
+            using var sr = new StreamReader(ss);
+            string syncJson = sr.ReadToEnd();
+            try
+            {
+                using var sdoc = JsonDocument.Parse(syncJson);
+                if (sdoc.RootElement.TryGetProperty("LastSyncTicks", out var t) && t.ValueKind == JsonValueKind.Number)
+                    lastSyncTicks = t.GetInt64();
+            }
+            catch { }
+        }
     }
-    //Console.WriteLine($"[zip] games.dat bytes={gamesData.Length} lastSyncTicks={lastSyncTicks}");
+    Console.WriteLine($"[zip] games.dat bytes={gamesData.Length} lastSyncTicks={lastSyncTicks}");
 
     // ===== 6) 内存静态解密（games_dat_decrypt.cs 方法） =====
     byte[] plainBytes = GamesDat.DecryptToBytes(gamesData);
     string gamesJson = Encoding.UTF8.GetString(plainBytes);
     //Console.WriteLine($"[down] plainJsonBytes={plainBytes.Length}");
 
-    using var doc = JsonDocument.Parse(gamesJson);
-    var gameCount = doc.RootElement.ValueKind == JsonValueKind.Array ? doc.RootElement.GetArrayLength() : -1;
-    Console.WriteLine($"[down] games 条数={gameCount}");
-    foreach (var item in doc.RootElement.EnumerateArray())
+    var garr = JsonNode.Parse(gamesJson, opt)!.AsArray();
+    Console.WriteLine($"[down] games 条数={garr.Count}");
+    foreach (var item in garr)
     {
-        string code = GetProp(item, "gameCode", "GameCode") ?? "";
-        if (!string.IsNullOrEmpty(code)) merged[code] = MakeEntry(item);
+        merged[(string)item![keyField]!] = item!;
     }
 }
 
 // ===== 6.5) GetGamesAsync 获取最新游戏列表，与快照合并（接口数据覆盖/新增） =====
 
-string latestGamesJson = await Api.GetGamesAsync(client, hostUsed, info.MiniDataSnapshot_LastSyncTicks);
+string latestGamesJson = await Api.GetGamesAsync(client, hostUsed, lastSyncTicks);
 int covered = 0, added = 0, latestCount = 0;
-using (var ldoc = JsonDocument.Parse(latestGamesJson))
+var ldoc = JsonNode.Parse(latestGamesJson, opt)!.AsObject();
+var arr = ldoc["games"]!.AsArray();
+foreach (var item in arr)
 {
-    JsonElement arr = ldoc.RootElement;
-    if (arr.TryGetProperty("games", out var garr) && garr.ValueKind == JsonValueKind.Array) arr = garr;
-    if (arr.ValueKind == JsonValueKind.Array)
-    {
-        foreach (var item in arr.EnumerateArray())
-        {
-            string code = GetProp(item, "gameCode", "GameCode") ?? "";
-            if (string.IsNullOrEmpty(code)) continue;
-            latestCount++;
-            if (merged.ContainsKey(code)) covered++; else added++;
-            merged[code] = MakeEntry(item);
-        }
-    }
+    var code = (string)item![keyField]!;
+    latestCount++;
+    if (merged.ContainsKey(code)) covered++; else added++;
+    merged[code] = item!;
 }
 Console.WriteLine($"[merge] 接口最新条数={latestCount} 覆盖={covered} 新增={added} 合并后总条数={merged.Count}");
 
@@ -162,91 +154,49 @@ Console.WriteLine($"[ensure] token.Length = {token.Length}");
 
 // ===== 7) passwords 接口 =====
 string passwordsJson = await Api.GetPasswordsAsync(client, hostUsed, token);
-var pwdMap = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
-using (var pdoc = JsonDocument.Parse(passwordsJson))
+var pwdMap = new Dictionary<string, JsonNode>(StringComparer.OrdinalIgnoreCase);
+var pdoc = JsonNode.Parse(passwordsJson, opt)!.AsObject();
+arr = pdoc["passwords"]!.AsArray();
+foreach (var item in arr)
 {
-    JsonElement arr = pdoc.RootElement;
-    if (arr.TryGetProperty("passwords", out var pw) && pw.ValueKind == JsonValueKind.Array) arr = pw;
-    if (arr.ValueKind == JsonValueKind.Array)
-    {
-        foreach (var item in arr.EnumerateArray())
-        {
-            string code = GetProp(item, "GameCode", "gameCode") ?? "";
-            string pwd = GetProp(item, "Password", "password") ?? "";
-            if (!string.IsNullOrEmpty(code)) pwdMap[code] = pwd ?? "";
-        }
-    }
+    pwdMap[(string)item![keyField]!] = item!;
 }
 Console.WriteLine($"[passwords] 映射条数={pwdMap.Count}");
 
 // ===== 8) 合成输出（按 GameCode 升序） =====
-var outArr = new JsonArray();
 int matched = 0;
-foreach (var code in merged.Keys.OrderBy(k => k, StringComparer.Ordinal))
+var outArr = new JsonArray();
+foreach (var (code, mvalue) in merged.OrderBy(s => s.Key, StringComparer.OrdinalIgnoreCase))
 {
-    JsonNode obj = new JsonObject();
-    string pwd = pwdMap.TryGetValue(code, out var v) ? v : "";
-    if (pwdMap.ContainsKey(code)) matched++;
-    var src = merged[code];
-    obj["GameCode"] = code;
-    obj["Password"] = pwd;
-    obj["ChineseName"] = src["ChineseName"]?.ToString() ?? "";
-    obj["EnglishName"] = src["EnglishName"]?.ToString() ?? "";
-    obj["Size"] = src["Size"]?.ToString() ?? "";
-    obj["GameVersion"] = src["GameVersion"]?.ToString() ?? "";
-    obj["DownloadUrl1"] = src["DownloadUrl1"]?.ToString() ?? "";
-    obj["DownloadUrl2"] = src["DownloadUrl2"]?.ToString() ?? "";
-    obj["UpdateDateTooltip"] = src["UpdateDateTooltip"]?.ToString() ?? "";
-    outArr.Add(obj);
+    var game = mvalue.AsObject();
+    if (pwdMap.TryGetValue(code, out var pwd))
+    {
+        matched++;
+        foreach (var (k, v) in pwd.AsObject())
+        {
+            game[k] = v?.DeepClone();
+        }
+    }
+    var si = new JsonObject(opt);
+    foreach (var k in keepFields)
+    {
+        if (game.TryGetPropertyValue(k, out var v) && v is { })
+        {
+            si.Add(k, v.DeepClone());
+        }
+    }
+    outArr.Add((JsonNode)si);
 }
 
 var outOptions = new JsonSerializerOptions
 {
     Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-    WriteIndented = true,
-    IndentSize = 2,
+    WriteIndented = true
 };
 string outJson = DecodeUnicodeEscapes(outArr.ToJsonString(outOptions));
-File.WriteAllText(outPath, outJson, new UTF8Encoding(false));
-Console.WriteLine($"[out] 保存 {outPath} bytes={outJson.Length} 条数={outArr.Count} 密码匹配={matched}");
+File.WriteAllBytes(outPath, Encoding.UTF8.GetBytes(outJson));
+Console.WriteLine($"[out] 保存 {outPath} 条数={outArr.Count} 密码匹配={matched}");
 
-
-static JsonObject MakeEntry(JsonElement item)
-{
-    var obj = new JsonObject();
-    obj["GameCode"] = GetProp(item, "gameCode", "GameCode") ?? "";
-    obj["ChineseName"] = GetProp(item, "chineseName", "ChineseName") ?? "";
-    obj["EnglishName"] = GetProp(item, "englishName", "EnglishName") ?? "";
-    obj["Size"] = GetProp(item, "size", "Size") ?? "";
-    obj["GameVersion"] = GetProp(item, "gameVersion", "GameVersion") ?? "";
-    obj["DownloadUrl1"] = GetProp(item, "downloadUrl1", "DownloadUrl1") ?? "";
-    obj["DownloadUrl2"] = GetProp(item, "downloadUrl2", "DownloadUrl2") ?? "";
-    obj["UpdateDateTooltip"] = GetProp(item, "UpdateDateTooltip", "updateDateTooltip") ?? BuildTooltip(GetProp(item, "updateDate", "UpdateDate"), GetProp(item, "releaseDate", "ReleaseDate"));
-    return obj;
-}
-
-static string? GetProp(JsonElement e, params string[] names)
-{
-    foreach (var n in names)
-        if (e.TryGetProperty(n, out var p) && p.ValueKind == JsonValueKind.String)
-            return p.GetString();
-    return null;
-}
-
-static string BuildTooltip(string? updateDate, string? releaseDate)
-{
-    string? upd = FmtDate(updateDate);
-    string? rel = FmtDate(releaseDate);
-    var parts = new List<string>();
-    if (!string.IsNullOrWhiteSpace(upd)) parts.Add("更新日期: " + upd);
-    if (!string.IsNullOrWhiteSpace(rel)) parts.Add("发行日期: " + rel);
-    return string.Join(" / ", parts);
-}
-
-static string? FmtDate(string? d)
-{
-    return DateTime.TryParseExact(d, "yyyyMMdd", DateTimeFormatInfo.CurrentInfo, DateTimeStyles.None, out var dt) ? dt.ToString("yyyy年MM月dd日") : d;
-}
 
 static string DecodeUnicodeEscapes(string input)
 {
@@ -356,7 +306,7 @@ static class Util
     public static string DecryptResponseBody(byte[] raw)
     {
         var step1 = TryGzip(raw);
-        string b64 = Encoding.ASCII.GetString(step1).Trim();
+        string b64 = Encoding.UTF8.GetString(step1).Trim();
         var ct = Convert.FromBase64String(b64);
         var key = Consts.ResponseAESKey;
         var plain = TryGzip(AesCbcDecrypt(key, ct));
@@ -578,7 +528,7 @@ static class Api
             ["InstallationIdHash"] = Convert.ToHexString(InstallationIdBytes),
             ["HardwareIdHash"] = Convert.ToHexString(HardwareIdHashBytes),
             ["ClientKind"] = "mini",
-            ["ClientVersion"] = "1.0.250.0",
+            ["ClientVersion"] = "1.1.4",
             ["Distribution"] = "Normal",
         };
         string body = bodyObj.ToJsonString();
@@ -590,6 +540,7 @@ static class Api
             Content = new StringContent(body, Encoding.UTF8, "application/json")
         };
         //req.Headers.TryAddWithoutValidation(Consts.HdrDistribution, "Normal");
+        //req.Headers.TryAddWithoutValidation("X-Client-Envelope", "1");
         req.Headers.TryAddWithoutValidation(Consts.HdrEnc, "2");
         req.Headers.TryAddWithoutValidation(Consts.HdrHmacTs, ts.ToString());
         req.Headers.TryAddWithoutValidation(Consts.HdrHmacSig, Util.HmacSign("POST", Consts.RouteEnsure, ts, bodyHash));
