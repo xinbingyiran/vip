@@ -1174,9 +1174,9 @@
     "post_title": "正当防卫4/Just Cause 4 Reloaded",
     "GetFileInfo": [
       {
-        "DownUrl": "https://cloud.189.cn/t/A3INfeyIzEVf?pwd=ude6",
-        "filesize": "68.72 G",
-        "link_ctime": "2024.03.29",
+        "DownUrl": "https://cloud.189.cn/t/qIn6janYZ3yi?pwd=79zo",
+        "filesize": "68.98 G",
+        "link_ctime": "2026.11.12",
         "filename": "Just Cause 4"
       }
     ]
@@ -1323,6 +1323,12 @@
     "id": 15274,
     "post_title": "尼尔：机械纪元 年度版/NieR: Automata",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/JNB7Nj2m2mEf?pwd=12o7",
+        "filesize": "29.59 G",
+        "link_ctime": "2026.11.10",
+        "filename": "NieR Automata Build.25901062"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/mYf2ArIVZFJr?pwd=ziv0",
         "filesize": "29.81 G",
@@ -2032,6 +2038,12 @@
     "post_title": "孤岛危机2：重制版/Crysis 2 Remastered",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/YVJ7feuIZZjm?pwd=6kuk",
+        "filesize": "46 G",
+        "link_ctime": "2026.11.11",
+        "filename": "Crysis2Remastered Build.9461303"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/iyYBfeVnaiuu?pwd=0so7",
         "filesize": "46 G",
         "link_ctime": "2024.04.06",
@@ -2055,6 +2067,12 @@
     "id": 15959,
     "post_title": "孤岛危机3：重制版/Crysis 3 Remastered",
     "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fyyUna3yuIfi?pwd=wuu3",
+        "filesize": "16.67 G",
+        "link_ctime": "2026.11.11",
+        "filename": "Crysis3Remastered Build.9460220"
+      },
       {
         "DownUrl": "https://cloud.189.cn/t/J3Af6rziiuqu?pwd=mi51",
         "filesize": "16.67 G",
@@ -12340,10 +12358,10 @@
     "post_title": "孤岛惊魂：原始杀戮/Far Cry® Primal",
     "GetFileInfo": [
       {
-        "DownUrl": "https://cloud.189.cn/t/MFNBzaNN7Jfu?pwd=s3sc",
+        "DownUrl": "https://cloud.189.cn/t/N3yI3eF7Jj6r?pwd=3mw2",
         "filesize": "14.78 G",
-        "link_ctime": "2024.05.15",
-        "filename": "Far Cry Primal v1.3.3"
+        "link_ctime": "2026.11.12",
+        "filename": "FCP v1.3.3"
       }
     ]
   },
@@ -42542,6 +42560,258 @@
         "filesize": "2.32 G",
         "link_ctime": "2026.11.07",
         "filename": "Nomad.Drive Build.26365271"
+      }
+    ]
+  },
+  {
+    "id": 132380,
+    "post_title": "无与伦比/UNBEATABLE",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/YJVRj2Nfm6Jr?pwd=lr4f",
+        "filesize": "12.16 G",
+        "link_ctime": "2026.11.08",
+        "filename": "UNBEATABLE v2.5"
+      }
+    ]
+  },
+  {
+    "id": 132447,
+    "post_title": "无用之人 登神长阶/Wretch Divine Ascent",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/nya6nmvmMjii?pwd=lhc2",
+        "filesize": "2.26 G",
+        "link_ctime": "2026.11.08",
+        "filename": "Wretch Divine Ascent v1.5.3"
+      }
+    ]
+  },
+  {
+    "id": 132467,
+    "post_title": "魔法少女的魔女审判/manosaba",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/vUZNRfE3mIJb?pwd=m4uu",
+        "filesize": "6.25 G",
+        "link_ctime": "2026.11.09",
+        "filename": "manosaba v1.1.2"
+      }
+    ]
+  },
+  {
+    "id": 132486,
+    "post_title": "银河飞将 III：虎之心/Wing Commander III：Heart of the Tiger：30th Anniversary Edition",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/Zr6FFjMVVjIz?pwd=4hvi",
+        "filesize": "14.05 G",
+        "link_ctime": "2026.11.09",
+        "filename": "Wing Commander III：Heart of the Tiger：30th Anniversary Edition Build.25789347"
+      }
+    ]
+  },
+  {
+    "id": 132516,
+    "post_title": "黑暗密友：望升院/Dark Pals",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/fyyuEfrmae2u?pwd=9ptl",
+        "filesize": "2.19 G",
+        "link_ctime": "2026.11.09",
+        "filename": "Dark Pals"
+      }
+    ]
+  },
+  {
+    "id": 132546,
+    "post_title": "重力猎犬/GRAVHOUNDS",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2QJbmmnYR3u2?pwd=cfx5",
+        "filesize": "5.56 G",
+        "link_ctime": "2026.11.10",
+        "filename": "GRAVHOUNDS Build.26374606"
+      }
+    ]
+  },
+  {
+    "id": 132575,
+    "post_title": "正当防卫3/Just Cause™ 3",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NrIr6ziuaq2i?pwd=0epx",
+        "filesize": "48.42 G",
+        "link_ctime": "2026.11.10",
+        "filename": "JC3.v20251217"
+      }
+    ]
+  },
+  {
+    "id": 132625,
+    "post_title": "久远以前/拾忆之旅/Forever Ago",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/2ArAzqRzQzae?pwd=ld2s",
+        "filesize": "4.53 G",
+        "link_ctime": "2026.11.10",
+        "filename": "Forever Ago Build.25574368"
+      }
+    ]
+  },
+  {
+    "id": 132650,
+    "post_title": "烈酒荒野/Saloon Simulator",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/vaIFBveQbeAr?pwd=8lp7",
+        "filesize": "9.58 G",
+        "link_ctime": "2026.11.10",
+        "filename": "Saloon Simulator Build.26525872"
+      }
+    ]
+  },
+  {
+    "id": 132690,
+    "post_title": "战争猎犬/Warhounds",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NVrURfza6fmy?pwd=6art",
+        "filesize": "34.17 G",
+        "link_ctime": "2026.11.11",
+        "filename": "Warhounds Build.25097003"
+      }
+    ]
+  },
+  {
+    "id": 132734,
+    "post_title": "线条小狗 动物温泉/Malteses Fluffy Onsen",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/nMjie2UFnyMr?pwd=q6j7",
+        "filesize": "694.62 M",
+        "link_ctime": "2026.11.11",
+        "filename": "Malteses.Fluffy.Onsen v1.83"
+      }
+    ]
+  },
+  {
+    "id": 132735,
+    "post_title": "地下蚁国/Empires of the Undergrowth",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/jiyYnmZzQf6j?pwd=qr8q",
+        "filesize": "6.77 G",
+        "link_ctime": "2026.11.11",
+        "filename": "Empires of the Undergrowth v1.2.1.1.0.5"
+      }
+    ]
+  },
+  {
+    "id": 132740,
+    "post_title": "王牌妖相/Prime Monster",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/VziEni2INVza?pwd=4bzf",
+        "filesize": "632.07 M",
+        "link_ctime": "2026.11.11",
+        "filename": "Prime Monster v1.5"
+      }
+    ]
+  },
+  {
+    "id": 132803,
+    "post_title": "命运之手：人各有命/Hordes Of Fate",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/MbMZbqzmq6jq?pwd=cdv6",
+        "filesize": "3.13 G",
+        "link_ctime": "2026.11.12",
+        "filename": "HordesOfFate Build.24328993"
+      }
+    ]
+  },
+  {
+    "id": 132827,
+    "post_title": "指挥大师/Master of Command",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/6ZjeymAjIBje?pwd=wl87",
+        "filesize": "4.19 G",
+        "link_ctime": "2026.11.12",
+        "filename": "Master of Command Build.26350339"
+      }
+    ]
+  },
+  {
+    "id": 132869,
+    "post_title": "请你削土豆/Potato Please",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/3yMFNrEBFjUj?pwd=8zbw",
+        "filesize": "992.15 M",
+        "link_ctime": "2026.11.12",
+        "filename": "Potato Please v1.0.4"
+      }
+    ]
+  },
+  {
+    "id": 132902,
+    "post_title": "塞尔达传说 时之笛 重制版/The Legend of Zelda Ocarina of Time",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/NV7vAjiu6BV3?pwd=k2ay",
+        "filesize": "25.48 G",
+        "link_ctime": "2026.11.13",
+        "filename": "The Legend of Zelda Ocarina of Time v2.1.0"
+      }
+    ]
+  },
+  {
+    "id": 132912,
+    "post_title": "渊舟蚀影/DREADMOOR",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/3iUFnaq2EBJj?pwd=0mb0",
+        "filesize": "5.84 G",
+        "link_ctime": "2026.11.13",
+        "filename": "DREADMOOR Build.26547433"
+      }
+    ]
+  },
+  {
+    "id": 132946,
+    "post_title": "塞尔达传说 王国之泪/The Legend of Zelda Tears of the Kingdom",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/AFZZZbUv6bye?pwd=6znb",
+        "filesize": "19.19 G",
+        "link_ctime": "2026.11.13",
+        "filename": "The Legend of Zelda Tears of the Kingdom v1.4.3-0.4.0"
+      }
+    ]
+  },
+  {
+    "id": 132956,
+    "post_title": "塞尔达传说 旷野之息/Savage Wind",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/EZF73ueEnMVf?pwd=0nrs",
+        "filesize": "14.9 G",
+        "link_ctime": "2026.11.13",
+        "filename": "Savage Wind V0.5.2"
+      }
+    ]
+  },
+  {
+    "id": 132972,
+    "post_title": "崩坏之兆：饥荒/Omen Exitio: Hunger",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/jQz2myaA3aMv?pwd=lx5p",
+        "filesize": "1.15 G",
+        "link_ctime": "2026.11.13",
+        "filename": "OmenExitioHunger"
       }
     ]
   }

@@ -1,4 +1,4 @@
-#:property TargetFramework=net8.0
+﻿#:property TargetFramework=net8.0
 #:property PublishAot=true
 
 // FullGrabMini.cs
@@ -55,7 +55,7 @@ if (info is null || hostUsed == "") { Console.WriteLine("所有节点 startup �
 
 string keyField = "GameCode";
 string[] keepFields = [keyField, "Password", "ChineseName", "EnglishName", "Size", "GameVersion", "DownloadUrl1", "DownloadUrl2", "UpdateDate"];
-var opt = new JsonNodeOptions { PropertyNameCaseInsensitive = true };
+var opt = Consts.NodeOpt;
 var merged = new Dictionary<string, JsonNode>(StringComparer.OrdinalIgnoreCase);
 if (!force)
 {
@@ -64,13 +64,13 @@ if (!force)
         try
         {
             var fileBytes = File.ReadAllBytes(outPath);
-            var doc = JsonNode.Parse(fileBytes, opt)!.AsArray();
-            var gameCount = doc.Count;
-            Console.WriteLine($"[file] games 条数={gameCount}");
-            foreach (var item in doc)
+            if (JsonNode.Parse(fileBytes, opt) is JsonArray fdoc)
             {
-                merged[(string)item![keyField]!] = item!;
+                Console.WriteLine($"[file] games 条数={fdoc.Count}");
+                foreach (var item in fdoc)
+                    if (item is JsonObject fobj && Ji.Str(fobj, keyField) is { Length: > 0 } fcode) merged[fcode] = fobj;
             }
+            else Console.WriteLine("[file] games 文件解析失败或不是数组，忽略本地文件");
         }
         catch (Exception ex)
         {
@@ -110,9 +110,8 @@ if (force)
             string syncJson = sr.ReadToEnd();
             try
             {
-                using var sdoc = JsonDocument.Parse(syncJson);
-                if (sdoc.RootElement.TryGetProperty("LastSyncTicks", out var t) && t.ValueKind == JsonValueKind.Number)
-                    lastSyncTicks = t.GetInt64();
+                if (JsonNode.Parse(syncJson.Trim().TrimStart('\uFEFF'), opt) is JsonObject sdoc)
+                    lastSyncTicks = Ji.Long(sdoc, "LastSyncTicks");
             }
             catch { }
         }
@@ -124,26 +123,25 @@ if (force)
     string gamesJson = Encoding.UTF8.GetString(plainBytes);
     //Console.WriteLine($"[down] plainJsonBytes={plainBytes.Length}");
 
-    var garr = JsonNode.Parse(gamesJson, opt)!.AsArray();
+    if (JsonNode.Parse(gamesJson.Trim().TrimStart('\uFEFF'), opt) is not JsonArray garr)
+        throw new InvalidDataException("games.dat 解密产物不是数组");
     Console.WriteLine($"[down] games 条数={garr.Count}");
     foreach (var item in garr)
-    {
-        merged[(string)item![keyField]!] = item!;
-    }
+        if (item is JsonObject dobj && Ji.Str(dobj, keyField) is { Length: > 0 } dcode) merged[dcode] = dobj;
 }
 
 // ===== 6.5) GetGamesAsync 获取最新游戏列表，与快照合并（接口数据覆盖/新增） =====
 
 string latestGamesJson = await Api.GetGamesAsync(client, hostUsed, lastSyncTicks);
 int covered = 0, added = 0, latestCount = 0;
-var ldoc = JsonNode.Parse(latestGamesJson, opt)!.AsObject();
-var arr = ldoc["games"]!.AsArray();
+var arr = ((JsonNode.Parse(latestGamesJson.Trim().TrimStart('\uFEFF'), opt) as JsonObject)?["games"] as JsonArray) ?? new JsonArray();
+if (arr.Count == 0) Console.WriteLine("[merge] games 接口未返回 games 数组，跳过合并");
 foreach (var item in arr)
 {
-    var code = (string)item![keyField]!;
+    if (item is not JsonObject gobj || Ji.Str(gobj, keyField) is not { Length: > 0 } code) continue;
     latestCount++;
     if (merged.ContainsKey(code)) covered++; else added++;
-    merged[code] = item!;
+    merged[code] = gobj;
 }
 Console.WriteLine($"[merge] 接口最新条数={latestCount} 覆盖={covered} 新增={added} 合并后总条数={merged.Count}");
 
@@ -155,12 +153,10 @@ Console.WriteLine($"[ensure] token.Length = {token.Length}");
 // ===== 7) passwords 接口 =====
 string passwordsJson = await Api.GetPasswordsAsync(client, hostUsed, token);
 var pwdMap = new Dictionary<string, JsonNode>(StringComparer.OrdinalIgnoreCase);
-var pdoc = JsonNode.Parse(passwordsJson, opt)!.AsObject();
-arr = pdoc["passwords"]!.AsArray();
+arr = ((JsonNode.Parse(passwordsJson.Trim().TrimStart('\uFEFF'), opt) as JsonObject)?["passwords"] as JsonArray) ?? new JsonArray();
+if (arr.Count == 0) Console.WriteLine("[merge] passwords 接口未返回 passwords 数组，跳过合并");
 foreach (var item in arr)
-{
-    pwdMap[(string)item![keyField]!] = item!;
-}
+    if (item is JsonObject pwobj && Ji.Str(pwobj, keyField) is { Length: > 0 } pwcode) pwdMap[pwcode] = pwobj;
 Console.WriteLine($"[passwords] 映射条数={pwdMap.Count}");
 
 // ===== 8) 合成输出（按 GameCode 升序） =====
@@ -168,23 +164,15 @@ int matched = 0;
 var outArr = new JsonArray();
 foreach (var (code, mvalue) in merged.OrderBy(s => s.Key, StringComparer.OrdinalIgnoreCase))
 {
-    var game = mvalue.AsObject();
-    if (pwdMap.TryGetValue(code, out var pwd))
+    if (mvalue is not JsonObject game) continue;
+    if (pwdMap.TryGetValue(code, out var pwd) && pwd is JsonObject pwdObj)
     {
         matched++;
-        foreach (var (k, v) in pwd.AsObject())
-        {
-            game[k] = v?.DeepClone();
-        }
+        foreach (var (k, v) in pwdObj) game[k] = v?.DeepClone();
     }
     var si = new JsonObject(opt);
     foreach (var k in keepFields)
-    {
-        if (game.TryGetPropertyValue(k, out var v) && v is { })
-        {
-            si.Add(k, v.DeepClone());
-        }
-    }
+        if (game.TryGetPropertyValue(k, out var v) && v is { }) si.Add(k, v.DeepClone());
     outArr.Add((JsonNode)si);
 }
 
@@ -228,9 +216,30 @@ static string DecodeUnicodeEscapes(string input)
 
 //Console.WriteLine("[done]");
 
+// ============ JsonNode 取值辅助：全部走 Consts.NodeOpt（不区分大小写），取不到返回空值不抛 ============
+static class Ji
+{
+    static JsonNode? N(JsonNode? o, string name) => o is JsonObject obj ? obj[name] : null;
+
+    public static string Str(JsonNode? node) =>
+        node is JsonValue v && v.TryGetValue(out string? s) ? s : "";
+
+    public static string Str(JsonNode? o, string name) => Str(N(o, name));
+
+    public static long Long(JsonNode? o, string name) =>
+        N(o, name) is JsonValue v && v.TryGetValue(out long l) ? l : 0L;
+
+    public static int Int(JsonNode? o, string name) =>
+        N(o, name) is JsonValue v && v.TryGetValue(out int i) ? i : 0;
+
+    public static bool Bool(JsonNode? o, string name) =>
+        N(o, name) is JsonValue v && v.TryGetValue(out bool b) && b;
+}
+
 // ============ 常量区 ============
 static class Consts
 {
+    public static readonly JsonNodeOptions NodeOpt = new() { PropertyNameCaseInsensitive = true };
     public static readonly byte[] ResponseAESKey = Convert.FromBase64String("Tq8vR2xLm5Nw3pYjKdF7hA0sBcEgUiOlZrXnMtWfDqI=");
     public static readonly byte[] R1Key = Convert.FromBase64String("mPALvUqhQ1k0CkP+2LfY5gK20ZDWRWcDBBuP102wqGc=");
     public static readonly byte[] StartupAESKey = Convert.FromBase64String("Osz/rv3p5/q/3XzLQ28SPt23zIuTkoNHurftcOVV8tk=");
@@ -317,32 +326,31 @@ static class Util
     {
         // bootstrap-routes-v1.json 信封：
         // {"v": 1,"k": "r1","z": 0,"d": "..." }
-        using var doc = JsonDocument.Parse(json);
-        var root = doc.RootElement;
-        if (root.TryGetProperty("d", out var dEl) && dEl.ValueKind == JsonValueKind.String)
+        if (JsonNode.Parse(json.Trim().TrimStart('\uFEFF'), Consts.NodeOpt) is not JsonObject root)
+            throw new InvalidDataException("bootstrap 信封根节点不是对象");
+        if (root["d"] is JsonValue dEl)
         {
-            var ct = Convert.FromBase64String(dEl.GetString() ?? "");
-            var keyName = root.TryGetProperty("k", out var k) && k.ValueKind == JsonValueKind.String ? k.GetString() ?? "r1" : "r1";
+            var ct = Convert.FromBase64String(Ji.Str(dEl));
+            var keyName = Ji.Str(root, "k") is { Length: > 0 } kn ? kn : "r1";
             var key = Consts.Keys[keyName];
             var plain = Util.TryGzip(Util.AesCbcDecrypt(key, ct));
-            bool zipped = root.TryGetProperty("z", out var z) && z.GetInt32() == 1;
-            if (zipped) plain = Util.TryGzip(plain);
+            if (Ji.Int(root, "z") == 1) plain = Util.TryGzip(plain);
             return ParseRouteArray(plain);
         }
         // 旧结构 { data: <base64 AES 密文> }
-        if (root.TryGetProperty("data", out var dataEl) && dataEl.ValueKind == JsonValueKind.String)
+        if (root["data"] is JsonValue dataEl)
         {
-            var ct = Convert.FromBase64String(dataEl.GetString() ?? "");
-            var keyName = root.TryGetProperty("k", out var k) && k.ValueKind == JsonValueKind.String ? k.GetString() ?? "r1" : "r1";
+            var ct = Convert.FromBase64String(Ji.Str(dataEl));
+            var keyName = Ji.Str(root, "k") is { Length: > 0 } kn ? kn : "r1";
             var key = Consts.Keys[keyName];
             var plain = Util.TryGzip(Util.AesCbcDecrypt(key, ct));
             return ParseRouteArray(plain);
         }
         // 兜底：明文 { r: [...] } 或数组
-        if (root.TryGetProperty("r", out var r2) && r2.ValueKind == JsonValueKind.Array)
+        if (root["r"] is JsonArray r2)
         {
             var list = new List<string>();
-            foreach (var item in r2.EnumerateArray()) list.Add(item.GetString() ?? "");
+            foreach (var item in r2) list.Add(Ji.Str(item));
             return list;
         }
         throw new InvalidDataException("bootstrap 信封解析失败");
@@ -350,22 +358,24 @@ static class Util
 
     static List<string> ParseRouteArray(byte[] plain)
     {
-        using var pdoc = JsonDocument.Parse(Encoding.UTF8.GetString(plain));
-        var root = pdoc.RootElement;
+        var root = JsonNode.Parse(Encoding.UTF8.GetString(plain).Trim().TrimStart('\uFEFF'), Consts.NodeOpt);
         var list = new List<string>();
-        if (root.TryGetProperty("r", out var r) && r.ValueKind == JsonValueKind.Array)
+        if (root is JsonObject robj)
         {
-            foreach (var item in r.EnumerateArray())
-                if (item.ValueKind == JsonValueKind.String)
+            if (robj["r"] is JsonArray r)
+                foreach (var item in r)
                 {
-                    string v = item.GetString() ?? "";
-                    list.Add(v.StartsWith("http") ? v : "http://" + v);
+                    string v = Ji.Str(item);
+                    if (v.Length > 0) list.Add(v.StartsWith("http") ? v : "http://" + v);
                 }
         }
-        else if (root.ValueKind == JsonValueKind.Array)
+        else if (root is JsonArray rarr)
         {
-            foreach (var item in root.EnumerateArray())
-                list.Add(item.GetString() ?? "");
+            foreach (var item in rarr)
+            {
+                string v = Ji.Str(item);
+                if (v.Length > 0) list.Add(v);
+            }
         }
         return list;
     }
@@ -479,7 +489,6 @@ static class Api
             // 响应解密：gzip → JSON | base64 → AES-CBC(startup-bootstrap-v1 key) → gzip
             byte[] step1 = Util.TryGzip(raw);
             string s1 = Encoding.UTF8.GetString(step1);
-            JsonDocument doc;
             if (!s1.TrimStart().StartsWith("{"))
             {
                 string b64 = Encoding.ASCII.GetString(step1).Trim();
@@ -488,23 +497,26 @@ static class Api
                 var plain = Util.TryGzip(Util.AesCbcDecrypt(key, ct));
                 s1 = Encoding.UTF8.GetString(plain);
             }
-            doc = JsonDocument.Parse(s1);
-            var info = new StartupInfo();
-            using (doc)
+            if (JsonNode.Parse(s1.Trim().TrimStart('\uFEFF'), Consts.NodeOpt) is not JsonObject sroot)
+                throw new InvalidDataException("startup 响应不是 JSON 对象");
+            var data = sroot["data"] as JsonObject ?? sroot;
+            var info = new StartupInfo
             {
-                var data = doc.RootElement;
-                if (data.TryGetProperty("data", out var d)) data = d;
-                if (data.TryGetProperty("toolkitMiniLatestVersion", out var v)) info.MiniLatestVersion = v.GetString() ?? "";
-                if (data.TryGetProperty("clientDownloadUrls", out var urls) && urls.ValueKind == JsonValueKind.Array)
-                    foreach (var u in urls.EnumerateArray()) info.ClientDownloadUrls.Add(u.GetString() ?? "");
-                if (data.TryGetProperty("miniUpdateFileName", out var f)) info.MiniUpdateFileName = f.GetString() ?? "";
-                if (data.TryGetProperty("miniUpdateHash", out var hh)) info.MiniUpdateHash = hh.GetString() ?? "";
-                if (data.TryGetProperty("miniMirrorDownloadPath", out var mp)) info.MiniMirrorPath = mp.GetString() ?? "";
-                if (data.TryGetProperty("miniDataSnapshot", out var mds) && mds.ValueKind == JsonValueKind.Object)
+                MiniLatestVersion = Ji.Str(data, "toolkitMiniLatestVersion"),
+                MiniUpdateFileName = Ji.Str(data, "miniUpdateFileName"),
+                MiniUpdateHash = Ji.Str(data, "miniUpdateHash"),
+                MiniMirrorPath = Ji.Str(data, "miniMirrorDownloadPath"),
+            };
+            if (data["clientDownloadUrls"] is JsonArray urls)
+                foreach (var u in urls)
                 {
-                    if (mds.TryGetProperty("downloadPath", out var ddp)) info.MiniDataSnapshot_DownloadPath = ddp.GetString() ?? "";
-                    if (mds.TryGetProperty("lastSyncTicks", out var dls)) info.MiniDataSnapshot_LastSyncTicks = dls.GetInt64();
+                    string url = Ji.Str(u);
+                    if (url.Length > 0) info.ClientDownloadUrls.Add(url);
                 }
+            if (data["miniDataSnapshot"] is JsonObject mds)
+            {
+                info.MiniDataSnapshot_DownloadPath = Ji.Str(mds, "downloadPath");
+                info.MiniDataSnapshot_LastSyncTicks = Ji.Long(mds, "lastSyncTicks");
             }
             return info;
         }
@@ -553,10 +565,9 @@ static class Api
         string plain;
         try { plain = Util.DecryptResponseBody(raw); }
         catch { plain = Encoding.UTF8.GetString(Util.TryGzip(raw)); }
-        using var doc = JsonDocument.Parse(plain);
-        var root = doc.RootElement;
-        bool success = root.TryGetProperty("success", out var s) && s.GetBoolean();
-        string token = root.TryGetProperty("entitlementToken", out var t) ? (t.GetString() ?? "") : "";
+        var root = JsonNode.Parse(plain.Trim().TrimStart('\uFEFF'), Consts.NodeOpt) as JsonObject;
+        bool success = Ji.Bool(root, "success");
+        string token = Ji.Str(root, "entitlementToken");
         return (token, plain, success);
     }
 
@@ -629,6 +640,12 @@ static class Api
         using var resp = await c.SendAsync(req);
         byte[] raw = await resp.Content.ReadAsByteArrayAsync();
         //Console.WriteLine($"[passwords] {resp.StatusCode} bodyLen={raw.Length}");
-        return Util.DecryptResponseBody(raw);
+        if (!resp.IsSuccessStatusCode)
+        {
+            Console.WriteLine($"[passwords] HTTP {(int)resp.StatusCode}，跳过合并");
+            return "{}";
+        }
+        try { return Util.DecryptResponseBody(raw); }
+        catch (Exception ex) { Console.WriteLine($"[passwords] 响应解密失败：{ex.Message}，跳过合并"); return "{}"; }
     }
 }

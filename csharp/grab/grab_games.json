@@ -3575,6 +3575,17 @@
     "UpdateDate": "20261108"
   },
   {
+    "GameCode": "B0174",
+    "Password": "740194",
+    "ChineseName": "宝可梦Pokopia",
+    "EnglishName": "Pokémon Pokopia",
+    "Size": "7.7 GB",
+    "GameVersion": "v20261113",
+    "DownloadUrl1": "https://pan.baidu.com/s/12D3ykaU3Lmw1mednQaTi3w",
+    "DownloadUrl2": "https://cloud.189.cn/t/Brymemb6bYji",
+    "UpdateDate": "20261113"
+  },
+  {
     "GameCode": "B3001",
     "Password": "524998旧密码254963",
     "ChineseName": "波西亚时光",
@@ -5945,10 +5956,10 @@
     "ChineseName": "超级幻想王国",
     "EnglishName": "Super Fantasy Kingdom",
     "Size": "1GB",
-    "GameVersion": "v0.7.084",
+    "GameVersion": "v0.8.060",
     "DownloadUrl1": "https://pan.baidu.com/s/1DJTPltnugNcrxlDy1grdgw",
     "DownloadUrl2": "https://cloud.189.cn/t/zi2UZva6niiq",
-    "UpdateDate": "20260529"
+    "UpdateDate": "20261113"
   },
   {
     "GameCode": "C0155",
@@ -19034,11 +19045,11 @@
     "Password": "301622",
     "ChineseName": "僵尸世界大战：劫后余生",
     "EnglishName": "World War Z",
-    "Size": "68GB",
-    "GameVersion": "Build25344204",
+    "Size": "79.5 GB",
+    "GameVersion": "v20261113",
     "DownloadUrl1": "https://pan.baidu.com/s/1J0JVu1Mtwu2afRmqRP_zpw",
     "DownloadUrl2": "https://cloud.189.cn/t/2mARzmrUzm6r",
-    "UpdateDate": "20261006"
+    "UpdateDate": "20261113"
   },
   {
     "GameCode": "J0029",
@@ -20520,10 +20531,10 @@
     "ChineseName": "九王",
     "EnglishName": "9 Kings",
     "Size": "500MB",
-    "GameVersion": "v0.9.8.3",
+    "GameVersion": "v1.0.1",
     "DownloadUrl1": "https://pan.baidu.com/s/1i1j3dmZNlB4daxRjAJhfLg",
     "DownloadUrl2": "https://cloud.189.cn/t/7VvUzeQvuEZv",
-    "UpdateDate": "20261010"
+    "UpdateDate": "20261113"
   },
   {
     "GameCode": "J0168",
@@ -33455,11 +33466,11 @@
     "Password": "127316",
     "ChineseName": "球比伦战记",
     "EnglishName": "BALL x PIT",
-    "Size": "1.6 GB",
-    "GameVersion": "Build23150541",
+    "Size": "3.3 GB",
+    "GameVersion": "v20261113",
     "DownloadUrl1": "https://pan.baidu.com/s/1FmBAdFUqWOUIdyIXjItyjQ",
     "DownloadUrl2": "https://cloud.189.cn/t/uuuEjmIF3UNn",
-    "UpdateDate": "20260807"
+    "UpdateDate": "20261113"
   },
   {
     "GameCode": "Q0124",
@@ -34061,10 +34072,10 @@
     "ChineseName": "人渣",
     "EnglishName": "SCUM",
     "Size": "75.9 GB",
-    "GameVersion": "v1.3.5.2.172724",
+    "GameVersion": "v1.3.6.0.177121",
     "DownloadUrl1": "https://pan.baidu.com/s/15CVYlwrBZbS_wA4a2RUxJA",
     "DownloadUrl2": "https://cloud.189.cn/t/fUFBFjnaqyEb",
-    "UpdateDate": "20261103"
+    "UpdateDate": "20261113"
   },
   {
     "GameCode": "R0011",
@@ -35311,14 +35322,14 @@
   },
   {
     "GameCode": "S0005E",
-    "Password": "325666",
+    "Password": "933701",
     "ChineseName": "使命召唤9：黑色行动2",
-    "EnglishName": "Call of Duty:Black Ops Ⅱ",
+    "EnglishName": "Call of Duty: Black Ops II",
     "Size": "22GB",
-    "GameVersion": "v23.0_43.1734_41.627",
+    "GameVersion": "Build24784288",
     "DownloadUrl1": "https://pan.baidu.com/s/1YGz53CjLyogXqZ7Zl5OV8g",
     "DownloadUrl2": "https://cloud.189.cn/t/QFzuq2nIziYf",
-    "UpdateDate": "20250101"
+    "UpdateDate": "20261113"
   },
   {
     "GameCode": "S0005F",
@@ -49018,13 +49029,13 @@
   {
     "GameCode": "X0227",
     "Password": "892808",
-    "ChineseName": "星球大战 银河赛车手 虚拟机版",
+    "ChineseName": "星球大战 银河赛车手",
     "EnglishName": "STAR WARS: Galactic Racer",
     "Size": "39.2 GB",
-    "GameVersion": "v20261103",
+    "GameVersion": "v20261113",
     "DownloadUrl1": "https://pan.baidu.com/s/1C3DekCZt2H8l2_i-ZUlD-A",
     "DownloadUrl2": "https://cloud.189.cn/t/RBrMFbQvI77f",
-    "UpdateDate": "20261103"
+    "UpdateDate": "20261113"
   },
   {
     "GameCode": "X0228",
