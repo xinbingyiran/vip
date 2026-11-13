@@ -24,7 +24,6 @@ if (args.Length == 1 && args[0].EndsWith(".exe", StringComparison.OrdinalIgnoreC
 {
     var file = Path.GetFullPath(args[0]);
     var clientDir = Path.GetDirectoryName(file);
-    var outFile = Path.Combine(clientDir, Path.GetFileNameWithoutExtension(file) + "_static_fields.json");
 
     // ---- 注入方式：复制自身为注入器 + APPDOMAIN_MANAGER 环境变量注入，不碰 config ----
     string selfExe = Assembly.GetEntryAssembly().Location;

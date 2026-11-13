@@ -42760,6 +42760,12 @@
     "post_title": "塞尔达传说 时之笛 重制版/The Legend of Zelda Ocarina of Time",
     "GetFileInfo": [
       {
+        "DownUrl": "https://cloud.189.cn/t/QjAvInb6ZFbq?pwd=5sid",
+        "filesize": "27.87 G",
+        "link_ctime": "2026.11.15",
+        "filename": "Ocarina of TIme V2.2.0.rc.1"
+      },
+      {
         "DownUrl": "https://cloud.189.cn/t/NV7vAjiu6BV3?pwd=k2ay",
         "filesize": "25.48 G",
         "link_ctime": "2026.11.13",
@@ -42812,6 +42818,78 @@
         "filesize": "1.15 G",
         "link_ctime": "2026.11.13",
         "filename": "OmenExitioHunger"
+      }
+    ]
+  },
+  {
+    "id": 133002,
+    "post_title": "火焰纹章 风花雪月/Fire Emblem Three Houses",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/iU736be2iuei?pwd=9geo",
+        "filesize": "23.4 G",
+        "link_ctime": "2026.11.14",
+        "filename": "Fire Emblem Three Houses v1.2.0"
+      }
+    ]
+  },
+  {
+    "id": 133017,
+    "post_title": "一回杀/One Turn Kill",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/R7Z3EniE3A3i?pwd=c8yz",
+        "filesize": "593.27 M",
+        "link_ctime": "2026.11.15",
+        "filename": "One Turn Kill Build.26540953"
+      }
+    ]
+  },
+  {
+    "id": 133032,
+    "post_title": "星球大战：银河赛车手/STAR WARS：Galactic Racer",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/IBNNneIjqiEv?pwd=btr1",
+        "filesize": "35.22 G",
+        "link_ctime": "2026.11.15",
+        "filename": "STAR WARS：Galactic Racer Build.26133805"
+      }
+    ]
+  },
+  {
+    "id": 133088,
+    "post_title": "巴别塔圣歌/Chants of Sennaar",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/qaMbQbyMnime?pwd=7hff",
+        "filesize": "524.06 M",
+        "link_ctime": "2026.11.15",
+        "filename": "Chants of Sennaar v1.0.0.9"
+      }
+    ]
+  },
+  {
+    "id": 133112,
+    "post_title": "转运军团/Slotbound",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/myaAv2yiAriq?pwd=1efs",
+        "filesize": "152.97 M",
+        "link_ctime": "2026.11.16",
+        "filename": "Slotbound Build.26651617"
+      }
+    ]
+  },
+  {
+    "id": 133132,
+    "post_title": "渎神之夜/Enigma of Fear",
+    "GetFileInfo": [
+      {
+        "DownUrl": "https://cloud.189.cn/t/MnauqaeqAFFf?pwd=sai8",
+        "filesize": "9.11 G",
+        "link_ctime": "2026.11.16",
+        "filename": "Enigma of Fear v3.0.9"
       }
     ]
   }
