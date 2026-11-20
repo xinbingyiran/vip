@@ -1875,10 +1875,10 @@
     "ChineseName": "班迪与暗黑重生",
     "EnglishName": "Bendy and the Dark Revival",
     "Size": "11GB",
-    "GameVersion": "v2.1.0",
+    "GameVersion": "v2.1.1",
     "DownloadUrl1": "https://pan.baidu.com/s/1L9fCa8YvqFC_WcrbhTyUaw",
     "DownloadUrl2": "https://cloud.189.cn/t/ay2mIf2MbUJ3",
-    "UpdateDate": "20261020"
+    "UpdateDate": "20261119"
   },
   {
     "GameCode": "B0024",
@@ -2865,10 +2865,10 @@
     "ChineseName": "波斯王子：Rogue",
     "EnglishName": "The Rogue Prince of Persia",
     "Size": "2.3 GB",
-    "GameVersion": "v1.1.0",
+    "GameVersion": "v20261117",
     "DownloadUrl1": "https://pan.baidu.com/s/1-__ABDwYWtrpJ4vPRzHvGQ",
     "DownloadUrl2": "https://cloud.189.cn/t/uYJNneRBvUVj",
-    "UpdateDate": "20260921"
+    "UpdateDate": "20261119"
   },
   {
     "GameCode": "B0110",
@@ -3584,6 +3584,17 @@
     "DownloadUrl1": "https://pan.baidu.com/s/12D3ykaU3Lmw1mednQaTi3w",
     "DownloadUrl2": "https://cloud.189.cn/t/Brymemb6bYji",
     "UpdateDate": "20261113"
+  },
+  {
+    "GameCode": "B0175",
+    "Password": "249454",
+    "ChineseName": "Baldi's Basics Plus",
+    "EnglishName": "Baldi's Basics Plus",
+    "Size": "1.6 GB",
+    "GameVersion": "v0.14.6",
+    "DownloadUrl1": "https://pan.baidu.com/s/1xVa4Lh5c_7RF9hCWAhADvA",
+    "DownloadUrl2": "https://cloud.189.cn/t/aI3yuiiIZvmi",
+    "UpdateDate": "20261119"
   },
   {
     "GameCode": "B3001",
@@ -4845,10 +4856,10 @@
     "ChineseName": "餐瘾地城",
     "EnglishName": "Dungeon Munchies",
     "Size": "4GB",
-    "GameVersion": "Build23523378",
+    "GameVersion": "Build26689305",
     "DownloadUrl1": "https://pan.baidu.com/s/1SKYVyP3JPQPmCfe7tZahWw",
     "DownloadUrl2": "https://cloud.189.cn/t/zeMvA36jaQnq",
-    "UpdateDate": "20260606"
+    "UpdateDate": "20261119"
   },
   {
     "GameCode": "C0049",
@@ -6121,10 +6132,10 @@
     "ChineseName": "CICADAMATA",
     "EnglishName": "CICADAMATA\"",
     "Size": "1 GB",
-    "GameVersion": "v20260824",
-    "DownloadUrl1": "https://pan.baidu.com/s/1NbDdj-QPWOUiwgQgj8pwkw",
+    "GameVersion": "Build25963814",
+    "DownloadUrl1": "https://pan.baidu.com/s/16NVyyn6Vifkzeprc5a1Xkg",
     "DownloadUrl2": "https://cloud.189.cn/t/6bmMnefeEfee",
-    "UpdateDate": "20260824"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "C0170",
@@ -6220,10 +6231,10 @@
     "ChineseName": "超级兔子人",
     "EnglishName": "Super Bunny Man",
     "Size": "2 GB",
-    "GameVersion": "v1.3.0",
+    "GameVersion": "v1.3.1",
     "DownloadUrl1": "https://pan.baidu.com/s/15hOqyBOpQ_WapjzKFb-99g",
     "DownloadUrl2": "https://cloud.189.cn/t/Jji67rmArEji",
-    "UpdateDate": "20261015"
+    "UpdateDate": "20261116"
   },
   {
     "GameCode": "C0179",
@@ -6231,10 +6242,10 @@
     "ChineseName": "超级世界",
     "EnglishName": "Supraworld",
     "Size": "4.6 GB",
-    "GameVersion": "v12837",
+    "GameVersion": "v13230",
     "DownloadUrl1": "https://pan.baidu.com/s/1vytvEdKWgRWu3o64jfOQXA",
     "DownloadUrl2": "https://cloud.189.cn/t/FRjuIrJNNjam",
-    "UpdateDate": "20261019"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "C0180",
@@ -6268,6 +6279,28 @@
     "DownloadUrl1": "https://pan.baidu.com/s/1NYTDCYe19_ey15lp3mPuxQ",
     "DownloadUrl2": "https://cloud.189.cn/t/zUZRBjMBnYNj",
     "UpdateDate": "20261110"
+  },
+  {
+    "GameCode": "C0183",
+    "Password": "",
+    "ChineseName": "重生2我独自逆袭",
+    "EnglishName": "Re2 I Rise Alone",
+    "Size": "",
+    "GameVersion": "",
+    "DownloadUrl1": "https://pan.baidu.com/s/1Us65ddL0-r3i_tmEA8WsAw",
+    "DownloadUrl2": "https://cloud.189.cn/t/B7ZvQznMzQve",
+    "UpdateDate": ""
+  },
+  {
+    "GameCode": "C0184",
+    "Password": "",
+    "ChineseName": "纯粹排球",
+    "EnglishName": "just volleyball",
+    "Size": "",
+    "GameVersion": "",
+    "DownloadUrl1": "https://pan.baidu.com/s/1bExv3sF7TEXZlST7ASFScw",
+    "DownloadUrl2": "https://cloud.189.cn/t/UZjq2ifERVfm",
+    "UpdateDate": ""
   },
   {
     "GameCode": "C3001",
@@ -6836,10 +6869,10 @@
     "ChineseName": "Cupid's Chatroom",
     "EnglishName": "Cupid's Chatroom",
     "Size": "2 GB",
-    "GameVersion": "Build25128620",
-    "DownloadUrl1": "https://pan.baidu.com/s/1ukfdBN037VcZViGJTzWmdw",
+    "GameVersion": "Build25973398",
+    "DownloadUrl1": "https://pan.baidu.com/s/1RePqNZXkuf9tZaUEg5s7zQ",
     "DownloadUrl2": "https://cloud.189.cn/t/VnERzymYjmIb",
-    "UpdateDate": "20260907"
+    "UpdateDate": "20261119"
   },
   {
     "GameCode": "C5035",
@@ -6873,6 +6906,17 @@
     "DownloadUrl1": "https://pan.baidu.com/s/1-P1ds4KCr9EvRW8sKUOHLA",
     "DownloadUrl2": "https://cloud.189.cn/t/V3qM3uZVjQZj",
     "UpdateDate": "20261104"
+  },
+  {
+    "GameCode": "C5038",
+    "Password": "194937",
+    "ChineseName": "CelSector",
+    "EnglishName": "CelSector",
+    "Size": "2.5 GB",
+    "GameVersion": "Build26631782",
+    "DownloadUrl1": "https://pan.baidu.com/s/1D_aX7PLDA1yY04-TuPSUCA",
+    "DownloadUrl2": "https://cloud.189.cn/t/bIZVvaM7B73m",
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "C8001",
@@ -7298,10 +7342,10 @@
     "ChineseName": "迪士尼梦幻星谷",
     "EnglishName": "Disney Dreamlight Valley",
     "Size": "25.1 GB",
-    "GameVersion": "v1.25.0.8687",
+    "GameVersion": "v20261119",
     "DownloadUrl1": "https://pan.baidu.com/s/1Ds3mvy4Zlh0eWIilsOXLDA",
     "DownloadUrl2": "https://cloud.189.cn/t/jMRJjyaEFnQ3",
-    "UpdateDate": "20260928"
+    "UpdateDate": "20261119"
   },
   {
     "GameCode": "D0020",
@@ -7881,10 +7925,10 @@
     "ChineseName": "地球不屈",
     "EnglishName": "Terra Invicta",
     "Size": "29.7 GB",
-    "GameVersion": "v1.0.53",
+    "GameVersion": "v1.0.65",
     "DownloadUrl1": "https://pan.baidu.com/s/1mUAU5ADw3m_UUExjWCCGMQ",
     "DownloadUrl2": "https://cloud.189.cn/t/iEvUfiU7BNFz",
-    "UpdateDate": "20260826"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "D0071",
@@ -8639,11 +8683,11 @@
     "Password": "965616",
     "ChineseName": "电竞教父",
     "EnglishName": "Esports Godfather",
-    "Size": "8GB",
-    "GameVersion": "v3.1.39",
+    "Size": "4.8 GB",
+    "GameVersion": "v4.0.2",
     "DownloadUrl1": "https://pan.baidu.com/s/1KeGGM17vXecT95ULlsZAtQ",
     "DownloadUrl2": "https://cloud.189.cn/t/NN3yIbbuEbM3",
-    "UpdateDate": "20260607"
+    "UpdateDate": "20261116"
   },
   {
     "GameCode": "D0150",
@@ -9146,10 +9190,10 @@
     "ChineseName": "电车炫客",
     "EnglishName": "Denshattack!",
     "Size": "8 GB",
-    "GameVersion": "v1.4.1.2g",
+    "GameVersion": "v1.4.1.3g",
     "DownloadUrl1": "https://pan.baidu.com/s/1fN3vABtCtdYPeo7crBJ1MQ",
     "DownloadUrl2": "https://cloud.189.cn/t/rea2eujaMrMr",
-    "UpdateDate": "20261021"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "D0198",
@@ -9201,10 +9245,10 @@
     "ChineseName": "大型商店模拟器",
     "EnglishName": "Megastore Simulator",
     "Size": "7.4 GB",
-    "GameVersion": "v0.8.1",
+    "GameVersion": "v0.8.3",
     "DownloadUrl1": "https://pan.baidu.com/s/1UPYA4J_wTSnqJ0_bKecXCg",
     "DownloadUrl2": "https://cloud.189.cn/t/NrE3qyVJbQnq",
-    "UpdateDate": "20261012"
+    "UpdateDate": "20261119"
   },
   {
     "GameCode": "D0203",
@@ -9223,10 +9267,10 @@
     "ChineseName": "Death of the Reprobate",
     "EnglishName": "Death of the Reprobate",
     "Size": "5.1 GB",
-    "GameVersion": "Build24963886",
-    "DownloadUrl1": "https://pan.baidu.com/s/1MTVpBt8ivjFFQWE1ynsE4Q",
+    "GameVersion": "Build26276867",
+    "DownloadUrl1": "https://pan.baidu.com/s/1esnfCYhYO02MF8Rg3gZeVg",
     "DownloadUrl2": "https://cloud.189.cn/t/aQF3miZbYNjy",
-    "UpdateDate": "20260831"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "D0205",
@@ -9256,10 +9300,10 @@
     "ChineseName": "DRAPLINE",
     "EnglishName": "DRAPLINE",
     "Size": "2 GB",
-    "GameVersion": "Build24349877",
-    "DownloadUrl1": "https://pan.baidu.com/s/1mxuLulohMWTdbEg33dM6Sg",
+    "GameVersion": "Build26695512",
+    "DownloadUrl1": "https://pan.baidu.com/s/1r7ERtTjZCFsksvaZ7EUBdg",
     "DownloadUrl2": "https://cloud.189.cn/t/YnyAjeriia2q",
-    "UpdateDate": "20260910"
+    "UpdateDate": "20261119"
   },
   {
     "GameCode": "D0208",
@@ -9267,10 +9311,10 @@
     "ChineseName": "Dinocop",
     "EnglishName": "Dinocop",
     "Size": "2.8 GB",
-    "GameVersion": "v1.2.0.0",
-    "DownloadUrl1": "https://pan.baidu.com/s/1XCp4BYYPe_zAuBbHX5edpg",
+    "GameVersion": "v1.2.0.5",
+    "DownloadUrl1": "https://pan.baidu.com/s/18QpgHQutFwlivuPjSlAFnw",
     "DownloadUrl2": "https://cloud.189.cn/t/Qz222evYVjIz",
-    "UpdateDate": "20260915"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "D0209",
@@ -9289,10 +9333,10 @@
     "ChineseName": "Database Detective: Minor Crimes Division",
     "EnglishName": "Database Detective: Minor Crimes Division",
     "Size": "2 GB",
-    "GameVersion": "Build24998064",
-    "DownloadUrl1": "https://pan.baidu.com/s/1Y8LP4WpXjF6oJTgso_rcOw",
+    "GameVersion": "Build26527005",
+    "DownloadUrl1": "https://pan.baidu.com/s/1IMrQoj_E9aaK7ntiFfKPGw",
     "DownloadUrl2": "https://cloud.189.cn/t/F3mIBfumiiAv",
-    "UpdateDate": "20260923"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "D0211",
@@ -10398,12 +10442,12 @@
     "GameCode": "E0030",
     "Password": "461892",
     "ChineseName": "俄罗斯方块大师4",
-    "EnglishName": "TETRIS® THE GRAND MASTER 4 -ABSOLUTE EYE-",
+    "EnglishName": "TETRIS THE GRAND MASTER 4 -ABSOLUTE EYE-",
     "Size": "300MB",
-    "GameVersion": "v2.3.0.0",
+    "GameVersion": "v2.4.0.0",
     "DownloadUrl1": "https://pan.baidu.com/s/1WGHKj1FFtCRz8jME6Xouqg",
     "DownloadUrl2": "https://cloud.189.cn/t/nAfqm2INjYV3",
-    "UpdateDate": "20260910"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "E0031",
@@ -10525,6 +10569,61 @@
     "DownloadUrl1": "https://pan.baidu.com/s/1tnXG5q41DS4-tZ_1jOe9jA",
     "DownloadUrl2": "https://cloud.189.cn/t/yqyMFfauqmye",
     "UpdateDate": "20261110"
+  },
+  {
+    "GameCode": "E0042",
+    "Password": "690171",
+    "ChineseName": "恶名昭彰：第二之子",
+    "EnglishName": "Infamous: Second Son",
+    "Size": "27.1 GB",
+    "GameVersion": "v20261116",
+    "DownloadUrl1": "https://pan.baidu.com/s/1Sy-Ziuao75ZT4n8GLk5S6g",
+    "DownloadUrl2": "https://cloud.189.cn/t/iE7zMrJ7JVji",
+    "UpdateDate": "20261116"
+  },
+  {
+    "GameCode": "E0044",
+    "Password": "939834",
+    "ChineseName": "恶名昭彰2",
+    "EnglishName": "Infamous 2",
+    "Size": "14 GB",
+    "GameVersion": "v20261118",
+    "DownloadUrl1": "https://pan.baidu.com/s/1LI4s9qRLzwnrxvsbXE1lWA",
+    "DownloadUrl2": "https://cloud.189.cn/t/uIBJBnEry2yy",
+    "UpdateDate": "20261118"
+  },
+  {
+    "GameCode": "E0045",
+    "Password": "294951",
+    "ChineseName": "恶名昭彰",
+    "EnglishName": "Infamous",
+    "Size": "8.8 GB",
+    "GameVersion": "v20261118",
+    "DownloadUrl1": "https://pan.baidu.com/s/1dhkLLpYB-SDpBWcuUg7JDg",
+    "DownloadUrl2": "https://cloud.189.cn/t/eeQNZrzm6fui",
+    "UpdateDate": "20261118"
+  },
+  {
+    "GameCode": "E0046",
+    "Password": "546484",
+    "ChineseName": "恶魔城 无罪的叹息",
+    "EnglishName": "Castlevania: Lament of Innocence",
+    "Size": "4 GB",
+    "GameVersion": "v20261118",
+    "DownloadUrl1": "https://pan.baidu.com/s/11hi4SlCfZgBeTle6_jkvYg",
+    "DownloadUrl2": "https://cloud.189.cn/t/j2qMBvqEnEN3",
+    "UpdateDate": "20261118"
+  },
+  {
+    "GameCode": "E0047",
+    "Password": "025662",
+    "ChineseName": "恶魔城 暗黑诅咒",
+    "EnglishName": "Castlevania: Curse of Darkness",
+    "Size": "10.4 GB",
+    "GameVersion": "v20261118",
+    "DownloadUrl1": "https://pan.baidu.com/s/1EPqVh0sVeieneJQmYPiB3A",
+    "DownloadUrl2": "https://cloud.189.cn/t/BNfe2iBfMnQb",
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "E3001",
@@ -11522,10 +11621,10 @@
     "ChineseName": "芬兰小屋模拟器",
     "EnglishName": "Finnish Cottage Simulator",
     "Size": "5.2 GB",
-    "GameVersion": "Build25063229",
-    "DownloadUrl1": "https://pan.baidu.com/s/1hiGvH-rA3pRKDvbzlunpKA",
+    "GameVersion": "Build26770162",
+    "DownloadUrl1": "https://pan.baidu.com/s/1InJAIHPGVmW861x8Bv3Eqw",
     "DownloadUrl2": "https://cloud.189.cn/t/y2eUFn2uE7za",
-    "UpdateDate": "20260921"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "F0072",
@@ -12017,10 +12116,10 @@
     "ChineseName": "飞机组装师",
     "EnglishName": "Aviassembly",
     "Size": "300MB",
-    "GameVersion": "Build26162876",
+    "GameVersion": "Build26689425",
     "DownloadUrl1": "https://pan.baidu.com/s/1KJrmAfm_7qcdjntZbk0DdA",
     "DownloadUrl2": "https://cloud.189.cn/t/IFbaemA3UzQn",
-    "UpdateDate": "20261024"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "F0119",
@@ -12131,6 +12230,17 @@
     "DownloadUrl1": "https://pan.baidu.com/s/1zjaawODauYYTzHz_Zx3XVg",
     "DownloadUrl2": "https://cloud.189.cn/t/i6NJNzvUZ3ya",
     "UpdateDate": "20261112"
+  },
+  {
+    "GameCode": "F0129",
+    "Password": "186084",
+    "ChineseName": "辐射",
+    "EnglishName": "Fallout: A Post Nuclear Role Playing Game",
+    "Size": "583.7 MB",
+    "GameVersion": "Build300289",
+    "DownloadUrl1": "https://pan.baidu.com/s/1jRoWA4vjSJ1ftPHGrl04Bw",
+    "DownloadUrl2": "https://cloud.189.cn/t/aErmiyYFVjai",
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "F3001",
@@ -12787,10 +12897,10 @@
     "ChineseName": "钢铁雄心4",
     "EnglishName": "Hearts of Iron IV",
     "Size": "11.1 GB",
-    "GameVersion": "v1.19.4",
+    "GameVersion": "v20261120",
     "DownloadUrl1": "https://pan.baidu.com/s/1wAHXl13x9OoxMy_cJteoyw",
     "DownloadUrl2": "https://cloud.189.cn/t/yIRRjqbMzuma",
-    "UpdateDate": "20261111"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "G0004",
@@ -13227,10 +13337,10 @@
     "ChineseName": "隔离区 丧尸末日生存",
     "EnglishName": "ZED ZONE",
     "Size": "3.3 GB",
-    "GameVersion": "v0.9.99.8.30",
+    "GameVersion": "v1.0.16",
     "DownloadUrl1": "https://pan.baidu.com/s/1hpOflNnIVluNpeQ7yDh_xw",
     "DownloadUrl2": "https://cloud.189.cn/t/E3yABnriMvIb",
-    "UpdateDate": "20261021"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "G0034",
@@ -15218,10 +15328,10 @@
     "ChineseName": "红视2",
     "EnglishName": "Redout 2",
     "Size": "32.1 GB",
-    "GameVersion": "Build25084366",
+    "GameVersion": "Build26304957",
     "DownloadUrl1": "https://pan.baidu.com/s/156736mtR26ltPB20-SGglA",
     "DownloadUrl2": "https://cloud.189.cn/t/URRRrmqYRfai",
-    "UpdateDate": "20260905"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "H0018",
@@ -15416,10 +15526,10 @@
     "ChineseName": "护身符 数字第五版",
     "EnglishName": "Talisman: Digital 5th Edition",
     "Size": "3GB",
-    "GameVersion": "v20260523",
+    "GameVersion": "v20261119",
     "DownloadUrl1": "https://pan.baidu.com/s/13mHkqX4zMtSo-zZoqh-TMQ",
     "DownloadUrl2": "https://cloud.189.cn/t/m6veyqVJ7v6j",
-    "UpdateDate": "20260523"
+    "UpdateDate": "20261119"
   },
   {
     "GameCode": "H0030",
@@ -15845,10 +15955,10 @@
     "ChineseName": "红眼露比",
     "EnglishName": "Rubinite",
     "Size": "4.7 GB",
-    "GameVersion": "Build24740490",
-    "DownloadUrl1": "https://pan.baidu.com/s/1ZK0x43Fkcahse2GpHveyrA",
+    "GameVersion": "v202611172335",
+    "DownloadUrl1": "https://pan.baidu.com/s/1JbE9q9_1DA51xF40-h0khQ",
     "DownloadUrl2": "https://cloud.189.cn/t/3AvMzyM7r632",
-    "UpdateDate": "20260901"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "H0064",
@@ -16985,14 +17095,14 @@
   },
   {
     "GameCode": "H0157",
-    "Password": "5628882",
+    "Password": "429560",
     "ChineseName": "黑山 起源",
-    "EnglishName": "Black Mesa：Source",
-    "Size": "75GB",
-    "GameVersion": "v20241124",
+    "EnglishName": "Black Mesa",
+    "Size": "32.5 GB",
+    "GameVersion": "v20261117",
     "DownloadUrl1": "https://pan.baidu.com/s/1HuRgOlQ_eIqH7c80ilKwhg",
     "DownloadUrl2": "https://cloud.189.cn/t/Y7VvEbvArEfi",
-    "UpdateDate": "20250101"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "H0158",
@@ -17648,11 +17758,11 @@
     "Password": "464374",
     "ChineseName": "毁灭战士：黑暗时代",
     "EnglishName": "DOOM: The Dark Ages",
-    "Size": "100GB",
-    "GameVersion": "v20261007",
+    "Size": "121.7 GB",
+    "GameVersion": "v20261116",
     "DownloadUrl1": "https://pan.baidu.com/s/1CmmHPexhCQ8aDt0QUoFK9A",
     "DownloadUrl2": "https://cloud.189.cn/t/i2I3If7f267f",
-    "UpdateDate": "20261018"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "H0222",
@@ -17972,6 +18082,17 @@
     "DownloadUrl1": "https://pan.baidu.com/s/1l2NZzGL1qHqbsLNL7uweeg",
     "DownloadUrl2": "https://cloud.189.cn/t/7ve6fe7J7jua",
     "UpdateDate": "20261114"
+  },
+  {
+    "GameCode": "H0251",
+    "Password": "915323",
+    "ChineseName": "幻世录 重制版",
+    "EnglishName": "The Legend of Fancy Realm Remake",
+    "Size": "10 GB",
+    "GameVersion": "Build26239140",
+    "DownloadUrl1": "https://pan.baidu.com/s/1B8ImGL4XPJjKI746cEzqHw",
+    "DownloadUrl2": "https://cloud.189.cn/t/NnIri2EZZB73",
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "H3001",
@@ -21136,10 +21257,10 @@
     "ChineseName": "九山登仙录",
     "EnglishName": "Ascend From Nine Mountains",
     "Size": "3.5 GB",
-    "GameVersion": "Build26046874",
+    "GameVersion": "Build26645957",
     "DownloadUrl1": "https://pan.baidu.com/s/1gEvZxZwJpWeem_9hvsAaoA",
     "DownloadUrl2": "https://cloud.189.cn/t/rQ7363Zjuyq2",
-    "UpdateDate": "20261021"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "J3006",
@@ -21675,10 +21796,10 @@
     "ChineseName": "恐怖黎明",
     "EnglishName": "Grim Dawn",
     "Size": "16.6 GB",
-    "GameVersion": "v1.3.1.1",
+    "GameVersion": "v1.3.1.2",
     "DownloadUrl1": "https://pan.baidu.com/s/1CTqgJc6gNkQ40oPY_ih7oA",
     "DownloadUrl2": "https://cloud.189.cn/t/267RjyArQnqu",
-    "UpdateDate": "20261009"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "K0008",
@@ -22276,7 +22397,6 @@
   },
   {
     "GameCode": "K0057",
-    "Password": "",
     "ChineseName": "控制 共振",
     "EnglishName": "CONTROL Resonant",
     "Size": "",
@@ -22355,12 +22475,12 @@
     "GameCode": "K0065",
     "Password": "035792",
     "ChineseName": "可口的披萨 美味的披萨",
-    "EnglishName": "Good Pizza, Great Pizza - Cooking Simulator Game",
+    "EnglishName": "Good Pizza, Great Pizza - Cozy Cooking Simulator",
     "Size": "2GB",
-    "GameVersion": "v5.59.1",
+    "GameVersion": "v5.61.3",
     "DownloadUrl1": "https://pan.baidu.com/s/1ewWhgLDSrP-Jm-hboQdTyg",
     "DownloadUrl2": "https://cloud.189.cn/t/imaYZj3iQn6v",
-    "UpdateDate": "20261021"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "K0066",
@@ -22742,10 +22862,10 @@
     "ChineseName": "快递商店模拟器2037",
     "EnglishName": "Shipping Store Simulator 2037",
     "Size": "4.3 GB",
-    "GameVersion": "v20261019",
+    "GameVersion": "Build26639406",
     "DownloadUrl1": "https://pan.baidu.com/s/131-lIBfOf-Zk3WzBk0z5Pw",
     "DownloadUrl2": "https://cloud.189.cn/t/UVrA73VVvIv2",
-    "UpdateDate": "20261019"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "K0103",
@@ -23159,11 +23279,11 @@
     "Password": "330659",
     "ChineseName": "60秒重制版",
     "EnglishName": "60 Seconds! Reatomized",
-    "Size": "6.8 GB",
-    "GameVersion": "v1.1.9.0",
+    "Size": "3.6 GB",
+    "GameVersion": "v1.2.0.4",
     "DownloadUrl1": "https://pan.baidu.com/s/18PbQH5oCo9FXCrtFnxmaMw",
     "DownloadUrl2": "https://cloud.189.cn/t/MvAFnmaiMjuu",
-    "UpdateDate": "20260723"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "L0011A",
@@ -23798,10 +23918,10 @@
     "ChineseName": "鲁特里一家死了",
     "EnglishName": "The Roottrees are Dead",
     "Size": "1GB",
-    "GameVersion": "v434cf10",
+    "GameVersion": "v0689134",
     "DownloadUrl1": "https://pan.baidu.com/s/1dvqQrVnlV_tEA9UrFMfnuQ",
     "DownloadUrl2": "https://cloud.189.cn/t/bQZNFrFvMfYn",
-    "UpdateDate": "20261015"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "L0055",
@@ -24520,14 +24640,14 @@
   },
   {
     "GameCode": "L0127",
-    "Password": "545110",
+    "Password": "387113",
     "ChineseName": "来打高尔夫吧",
     "EnglishName": "Golf It!",
-    "Size": "16GB",
-    "GameVersion": "Build.16759553",
+    "Size": "19 GB",
+    "GameVersion": "v1.2.0.2",
     "DownloadUrl1": "https://pan.baidu.com/s/1RdsNWF5dyEvoCHwhROK0DQ",
     "DownloadUrl2": "https://cloud.189.cn/t/eE3YryaYJZZv",
-    "UpdateDate": "20250101"
+    "UpdateDate": "20261116"
   },
   {
     "GameCode": "L0128",
@@ -24887,10 +25007,10 @@
     "ChineseName": "零度空间",
     "EnglishName": "ZeroSpace",
     "Size": "50 GB",
-    "GameVersion": "v20260829",
-    "DownloadUrl1": "https://pan.baidu.com/s/1-1c64ZdaH1Zoh-U2wW9J0w",
+    "GameVersion": "Build26680201",
+    "DownloadUrl1": "https://pan.baidu.com/s/1Q8_RZjcxD79bF_UVqMiG9g",
     "DownloadUrl2": "https://cloud.189.cn/t/ve6zuiJZb2ea",
-    "UpdateDate": "20260831"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "L0163",
@@ -24997,10 +25117,10 @@
     "ChineseName": "链轮",
     "EnglishName": "Sprocket",
     "Size": "3 GB",
-    "GameVersion": "v0.2.54.4",
-    "DownloadUrl1": "https://pan.baidu.com/s/1MQOTg42jtOKXWTJLwZiqkQ",
+    "GameVersion": "v0.2.56.3",
+    "DownloadUrl1": "https://pan.baidu.com/s/1ObDxT-xIQ7AzKNMj4Yfdog",
     "DownloadUrl2": "https://cloud.189.cn/t/ra26neAneEfu",
-    "UpdateDate": "20260829"
+    "UpdateDate": "20261119"
   },
   {
     "GameCode": "L0173",
@@ -25019,10 +25139,10 @@
     "ChineseName": "黎明行者之血",
     "EnglishName": "The Blood of Dawnwalker",
     "Size": "60 GB",
-    "GameVersion": "v20261103",
+    "GameVersion": "v1.2.0",
     "DownloadUrl1": "https://pan.baidu.com/s/1xtmH8ecvbed1_ItJB2yiLw",
     "DownloadUrl2": "https://cloud.189.cn/t/YZnUni2q2yMj",
-    "UpdateDate": "20261105"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "L0175",
@@ -27141,11 +27261,11 @@
     "Password": "307994",
     "ChineseName": "模拟山羊3",
     "EnglishName": "Goat Simulator 3",
-    "Size": "14GB",
-    "GameVersion": "v1.2.1.1",
+    "Size": "16.9 GB",
+    "GameVersion": "v20261120",
     "DownloadUrl1": "https://pan.baidu.com/s/10BG8GhM30dI1kTULgO59Ww",
     "DownloadUrl2": "https://cloud.189.cn/t/ieyYJfBRRN3i",
-    "UpdateDate": "20260418"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "M0085",
@@ -28087,11 +28207,11 @@
     "Password": "713394",
     "ChineseName": "美国军队",
     "EnglishName": "The Troop",
-    "Size": "9GB",
-    "GameVersion": "Build23475643",
+    "Size": "11.3 GB",
+    "GameVersion": "Build26079068",
     "DownloadUrl1": "https://pan.baidu.com/s/1sDVvq_yj6Qfye9zqL69hJQ",
     "DownloadUrl2": "https://cloud.189.cn/t/2QzaE3J3i222",
-    "UpdateDate": "20260606"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "M0171",
@@ -28352,10 +28472,10 @@
     "ChineseName": "梦之形",
     "EnglishName": "Shape of Dreams",
     "Size": "12GB",
-    "GameVersion": "v1.4.1.2",
+    "GameVersion": "v1.4.2",
     "DownloadUrl1": "https://pan.baidu.com/s/1TMirlYS8l0o2-NANJOXaAQ",
     "DownloadUrl2": "https://cloud.189.cn/t/BRzayqNb2iEv",
-    "UpdateDate": "20261014"
+    "UpdateDate": "20261119"
   },
   {
     "GameCode": "M0198",
@@ -28506,10 +28626,10 @@
     "ChineseName": "魔王将至",
     "EnglishName": "He is Coming",
     "Size": "400MB",
-    "GameVersion": "v0.9.42",
+    "GameVersion": "v0.9.47",
     "DownloadUrl1": "https://pan.baidu.com/s/1C5L6P9jlOjfWEbvaOqUp9Q",
     "DownloadUrl2": "https://cloud.189.cn/t/M7VneeMJFFBn",
-    "UpdateDate": "20261017"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "M0212",
@@ -28796,6 +28916,28 @@
     "DownloadUrl1": "https://pan.baidu.com/s/1uyiJdAuuUzpH8nYNSNRoBw",
     "DownloadUrl2": "https://cloud.189.cn/t/VRVRFz2u6Jby",
     "UpdateDate": "20261115"
+  },
+  {
+    "GameCode": "M0238",
+    "Password": "333649",
+    "ChineseName": "萌猫公园",
+    "EnglishName": "PICO PARK",
+    "Size": "141.2 MB",
+    "GameVersion": "Build26070852",
+    "DownloadUrl1": "https://pan.baidu.com/s/1W71xTjXoh7b9SziyITODHA",
+    "DownloadUrl2": "https://cloud.189.cn/t/7JJ7ve7Bfeia",
+    "UpdateDate": "20261117"
+  },
+  {
+    "GameCode": "M0239",
+    "Password": "154577",
+    "ChineseName": "麦克斯韦解谜妖",
+    "EnglishName": "Maxwell's puzzling demon",
+    "Size": "100 MB",
+    "GameVersion": "Build26694590",
+    "DownloadUrl1": "https://pan.baidu.com/s/1t-OK7c1GSwqug-va6escgg",
+    "DownloadUrl2": "https://cloud.189.cn/t/MJjYrey6Nni2",
+    "UpdateDate": "20261119"
   },
   {
     "GameCode": "M3001",
@@ -30156,10 +30298,10 @@
     "ChineseName": "奶茶店模拟器 重生之我在冰堡甜城当店长",
     "EnglishName": "Boba Cafe Simulator",
     "Size": "3.2 GB",
-    "GameVersion": "v2.10",
+    "GameVersion": "v2.19",
     "DownloadUrl1": "https://pan.baidu.com/s/1Aaanfs72pFVck78eUxvbpg",
     "DownloadUrl2": "https://cloud.189.cn/t/2M3AbqmeaE3i",
-    "UpdateDate": "20261021"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "N0045",
@@ -30701,6 +30843,17 @@
     "UpdateDate": "20261112"
   },
   {
+    "GameCode": "N0095",
+    "Password": "872495",
+    "ChineseName": "nophenia",
+    "EnglishName": "nophenia",
+    "Size": "600 MB",
+    "GameVersion": "Build25916895",
+    "DownloadUrl1": "https://pan.baidu.com/s/1sAhtQLKtbeBqbape73HkBg",
+    "DownloadUrl2": "https://cloud.189.cn/t/z6ni6f6NraEb",
+    "UpdateDate": "20261116"
+  },
+  {
     "GameCode": "N3001",
     "Password": "2544483旧密码265998",
     "ChineseName": "暖雪",
@@ -31190,10 +31343,10 @@
     "ChineseName": "ODDCORE",
     "EnglishName": "ODDCORE",
     "Size": "2.1 GB",
-    "GameVersion": "Build25410639",
-    "DownloadUrl1": "https://pan.baidu.com/s/1wzOP_y3WUXZugqDbYVIkfw",
+    "GameVersion": "Build25470238",
+    "DownloadUrl1": "https://pan.baidu.com/s/1ERIBnnVbkrhIJtcjRP4Mnw",
     "DownloadUrl2": "https://cloud.189.cn/t/IVzURvYjmMnm",
-    "UpdateDate": "20260921"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "O0017",
@@ -32488,10 +32641,10 @@
     "ChineseName": "前往中世纪",
     "EnglishName": "Going Medieval",
     "Size": "2GB",
-    "GameVersion": "v1.2.10",
+    "GameVersion": "v1.2.20",
     "DownloadUrl1": "https://pan.baidu.com/s/1KewBrQ3iGE0mzKG0HnMptg",
     "DownloadUrl2": "https://cloud.189.cn/t/YbIbAzi6zqam",
-    "UpdateDate": "20261014"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "Q0017",
@@ -33819,10 +33972,10 @@
     "ChineseName": "枪火重生",
     "EnglishName": "Gunfire Reborn",
     "Size": "6.2 GB",
-    "GameVersion": "v20261016",
+    "GameVersion": "Build26448669",
     "DownloadUrl1": "https://pan.baidu.com/s/1vtQUspFszLAZ9byjw2vnaQ",
     "DownloadUrl2": "https://cloud.189.cn/t/ERZFryraAZJ3",
-    "UpdateDate": "20261018"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "Q3002",
@@ -34171,10 +34324,10 @@
     "ChineseName": "人渣",
     "EnglishName": "SCUM",
     "Size": "75.9 GB",
-    "GameVersion": "v1.3.6.0.177121",
+    "GameVersion": "v1.3.6.1.177547",
     "DownloadUrl1": "https://pan.baidu.com/s/15CVYlwrBZbS_wA4a2RUxJA",
     "DownloadUrl2": "https://cloud.189.cn/t/fUFBFjnaqyEb",
-    "UpdateDate": "20261113"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "R0011",
@@ -34919,10 +35072,10 @@
     "ChineseName": "人类宿主",
     "EnglishName": "Human Host",
     "Size": "49.8 GB",
-    "GameVersion": "Build25976640",
+    "GameVersion": "Build26522751",
     "DownloadUrl1": "https://pan.baidu.com/s/1AMp4URj4Z-wzHxU02KPS2A",
     "DownloadUrl2": "https://cloud.189.cn/t/eqqY3mzaM3Yz",
-    "UpdateDate": "20261021"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "R0077",
@@ -35707,14 +35860,14 @@
   },
   {
     "GameCode": "S0012",
-    "Password": "326002",
+    "Password": "228922",
     "ChineseName": "时廻者",
     "EnglishName": "LOOPERS",
     "Size": "3GB",
-    "GameVersion": "Build.11557632",
+    "GameVersion": "v1.1.0.2",
     "DownloadUrl1": "https://pan.baidu.com/s/1qH8IRSEs_Alpt5-wObqDTA",
     "DownloadUrl2": "https://cloud.189.cn/t/ZFbYRbmaeI7b",
-    "UpdateDate": "20250101"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "S0013",
@@ -35839,14 +35992,14 @@
   },
   {
     "GameCode": "S0021",
-    "Password": "326333",
+    "Password": "066663",
     "ChineseName": "实况足球2021",
-    "EnglishName": "eFootball PES 2021",
+    "EnglishName": "eFootball PES 2021 SEASON UPDATE",
     "Size": "39GB",
-    "GameVersion": "v1.01",
+    "GameVersion": "v1.07.02_aoba",
     "DownloadUrl1": "https://pan.baidu.com/s/1Wgu-kfkkrGA4LfnloJ-MoQ",
     "DownloadUrl2": "https://cloud.189.cn/t/fa2iYnFVrA3y",
-    "UpdateDate": "20250101"
+    "UpdateDate": "20261119"
   },
   {
     "GameCode": "S0022",
@@ -36173,10 +36326,10 @@
     "ChineseName": "深岩银河 幸存者",
     "EnglishName": "Deep Rock Galactic: Survivor",
     "Size": "4GB",
-    "GameVersion": "v1.1.73p",
+    "GameVersion": "v20261117",
     "DownloadUrl1": "https://pan.baidu.com/s/1ixYsrXZhIN1UjDkp3JlZXQ",
     "DownloadUrl2": "https://cloud.189.cn/t/jAFjEfRr6Nv2",
-    "UpdateDate": "20260623"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "S0043",
@@ -36602,10 +36755,10 @@
     "ChineseName": "赛道大师",
     "EnglishName": "Trailmakers",
     "Size": "8.3 GB",
-    "GameVersion": "v253.518.205.0",
+    "GameVersion": "v254.519.592.0",
     "DownloadUrl1": "https://pan.baidu.com/s/1Oj1z-0QRvb4hqP4YnVgcDQ",
     "DownloadUrl2": "https://cloud.189.cn/t/iiIFruQVbAfq",
-    "UpdateDate": "20261013"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "S0078",
@@ -37141,10 +37294,10 @@
     "ChineseName": "深海远航",
     "EnglishName": "From the Depths",
     "Size": "5GB",
-    "GameVersion": "Build23966748",
+    "GameVersion": "Build26707990",
     "DownloadUrl1": "https://pan.baidu.com/s/1q8Zyclb1hs3x8DU8_DYm6Q",
     "DownloadUrl2": "https://cloud.189.cn/t/YfEri2NfQbQr",
-    "UpdateDate": "20260820"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "S0121",
@@ -37192,14 +37345,14 @@
   },
   {
     "GameCode": "S0125",
-    "Password": "1587452",
+    "Password": "160693",
     "ChineseName": "Storyteller",
-    "EnglishName": "",
-    "Size": "1GB",
-    "GameVersion": "v1.1.18",
+    "EnglishName": "Storyteller",
+    "Size": "2.7 GB",
+    "GameVersion": "v1.9.9.11",
     "DownloadUrl1": "https://pan.baidu.com/s/1bi6ysIDLJYGLHncj-QyonA",
     "DownloadUrl2": "https://cloud.189.cn/t/FzyErajqMZri",
-    "UpdateDate": "20251204"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "S0126",
@@ -37493,10 +37646,10 @@
     "ChineseName": "死亡迪斯科",
     "EnglishName": "Dead as Disco",
     "Size": "7.9 GB",
-    "GameVersion": "v0.2.0.0033534_71",
+    "GameVersion": "Build26577163",
     "DownloadUrl1": "https://pan.baidu.com/s/1uJs-7Fg7rsxdhuWFvppbUA",
     "DownloadUrl2": "https://cloud.189.cn/t/zqUbaqb6v2ai",
-    "UpdateDate": "20261021"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "S0147",
@@ -39649,10 +39802,10 @@
     "ChineseName": "赛博骑士：闪点行动",
     "EnglishName": "Cyber Knights: Flashpoint",
     "Size": "12 GB",
-    "GameVersion": "Build24874337",
-    "DownloadUrl1": "https://pan.baidu.com/s/1mS4sgGlroPYj7tu6R7idCg",
+    "GameVersion": "Build26706250",
+    "DownloadUrl1": "https://pan.baidu.com/s/1AEfzUupzuqxakfbuunSBBA",
     "DownloadUrl2": "https://cloud.189.cn/t/Rvq6nujIFrua",
-    "UpdateDate": "20260824"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "S0361",
@@ -40062,6 +40215,16 @@
     "UpdateDate": "20261115"
   },
   {
+    "GameCode": "S0398",
+    "ChineseName": "Shelves and Sorcery: Tidy Up the Enchanted Shop",
+    "EnglishName": "Shelves and Sorcery: Tidy Up the Enchanted Shop",
+    "Size": "",
+    "GameVersion": "",
+    "DownloadUrl1": "https://pan.baidu.com/s/18txFkOttR9Ka7nWphCRfuQ",
+    "DownloadUrl2": "https://cloud.189.cn/t/IjMnMrVJviIj",
+    "UpdateDate": ""
+  },
+  {
     "GameCode": "S3001",
     "Password": "6254125",
     "ChineseName": "圣女战旗",
@@ -40426,14 +40589,14 @@
   },
   {
     "GameCode": "S3038",
-    "Password": "652000",
+    "Password": "966480",
     "ChineseName": "所谓侠客",
-    "EnglishName": "So-called Hero",
-    "Size": "3GB",
-    "GameVersion": "v1.54",
+    "EnglishName": "所谓侠客 So-called Hero",
+    "Size": "4 GB",
+    "GameVersion": "v2.31",
     "DownloadUrl1": "https://pan.baidu.com/s/1azHhojhi2_7BZlEvM_6t-A",
     "DownloadUrl2": "https://cloud.189.cn/t/QruIbm7famqq",
-    "UpdateDate": "20250103"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "S3039",
@@ -41063,6 +41226,17 @@
     "UpdateDate": "20261106"
   },
   {
+    "GameCode": "S5061",
+    "Password": "538279",
+    "ChineseName": "Satellite",
+    "EnglishName": "Satellite",
+    "Size": "1.4 GB",
+    "GameVersion": "Build26668287",
+    "DownloadUrl1": "https://pan.baidu.com/s/1uBPZpC625_IB_dM707WcfA",
+    "DownloadUrl2": "https://cloud.189.cn/t/aMVZbuYZFFbm",
+    "UpdateDate": "20261117"
+  },
+  {
     "GameCode": "S8001",
     "Password": "215558",
     "ChineseName": "3dMax合集/3dsMAX/3DStudioMax",
@@ -41398,10 +41572,10 @@
     "ChineseName": "太空避难所",
     "EnglishName": "Space Haven",
     "Size": "368.6 MB",
-    "GameVersion": "v1.0.4.4",
+    "GameVersion": "v1.0.4",
     "DownloadUrl1": "https://pan.baidu.com/s/11xBleJsnDyY12IFkQdYkOw",
     "DownloadUrl2": "https://cloud.189.cn/t/JvUjayueMBFb",
-    "UpdateDate": "20260626"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "T0023",
@@ -42762,10 +42936,10 @@
     "ChineseName": "The Void Rains Upon Her Heart",
     "EnglishName": "The Void Rains Upon Her Heart",
     "Size": "500 MB",
-    "GameVersion": "Build24836287",
-    "DownloadUrl1": "https://pan.baidu.com/s/1g8661rjDQHdg7qhFLXJ4Qg",
+    "GameVersion": "v8.38c",
+    "DownloadUrl1": "https://pan.baidu.com/s/1R5oF-tcOp00z6KYqjTCYHg",
     "DownloadUrl2": "https://cloud.189.cn/t/aAzay2Z7fIna",
-    "UpdateDate": "20260825"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "T0160",
@@ -42920,6 +43094,28 @@
     "DownloadUrl1": "https://pan.baidu.com/s/19KJzGxl1L16qp5Ew663LdQ",
     "DownloadUrl2": "https://cloud.189.cn/t/mY7jyumEzeu2",
     "UpdateDate": "20261114"
+  },
+  {
+    "GameCode": "T0174",
+    "Password": "577160",
+    "ChineseName": "太阳的葬礼",
+    "EnglishName": "Funeral for the Sun",
+    "Size": "3.5 GB",
+    "GameVersion": "v20261118",
+    "DownloadUrl1": "https://pan.baidu.com/s/1r8cTZOJRcdZy0yMj-h01Dg",
+    "DownloadUrl2": "https://cloud.189.cn/t/ZBraAbrMji6v",
+    "UpdateDate": "20261118"
+  },
+  {
+    "GameCode": "T0175",
+    "Password": "656412",
+    "ChineseName": "骰子囤积者",
+    "EnglishName": "Dice Hoarder",
+    "Size": "2.8 GB",
+    "GameVersion": "v1.0.7",
+    "DownloadUrl1": "https://pan.baidu.com/s/16wruhcxhm07sgp_OpyRdVQ",
+    "DownloadUrl2": "https://cloud.189.cn/t/QNrM7ryEn26z",
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "T3002",
@@ -43972,10 +44168,10 @@
     "ChineseName": "王国风云3",
     "EnglishName": "Crusader Kings III",
     "Size": "20GB",
-    "GameVersion": "v1.20.1.2",
+    "GameVersion": "v20261118",
     "DownloadUrl1": "https://pan.baidu.com/s/1auBPoZcEJrqXRmxByiASnA",
     "DownloadUrl2": "https://cloud.189.cn/t/imQvIfANZzia",
-    "UpdateDate": "20261025"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "W0021",
@@ -45534,10 +45730,10 @@
     "ChineseName": "王之凝视",
     "EnglishName": "The King is Watching",
     "Size": "1GB",
-    "GameVersion": "v1.3.7",
+    "GameVersion": "v1.3.10",
     "DownloadUrl1": "https://pan.baidu.com/s/1SCmeLXxKOF7DnIndQsWagg",
     "DownloadUrl2": "https://cloud.189.cn/t/VvIZju6bqIny",
-    "UpdateDate": "20261018"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "W0160",
@@ -45699,10 +45895,10 @@
     "ChineseName": "网球精英4",
     "EnglishName": "Tennis Elbow 4",
     "Size": "4GB",
-    "GameVersion": "Build25934426",
+    "GameVersion": "Build26663555",
     "DownloadUrl1": "https://pan.baidu.com/s/151OyC9PoQG50RjJ9K3L27g",
     "DownloadUrl2": "https://cloud.189.cn/t/3yUjym6veEJr",
-    "UpdateDate": "20261021"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "W0175",
@@ -45897,10 +46093,10 @@
     "ChineseName": "万物皆可蟹：动物进化 Roguelite",
     "EnglishName": "Everything is Crab: The Animal Evolution Roguelite",
     "Size": "2 GB",
-    "GameVersion": "v1.2",
-    "DownloadUrl1": "https://pan.baidu.com/s/1lmssdWOghBfuCvDJer4MIA",
+    "GameVersion": "v1.3.0",
+    "DownloadUrl1": "https://pan.baidu.com/s/1AWCTTqcTAswn9wPmSNKxsQ",
     "DownloadUrl2": "https://cloud.189.cn/t/3aimuy2iAnEz",
-    "UpdateDate": "20260814"
+    "UpdateDate": "20261116"
   },
   {
     "GameCode": "W0193",
@@ -45908,10 +46104,10 @@
     "ChineseName": "雾隐天途",
     "EnglishName": "DarkSwitch",
     "Size": "10.1 GB",
-    "GameVersion": "v1.1.2",
-    "DownloadUrl1": "https://pan.baidu.com/s/1iDA7lIWjGtBLy4DuSMRyrA",
+    "GameVersion": "v1.2.3",
+    "DownloadUrl1": "https://pan.baidu.com/s/1sB6djoQBvh-4IgDeB6sW_w",
     "DownloadUrl2": "https://cloud.189.cn/t/y2UvqyjiENb2",
-    "UpdateDate": "20260825"
+    "UpdateDate": "20261116"
   },
   {
     "GameCode": "W0194",
@@ -48185,10 +48381,10 @@
     "ChineseName": "小小世界 原野求生",
     "EnglishName": "Smalland: Survive the Wilds",
     "Size": "22GB",
-    "GameVersion": "Build22695059",
+    "GameVersion": "Build26705939",
     "DownloadUrl1": "https://pan.baidu.com/s/1miN0ocMvke-cZMWlSnB23g",
     "DownloadUrl2": "https://cloud.189.cn/t/iey6Vrrm6rqy",
-    "UpdateDate": "20260420"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "X0127",
@@ -48338,11 +48534,11 @@
     "Password": "768208",
     "ChineseName": "小猫咪大城市",
     "EnglishName": "Little Kitty, Big City",
-    "Size": "4GB",
-    "GameVersion": "v1.26.5.20.6877",
+    "Size": "2.5 GB",
+    "GameVersion": "v1.26.11.16_7693",
     "DownloadUrl1": "https://pan.baidu.com/s/19yaXsLlkZbUsDCDJrsW_ng",
     "DownloadUrl2": "https://cloud.189.cn/t/qeYVRzYB3uIv",
-    "UpdateDate": "20260522"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "X0146",
@@ -49174,11 +49370,11 @@
     "Password": "621413",
     "ChineseName": "茜塔和世界线悖论",
     "EnglishName": "Theta and Paralldox on Worldlines",
-    "Size": "200 MB",
-    "GameVersion": "Build25785989",
+    "Size": "1.2 GB",
+    "GameVersion": "Build26571048",
     "DownloadUrl1": "https://pan.baidu.com/s/1rSmnTQoW14lfvvUbBbRxfQ",
     "DownloadUrl2": "https://cloud.189.cn/t/YRv2m2jiiYVj",
-    "UpdateDate": "20261021"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "X0226",
@@ -49197,10 +49393,10 @@
     "ChineseName": "星球大战 银河赛车手",
     "EnglishName": "STAR WARS: Galactic Racer",
     "Size": "39.2 GB",
-    "GameVersion": "v20261113",
+    "GameVersion": "v20261120",
     "DownloadUrl1": "https://pan.baidu.com/s/1C3DekCZt2H8l2_i-ZUlD-A",
     "DownloadUrl2": "https://cloud.189.cn/t/RBrMFbQvI77f",
-    "UpdateDate": "20261113"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "X0228",
@@ -49846,10 +50042,10 @@
     "ChineseName": "邪恶岛",
     "EnglishName": "Wicked Island",
     "Size": "8.2 GB",
-    "GameVersion": "Build23926961",
-    "DownloadUrl1": "https://pan.baidu.com/s/12cHR4uVjQSnZcfpMnlqlOA",
+    "GameVersion": "v20261119",
+    "DownloadUrl1": "https://pan.baidu.com/s/1SoKmL616-4lLflV6gpamng",
     "DownloadUrl2": "https://cloud.189.cn/t/ayMVjei6Fzyi",
-    "UpdateDate": "20260701"
+    "UpdateDate": "20261119"
   },
   {
     "GameCode": "X5045",
@@ -50051,14 +50247,14 @@
   },
   {
     "GameCode": "Y0002",
-    "Password": "889659",
+    "Password": "976638",
     "ChineseName": "永恒之柱2：死亡之火",
-    "EnglishName": "Pillars of Eternity II:Deadfire",
+    "EnglishName": "Pillars of Eternity II: Deadfire",
     "Size": "52GB",
-    "GameVersion": "v5.0.0.0040黑曜石版",
+    "GameVersion": "v5.1.0.266319",
     "DownloadUrl1": "https://pan.baidu.com/s/19oNZjJjfoSGhbaVjPOiDjw",
     "DownloadUrl2": "https://cloud.189.cn/t/qQFRfuEnaY3u",
-    "UpdateDate": "20250101"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "Y0003",
@@ -50557,7 +50753,7 @@
   },
   {
     "GameCode": "Y0023",
-    "Password": "6598874旧密码554777",
+    "Password": "026287",
     "ChineseName": "以撒的结合",
     "EnglishName": "The Binding of Isaac: Repentance",
     "Size": "2GB",
@@ -50737,10 +50933,10 @@
     "ChineseName": "翼星求生",
     "EnglishName": "ICARUS",
     "Size": "49.1 GB",
-    "GameVersion": "v3.0.30.158174",
+    "GameVersion": "v3.0.36.159996",
     "DownloadUrl1": "https://pan.baidu.com/s/1qTbCLVvbkkX1XakFN0VnCA",
     "DownloadUrl2": "https://cloud.189.cn/t/6Z7JBjJNJv63",
-    "UpdateDate": "20261018"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "Y0038",
@@ -51287,10 +51483,10 @@
     "ChineseName": "鸦卫奇旅",
     "EnglishName": "Ravenswatch",
     "Size": "9 GB",
-    "GameVersion": "Build25174305",
+    "GameVersion": "v1.06.02.01",
     "DownloadUrl1": "https://pan.baidu.com/s/1uCjNzWgkHa4hb64DV48xzA",
     "DownloadUrl2": "https://cloud.189.cn/t/2aqqIvRZf2Ur",
-    "UpdateDate": "20261013"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "Y0086",
@@ -51364,10 +51560,10 @@
     "ChineseName": "永恒天空",
     "EnglishName": "Forever Skies",
     "Size": "24.8 GB",
-    "GameVersion": "v1.3.1",
+    "GameVersion": "v20261120",
     "DownloadUrl1": "https://pan.baidu.com/s/1KNrbHZ9k05Q4Yg-Hxyd_Dw",
     "DownloadUrl2": "https://cloud.189.cn/t/BFRf2imiquMn",
-    "UpdateDate": "20261021"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "Y0092",
@@ -52141,14 +52337,14 @@
   },
   {
     "GameCode": "Y0160",
-    "Password": "203000",
+    "Password": "942860",
     "ChineseName": "伊科内岛 筑梦之地",
     "EnglishName": "Ikonei Island: An Earthlock Adventure",
     "Size": "3GB",
-    "GameVersion": "v1.0",
+    "GameVersion": "Build26625967",
     "DownloadUrl1": "https://cloud.189.cn/t/rERVBjj2AB7j",
     "DownloadUrl2": "https://cloud.189.cn/t/rERVBjj2AB7j",
-    "UpdateDate": "20250101"
+    "UpdateDate": "20261118"
   },
   {
     "GameCode": "Y0161",
@@ -53311,10 +53507,10 @@
     "ChineseName": "鹰派大统领",
     "EnglishName": "Anomaly President",
     "Size": "1 GB",
-    "GameVersion": "Build25881606",
+    "GameVersion": "Build26703490",
     "DownloadUrl1": "https://pan.baidu.com/s/10qHis_iBiKxmYqHE-snwnA",
     "DownloadUrl2": "https://cloud.189.cn/t/2Q3M7fnQRra2",
-    "UpdateDate": "20261021"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "Y0284",
@@ -53483,7 +53679,6 @@
   },
   {
     "GameCode": "Y0299",
-    "Password": "",
     "ChineseName": "约翰·卡朋特：毒液突击队",
     "EnglishName": "John Carpenter's Toxic Commando",
     "Size": "",
@@ -55698,10 +55893,10 @@
     "ChineseName": "战争号令 地狱之门 东线",
     "EnglishName": "Call to Arms - Gates of Hell: Ostfront",
     "Size": "114.6 GB",
-    "GameVersion": "v1.067.0",
+    "GameVersion": "v1.069.0",
     "DownloadUrl1": "https://pan.baidu.com/s/1nnkD0Ug7GKsGa3D5Yi_23g",
     "DownloadUrl2": "https://cloud.189.cn/t/YfqAZnjiMjQn",
-    "UpdateDate": "20260928"
+    "UpdateDate": "20261119"
   },
   {
     "GameCode": "Z0063",
@@ -56116,10 +56311,10 @@
     "ChineseName": "终落之城",
     "EnglishName": "ALL WILL FALL",
     "Size": "5GB",
-    "GameVersion": "v1.5.4f3",
+    "GameVersion": "v1.5.5f2",
     "DownloadUrl1": "https://pan.baidu.com/s/1UwJCuLU-ILMQZphcgkQPNQ",
     "DownloadUrl2": "https://cloud.189.cn/t/26zae2eyAz2a",
-    "UpdateDate": "20261021"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "Z0091",
@@ -56509,7 +56704,7 @@
   {
     "GameCode": "Z0123B",
     "Password": "556728",
-    "ChineseName": "战神4",
+    "ChineseName": "战神4(2018)",
     "EnglishName": "God of War",
     "Size": "70GB",
     "GameVersion": "v1.0.13",
@@ -57146,14 +57341,14 @@
   },
   {
     "GameCode": "Z0193",
-    "Password": "2154223",
+    "Password": "965355",
     "ChineseName": "造物主2",
     "EnglishName": "Reus 2",
     "Size": "6GB",
-    "GameVersion": "v1.8.0",
+    "GameVersion": "v1.12.2",
     "DownloadUrl1": "https://pan.baidu.com/s/1Owspe-RzsSe50lew0xa4_g",
     "DownloadUrl2": "https://cloud.189.cn/t/E3umEfyqIz2u",
-    "UpdateDate": "20250701"
+    "UpdateDate": "20261119"
   },
   {
     "GameCode": "Z0194",
@@ -58294,10 +58489,10 @@
     "ChineseName": "致命躯壳 II",
     "EnglishName": "Mortal Shell II",
     "Size": "70 GB",
-    "GameVersion": "v97404.1875",
+    "GameVersion": "v99887_3038",
     "DownloadUrl1": "https://pan.baidu.com/s/12eo978oJwlYFmwkngezJbw",
     "DownloadUrl2": "https://cloud.189.cn/t/Vbymuii6BbYr",
-    "UpdateDate": "20261029"
+    "UpdateDate": "20261117"
   },
   {
     "GameCode": "Z0299",
@@ -58404,10 +58599,10 @@
     "ChineseName": "真 三国无双２ with 猛将传 Remastered",
     "EnglishName": "DYNASTY WARRIORS 3: Complete Edition Remastered",
     "Size": "60 GB",
-    "GameVersion": "Build25630985",
+    "GameVersion": "Build26371984",
     "DownloadUrl1": "https://pan.baidu.com/s/1-WTCG6aSS52MP_gJx2XhIQ",
     "DownloadUrl2": "https://cloud.189.cn/t/NFbuUvfAJfEv",
-    "UpdateDate": "20261010"
+    "UpdateDate": "20261116"
   },
   {
     "GameCode": "Z0309",
@@ -59173,11 +59368,11 @@
     "Password": "172043",
     "ChineseName": "桌面伴侣",
     "EnglishName": "Desktop Mate",
-    "Size": "500 MB",
-    "GameVersion": "v1.16.1",
+    "Size": "1.7 GB",
+    "GameVersion": "v1.17.1",
     "DownloadUrl1": "https://pan.baidu.com/s/1gVehnN5QmMdAzI765AslIQ",
     "DownloadUrl2": "https://cloud.189.cn/t/mqMJBzBFBjm2",
-    "UpdateDate": "20261021"
+    "UpdateDate": "20261120"
   },
   {
     "GameCode": "Z5022",
