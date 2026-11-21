@@ -1,5 +1,3 @@
-#:property Nullable=disable
-#:property ImplicitUsings=enable
 // ============================================================================
 // NativeAOT 口令批量解码器·一体版（.NET 10 file-based app，零第三方依赖）
 // 用法: dotnet run NativeAOT_口令批量解码器.cs <目录或exe路径> [名称过滤词...]
@@ -9,6 +7,9 @@
 // 流程: 内联种子定位(String/byte[] MT投票+分层排名) -> lea引用扫描(字节预筛+内置x86-64迷你反汇编精读)
 //       -> PMAP/KMAP/Array.Copy 三种派生形态还原 -> 冲突槽位组合枚举
 //       -> AES-256-CBC 暴力配对 -> PKCS7+可打印验收 -> 控制台直接输出双口令+汇总
+// 追加: 季度动态码（多口令可用之谜）——盐|口令B|YYYYQn 的 HMAC-SHA256 六位码
+//       盐串按二进制结构自动提取（imul魔数定位算法函数->调用者回看盐偏移->lea/存储配对）
+//       有效窗口: 当前季度+下一季度恒有效, 上一季度码在季度开始 60 天内仍有效
 // ============================================================================
 using System.Globalization;
 using System.Security.Cryptography;
@@ -41,28 +42,30 @@ else { Console.WriteLine($"路径不存在: {target}"); return 1; }
 if (files.Count == 0) { Console.WriteLine($"[{target}] 未找到匹配的 exe（名称过滤词: {string.Join('/', pats)}）"); return 1; }
 Console.WriteLine($"[*] 目标 {files.Count} 个（名称过滤词: {string.Join('/', pats)}）");
 
-var results = new List<(string file, List<string> plains)>();
+var results = new List<(string file, List<string> plains, List<string> dyn)>();
 foreach (var f in files)
 {
 	Console.WriteLine($"\n========== {f} ==========");
-	try { results.Add((f, RunOne(f, legacyTxt))); }
-	catch (Exception e) { Console.WriteLine($"[!] 失败: {e.Message}"); results.Add((f, null)); }
+	try { var (p, dyn) = RunOne(f, legacyTxt); results.Add((f, p, dyn)); }
+	catch (Exception e) { Console.WriteLine($"[!] 失败: {e.Message}"); results.Add((f, null, null)); }
 }
 
 Console.WriteLine("\n========== 汇总 ==========");
-foreach (var (f, plains) in results)
+foreach (var (f, plains, dyn) in results)
 {
 	string s = plains != null && plains.Count > 0 ? string.Join("   |   ", plains) : "（未解出）";
-	Console.WriteLine($"  {f}  ->  {s}");
+	string dynS = dyn != null && dyn.Count > 0 ? "   ‖   " + string.Join("  ", dyn) : "";
+	Console.WriteLine($"  {f}  ->  {s}{dynS}");
 }
 int ok = results.Count(r => r.plains != null && r.plains.Count > 0);
 Console.WriteLine($"[*] 共 {files.Count} 个目标: 成功 {ok}，失败 {files.Count - ok}");
 return 0;
 
 // ============================ 单文件主流程 ============================
-List<string> RunOne(string exePath, string locFile)
+(List<string> plains, List<string> dyn) RunOne(string exePath, string locFile)
 {
 	var plains = new List<string>();
+	var dyn = new List<string>();
 	var d = File.ReadAllBytes(exePath);
 	var (img, secs) = ParsePe(d);
 	var tsec = secs.First(s => s.name == ".text");
@@ -71,7 +74,7 @@ List<string> RunOne(string exePath, string locFile)
 	long tbase = img + tsec.vaddr;
 
 	var seeds = locFile != null ? ReadLoc(locFile) : LocateSeeds(d, secs, img);
-	if (seeds.Count == 0) { Console.WriteLine("未找到种子（非 NativeAOT 启动器或结构不同）"); return plains; }
+	if (seeds.Count == 0) { Console.WriteLine("未找到种子（非 NativeAOT 启动器或结构不同）"); return (plains, dyn); }
 	var seedByVa = new Dictionary<long, (int sn, int ln, byte[] hex)>();
 	for (int i = 0; i < seeds.Count; i++) seedByVa[seeds[i].va] = (i + 1, seeds[i].ln, seeds[i].hex);
 	long lo = seeds.Min(s => s.va), hi = seeds.Max(s => s.va) + seeds.Max(s => s.ln);
@@ -221,7 +224,7 @@ List<string> RunOne(string exePath, string locFile)
 	var missP = Enumerable.Range(0, 32).Where(i => !P[i].HasValue).ToList();
 	var missK = Enumerable.Range(0, 32).Where(i => !K[i].HasValue).ToList();
 	Console.WriteLine($"[*] P 缺口=[{string.Join(',', missP)}]  K 缺口=[{string.Join(',', missK)}]");
-	if (missP.Count > 0 || missK.Count > 0) { Console.WriteLine("[!] 映射不完整，中止"); return plains; }
+	if (missP.Count > 0 || missK.Count > 0) { Console.WriteLine("[!] 映射不完整，中止"); return (plains, dyn); }
 
 	var Pb = P.Select(v => v.Value).ToArray();
 	var Kb = K.Select(v => v.Value).ToArray();
@@ -295,7 +298,10 @@ List<string> RunOne(string exePath, string locFile)
 					}
 				}
 	}
-	return plains;
+	// ---- 季度动态码（多口令可用的来源） ----
+	try { RunDyn(d, secs, img, code, tbase, plains, dyn); }
+	catch (Exception e) { Console.WriteLine($"[!] 季度动态码失败: {e.Message}"); }
+	return (plains, dyn);
 }
 
 static string RegName(int idx, int size)
@@ -525,6 +531,181 @@ static Ins? Dec(byte[] c, int pos)
 		default: return null;
 	}
 }
+
+// ============================ 季度动态码 ============================
+// code = HMACSHA256(key, UTF8("盐|口令B|YYYYQn")) 前4字节(小端) % 1000000, 补零 6 位
+// key 为全家族通用 32 字节（自样本静态分析取得）; 盐串按二进制结构自动提取
+static byte[] DynKey() => Convert.FromHexString(
+	"7a3ce19f42d80b56a3176ec48d25f0935be71a68d24f873ec90674ab31f5582d");
+
+static void RunDyn(byte[] d, List<(string name, uint vaddr, uint vsize, uint raddr, uint rsize)> secs,
+				   long img, byte[] code, long tbase, List<string> plains, List<string> dyn)
+{
+	var now = DateTime.UtcNow;
+	int qn = (now.Month - 1) / 3 + 1;
+	string cur = $"{now.Year}Q{qn}";
+	double daysIn = (now - new DateTime(now.Year, 3 * (qn - 1) + 1, 1)).TotalDays;
+	string prev = qn > 1 ? $"{now.Year}Q{qn - 1}" : $"{now.Year - 1}Q4";
+	string next = qn < 4 ? $"{now.Year}Q{qn + 1}" : $"{now.Year + 1}Q1";
+	bool prevOk = daysIn < 60.0;
+
+	Console.WriteLine($"[*] 季度动态码: 当前={cur}（已过 {daysIn:0.#} 天）  上一季{prev}码{(prevOk ? "仍有效" : "已过期")}");
+
+	var (salt, saltOff, saltNote) = ExtractSalt(d, secs, img, code, tbase);
+	if (salt == null)
+	{
+		Console.WriteLine($"[!] {saltNote}");
+		dyn.Add("季度码: 盐未定位");
+		return;
+	}
+	Console.WriteLine($"[*] 盐串='{salt}' ({saltNote})");
+
+	// 口令B = 解密结果中全数字且 >=6 位的串
+	var pwBs = plains.Where(p => p.Length >= 6 && p.All(char.IsDigit)).Distinct().ToList();
+	if (pwBs.Count == 0)
+	{
+		Console.WriteLine("[!] 未得到全数字口令B，无法计算动态码");
+		dyn.Add($"盐={salt}（口令B 未解出）");
+		return;
+	}
+
+	foreach (var pwB in pwBs)
+	{
+		string c1 = Code6(salt, pwB, prev), c2 = Code6(salt, pwB, cur), c3 = Code6(salt, pwB, next);
+		string mark = prevOk ? "[有效·季度开始60天内]" : "[已过期·超60天]";
+		Console.WriteLine($"[+] 动态码(口令B={pwB}):  {prev}={c1}{mark}   {cur}={c2}[当前季度·有效]   {next}={c3}[下一季度·有效]");
+		if (pwBs.Count == 1)
+			dyn.Add($"季度码: 盐={salt} {prev}={c1} {cur}={c2} {next}={c3}");
+		else
+			dyn.Add($"季度码(候选{pwB}): {cur}={c2}");
+	}
+}
+
+static string Code6(string salt, string pwB, string quarter)
+{
+	byte[] msg = Encoding.UTF8.GetBytes(salt + "|" + pwB + "|" + quarter);
+	using var h = new HMACSHA256(DynKey());
+	uint v = BitConverter.ToUInt32(h.ComputeHash(msg), 0);
+	return (v % 1000000).ToString("D6");
+}
+
+// 盐串提取: imul 0x431BDE83 魔数定位码生成器->algo=魔数前0x3F9 -> call 调用者回看盐字段偏移(cfg+0x20/+0x30)
+// -> 扫 .rdata 中形如 [A-Z]\d{4} 的 5 字符串对象 -> lea 引用后 14 条内出现 mov [r+盐偏移],rA 即采纳
+static (string salt, int saltOff, string note) ExtractSalt(byte[] d, List<(string name, uint vaddr, uint vsize, uint raddr, uint rsize)> secs,
+														   long img, byte[] code, long tbase)
+{
+	// 1) 算法函数定位（季度码生成器内的 imul rcx,0x431BDE83; shr edx,50 魔数序列）
+	int sigPos = IndexOfSeq(code, new byte[] { 0x48, 0x69, 0xC9, 0x83, 0xDE, 0x1B, 0x43 });
+	long algo = sigPos >= 0 ? tbase + sigPos - 0x3F9 : -1;
+
+	// 2) 调用者（校验器）回看：确定盐字段偏移
+	int saltOff = 0;
+	if (algo > 0)
+	{
+		for (int i = 0; i + 5 <= code.Length; i++)
+		{
+			if (code[i] != 0xE8) continue;
+			int rel = BitConverter.ToInt32(code, i + 1);
+			if (tbase + i + 5 + rel != algo) continue;
+			int lo = Math.Max(0, i - 0x50);
+			for (int k = lo; k + 4 <= i; k++)
+			{
+				int m = code[k + 2];
+				if ((code[k] == 0x48 || code[k] == 0x4C) && code[k + 1] == 0x8B &&
+					(m & 0xC0) == 0x40 && (m & 0x07) != 4)
+				{
+					if (code[k + 3] == 0x30) { saltOff = 0x30; break; }
+					if (code[k + 3] == 0x20) { saltOff = 0x20; break; }
+				}
+			}
+			if (saltOff != 0) break;
+		}
+	}
+
+	// 3) 候选盐串对象: 5 字符 [A-Z]\d{4} 的 UTF-16 字符串（NativeAOT: MT@0, len@8, data@12）
+	var saltRx = new Regex("^[A-Z]\\d{4}$", RegexOptions.CultureInvariant);
+	var cands = new List<long>();
+	foreach (var (name, vaddr, vsize, raddr, rsize) in secs)
+	{
+		if (name == ".text") continue;
+		for (long o = raddr; o + 16 <= raddr + rsize; o += 4)
+		{
+			int ln = BitConverter.ToInt32(d, (int)o + 8);
+			if (ln != 5) continue;
+			ulong mt = U64(d, (int)o);
+			if (mt < (ulong)img || Va2Ofs(secs, img, (long)mt) < 0) continue;
+			string s;
+			try { s = Encoding.Unicode.GetString(d, (int)o + 12, 10); } catch { continue; }
+			if (!saltRx.IsMatch(s)) continue;
+			long va = Ofs2Va(secs, img, o);
+			if (va > 0) cands.Add(va);
+		}
+	}
+	if (cands.Count == 0) return (null, saltOff, "未找到 [A-Z]\\d{4} 格式候选盐串");
+
+	// 4) lea 引用 + 存储配对
+	var hits = new List<(string s, int off, long leaVa)>();
+	int n = code.Length;
+	foreach (var cva in cands)
+	{
+		for (int i = 0; i + 7 <= n; i++)
+		{
+			int b0 = code[i];
+			if ((b0 & 0xF0) != 0x40 || code[i + 1] != 0x8D || (code[i + 2] & 0xC7) != 0x05) continue;
+			long va = tbase + i + 7 + BitConverter.ToInt32(code, i + 3);
+			if (va != cva) continue;
+			int regA = (((b0 >> 2) & 1) << 3) | ((code[i + 2] >> 3) & 7);
+			int pos = i + 7;
+			for (int k = 0; k < 14 && pos < n; k++)
+			{
+				var one = Dec(code, pos);
+				if (one == null) break;
+				if (one.Mn == "mov" && !one.RmIsRip && one.RmBase >= 0 && one.RmBase != 4 && one.RmBase != 5 &&
+					one.StoreSize >= 4 && one.Reg1 == regA)
+				{
+					if (one.RmDisp == saltOff || (saltOff == 0 && (one.RmDisp == 0x20 || one.RmDisp == 0x30)))
+					{
+						string s = ReadStrObj(d, secs, img, cva, 8);
+						if (s != null) hits.Add((s, (int)one.RmDisp, tbase + i));
+					}
+				}
+				// 寄存器被重定义（lea/立即数赋值）则本 lea 失效
+				if (one.Reg1 == regA && (one.Mn == "lea" || (one.ImmSrc && one.Reg1 >= 0))) break;
+				pos += one.Len;
+			}
+		}
+	}
+	if (hits.Count == 0) return (null, saltOff, $"候选盐串 {cands.Count} 个，但无 lea->mov [cfg+{(saltOff == 0 ? "0x20/0x30" : "0x" + saltOff.ToString("X"))}] 存储配对");
+
+	var best = hits.GroupBy(h => (s: h.s, off: h.off)).OrderByDescending(x => x.Count()).First();
+	int hitCount = hits.Count(h => h.s == best.Key.s && h.off == best.Key.off);
+	string note = $"cfg+0x{best.Key.off:X}  lea@0x{best.First().leaVa:X}  命中{hitCount}处";
+	int distinct = hits.Select(h => h.s).Distinct().Count();
+	if (distinct > 1)
+		note += $"  [!另有多候选: {string.Join(",", hits.Select(h => h.s).Distinct().Where(x => x != best.Key.s))}]";
+	return (best.Key.s, best.Key.off, note);
+}
+
+static string ReadStrObj(byte[] d, List<(string name, uint vaddr, uint vsize, uint raddr, uint rsize)> secs, long img, long va, int maxch)
+{
+	long o = Va2Ofs(secs, img, va);
+	if (o < 0) return null;
+	int ln = BitConverter.ToInt32(d, (int)o + 8);
+	if (ln < 1 || ln > maxch || o + 12 + 2L * ln > d.Length) return null;
+	return Encoding.Unicode.GetString(d, (int)o + 12, ln * 2);
+}
+
+static int IndexOfSeq(byte[] hay, byte[] pat)
+{
+	for (int i = 0; i + pat.Length <= hay.Length; i++)
+	{
+		int j = 0;
+		while (j < pat.Length && hay[i + j] == pat[j]) j++;
+		if (j == pat.Length) return i;
+	}
+	return -1;
+}
+
 // ============================ 工具 ============================
 static byte[] DecryptCbc(byte[] ct, byte[] key, byte[] iv)
 {
